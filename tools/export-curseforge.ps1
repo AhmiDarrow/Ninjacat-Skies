@@ -21,9 +21,12 @@ if (-not $SkipSanitize) {
 if (-not $OutDir) { $OutDir = Join-Path $root "dist" }
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 
+$packToml = Get-Content (Join-Path $root "pack\pack.toml") -Raw
+$packVersion = "0.0.0"
+if ($packToml -match '(?m)^version\s*=\s*"([^"]+)"') { $packVersion = $Matches[1] }
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
 $stage = Join-Path $OutDir "stage-ninjacat-skies-$stamp"
-$zipPath = Join-Path $OutDir "NinjacatSkies-0.1.0-alpha-$stamp.zip"
+$zipPath = Join-Path $OutDir "NinjacatSkies-$packVersion-$stamp.zip"
 Remove-Item $stage -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path $stage | Out-Null
 
@@ -110,7 +113,7 @@ if (-not (Test-Path $manifestOut)) {
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Ninjacat Skies",
-  "version": "0.1.0-alpha",
+  "version": "$packVersion",
   "author": "Ninjacat Skies",
   "files": $filesJson,
   "overrides": "overrides"

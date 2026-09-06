@@ -41,7 +41,7 @@ if (-not $SkipExport -and -not $ZipPath) {
     Write-Host "Exporting fresh CurseForge zip..."
     & pwsh -NoProfile -File (Join-Path $PSScriptRoot "export-curseforge.ps1") -Mode CurseForge
     if ($LASTEXITCODE -ne 0) { throw "export-curseforge.ps1 failed ($LASTEXITCODE)" }
-    $ZipPath = @(Get-ChildItem (Join-Path $root "dist") -Filter "NinjacatSkies-0.1.0-alpha-*.zip" |
+    $ZipPath = @(Get-ChildItem (Join-Path $root "dist") -Filter "NinjacatSkies-*.zip" |
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1 -ExpandProperty FullName)
 }
