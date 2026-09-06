@@ -1,0 +1,16 @@
+{
+  "End": {
+    "isCustom": true,
+    "keepMainIsland": true
+  },
+
+  "Nether": {
+    "centeredBiomes": [],
+    "isCustom": true
+  },
+
+  "Overworld": {
+    "centeredBiomes": [],
+    "isCustom": true
+  }
+}

@@ -1,0 +1,1158 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "25_bees"
+	group: "A100000000000004"
+	icon: {
+		id: "productivebees:advanced_oak_beehive"
+	}
+	id: "B100000000000019"
+	images: [ ]
+	order_index: 24
+	quest_links: [ ]
+	quests: [
+		{
+			id: "C200000000190371"
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190371"
+					type: "item"
+					item: {
+						id: "productivebees:advanced_oak_beehive"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190371"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "C200000000190372"
+			x: 1.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190372"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_oak"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190372"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190371"]
+		}
+		{
+			id: "C200000000190373"
+			x: 2.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190373"
+					type: "item"
+					item: {
+						id: "productivebees:jar_oak"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190373"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190372"]
+		}
+		{
+			id: "C200000000190374"
+			x: 4.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190374"
+					type: "item"
+					item: {
+						id: "productivebees:bee_cage"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190374"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000190373"]
+		}
+		{
+			id: "C200000000190375"
+			x: 5.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190375"
+					type: "item"
+					item: {
+						id: "productivebees:sturdy_bee_cage"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190375"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190374"]
+		}
+		{
+			id: "C200000000190376"
+			x: 7.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190376"
+					type: "item"
+					item: {
+						id: "productivebees:catcher"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190376"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190375"]
+		}
+		{
+			id: "C200000000190377"
+			x: 8.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190377"
+					type: "item"
+					item: {
+						id: "productivebees:feeder"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190377"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190376"]
+		}
+		{
+			id: "C200000000190378"
+			x: 9.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190378"
+					type: "item"
+					item: {
+						id: "productivebees:bottler"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190378"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000190377"]
+		}
+		{
+			id: "C200000000190379"
+			x: 11.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190379"
+					type: "item"
+					item: {
+						id: "productivebees:centrifuge"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190379"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190378"]
+		}
+		{
+			id: "C20000000019037A"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019037A"
+					type: "item"
+					item: {
+						id: "productivebees:powered_centrifuge"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019037A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190379"]
+		}
+		{
+			id: "C20000000019037B"
+			x: 14.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019037B"
+					type: "item"
+					item: {
+						id: "productivebees:heated_centrifuge"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019037B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000019037A"]
+		}
+		{
+			id: "C20000000019037C"
+			x: 15.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019037C"
+					type: "item"
+					item: {
+						id: "productivebees:incubator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019037C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000019037B"]
+		}
+		{
+			id: "C20000000019037D"
+			x: 16.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019037D"
+					type: "item"
+					item: {
+						id: "productivebees:breeding_chamber"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019037D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000019037C"]
+		}
+		{
+			id: "C20000000019037E"
+			x: 18.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019037E"
+					type: "item"
+					item: {
+						id: "productivebees:gene_indexer"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019037E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000019037D"]
+		}
+		{
+			id: "C20000000019037F"
+			x: 19.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019037F"
+					type: "item"
+					item: {
+						id: "productivebees:honey_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019037F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000019037E"]
+		}
+		{
+			id: "C200000000190380"
+			x: 21.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190380"
+					type: "item"
+					item: {
+						id: "productivebees:honey_treat"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190380"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000019037F"]
+		}
+		{
+			id: "C200000000190381"
+			x: 22.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190381"
+					type: "item"
+					item: {
+						id: "productivebees:honey_bucket"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190381"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190380"]
+		}
+		{
+			id: "C200000000190382"
+			x: 23.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190382"
+					type: "item"
+					item: {
+						id: "productivebees:wax"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190382"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190381"]
+		}
+		{
+			id: "C200000000190383"
+			x: 25.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190383"
+					type: "item"
+					item: {
+						id: "productivebees:configurable_honeycomb"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190383"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190382"]
+		}
+		{
+			id: "C200000000190384"
+			x: 26.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190384"
+					type: "item"
+					item: {
+						id: "productivebees:gene"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190384"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000190383"]
+		}
+		{
+			id: "C200000000190385"
+			x: 28.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190385"
+					type: "item"
+					item: {
+						id: "productivebees:gene_bottle"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190385"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190384"]
+		}
+		{
+			id: "C200000000190386"
+			x: 29.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190386"
+					type: "item"
+					item: {
+						id: "minecraft:honeycomb_block"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190386"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190385"]
+		}
+		{
+			id: "C200000000190387"
+			x: 30.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190387"
+					type: "item"
+					item: {
+						id: "minecraft:honey_block"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190387"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190386"]
+		}
+		{
+			id: "C200000000190388"
+			x: 32.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190388"
+					type: "item"
+					item: {
+						id: "minecraft:beehive"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190388"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000190387"]
+		}
+		{
+			id: "C200000000190389"
+			x: 33.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000190389"
+					type: "item"
+					item: {
+						id: "minecraft:campfire"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190389"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190388"]
+		}
+		{
+			id: "C20000000019038A"
+			x: 35.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019038A"
+					type: "item"
+					item: {
+						id: "minecraft:poppy"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019038A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000190389"]
+		}
+		{
+			id: "C20000000019038B"
+			x: 36.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019038B"
+					type: "item"
+					item: {
+						id: "minecraft:dandelion"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019038B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000019038A"]
+		}
+		{
+			id: "C20000000019038C"
+			x: 37.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019038C"
+					type: "item"
+					item: {
+						id: "minecraft:flowering_azalea"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019038C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000019038B"]
+		}
+		{
+			id: "C20000000019038D"
+			x: 39.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019038D"
+					type: "item"
+					item: {
+						id: "minecraft:chorus_fruit"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019038D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000019038C"]
+		}
+		{
+			id: "C20000000019038E"
+			x: 40.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000019038E"
+					type: "item"
+					item: {
+						id: "minecraft:obsidian"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019038E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000019038D"]
+		}
+		{
+			id: "C20000000019038F"
+			x: -4.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D20000000019038F"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_birch"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019038F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190390"
+			x: -2.5d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000190390"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_spruce"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190390"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190391"
+			x: -1.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000190391"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_dark_oak"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190391"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190392"
+			x: 0.5d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000190392"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_acacia"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190392"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190393"
+			x: 2.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000190393"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_jungle"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190393"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190394"
+			x: -4.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000190394"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_cherry"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190394"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190395"
+			x: -2.5d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000190395"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_crimson"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190395"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190396"
+			x: -1.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000190396"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_warped"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190396"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190397"
+			x: 0.5d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000190397"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_bamboo"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190397"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190398"
+			x: 2.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000190398"
+					type: "item"
+					item: {
+						id: "productivebees:expansion_box_mangrove"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190398"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000190399"
+			x: -4.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D200000000190399"
+					type: "item"
+					item: {
+						id: "minecraft:honey_bottle"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000190399"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000019039A"
+			x: -2.5d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D20000000019039A"
+					type: "item"
+					item: {
+						id: "minecraft:sugar"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019039A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000019039B"
+			x: -1.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D20000000019039B"
+					type: "item"
+					item: {
+						id: "minecraft:glass_bottle"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019039B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000019039C"
+			x: 0.5d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D20000000019039C"
+					type: "item"
+					item: {
+						id: "minecraft:shears"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000019039C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+	]
+}

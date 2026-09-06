@@ -1,0 +1,37 @@
+{
+  "forceSkyblockCheck": false,
+
+  "minimumPermissionLevelToBypass": 2,
+  "minimumPermissionLevelToBypassLimitations": 2,
+  "minimumPermissionLevelToExecuteCommands": 2,
+
+  "permissions": [
+    "team_create",
+    "team_handle_invites",
+    "team_handle_join_requests",
+    "team_leave",
+    "edit_spawns",
+    "teleport_to_spawn",
+    "teleport_to_visiting_island",
+    "teleport_home",
+    "teleport_across_dimensions"
+  ],
+
+  "Spawns": {
+    "range": 50
+  },
+
+  "Teleports": {
+    "disallowTeleportationDuringFalling": false,
+    "negateFallDamage": true,
+    "teleportationDimensions": {
+      "allow_list": false,
+      "elements": []
+    },
+    "Cooldowns": {
+      "homeCooldown": 3600,
+      "spawnCooldown": 3600,
+      "visitCooldown": 3600
+    }
+  }
+}

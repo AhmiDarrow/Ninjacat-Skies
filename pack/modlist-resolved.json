@@ -1,0 +1,533 @@
+[
+  {
+    "key": "Ex Deorum",
+    "name": "Ex Deorum",
+    "slug": "ex-deorum",
+    "projectId": 901420,
+    "fileId": 8384464,
+    "filename": "exdeorum-3.12.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Skyblock Builder",
+    "name": "Skyblock Builder",
+    "slug": "skyblock-builder",
+    "projectId": 446691,
+    "fileId": 8209491,
+    "filename": "SkyblockBuilder-21.1.31.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "LibX",
+    "name": "LibX",
+    "slug": "libx",
+    "projectId": 412525,
+    "fileId": 8813062,
+    "filename": "LibX-1.21.1-6.0.15.jar",
+    "releaseType": 3
+  },
+  {
+    "key": "Sky GUIs",
+    "name": "Sky GUIs",
+    "slug": "sky-guis",
+    "projectId": 557696,
+    "fileId": 8799977,
+    "filename": "SkyGUIs-21.1.10.jar",
+    "releaseType": 2
+  },
+  {
+    "key": "FTB Library",
+    "name": "FTB Library (NeoForge)",
+    "slug": "ftb-library-forge",
+    "projectId": 404465,
+    "fileId": 8569579,
+    "filename": "ftb-library-neoforge-2101.1.35.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "FTB Teams",
+    "name": "FTB Teams (NeoForge)",
+    "slug": "ftb-teams-forge",
+    "projectId": 404468,
+    "fileId": 8724782,
+    "filename": "ftb-teams-neoforge-2101.1.11.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "FTB Chunks",
+    "name": "FTB Chunks (NeoForge)",
+    "slug": "ftb-chunks-forge",
+    "projectId": 314906,
+    "fileId": 8791113,
+    "filename": "ftb-chunks-neoforge-2101.1.22.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "FTB Quests",
+    "name": "FTB Quests (NeoForge)",
+    "slug": "ftb-quests-forge",
+    "projectId": 289412,
+    "fileId": 8730556,
+    "filename": "ftb-quests-neoforge-2101.1.34.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "JEI",
+    "name": "Just Enough Items (JEI)",
+    "slug": "jei",
+    "projectId": 238222,
+    "fileId": 8792638,
+    "filename": "jei-1.21.1-neoforge-19.51.0.418.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Architectury API",
+    "name": "Architectury API",
+    "slug": "architectury-api",
+    "projectId": 419699,
+    "fileId": 8492726,
+    "filename": "architectury-13.0.11-neoforge.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Cloth Config API",
+    "name": "Cloth Config API (Fabric/Forge/NeoForge)",
+    "slug": "cloth-config",
+    "projectId": 348521,
+    "fileId": 5729127,
+    "filename": "cloth-config-15.0.140-neoforge.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Balm",
+    "name": "Balm",
+    "slug": "balm",
+    "projectId": 531761,
+    "fileId": 8645517,
+    "filename": "balm-neoforge-1.21.1-21.0.65.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "ModernFix",
+    "name": "ModernFix",
+    "slug": "modernfix",
+    "projectId": 790626,
+    "fileId": 8774737,
+    "filename": "modernfix-neoforge-5.27.24+mc1.21.1.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "FerriteCore",
+    "name": "FerriteCore ((Neo)Forge)",
+    "slug": "ferritecore",
+    "projectId": 429235,
+    "fileId": 7524151,
+    "filename": "ferritecore-7.0.3-neoforge.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Entity Culling",
+    "name": "Entity Culling Fabric/Forge",
+    "slug": "entityculling",
+    "projectId": 448233,
+    "fileId": 8287097,
+    "filename": "entityculling-neoforge-1.10.5-mc1.21.1.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "ImmediatelyFast",
+    "name": "ImmediatelyFast",
+    "slug": "immediatelyfast",
+    "projectId": 686911,
+    "fileId": 8749421,
+    "filename": "ImmediatelyFast-NeoForge-1.6.13+1.21.1.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Jade",
+    "name": "Jade 🔍",
+    "slug": "jade",
+    "projectId": 324717,
+    "fileId": 8591319,
+    "filename": "Jade-1.21.1-NeoForge-15.10.6.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "AppleSkin",
+    "name": "AppleSkin",
+    "slug": "appleskin",
+    "projectId": 248787,
+    "fileId": 7854442,
+    "filename": "appleskin-neoforge-mc1.21-3.0.9.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Mystical Agriculture",
+    "name": "Mystical Agriculture",
+    "slug": "mystical-agriculture",
+    "projectId": 246640,
+    "fileId": 8796913,
+    "filename": "MysticalAgriculture-1.21.1-8.0.28.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Cucumber Library",
+    "name": "Cucumber Library",
+    "slug": "cucumber",
+    "projectId": 272335,
+    "fileId": 8035802,
+    "filename": "Cucumber-1.21.1-8.0.16.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Farmer's Delight",
+    "name": "Farmer's Delight",
+    "slug": "farmers-delight",
+    "projectId": 398521,
+    "fileId": 8765184,
+    "filename": "FarmersDelight-1.21.1-1.3.4.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Create",
+    "name": "Create",
+    "slug": "create",
+    "projectId": 328085,
+    "fileId": 7963363,
+    "filename": "create-1.21.1-6.0.10.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Applied Energistics 2",
+    "name": "Applied Energistics 2",
+    "slug": "applied-energistics-2",
+    "projectId": 223794,
+    "fileId": 7027323,
+    "filename": "appliedenergistics2-19.2.17.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Almost Unified",
+    "name": "Almost Unified",
+    "slug": "almostunified",
+    "projectId": 633823,
+    "fileId": 8127603,
+    "filename": "almostunified-neoforge-1.21.1-1.4.2.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "KubeJS",
+    "name": "KubeJS",
+    "slug": "kubejs",
+    "projectId": 238086,
+    "fileId": 8715199,
+    "filename": "kubejs-neoforge-2101.7.2-build.374.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Rhino",
+    "name": "Rhino",
+    "slug": "rhino",
+    "projectId": 416294,
+    "fileId": 8218748,
+    "filename": "rhino-2101.2.7-build.85.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Forgiving Void",
+    "name": "Forgiving Void",
+    "slug": "forgiving-void",
+    "projectId": 271009,
+    "fileId": 7966159,
+    "filename": "forgivingvoid-neoforge-1.21.1-21.1.7.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Functional Storage",
+    "name": "Functional Storage",
+    "slug": "functional-storage",
+    "projectId": 556861,
+    "fileId": 8459097,
+    "filename": "functionalstorage-1.21.1-1.5.8.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Ars Nouveau",
+    "name": "Ars Nouveau",
+    "slug": "ars-nouveau",
+    "projectId": 401955,
+    "fileId": 8721482,
+    "filename": "ars_nouveau-1.21.1-5.13.1.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Productive Bees",
+    "name": "Productive Bees",
+    "slug": "productivebees",
+    "projectId": 377897,
+    "fileId": 8022994,
+    "filename": "productivebees-1.21.1-13.13.5.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Konkrete",
+    "name": "Konkrete",
+    "slug": "konkrete",
+    "projectId": 410295,
+    "fileId": 5453385,
+    "filename": "konkrete_neoforge_1.9.9_MC_1.21.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Melody",
+    "name": "Melody",
+    "slug": "melody",
+    "projectId": 938643,
+    "fileId": 5453382,
+    "filename": "melody_neoforge_1.0.10_MC_1.21.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "FancyMenu",
+    "name": "FancyMenu",
+    "slug": "fancymenu",
+    "projectId": 367706,
+    "fileId": 8752297,
+    "filename": "fancymenu_neoforge_3.9.12_MC_1.21.1.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Botany Pots",
+    "name": "Botany Pots",
+    "slug": "botany-pots",
+    "projectId": 353928,
+    "fileId": 8243851,
+    "filename": "botanypots-neoforge-1.21.1-21.1.44.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Curios API",
+    "name": "Curios API",
+    "slug": "curios",
+    "projectId": 309927,
+    "fileId": 6529130,
+    "filename": "curios-neoforge-9.5.1+1.21.1.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Iron's Spells 'n Spellbooks",
+    "name": "Iron's Spells 'n Spellbooks",
+    "slug": "irons-spells-n-spellbooks",
+    "projectId": 855414,
+    "fileId": 8680204,
+    "filename": "irons_spellbooks-1.21.1-3.16.3.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Mekanism",
+    "name": "Mekanism",
+    "slug": "mekanism",
+    "projectId": 268560,
+    "fileId": 7904058,
+    "filename": "Mekanism-1.21.1-10.7.19.85.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Mekanism Tools",
+    "name": "Mekanism Tools",
+    "slug": "mekanism-tools",
+    "projectId": 268567,
+    "fileId": 7904062,
+    "filename": "MekanismTools-1.21.1-10.7.19.85.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Nature's Aura",
+    "name": "Nature's Aura",
+    "slug": "natures-aura",
+    "projectId": 306626,
+    "fileId": 8809415,
+    "filename": "NaturesAura-41.10.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Occultism",
+    "name": "Occultism",
+    "slug": "occultism",
+    "projectId": 361026,
+    "fileId": 8745224,
+    "filename": "occultism-1.21.1-neoforge-1.224.4.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "PackagedAuto",
+    "name": "PackagedAuto",
+    "slug": "packagedauto",
+    "projectId": 308380,
+    "fileId": 7329743,
+    "filename": "PackagedAuto-1.21.1-4.0.8.21.jar",
+    "releaseType": 2
+  },
+  {
+    "key": "Pipez",
+    "name": "Pipez",
+    "slug": "pipez",
+    "projectId": 443900,
+    "fileId": 8351631,
+    "filename": "pipez-neoforge-1.21.1-1.2.31.jar",
+    "releaseType": 2
+  },
+  {
+    "key": "Powah",
+    "name": "Powah! (Rearchitected)",
+    "slug": "powah-rearchitected",
+    "projectId": 633483,
+    "fileId": 8011715,
+    "filename": "Powah-6.2.10.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Silent Gear",
+    "name": "Silent Gear",
+    "slug": "silent-gear",
+    "projectId": 297039,
+    "fileId": 8095210,
+    "filename": "silent-gear-1.21.1-neoforge-4.2.1.1.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Silent Lib",
+    "name": "Silent Lib (silentlib)",
+    "slug": "silent-lib",
+    "projectId": 242998,
+    "fileId": 7935618,
+    "filename": "silent-lib-1.21.1-neoforge-10.6.0.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Solar Flux Reborn",
+    "name": "Solar Flux Reborn",
+    "slug": "solar-flux-reborn",
+    "projectId": 246974,
+    "fileId": 6776635,
+    "filename": "SolarFluxReborn-1.21.1-21.1.8.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Sophisticated Backpacks",
+    "name": "Sophisticated Backpacks",
+    "slug": "sophisticated-backpacks",
+    "projectId": 422301,
+    "fileId": 8818204,
+    "filename": "sophisticatedbackpacks-1.21.1-3.26.1.2124.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Sophisticated Core",
+    "name": "Sophisticated Core",
+    "slug": "sophisticated-core",
+    "projectId": 618298,
+    "fileId": 8815718,
+    "filename": "sophisticatedcore-1.21.1-1.5.0.2322.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Patchouli",
+    "name": "Patchouli",
+    "slug": "patchouli",
+    "projectId": 306770,
+    "fileId": 7730942,
+    "filename": "Patchouli-1.21.1-93-NEOFORGE.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Bookshelf",
+    "name": "Bookshelf",
+    "slug": "bookshelf",
+    "projectId": 228525,
+    "fileId": 7606240,
+    "filename": "bookshelf-neoforge-1.21.1-21.1.81.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "HammerLib",
+    "name": "HammerLib",
+    "slug": "hammer-lib",
+    "projectId": 247401,
+    "fileId": 5739162,
+    "filename": "HammerLib-1.21-21.0.14.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Prickle",
+    "name": "Prickle",
+    "slug": "prickle",
+    "projectId": 1023259,
+    "fileId": 6961457,
+    "filename": "prickle-neoforge-1.21.1-21.1.11.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Iron's Lib",
+    "name": "Iron's Lib",
+    "slug": "irons-lib",
+    "projectId": 1492763,
+    "fileId": 8364894,
+    "filename": "irons_lib-1.21.1-2.1.0.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "SmartBrainLib",
+    "name": "SmartBrainLib (Forge/Fabric/Quilt)",
+    "slug": "smartbrainlib",
+    "projectId": 661293,
+    "fileId": 7055149,
+    "filename": "SmartBrainLib-neoforge-1.21.1-1.16.11.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "GeckoLib",
+    "name": "GeckoLib",
+    "slug": "geckolib",
+    "projectId": 388172,
+    "fileId": 8350073,
+    "filename": "geckolib-neoforge-1.21.1-4.9.2.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "GuideME",
+    "name": "GuideME",
+    "slug": "guideme",
+    "projectId": 1173950,
+    "fileId": 8420861,
+    "filename": "guideme-21.1.17.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Titanium",
+    "name": "Titanium",
+    "slug": "titanium",
+    "projectId": 287342,
+    "fileId": 7951516,
+    "filename": "titanium-1.21-4.0.43.jar",
+    "releaseType": 1
+  },
+  {
+    "key": "Player Animator",
+    "name": "playerAnimator",
+    "slug": "playeranimator",
+    "projectId": 658587,
+    "fileId": 7389814,
+    "filename": "player-animation-lib-forge-2.0.4+1.21.1.jar",
+    "releaseType": 2
+  },
+  {
+    "key": "Modonomicon",
+    "name": "Modonomicon",
+    "slug": "modonomicon",
+    "projectId": 538392,
+    "fileId": 8532346,
+    "filename": "modonomicon-1.21.1-neoforge-1.120.4.jar",
+    "releaseType": 1
+  }
+]

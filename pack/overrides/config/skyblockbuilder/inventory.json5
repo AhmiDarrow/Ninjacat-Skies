@@ -1,0 +1,10 @@
+{
+  // Wipe other mods' free guide books on first join so kits stay intentional.
+  "clearInitialInventory": true,
+
+  "dropItems": true,
+
+  // Give the global starter inventory when a player joins a team (island create).
+  // Per-difficulty kits live in island chests — this file is shared across templates.
+  "initialInventoryType": "team"
+}

@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.146'
+    id 'idea'
+}
+
+ext {
+    mod_id = 'clowderhall'
+    mod_name = 'Clowder Hall'
+    mod_description = 'Hub ceremony, island charter, and Clowder multiplayer layer for Ninjacat Skies.'
+}
+apply from: rootProject.file('neoforge-mod.gradle')
+
+dependencies {
+    implementation project(':ninjacat-lib')
+    implementation project(':ninjacatskies')
+}

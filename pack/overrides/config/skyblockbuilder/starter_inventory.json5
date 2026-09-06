@@ -1,0 +1,8 @@
+// Global starter inventory (all templates). Difficulty kits are in island chests:
+//   Dojo Cottage (Easy)  — rich chest (+ Codex/Charter/Hub Key)
+//   Ninjacat Pad (Normal) — modest chest (+ Codex/Charter/Hub Key)
+//   Frayed Thread (Hard)  — tiny Codex chest (Thread/seeds/Charter/Hub Key)
+// Keep this empty; clearInitialInventory wipes login kits — chests restore ceremony tools.
+{
+  "items": []
+}

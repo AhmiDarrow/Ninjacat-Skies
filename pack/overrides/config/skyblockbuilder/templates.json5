@@ -1,0 +1,85 @@
+{
+  // Islands generate on a grid from 0,0. Applied on top of each template offset.
+  "defaultOffset": 0,
+
+  // Shared hub / first-join spawn island (world center).
+  "mainSpawnIsland": {
+    "name": "Clowder Dock",
+    "desc": "Shared hub dock — beacon frame, lectern, banners, and Ninjacat plaque.",
+    "file": "clowder_dock.nbt",
+    "spawns": {
+      "south": [],
+      "west": [],
+      "north": [
+        [ 7, 2, 12 ]
+      ],
+      "east": []
+    },
+    "offset": [ -7, 0, -7 ]
+  },
+
+  "spawnPointReferences": {
+    "ninjacat_pad": {
+      "south": [
+        [ 4, 2, 1 ]
+      ],
+      "west": [],
+      "north": [],
+      "east": []
+    },
+    "dojo_cottage": {
+      "south": [
+        [ 5, 2, 9 ]
+      ],
+      "west": [],
+      "north": [],
+      "east": []
+    },
+    "frayed_thread": {
+      "south": [
+        [ 1, 3, 0 ]
+      ],
+      "west": [],
+      "north": [],
+      "east": []
+    }
+  },
+
+  "spreadReferences": {
+    "default": []
+  },
+
+  "surroundingBlockReferences": {
+    "default": {
+      "margin": 0
+    }
+  },
+
+  // First entry is the default when creating a team / choosing a template.
+  "templateList": [
+    {
+      "name": "Ninjacat Pad",
+      "desc": "Normal — 9x9 grass pad with corner posts, fence edge, lantern, crafting table, and a modest starter chest (ice/lava/bucket, Yarn, Thread, Codex/Charter/Hub Key).",
+      "file": "ninjacat_pad.nbt",
+      "spawns": "ninjacat_pad",
+      "offset": [ -4, 0, -4 ]
+    },
+    {
+      "name": "Dojo Cottage",
+      "desc": "Easy — 11x11 pad with a roofed cobble-and-wood cottage, windows, bed, and a rich starter chest.",
+      "file": "dojo_cottage.nbt",
+      "spawns": "dojo_cottage",
+      "offset": [ -5, 0, -5 ]
+    },
+    {
+      "name": "Frayed Thread",
+      "desc": "Hard — broken 3x3 dirt speck; chest has Codex, Charter, Hub Key, Thread×6, How to Start, ice×2 + lava + empty bucket for cobble/clay. Survive.",
+      "file": "frayed_thread.nbt",
+      "spawns": "frayed_thread",
+      "offset": [ -1, 0, -1 ]
+    }
+  ],
+
+  // No extra nether portal spreads yet.
+  "netherSpreads": []
+}

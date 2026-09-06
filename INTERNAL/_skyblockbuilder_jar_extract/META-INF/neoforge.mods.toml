@@ -1,0 +1,53 @@
+modLoader="javafml"
+loaderVersion = "[4,)"
+license = "The Apache License, Version 2.0"
+issueTrackerURL = "https://github.com/ChaoticTrials/SkyblockBuilder/issues"
+
+[[mods]]
+modId = "skyblockbuilder"
+version = "21.1.31"
+displayName="Skyblock Builder"
+displayURL = "https://github.com/ChaoticTrials/SkyblockBuilder"
+updateJSONURL="https://assets.melanx.de/updates/skyblock-builder.json"
+authors="MelanX"
+description='''
+Let you create a custom skyblock island via config
+'''
+
+[[dependencies.skyblockbuilder]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.118,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.skyblockbuilder]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.skyblockbuilder]]
+modId = "libx"
+type = "required"
+versionRange = "[1.21.1-6.0.9,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.skyblockbuilder]]
+modId = "minemention"
+type = "optional"
+versionRange = "[1.21.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.skyblockbuilder]]
+modId = "skyguis"
+type = "optional"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "skyblockbuilder.mixins.json"

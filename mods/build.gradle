@@ -1,0 +1,4 @@
+// Root aggregator — real NeoForge config lives in subprojects.
+tasks.register('buildAll') {
+    dependsOn subprojects.collect { it.tasks.named('build') }
+}

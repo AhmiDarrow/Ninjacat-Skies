@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.146'
+    id 'idea'
+}
+
+ext {
+    mod_id = 'voidloom'
+    mod_name = 'Voidloom'
+    mod_description = 'Void yarn, spindle tools, and Loomframe sieving flair for Ninjacat Skies.'
+}
+apply from: rootProject.file('neoforge-mod.gradle')
+
+dependencies {
+    implementation project(':ninjacat-lib')
+}

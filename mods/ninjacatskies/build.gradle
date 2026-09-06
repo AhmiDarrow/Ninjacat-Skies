@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.146'
+    id 'idea'
+}
+
+ext {
+    mod_id = 'ninjacatskies'
+    mod_name = 'Ninjacat Skies'
+    mod_description = 'Core Codex, Skybound kits, and Strand story hooks for Ninjacat Skies.'
+}
+apply from: rootProject.file('neoforge-mod.gradle')
+
+dependencies {
+    implementation project(':ninjacat-lib')
+}

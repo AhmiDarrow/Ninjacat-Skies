@@ -1,0 +1,52 @@
+# Build
+**/build/
+**/.gradle/
+**/out/
+**/bin/
+**/run/
+**/runs/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets (never push tokens / personal credentials)
+tools/secrets/.env
+tools/secrets/*.key
+tools/secrets/*
+!tools/secrets/.env.example
+**/.env
+!**/.env.example
+**/credentials.json
+
+# Pack downloads (lockfiles stay; jars optional)
+pack/mods/*.jar
+pack/.packwizignore
+
+# Export output
+dist/
+tools/mdk-extract/
+tools/mdk.zip
+tools/mdk-1.21.1.zip
+
+# OS / temp
+*.tmp
+*.bak
+__pycache__/
+node_modules/
+
+# Minecraft local test copies
+**/crash-reports/
+**/logs/
+**/saves/
+
+# Note: INTERNAL/ stays in private clones for requirements/research.
+# It must never be included in CurseForge zips (enforced by export + gates).
