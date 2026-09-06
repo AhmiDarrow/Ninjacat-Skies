@@ -1,0 +1,23 @@
+{
+  "category": "ninjacatskies:the_cut",
+  "name": "The Loom of Worlds",
+  "description": "What held the sky up.",
+  "icon": "ninjacatskies:spindle_loom_fragment",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Loom of Worlds",
+      "text": "The skies were held by a lattice of living thread. Nine Strands, tended by nine tribes of Ninjacats, pulled taut across the whole sky.\n\nContinents hung from it. Weather ran along it. Nothing fell that was not meant to."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What the tribes made",
+      "text": "From their shared pull on the Loom came **Tribal Power**: shamanic technomancy of pulse, lattice, seal, and the road into the March-lands.\n\nThe engines are still out there. Orphaned, humming, sacred. Treat them like an inheritance, not a scrap pile."
+    }
+  ]
+}

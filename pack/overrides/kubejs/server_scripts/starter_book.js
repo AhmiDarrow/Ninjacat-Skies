@@ -2,14 +2,16 @@
 // Complements lectern / dock chest copies; does not replace Whisker Codex voice.
 // Keep in sync with island chest howto pages and Hall book.
 
-const STARTER_BOOK_FLAG = 'ncs_starter_howto_v4'
+const STARTER_BOOK_FLAG = 'ncs_starter_howto_v5'
 const STARTER_TITLE = 'How to Start'
 
 function starterPages() {
   return [
     'HOW TO START (read me)\n\nYou are on Clowder Dock — the shared hub, not your forever island.\n\nGoal: open Create Team, pick a pad template, then open quests.',
     'CLAIM A PAD (guided)\n\n1) Right-click your Island Charter ON THE DOCK\n   (or press C — Sky GUIs key)\n2) Click Create Team\n3) Type a Clowder name\n4) Pick a pad template:\n   Ninjacat Pad = Normal (start here)\n   Dojo Cottage = Easy\n   Frayed Thread = Hard\n5) Click Create — you teleport\n\nDo NOT use chat create if you want to pick a pad —\n/skyblock create <name> skips the picker.\n\nDock: Charter opens Create Team.\nPad: Charter seals spawn here.\nHall: Hub Key toggles leave — Create Team is Dock-only.',
-    'QUESTS\n\nOpen FTB Quests (quest book key / inventory button).\nStart Soil (Wake). Do not skip ahead.\n\nEasy ships water already.\nNormal/Hard: ice + lava + empty bucket.\nPlace lava, melt ice into water, fill bucket.\n\nStone / Recover:\n1) Unravel Frayed Thread → 3 string\n2) Craft 4 string → 2 Void Yarn\n3) Spindle Hammer = cobble + sticks\n4) Tension Barrel: water+dirt → clay (bucket returns to you)\n5) Porcelain clay → smelt porcelain bucket\n6) Then sieve grit; slime = dirt+seeds+meal\n\nWhisker Codex is the in-world guide.',
+    'QUESTS\n\nOpen FTB Quests (quest book key / inventory button).\nStart Soil (Wake). Each Strand chapter ends in a KNOT quest that gives a Strand token.\n\nRight-click the Whisker Codex for the story book; sneak-click for the next step.\n\nEasy ships water already.\nNormal/Hard: ice + lava + empty bucket.\nPlace lava, melt ice into water, fill bucket.',
+    'TENSION POST\n\nCraft: logs around a Binding Knot, Thread on top.\nPlace it on your pad.\nRight-click it with a Strand token to SEAT it.\n\nSeated Strands = Loom Tension. The pad heals you near the Post, feeds you after Sprout, catches falls after Claw.\n\nBraid Cord: Post + Strand Filament (2 of Clock/Swarm/Spark seated).\nLoom Fragment: Post + March stone (all nine seated). Seat the Fragment to Reweave.',
+    'STONE / RECOVER\n\n1) Unravel Frayed Thread -> 3 string\n2) 4 string -> 2 Void Yarn\n3) Spindle Hammer = cobble + sticks\n4) Tension Barrel: pour water (bucket returns), add up to 8 dirt -> clay\n5) Porcelain clay -> smelt porcelain bucket\n6) Loomframe: mesh + dirt/gravel, it sifts on its own; hoppers work\n7) Then Ex Deorum sieves. Slime = dirt+seeds+meal',
     'HELPFUL COMMANDS\n\n  /clowder help\n  /clowder hub     → Clowder Hall dimension\n  /clowder return  → leave Hall to your pad\n  /clowder revive  → self if spectator (soft hardcore)\n  /clowder revive <mate> → pull a teammate back\n  /skyblock home   → your pad\n  /skyblock create <name>  → advanced (skips pad pick)\n\nOps: /skybound revive [player]\nHub Key toggles Hall enter/leave.\nLost? Charter seals spawn on pad; hub is always safe.',
     'WHAT IS THIS PACK?\n\nVoid skyblock + Loom Braid quests.\nTribal Power (drums / Pulse / March) is a core pillar — not a side mod.\n\nThis book is OOC on purpose. Signs & Codex stay in-voice.',
   ]

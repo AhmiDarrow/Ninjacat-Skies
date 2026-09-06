@@ -4,7 +4,7 @@
 
 ### Scope
 - Target playtime: **40–60 hours** Normal first clear
-- FTB Quests: **1324** quests across **34** chapters (item-ID audit clean; titles + short descs in `en_us.snbt`)
+- FTB Quests: **1328** quests across **34** chapters (item-ID + dead-end audit clean; Strand chapters authored in `en_us.snbt`)
 - Island starters: Frayed Thread, Ninjacat Pad, Dojo Cottage (Skyblock Builder templates)
 
 ### Custom mods
@@ -95,7 +95,51 @@
 - Added missing NeoForge libraries that blocked first boot: Patchouli, Bookshelf, HammerLib, Prickle, Iron's Lib, SmartBrainLib, GeckoLib, GuideME, Titanium, Player Animator, Modonomicon
 - CurseForge export ships `icon.png`, `modlist.html`, `overrides/INSTALL.txt`, store description helpers, and manifest `recommendedRam: 8192` (author-recommended 8 GB)
 
+
+### Loom Tension is real (2026-09-06)
+Strand tokens are no longer crafted. Each Strand chapter ends in a **Knot** quest (checkmark on hand-picked beats) that
+rewards the token, a Steward Cache, and levels; a **Seat** quest clears when the token is seated at a **Tension Post**.
+- **Tension Post** (`ninjacatskies:tension_post`): logs + Binding Knot + Thread. Seat tokens; nine notches light per tribe;
+  chime pitched per Strand; thread helix; steward whisper to the whole Clowder; Codex Page every third seat; the Post hums.
+- **Loom Tension is team-scoped** (FTB Teams extra data; solo fallback) and computed from seated Strands — no craft exploit.
+  Aura near the Post: Regeneration (any Strand), a little food (Sprout), no fall damage within 48 blocks (Claw),
+  Haste (5 Strands), Luck (Sigil), Slow Falling (rewoven). Horizon tint warms per Strand (client, `skyTint` config).
+- **Braid Cord** is spun at the Post: Strand Filament + two of Clock/Swarm/Spark seated. **Spindle Loom Fragment**: March
+  stone at the Post with all nine seated. Seating the Fragment is the **Reweave**: server broadcast, nine chimes in
+  sequence, expanding ring, fireworks, advancement, Slow Falling aura. Tokens stack to 16 as souvenirs; never consumed.
+- **The Fray**: a slow dark particle column over the Dock (config `frayX/Y/Z`), thinning with server-wide seated Strands;
+  turns to lit thread at full Reweave.
+- **Whisker Codex is a Modonomicon book** (right-click; sneak-click for the next-step nudge). Three categories: The Cut,
+  The Loom Braid, Nine Tribes (tribe entries unlock on seat via `ninjacatskies:strand/<name>` advancements).
+  **Codex Pages** are readable: right-click for a tribe margin note (27 notes; pages keep their tribe when seated).
+- Nine distinct token textures; Post block + notch textures; synthesised original sounds (chime, seat, hum, reweave,
+  page; Loomframe sift; Barrel settle) via `tools/generate_sounds_loom.py`.
+- Voice pass: steward lines, Codex nudges, and ~40 quest descriptions rewritten in-voice; no design-doc language
+  ("FE bridges", "bait", "not the title") in player text.
+
+### Voidloom identity (2026-09-06)
+- **Loomframe** now sifts on its own: mesh + up to 64 grit, one piece per 2.5 s with a shuttle clack and particles,
+  4 output slots, hopper/pipe capability (insert top slot, extract outputs). Thread meshes add **Loom Lint** (4 → yarn),
+  **Frayed Thread** (flint+), **Strand Filament** (iron+) to the scrap table.
+- **Tension Barrel** batches: 8 water measures (4 per bucket, bucket returned immediately), 8 dirt / string / pearls,
+  3 output slots, ring particles while working; string + pearl → **2** yarn. Item handler for hoppers.
+- KubeJS `voidloom_sieve.js`: additive Ex Deorum sieve lines for voidloom meshes only (Lint / Thread / Filament).
+- Removed: `loom_tension.js`, `steward_lines.js` (now Java), token/braid/fragment crafting recipes.
+
+### Quest regeneration (2026-09-06)
+- Generator: cluster lattice (5-beat clusters) instead of 35-deep chains; tiered Thread rewards + a level on heads;
+  Knot/Seat quests; `checkmark`, `observation`, `dimension`, `advancement` tasks; command-driven Steward Cache rewards;
+  side grids hidden until the chapter's second beat; unique titles (chapter suffix on repeats); Desk purchases have no
+  dependencies; Desk repriced (star 200, diamonds 30, shulker 90).
+- Reweave chapter opens Loom-native (Spin the Filament → Splice a Braid) and names the digital loom (Cold Weft,
+  Charged Warp, Press the Pattern, Digital Loom); ends Knot → Loom Fragment → **Reweave**.
+- Clowder chapter opens with Raise the Post (observation), Enter the Hall (dimension), Look at the Fray.
+- Unobtainables: heart of the sea / rabbit hide / turtle helmet / wolf armor removed; recovery compass, elytra, totem,
+  trident, echo shard, disc, sponge, saddle forced optional. `tools/audit_quest_items.py` now fails on dead ends.
+- In-voice descriptions for the Strand chapters (`LORE` table); "Watering Can" duplicate → Bone Block; pad "spare" filler
+  quests retired.
+
 ### Known gaps
 - Client playtest still unchecked after dependency fix (re-import required)
-- Some side chapters remain thinner than the Strand spine
+- Side chapters (10–34) still carry short one-line descriptions; Strand chapters are authored
 - Optional: Drippy loading screen / macOS window icon

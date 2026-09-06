@@ -1,0 +1,89 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "ninjacatskies:block/tension_post"
+      }
+    },
+    {
+      "when": {
+        "soil": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_soil"
+      }
+    },
+    {
+      "when": {
+        "stone": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_stone"
+      }
+    },
+    {
+      "when": {
+        "sprout": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_sprout"
+      }
+    },
+    {
+      "when": {
+        "claw": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_claw"
+      }
+    },
+    {
+      "when": {
+        "spark": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_spark"
+      }
+    },
+    {
+      "when": {
+        "clock": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_clock"
+      }
+    },
+    {
+      "when": {
+        "swarm": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_swarm"
+      }
+    },
+    {
+      "when": {
+        "sigil": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_sigil"
+      }
+    },
+    {
+      "when": {
+        "spindle": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_notch_spindle"
+      }
+    },
+    {
+      "when": {
+        "rewoven": "true"
+      },
+      "apply": {
+        "model": "ninjacatskies:block/tension_post_rewoven"
+      }
+    }
+  ]
+}

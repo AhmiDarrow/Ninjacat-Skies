@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "seated": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "seated"
+    ]
+  ]
+}

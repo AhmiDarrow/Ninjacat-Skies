@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Loom-stitchers",
+  "description": "Keepers of the Spindle Strand.",
+  "icon": "ninjacatskies:strand_token_spindle",
+  "x": -2,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Loom-stitchers",
+      "text": "The Loom-stitchers cut the gate-paths — into the March, into the Nether and End, into places the map does not have words for — and always meant to come back and mend them.\n\nThey did not get to. You will."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_spindle",
+      "title": "Spindle Strand",
+      "text": "*The Loom was never one thread. It was nine agreeing.*\n\nSeated. The Loom-stitchers answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/spindle"
+  }
+}

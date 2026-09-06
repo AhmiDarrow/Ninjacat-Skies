@@ -49,6 +49,22 @@ Do not mark items done from agent disk audits. Check only after a live client ru
 - [ ] Spindle Crook breaks leaves quickly; Ex Deorum crook string/silkworm drops apply
 - [ ] Strand Banner Pattern applies a **Strand** layer on the loom (not a dummy item)
 
+## Loom Tension (2026-09-06 layer)
+
+- [ ] Soil Knot quest appears after its five beats; claiming gives Strand Token: Soil + Steward Cache (command reward) + 3 levels
+- [ ] Craft Tension Post (logs + Binding Knot + Thread); place on pad; right-click with token → chime, helix, whisper (teal + gold), notch lit, `Seat Soil` quest clears
+- [ ] Second player on the same team hears the chime / whisper and sees the Seat quest cleared
+- [ ] Post hums quietly (client), light level rises with notches; particles drift from lit notches
+- [ ] Aura: Regeneration near Post; after Claw seated, falling off the pad within 48 blocks does no damage (actionbar "Edge-walker footing")
+- [ ] Horizon/fog warms slightly after seating (compare screenshot before/after; `skyTint=false` disables)
+- [ ] The Fray column visible over the Dock (0,66,0 by default) from within 96 blocks; thins as Strands seat
+- [ ] Whisker Codex right-click opens the Modonomicon book; Nine Tribes entries unlock per seat; sneak-click nudges
+- [ ] Codex Page right-click prints a tribe margin note with page sound
+- [ ] Strand Filament from iron thread mesh (sieve or Loomframe); right-click Post with it after 2 braid Strands → Braid Cord
+- [ ] March stone right-click with 9 seated → Fragment; Fragment right-click → Reweave finale (broadcast, chimes, ring, fireworks), `Reweave` quest clears
+- [ ] Loomframe: load 64 dirt, walk away, come back to scraps; hopper on top feeds, hopper on side pulls
+- [ ] Tension Barrel: water bucket returns immediately; 8 dirt → 8 clay unattended
+
 ## Root → Edge
 
 - [ ] Living pad / farm foothold (Soil–Root feel) without Tribal softlock

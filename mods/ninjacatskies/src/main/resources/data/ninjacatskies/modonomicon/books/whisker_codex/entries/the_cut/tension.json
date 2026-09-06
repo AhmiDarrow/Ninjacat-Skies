@@ -1,0 +1,36 @@
+{
+  "category": "ninjacatskies:the_cut",
+  "name": "Loom Tension",
+  "description": "The Post, the seat, the hum.",
+  "icon": "ninjacatskies:tension_post",
+  "x": 8,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:tension_post",
+      "title": "Tension Post",
+      "text": "Logs, a Binding Knot, and a scrap of Thread make a **Tension Post**. Raise one on the pad. Right-click it with a Strand token to seat that Strand; the notch lights, the tribe chimes, and the Post starts to hum."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What Tension does",
+      "text": "Seated Strands are **Loom Tension**. It is not a bar and it does not nag. It changes the pad.\n\nNear the Post: the pad mends you (Soil). It feeds you a little (Sprout). Fall damage stops within sight of it (Claw). Hands quicken (five Strands). Luck (Sigil). And the horizon warms, one Strand at a time."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Spun at the Post",
+      "text": "Two things are made at the Post, not the bench.\n\n**Braid Cord**: right-click with a Strand Filament once two of Clock, Swarm, or Spark are seated.\n\n**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:the_cut/clowder",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

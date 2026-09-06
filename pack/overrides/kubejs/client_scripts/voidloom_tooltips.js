@@ -1,37 +1,42 @@
-// Client tooltips for early voidloom station blocks and end trophy
+// Client tooltips for Loom stations and proof items. Short; the Codex book carries the rest.
 ItemEvents.modifyTooltips(event => {
   event.add('voidloom:loomframe', [
-    Text.gray('Insert a sieve mesh, then right-click dirt/gravel for a small bonus scrap.'),
-    Text.darkGray('Empty hand removes the mesh. Ex Deorum sieves still do the real work.')
+    Text.gray('Stretch a mesh, load dirt or gravel, let it work. Hoppers feed the top and pull the sides.'),
+    Text.darkGray('Empty hand takes scraps; sneak to pull the mesh. Thread meshes catch Loom Lint, Thread, and Filament.')
   ])
-  event.add('ninjacatskies:frayed_thread', [
-    Text.gray('Unravel: 1 Thread → 3 string. Desk shop sinks Thread for QoL.')
+  event.add('voidloom:tension_barrel', [
+    Text.gray('Pour water (bucket comes back) and add dirt → clay. String + ender pearl → 2 yarn.'),
+    Text.darkGray('Holds 8 of each. Empty hand takes what settled; sneak to pull dry inputs.')
   ])
+  event.add('voidloom:loom_lint', Text.gray('Combed out of dirt by a thread mesh. Four make a Void Yarn.'))
+  event.add('voidloom:strand_filament', [
+    Text.gray('Rare iron-mesh catch. Right-click a Tension Post with it to spin a Braid Cord.'),
+    Text.darkGray('Needs two of Clock, Swarm, or Spark seated.')
+  ])
+  event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. The Desk chapter sells things for Thread.'))
   event.add('voidloom:void_yarn', [
-    Text.gray('Early: 4 string → 2 yarn (unravel Thread first).'),
-    Text.darkGray('Better later: 2 string + pearl/chorus → 2 yarn, or Tension Barrel.')
+    Text.gray('Early: 4 string → 2 yarn. Later: string + pearl in the Tension Barrel → 2 yarn.'),
+    Text.darkGray('Or four Loom Lint from the Loomframe.')
   ])
   event.add('voidloom:binding_knot', [
-    Text.gray('Void Yarn ring + slime ball.'),
+    Text.gray('Void Yarn ring around a slime ball. The Loom\'s soft gate.'),
     Text.darkGray('Early slime: 2 dirt + wheat seeds + bone meal.')
   ])
+  event.add('ninjacatskies:tension_post', [
+    Text.gray('Seat Strand tokens here. Each one lights a notch, chimes for the Clowder, and changes the pad.'),
+    Text.darkGray('Braid Cord and the Spindle Loom Fragment are spun here, not crafted.')
+  ])
+  event.add('ninjacatskies:braid_cord', Text.gray('Two braid paths, one cord. Heart of the molecular assembler.'))
+  event.add('ninjacatskies:spindle_loom_fragment', Text.gold('Seat it at the Tension Post to Reweave.'))
   if (Item.exists('tribalpower:pulse_resonator')) {
-    event.add('tribalpower:pulse_resonator', Text.gray('Feed coal/charcoal — denser Spirit Pulse for the lattice.'))
+    event.add('tribalpower:pulse_resonator', Text.gray('Feed coal or charcoal — denser Spirit Pulse for the lattice.'))
     event.add('tribalpower:ley_collector', Text.gray('Draw ambient ley into Pulse near a Drumheart.'))
     event.add('tribalpower:pulse_cell', Text.gray('Carry Pulse between Drumheart, Ley, and Resonator.'))
   }
-  event.add('voidloom:tension_barrel', [
-    Text.gray('Iron or porcelain water + dirt → clay (~10s).'),
-    Text.gray('Empty bucket returns to you. String + pearl → yarn (~8s).'),
-    Text.darkGray('No GUI — right-click to insert, empty hand to take.')
-  ])
-  event.add('ninjacatskies:spindle_loom_fragment', Text.gold('End trophy — nine Strand tokens plus March stone.'))
-  event.add('ninjacatskies:braid_cord', [
-    Text.gray('Loom braid — any two of Clock, Swarm, or Spark tokens.'),
-    Text.gold('Consumes tokens — craft extras before the Spindle trophy.'),
-  ])
-  event.add(/ninjacatskies:strand_token_.*/, Text.darkGray('Keep a spare — braid crafts consume tokens.'))
   if (Item.exists('tribalpower:drumheart')) {
-    event.add('tribalpower:drumheart', Text.gray('Hum lead-in — strike to store Spirit Pulse.'))
+    event.add('tribalpower:drumheart', Text.gray('Strike it and listen before you wire anything.'))
+  }
+  if (Item.exists('tribalpower:march_stone')) {
+    event.add('tribalpower:march_stone', Text.gold('Right-click a Tension Post with it once nine Strands are seated.'))
   }
 })

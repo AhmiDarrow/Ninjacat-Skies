@@ -1,8 +1,12 @@
 package com.ninjacat.skies.voidloom.block;
 
 import com.ninjacat.skies.voidloom.item.ModItems;
+import com.ninjacat.skies.voidloom.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -10,59 +14,140 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Clearable;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.Containers;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.AABB;
+import net.neoforged.neoforge.items.IItemHandler;
+import org.joml.Vector3f;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 /**
- * Slow item transform station (no GUI).
+ * Tension Barrel — a slow, wet transform station with no GUI.
  * <ul>
- *   <li>Water bucket (iron or porcelain) + dirt → clay ball; empty bucket returned to nearest player, ~10s</li>
- *   <li>String + ender pearl → void yarn, ~8s</li>
+ *   <li>Water (iron or porcelain bucket, 4 charges each; the empty bucket comes straight back) + dirt → clay ball, ~8 s each</li>
+ *   <li>String + ender pearl → 2 Void Yarn, ~6 s each</li>
  * </ul>
+ * Holds up to 8 of each dry input and 8 charges of water, so a stack of dirt and two buckets is one visit.
  */
 public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
-    public static final int CLAY_TIME = 200;
-    public static final int YARN_TIME = 160;
-    private static final ResourceLocation PORCELAIN_WATER =
-            ResourceLocation.parse("exdeorum:porcelain_water_bucket");
-    private static final ResourceLocation PORCELAIN_BUCKET =
-            ResourceLocation.parse("exdeorum:porcelain_bucket");
+    public static final int CLAY_TIME = 160;
+    public static final int YARN_TIME = 120;
+    public static final int WATER_PER_BUCKET = 4;
+    public static final int WATER_MAX = 8;
+    public static final int DRY_MAX = 8;
+    public static final int OUTPUT_SLOTS = 3;
 
-    private ItemStack slotA = ItemStack.EMPTY;
-    private ItemStack slotB = ItemStack.EMPTY;
-    private ItemStack output = ItemStack.EMPTY;
+    private static final ResourceLocation PORCELAIN_WATER = ResourceLocation.parse("exdeorum:porcelain_water_bucket");
+    private static final ResourceLocation PORCELAIN_BUCKET = ResourceLocation.parse("exdeorum:porcelain_bucket");
+    private static final DustParticleOptions RING = new DustParticleOptions(new Vector3f(0.35F, 0.59F, 0.58F), 0.8F);
+
+    private int water;
+    private int dirt;
+    private int string;
+    private int pearls;
+    private final NonNullList<ItemStack> output = NonNullList.withSize(OUTPUT_SLOTS, ItemStack.EMPTY);
     private int progress;
     private int progressTotal;
-    @Nullable
-    private UUID lastUser;
+    private final IItemHandler handler = new Handler();
 
     public TensionBarrelBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.TENSION_BARREL.get(), pos, state);
     }
 
-    public ItemStack getSlotA() {
-        return slotA;
+    // ------------------------------------------------------------ inputs
+
+    public static boolean isWaterCarrier(ItemStack stack) {
+        return stack.is(Items.WATER_BUCKET) || BuiltInRegistries.ITEM.getOptional(PORCELAIN_WATER).filter(stack::is).isPresent();
     }
 
-    public ItemStack getSlotB() {
-        return slotB;
+    public static boolean isDirt(ItemStack stack) {
+        return stack.is(Items.DIRT) || stack.is(Items.COARSE_DIRT);
     }
 
-    public ItemStack getOutput() {
-        return output;
+    public static boolean isAcceptedInput(ItemStack stack) {
+        return isWaterCarrier(stack) || isDirt(stack) || stack.is(Items.STRING) || stack.is(Items.ENDER_PEARL);
+    }
+
+    /** Returns the empty bucket to hand back, or EMPTY if there was no room for water. */
+    public ItemStack pourWater(ItemStack bucket) {
+        if (!isWaterCarrier(bucket) || water + WATER_PER_BUCKET > WATER_MAX) {
+            return ItemStack.EMPTY;
+        }
+        water += WATER_PER_BUCKET;
+        sync();
+        boolean porcelain = !bucket.is(Items.WATER_BUCKET);
+        return porcelain
+                ? BuiltInRegistries.ITEM.getOptional(PORCELAIN_BUCKET).map(ItemStack::new).orElseGet(() -> new ItemStack(Items.BUCKET))
+                : new ItemStack(Items.BUCKET);
+    }
+
+    /** Insert dry inputs; returns how many were taken. */
+    public int insertDry(ItemStack stack, boolean simulate) {
+        int current;
+        if (isDirt(stack)) current = dirt;
+        else if (stack.is(Items.STRING)) current = string;
+        else if (stack.is(Items.ENDER_PEARL)) current = pearls;
+        else return 0;
+        int take = Math.min(DRY_MAX - current, stack.getCount());
+        if (take <= 0) {
+            return 0;
+        }
+        if (!simulate) {
+            if (isDirt(stack)) dirt += take;
+            else if (stack.is(Items.STRING)) string += take;
+            else pearls += take;
+            sync();
+        }
+        return take;
+    }
+
+    public List<ItemStack> takeDryInputs() {
+        List<ItemStack> out = new ArrayList<>();
+        if (dirt > 0) out.add(new ItemStack(Items.DIRT, dirt));
+        if (string > 0) out.add(new ItemStack(Items.STRING, string));
+        if (pearls > 0) out.add(new ItemStack(Items.ENDER_PEARL, pearls));
+        dirt = string = pearls = 0;
+        progress = 0;
+        progressTotal = 0;
+        sync();
+        return out;
+    }
+
+    public boolean hasOutput() {
+        for (ItemStack s : output) {
+            if (!s.isEmpty()) return true;
+        }
+        return false;
+    }
+
+    public List<ItemStack> takeAllOutput() {
+        List<ItemStack> out = new ArrayList<>();
+        for (int i = 0; i < output.size(); i++) {
+            if (!output.get(i).isEmpty()) {
+                out.add(output.get(i));
+                output.set(i, ItemStack.EMPTY);
+            }
+        }
+        sync();
+        return out;
+    }
+
+    public int getWater() {
+        return water;
     }
 
     public int getProgress() {
@@ -73,130 +158,58 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         return progressTotal;
     }
 
-    public void rememberUser(Player player) {
-        lastUser = player.getUUID();
-    }
-
-    public static boolean isAcceptedInput(ItemStack stack) {
-        return isWaterCarrier(stack)
-                || stack.is(Items.DIRT)
-                || stack.is(Items.COARSE_DIRT)
-                || stack.is(Items.STRING)
-                || stack.is(Items.ENDER_PEARL);
-    }
-
-    public boolean tryInsert(ItemStack stack) {
-        if (!output.isEmpty() || !isAcceptedInput(stack)) {
-            return false;
-        }
-        ItemStack one = stack.copyWithCount(1);
-        if (slotA.isEmpty()) {
-            slotA = one;
-            recomputeRecipe();
-            sync();
-            return true;
-        }
-        if (slotB.isEmpty() && !ItemStack.isSameItemSameComponents(slotA, one)) {
-            if (isDirt(slotA) && isDirt(one)) {
-                return false;
+    private boolean canStore(ItemStack stack) {
+        for (ItemStack s : output) {
+            if (s.isEmpty() || (ItemStack.isSameItemSameComponents(s, stack) && s.getCount() + stack.getCount() <= s.getMaxStackSize())) {
+                return true;
             }
-            slotB = one;
-            recomputeRecipe();
-            sync();
-            return true;
         }
         return false;
     }
 
-    public ItemStack takeOutput() {
-        if (output.isEmpty()) {
-            return ItemStack.EMPTY;
+    private void store(ItemStack stack) {
+        for (ItemStack s : output) {
+            if (!s.isEmpty() && ItemStack.isSameItemSameComponents(s, stack) && s.getCount() + stack.getCount() <= s.getMaxStackSize()) {
+                s.grow(stack.getCount());
+                return;
+            }
         }
-        ItemStack out = output;
-        output = ItemStack.EMPTY;
-        recomputeRecipe();
-        sync();
-        return out;
-    }
-
-    public ItemStack takeLastInput() {
-        if (!slotB.isEmpty()) {
-            ItemStack out = slotB;
-            slotB = ItemStack.EMPTY;
-            progress = 0;
-            recomputeRecipe();
-            sync();
-            return out;
+        for (int i = 0; i < output.size(); i++) {
+            if (output.get(i).isEmpty()) {
+                output.set(i, stack);
+                return;
+            }
         }
-        if (!slotA.isEmpty()) {
-            ItemStack out = slotA;
-            slotA = ItemStack.EMPTY;
-            progress = 0;
-            recomputeRecipe();
-            sync();
-            return out;
-        }
-        return ItemStack.EMPTY;
-    }
-
-    private void sync() {
-        setChanged();
-        if (level != null && !level.isClientSide) {
-            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        if (level != null) {
+            Containers.dropItemStack(level, worldPosition.getX() + 0.5, worldPosition.getY() + 1.0, worldPosition.getZ() + 0.5, stack);
         }
     }
 
-    private void recomputeRecipe() {
-        Recipe recipe = matchRecipe();
-        if (recipe == null) {
-            progress = 0;
-            progressTotal = 0;
-            return;
-        }
-        if (progressTotal != recipe.time) {
-            progress = 0;
-            progressTotal = recipe.time;
+    // ------------------------------------------------------------ work
+
+    private enum Recipe {
+        CLAY(CLAY_TIME), YARN(YARN_TIME);
+
+        final int time;
+
+        Recipe(int time) {
+            this.time = time;
         }
     }
 
-    private Recipe matchRecipe() {
-        if (slotA.isEmpty() || slotB.isEmpty() || !output.isEmpty()) {
-            return null;
-        }
-        if (isWaterCarrier(slotA) && isDirt(slotB) || isWaterCarrier(slotB) && isDirt(slotA)) {
+    @Nullable
+    private Recipe match() {
+        if (water > 0 && dirt > 0 && canStore(new ItemStack(Items.CLAY_BALL))) {
             return Recipe.CLAY;
         }
-        if (isString(slotA) && isEnder(slotB) || isString(slotB) && isEnder(slotA)) {
+        if (string > 0 && pearls > 0 && canStore(new ItemStack(ModItems.VOID_YARN.get(), 2))) {
             return Recipe.YARN;
         }
         return null;
     }
 
-    private static boolean isWaterCarrier(ItemStack stack) {
-        if (stack.is(Items.WATER_BUCKET)) {
-            return true;
-        }
-        return BuiltInRegistries.ITEM.getOptional(PORCELAIN_WATER).filter(stack::is).isPresent();
-    }
-
-    private static Optional<Item> porcelainEmpty() {
-        return BuiltInRegistries.ITEM.getOptional(PORCELAIN_BUCKET);
-    }
-
-    private static boolean isDirt(ItemStack stack) {
-        return stack.is(Items.DIRT) || stack.is(Items.COARSE_DIRT);
-    }
-
-    private static boolean isString(ItemStack stack) {
-        return stack.is(Items.STRING);
-    }
-
-    private static boolean isEnder(ItemStack stack) {
-        return stack.is(Items.ENDER_PEARL);
-    }
-
     public static void serverTick(Level level, BlockPos pos, BlockState state, TensionBarrelBlockEntity be) {
-        Recipe recipe = be.matchRecipe();
+        Recipe recipe = be.match();
         if (recipe == null) {
             if (be.progress != 0) {
                 be.progress = 0;
@@ -205,77 +218,48 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
             }
             return;
         }
-        be.progressTotal = recipe.time;
+        if (be.progressTotal != recipe.time) {
+            be.progress = 0;
+            be.progressTotal = recipe.time;
+        }
         be.progress++;
+        if (be.progress % 8 == 0 && level instanceof ServerLevel sl) {
+            // A thread-ring turning on the rim while tension builds.
+            double a = (be.progress / 8.0) * 0.9;
+            sl.sendParticles(RING, pos.getX() + 0.5 + Math.cos(a) * 0.42, pos.getY() + 1.02, pos.getZ() + 0.5 + Math.sin(a) * 0.42, 1, 0, 0, 0, 0);
+        }
         if (be.progress >= recipe.time) {
-            be.finishRecipe(recipe);
+            be.finish(level, pos, recipe);
         }
         be.setChanged();
     }
 
-    private void finishRecipe(Recipe recipe) {
+    private void finish(Level level, BlockPos pos, Recipe recipe) {
         progress = 0;
         progressTotal = 0;
         switch (recipe) {
             case CLAY -> {
-                boolean porcelain = isPorcelainWater(slotA) || isPorcelainWater(slotB);
-                slotA = ItemStack.EMPTY;
-                slotB = ItemStack.EMPTY;
-                output = new ItemStack(Items.CLAY_BALL);
-                ItemStack empty = porcelain
-                        ? porcelainEmpty().map(ItemStack::new).orElseGet(() -> new ItemStack(Items.BUCKET))
-                        : new ItemStack(Items.BUCKET);
-                returnEmptyBucket(empty);
+                water--;
+                dirt--;
+                store(new ItemStack(Items.CLAY_BALL));
             }
             case YARN -> {
-                slotA = ItemStack.EMPTY;
-                slotB = ItemStack.EMPTY;
-                output = new ItemStack(ModItems.VOID_YARN.get());
+                string--;
+                pearls--;
+                store(new ItemStack(ModItems.VOID_YARN.get(), 2));
             }
+        }
+        level.playSound(null, pos, ModSounds.BARREL_SETTLE.get(), SoundSource.BLOCKS, 0.6F, 0.95F + level.random.nextFloat() * 0.1F);
+        if (level instanceof ServerLevel sl) {
+            sl.sendParticles(ParticleTypes.SPLASH, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, 6, 0.2, 0.05, 0.2, 0.0);
         }
         sync();
     }
 
-    private static boolean isPorcelainWater(ItemStack stack) {
-        return BuiltInRegistries.ITEM.getOptional(PORCELAIN_WATER).filter(stack::is).isPresent();
-    }
-
-    private void returnEmptyBucket(ItemStack empty) {
-        if (level == null || level.isClientSide || empty.isEmpty()) {
-            return;
-        }
-        Player target = null;
-        if (lastUser != null) {
-            target = level.getPlayerByUUID(lastUser);
-        }
-        if (target == null) {
-            List<ServerPlayer> near = level.getEntitiesOfClass(
-                    ServerPlayer.class,
-                    new AABB(worldPosition).inflate(6.0)
-            );
-            if (!near.isEmpty()) {
-                target = near.get(0);
-            }
-        }
-        if (target != null) {
-            if (!target.getInventory().add(empty)) {
-                target.drop(empty, false);
-            }
-            target.displayClientMessage(Component.translatable("message.voidloom.tension.bucket_ejected"), true);
-            return;
-        }
-        // Fallback: center of the block so the bucket does not fall off a pad corner.
-        net.minecraft.world.Containers.dropItemStack(
-                level,
-                worldPosition.getX() + 0.5,
-                worldPosition.getY() + 1.0,
-                worldPosition.getZ() + 0.5,
-                empty
-        );
-    }
+    // ------------------------------------------------------------ status
 
     public void tellStatus(Player player) {
-        if (!output.isEmpty()) {
+        if (hasOutput()) {
             player.displayClientMessage(Component.translatable("message.voidloom.tension.ready"), true);
             return;
         }
@@ -284,79 +268,136 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
             player.displayClientMessage(Component.translatable("message.voidloom.tension.progress", pct), true);
             return;
         }
-        if (slotA.isEmpty() && slotB.isEmpty()) {
+        if (water == 0 && dirt == 0 && string == 0 && pearls == 0) {
             player.displayClientMessage(Component.translatable("message.voidloom.tension.empty"), true);
         } else {
-            player.displayClientMessage(Component.translatable("message.voidloom.tension.waiting"), true);
+            player.displayClientMessage(Component.translatable("message.voidloom.tension.holding", water, dirt, string, pearls), true);
+        }
+    }
+
+    // ------------------------------------------------------------ capability
+
+    public IItemHandler handler() {
+        return handler;
+    }
+
+    private final class Handler implements IItemHandler {
+        @Override
+        public int getSlots() {
+            return 1 + OUTPUT_SLOTS;
+        }
+
+        @Override
+        public ItemStack getStackInSlot(int slot) {
+            return slot == 0 ? ItemStack.EMPTY : output.get(slot - 1);
+        }
+
+        @Override
+        public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (slot != 0 || stack.isEmpty()) {
+                return stack;
+            }
+            if (isWaterCarrier(stack)) {
+                if (water + WATER_PER_BUCKET > WATER_MAX || !canStore(new ItemStack(Items.BUCKET))) {
+                    return stack;
+                }
+                if (!simulate) {
+                    ItemStack empty = pourWater(stack);
+                    store(empty);
+                    sync();
+                }
+                return stack.getCount() > 1 ? stack.copyWithCount(stack.getCount() - 1) : ItemStack.EMPTY;
+            }
+            int taken = insertDry(stack, simulate);
+            if (taken <= 0) {
+                return stack;
+            }
+            return taken >= stack.getCount() ? ItemStack.EMPTY : stack.copyWithCount(stack.getCount() - taken);
+        }
+
+        @Override
+        public ItemStack extractItem(int slot, int amount, boolean simulate) {
+            if (slot == 0 || amount <= 0) {
+                return ItemStack.EMPTY;
+            }
+            ItemStack s = output.get(slot - 1);
+            if (s.isEmpty()) {
+                return ItemStack.EMPTY;
+            }
+            int take = Math.min(amount, s.getCount());
+            ItemStack out = s.copyWithCount(take);
+            if (!simulate) {
+                s.shrink(take);
+                if (s.isEmpty()) {
+                    output.set(slot - 1, ItemStack.EMPTY);
+                }
+                sync();
+            }
+            return out;
+        }
+
+        @Override
+        public int getSlotLimit(int slot) {
+            return 64;
+        }
+
+        @Override
+        public boolean isItemValid(int slot, ItemStack stack) {
+            return slot == 0 && isAcceptedInput(stack);
+        }
+    }
+
+    // ------------------------------------------------------------ plumbing
+
+    private void sync() {
+        setChanged();
+        if (level != null && !level.isClientSide) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
         }
     }
 
     @Override
     public void clearContent() {
-        slotA = ItemStack.EMPTY;
-        slotB = ItemStack.EMPTY;
-        output = ItemStack.EMPTY;
+        water = dirt = string = pearls = 0;
+        output.clear();
         progress = 0;
         progressTotal = 0;
         sync();
     }
 
     public void dropAll(Level level, BlockPos pos) {
-        drop(level, pos, slotA);
-        drop(level, pos, slotB);
-        drop(level, pos, output);
-        clearContent();
-    }
-
-    private static void drop(Level level, BlockPos pos, ItemStack stack) {
-        if (!stack.isEmpty()) {
-            net.minecraft.world.Containers.dropItemStack(
-                    level,
-                    pos.getX() + 0.5,
-                    pos.getY() + 0.5,
-                    pos.getZ() + 0.5,
-                    stack.copy()
-            );
+        for (ItemStack s : takeDryInputs()) {
+            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, s);
         }
+        for (ItemStack s : takeAllOutput()) {
+            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, s);
+        }
+        water = 0;
     }
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        slotA = readStack(tag, "SlotA", registries);
-        slotB = readStack(tag, "SlotB", registries);
-        output = readStack(tag, "Output", registries);
+        water = tag.getInt("Water");
+        dirt = tag.getInt("Dirt");
+        string = tag.getInt("String");
+        pearls = tag.getInt("Pearls");
         progress = tag.getInt("Progress");
         progressTotal = tag.getInt("ProgressTotal");
-        if (tag.hasUUID("LastUser")) {
-            lastUser = tag.getUUID("LastUser");
-        }
+        for (int i = 0; i < output.size(); i++) output.set(i, ItemStack.EMPTY);
+        ContainerHelper.loadAllItems(tag, output, registries);
     }
 
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
-        writeStack(tag, "SlotA", slotA, registries);
-        writeStack(tag, "SlotB", slotB, registries);
-        writeStack(tag, "Output", output, registries);
+        tag.putInt("Water", water);
+        tag.putInt("Dirt", dirt);
+        tag.putInt("String", string);
+        tag.putInt("Pearls", pearls);
         tag.putInt("Progress", progress);
         tag.putInt("ProgressTotal", progressTotal);
-        if (lastUser != null) {
-            tag.putUUID("LastUser", lastUser);
-        }
-    }
-
-    private static ItemStack readStack(CompoundTag tag, String key, HolderLookup.Provider registries) {
-        if (tag.contains(key)) {
-            return ItemStack.parse(registries, tag.getCompound(key)).orElse(ItemStack.EMPTY);
-        }
-        return ItemStack.EMPTY;
-    }
-
-    private static void writeStack(CompoundTag tag, String key, ItemStack stack, HolderLookup.Provider registries) {
-        if (!stack.isEmpty()) {
-            tag.put(key, stack.save(registries));
-        }
+        ContainerHelper.saveAllItems(tag, output, registries);
     }
 
     @Override
@@ -370,14 +411,8 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
-    private enum Recipe {
-        CLAY(CLAY_TIME),
-        YARN(YARN_TIME);
-
-        final int time;
-
-        Recipe(int time) {
-            this.time = time;
-        }
+    @SuppressWarnings("unused")
+    private static Optional<Item> porcelainEmpty() {
+        return BuiltInRegistries.ITEM.getOptional(PORCELAIN_BUCKET);
     }
 }

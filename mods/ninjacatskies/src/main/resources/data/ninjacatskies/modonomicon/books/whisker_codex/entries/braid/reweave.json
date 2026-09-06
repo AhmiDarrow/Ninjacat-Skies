@@ -1,0 +1,25 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Reweave",
+  "description": "Spindle Strand.",
+  "icon": "ae2:controller",
+  "x": 12,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Reweave",
+      "text": "**Spindle.** A digital loom (AE2, with a Knot in the controller and a Braid in the assembler). A Gate Drum. The March, and a March stone from it.\n\nNine seated, one stone, one right-click: the Fragment. Seat it. The cut closes above your pad."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/bind",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

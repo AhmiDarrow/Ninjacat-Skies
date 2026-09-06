@@ -68,10 +68,14 @@ Side content (Clowder Hall bounties, dimension footholds, shop unlocks) fills ga
 
 ## Story devices
 
-- **Whisker Codex** — quest entry + journal pages (short; one screen)
+- **Whisker Codex** — a real book (Modonomicon): The Cut, The Loom Braid, Nine Tribes. Right-click opens it; sneak-click gives the next practical step. Never a lore dump.
 - **Frayed Thread** — currency; Frayed Thread Desk + craft sinks for QoL and alternate mats
-- **Loom Tension** — per-player craft milestones (Strand tokens / braid / Spindle) with a small Thread soft unlock; hub plaque flair is optional later
-- **Steward lines** — 2 Codex whispers on first Strand token (tribe-flavored); Codex Page every 3rd unique token; hub statue/NPC may echo the same voice—never walls of text
+- **Strand tokens** — proof, never fuel. Earned once per Strand from its Knot quest; seated at a Tension Post; never crafted or consumed by recipes.
+- **Tension Post** — each Clowder's monument. Nine notches light per tribe; seating a token chimes for the whole Clowder, raises a thread helix, and changes the pad (hearth, footing, haste, luck). Braid Cord and the Spindle Loom Fragment are spun here.
+- **Loom Tension** — team-scoped count of seated Strands; felt as the Post's aura and a warming horizon, not a bar that nags
+- **The Fray** — the cut itself, visible: a slow dark column over the Dock that thins as the server reweaves and turns to lit thread when it is done
+- **Steward lines** — two Codex whispers when a Strand seats (tribe-flavored); a Codex Page every third seat, readable, kept; the Nine Tribes entries unlock in the book
+- **Reweave** — seating the Fragment closes the cut above a pad: nine chimes in canon order, a ring across the pad, fireworks, a server-wide line
 - **Tribal Power** — orphan technomancy of the nine tribes; core to Hum, Bind, and Reweave without replacing early Voidloom recovery
 
 ## Writing rules

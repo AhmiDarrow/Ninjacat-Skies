@@ -31,15 +31,20 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
+				}
+				{
+					id: "D100000000080154"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 		}
 		{
 			id: "C200000000080155"
-			x: 1.4d
-			y: 0.0d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000080155"
@@ -56,7 +61,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
@@ -64,8 +69,8 @@
 		}
 		{
 			id: "C200000000080156"
-			x: 2.8d
-			y: 0.0d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000080156"
@@ -82,16 +87,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080155"]
+			dependencies: ["C200000000080154"]
 		}
 		{
 			id: "C200000000080157"
-			x: 4.2d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000080157"
@@ -108,16 +113,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080156"]
+			dependencies: ["C200000000080154"]
 		}
 		{
 			id: "C200000000080158"
-			x: 5.6d
-			y: 0.0d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000080158"
@@ -134,15 +139,15 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080157"]
+			dependencies: ["C200000000080154"]
 		}
 		{
 			id: "C200000000080159"
-			x: 7.0d
+			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
@@ -160,16 +165,21 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
 				}
+				{
+					id: "D100000000080159"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000080158"]
+			dependencies: ["C200000000080154"]
 		}
 		{
 			id: "C20000000008015A"
-			x: 8.4d
-			y: 0.0d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000008015A"
@@ -186,7 +196,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
@@ -194,8 +204,8 @@
 		}
 		{
 			id: "C20000000008015B"
-			x: 9.8d
-			y: 0.0d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000008015B"
@@ -212,16 +222,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C20000000008015A"]
+			dependencies: ["C200000000080159"]
 		}
 		{
 			id: "C20000000008015C"
-			x: 11.2d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000008015C"
@@ -238,16 +248,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C20000000008015B"]
+			dependencies: ["C200000000080159"]
 		}
 		{
 			id: "C20000000008015D"
-			x: 12.6d
-			y: 0.0d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000008015D"
@@ -264,15 +274,15 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C20000000008015C"]
+			dependencies: ["C200000000080159"]
 		}
 		{
 			id: "C20000000008015E"
-			x: 14.0d
+			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
@@ -290,16 +300,21 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
 				}
+				{
+					id: "D10000000008015E"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C20000000008015D"]
+			dependencies: ["C200000000080159"]
 		}
 		{
 			id: "C20000000008015F"
-			x: 15.4d
-			y: 0.0d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000008015F"
@@ -316,7 +331,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
 			]
@@ -324,8 +339,8 @@
 		}
 		{
 			id: "C200000000080160"
-			x: 16.8d
-			y: 0.0d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000080160"
@@ -342,16 +357,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C20000000008015F"]
+			dependencies: ["C20000000008015E"]
 		}
 		{
 			id: "C200000000080161"
-			x: 18.2d
-			y: 0.0d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000080161"
@@ -368,16 +383,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080160"]
+			dependencies: ["C20000000008015E"]
 		}
 		{
 			id: "C200000000080162"
-			x: 19.6d
-			y: 0.0d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000080162"
@@ -394,15 +409,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080161"]
+			dependencies: ["C20000000008015E"]
+			optional: true
 		}
 		{
 			id: "C200000000080163"
-			x: 21.0d
+			x: 5.4d
 			y: 0.0d
 			tasks: [
 				{
@@ -420,16 +436,21 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 4
 					}
 				}
+				{
+					id: "D100000000080163"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000080162"]
+			dependencies: ["C20000000008015E"]
 		}
 		{
 			id: "C200000000080164"
-			x: 22.4d
-			y: 0.0d
+			x: 5.4d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000080164"
@@ -446,7 +467,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
@@ -454,8 +475,8 @@
 		}
 		{
 			id: "C200000000080165"
-			x: 23.8d
-			y: 0.0d
+			x: 5.4d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000080165"
@@ -472,16 +493,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080164"]
+			dependencies: ["C200000000080163"]
 		}
 		{
 			id: "C200000000080166"
-			x: 25.2d
-			y: 0.0d
+			x: 5.4d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000080166"
@@ -498,16 +519,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080165"]
+			dependencies: ["C200000000080163"]
 		}
 		{
 			id: "C200000000080167"
-			x: 26.6d
-			y: 0.0d
+			x: 5.4d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000080167"
@@ -524,15 +545,15 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080166"]
+			dependencies: ["C200000000080163"]
 		}
 		{
 			id: "C200000000080168"
-			x: 28.0d
+			x: 7.2d
 			y: 0.0d
 			tasks: [
 				{
@@ -550,16 +571,21 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
 				}
+				{
+					id: "D100000000080168"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000080167"]
+			dependencies: ["C200000000080163"]
 		}
 		{
 			id: "C200000000080169"
-			x: 29.4d
-			y: 0.0d
+			x: 7.2d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000080169"
@@ -576,7 +602,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
@@ -584,8 +610,8 @@
 		}
 		{
 			id: "C20000000008016A"
-			x: 30.8d
-			y: 0.0d
+			x: 7.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000008016A"
@@ -602,16 +628,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C200000000080169"]
+			dependencies: ["C200000000080168"]
 		}
 		{
 			id: "C20000000008016B"
-			x: 32.2d
-			y: 0.0d
+			x: 7.2d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000008016B"
@@ -628,16 +654,16 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C20000000008016A"]
+			dependencies: ["C200000000080168"]
 		}
 		{
 			id: "C20000000008016C"
-			x: 33.6d
-			y: 0.0d
+			x: 7.2d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000008016C"
@@ -654,15 +680,15 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			dependencies: ["C20000000008016B"]
+			dependencies: ["C200000000080168"]
 		}
 		{
 			id: "C20000000008016D"
-			x: 35.0d
+			x: 9.0d
 			y: 0.0d
 			tasks: [
 				{
@@ -680,16 +706,21 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
 				}
+				{
+					id: "D10000000008016D"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C20000000008016C"]
+			dependencies: ["C200000000080168"]
 		}
 		{
 			id: "C20000000008016E"
 			x: -4.0d
-			y: 3.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D20000000008016E"
@@ -711,11 +742,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000008016F"
 			x: -2.5d
-			y: 3.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D20000000008016F"
@@ -737,11 +770,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080170"
 			x: -1.0d
-			y: 3.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000080170"
@@ -763,11 +798,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080171"
 			x: 0.5d
-			y: 3.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000080171"
@@ -789,11 +826,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080172"
 			x: 2.0d
-			y: 3.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000080172"
@@ -815,11 +854,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080173"
-			x: -4.0d
-			y: 4.5d
+			x: 3.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000080173"
@@ -841,11 +882,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080174"
-			x: -2.5d
-			y: 4.5d
+			x: -4.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D200000000080174"
@@ -867,11 +910,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080175"
-			x: -1.0d
-			y: 4.5d
+			x: -2.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D200000000080175"
@@ -893,11 +938,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080176"
-			x: 0.5d
-			y: 4.5d
+			x: -1.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D200000000080176"
@@ -919,11 +966,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080177"
-			x: 2.0d
-			y: 4.5d
+			x: 0.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D200000000080177"
@@ -945,11 +994,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080178"
-			x: -4.0d
-			y: 6.0d
+			x: 2.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D200000000080178"
@@ -971,11 +1022,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000080179"
-			x: -2.5d
-			y: 6.0d
+			x: 3.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D200000000080179"
@@ -997,11 +1050,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000008017A"
-			x: -1.0d
-			y: 6.0d
+			x: -4.0d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D20000000008017A"
@@ -1023,11 +1078,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000008017B"
-			x: 0.5d
-			y: 6.0d
+			x: -2.5d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D20000000008017B"
@@ -1049,11 +1106,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000008017C"
-			x: 2.0d
-			y: 6.0d
+			x: -1.0d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D20000000008017C"
@@ -1075,11 +1134,13 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000008017D"
-			x: -4.0d
-			y: 7.5d
+			x: 0.5d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D20000000008017D"
@@ -1101,32 +1162,77 @@
 				}
 			]
 			optional: true
+			dependencies: ["C200000000080155"]
+			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000008017E"
-			x: 2.0d
+			x: 12.0d
 			y: -2.0d
 			tasks: [
 				{
+					type: "checkmark"
 					id: "D20000000008017E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:strand_token_sigil"
-						count: 1
-					}
 				}
 			]
 			rewards: [
 				{
-					id: "E20000000008017E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:strand_token_sigil"
 						count: 1
 					}
+					id: "E20000000008017E"
+				}
+				{
+					type: "command"
+					command: "loot give @p loot ninjacatskies:steward_cache/sigil"
+					silent: true
+					elevate_perms: true
+					id: "E20000000108017E"
+				}
+				{
+					type: "xp_levels"
+					xp_levels: 3
+					id: "E20000000208017E"
 				}
 			]
-			dependencies: ["C20000000008016D"]
+			dependencies: ["C200000000080155", "C20000000008015C", "C200000000080165", "C20000000008016C"]
+			shape: "hexagon"
+			size: 1.5d
+		}
+		{
+			id: "C20000000008017F"
+			x: 13.6d
+			y: -2.0d
+			tasks: [
+				{
+					type: "advancement"
+					advancement: "ninjacatskies:strand/sigil"
+					criterion: ""
+					id: "D20000000008017F"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 6
+					}
+					id: "E20000000008017F"
+				}
+				{
+					type: "item"
+					item: {
+						id: "ninjacatskies:codex_page"
+						count: 1
+					}
+					id: "E20000000108017F"
+				}
+			]
+			dependencies: ["C20000000008017E"]
+			shape: "diamond"
 		}
 	]
 }

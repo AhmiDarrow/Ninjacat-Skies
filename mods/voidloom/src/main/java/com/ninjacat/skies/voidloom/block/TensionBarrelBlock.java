@@ -23,7 +23,7 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
 
-/** Slow transform barrel: water+dirt→clay, string+ender→void yarn. */
+/** Tension Barrel: pour water, drop in dirt (or string and pearls), come back for what settled. */
 public class TensionBarrelBlock extends BaseEntityBlock {
     public static final MapCodec<TensionBarrelBlock> CODEC = simpleCodec(TensionBarrelBlock::new);
 
@@ -50,56 +50,49 @@ public class TensionBarrelBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return level.isClientSide
-                ? null
-                : createTickerHelper(type, ModBlockEntities.TENSION_BARREL.get(), TensionBarrelBlockEntity::serverTick);
+        return level.isClientSide ? null : createTickerHelper(type, ModBlockEntities.TENSION_BARREL.get(), TensionBarrelBlockEntity::serverTick);
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(
-            ItemStack stack,
-            BlockState state,
-            Level level,
-            BlockPos pos,
-            Player player,
-            InteractionHand hand,
-            BlockHitResult hit
-    ) {
-        if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be)) {
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be) || stack.isEmpty()) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
-
-        if (stack.isEmpty()) {
-            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-        }
-
         if (!TensionBarrelBlockEntity.isAcceptedInput(stack)) {
             if (!level.isClientSide) {
                 be.tellStatus(player);
             }
             return ItemInteractionResult.CONSUME;
         }
-
         if (level.isClientSide) {
             return ItemInteractionResult.SUCCESS;
         }
 
-        if (!be.getOutput().isEmpty()) {
-            player.displayClientMessage(Component.translatable("message.voidloom.tension.output_blocked"), true);
-            return ItemInteractionResult.CONSUME;
-        }
-
-        if (be.tryInsert(stack)) {
-            be.rememberUser(player);
+        if (TensionBarrelBlockEntity.isWaterCarrier(stack)) {
+            ItemStack empty = be.pourWater(stack);
+            if (empty.isEmpty()) {
+                player.displayClientMessage(Component.translatable("message.voidloom.tension.water_full"), true);
+                return ItemInteractionResult.CONSUME;
+            }
             if (!player.getAbilities().instabuild) {
                 stack.shrink(1);
+                give(level, pos, player, empty);
             }
-            level.playSound(null, pos, SoundEvents.BARREL_CLOSE, SoundSource.BLOCKS, 0.5F, 1.2F);
-            player.displayClientMessage(NinjacatText.teal("Sealed into the Tension Barrel."), true);
+            level.playSound(null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 0.7F, 1.0F);
+            player.displayClientMessage(NinjacatText.teal("Water in the barrel: " + be.getWater() + " measures. Bucket back in hand."), true);
             return ItemInteractionResult.CONSUME;
         }
 
-        player.displayClientMessage(Component.translatable("message.voidloom.tension.full"), true);
+        int taken = be.insertDry(stack, false);
+        if (taken <= 0) {
+            player.displayClientMessage(Component.translatable("message.voidloom.tension.full"), true);
+            return ItemInteractionResult.CONSUME;
+        }
+        if (!player.getAbilities().instabuild) {
+            stack.shrink(taken);
+        }
+        level.playSound(null, pos, SoundEvents.BARREL_CLOSE, SoundSource.BLOCKS, 0.5F, 1.2F);
+        player.displayClientMessage(NinjacatText.teal("Sealed into the Tension Barrel: " + taken + "."), true);
         return ItemInteractionResult.CONSUME;
     }
 
@@ -111,30 +104,32 @@ public class TensionBarrelBlock extends BaseEntityBlock {
         if (level.isClientSide) {
             return InteractionResult.SUCCESS;
         }
-
-        if (!be.getOutput().isEmpty()) {
-            ItemStack out = be.takeOutput();
-            giveOrDrop(level, pos, player, out);
+        if (be.hasOutput()) {
+            for (ItemStack out : be.takeAllOutput()) {
+                give(level, pos, player, out);
+            }
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 0.4F, 1.0F);
-            player.displayClientMessage(NinjacatText.gold("Tension settles — take what it made."), true);
+            player.displayClientMessage(NinjacatText.gold("Tension settles — you take what it made."), true);
             return InteractionResult.CONSUME;
         }
-
-        ItemStack pulled = be.takeLastInput();
-        if (!pulled.isEmpty()) {
-            giveOrDrop(level, pos, player, pulled);
-            level.playSound(null, pos, SoundEvents.BARREL_OPEN, SoundSource.BLOCKS, 0.4F, 1.0F);
-            player.displayClientMessage(Component.translatable("message.voidloom.tension.removed"), true);
-            return InteractionResult.CONSUME;
+        if (player.isShiftKeyDown()) {
+            var pulled = be.takeDryInputs();
+            if (!pulled.isEmpty()) {
+                for (ItemStack s : pulled) {
+                    give(level, pos, player, s);
+                }
+                level.playSound(null, pos, SoundEvents.BARREL_OPEN, SoundSource.BLOCKS, 0.4F, 1.0F);
+                player.displayClientMessage(Component.translatable("message.voidloom.tension.removed"), true);
+                return InteractionResult.CONSUME;
+            }
         }
-
         be.tellStatus(player);
         return InteractionResult.CONSUME;
     }
 
-    private static void giveOrDrop(Level level, BlockPos pos, Player player, ItemStack stack) {
-        if (!player.getInventory().add(stack)) {
-            Containers.dropItemStack(level, pos.getX(), pos.getY() + 1.0, pos.getZ(), stack);
+    private static void give(Level level, BlockPos pos, Player player, ItemStack stack) {
+        if (!stack.isEmpty() && !player.getInventory().add(stack)) {
+            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, stack);
         }
     }
 

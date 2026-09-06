@@ -16,12 +16,17 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
 
-/** Mesh pedestal with a tiny pack-native sift flair — not a full Ex Deorum sieve. */
+/**
+ * Loomframe: stretch a mesh, load grit, and let it work. Hoppers feed the top and pull from the sides.
+ * Hand: siftables load in, empty hand takes scraps (then grit, then the mesh when sneaking).
+ */
 public class LoomframeBlock extends BaseEntityBlock {
     public static final MapCodec<LoomframeBlock> CODEC = simpleCodec(LoomframeBlock::new);
 
@@ -45,16 +50,14 @@ public class LoomframeBlock extends BaseEntityBlock {
         return new LoomframeBlockEntity(pos, state);
     }
 
+    @Nullable
     @Override
-    protected ItemInteractionResult useItemOn(
-            ItemStack stack,
-            BlockState state,
-            Level level,
-            BlockPos pos,
-            Player player,
-            InteractionHand hand,
-            BlockHitResult hit
-    ) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return level.isClientSide ? null : createTickerHelper(type, ModBlockEntities.LOOMFRAME.get(), LoomframeBlockEntity::serverTick);
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be)) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
@@ -72,7 +75,7 @@ public class LoomframeBlock extends BaseEntityBlock {
                     stack.shrink(1);
                 }
                 level.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 0.8F, 1.1F);
-                player.displayClientMessage(NinjacatText.teal("Mesh stretched across the Loomframe."), true);
+                player.displayClientMessage(NinjacatText.teal("Mesh stretched across the Loomframe. Load it with grit."), true);
                 return ItemInteractionResult.CONSUME;
             }
             return ItemInteractionResult.FAIL;
@@ -86,22 +89,16 @@ public class LoomframeBlock extends BaseEntityBlock {
                 player.displayClientMessage(Component.translatable("message.voidloom.loomframe.need_mesh"), true);
                 return ItemInteractionResult.CONSUME;
             }
-            if (be.isOnCooldown(level.getGameTime())) {
-                player.displayClientMessage(Component.translatable("message.voidloom.loomframe.cooldown"), true);
+            int taken = be.insertInput(stack, false);
+            if (taken <= 0) {
+                player.displayClientMessage(Component.translatable("message.voidloom.loomframe.full"), true);
                 return ItemInteractionResult.CONSUME;
             }
-            ItemStack bonus = be.sift(stack, level.getGameTime());
-            if (bonus.isEmpty()) {
-                return ItemInteractionResult.FAIL;
-            }
             if (!player.getAbilities().instabuild) {
-                stack.shrink(1);
+                stack.shrink(taken);
             }
-            if (!player.getInventory().add(bonus)) {
-                Containers.dropItemStack(level, pos.getX(), pos.getY() + 1.0, pos.getZ(), bonus);
-            }
-            level.playSound(null, pos, SoundEvents.SAND_BREAK, SoundSource.BLOCKS, 0.6F, 1.3F);
-            player.displayClientMessage(NinjacatText.teal("A scrap shakes loose from the weave."), true);
+            level.playSound(null, pos, SoundEvents.GRAVEL_PLACE, SoundSource.BLOCKS, 0.6F, 1.1F);
+            player.displayClientMessage(NinjacatText.teal("Grit on the mesh: " + be.getInput().getCount() + ". The frame will work it."), true);
             return ItemInteractionResult.CONSUME;
         }
 
@@ -110,25 +107,58 @@ public class LoomframeBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-        if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be) || !be.hasMesh()) {
+        if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be)) {
             return InteractionResult.PASS;
         }
         if (level.isClientSide) {
             return InteractionResult.SUCCESS;
         }
-        ItemStack mesh = be.takeMesh();
-        if (!player.getInventory().add(mesh)) {
-            Containers.dropItemStack(level, pos.getX(), pos.getY() + 1.0, pos.getZ(), mesh);
+
+        if (be.hasOutput()) {
+            for (ItemStack out : be.takeAllOutput()) {
+                give(level, pos, player, out);
+            }
+            level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 0.5F, 1.0F);
+            player.displayClientMessage(NinjacatText.gold("Scraps shaken loose from the weave."), true);
+            return InteractionResult.CONSUME;
         }
-        level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.BLOCKS, 0.7F, 0.9F);
-        player.displayClientMessage(Component.translatable("message.voidloom.loomframe.mesh_removed"), true);
+
+        if (player.isShiftKeyDown() && be.hasMesh()) {
+            if (!be.getInput().isEmpty()) {
+                give(level, pos, player, be.takeInput());
+            }
+            give(level, pos, player, be.takeMesh());
+            level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.BLOCKS, 0.7F, 0.9F);
+            player.displayClientMessage(Component.translatable("message.voidloom.loomframe.mesh_removed"), true);
+            return InteractionResult.CONSUME;
+        }
+
+        if (!be.getInput().isEmpty()) {
+            give(level, pos, player, be.takeInput());
+            player.displayClientMessage(NinjacatText.teal("Grit taken back."), true);
+            return InteractionResult.CONSUME;
+        }
+
+        if (!be.hasMesh()) {
+            player.displayClientMessage(Component.translatable("message.voidloom.loomframe.need_mesh"), true);
+        } else {
+            player.displayClientMessage(Component.translatable("message.voidloom.loomframe.idle"), true);
+        }
         return InteractionResult.CONSUME;
+    }
+
+    private static void give(Level level, BlockPos pos, Player player, ItemStack stack) {
+        if (!stack.isEmpty() && !player.getInventory().add(stack)) {
+            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, stack);
+        }
     }
 
     @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock()) && level.getBlockEntity(pos) instanceof LoomframeBlockEntity be && be.hasMesh()) {
-            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), be.takeMesh());
+        if (!state.is(newState.getBlock()) && level.getBlockEntity(pos) instanceof LoomframeBlockEntity be) {
+            for (ItemStack s : be.drainForDrop()) {
+                Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, s);
+            }
         }
         super.onRemove(state, level, pos, newState, movedByPiston);
     }

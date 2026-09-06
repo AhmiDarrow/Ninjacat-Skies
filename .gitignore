@@ -31,6 +31,9 @@ tools/secrets/*
 pack/mods/*.jar
 pack/.packwizignore
 
+# Session staging scratch
+INTERNAL/_stage/
+
 # Export output
 dist/
 tools/mdk-extract/

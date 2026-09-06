@@ -1,0 +1,25 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Pattern",
+  "description": "Clock Strand.",
+  "icon": "create:cogwheel",
+  "x": 8,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Pattern",
+      "text": "**Clock.** Create. Water wheels, presses, mixers, belts — one cog, then the same cog again.\n\nThe precision mechanism wants a Binding Knot at its heart. That is the Loom asking to be included."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/edge",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

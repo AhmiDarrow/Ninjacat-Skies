@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000001A039D"
+			id: "C2000000001A03A3"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001A039D"
+					id: "D2000000001A03A3"
 					type: "item"
 					item: {
 						id: "pipez:item_pipe"
@@ -27,182 +27,31 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001A039D"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-		}
-		{
-			id: "C2000000001A039E"
-			x: 1.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001A039E"
-					type: "item"
-					item: {
-						id: "pipez:fluid_pipe"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001A039E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C2000000001A039D"]
-		}
-		{
-			id: "C2000000001A039F"
-			x: 2.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001A039F"
-					type: "item"
-					item: {
-						id: "pipez:energy_pipe"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001A039F"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C2000000001A039E"]
-		}
-		{
-			id: "C2000000001A03A0"
-			x: 4.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001A03A0"
-					type: "item"
-					item: {
-						id: "pipez:gas_pipe"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001A03A0"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001A039F"]
-		}
-		{
-			id: "C2000000001A03A1"
-			x: 5.6d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001A03A1"
-					type: "item"
-					item: {
-						id: "pipez:universal_pipe"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001A03A1"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C2000000001A03A0"]
-		}
-		{
-			id: "C2000000001A03A2"
-			x: 7.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001A03A2"
-					type: "item"
-					item: {
-						id: "pipez:wrench"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001A03A2"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C2000000001A03A1"]
-		}
-		{
-			id: "C2000000001A03A3"
-			x: 8.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001A03A3"
-					type: "item"
-					item: {
-						id: "pipez:basic_upgrade"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E2000000001A03A3"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001A03A3"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001A03A2"]
 		}
 		{
 			id: "C2000000001A03A4"
-			x: 9.8d
-			y: 0.0d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001A03A4"
 					type: "item"
 					item: {
-						id: "pipez:improved_upgrade"
-						count: 4
+						id: "pipez:fluid_pipe"
+						count: 16
 					}
 				}
 			]
@@ -220,15 +69,15 @@
 		}
 		{
 			id: "C2000000001A03A5"
-			x: 11.2d
-			y: 0.0d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001A03A5"
 					type: "item"
 					item: {
-						id: "pipez:advanced_upgrade"
-						count: 2
+						id: "pipez:energy_pipe"
+						count: 16
 					}
 				}
 			]
@@ -238,23 +87,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03A4"]
+			dependencies: ["C2000000001A03A3"]
 		}
 		{
 			id: "C2000000001A03A6"
-			x: 12.6d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001A03A6"
 					type: "item"
 					item: {
-						id: "pipez:ultimate_upgrade"
-						count: 1
+						id: "pipez:gas_pipe"
+						count: 8
 					}
 				}
 			]
@@ -264,23 +113,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03A5"]
+			dependencies: ["C2000000001A03A3"]
 		}
 		{
 			id: "C2000000001A03A7"
-			x: 14.0d
-			y: 0.0d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001A03A7"
 					type: "item"
 					item: {
-						id: "pipez:infinity_upgrade"
-						count: 1
+						id: "pipez:universal_pipe"
+						count: 8
 					}
 				}
 			]
@@ -290,22 +139,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03A6"]
+			dependencies: ["C2000000001A03A3"]
 		}
 		{
 			id: "C2000000001A03A8"
-			x: 15.4d
+			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001A03A8"
 					type: "item"
 					item: {
-						id: "pipez:filter_destination_tool"
+						id: "pipez:wrench"
 						count: 1
 					}
 				}
@@ -316,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001A03A8"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001A03A7"]
+			dependencies: ["C2000000001A03A3"]
 		}
 		{
 			id: "C2000000001A03A9"
-			x: 16.8d
-			y: 0.0d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001A03A9"
 					type: "item"
 					item: {
-						id: "pipez:clear_upgrade"
-						count: 1
+						id: "pipez:basic_upgrade"
+						count: 4
 					}
 				}
 			]
@@ -342,7 +196,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -350,15 +204,15 @@
 		}
 		{
 			id: "C2000000001A03AA"
-			x: 18.2d
-			y: 0.0d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001A03AA"
 					type: "item"
 					item: {
-						id: "minecraft:hopper"
-						count: 16
+						id: "pipez:improved_upgrade"
+						count: 4
 					}
 				}
 			]
@@ -368,23 +222,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03A9"]
+			dependencies: ["C2000000001A03A8"]
 		}
 		{
 			id: "C2000000001A03AB"
-			x: 19.6d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001A03AB"
 					type: "item"
 					item: {
-						id: "minecraft:dropper"
-						count: 8
+						id: "pipez:advanced_upgrade"
+						count: 2
 					}
 				}
 			]
@@ -394,23 +248,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03AA"]
+			dependencies: ["C2000000001A03A8"]
 		}
 		{
 			id: "C2000000001A03AC"
-			x: 21.0d
-			y: 0.0d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001A03AC"
 					type: "item"
 					item: {
-						id: "minecraft:dispenser"
-						count: 4
+						id: "pipez:ultimate_upgrade"
+						count: 1
 					}
 				}
 			]
@@ -424,19 +278,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001A03AB"]
+			dependencies: ["C2000000001A03A8"]
 		}
 		{
 			id: "C2000000001A03AD"
-			x: 22.4d
+			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001A03AD"
 					type: "item"
 					item: {
-						id: "minecraft:comparator"
-						count: 8
+						id: "pipez:infinity_upgrade"
+						count: 1
 					}
 				}
 			]
@@ -446,23 +300,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001A03AD"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001A03AC"]
+			dependencies: ["C2000000001A03A8"]
 		}
 		{
 			id: "C2000000001A03AE"
-			x: 23.8d
-			y: 0.0d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001A03AE"
 					type: "item"
 					item: {
-						id: "minecraft:observer"
-						count: 8
+						id: "pipez:filter_destination_tool"
+						count: 1
 					}
 				}
 			]
@@ -472,7 +331,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -480,15 +339,15 @@
 		}
 		{
 			id: "C2000000001A03AF"
-			x: 25.2d
-			y: 0.0d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001A03AF"
 					type: "item"
 					item: {
-						id: "minecraft:redstone_torch"
-						count: 16
+						id: "pipez:clear_upgrade"
+						count: 1
 					}
 				}
 			]
@@ -498,22 +357,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03AE"]
+			dependencies: ["C2000000001A03AD"]
 		}
 		{
 			id: "C2000000001A03B0"
-			x: 26.6d
-			y: 0.0d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001A03B0"
 					type: "item"
 					item: {
-						id: "minecraft:repeater"
+						id: "minecraft:hopper"
 						count: 16
 					}
 				}
@@ -528,19 +387,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001A03AF"]
+			dependencies: ["C2000000001A03AD"]
 		}
 		{
 			id: "C2000000001A03B1"
-			x: 28.0d
-			y: 0.0d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001A03B1"
 					type: "item"
 					item: {
-						id: "minecraft:target"
-						count: 4
+						id: "minecraft:dropper"
+						count: 8
 					}
 				}
 			]
@@ -550,23 +409,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03B0"]
+			dependencies: ["C2000000001A03AD"]
 		}
 		{
 			id: "C2000000001A03B2"
-			x: 29.4d
+			x: 5.4d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001A03B2"
 					type: "item"
 					item: {
-						id: "minecraft:daylight_detector"
-						count: 2
+						id: "minecraft:dispenser"
+						count: 4
 					}
 				}
 			]
@@ -576,23 +435,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001A03B2"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001A03B1"]
+			dependencies: ["C2000000001A03AD"]
 		}
 		{
 			id: "C2000000001A03B3"
-			x: 30.8d
-			y: 0.0d
+			x: 5.4d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001A03B3"
 					type: "item"
 					item: {
-						id: "minecraft:lectern"
-						count: 1
+						id: "minecraft:comparator"
+						count: 8
 					}
 				}
 			]
@@ -602,7 +466,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -610,15 +474,15 @@
 		}
 		{
 			id: "C2000000001A03B4"
-			x: 32.2d
-			y: 0.0d
+			x: 5.4d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001A03B4"
 					type: "item"
 					item: {
-						id: "minecraft:trapped_chest"
-						count: 2
+						id: "minecraft:observer"
+						count: 8
 					}
 				}
 			]
@@ -632,19 +496,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001A03B3"]
+			dependencies: ["C2000000001A03B2"]
 		}
 		{
 			id: "C2000000001A03B5"
-			x: 33.6d
-			y: 0.0d
+			x: 5.4d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001A03B5"
 					type: "item"
 					item: {
-						id: "create:andesite_funnel"
-						count: 8
+						id: "minecraft:redstone_torch"
+						count: 16
 					}
 				}
 			]
@@ -654,23 +518,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03B4"]
+			dependencies: ["C2000000001A03B2"]
 		}
 		{
 			id: "C2000000001A03B6"
-			x: 35.0d
-			y: 0.0d
+			x: 5.4d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001A03B6"
 					type: "item"
 					item: {
-						id: "create:brass_funnel"
-						count: 4
+						id: "minecraft:repeater"
+						count: 16
 					}
 				}
 			]
@@ -680,23 +544,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03B5"]
+			dependencies: ["C2000000001A03B2"]
 		}
 		{
 			id: "C2000000001A03B7"
-			x: 36.4d
+			x: 7.2d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001A03B7"
 					type: "item"
 					item: {
-						id: "create:chute"
-						count: 8
+						id: "minecraft:target"
+						count: 4
 					}
 				}
 			]
@@ -706,23 +570,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001A03B7"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001A03B6"]
+			dependencies: ["C2000000001A03B2"]
 		}
 		{
 			id: "C2000000001A03B8"
-			x: 37.8d
-			y: 0.0d
+			x: 7.2d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001A03B8"
 					type: "item"
 					item: {
-						id: "create:smart_chute"
-						count: 4
+						id: "minecraft:daylight_detector"
+						count: 2
 					}
 				}
 			]
@@ -740,15 +609,15 @@
 		}
 		{
 			id: "C2000000001A03B9"
-			x: 39.2d
-			y: 0.0d
+			x: 7.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001A03B9"
 					type: "item"
 					item: {
-						id: "mekanism:basic_logistical_transporter"
-						count: 16
+						id: "minecraft:lectern"
+						count: 1
 					}
 				}
 			]
@@ -758,23 +627,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03B8"]
+			dependencies: ["C2000000001A03B7"]
 		}
 		{
 			id: "C2000000001A03BA"
-			x: 40.6d
-			y: 0.0d
+			x: 7.2d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001A03BA"
 					type: "item"
 					item: {
-						id: "mekanism:basic_mechanical_pipe"
-						count: 16
+						id: "minecraft:trapped_chest"
+						count: 2
 					}
 				}
 			]
@@ -784,23 +653,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03B9"]
+			dependencies: ["C2000000001A03B7"]
 		}
 		{
 			id: "C2000000001A03BB"
-			x: 42.0d
-			y: 0.0d
+			x: 7.2d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001A03BB"
 					type: "item"
 					item: {
-						id: "mekanism:basic_universal_cable"
-						count: 16
+						id: "create:andesite_funnel"
+						count: 8
 					}
 				}
 			]
@@ -810,23 +679,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03BA"]
+			dependencies: ["C2000000001A03B7"]
 		}
 		{
 			id: "C2000000001A03BC"
-			x: 43.4d
+			x: 9.0d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001A03BC"
 					type: "item"
 					item: {
-						id: "mekanism:basic_pressurized_tube"
-						count: 8
+						id: "create:brass_funnel"
+						count: 4
 					}
 				}
 			]
@@ -836,22 +705,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001A03BC"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001A03BB"]
+			dependencies: ["C2000000001A03B7"]
 		}
 		{
 			id: "C2000000001A03BD"
-			x: 44.8d
-			y: 0.0d
+			x: 9.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001A03BD"
 					type: "item"
 					item: {
-						id: "mekanism:advanced_logistical_transporter"
+						id: "create:chute"
 						count: 8
 					}
 				}
@@ -862,7 +736,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -870,14 +744,14 @@
 		}
 		{
 			id: "C2000000001A03BE"
-			x: 46.2d
-			y: 0.0d
+			x: 9.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001A03BE"
 					type: "item"
 					item: {
-						id: "mekanism:elite_logistical_transporter"
+						id: "create:smart_chute"
 						count: 4
 					}
 				}
@@ -888,23 +762,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03BD"]
+			dependencies: ["C2000000001A03BC"]
 		}
 		{
 			id: "C2000000001A03BF"
-			x: 47.6d
-			y: 0.0d
+			x: 9.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001A03BF"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_logistical_transporter"
-						count: 2
+						id: "mekanism:basic_logistical_transporter"
+						count: 16
 					}
 				}
 			]
@@ -914,23 +788,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001A03BE"]
+			dependencies: ["C2000000001A03BC"]
 		}
 		{
 			id: "C2000000001A03C0"
-			x: 49.0d
-			y: 0.0d
+			x: 9.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001A03C0"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_universal_cable"
-						count: 4
+						id: "mekanism:basic_mechanical_pipe"
+						count: 16
 					}
 				}
 			]
@@ -944,7 +818,173 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001A03BF"]
+			dependencies: ["C2000000001A03BC"]
+		}
+		{
+			id: "C2000000001A03C1"
+			x: 10.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001A03C1"
+					type: "item"
+					item: {
+						id: "mekanism:basic_universal_cable"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001A03C1"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001A03C1"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001A03BC"]
+		}
+		{
+			id: "C2000000001A03C2"
+			x: 10.8d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001A03C2"
+					type: "item"
+					item: {
+						id: "mekanism:basic_pressurized_tube"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001A03C2"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001A03C1"]
+		}
+		{
+			id: "C2000000001A03C3"
+			x: 10.8d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001A03C3"
+					type: "item"
+					item: {
+						id: "mekanism:advanced_logistical_transporter"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001A03C3"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001A03C1"]
+		}
+		{
+			id: "C2000000001A03C4"
+			x: 10.8d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001A03C4"
+					type: "item"
+					item: {
+						id: "mekanism:elite_logistical_transporter"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001A03C4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001A03C1"]
+		}
+		{
+			id: "C2000000001A03C5"
+			x: 10.8d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001A03C5"
+					type: "item"
+					item: {
+						id: "mekanism:ultimate_logistical_transporter"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001A03C5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001A03C1"]
+		}
+		{
+			id: "C2000000001A03C6"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001A03C6"
+					type: "item"
+					item: {
+						id: "mekanism:ultimate_universal_cable"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001A03C6"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001A03C6"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001A03C1"]
 		}
 	]
 }

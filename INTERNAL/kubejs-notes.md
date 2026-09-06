@@ -10,24 +10,26 @@
 
 
 ## Loom Braid (`braid_gates.js`)
-- `ninjacatskies:braid_cord` from any pair of Clock/Swarm/Spark strand tokens (3 shapeless variants)
-- Soft-gates AE2 `molecular_assembler` to require braid_cord
-- **Tribal Power jar is present** (`tribalpower-2.0.1.jar` in `pack/mods`) — Hum recipes live in the jar
-- Do **not** re-add KubeJS Hum lead-ins (JEI duplicates + progression bypass). Tribal chapter order: Chime → Shard → Copper → Chalk → Drumheart → Codex → …
+- Only the AE2 `molecular_assembler` soft gate remains here (needs `ninjacatskies:braid_cord` at centre)
+- Braid Cord is **spun at the Tension Post** (Java): Strand Filament + two of Clock/Swarm/Spark seated
+- **Tribal Power jar is present** — Hum recipes live in the jar; do not re-add KubeJS Hum lead-ins
 
 ## Strand gates (`strand_gates.js`)
-- Distinct Strand token crafts (frayed_thread ×2 + flavored mats)
-- Soft Create `precision_mechanism` and AE2 controller crafts require Voidloom binders
-- **Spindle Loom Fragment** = all nine Strand tokens **+ `tribalpower:march_stone`** (March-attuned full clear)
+- Tension Post recipe (logs + Binding Knot + Thread)
+- Soft Create `precision_mechanism` and AE2 controller crafts require a Binding Knot
+- Removes any stray token / braid / fragment recipes (tokens come from Knot quests only)
 
-## Loom Tension (`loom_tension.js`)
-- Player `persistentData.ncs_tension` (int) — glue, not a nagging bar
-- Strand token craft → +1; first `braid_cord` → +3; first `spindle_loom_fragment` → +5
-- Soft unlocks: ≥5 Thread×4 · ≥9 Codex pages×2 · ≥14 spare braid×1
+## Loom Tension
+- Lives in Java now: `mods/ninjacatskies/src/main/java/com/ninjacat/skies/core/tension/` (team-scoped via FTB Teams)
+- `loom_tension.js` and `steward_lines.js` were removed 2026-09-06
+
+## Voidloom sieve identity (`voidloom_sieve.js`)
+- Additive `exdeorum:sieve` / `compressed_sieve` lines for voidloom meshes only: Loom Lint (all), Frayed Thread (flint+), Strand Filament (iron)
+- `4 Loom Lint → Void Yarn`
 
 ## Recover softlock recipes (`voidloom_recipes.js`)
 - `1 Frayed Thread → 3 string`; `4 string → 2 Void Yarn` (early)
-- Better yarn: 2 string + pearl/chorus; Tension Barrel string+pearl
+- Better yarn: 2 string + pearl/chorus; Tension Barrel string+pearl → 2 yarn
 - Early slime: 2 dirt + wheat seeds + bone meal → Binding Knot
 
 Keep recipe changes documented in `docs/CHANGELOG.md`. Prefer tags over hardcoded mod item IDs when substituting Silent Gear / Nature's Aura.

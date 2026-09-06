@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Grit-singers",
+  "description": "Keepers of the Stone Strand.",
+  "icon": "ninjacatskies:strand_token_stone",
+  "x": -2,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Grit-singers",
+      "text": "The Grit-singers named every shard by its echo. Iron is low and patient. Gold barely bothers to answer. Diamond does not answer at all; you find it by the silence around it.\n\nThey built the first meshes: not to find ore, but to give it somewhere to land."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_stone",
+      "title": "Stone Strand",
+      "text": "*The mesh does not find the ore. The mesh gives the ore somewhere to land.*\n\nSeated. The Grit-singers answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/stone"
+  }
+}

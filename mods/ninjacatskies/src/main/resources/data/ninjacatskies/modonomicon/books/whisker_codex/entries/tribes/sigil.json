@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Seal-carvers",
+  "description": "Keepers of the Sigil Strand.",
+  "icon": "ninjacatskies:strand_token_sigil",
+  "x": 0,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Seal-carvers",
+      "text": "The Seal-carvers pressed spirit into matter and made it stay. A seal is a promise carved so the world has to keep it; a rite is asking the Loom, politely, for an exception.\n\nNever bind what you would not be willing to unbind."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_sigil",
+      "title": "Sigil Strand",
+      "text": "*Spirit goes where it is asked politely and stays where it is fed.*\n\nSeated. The Seal-carvers answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/sigil"
+  }
+}
