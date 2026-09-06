@@ -130,6 +130,7 @@ def to_snbt(obj, indent=0) -> str:
 
 def write_chapter(filename: str, chapter_id: str, group: str, order: int, icon: str, quests: list[dict], title: str) -> None:
     lang[f"chapter.{chapter_id}.title"] = title
+    quests = finalize_chapter(order + 1, quests)
     body = {
         "default_hide_dependency_lines": False,
         "default_quest_shape": "",
@@ -161,8 +162,13 @@ def item_quest(
     optional: bool = False,
     consume: bool = False,
 ) -> dict | None:
-    if not valid_item(item):
+    if not valid_item(item) or item in REMOVE_ITEMS:
         return None
+    if item in FORCE_OPTIONAL:
+        optional = True
+        desc = list(desc) + ["Optional — the void may never offer one."]
+    if strand_i in STRAND_CHAPTERS and title in LORE:
+        desc = list(LORE[title])
     reward = reward_item or "ninjacatskies:frayed_thread"
     if not valid_item(reward):
         reward = "minecraft:experience_bottle"
@@ -186,39 +192,431 @@ def item_quest(
     return entry
 
 
+
+# ---------------------------------------------------------------- authored layer (2026-09-06)
+
+# Short names for unique-title suffixes.
+CHAPTER_SHORT = {
+    1: "Soil", 2: "Stone", 3: "Sprout", 4: "Claw", 5: "Spark", 6: "Clock", 7: "Swarm", 8: "Sigil", 9: "Spindle",
+    10: "Sieve", 11: "Storage", 12: "Mek", 13: "Powah", 14: "Ars", 15: "Clowder", 16: "Desk", 17: "Aura",
+    18: "Kitchen", 19: "Spells", 20: "Solar", 21: "Decor", 22: "Nether", 23: "End", 24: "Fields", 25: "Apiary",
+    26: "Pipes", 27: "Otherworld", 28: "Clockworks", 29: "Network", 30: "Voidcraft", 31: "Packaged", 32: "QIO",
+    33: "Hunt", 34: "Tribal",
+}
+STRAND_CHAPTERS = {1: "soil", 2: "stone", 3: "sprout", 4: "claw", 5: "spark", 6: "clock", 7: "swarm", 8: "sigil", 9: "spindle"}
+CURRENT = {"strand_i": 0, "title_counts": {}}
+
+# Items the void world cannot produce on the main line. REMOVE drops the quest; OPTIONAL keeps it as a side note.
+REMOVE_ITEMS = {"minecraft:heart_of_the_sea", "minecraft:rabbit_hide", "minecraft:turtle_helmet", "minecraft:wolf_armor"}
+FORCE_OPTIONAL = {"minecraft:recovery_compass", "minecraft:elytra", "minecraft:totem_of_undying", "minecraft:trident",
+                  "minecraft:echo_shard", "minecraft:music_disc_cat", "minecraft:sponge", "minecraft:saddle"}
+
+# Phrases that were design-doc voice. Exact-string swaps applied to every description line.
+VOICE_FIX = {
+    "Sieve is a tool, not the title.": "Grit-singers named every shard by its echo. Sieve until you can hear the iron.",
+    "FE bridge buffer — not the Hum religion.": "A buffer for Forge Energy — the bridge from Pulse to wire, if you want one.",
+    "Burn for FE.": "Burn fuel for Forge Energy.",
+    "Pocket FE.": "A pocketful of stored power.",
+    "Pocket FE+.": "A bigger pocket of stored power.",
+    "Simple FE pipes.": "Plain energy pipes between machines.",
+    "FE centrifuge.": "A powered centrifuge for combs.",
+    "Feed FE into machines.": "Feed power into the digital loom.",
+    "FE smelt.": "A powered smelter.",
+    "FE cable.": "Energy cable.",
+    "Store a pulse of FE.": "Store a measure of power.",
+    "If found — optional.": "If the void ever offers one. Optional.",
+    "If you somehow find water seas.": "For the day someone builds a sea. Optional.",
+    "If present — late.": "Late. Only if the Aura wants it.",
+    "If available.": "Only if one turns up.",
+    "Summon focus — Bind braid is already on the main path.": "A focus for summoning. The rites are patient.",
+    "Spark tensioned. Hum ladder Chime→Shard→Resonator→Drumheart; Powah/Mek are FE bridges.": "Spark tensioned. The drum keeps time now.",
+    "Sigil tensioned. Braid held for Bind; Spindle assemblers and March trophy wait ahead.": "Sigil tensioned. The seals hold.",
+    "Another Strand tensioned.": "Another Strand answers.",
+    "Amethyst block for Sigil bait.": "Amethyst in a block. Sigil will want shards later.",
+    "Spark Strand bait.": "Spark will want this. Keep it dry.",
+    "Trade bait.": "Villagers like these. So does the Desk.",
+    "Sigil bait.": "Sigil will want these.",
+    "Swarm bait.": "Swarm will want this.",
+    "Boss bait.": "For a fight you choose on purpose.",
+    "Boss bait trio.": "Three fights, chosen on purpose.",
+    "End pollen bait.": "End flora for the bees that want it.",
+    "Tough bee bait.": "The bees that live in hard places.",
+    "Purple bait.": "Chorus for the End-minded.",
+    "Teleport bait.": "For skipping the drop.",
+    "Brew bait.": "Brew stock.",
+    "Watering Can": "Bone Block",
+    "Braid any two of Clock, Swarm, or Spark tokens into a cord. Soft-gates the molecular assembler.":
+        "Spun at the Tension Post: a Strand Filament, with two of Clock, Swarm, or Spark seated. The assembler wants one at its heart.",
+    "Loom braid required for Bind — any two of Clock, Swarm, or Spark tokens.":
+        "Right-click the Tension Post with a Strand Filament once two of Clock, Swarm, or Spark are seated. Bind begins here.",
+    "Nine Strand tokens plus March stone — Spindle end trophy.":
+        "Right-click the Tension Post with a March stone once all nine Strands are seated. Then seat the Fragment itself.",
+    "Fluix + Binding Knot + Thread — ninth token before the trophy.": "The ninth Strand. Its Knot is at the end of this chapter.",
+    "March-attuned footing — Gate Drum into The March; trophy needs one.": "Footing from beyond the gate. The Spindle wants one.",
+    "Build from patterns — needs braid_cord in the craft.": "Builds from patterns. Wants a Braid Cord at its heart.",
+    "Unravel Thread → 3 string; craft 4 string → 2 yarn. Later: 2 string + pearl/chorus → 2 yarn.":
+        "Unravel Thread to string; four string spin two yarn. Later the Tension Barrel does it better with a pearl.",
+    "Hub shop seed money.": "Every quest returns a little. The Desk chapter spends it.",
+}
+
+# In-voice descriptions for the Strand chapters, keyed by quest title. Two lines: what, and why.
+LORE = {
+    # Soil
+    "Wake on a Pad": ["You are Skybound. This is what did not fall.", "Eight logs. Start with the tree; it started with you."],
+    "Something to Stand On": ["Dirt is a promise the pad makes to your boots.", "Sixteen blocks. Widen the promise."],
+    "Craft a Bench": ["Hands need a surface. Everything after this is a surface."],
+    "Wooden Pick": ["Claw comes later. For now, wood that bites."],
+    "First Sapling": ["Green against the drop.", "Plant it before you are hungry."],
+    "Plank Stock": ["Sixty-four planks is a pad that stops feeling like a ledge."],
+    "Stick Bundle": ["Handles, frames, the bones of tools."],
+    "Chest for the Clowder": ["Put things where they stay. A Clowder shares a chest before it shares anything else."],
+    "Torch Line": ["See the edge before the edge sees you."],
+    "Cobble Cache": ["Ice and lava make stone where there was none.", "Normal and Hard pads ship both. The Desk sells a bucket."],
+    "Furnace Heat": ["Warmth that is not yet Spark.", "The Pad-keepers would have called this a hearth."],
+    "Cook a Meal": ["Hunger is a soft void. Eight loaves closes it for a while."],
+    "Catch the Rain": ["Place lava, melt ice into a source, fill the bucket.", "Easy ships water; Normal and Hard ship the pieces."],
+    "Frayed Currency": ["Scraps of the Loom that still hold. Every quest returns some.", "Unravel one for string, or spend them at the Desk."],
+    "Codex in Hand": ["Damaged, but it still assigns work.", "Right-click to open. Sneak-click when you are lost."],
+    # Stone
+    "Pull Void Yarn": ["Thread that remembers where it came from.", "Unravel Thread to string; four string spin two yarn."],
+    "Spindle Hammer": ["Cobble and sticks. Break fallen grit into gravel, sand, dust."],
+    "Thread the Mesh": ["String around yarn. It catches what the Loom dropped — and combs Loom Lint out of dirt."],
+    "Tension Barrel": ["Pour water; the bucket comes straight back. Add dirt. Wait for clay.", "String and a pearl in the same barrel make yarn."],
+    "Clay Pocket": ["Sixteen clay from the barrel. Load eight dirt at a time."],
+    "Porcelain Clay": ["Clay and bone meal. Shape the unfired bucket."],
+    "Porcelain Tool": ["Smelt it. Porcelain carries lava where iron is still a rumour."],
+    "Sift Fallen Grit": ["Grit-singers named every shard by its echo.", "Sieve until you can hear the iron."],
+    "Wooden Hammer": ["A spare set of hits."],
+    "Pebbles": ["Matter from grit. Sixty-four stones that were dust an hour ago."],
+    "Gravel Path": ["Loom dust waits in gravel. So does flint."],
+    "Sand Cache": ["Fine grit. Glass later, and the iron mesh's best catch."],
+    "Dust Pile": ["Ash of the fallen world. Redstone and gunpowder hide in it."],
+    "Tie Binding Knot": ["Yarn around slime. Pad compost makes the slime.", "The Knot is the Loom's soft gate; keep two."],
+    "Raise Loomframe": ["Planks around a Knot. Stretch a mesh, load grit, let it work.", "Hoppers feed it. This is the pad's first machine."],
+    "Iron Ore Chunk": ["Iron is low and patient. Eight chunks from the mesh."],
+    "Copper Ore Chunk": ["Conductive thoughts."],
+    "Gold Ore Chunk": ["Gold barely bothers to answer. Four is enough."],
+    "Coal": ["Fuel the line."],
+    "Raw Iron": ["Chunks to raw. Smelt onward."],
+    "Iron Ingot": ["Recover pays out. Sixteen bars the void did not want you to have."],
+    "Copper Ingot": ["Wire and bulbs, and Tribal resonators later."],
+    "Gold Ingot": ["Gilded tools, and gold plates for the pattern-weavers."],
+    "Flint Mesh": ["Sharper catch. Flint meshes shake Frayed Thread out of grit."],
+    "Iron Mesh": ["Metal thread for heavier dust. Iron meshes are where Strand Filament falls."],
+    "Crucible": ["Melt and drip. Cobble to lava, given time."],
+    "Barrel": ["Ex Deorum's barrel: compost, and water into clay the slow way."],
+    "Stone Hammer": ["Harder hits, longer life."],
+    "Iron Hammer": ["Serious grit."],
+    "Compressed Sieve": ["Wider mesh, nine at a time."],
+    "Glass": ["See through. Sand to glass."],
+    "Bucket": ["Carry the rain in iron now."],
+    "Lava Bucket": ["Heat from the void, in hand."],
+    "Obsidian": ["Portal thoughts. Water on lava source."],
+    "Diamond": ["Rare grit luck. Two is a start."],
+    # Sprout
+    "Iron Hoe": ["Scratch rows into the pad."],
+    "Wheat Field": ["Bread is infrastructure. Thirty-two wheat is a field, not a patch."],
+    "Seed Pouch": ["Plant what you eat."],
+    "Bone Meal Engine": ["Speed is kindness. Compost and bones."],
+    "Farmers Knife": ["Prep the harvest."],
+    "Cutting Board": ["A kitchen starts here."],
+    "Cooking Pot": ["Warm meals feed more than hunger."],
+    "Inferium": ["Essence farming begins. Sixteen from the first row."],
+    "Prosperity": ["The seed backbone. Sieve or grow it."],
+    "Infusion Altar": ["Raise seeds from essence."],
+    "Infusion Pedestal": ["Four around the altar."],
+    "Dirt Seeds": ["Grow more pad."],
+    "Wood Seeds": ["Grow canopy without the axe."],
+    "Stone Seeds": ["Grow grit."],
+    "Iron Seeds": ["Metal from leaves. Recover's second engine."],
+    "Water Seeds": ["Bottled rain from a crop."],
+    "Botany Pot": ["Compact growth for a small pad."],
+    "Hopper Pot": ["The pot that harvests itself."],
+    "Prudentium": ["Tier up. The seeds get greedier and better."],
+    "Tertium": ["Deeper green."],
+    "Bone Block": ["Nine meal to a block. Storage for the engine."],
+    "Hay Silo": ["Sprout surplus, stacked."],
+    "Rich Soil": ["Better farmland. Rootbinders would approve."],
+    "Organic Compost": ["Feed the soil that feeds you."],
+    # Claw
+    "Blueprint Paper": ["Cut the void on your terms. Eight sheets of plans."],
+    "Blueprint Package": ["Plans in a box."],
+    "Rod Blueprint": ["Tool bones."],
+    "Pick Blueprint": ["Shape a pick that outlives its metal."],
+    "Sword Blueprint": ["Shape a blade."],
+    "Upgrade Base": ["Room to grow."],
+    "Iron Mass": ["Thirty-two bars of material for parts."],
+    "Diamond Tip": ["Claw sharpens."],
+    "Shears": ["Leaves and wool, and combs later."],
+    "Shield": ["Pads have edges. So do mobs."],
+    "Iron Chestplate": ["Survive the night on purpose."],
+    "Bow": ["Keep the void's mobs at a distance."],
+    "Arrow Bundle": ["Sixty-four reasons to keep distance."],
+    "Flint and Steel": ["Light the way through."],
+    "Obsidian Frame": ["Ten blocks. A door the Edge-walkers would recognise."],
+    "Ender Eye": ["Foothold prep. Somewhere else exists."],
+    "Enchanting Table": ["Soft power for hard tools."],
+    "Anvil": ["Repair and name what you carry."],
+    "Name Tag": ["Call it yours."],
+    # Spark
+    "Redstone Dust": ["A brief signal before the Hum. Sixty-four dust."],
+    "Furnace Array": ["Parallel heat. Eight is a line, not a furnace."],
+    "Hopper Line": ["Move the grit without hands."],
+    "Comparator": ["Measure the beat."],
+    "Hum: Bone Chime": ["Bone, string, amethyst. The first beat.", "It yields two — keep one for the Spirit Codex."],
+    "Hum: Spirit Shard": ["A shard of old tribe song. Needs a Chime."],
+    "Hum: Copper Resonator": ["Copper around a Chime: metal tuned to spirit."],
+    "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Chime, Shard, leather — the Desk sells leather."],
+    "Hum: Pulse Cell": ["Carry Pulse between drum and lattice."],
+    "Hum: Ley Collector": ["Draw ambient ley into beats near a Drumheart."],
+    "Hum: Pulse Resonator": ["Burn coal for denser beats beside Drumheart and Ley."],
+    "Powah Starter Cell": ["A buffer for Forge Energy — the bridge from Pulse to wire, if you want one."],
+    "Powah Furnator": ["Burn fuel for Forge Energy."],
+    "Powah Cable": ["Move energy along."],
+    "Solar Panel Starter": ["Sky power, on a pad that is all sky."],
+    "Energizing Orb": ["Charge items in a ring of rods."],
+    "Battery": ["A pocketful of stored power."],
+    # Clock
+    "Andesite Alloy": ["Hands that work while you sleep. Thirty-two."],
+    "Shaft": ["The rotation spine."],
+    "Cogwheel": ["One cog. Then the same cog again."],
+    "Large Cog": ["More teeth, slower turn."],
+    "Water Wheel": ["A river in the sky, turning."],
+    "Millstone": ["Mill grit into dust without a hammer."],
+    "Mechanical Press": ["Plates and paths."],
+    "Mechanical Mixer": ["Bulk recipes, fast."],
+    "Encased Fan": ["Washing, drying, and gravel into sand."],
+    "Deployer": ["A hand on a shaft."],
+    "Precision Mechanism": ["Clockwork heart. Wants a Binding Knot at its centre.", "The Loom, asking to be included."],
+    "Sequenced Gearshift": ["Programmed spin. The pattern-weavers' song, written down."],
+    # Swarm
+    "Honeycomb": ["Colonies in the wind. The Desk sells comb if none drift by."],
+    "Beehive": ["A home for workers."],
+    "Advanced Beehive": ["A productive home."],
+    "Centrifuge": ["Spin combs into everything they hide."],
+    "Incubator": ["Hatch the genes you want."],
+    "Gene Indexer": ["Sort traits like seed."],
+    "Imperium": ["High essence. The fields are industry now."],
+    "Supremium": ["Peak green."],
+    "Honey Block": ["Swarm surplus, stacked."],
+    # Sigil
+    "Amethyst": ["The stewards left tricks in crystal. Thirty-two shards."],
+    "Braid Cord": ["Right-click the Tension Post with a Strand Filament once two of Clock, Swarm, or Spark are seated.", "Bind begins here."],
+    "Book and Quill": ["Write the rite before you carve it."],
+    "Brewing Stand": ["Bottled tricks."],
+    "Dragon Breath": ["Breath of the thing that guards the End."],
+    "Source Gem": ["Ars fuel."],
+    "Novice Spell Book": ["First spells. Peer magic, if you want it beside the rites."],
+    "Occultism Dictionary": ["Call spirits by their names."],
+    "Spirit Fire": ["Otherworld light."],
+    # Spindle
+    "Spin the Filament": ["An iron mesh, gravel or sand, patience.", "Strand Filament is the Loom's own thread. The braid is spun from it."],
+    "Splice a Braid": ["Two braid paths seated, one Filament, one right-click on the Post.", "Bind has begun; Reweave starts here."],
+    "Cold Weft": ["Certus quartz — the cold thread of a digital loom."],
+    "Charged Warp": ["Fluix — certus, quartz, and redstone charged in water."],
+    "Press the Pattern": ["The inscriber presses circuits the way a loom presses cloth."],
+    "Digital Loom": ["The controller. Wants a Binding Knot at its centre.", "Spindle core."],
+    "Gate Drum": ["Strike it open. The March is on the other side."],
+    "March Stone": ["Footing from beyond the gate. Bring one home."],
+    "Loom Fragment": ["Nine seated, one March stone, one right-click on the Post: the Fragment.", "Seat it. The cut closes above your pad."],
+    "Molecular Assembler": ["Builds from patterns. Wants a Braid Cord at its heart."],
+}
+
+# Knot beats: hand-picked mainline titles whose completion tensions the Strand.
+KNOT_BEATS = {
+    "soil": ["Craft a Bench", "First Sapling", "Furnace Heat", "Catch the Rain", "Codex in Hand"],
+    "stone": ["Pull Void Yarn", "Porcelain Tool", "Raise Loomframe", "Iron Ingot", "Iron Mesh"],
+    "sprout": ["Wheat Field", "Cooking Pot", "Infusion Altar", "Iron Seeds", "Prudentium"],
+    "claw": ["Blueprint Package", "Pick Blueprint", "Iron Chestplate", "Obsidian Frame", "Enchanting Table"],
+    "spark": ["Hum: Bone Chime", "Hum: Drumheart", "Hum: Pulse Cell", "Hum: Pulse Resonator"],
+    "clock": ["Water Wheel", "Mechanical Press", "Mechanical Mixer", "Encased Fan", "Precision Mechanism"],
+    "swarm": ["Beehive", "Advanced Beehive", "Centrifuge", "Incubator", "Imperium"],
+    "sigil": ["Braid Cord", "Brewing Stand", "Novice Spell Book", "Occultism Dictionary"],
+    "spindle": ["Splice a Braid", "Digital Loom", "Gate Drum", "March Stone"],
+}
+KNOT_TEXT = {
+    "soil": ("Soil Knot", "Wake", ["Bench, sapling, hearth, water, Codex. The pad holds.", "Tension the Strand: the Pad-keepers answer, and the token is yours to seat."]),
+    "stone": ("Stone Knot", "Recover", ["Yarn, porcelain, a Loomframe working, iron in the chest.", "Tension the Strand: the Grit-singers answer."]),
+    "sprout": ("Sprout Knot", "Root", ["A field, a kitchen, essence rising.", "Tension the Strand: the Rootbinders answer."]),
+    "claw": ("Claw Knot", "Edge", ["Plans, iron on your back, a door out.", "Tension the Strand: the Edge-walkers answer. The braid opens."]),
+    "spark": ("Spark Knot", "Hum", ["A drum struck, a Pulse held, a resonator burning.", "Tension the Strand: the Drumhearts answer."]),
+    "clock": ("Clock Knot", "Pattern", ["A wheel, a press, a mixer, a fan, a clockwork heart.", "Tension the Strand: the Pattern-weavers answer."]),
+    "swarm": ("Swarm Knot", "Colony", ["Hives, a centrifuge, an incubator, essence fields.", "Tension the Strand: the Colony-keepers answer."]),
+    "sigil": ("Sigil Knot", "Bind", ["A braid spun, potions bottled, spells and spirits called.", "Tension the Strand: the Seal-carvers answer."]),
+    "spindle": ("Spindle Knot", "Reweave", ["A braid, a digital loom, a gate, a stone from the March.", "Tension the ninth Strand. Then the Fragment, then the Post."]),
+}
+
+
+def task_quest(strand_i, *, title, desc, task, rewards, deps=None, x=0.0, y=0.0, optional=False, hide=False, shape="", subtitle=None):
+    q, t, r = next_ids(strand_i)
+    lang[f"quest.{q}.title"] = title
+    lang[f"quest.{q}.quest_desc"] = desc
+    if subtitle:
+        lang[f"quest.{q}.subtitle"] = subtitle
+    task = dict(task)
+    task["id"] = t
+    rw = []
+    for i, reward in enumerate(rewards):
+        reward = dict(reward)
+        reward["id"] = hid(int(r, 16) + i * 0x1000000)
+        rw.append(reward)
+    entry = {"id": q, "x": f"{round(x, 1)}d", "y": f"{round(y, 1)}d", "tasks": [task], "rewards": rw}
+    if deps:
+        entry["dependencies"] = deps
+    if optional:
+        entry["optional"] = True
+    if hide:
+        entry["hide_until_deps_complete"] = True
+    if shape:
+        entry["shape"] = shape
+    return entry
+
+
+def reward_item(item, count=1):
+    return {"type": "item", "item": {"id": item, "count": count}}
+
+
+def reward_xp_levels(n):
+    return {"type": "xp_levels", "xp_levels": n}
+
+
+def reward_loot(table):
+    """Steward Cache: a vanilla loot table handed over by command (FTB's own 'loot' type wants a RewardTable)."""
+    return {"type": "command", "command": f"loot give @p loot {table}", "silent": True, "elevate_perms": True}
+
+
+def knot_finale(strand_i, token, main, x, y):
+    """Checkmark Knot quest (token + cache + levels) and a Seat quest that clears when the Post takes it."""
+    title, phase, desc = KNOT_TEXT[token]
+    by_title = {lang.get(f"quest.{q['id']}.title"): q["id"] for q in main}
+    deps = [by_title[t] for t in KNOT_BEATS[token] if t in by_title]
+    if not deps and main:
+        deps = [main[-1]["id"]]
+    knot = task_quest(
+        strand_i,
+        title=title,
+        subtitle=phase,
+        desc=desc,
+        task={"type": "checkmark"},
+        rewards=[
+            reward_item(f"ninjacatskies:strand_token_{token}", 1),
+            reward_loot(f"ninjacatskies:steward_cache/{token}"),
+            reward_xp_levels(3),
+        ],
+        deps=deps,
+        x=x,
+        y=y,
+        shape="hexagon",
+    )
+    knot["size"] = "1.5d"
+    seat = task_quest(
+        strand_i,
+        title=f"Seat {token.title()}",
+        desc=["Right-click your Clowder's Tension Post with the token.", "The notch lights, the tribe chimes, the pad changes."],
+        task={"type": "advancement", "advancement": f"ninjacatskies:strand/{token}", "criterion": ""},
+        rewards=[reward_item("ninjacatskies:frayed_thread", 6), reward_item("ninjacatskies:codex_page", 1)],
+        deps=[knot["id"]],
+        x=x + 1.6,
+        y=y,
+        shape="diamond",
+    )
+    return [knot, seat]
+
+
+def apply_voice(desc):
+    out = []
+    for line in desc:
+        line = VOICE_FIX.get(line, line)
+        out.append(line)
+    return out
+
+
+def finalize_chapter(strand_i, quests):
+    """Hide side grids until the second mainline beat; strip Desk dependencies; unique titles."""
+    CURRENT["strand_i"] = strand_i
+    mainline = [q for q in quests if not q.get("optional")]
+    gate = mainline[1]["id"] if len(mainline) > 1 else None
+    for q in quests:
+        if q.get("optional") and not q.get("dependencies") and gate and strand_i != 16:
+            q["dependencies"] = [gate]
+            q["hide_until_deps_complete"] = True
+        if strand_i == 16:
+            q.pop("dependencies", None)
+        title_key = f"quest.{q['id']}.title"
+        title = lang.get(title_key)
+        if title:
+            n = CURRENT["title_counts"].get(title, 0)
+            CURRENT["title_counts"][title] = n + 1
+            if n > 0:
+                lang[title_key] = f"{title} ({CHAPTER_SHORT.get(strand_i, strand_i)})"
+        dk = f"quest.{q['id']}.quest_desc"
+        if dk in lang:
+            lang[dk] = apply_voice(lang[dk])
+    return quests
+
 def chain(strand_i: int, steps: list[tuple], start_x: float = 0.0, y: float = 0.0, gap: float = 1.4) -> list[dict]:
-    """steps: (title, item, count, desc[, reward_item, reward_count, optional, consume])"""
+    """steps: (title, item, count, desc[, reward_item, reward_count, optional, consume])
+
+    Laid out as clusters of five: a head beat, then four beats under it that depend on the head.
+    Each head depends on the previous head, so a chapter reads as a lattice, not a 35-deep railroad.
+    Thread rewards scale with the chapter band; heads also give a level.
+    """
     out: list[dict] = []
-    prev: str | None = None
-    x = start_x
+    prev_head: str | None = None
+    head: str | None = None
+    cluster = 0
+    member = 0
+    band = 0 if strand_i <= 3 else 1 if strand_i <= 6 else 2 if strand_i <= 9 else 1
     for step in steps:
         title, item, count, desc = step[0], step[1], step[2], step[3]
-        reward_item = step[4] if len(step) > 4 else None
-        reward_count = step[5] if len(step) > 5 else (2 if len(out) % 4 == 3 else 1)
+        reward_item_ = step[4] if len(step) > 4 else None
+        reward_count = step[5] if len(step) > 5 else (1 + band if member else 2 + band)
         optional = step[6] if len(step) > 6 else False
         consume = step[7] if len(step) > 7 else False
+        x = start_x + cluster * 1.8
+        yy = y + member * 1.3
+        deps = None
+        if member == 0:
+            deps = [prev_head] if prev_head else None
+        else:
+            deps = [head] if head else None
         q = item_quest(
             strand_i,
             title=title,
             desc=[desc] if isinstance(desc, str) else desc,
             item=item,
             count=count,
-            reward_item=reward_item,
+            reward_item=reward_item_,
             reward_count=reward_count,
-            deps=[prev] if prev else None,
+            deps=deps,
             x=x,
-            y=y,
+            y=yy,
             optional=optional,
             consume=consume,
         )
-        if q:
-            out.append(q)
-            prev = q["id"]
-            x += gap
+        if not q:
+            continue
+        out.append(q)
+        if q.get("optional"):
+            # Optional beats never carry the lattice.
+            if member == 0:
+                q["dependencies"] = [prev_head] if prev_head else []
+                if not q["dependencies"]:
+                    q.pop("dependencies")
+                continue
+        if member == 0 and not q.get("optional"):
+            head = q["id"]
+            if not q.get("optional"):
+                q.setdefault("rewards", []).append({"id": hid(int(q["id"], 16) + 0x0F00000000000000), "type": "xp_levels", "xp_levels": 1})
+        member += 1
+        if member >= 5:
+            prev_head = head
+            member = 0
+            cluster += 1
     return out
 
 
-def grid_optional(strand_i: int, steps: list[tuple], origin=(0.0, 2.5), cols=4) -> list[dict]:
+def grid_optional(strand_i: int, steps: list[tuple], origin=(0.0, 7.5), cols=6) -> list[dict]:
     """steps: (title, item, count, desc[, reward_item, reward_count, consume])"""
     out = []
     for i, step in enumerate(steps):
@@ -309,11 +707,7 @@ def build_soil() -> list[dict]:
         ("Oak Trapdoor", "minecraft:oak_trapdoor", 4, "Trapdoor access hatches."),
         ("Oak Pressure Plate", "minecraft:oak_pressure_plate", 2, "Step click."),
         ("Oak Button", "minecraft:oak_button", 4, "Button for redstone taps."),
-        ("Crafting Table Spare", "minecraft:crafting_table", 2, "Second bench."),
         ("Stick Fence Gate", "minecraft:oak_fence_gate", 2, "Fence the pad edge."),
-        ("Chest Spare", "minecraft:chest", 4, "More boxes."),
-        ("Barrel Spare", "minecraft:barrel", 4, "More barrels."),
-        ("Furnace Spare", "minecraft:furnace", 2, "Second heat."),
         ("Campfire", "minecraft:campfire", 1, "Smoke signal."),
         ("Lantern", "minecraft:lantern", 4, "Hanging light."),
         ("Soul Lantern", "minecraft:soul_lantern", 2, "Blue light."),
@@ -339,9 +733,8 @@ def build_soil() -> list[dict]:
         ("Ink Sac", "minecraft:ink_sac", 8, "Dye and books need ink."),
         ("Feather", "minecraft:feather", 8, "Feathers for arrows and books."),
         ("Leather", "minecraft:leather", 8, "Leather for books and kits."),
-        ("Rabbit Hide", "minecraft:rabbit_hide", 4, "Small hide."),
-    ], origin=(-3.0, 2.5), cols=5)
-    finale = token_finale(s, "soil", last_id(main), 1.5, -2.0)
+    ], origin=(-3.0, 7.5), cols=6)
+    finale = knot_finale(s, "soil", main, 11.5, -2.0)
     return main + side + finale
 
 
@@ -402,8 +795,8 @@ def build_stone() -> list[dict]:
         ("Slimeball", "minecraft:slime_ball", 4, "Knot binder — or pad compost recipe."),
         ("Bone", "minecraft:bone", 16, "Meal stock."),
         ("Spider Eye", "minecraft:spider_eye", 4, "Brew later."),
-    ], origin=(-4.0, 2.8), cols=5)
-    finale = token_finale(s, "stone", last_id(main), 2.0, -2.0)
+    ], origin=(-4.0, 7.5), cols=6)
+    finale = knot_finale(s, "stone", main, 12.0, -2.0)
     return main + side + finale
 
 
@@ -436,7 +829,7 @@ def build_sprout() -> list[dict]:
         ("Hopper Pot", "botanypots:terracotta_hopper_botany_pot", 1, "Auto harvest pot."),
         ("Prudentium", "mysticalagriculture:prudentium_essence", 16, "Tier up a machine line."),
         ("Tertium", "mysticalagriculture:tertium_essence", 8, "Deeper green."),
-        ("Watering Can", "minecraft:water_bucket", 1, "Keep rows wet."),
+        ("Bone Block", "minecraft:bone_block", 4, "Nine meal to a block."),
         ("Hay Silo", "minecraft:hay_block", 8, "Sprout surplus."),
         ("Rich Soil", "farmersdelight:rich_soil", 8, "Better farmland."),
         ("Organic Compost", "farmersdelight:organic_compost", 8, "Feed the soil."),
@@ -457,8 +850,8 @@ def build_sprout() -> list[dict]:
         ("Honey Bottle", "minecraft:honey_bottle", 4, "Swarm preview."),
         ("Glow Berries", "minecraft:glow_berries", 8, "Lit snacks."),
         ("Nether Wart", "minecraft:nether_wart", 8, "Brew base."),
-    ], origin=(-4.0, 3.0), cols=5)
-    finale = token_finale(s, "sprout", last_id(main), 2.0, -2.0)
+    ], origin=(-4.0, 7.5), cols=6)
+    finale = knot_finale(s, "sprout", main, 12.0, -2.0)
     return main + side + finale
 
 
@@ -503,9 +896,9 @@ def build_claw() -> list[dict]:
         ("Trident", "minecraft:trident", 1, "Sea claw."),
         ("Crossbow", "minecraft:crossbow", 1, "Heavy shot."),
         ("Spyglass", "minecraft:spyglass", 1, "Scan the void."),
-    ], origin=(-4.0, 3.0), cols=4)
+    ], origin=(-4.0, 7.5), cols=6)
     # drop invalid optional if any
-    finale = token_finale(s, "claw", last_id(main), 2.0, -2.0)
+    finale = knot_finale(s, "claw", main, 12.0, -2.0)
     return main + side + finale
 
 
@@ -568,12 +961,8 @@ def build_spark() -> list[dict]:
         ("Pipez Energy", "pipez:energy_pipe", 8, "Simple FE pipes."),
         ("Pipez Wrench", "pipez:wrench", 1, "Configure pipes."),
         ("Ritual Chalk", "tribalpower:ritual_chalk", 4, "Mark lattice lines — needs a Spirit Shard."),
-    ], origin=(-4.0, 3.0), cols=5)
-    finale = token_finale(s, "spark", last_id(main), 2.0, -2.0)
-    if finale:
-        lang[f"quest.{finale[0]['id']}.quest_desc"] = [
-            "Spark tensioned. Hum ladder Chime→Shard→Resonator→Drumheart; Powah/Mek are FE bridges.",
-        ]
+    ], origin=(-4.0, 7.5), cols=6)
+    finale = knot_finale(s, "spark", main, 12.0, -2.0)
     return main + side + finale
 
 
@@ -629,8 +1018,8 @@ def build_clock() -> list[dict]:
         ("Display Board", "create:display_board", 1, "Display board shows data."),
         ("Potato Cannon", "create:potato_cannon", 1, "Optional fun."),
         ("Extendo Grip", "create:extendo_grip", 1, "Long arm."),
-    ], origin=(-4.0, 3.2), cols=5)
-    finale = token_finale(s, "clock", last_id(main), 2.0, -2.0)
+    ], origin=(-4.0, 7.5), cols=6)
+    finale = knot_finale(s, "clock", main, 12.0, -2.0)
     return main + side + finale
 
 
@@ -673,8 +1062,8 @@ def build_swarm() -> list[dict]:
         ("Rose Bush", "minecraft:rose_bush", 4, "Bee food."),
         ("Peony", "minecraft:peony", 4, "Bee food."),
         ("Orange Tulip", "minecraft:orange_tulip", 8, "Bee food."),
-    ], origin=(-3.5, 3.0), cols=4)
-    finale = token_finale(s, "swarm", last_id(main), 2.0, -2.0)
+    ], origin=(-3.5, 7.5), cols=6)
+    finale = knot_finale(s, "swarm", main, 12.0, -2.0)
     return main + side + finale
 
 
@@ -683,7 +1072,7 @@ def build_sigil() -> list[dict]:
     main = chain(s, [
         ("Amethyst", "minecraft:amethyst_shard", 32, "Old stewards left tricks."),
         # Peer braid early — do not gate Bind behind deep Occultism.
-        ("Braid Cord", "ninjacatskies:braid_cord", 1, "Loom braid required for Bind — any two of Clock, Swarm, or Spark tokens."),
+        ("Braid Cord", "ninjacatskies:braid_cord", 1, "Spun at the Tension Post from a Strand Filament, once two of Clock, Swarm, or Spark are seated."),
         ("Book and Quill", "minecraft:writable_book", 1, "Write the rite."),
         ("Enchanting Table", "minecraft:enchanting_table", 1, "Soft magic gate."),
         ("Lapis Block", "minecraft:lapis_block", 16, "Fuel the table."),
@@ -726,25 +1115,23 @@ def build_sigil() -> list[dict]:
         ("Ink Common", "irons_spellbooks:common_ink", 8, "Inscribe spells."),
         ("Mystical Flower", "minecraft:allium", 8, "Color for rites."),
         ("Echo Shard", "minecraft:echo_shard", 2, "Deep dark echo."),
-    ], origin=(-4.0, 3.0), cols=5)
-    finale = token_finale(s, "sigil", last_id(main), 2.0, -2.0)
-    if finale:
-        lang[f"quest.{finale[0]['id']}.quest_desc"] = [
-            "Sigil tensioned. Braid held for Bind; Spindle assemblers and March trophy wait ahead.",
-        ]
+    ], origin=(-4.0, 7.5), cols=6)
+    finale = knot_finale(s, "sigil", main, 12.0, -2.0)
     return main + side + finale
 
 
 def build_spindle() -> list[dict]:
     s = 9
     main = chain(s, [
-        ("Certus Quartz", "ae2:certus_quartz_crystal", 32, "Reweave a piece of the Loom."),
+        ("Spin the Filament", "voidloom:strand_filament", 1, "Iron mesh, gravel or sand, patience."),
+        ("Splice a Braid", "ninjacatskies:braid_cord", 1, "Two braid paths seated, one Filament, one right-click on the Post."),
+        ("Cold Weft", "ae2:certus_quartz_crystal", 32, "Certus — the cold thread of a digital loom."),
         ("Certus Dust", "ae2:certus_quartz_dust", 16, "Ground quartz."),
         ("Sky Stone", "ae2:sky_stone_block", 16, "AE2 shell."),
-        ("Fluix Crystal", "ae2:fluix_crystal", 32, "Network dust."),
+        ("Charged Warp", "ae2:fluix_crystal", 32, "Fluix — certus, quartz, redstone, charged in water."),
         ("Fluix Dust", "ae2:fluix_dust", 16, "Ground fluix."),
         ("Silicon", "ae2:silicon", 32, "Silicon for AE2 processors."),
-        ("Inscriber", "ae2:inscriber", 1, "Press circuits."),
+        ("Press the Pattern", "ae2:inscriber", 1, "The inscriber presses circuits the way a loom presses cloth."),
         ("Inscriber Silicon Press", "ae2:silicon_press", 1, "Silicon die."),
         ("Logic Press", "ae2:logic_processor_press", 1, "Logic die."),
         ("Calculation Press", "ae2:calculation_processor_press", 1, "Calc die."),
@@ -757,14 +1144,11 @@ def build_spindle() -> list[dict]:
         ("1k Item Cell", "ae2:item_storage_cell_1k", 2, "First digital chest."),
         ("ME Terminal", "ae2:terminal", 1, "See the net."),
         ("Crafting Terminal", "ae2:crafting_terminal", 1, "Craft on-net."),
-        ("ME Controller", "ae2:controller", 1, "Spindle core."),
+        ("Digital Loom", "ae2:controller", 1, "The controller. Wants a Binding Knot at its centre."),
         # Reweave braid + March after controller — not behind late AE2 autocraft.
         # Spindle token before Loom Fragment (fragment recipe consumes all nine tokens).
-        ("Loom Braid", "ninjacatskies:braid_cord", 1, "Braid any two of Clock, Swarm, or Spark tokens into a cord. Soft-gates the molecular assembler."),
-        ("Gate Drum", "tribalpower:gate_drum", 1, "Strike open The March for Reweave footing."),
-        ("March Stone", "tribalpower:march_stone", 1, "March-attuned footing — Gate Drum into The March; trophy needs one."),
-        ("Strand Token: Spindle", "ninjacatskies:strand_token_spindle", 1, "Fluix + Binding Knot + Thread — ninth token before the trophy."),
-        ("Loom Fragment", "ninjacatskies:spindle_loom_fragment", 1, "Nine Strand tokens plus March stone — Spindle end trophy."),
+        ("Gate Drum", "tribalpower:gate_drum", 1, "Strike it open. The March is on the other side."),
+        ("March Stone", "tribalpower:march_stone", 1, "Footing from beyond the gate. Bring one home."),
         ("Fluix Cable", "ae2:fluix_glass_cable", 32, "Link machines."),
         ("Import Bus", "ae2:import_bus", 2, "Pull items into storage."),
         ("Export Bus", "ae2:export_bus", 2, "Push out."),
@@ -795,9 +1179,35 @@ def build_spindle() -> list[dict]:
         ("Charger", "ae2:charger", 1, "Charge certus."),
         ("Crystal Growth Accelerator", "ae2:growth_accelerator", 2, "Grow buds."),
         ("Spirit Reed", "tribalpower:spirit_reed", 4, "March canopy proof — optional Reweave souvenir."),
-    ], origin=(-4.0, 3.2), cols=5)
-    # Token lives on the main line before Loom Fragment (no trailing duplicate finale).
-    return main + side
+    ], origin=(-4.0, 7.5), cols=6)
+    finale = knot_finale(s, "spindle", main, 12.0, -2.0)
+    fragment = task_quest(
+        s,
+        title="Loom Fragment",
+        subtitle="Reweave",
+        desc=["Nine seated, one March stone, one right-click on the Post: the Fragment.", "Seat it. The cut closes above your pad."],
+        task={"type": "item", "item": {"id": "ninjacatskies:spindle_loom_fragment", "count": 1}},
+        rewards=[reward_item("ninjacatskies:frayed_thread", 16), reward_xp_levels(5)],
+        deps=[finale[1]["id"]],
+        x=15.2,
+        y=-2.0,
+        shape="hexagon",
+    )
+    fragment["size"] = "1.5d"
+    reweave = task_quest(
+        s,
+        title="Reweave",
+        subtitle="The cut, closed",
+        desc=["Seat the Fragment at the Tension Post.", "Nine tribes, one thread. Go and see what the March kept for you."],
+        task={"type": "advancement", "advancement": "ninjacatskies:reweave", "criterion": ""},
+        rewards=[reward_loot("ninjacatskies:steward_cache/reweave"), reward_xp_levels(10)],
+        deps=[fragment["id"]],
+        x=16.8,
+        y=-2.0,
+        shape="gear",
+    )
+    reweave["size"] = "2.0d"
+    return main + side + finale + [fragment, reweave]
 
 
 def build_exdeorum_side() -> list[dict]:
@@ -830,7 +1240,7 @@ def build_exdeorum_side() -> list[dict]:
         ("Tuff", "exdeorum:tuff", 16, "Grey stone."),
         ("Dripstone", "minecraft:pointed_dripstone", 8, "Cave spike."),
         ("Sponge", "minecraft:sponge", 1, "Dry the pad."),
-    ], origin=(0.0, 2.5), cols=3)
+    ], origin=(0.0, 7.5), cols=6)
 
 
 def build_storage_side() -> list[dict]:
@@ -889,7 +1299,7 @@ def build_mekanism_side() -> list[dict]:
         ("Steel Casing", "mekanism:steel_casing", 8, "Machine frame."),
         ("Teleporter", "mekanism:teleporter", 1, "Warp pad."),
         ("Digital Miner", "mekanism:digital_miner", 1, "Auto mine."),
-    ], origin=(0.0, 2.8), cols=3)
+    ], origin=(0.0, 7.5), cols=6)
 
 
 def build_powah_side() -> list[dict]:
@@ -943,7 +1353,17 @@ def build_ars_side() -> list[dict]:
 
 def build_clowder() -> list[dict]:
     s = 15
-    return chain(s, [
+    ceremony = [
+        task_quest(s, title="Raise the Post", desc=["Logs around a Binding Knot, Thread on top. Place it on the pad.", "Stand near it: the pad starts mending you once a Strand is seated."],
+                   task={"type": "observation", "observe_type": 0, "timer": 0, "to_observe": "ninjacatskies:tension_post"},
+                   rewards=[reward_item("ninjacatskies:frayed_thread", 4)], x=-2.0, y=-2.0, shape="hexagon"),
+        task_quest(s, title="Enter the Hall", desc=["Hub Key in hand, or /clowder hub. Every Clowder on the server meets here.", "/clowder return brings you home."],
+                   task={"type": "dimension", "dimension": "clowderhall:clowder_hall"},
+                   rewards=[reward_item("ninjacatskies:frayed_thread", 4), reward_xp_levels(1)], x=-0.4, y=-2.0, shape="hexagon"),
+        task_quest(s, title="Look at the Fray", desc=["Above the Dock stands a slow dark column: the cut itself.", "It thins as Clowders seat Strands. Come back and check it now and then."],
+                   task={"type": "checkmark"}, rewards=[reward_item("ninjacatskies:codex_page", 1)], x=1.2, y=-2.0, shape="diamond"),
+    ]
+    return ceremony + chain(s, [
         ("Island Charter", "clowderhall:island_charter", 1, "Name a pad as yours."),
         ("Hub Key", "clowderhall:hub_key", 1, "Find the Hall."),
         ("Strand Banner", "clowderhall:strand_banner_pattern", 1, "Mark progress."),
@@ -966,7 +1386,7 @@ def build_clowder() -> list[dict]:
         ("Lead", "minecraft:lead", 2, "Bring mobs home."),
         ("Saddle", "minecraft:saddle", 1, "Mount when you find a saddle."),
         ("Boat", "minecraft:oak_boat", 1, "If you somehow find water seas."),
-    ], origin=(0.0, 2.5), cols=3)
+    ], origin=(0.0, 7.5), cols=6)
 
 
 def build_aura_side() -> list[dict]:
@@ -999,7 +1419,7 @@ def build_aura_side() -> list[dict]:
         ("Oak Generator", "naturesaura:oak_generator", 1, "Aura from oaks."),
         ("End Flower", "naturesaura:end_flower", 1, "End flora."),
         ("Spawn Lamp", "naturesaura:spawn_lamp", 1, "Light spawns."),
-    ], origin=(0.0, 2.6), cols=3)
+    ], origin=(0.0, 7.5), cols=6)
 
 
 def build_food_side() -> list[dict]:
@@ -1149,7 +1569,7 @@ def build_decor_side() -> list[dict]:
         ("Ender Chest", "minecraft:ender_chest", 1, "Shared void box."),
         ("Shulker Shell", "minecraft:shulker_shell", 2, "Box shell."),
     ]
-    return chain(s, blocks[:20]) + grid_optional(s, blocks[20:], origin=(0.0, 2.5), cols=6)
+    return chain(s, blocks[:20]) + grid_optional(s, blocks[20:], origin=(0.0, 7.5), cols=6)
 
 
 def build_nether_side() -> list[dict]:
@@ -1305,7 +1725,7 @@ def build_crops_side() -> list[dict]:
         ("Copper Essence", "mysticalagriculture:copper_essence", 32, "Copper leaves."),
         ("Redstone Essence", "mysticalagriculture:redstone_essence", 32, "Dust leaves."),
     ]
-    return main + grid_optional(s, seeds, origin=(-5.0, 3.0), cols=6)
+    return main + grid_optional(s, seeds, origin=(-5.0, 7.5), cols=6)
 
 
 def build_bees_side() -> list[dict]:
@@ -1357,7 +1777,7 @@ def build_bees_side() -> list[dict]:
         ("Sugar Stock", "minecraft:sugar", 32, "Treat craft."),
         ("Glass Bottle Stock", "minecraft:glass_bottle", 32, "Empty bottles."),
         ("Shears Spare", "minecraft:shears", 1, "Comb cut."),
-    ], origin=(-4.0, 3.0), cols=5)
+    ], origin=(-4.0, 7.5), cols=6)
     return main + side
 
 
@@ -1444,7 +1864,7 @@ def build_occult_side() -> list[dict]:
         ("Bound Marid Book", "occultism:book_of_binding_bound_marid", 1, "Filled great."),
         ("Iesnium Ore", "occultism:iesnium_ore", 4, "Vein sample."),
         ("Miner Afrit Deeps", "occultism:miner_afrit_deeps", 1, "Deep miner."),
-    ], origin=(-3.0, 3.0), cols=3)
+    ], origin=(-3.0, 7.5), cols=6)
     return main + side
 
 
@@ -1530,7 +1950,7 @@ def build_network_side() -> list[dict]:
         ("Silicon", "ae2:silicon", 32, "Chip base."),
         ("Sky Stone", "ae2:sky_stone_block", 32, "Meteor stone."),
         ("Smooth Sky Stone", "ae2:smooth_sky_stone_block", 16, "Controller shell."),
-        ("Inscriber", "ae2:inscriber", 1, "Press circuits."),
+        ("Press the Pattern", "ae2:inscriber", 1, "The inscriber presses circuits the way a loom presses cloth."),
         ("Charger", "ae2:charger", 1, "Charge certus."),
         ("Printed Calc", "ae2:printed_calculation_processor", 8, "Calc print."),
         ("Printed Logic", "ae2:printed_logic_processor", 8, "Logic print."),
@@ -1771,7 +2191,7 @@ def build_mobfarm_side() -> list[dict]:
         ("Piglin Head", "minecraft:piglin_head", 1, "Dragon egg showpiece."),
         ("Dragon Head", "minecraft:dragon_head", 1, "Dragon egg showpiece."),
         ("Player Head", "minecraft:player_head", 1, "If obtained."),
-    ], origin=(-3.0, 3.0), cols=3)
+    ], origin=(-3.0, 7.5), cols=6)
     return main + side
 
 
@@ -1826,7 +2246,7 @@ def build_tribal_side() -> list[dict]:
         ("March Planks", "tribalpower:march_planks", 32, "Sawn March timber."),
         ("March Leaf", "tribalpower:march_leaf", 16, "Whispering canopy."),
         ("Spirit Reed", "tribalpower:spirit_reed", 8, "Reed that hums."),
-    ], origin=(-3.0, 3.0), cols=3)
+    ], origin=(-3.0, 7.5), cols=6)
     return main + side
 
 
@@ -1836,7 +2256,7 @@ def build_shop() -> list[dict]:
     thread = "ninjacatskies:frayed_thread"
     # Unlock spine: spend Thread, receive useful mats (not Thread-for-Thread).
     main = chain(s, [
-        ("Desk Deposit I", thread, 8, "Open the Desk — saplings for the pad.", "minecraft:oak_sapling", 4, False, True),
+        ("Desk Deposit I", thread, 8, "The Desk opens. Saplings for the pad.", "minecraft:oak_sapling", 4, False, True),
         # Early bucket — Soft Soil water path before deep Desk spend.
         ("Buy Empty Bucket", thread, 8, "Fill from melted ice — Tension Barrel clay.", "minecraft:bucket", 1, False, True),
         ("Desk Deposit II", thread, 16, "Bone meal softens Root.", "minecraft:bone_meal", 16, False, True),
@@ -1858,9 +2278,9 @@ def build_shop() -> list[dict]:
     side = grid_optional(s, [
         ("Buy XP Bottles", thread, 20, "Bottled practice.", "minecraft:experience_bottle", 8, True),
         ("Buy Emeralds", thread, 24, "Trade bait.", "minecraft:emerald", 8, True),
-        ("Buy Diamonds", thread, 48, "Hard currency stash.", "minecraft:diamond", 2, True),
-        ("Buy Shulker", thread, 64, "Portable room.", "minecraft:shulker_box", 1, True),
-        ("Buy Vault", thread, 32, "Bulk Create storage.", "create:item_vault", 2, True),
+        ("Buy Diamonds", thread, 30, "Hard currency, two at a time.", "minecraft:diamond", 2, True),
+        ("Buy Shulker", thread, 90, "A portable room. The End is cheaper if you can reach it.", "minecraft:shulker_box", 1, True),
+        ("Buy Vault", thread, 40, "Bulk Create storage, two vaults.", "create:item_vault", 2, True),
         ("Buy Gold", thread, 18, "Gilded bits.", "minecraft:gold_ingot", 4, True),
         ("Buy Copper", thread, 14, "Wire and bulbs.", "minecraft:copper_ingot", 8, True),
         ("Buy Amethyst", thread, 22, "Sigil bait.", "minecraft:amethyst_shard", 4, True),
@@ -1869,8 +2289,8 @@ def build_shop() -> list[dict]:
         ("Buy Nether Wart", thread, 20, "Brew stock.", "minecraft:nether_wart", 8, True),
         ("Buy Chorus", thread, 26, "End grit snack.", "minecraft:chorus_fruit", 8, True),
         ("Buy Obsidian", thread, 30, "Portal thoughts.", "minecraft:obsidian", 4, True),
-        ("Buy Beacon Frame", thread, 80, "Clowder monument core.", "minecraft:nether_star", 1, True),
-    ], origin=(-3.0, 2.8), cols=5)
+        ("Buy Beacon Frame", thread, 200, "A star for a Clowder monument. Two hundred Thread is a campaign, not a tip.", "minecraft:nether_star", 1, True),
+    ], origin=(-3.0, 7.5), cols=6)
     # Desk buys are personal + repeatable Thread sinks (PLAYTHROUGH targets).
     shop = main + side
     for q in shop:

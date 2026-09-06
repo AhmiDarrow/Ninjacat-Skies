@@ -1,0 +1,25 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Root",
+  "description": "Sprout Strand.",
+  "icon": "mysticalagriculture:inferium_essence",
+  "x": 4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Root",
+      "text": "**Sprout.** A wheat field, a kitchen, Mystical Agriculture from Inferium up. Botany pots if you like compact.\n\nFood is infrastructure here. A Clowder that eats well leaves the pad sooner."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/recover",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

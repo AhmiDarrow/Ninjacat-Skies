@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000000E020C"
+			id: "C2000000000E0210"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000E020C"
+					id: "D2000000000E0210"
 					type: "item"
 					item: {
 						id: "ars_nouveau:magebloom_fiber"
@@ -27,22 +27,27 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000E020C"
+					id: "E2000000000E0210"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
+				}
+				{
+					id: "D1000000000E0210"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 		}
 		{
-			id: "C2000000000E020D"
-			x: 1.4d
-			y: 0.0d
+			id: "C2000000000E0211"
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
-					id: "D2000000000E020D"
+					id: "D2000000000E0211"
 					type: "item"
 					item: {
 						id: "ars_nouveau:magebloom"
@@ -52,23 +57,23 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000E020D"
+					id: "E2000000000E0211"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000000E020C"]
+			dependencies: ["C2000000000E0210"]
 		}
 		{
-			id: "C2000000000E020E"
-			x: 2.8d
-			y: 0.0d
+			id: "C2000000000E0212"
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
-					id: "D2000000000E020E"
+					id: "D2000000000E0212"
 					type: "item"
 					item: {
 						id: "ars_nouveau:source_gem_block"
@@ -78,33 +83,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000E020E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C2000000000E020D"]
-		}
-		{
-			id: "C2000000000E020F"
-			x: 4.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000E020F"
-					type: "item"
-					item: {
-						id: "ars_nouveau:apprentice_spell_book"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000E020F"
+					id: "E2000000000E0212"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -112,96 +91,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000E020E"]
-		}
-		{
-			id: "C2000000000E0210"
-			x: 5.6d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000E0210"
-					type: "item"
-					item: {
-						id: "ars_nouveau:archmage_spell_book"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000E0210"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C2000000000E020F"]
-		}
-		{
-			id: "C2000000000E0211"
-			x: 7.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000E0211"
-					type: "item"
-					item: {
-						id: "ars_nouveau:basic_spell_turret"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000E0211"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
 			dependencies: ["C2000000000E0210"]
 		}
 		{
-			id: "C2000000000E0212"
-			x: 8.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000E0212"
-					type: "item"
-					item: {
-						id: "ars_nouveau:timer_spell_turret"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000E0212"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C2000000000E0211"]
-		}
-		{
 			id: "C2000000000E0213"
-			x: 9.8d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000E0213"
 					type: "item"
 					item: {
-						id: "ars_nouveau:enchanting_apparatus"
+						id: "ars_nouveau:apprentice_spell_book"
 						count: 1
 					}
 				}
@@ -216,18 +117,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000E0212"]
+			dependencies: ["C2000000000E0210"]
 		}
 		{
 			id: "C2000000000E0214"
-			x: 11.2d
-			y: 0.0d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000E0214"
 					type: "item"
 					item: {
-						id: "ars_nouveau:arcane_core"
+						id: "ars_nouveau:archmage_spell_book"
 						count: 1
 					}
 				}
@@ -238,23 +139,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000000E0213"]
+			dependencies: ["C2000000000E0210"]
 		}
 		{
 			id: "C2000000000E0215"
-			x: 12.6d
+			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000E0215"
 					type: "item"
 					item: {
-						id: "ars_nouveau:relay"
-						count: 2
+						id: "ars_nouveau:basic_spell_turret"
+						count: 1
 					}
 				}
 			]
@@ -264,22 +165,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000E0215"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000E0214"]
+			dependencies: ["C2000000000E0210"]
 		}
 		{
 			id: "C2000000000E0216"
-			x: 14.0d
-			y: 0.0d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000E0216"
 					type: "item"
 					item: {
-						id: "ars_nouveau:relay_splitter"
+						id: "ars_nouveau:timer_spell_turret"
 						count: 1
 					}
 				}
@@ -290,7 +196,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -298,14 +204,14 @@
 		}
 		{
 			id: "C2000000000E0217"
-			x: 15.4d
-			y: 0.0d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000E0217"
 					type: "item"
 					item: {
-						id: "ars_nouveau:agronomic_sourcelink"
+						id: "ars_nouveau:enchanting_apparatus"
 						count: 1
 					}
 				}
@@ -320,18 +226,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000E0216"]
+			dependencies: ["C2000000000E0215"]
 		}
 		{
 			id: "C2000000000E0218"
-			x: 16.8d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000E0218"
 					type: "item"
 					item: {
-						id: "ars_nouveau:volcanic_sourcelink"
+						id: "ars_nouveau:arcane_core"
 						count: 1
 					}
 				}
@@ -342,23 +248,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000000E0217"]
+			dependencies: ["C2000000000E0215"]
 		}
 		{
 			id: "C2000000000E0219"
-			x: 18.2d
-			y: 0.0d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000E0219"
 					type: "item"
 					item: {
-						id: "ars_nouveau:wixie_charm"
-						count: 1
+						id: "ars_nouveau:relay"
+						count: 2
 					}
 				}
 			]
@@ -368,22 +274,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000000E0218"]
+			dependencies: ["C2000000000E0215"]
 		}
 		{
 			id: "C2000000000E021A"
-			x: 19.6d
+			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000E021A"
 					type: "item"
 					item: {
-						id: "ars_nouveau:starbuncle_charm"
+						id: "ars_nouveau:relay_splitter"
 						count: 1
 					}
 				}
@@ -394,22 +300,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000E021A"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000E0219"]
+			dependencies: ["C2000000000E0215"]
 		}
 		{
 			id: "C2000000000E021B"
-			x: 21.0d
-			y: 0.0d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000E021B"
 					type: "item"
 					item: {
-						id: "ars_nouveau:drygmy_charm"
+						id: "ars_nouveau:agronomic_sourcelink"
 						count: 1
 					}
 				}
@@ -428,14 +339,14 @@
 		}
 		{
 			id: "C2000000000E021C"
-			x: 22.4d
-			y: 0.0d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000E021C"
 					type: "item"
 					item: {
-						id: "ars_nouveau:whirlisprig_charm"
+						id: "ars_nouveau:volcanic_sourcelink"
 						count: 1
 					}
 				}
@@ -446,22 +357,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000000E021B"]
+			dependencies: ["C2000000000E021A"]
 		}
 		{
 			id: "C2000000000E021D"
-			x: 23.8d
-			y: 0.0d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000E021D"
 					type: "item"
 					item: {
-						id: "ars_nouveau:amethyst_golem_charm"
+						id: "ars_nouveau:wixie_charm"
 						count: 1
 					}
 				}
@@ -472,22 +383,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000000E021C"]
+			dependencies: ["C2000000000E021A"]
 		}
 		{
 			id: "C2000000000E021E"
-			x: 25.2d
-			y: 0.0d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000E021E"
 					type: "item"
 					item: {
-						id: "ars_nouveau:dominion_wand"
+						id: "ars_nouveau:starbuncle_charm"
 						count: 1
 					}
 				}
@@ -498,23 +409,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000000E021D"]
+			dependencies: ["C2000000000E021A"]
 		}
 		{
 			id: "C2000000000E021F"
-			x: 26.6d
+			x: 5.4d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000E021F"
 					type: "item"
 					item: {
-						id: "ars_nouveau:allow_scroll"
-						count: 2
+						id: "ars_nouveau:drygmy_charm"
+						count: 1
 					}
 				}
 			]
@@ -524,23 +435,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000E021F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000E021E"]
+			dependencies: ["C2000000000E021A"]
 		}
 		{
 			id: "C2000000000E0220"
-			x: 28.0d
-			y: 0.0d
+			x: 5.4d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000E0220"
 					type: "item"
 					item: {
-						id: "ars_nouveau:deny_scroll"
-						count: 2
+						id: "ars_nouveau:whirlisprig_charm"
+						count: 1
 					}
 				}
 			]
@@ -550,8 +466,117 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000E021F"]
+		}
+		{
+			id: "C2000000000E0221"
+			x: 5.4d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000000E0221"
+					type: "item"
+					item: {
+						id: "ars_nouveau:amethyst_golem_charm"
 						count: 1
 					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000E0221"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000E021F"]
+		}
+		{
+			id: "C2000000000E0222"
+			x: 5.4d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000000E0222"
+					type: "item"
+					item: {
+						id: "ars_nouveau:dominion_wand"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000E0222"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000E021F"]
+		}
+		{
+			id: "C2000000000E0223"
+			x: 5.4d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000000E0223"
+					type: "item"
+					item: {
+						id: "ars_nouveau:allow_scroll"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000E0223"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000E021F"]
+		}
+		{
+			id: "C2000000000E0224"
+			x: 7.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000E0224"
+					type: "item"
+					item: {
+						id: "ars_nouveau:deny_scroll"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000E0224"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000000E0224"
+					type: "xp_levels"
+					xp_levels: 1
 				}
 			]
 			dependencies: ["C2000000000E021F"]

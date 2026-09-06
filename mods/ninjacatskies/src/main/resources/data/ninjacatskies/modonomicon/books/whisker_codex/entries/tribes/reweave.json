@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Reweave",
+  "description": "The cut, closed.",
+  "icon": "ninjacatskies:spindle_loom_fragment",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Reweave",
+      "text": "Nine tribes, one thread. Your Clowder closed its Strand of the sky.\n\nThe Fray over the Dock is thinner for it. When every Clowder has done the same, it turns to lit thread and stays that way.\n\nGo and see what the March kept for you. Tell it we are sorry it took so long."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:reweave"
+  }
+}

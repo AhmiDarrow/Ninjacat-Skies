@@ -23,6 +23,8 @@ public final class ModCreativeTabs {
                         out.accept(ModItems.THREAD_MESH_STRING.get());
                         out.accept(ModItems.THREAD_MESH_FLINT.get());
                         out.accept(ModItems.THREAD_MESH_IRON.get());
+                        out.accept(ModItems.LOOM_LINT.get());
+                        out.accept(ModItems.STRAND_FILAMENT.get());
                         out.accept(ModItems.SPINDLE_HAMMER.get());
                         out.accept(ModItems.SPINDLE_CROOK.get());
                         out.accept(ModItems.LOOMFRAME.get());

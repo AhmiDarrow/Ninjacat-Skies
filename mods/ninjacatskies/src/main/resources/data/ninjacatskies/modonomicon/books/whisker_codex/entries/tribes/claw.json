@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Edge-walkers",
+  "description": "Keepers of the Claw Strand.",
+  "icon": "ninjacatskies:strand_token_claw",
+  "x": 2,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Edge-walkers",
+      "text": "The Edge-walkers kept footholds past the last fence post — cuts in the Loom that led somewhere on purpose. Spiritgear was theirs: tools that spend Pulse instead of edge.\n\nThey left the footholds so nobody would have to be brave in the same place twice."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_claw",
+      "title": "Claw Strand",
+      "text": "*Boots first. Then the bridge. Then the courage; it arrives on its own.*\n\nSeated. The Edge-walkers answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/claw"
+  }
+}

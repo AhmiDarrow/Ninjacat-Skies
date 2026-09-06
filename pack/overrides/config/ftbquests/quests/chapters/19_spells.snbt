@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C200000000130286"
+			id: "C20000000013028D"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000130286"
+					id: "D20000000013028D"
 					type: "item"
 					item: {
 						id: "irons_spellbooks:iron_spell_book"
@@ -27,207 +27,30 @@
 			]
 			rewards: [
 				{
-					id: "E200000000130286"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-		}
-		{
-			id: "C200000000130287"
-			x: 1.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000130287"
-					type: "item"
-					item: {
-						id: "irons_spellbooks:gold_spell_book"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000130287"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C200000000130286"]
-		}
-		{
-			id: "C200000000130288"
-			x: 2.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000130288"
-					type: "item"
-					item: {
-						id: "irons_spellbooks:diamond_spell_book"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000130288"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C200000000130287"]
-		}
-		{
-			id: "C200000000130289"
-			x: 4.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000130289"
-					type: "item"
-					item: {
-						id: "irons_spellbooks:arcane_essence"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000130289"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000130288"]
-		}
-		{
-			id: "C20000000013028A"
-			x: 5.6d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000013028A"
-					type: "item"
-					item: {
-						id: "irons_spellbooks:common_ink"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000013028A"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C200000000130289"]
-		}
-		{
-			id: "C20000000013028B"
-			x: 7.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000013028B"
-					type: "item"
-					item: {
-						id: "irons_spellbooks:uncommon_ink"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000013028B"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C20000000013028A"]
-		}
-		{
-			id: "C20000000013028C"
-			x: 8.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000013028C"
-					type: "item"
-					item: {
-						id: "irons_spellbooks:rare_ink"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000013028C"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C20000000013028B"]
-		}
-		{
-			id: "C20000000013028D"
-			x: 9.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000013028D"
-					type: "item"
-					item: {
-						id: "irons_spellbooks:epic_ink"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E20000000013028D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D10000000013028D"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C20000000013028C"]
 		}
 		{
 			id: "C20000000013028E"
-			x: 11.2d
-			y: 0.0d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000013028E"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:legendary_ink"
+						id: "irons_spellbooks:gold_spell_book"
 						count: 1
 					}
 				}
@@ -238,7 +61,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -246,15 +69,15 @@
 		}
 		{
 			id: "C20000000013028F"
-			x: 12.6d
-			y: 0.0d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000013028F"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:scroll"
-						count: 4
+						id: "irons_spellbooks:diamond_spell_book"
+						count: 1
 					}
 				}
 			]
@@ -264,23 +87,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C20000000013028E"]
+			dependencies: ["C20000000013028D"]
 		}
 		{
 			id: "C200000000130290"
-			x: 14.0d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000130290"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:magic_cloth"
-						count: 8
+						id: "irons_spellbooks:arcane_essence"
+						count: 32
 					}
 				}
 			]
@@ -290,23 +113,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C20000000013028F"]
+			dependencies: ["C20000000013028D"]
 		}
 		{
 			id: "C200000000130291"
-			x: 15.4d
-			y: 0.0d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000130291"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:wandering_magician_helmet"
-						count: 1
+						id: "irons_spellbooks:common_ink"
+						count: 16
 					}
 				}
 			]
@@ -320,19 +143,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000130290"]
+			dependencies: ["C20000000013028D"]
 		}
 		{
 			id: "C200000000130292"
-			x: 16.8d
+			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000130292"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:wandering_magician_chestplate"
-						count: 1
+						id: "irons_spellbooks:uncommon_ink"
+						count: 8
 					}
 				}
 			]
@@ -342,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D100000000130292"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000130291"]
+			dependencies: ["C20000000013028D"]
 		}
 		{
 			id: "C200000000130293"
-			x: 18.2d
-			y: 0.0d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000130293"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:pyrium_staff"
-						count: 1
+						id: "irons_spellbooks:rare_ink"
+						count: 4
 					}
 				}
 			]
@@ -368,7 +196,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -376,15 +204,15 @@
 		}
 		{
 			id: "C200000000130294"
-			x: 19.6d
-			y: 0.0d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000130294"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:graybeard_staff"
-						count: 1
+						id: "irons_spellbooks:epic_ink"
+						count: 2
 					}
 				}
 			]
@@ -394,22 +222,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C200000000130293"]
+			dependencies: ["C200000000130292"]
 		}
 		{
 			id: "C200000000130295"
-			x: 21.0d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000130295"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:magehunter"
+						id: "irons_spellbooks:legendary_ink"
 						count: 1
 					}
 				}
@@ -424,19 +252,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000130294"]
+			dependencies: ["C200000000130292"]
 		}
 		{
 			id: "C200000000130296"
-			x: 22.4d
-			y: 0.0d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000130296"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:copper_spell_book"
-						count: 1
+						id: "irons_spellbooks:scroll"
+						count: 4
 					}
 				}
 			]
@@ -446,23 +274,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			dependencies: ["C200000000130295"]
+			dependencies: ["C200000000130292"]
 		}
 		{
 			id: "C200000000130297"
-			x: 23.8d
+			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000130297"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:netherite_spell_book"
-						count: 1
+						id: "irons_spellbooks:magic_cloth"
+						count: 8
 					}
 				}
 			]
@@ -472,23 +300,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D100000000130297"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000130296"]
+			dependencies: ["C200000000130292"]
 		}
 		{
 			id: "C200000000130298"
-			x: 25.2d
-			y: 0.0d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000130298"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:arcane_ingot"
-						count: 8
+						id: "irons_spellbooks:wandering_magician_helmet"
+						count: 1
 					}
 				}
 			]
@@ -498,7 +331,7 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
@@ -506,14 +339,14 @@
 		}
 		{
 			id: "C200000000130299"
-			x: 26.6d
-			y: 0.0d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000130299"
 					type: "item"
 					item: {
-						id: "irons_spellbooks:ruined_book"
+						id: "irons_spellbooks:wandering_magician_chestplate"
 						count: 1
 					}
 				}
@@ -528,7 +361,194 @@
 					}
 				}
 			]
-			dependencies: ["C200000000130298"]
+			dependencies: ["C200000000130297"]
+		}
+		{
+			id: "C20000000013029A"
+			x: 3.6d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D20000000013029A"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:pyrium_staff"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000013029A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000130297"]
+		}
+		{
+			id: "C20000000013029B"
+			x: 3.6d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D20000000013029B"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:graybeard_staff"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000013029B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000130297"]
+		}
+		{
+			id: "C20000000013029C"
+			x: 5.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000013029C"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:magehunter"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000013029C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D10000000013029C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C200000000130297"]
+		}
+		{
+			id: "C20000000013029D"
+			x: 5.4d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D20000000013029D"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:copper_spell_book"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000013029D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000013029C"]
+		}
+		{
+			id: "C20000000013029E"
+			x: 5.4d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D20000000013029E"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:netherite_spell_book"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000013029E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000013029C"]
+		}
+		{
+			id: "C20000000013029F"
+			x: 5.4d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D20000000013029F"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:arcane_ingot"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000013029F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000013029C"]
+		}
+		{
+			id: "C2000000001302A0"
+			x: 5.4d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001302A0"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:ruined_book"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001302A0"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000013029C"]
 		}
 	]
 }

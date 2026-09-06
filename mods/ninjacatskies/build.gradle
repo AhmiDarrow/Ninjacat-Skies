@@ -14,4 +14,13 @@ apply from: rootProject.file('neoforge-mod.gradle')
 
 dependencies {
     implementation project(':ninjacat-lib')
+
+    // Pack-shipped peers, compile-only (soft at runtime; see LoomTension / CodexBookHook).
+    // Jars come from tools/download-mods.ps1 into pack/mods.
+    compileOnly fileTree(dir: rootProject.file('../pack/mods'), include: [
+            'ftb-teams-neoforge-*.jar',
+            'ftb-library-neoforge-*.jar',
+            'architectury-*-neoforge.jar',
+            'modonomicon-*-neoforge-*.jar',
+    ])
 }

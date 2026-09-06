@@ -1,0 +1,25 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Hum",
+  "description": "Spark Strand.",
+  "icon": "tribalpower:drumheart",
+  "x": 8,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Hum",
+      "text": "**Spark.** Strike a Drumheart before you touch a wire. Spirit Pulse is the power fantasy here; Powah and Mekanism are bridges you cross later, if you want.\n\nBone Chime, Spirit Shard, Copper Resonator, Drumheart. Then listen."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/edge",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

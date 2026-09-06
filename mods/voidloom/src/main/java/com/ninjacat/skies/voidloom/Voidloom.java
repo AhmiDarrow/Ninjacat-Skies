@@ -5,6 +5,9 @@ import com.ninjacat.skies.voidloom.block.ModBlockEntities;
 import com.ninjacat.skies.voidloom.block.ModBlocks;
 import com.ninjacat.skies.voidloom.item.ModCreativeTabs;
 import com.ninjacat.skies.voidloom.item.ModItems;
+import com.ninjacat.skies.voidloom.sound.ModSounds;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -20,7 +23,15 @@ public final class Voidloom {
         ModBlockEntities.BLOCK_ENTITY_TYPES.register(modBus);
         ModItems.ITEMS.register(modBus);
         ModCreativeTabs.TABS.register(modBus);
+        ModSounds.SOUNDS.register(modBus);
         modBus.addListener(this::onCommonSetup);
+        modBus.addListener(this::onRegisterCapabilities);
+    }
+
+    /** Hoppers and pipes: grit in the top of a Loomframe, scraps out the sides; same for the Barrel. */
+    private void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.LOOMFRAME.get(), (be, side) -> be.handler());
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.TENSION_BARREL.get(), (be, side) -> be.handler());
     }
 
     private void onCommonSetup(FMLCommonSetupEvent event) {

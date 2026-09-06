@@ -16,6 +16,10 @@ public final class ModItems {
     public static final DeferredItem<Item> THREAD_MESH_STRING = ITEMS.registerSimpleItem("thread_mesh_string");
     public static final DeferredItem<Item> THREAD_MESH_FLINT = ITEMS.registerSimpleItem("thread_mesh_flint");
     public static final DeferredItem<Item> THREAD_MESH_IRON = ITEMS.registerSimpleItem("thread_mesh_iron");
+    /** Fluff the string mesh combs out of dirt; four make a Void Yarn. */
+    public static final DeferredItem<Item> LOOM_LINT = ITEMS.registerSimpleItem("loom_lint");
+    /** Rare iron-mesh catch; the Loom-native strand a Braid Cord is spun from. */
+    public static final DeferredItem<Item> STRAND_FILAMENT = ITEMS.registerSimpleItem("strand_filament", new Item.Properties().stacksTo(16));
 
     public static final DeferredItem<SpindleHammerItem> SPINDLE_HAMMER = ITEMS.register(
             "spindle_hammer",

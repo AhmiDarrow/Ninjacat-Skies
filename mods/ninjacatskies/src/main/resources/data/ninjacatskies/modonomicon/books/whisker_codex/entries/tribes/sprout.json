@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Rootbinders",
+  "description": "Keepers of the Sprout Strand.",
+  "icon": "ninjacatskies:strand_token_sprout",
+  "x": 0,
+  "y": -4,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Rootbinders",
+      "text": "The Rootbinders grew living anchors: March flora whose roots ran along the Strands and held pads that would otherwise have drifted.\n\nWhen the Loom was cut, the roots held for a season. That season is why anything is still up here."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_sprout",
+      "title": "Sprout Strand",
+      "text": "*Roots are the only rope the void respects.*\n\nSeated. The Rootbinders answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/sprout"
+  }
+}

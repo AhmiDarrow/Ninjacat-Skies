@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Pad-keepers",
+  "description": "Keepers of the Soil Strand.",
+  "icon": "ninjacatskies:strand_token_soil",
+  "x": -4,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Pad-keepers",
+      "text": "The Pad-keepers kept the hearths. Not the fires — the *warmth*: the banked heat in thin dirt that let a pad hold a family through a long dark.\n\nThey were the first to notice the Loom was fraying, because the pads got cold before anything fell."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_soil",
+      "title": "Soil Strand",
+      "text": "*We never called it dirt. We called it what was left, and we kept it warm.*\n\nSeated. The Pad-keepers answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/soil"
+  }
+}

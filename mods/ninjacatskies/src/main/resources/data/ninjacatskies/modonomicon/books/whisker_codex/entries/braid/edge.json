@@ -1,0 +1,25 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Edge",
+  "description": "Claw Strand.",
+  "icon": "silentgear:blueprint_paper",
+  "x": 6,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Edge",
+      "text": "**Claw.** Silent Gear blueprints, iron on your back, a bow, a portal frame. Leave the pad on purpose.\n\nEdge opens the braid: after Claw, Pattern, Colony, and Hum are all yours to choose from."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/root",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

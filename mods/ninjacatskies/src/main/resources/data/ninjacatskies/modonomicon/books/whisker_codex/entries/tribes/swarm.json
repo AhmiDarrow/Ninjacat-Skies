@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Colony-keepers",
+  "description": "Keepers of the Swarm Strand.",
+  "icon": "ninjacatskies:strand_token_swarm",
+  "x": 2,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Colony-keepers",
+      "text": "The Colony-keepers tended hives that hummed in the Loom's own key, and March flowers that hummed back.\n\nThey did not own their colonies. They were on good terms with them. That is the whole of the method."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_swarm",
+      "title": "Swarm Strand",
+      "text": "*You do not own a hive. You are on good terms with it.*\n\nSeated. The Colony-keepers answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/swarm"
+  }
+}

@@ -13088,3 +13088,6 @@ voidloom:thread_mesh_flint
 voidloom:thread_mesh_iron
 voidloom:thread_mesh_string
 voidloom:void_yarn
+voidloom:loom_lint
+voidloom:strand_filament
+ninjacatskies:tension_post

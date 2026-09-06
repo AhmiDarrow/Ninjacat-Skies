@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "rewoven": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "rewoven"
+    ]
+  ]
+}

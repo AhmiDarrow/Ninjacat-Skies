@@ -1,0 +1,25 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Colony",
+  "description": "Swarm Strand.",
+  "icon": "productivebees:advanced_beehive",
+  "x": 8,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Colony",
+      "text": "**Swarm.** Productive Bees and deep crops. Living industry that forgives mistakes machines do not.\n\nA honeycomb, a hive, a bottle: Swarm's token is earned by keeping something alive that keeps something else alive."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/edge",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

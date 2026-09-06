@@ -1,0 +1,41 @@
+{
+  "strand_chime": {
+    "subtitle": "subtitles.ninjacatskies.strand_chime",
+    "sounds": [
+      {
+        "name": "ninjacatskies:strand_chime",
+        "stream": false
+      }
+    ]
+  },
+  "post_seat": {
+    "subtitle": "subtitles.ninjacatskies.post_seat",
+    "sounds": [
+      "ninjacatskies:post_seat"
+    ]
+  },
+  "loom_hum": {
+    "subtitle": "subtitles.ninjacatskies.loom_hum",
+    "sounds": [
+      {
+        "name": "ninjacatskies:loom_hum",
+        "volume": 0.9
+      }
+    ]
+  },
+  "reweave": {
+    "subtitle": "subtitles.ninjacatskies.reweave",
+    "sounds": [
+      {
+        "name": "ninjacatskies:reweave",
+        "stream": true
+      }
+    ]
+  },
+  "page": {
+    "subtitle": "subtitles.ninjacatskies.page",
+    "sounds": [
+      "ninjacatskies:page"
+    ]
+  }
+}

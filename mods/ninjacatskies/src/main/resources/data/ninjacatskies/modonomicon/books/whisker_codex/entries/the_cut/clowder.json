@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:the_cut",
+  "name": "Clowders",
+  "description": "Teams, pads, and the Hall.",
+  "icon": "clowderhall:island_charter",
+  "x": 6,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Clowders",
+      "text": "A team is a **Clowder**. Clowders share a pad, share quests, and share Loom Tension: when one of you seats a Strand, all of you hear it.\n\nThe **Island Charter** claims a pad from the Dock. The **Hub Key** opens the Clowder Hall, where every Clowder on the server meets."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Specialise",
+      "text": "A Clowder does not have to climb everything in lockstep. Mid-campaign the braid opens three ways — Pattern, Colony, Hum — and any two carry the whole team into Bind.\n\nOne of you can farm. One can drum. Nobody has to be everyone."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:the_cut/skybound",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

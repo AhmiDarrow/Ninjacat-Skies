@@ -1,0 +1,18 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Wake",
+  "description": "Soil Strand.",
+  "icon": "minecraft:oak_sapling",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Wake",
+      "text": "**Soil.** Wood, dirt, a bench, a sapling, a chest, warmth. Melt ice with lava for water on Normal and Hard. Cook something.\n\nThe Soil token comes from the **Soil Knot** at the end of the chapter. Raise a Tension Post and seat it. The pad starts mending you."
+    }
+  ]
+}

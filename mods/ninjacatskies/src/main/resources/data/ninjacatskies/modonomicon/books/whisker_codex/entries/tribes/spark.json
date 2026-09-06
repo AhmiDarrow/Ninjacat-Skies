@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Drumhearts",
+  "description": "Keepers of the Spark Strand.",
+  "icon": "ninjacatskies:strand_token_spark",
+  "x": 4,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Drumhearts",
+      "text": "The Drumhearts kept the beat under the whole sky. Spirit Pulse — power as rhythm before it was a number — ran from their drums along the lattice to every tribe.\n\nThe orphan engines you find still keep their time. Listen before you feed one."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:strand_token_spark",
+      "title": "Spark Strand",
+      "text": "*The drum is not loud. The drum is steady. Be the drum.*\n\nSeated. The Drumhearts answer when this Post hums."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/spark"
+  }
+}

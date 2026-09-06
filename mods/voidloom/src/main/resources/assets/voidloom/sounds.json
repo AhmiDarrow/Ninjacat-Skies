@@ -1,0 +1,14 @@
+{
+  "loomframe_sift": {
+    "subtitle": "subtitles.voidloom.loomframe_sift",
+    "sounds": [
+      "voidloom:loomframe_sift"
+    ]
+  },
+  "barrel_settle": {
+    "subtitle": "subtitles.voidloom.barrel_settle",
+    "sounds": [
+      "voidloom:barrel_settle"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "category": "ninjacatskies:the_cut",
+  "name": "Frayed Thread",
+  "description": "Currency, string, and the Desk.",
+  "icon": "ninjacatskies:frayed_thread",
+  "x": 4,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "item": "ninjacatskies:frayed_thread",
+      "title": "Frayed Thread",
+      "text": "Every quest returns a little **Frayed Thread** — scraps of the Loom that still hold. Unravel one for three string. Or keep it: the **Frayed Thread Desk** (a quest chapter) sells saplings, buckets, meshes, pearls, and other things a pad runs short of."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Codex Pages",
+      "text": "Every third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. Right-click to read it. Pages are kept, not spent.\n\nThe Desk sells a few loose ones too. Those pick a tribe on their own."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:the_cut/skybound",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}
