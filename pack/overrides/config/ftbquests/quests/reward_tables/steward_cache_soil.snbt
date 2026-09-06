@@ -1,0 +1,23 @@
+{
+	id: "F100000000000001"
+	title: "Steward Cache: Pad-keepers"
+	icon: {
+		id: "minecraft:oak_sapling"
+	}
+	loot_size: 1
+	hide_tooltip: false
+	use_title: true
+	loot_table_id: "ninjacatskies:steward_cache/soil"
+	loot_crate: {
+		string_id: "steward_soil"
+		item_name: "Steward Cache (Pad-keepers)"
+		color: 7048762
+		glow: true
+		drops: {
+			passive: 0
+			monster: 0
+			boss: 0
+		}
+	}
+	rewards: [ ]
+}

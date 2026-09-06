@@ -1807,10 +1807,8 @@
 					id: "E200000000010041"
 				}
 				{
-					type: "command"
-					command: "loot give @p loot ninjacatskies:steward_cache/soil"
-					silent: true
-					elevate_perms: true
+					type: "loot"
+					table_id: "F100000000000001"
 					id: "E200000001010041"
 				}
 				{
@@ -1855,6 +1853,40 @@
 			]
 			dependencies: ["C200000000010041"]
 			shape: "diamond"
+		}
+		{
+			id: "C200000000010043"
+			x: -3.0d
+			y: -2.0d
+			tasks: [
+				{
+					type: "kill"
+					entity: "minecraft:zombie"
+					value: 1
+					id: "D200000000010043"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "minecraft:torch"
+						count: 16
+					}
+					id: "E200000000010043"
+				}
+				{
+					type: "item"
+					item: {
+						id: "ninjacatskies:codex_page"
+						count: 1
+					}
+					id: "E200000001010043"
+				}
+			]
+			shape: "octagon"
+			invisible: true
+			invisible_until_tasks: 1
 		}
 	]
 }

@@ -1,13 +1,22 @@
 # Changelog
 
+## 0.2.1-alpha — Colony
+
+- **Bees on a void pad.** Productive Bees nests are craftable: a ring of the material around any small flower (oak/birch/spruce/dark oak/acacia/jungle/cherry logs, hay, coarse dirt, gravel, sand, stone, sugar cane, slime, snow, glowstone, quartz, nether brick, soul sand, gilded blackstone, end stone, obsidian). Placed nests spawn their bees; the oak and hay nests also spawn plain honey bees, so hives, honeycomb and every breeding line start from the pad. Vanilla Bee Nest is craftable from planks and flowers.
+- **Strand: Swarm rebuilt** around that route: Ring of Oak → First Wings (look at a bee) → flowers → Bee Nest → comb → hive → Honey Treat → Rings of Grit / Coarse Dirt / Stone → Advanced Beehive → Bottler → Centrifuge → Catcher / Cage → Incubator → Breeding Chamber → Gene Indexer → deep crops; "Something New Hums" when a new bee species appears. Apiary side chapter opens with the Nest Locator and the foothold nests (glowstone, quartz, nether brick, soul sand, end stone, obsidian).
+- **Steward Caches are loot crates**: FTB Quests reward tables (backed by the mod's loot tables) — Knot quests hand you a glowing crate to open.
+- **Secret quests**: one hidden per Strand chapter (a zombie on your pad, a wrong potato, a witch at night, killing a bee…), revealed on completion.
+- **Chapter subtitles** for the nine Strands, Clowder Hall, the Desk and the Apiary.
+- Verified on the dedicated server: 73 KubeJS recipes, 0 failures; 34 chapters / 1354 quests / 10 reward tables.
+
 ## 0.2.0-alpha — Loom Tension
 
-Uploaded to CurseForge 2026-09-06 (file 8825972). First CurseForge alpha. Everything below the "Scope" block was landed 2026-09-05/06; see the dated sections for the Loom Tension layer, Voidloom rework, quest regeneration, and headless verification.
+First CurseForge alpha. Everything below the "Scope" block was landed 2026-09-05/06; see the dated sections for the Loom Tension layer, Voidloom rework, quest regeneration, and headless verification.
 
 
 ### Scope
 - Target playtime: **40–60 hours** Normal first clear
-- FTB Quests: **1323** quests across **34** chapters (item-ID + dead-end audit clean; Strand chapters authored in `en_us.snbt`)
+- FTB Quests: **1354** quests across **34** chapters (item-ID + dead-end audit clean; Strand chapters authored in `en_us.snbt`)
 - Island starters: Frayed Thread, Ninjacat Pad, Dojo Cottage (Skyblock Builder templates)
 
 ### Custom mods

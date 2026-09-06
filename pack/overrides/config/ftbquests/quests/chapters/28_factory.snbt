@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000001C03EA"
+			id: "C2000000001C0409"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001C03EA"
+					id: "D2000000001C0409"
 					type: "item"
 					item: {
 						id: "create:hand_crank"
@@ -27,867 +27,31 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001C03EA"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001C03EA"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C2000000001C03EB"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001C03EB"
-					type: "item"
-					item: {
-						id: "create:shaft"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03EB"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EA"]
-		}
-		{
-			id: "C2000000001C03EC"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001C03EC"
-					type: "item"
-					item: {
-						id: "create:cogwheel"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03EC"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EA"]
-		}
-		{
-			id: "C2000000001C03ED"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000001C03ED"
-					type: "item"
-					item: {
-						id: "create:large_cogwheel"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03ED"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EA"]
-		}
-		{
-			id: "C2000000001C03EE"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000001C03EE"
-					type: "item"
-					item: {
-						id: "create:gearbox"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03EE"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EA"]
-		}
-		{
-			id: "C2000000001C03EF"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001C03EF"
-					type: "item"
-					item: {
-						id: "create:clutch"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03EF"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001C03EF"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000001C03EA"]
-		}
-		{
-			id: "C2000000001C03F0"
-			x: 1.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001C03F0"
-					type: "item"
-					item: {
-						id: "create:gearshift"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F0"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EF"]
-		}
-		{
-			id: "C2000000001C03F1"
-			x: 1.8d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001C03F1"
-					type: "item"
-					item: {
-						id: "create:encased_chain_drive"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F1"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EF"]
-		}
-		{
-			id: "C2000000001C03F2"
-			x: 1.8d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000001C03F2"
-					type: "item"
-					item: {
-						id: "create:adjustable_chain_gearshift"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F2"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EF"]
-		}
-		{
-			id: "C2000000001C03F3"
-			x: 1.8d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000001C03F3"
-					type: "item"
-					item: {
-						id: "create:water_wheel"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F3"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03EF"]
-		}
-		{
-			id: "C2000000001C03F4"
-			x: 3.6d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001C03F4"
-					type: "item"
-					item: {
-						id: "create:large_water_wheel"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F4"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001C03F4"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000001C03EF"]
-		}
-		{
-			id: "C2000000001C03F5"
-			x: 3.6d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001C03F5"
-					type: "item"
-					item: {
-						id: "create:windmill_bearing"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F5"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F4"]
-		}
-		{
-			id: "C2000000001C03F6"
-			x: 3.6d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001C03F6"
-					type: "item"
-					item: {
-						id: "create:mechanical_bearing"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F6"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F4"]
-		}
-		{
-			id: "C2000000001C03F7"
-			x: 3.6d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000001C03F7"
-					type: "item"
-					item: {
-						id: "create:clockwork_bearing"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F7"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F4"]
-		}
-		{
-			id: "C2000000001C03F8"
-			x: 3.6d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000001C03F8"
-					type: "item"
-					item: {
-						id: "create:steam_engine"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F8"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F4"]
-		}
-		{
-			id: "C2000000001C03F9"
-			x: 5.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001C03F9"
-					type: "item"
-					item: {
-						id: "create:steam_whistle"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03F9"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001C03F9"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000001C03F4"]
-		}
-		{
-			id: "C2000000001C03FA"
-			x: 5.4d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001C03FA"
-					type: "item"
-					item: {
-						id: "create:blaze_burner"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03FA"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F9"]
-		}
-		{
-			id: "C2000000001C03FB"
-			x: 5.4d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001C03FB"
-					type: "item"
-					item: {
-						id: "create:basin"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03FB"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F9"]
-		}
-		{
-			id: "C2000000001C03FC"
-			x: 5.4d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000001C03FC"
-					type: "item"
-					item: {
-						id: "create:mechanical_mixer"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03FC"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F9"]
-		}
-		{
-			id: "C2000000001C03FD"
-			x: 5.4d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000001C03FD"
-					type: "item"
-					item: {
-						id: "create:mechanical_press"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03FD"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03F9"]
-		}
-		{
-			id: "C2000000001C03FE"
-			x: 7.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001C03FE"
-					type: "item"
-					item: {
-						id: "create:millstone"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03FE"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001C03FE"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000001C03F9"]
-		}
-		{
-			id: "C2000000001C03FF"
-			x: 7.2d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001C03FF"
-					type: "item"
-					item: {
-						id: "create:crushing_wheel"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C03FF"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03FE"]
-		}
-		{
-			id: "C2000000001C0400"
-			x: 7.2d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001C0400"
-					type: "item"
-					item: {
-						id: "create:encased_fan"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0400"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03FE"]
-		}
-		{
-			id: "C2000000001C0401"
-			x: 7.2d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000001C0401"
-					type: "item"
-					item: {
-						id: "create:whisk"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0401"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03FE"]
-		}
-		{
-			id: "C2000000001C0402"
-			x: 7.2d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000001C0402"
-					type: "item"
-					item: {
-						id: "create:propeller"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0402"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C03FE"]
-		}
-		{
-			id: "C2000000001C0403"
-			x: 9.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001C0403"
-					type: "item"
-					item: {
-						id: "create:depot"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0403"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001C0403"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000001C03FE"]
-		}
-		{
-			id: "C2000000001C0404"
-			x: 9.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001C0404"
-					type: "item"
-					item: {
-						id: "create:belt_connector"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0404"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C0403"]
-		}
-		{
-			id: "C2000000001C0405"
-			x: 9.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001C0405"
-					type: "item"
-					item: {
-						id: "create:andesite_funnel"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0405"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C0403"]
-		}
-		{
-			id: "C2000000001C0406"
-			x: 9.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000001C0406"
-					type: "item"
-					item: {
-						id: "create:brass_funnel"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0406"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C0403"]
-		}
-		{
-			id: "C2000000001C0407"
-			x: 9.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000001C0407"
-					type: "item"
-					item: {
-						id: "create:chute"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0407"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001C0403"]
-		}
-		{
-			id: "C2000000001C0408"
-			x: 10.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001C0408"
-					type: "item"
-					item: {
-						id: "create:smart_chute"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001C0408"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001C0408"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000001C0403"]
-		}
-		{
-			id: "C2000000001C0409"
-			x: 10.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001C0409"
-					type: "item"
-					item: {
-						id: "create:fluid_pipe"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E2000000001C0409"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001C0409"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001C0408"]
 		}
 		{
 			id: "C2000000001C040A"
-			x: 10.8d
-			y: 2.6d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001C040A"
 					type: "item"
 					item: {
-						id: "create:smart_fluid_pipe"
-						count: 4
+						id: "create:shaft"
+						count: 32
 					}
 				}
 			]
@@ -901,19 +65,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0408"]
+			dependencies: ["C2000000001C0409"]
 		}
 		{
 			id: "C2000000001C040B"
-			x: 10.8d
-			y: 3.9d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001C040B"
 					type: "item"
 					item: {
-						id: "create:mechanical_pump"
-						count: 2
+						id: "create:cogwheel"
+						count: 32
 					}
 				}
 			]
@@ -927,19 +91,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0408"]
+			dependencies: ["C2000000001C0409"]
 		}
 		{
 			id: "C2000000001C040C"
-			x: 10.8d
-			y: 5.2d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001C040C"
 					type: "item"
 					item: {
-						id: "create:hose_pulley"
-						count: 1
+						id: "create:large_cogwheel"
+						count: 16
 					}
 				}
 			]
@@ -953,19 +117,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0408"]
+			dependencies: ["C2000000001C0409"]
 		}
 		{
 			id: "C2000000001C040D"
-			x: 12.6d
-			y: 0.0d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001C040D"
 					type: "item"
 					item: {
-						id: "create:spout"
-						count: 2
+						id: "create:gearbox"
+						count: 4
 					}
 				}
 			]
@@ -975,27 +139,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001C040D"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001C0408"]
+			dependencies: ["C2000000001C0409"]
 		}
 		{
 			id: "C2000000001C040E"
-			x: 12.6d
-			y: 1.3d
+			x: 1.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001C040E"
 					type: "item"
 					item: {
-						id: "create:item_drain"
+						id: "create:clutch"
 						count: 2
 					}
 				}
@@ -1006,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001C040E"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001C040D"]
+			dependencies: ["C2000000001C0409"]
 		}
 		{
 			id: "C2000000001C040F"
-			x: 12.6d
-			y: 2.6d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001C040F"
 					type: "item"
 					item: {
-						id: "create:fluid_tank"
-						count: 8
+						id: "create:gearshift"
+						count: 2
 					}
 				}
 			]
@@ -1036,18 +200,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C040D"]
+			dependencies: ["C2000000001C040E"]
 		}
 		{
 			id: "C2000000001C0410"
-			x: 12.6d
-			y: 3.9d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001C0410"
 					type: "item"
 					item: {
-						id: "create:item_vault"
+						id: "create:encased_chain_drive"
 						count: 4
 					}
 				}
@@ -1062,18 +226,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C040D"]
+			dependencies: ["C2000000001C040E"]
 		}
 		{
 			id: "C2000000001C0411"
-			x: 12.6d
-			y: 5.2d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001C0411"
 					type: "item"
 					item: {
-						id: "create:portable_storage_interface"
+						id: "create:adjustable_chain_gearshift"
 						count: 2
 					}
 				}
@@ -1088,18 +252,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C040D"]
+			dependencies: ["C2000000001C040E"]
 		}
 		{
 			id: "C2000000001C0412"
-			x: 14.4d
-			y: 0.0d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001C0412"
 					type: "item"
 					item: {
-						id: "create:portable_fluid_interface"
+						id: "create:water_wheel"
 						count: 2
 					}
 				}
@@ -1110,28 +274,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001C0412"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001C040D"]
+			dependencies: ["C2000000001C040E"]
 		}
 		{
 			id: "C2000000001C0413"
-			x: 14.4d
-			y: 1.3d
+			x: 3.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001C0413"
 					type: "item"
 					item: {
-						id: "create:precision_mechanism"
-						count: 2
+						id: "create:large_water_wheel"
+						count: 1
 					}
 				}
 			]
@@ -1141,23 +300,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001C0413"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001C0412"]
+			dependencies: ["C2000000001C040E"]
 		}
 		{
 			id: "C2000000001C0414"
-			x: 14.4d
-			y: 2.6d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001C0414"
 					type: "item"
 					item: {
-						id: "create:electron_tube"
-						count: 8
+						id: "create:windmill_bearing"
+						count: 1
 					}
 				}
 			]
@@ -1171,18 +335,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0412"]
+			dependencies: ["C2000000001C0413"]
 		}
 		{
 			id: "C2000000001C0415"
-			x: 14.4d
-			y: 3.9d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001C0415"
 					type: "item"
 					item: {
-						id: "create:brass_hand"
+						id: "create:mechanical_bearing"
 						count: 1
 					}
 				}
@@ -1197,18 +361,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0412"]
+			dependencies: ["C2000000001C0413"]
 		}
 		{
 			id: "C2000000001C0416"
-			x: 14.4d
-			y: 5.2d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001C0416"
 					type: "item"
 					item: {
-						id: "create:mechanical_arm"
+						id: "create:clockwork_bearing"
 						count: 1
 					}
 				}
@@ -1223,18 +387,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0412"]
+			dependencies: ["C2000000001C0413"]
 		}
 		{
 			id: "C2000000001C0417"
-			x: 16.2d
-			y: 0.0d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001C0417"
 					type: "item"
 					item: {
-						id: "create:rotation_speed_controller"
+						id: "create:steam_engine"
 						count: 1
 					}
 				}
@@ -1245,27 +409,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001C0417"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001C0412"]
+			dependencies: ["C2000000001C0413"]
 		}
 		{
 			id: "C2000000001C0418"
-			x: 16.2d
-			y: 1.3d
+			x: 5.4d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001C0418"
 					type: "item"
 					item: {
-						id: "create:sequenced_gearshift"
+						id: "create:steam_whistle"
 						count: 1
 					}
 				}
@@ -1276,23 +435,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001C0418"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001C0417"]
+			dependencies: ["C2000000001C0413"]
 		}
 		{
 			id: "C2000000001C0419"
-			x: 16.2d
-			y: 2.6d
+			x: 5.4d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001C0419"
 					type: "item"
 					item: {
-						id: "create:redstone_link"
-						count: 4
+						id: "create:blaze_burner"
+						count: 2
 					}
 				}
 			]
@@ -1306,18 +470,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0417"]
+			dependencies: ["C2000000001C0418"]
 		}
 		{
 			id: "C2000000001C041A"
-			x: 16.2d
-			y: 3.9d
+			x: 5.4d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001C041A"
 					type: "item"
 					item: {
-						id: "create:stockpile_switch"
+						id: "create:basin"
 						count: 2
 					}
 				}
@@ -1332,19 +496,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0417"]
+			dependencies: ["C2000000001C0418"]
 		}
 		{
 			id: "C2000000001C041B"
-			x: 16.2d
-			y: 5.2d
+			x: 5.4d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001C041B"
 					type: "item"
 					item: {
-						id: "create:content_observer"
-						count: 2
+						id: "create:mechanical_mixer"
+						count: 1
 					}
 				}
 			]
@@ -1358,19 +522,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0417"]
+			dependencies: ["C2000000001C0418"]
 		}
 		{
 			id: "C2000000001C041C"
-			x: 18.0d
-			y: 0.0d
+			x: 5.4d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001C041C"
 					type: "item"
 					item: {
-						id: "create:nixie_tube"
-						count: 4
+						id: "create:mechanical_press"
+						count: 1
 					}
 				}
 			]
@@ -1380,28 +544,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001C041C"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001C0417"]
+			dependencies: ["C2000000001C0418"]
 		}
 		{
 			id: "C2000000001C041D"
-			x: 18.0d
-			y: 1.3d
+			x: 7.2d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001C041D"
 					type: "item"
 					item: {
-						id: "create:display_board"
-						count: 2
+						id: "create:millstone"
+						count: 1
 					}
 				}
 			]
@@ -1411,22 +570,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001C041D"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001C041C"]
+			dependencies: ["C2000000001C0418"]
 		}
 		{
 			id: "C2000000001C041E"
-			x: 18.0d
-			y: 2.6d
+			x: 7.2d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001C041E"
 					type: "item"
 					item: {
-						id: "create:factory_gauge"
+						id: "create:crushing_wheel"
 						count: 2
 					}
 				}
@@ -1441,19 +605,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C041C"]
+			dependencies: ["C2000000001C041D"]
 		}
 		{
 			id: "C2000000001C041F"
-			x: 18.0d
-			y: 3.9d
+			x: 7.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001C041F"
 					type: "item"
 					item: {
-						id: "create:packager"
-						count: 1
+						id: "create:encased_fan"
+						count: 2
 					}
 				}
 			]
@@ -1467,18 +631,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C041C"]
+			dependencies: ["C2000000001C041D"]
 		}
 		{
 			id: "C2000000001C0420"
-			x: 18.0d
-			y: 5.2d
+			x: 7.2d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001C0420"
 					type: "item"
 					item: {
-						id: "create:repackager"
+						id: "create:whisk"
 						count: 1
 					}
 				}
@@ -1493,19 +657,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C041C"]
+			dependencies: ["C2000000001C041D"]
 		}
 		{
 			id: "C2000000001C0421"
-			x: 19.8d
-			y: 0.0d
+			x: 7.2d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001C0421"
 					type: "item"
 					item: {
-						id: "create:stock_ticker"
-						count: 1
+						id: "create:propeller"
+						count: 2
 					}
 				}
 			]
@@ -1515,28 +679,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001C0421"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001C041C"]
+			dependencies: ["C2000000001C041D"]
 		}
 		{
 			id: "C2000000001C0422"
-			x: 19.8d
-			y: 1.3d
+			x: 9.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001C0422"
 					type: "item"
 					item: {
-						id: "create:track"
-						count: 32
+						id: "create:depot"
+						count: 4
 					}
 				}
 			]
@@ -1546,23 +705,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001C0422"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001C0421"]
+			dependencies: ["C2000000001C041D"]
 		}
 		{
 			id: "C2000000001C0423"
-			x: 19.8d
-			y: 2.6d
+			x: 9.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001C0423"
 					type: "item"
 					item: {
-						id: "create:track_station"
-						count: 1
+						id: "create:belt_connector"
+						count: 16
 					}
 				}
 			]
@@ -1576,19 +740,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0421"]
+			dependencies: ["C2000000001C0422"]
 		}
 		{
 			id: "C2000000001C0424"
-			x: 19.8d
-			y: 3.9d
+			x: 9.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001C0424"
 					type: "item"
 					item: {
-						id: "create:schedule"
-						count: 1
+						id: "create:andesite_funnel"
+						count: 8
 					}
 				}
 			]
@@ -1602,19 +766,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0421"]
+			dependencies: ["C2000000001C0422"]
 		}
 		{
 			id: "C2000000001C0425"
-			x: 19.8d
-			y: 5.2d
+			x: 9.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001C0425"
 					type: "item"
 					item: {
-						id: "create:cart_assembler"
-						count: 1
+						id: "create:brass_funnel"
+						count: 4
 					}
 				}
 			]
@@ -1628,18 +792,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0421"]
+			dependencies: ["C2000000001C0422"]
 		}
 		{
 			id: "C2000000001C0426"
-			x: 21.6d
-			y: 0.0d
+			x: 9.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001C0426"
 					type: "item"
 					item: {
-						id: "create:controller_rail"
+						id: "create:chute"
 						count: 8
 					}
 				}
@@ -1650,28 +814,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001C0426"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001C0421"]
+			dependencies: ["C2000000001C0422"]
 		}
 		{
 			id: "C2000000001C0427"
-			x: 21.6d
-			y: 1.3d
+			x: 10.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001C0427"
 					type: "item"
 					item: {
-						id: "create:rope_pulley"
-						count: 1
+						id: "create:smart_chute"
+						count: 4
 					}
 				}
 			]
@@ -1681,23 +840,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001C0427"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001C0426"]
+			dependencies: ["C2000000001C0422"]
 		}
 		{
 			id: "C2000000001C0428"
-			x: 21.6d
-			y: 2.6d
+			x: 10.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001C0428"
 					type: "item"
 					item: {
-						id: "create:elevator_pulley"
-						count: 1
+						id: "create:fluid_pipe"
+						count: 16
 					}
 				}
 			]
@@ -1711,19 +875,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0426"]
+			dependencies: ["C2000000001C0427"]
 		}
 		{
 			id: "C2000000001C0429"
-			x: 21.6d
-			y: 3.9d
+			x: 10.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001C0429"
 					type: "item"
 					item: {
-						id: "create:gantry_shaft"
-						count: 8
+						id: "create:smart_fluid_pipe"
+						count: 4
 					}
 				}
 			]
@@ -1737,19 +901,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0426"]
+			dependencies: ["C2000000001C0427"]
 		}
 		{
 			id: "C2000000001C042A"
-			x: 21.6d
-			y: 5.2d
+			x: 10.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001C042A"
 					type: "item"
 					item: {
-						id: "create:gantry_carriage"
-						count: 1
+						id: "create:mechanical_pump"
+						count: 2
 					}
 				}
 			]
@@ -1763,7 +927,843 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001C0426"]
+			dependencies: ["C2000000001C0427"]
+		}
+		{
+			id: "C2000000001C042B"
+			x: 10.8d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001C042B"
+					type: "item"
+					item: {
+						id: "create:hose_pulley"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C042B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0427"]
+		}
+		{
+			id: "C2000000001C042C"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001C042C"
+					type: "item"
+					item: {
+						id: "create:spout"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C042C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001C042C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001C0427"]
+		}
+		{
+			id: "C2000000001C042D"
+			x: 12.6d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001C042D"
+					type: "item"
+					item: {
+						id: "create:item_drain"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C042D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C042C"]
+		}
+		{
+			id: "C2000000001C042E"
+			x: 12.6d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001C042E"
+					type: "item"
+					item: {
+						id: "create:fluid_tank"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C042E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C042C"]
+		}
+		{
+			id: "C2000000001C042F"
+			x: 12.6d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001C042F"
+					type: "item"
+					item: {
+						id: "create:item_vault"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C042F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C042C"]
+		}
+		{
+			id: "C2000000001C0430"
+			x: 12.6d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001C0430"
+					type: "item"
+					item: {
+						id: "create:portable_storage_interface"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0430"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C042C"]
+		}
+		{
+			id: "C2000000001C0431"
+			x: 14.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001C0431"
+					type: "item"
+					item: {
+						id: "create:portable_fluid_interface"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0431"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001C0431"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001C042C"]
+		}
+		{
+			id: "C2000000001C0432"
+			x: 14.4d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001C0432"
+					type: "item"
+					item: {
+						id: "create:precision_mechanism"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0432"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0431"]
+		}
+		{
+			id: "C2000000001C0433"
+			x: 14.4d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001C0433"
+					type: "item"
+					item: {
+						id: "create:electron_tube"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0433"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0431"]
+		}
+		{
+			id: "C2000000001C0434"
+			x: 14.4d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001C0434"
+					type: "item"
+					item: {
+						id: "create:brass_hand"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0434"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0431"]
+		}
+		{
+			id: "C2000000001C0435"
+			x: 14.4d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001C0435"
+					type: "item"
+					item: {
+						id: "create:mechanical_arm"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0435"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0431"]
+		}
+		{
+			id: "C2000000001C0436"
+			x: 16.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001C0436"
+					type: "item"
+					item: {
+						id: "create:rotation_speed_controller"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0436"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001C0436"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001C0431"]
+		}
+		{
+			id: "C2000000001C0437"
+			x: 16.2d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001C0437"
+					type: "item"
+					item: {
+						id: "create:sequenced_gearshift"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0437"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0436"]
+		}
+		{
+			id: "C2000000001C0438"
+			x: 16.2d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001C0438"
+					type: "item"
+					item: {
+						id: "create:redstone_link"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0438"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0436"]
+		}
+		{
+			id: "C2000000001C0439"
+			x: 16.2d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001C0439"
+					type: "item"
+					item: {
+						id: "create:stockpile_switch"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0439"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0436"]
+		}
+		{
+			id: "C2000000001C043A"
+			x: 16.2d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001C043A"
+					type: "item"
+					item: {
+						id: "create:content_observer"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C043A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0436"]
+		}
+		{
+			id: "C2000000001C043B"
+			x: 18.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001C043B"
+					type: "item"
+					item: {
+						id: "create:nixie_tube"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C043B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001C043B"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001C0436"]
+		}
+		{
+			id: "C2000000001C043C"
+			x: 18.0d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001C043C"
+					type: "item"
+					item: {
+						id: "create:display_board"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C043C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C043B"]
+		}
+		{
+			id: "C2000000001C043D"
+			x: 18.0d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001C043D"
+					type: "item"
+					item: {
+						id: "create:factory_gauge"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C043D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C043B"]
+		}
+		{
+			id: "C2000000001C043E"
+			x: 18.0d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001C043E"
+					type: "item"
+					item: {
+						id: "create:packager"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C043E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C043B"]
+		}
+		{
+			id: "C2000000001C043F"
+			x: 18.0d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001C043F"
+					type: "item"
+					item: {
+						id: "create:repackager"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C043F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C043B"]
+		}
+		{
+			id: "C2000000001C0440"
+			x: 19.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001C0440"
+					type: "item"
+					item: {
+						id: "create:stock_ticker"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0440"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001C0440"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001C043B"]
+		}
+		{
+			id: "C2000000001C0441"
+			x: 19.8d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001C0441"
+					type: "item"
+					item: {
+						id: "create:track"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0441"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0440"]
+		}
+		{
+			id: "C2000000001C0442"
+			x: 19.8d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001C0442"
+					type: "item"
+					item: {
+						id: "create:track_station"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0442"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0440"]
+		}
+		{
+			id: "C2000000001C0443"
+			x: 19.8d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001C0443"
+					type: "item"
+					item: {
+						id: "create:schedule"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0443"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0440"]
+		}
+		{
+			id: "C2000000001C0444"
+			x: 19.8d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001C0444"
+					type: "item"
+					item: {
+						id: "create:cart_assembler"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0444"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0440"]
+		}
+		{
+			id: "C2000000001C0445"
+			x: 21.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001C0445"
+					type: "item"
+					item: {
+						id: "create:controller_rail"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0445"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001C0445"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001C0440"]
+		}
+		{
+			id: "C2000000001C0446"
+			x: 21.6d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001C0446"
+					type: "item"
+					item: {
+						id: "create:rope_pulley"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0446"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0445"]
+		}
+		{
+			id: "C2000000001C0447"
+			x: 21.6d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001C0447"
+					type: "item"
+					item: {
+						id: "create:elevator_pulley"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0447"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0445"]
+		}
+		{
+			id: "C2000000001C0448"
+			x: 21.6d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001C0448"
+					type: "item"
+					item: {
+						id: "create:gantry_shaft"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0448"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0445"]
+		}
+		{
+			id: "C2000000001C0449"
+			x: 21.6d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001C0449"
+					type: "item"
+					item: {
+						id: "create:gantry_carriage"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001C0449"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001C0445"]
 		}
 	]
 }

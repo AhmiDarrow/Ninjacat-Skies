@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000000500CA"
+			id: "C2000000000500CE"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000500CA"
+					id: "D2000000000500CE"
 					type: "item"
 					item: {
 						id: "minecraft:redstone"
@@ -27,7 +27,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000500CA"
+					id: "E2000000000500CE"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -35,19 +35,19 @@
 					}
 				}
 				{
-					id: "D1000000000500CA"
+					id: "D1000000000500CE"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 		}
 		{
-			id: "C2000000000500CB"
+			id: "C2000000000500CF"
 			x: 0.0d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D2000000000500CB"
+					id: "D2000000000500CF"
 					type: "item"
 					item: {
 						id: "minecraft:furnace"
@@ -57,136 +57,27 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000500CB"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000500CA"]
-		}
-		{
-			id: "C2000000000500CC"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000000500CC"
-					type: "item"
-					item: {
-						id: "minecraft:hopper"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000500CC"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000500CA"]
-		}
-		{
-			id: "C2000000000500CD"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000000500CD"
-					type: "item"
-					item: {
-						id: "minecraft:comparator"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000500CD"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000500CA"]
-		}
-		{
-			id: "C2000000000500CE"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000000500CE"
-					type: "item"
-					item: {
-						id: "tribalpower:bone_chime"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000500CE"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000500CA"]
-		}
-		{
-			id: "C2000000000500CF"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000500CF"
-					type: "item"
-					item: {
-						id: "tribalpower:spirit_shard"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E2000000000500CF"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000000500CF"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000000500CA"]
+			dependencies: ["C2000000000500CE"]
 		}
 		{
 			id: "C2000000000500D0"
-			x: 1.8d
-			y: 1.3d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000500D0"
 					type: "item"
 					item: {
-						id: "tribalpower:copper_resonator"
-						count: 1
+						id: "minecraft:hopper"
+						count: 16
 					}
 				}
 			]
@@ -200,19 +91,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500CF"]
+			dependencies: ["C2000000000500CE"]
 		}
 		{
 			id: "C2000000000500D1"
-			x: 1.8d
-			y: 2.6d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000500D1"
 					type: "item"
 					item: {
-						id: "tribalpower:drumheart"
-						count: 1
+						id: "minecraft:comparator"
+						count: 4
 					}
 				}
 			]
@@ -226,18 +117,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500CF"]
+			dependencies: ["C2000000000500CE"]
 		}
 		{
 			id: "C2000000000500D2"
-			x: 1.8d
-			y: 3.9d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000500D2"
 					type: "item"
 					item: {
-						id: "tribalpower:pulse_cell"
+						id: "tribalpower:bone_chime"
 						count: 1
 					}
 				}
@@ -252,19 +143,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500CF"]
+			dependencies: ["C2000000000500CE"]
 		}
 		{
 			id: "C2000000000500D3"
 			x: 1.8d
-			y: 5.2d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000500D3"
 					type: "item"
 					item: {
-						id: "tribalpower:ley_collector"
-						count: 1
+						id: "tribalpower:spirit_shard"
+						count: 2
 					}
 				}
 			]
@@ -274,22 +165,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000500D3"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000500CF"]
+			dependencies: ["C2000000000500CE"]
 		}
 		{
 			id: "C2000000000500D4"
-			x: 3.6d
-			y: 0.0d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000500D4"
 					type: "item"
 					item: {
-						id: "tribalpower:pulse_resonator"
+						id: "tribalpower:copper_resonator"
 						count: 1
 					}
 				}
@@ -300,27 +196,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000000500D4"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000000500CF"]
+			dependencies: ["C2000000000500D3"]
 		}
 		{
 			id: "C2000000000500D5"
-			x: 3.6d
-			y: 1.3d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000500D5"
 					type: "item"
 					item: {
-						id: "powah:energy_cell_starter"
+						id: "tribalpower:drumheart"
 						count: 1
 					}
 				}
@@ -335,18 +226,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500D4"]
+			dependencies: ["C2000000000500D3"]
 		}
 		{
 			id: "C2000000000500D6"
-			x: 3.6d
-			y: 2.6d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000500D6"
 					type: "item"
 					item: {
-						id: "powah:furnator_starter"
+						id: "tribalpower:pulse_cell"
 						count: 1
 					}
 				}
@@ -361,19 +252,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500D4"]
+			dependencies: ["C2000000000500D3"]
 		}
 		{
 			id: "C2000000000500D7"
-			x: 3.6d
-			y: 3.9d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000500D7"
 					type: "item"
 					item: {
-						id: "powah:energy_cable_starter"
-						count: 8
+						id: "tribalpower:ley_collector"
+						count: 1
 					}
 				}
 			]
@@ -387,19 +278,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500D4"]
+			dependencies: ["C2000000000500D3"]
 		}
 		{
 			id: "C2000000000500D8"
 			x: 3.6d
-			y: 5.2d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000500D8"
 					type: "item"
 					item: {
-						id: "powah:solar_panel_starter"
-						count: 2
+						id: "tribalpower:pulse_resonator"
+						count: 1
 					}
 				}
 			]
@@ -409,22 +300,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000500D8"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000500D4"]
+			dependencies: ["C2000000000500D3"]
 		}
 		{
 			id: "C2000000000500D9"
-			x: 5.4d
-			y: 0.0d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000500D9"
 					type: "item"
 					item: {
-						id: "powah:thermo_generator_starter"
+						id: "powah:energy_cell_starter"
 						count: 1
 					}
 				}
@@ -435,27 +331,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000000500D9"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000000500D4"]
+			dependencies: ["C2000000000500D8"]
 		}
 		{
 			id: "C2000000000500DA"
-			x: 5.4d
-			y: 1.3d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000500DA"
 					type: "item"
 					item: {
-						id: "powah:energizing_orb"
+						id: "powah:furnator_starter"
 						count: 1
 					}
 				}
@@ -470,19 +361,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500D9"]
+			dependencies: ["C2000000000500D8"]
 		}
 		{
 			id: "C2000000000500DB"
-			x: 5.4d
-			y: 2.6d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000500DB"
 					type: "item"
 					item: {
-						id: "powah:energizing_rod_starter"
-						count: 1
+						id: "powah:energy_cable_starter"
+						count: 8
 					}
 				}
 			]
@@ -496,19 +387,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500D9"]
+			dependencies: ["C2000000000500D8"]
 		}
 		{
 			id: "C2000000000500DC"
-			x: 5.4d
-			y: 3.9d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000500DC"
 					type: "item"
 					item: {
-						id: "powah:battery_starter"
-						count: 1
+						id: "powah:solar_panel_starter"
+						count: 2
 					}
 				}
 			]
@@ -522,18 +413,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000500D9"]
+			dependencies: ["C2000000000500D8"]
 		}
 		{
 			id: "C2000000000500DD"
 			x: 5.4d
-			y: 5.2d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000500DD"
 					type: "item"
 					item: {
-						id: "powah:wrench"
+						id: "powah:thermo_generator_starter"
 						count: 1
 					}
 				}
@@ -544,23 +435,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000500DD"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000500D9"]
+			dependencies: ["C2000000000500D8"]
 		}
 		{
 			id: "C2000000000500DE"
-			x: -4.0d
-			y: 7.5d
+			x: 5.4d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000500DE"
 					type: "item"
 					item: {
-						id: "minecraft:blast_furnace"
-						count: 2
+						id: "powah:energizing_orb"
+						count: 1
 					}
 				}
 			]
@@ -570,25 +466,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000500CB"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000500DD"]
 		}
 		{
 			id: "C2000000000500DF"
-			x: -2.5d
-			y: 7.5d
+			x: 5.4d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000500DF"
 					type: "item"
 					item: {
-						id: "minecraft:smoker"
-						count: 2
+						id: "powah:energizing_rod_starter"
+						count: 1
 					}
 				}
 			]
@@ -598,25 +492,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000500CB"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000500DD"]
 		}
 		{
 			id: "C2000000000500E0"
-			x: -1.0d
-			y: 7.5d
+			x: 5.4d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000500E0"
 					type: "item"
 					item: {
-						id: "minecraft:coal_block"
-						count: 16
+						id: "powah:battery_starter"
+						count: 1
 					}
 				}
 			]
@@ -626,25 +518,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000500CB"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000500DD"]
 		}
 		{
 			id: "C2000000000500E1"
-			x: 0.5d
-			y: 7.5d
+			x: 5.4d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000500E1"
 					type: "item"
 					item: {
-						id: "minecraft:dropper"
-						count: 4
+						id: "powah:wrench"
+						count: 1
 					}
 				}
 			]
@@ -654,25 +544,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000500CB"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000500DD"]
 		}
 		{
 			id: "C2000000000500E2"
-			x: 2.0d
+			x: -4.0d
 			y: 7.5d
 			tasks: [
 				{
 					id: "D2000000000500E2"
 					type: "item"
 					item: {
-						id: "minecraft:dispenser"
-						count: 4
+						id: "minecraft:blast_furnace"
+						count: 2
 					}
 				}
 			]
@@ -687,20 +575,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500E3"
-			x: 3.5d
+			x: -2.5d
 			y: 7.5d
 			tasks: [
 				{
 					id: "D2000000000500E3"
 					type: "item"
 					item: {
-						id: "minecraft:piston"
-						count: 8
+						id: "minecraft:smoker"
+						count: 2
 					}
 				}
 			]
@@ -715,20 +603,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500E4"
-			x: -4.0d
-			y: 9.0d
+			x: -1.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D2000000000500E4"
 					type: "item"
 					item: {
-						id: "minecraft:sticky_piston"
-						count: 4
+						id: "minecraft:coal_block"
+						count: 16
 					}
 				}
 			]
@@ -743,19 +631,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500E5"
-			x: -2.5d
-			y: 9.0d
+			x: 0.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D2000000000500E5"
 					type: "item"
 					item: {
-						id: "minecraft:observer"
+						id: "minecraft:dropper"
 						count: 4
 					}
 				}
@@ -771,20 +659,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500E6"
-			x: -1.0d
-			y: 9.0d
+			x: 2.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D2000000000500E6"
 					type: "item"
 					item: {
-						id: "minecraft:repeater"
-						count: 8
+						id: "minecraft:dispenser"
+						count: 4
 					}
 				}
 			]
@@ -799,20 +687,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500E7"
-			x: 0.5d
-			y: 9.0d
+			x: 3.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D2000000000500E7"
 					type: "item"
 					item: {
-						id: "minecraft:target"
-						count: 2
+						id: "minecraft:piston"
+						count: 8
 					}
 				}
 			]
@@ -827,20 +715,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500E8"
-			x: 2.0d
+			x: -4.0d
 			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000500E8"
 					type: "item"
 					item: {
-						id: "minecraft:lightning_rod"
-						count: 1
+						id: "minecraft:sticky_piston"
+						count: 4
 					}
 				}
 			]
@@ -855,20 +743,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500E9"
-			x: 3.5d
+			x: -2.5d
 			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000500E9"
 					type: "item"
 					item: {
-						id: "minecraft:clock"
-						count: 1
+						id: "minecraft:observer"
+						count: 4
 					}
 				}
 			]
@@ -883,19 +771,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500EA"
-			x: -4.0d
-			y: 10.5d
+			x: -1.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000500EA"
 					type: "item"
 					item: {
-						id: "minecraft:copper_bulb"
+						id: "minecraft:repeater"
 						count: 8
 					}
 				}
@@ -911,20 +799,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500EB"
-			x: -2.5d
-			y: 10.5d
+			x: 0.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000500EB"
 					type: "item"
 					item: {
-						id: "minecraft:redstone_lamp"
-						count: 8
+						id: "minecraft:target"
+						count: 2
 					}
 				}
 			]
@@ -939,20 +827,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500EC"
-			x: -1.0d
-			y: 10.5d
+			x: 2.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000500EC"
 					type: "item"
 					item: {
-						id: "minecraft:daylight_detector"
-						count: 2
+						id: "minecraft:lightning_rod"
+						count: 1
 					}
 				}
 			]
@@ -967,20 +855,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500ED"
-			x: 0.5d
-			y: 10.5d
+			x: 3.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000500ED"
 					type: "item"
 					item: {
-						id: "minecraft:lever"
-						count: 8
+						id: "minecraft:clock"
+						count: 1
 					}
 				}
 			]
@@ -995,19 +883,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500EE"
-			x: 2.0d
+			x: -4.0d
 			y: 10.5d
 			tasks: [
 				{
 					id: "D2000000000500EE"
 					type: "item"
 					item: {
-						id: "minecraft:stone_button"
+						id: "minecraft:copper_bulb"
 						count: 8
 					}
 				}
@@ -1023,20 +911,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500EF"
-			x: 3.5d
+			x: -2.5d
 			y: 10.5d
 			tasks: [
 				{
 					id: "D2000000000500EF"
 					type: "item"
 					item: {
-						id: "minecraft:stone_pressure_plate"
-						count: 4
+						id: "minecraft:redstone_lamp"
+						count: 8
 					}
 				}
 			]
@@ -1051,20 +939,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F0"
-			x: -4.0d
-			y: 12.0d
+			x: -1.0d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D2000000000500F0"
 					type: "item"
 					item: {
-						id: "minecraft:tripwire_hook"
-						count: 4
+						id: "minecraft:daylight_detector"
+						count: 2
 					}
 				}
 			]
@@ -1079,20 +967,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F1"
-			x: -2.5d
-			y: 12.0d
+			x: 0.5d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D2000000000500F1"
 					type: "item"
 					item: {
-						id: "minecraft:note_block"
-						count: 1
+						id: "minecraft:lever"
+						count: 8
 					}
 				}
 			]
@@ -1107,20 +995,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F2"
-			x: -1.0d
-			y: 12.0d
+			x: 2.0d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D2000000000500F2"
 					type: "item"
 					item: {
-						id: "minecraft:jukebox"
-						count: 1
+						id: "minecraft:stone_button"
+						count: 8
 					}
 				}
 			]
@@ -1135,20 +1023,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F3"
-			x: 0.5d
-			y: 12.0d
+			x: 3.5d
+			y: 10.5d
 			tasks: [
 				{
 					id: "D2000000000500F3"
 					type: "item"
 					item: {
-						id: "minecraft:minecart"
-						count: 1
+						id: "minecraft:stone_pressure_plate"
+						count: 4
 					}
 				}
 			]
@@ -1163,20 +1051,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F4"
-			x: 2.0d
+			x: -4.0d
 			y: 12.0d
 			tasks: [
 				{
 					id: "D2000000000500F4"
 					type: "item"
 					item: {
-						id: "minecraft:rail"
-						count: 32
+						id: "minecraft:tripwire_hook"
+						count: 4
 					}
 				}
 			]
@@ -1191,20 +1079,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F5"
-			x: 3.5d
+			x: -2.5d
 			y: 12.0d
 			tasks: [
 				{
 					id: "D2000000000500F5"
 					type: "item"
 					item: {
-						id: "minecraft:powered_rail"
-						count: 8
+						id: "minecraft:note_block"
+						count: 1
 					}
 				}
 			]
@@ -1219,20 +1107,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F6"
-			x: -4.0d
-			y: 13.5d
+			x: -1.0d
+			y: 12.0d
 			tasks: [
 				{
 					id: "D2000000000500F6"
 					type: "item"
 					item: {
-						id: "minecraft:detector_rail"
-						count: 4
+						id: "minecraft:jukebox"
+						count: 1
 					}
 				}
 			]
@@ -1247,19 +1135,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F7"
-			x: -2.5d
-			y: 13.5d
+			x: 0.5d
+			y: 12.0d
 			tasks: [
 				{
 					id: "D2000000000500F7"
 					type: "item"
 					item: {
-						id: "solarflux:photovoltaic_cell_1"
+						id: "minecraft:minecart"
 						count: 1
 					}
 				}
@@ -1275,20 +1163,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F8"
-			x: -1.0d
-			y: 13.5d
+			x: 2.0d
+			y: 12.0d
 			tasks: [
 				{
 					id: "D2000000000500F8"
 					type: "item"
 					item: {
-						id: "pipez:item_pipe"
-						count: 16
+						id: "minecraft:rail"
+						count: 32
 					}
 				}
 			]
@@ -1303,19 +1191,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500F9"
-			x: 0.5d
-			y: 13.5d
+			x: 3.5d
+			y: 12.0d
 			tasks: [
 				{
 					id: "D2000000000500F9"
 					type: "item"
 					item: {
-						id: "pipez:fluid_pipe"
+						id: "minecraft:powered_rail"
 						count: 8
 					}
 				}
@@ -1331,20 +1219,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500FA"
-			x: 2.0d
+			x: -4.0d
 			y: 13.5d
 			tasks: [
 				{
 					id: "D2000000000500FA"
 					type: "item"
 					item: {
-						id: "pipez:energy_pipe"
-						count: 8
+						id: "minecraft:detector_rail"
+						count: 4
 					}
 				}
 			]
@@ -1359,19 +1247,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500FB"
-			x: 3.5d
+			x: -2.5d
 			y: 13.5d
 			tasks: [
 				{
 					id: "D2000000000500FB"
 					type: "item"
 					item: {
-						id: "pipez:wrench"
+						id: "solarflux:photovoltaic_cell_1"
 						count: 1
 					}
 				}
@@ -1387,20 +1275,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500FC"
-			x: -4.0d
-			y: 15.0d
+			x: -1.0d
+			y: 13.5d
 			tasks: [
 				{
 					id: "D2000000000500FC"
 					type: "item"
 					item: {
-						id: "tribalpower:ritual_chalk"
-						count: 4
+						id: "pipez:item_pipe"
+						count: 16
 					}
 				}
 			]
@@ -1415,17 +1303,129 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000500CB"]
+			dependencies: ["C2000000000500CF"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000500FD"
+			x: 0.5d
+			y: 13.5d
+			tasks: [
+				{
+					id: "D2000000000500FD"
+					type: "item"
+					item: {
+						id: "pipez:fluid_pipe"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000500FD"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000500CF"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000500FE"
+			x: 2.0d
+			y: 13.5d
+			tasks: [
+				{
+					id: "D2000000000500FE"
+					type: "item"
+					item: {
+						id: "pipez:energy_pipe"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000500FE"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000500CF"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000500FF"
+			x: 3.5d
+			y: 13.5d
+			tasks: [
+				{
+					id: "D2000000000500FF"
+					type: "item"
+					item: {
+						id: "pipez:wrench"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000500FF"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000500CF"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000050100"
+			x: -4.0d
+			y: 15.0d
+			tasks: [
+				{
+					id: "D200000000050100"
+					type: "item"
+					item: {
+						id: "tribalpower:ritual_chalk"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000050100"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000500CF"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000050101"
 			x: 12.0d
 			y: -2.0d
 			tasks: [
 				{
 					type: "checkmark"
-					id: "D2000000000500FD"
+					id: "D200000000050101"
 				}
 			]
 			rewards: [
@@ -1435,27 +1435,25 @@
 						id: "ninjacatskies:strand_token_spark"
 						count: 1
 					}
-					id: "E2000000000500FD"
+					id: "E200000000050101"
 				}
 				{
-					type: "command"
-					command: "loot give @p loot ninjacatskies:steward_cache/spark"
-					silent: true
-					elevate_perms: true
-					id: "E2000000010500FD"
+					type: "loot"
+					table_id: "F100000000000005"
+					id: "E200000001050101"
 				}
 				{
 					type: "xp_levels"
 					xp_levels: 3
-					id: "E2000000020500FD"
+					id: "E200000002050101"
 				}
 			]
-			dependencies: ["C2000000000500CE", "C2000000000500D1", "C2000000000500D2", "C2000000000500D4"]
+			dependencies: ["C2000000000500D2", "C2000000000500D5", "C2000000000500D6", "C2000000000500D8"]
 			shape: "hexagon"
 			size: 1.5d
 		}
 		{
-			id: "C2000000000500FE"
+			id: "C200000000050102"
 			x: 13.6d
 			y: -2.0d
 			tasks: [
@@ -1463,7 +1461,7 @@
 					type: "advancement"
 					advancement: "ninjacatskies:strand/spark"
 					criterion: ""
-					id: "D2000000000500FE"
+					id: "D200000000050102"
 				}
 			]
 			rewards: [
@@ -1473,7 +1471,7 @@
 						id: "ninjacatskies:frayed_thread"
 						count: 6
 					}
-					id: "E2000000000500FE"
+					id: "E200000000050102"
 				}
 				{
 					type: "item"
@@ -1481,11 +1479,45 @@
 						id: "ninjacatskies:codex_page"
 						count: 1
 					}
-					id: "E2000000010500FE"
+					id: "E200000001050102"
 				}
 			]
-			dependencies: ["C2000000000500FD"]
+			dependencies: ["C200000000050101"]
 			shape: "diamond"
+		}
+		{
+			id: "C200000000050103"
+			x: -3.0d
+			y: -2.0d
+			tasks: [
+				{
+					type: "kill"
+					entity: "minecraft:witch"
+					value: 1
+					id: "D200000000050103"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "minecraft:glowstone_dust"
+						count: 8
+					}
+					id: "E200000000050103"
+				}
+				{
+					type: "item"
+					item: {
+						id: "minecraft:redstone"
+						count: 16
+					}
+					id: "E200000001050103"
+				}
+			]
+			shape: "octagon"
+			invisible: true
+			invisible_until_tasks: 1
 		}
 	]
 }

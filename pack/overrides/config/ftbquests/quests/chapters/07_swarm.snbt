@@ -12,206 +12,15 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C200000000070130"
-			x: 0.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000070130"
-					type: "item"
-					item: {
-						id: "minecraft:honeycomb"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000070130"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 4
-					}
-				}
-				{
-					id: "D100000000070130"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C200000000070131"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000070131"
-					type: "item"
-					item: {
-						id: "minecraft:beehive"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000070131"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-			]
-			dependencies: ["C200000000070130"]
-		}
-		{
-			id: "C200000000070132"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000070132"
-					type: "item"
-					item: {
-						id: "minecraft:honey_bottle"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000070132"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-			]
-			dependencies: ["C200000000070130"]
-		}
-		{
-			id: "C200000000070133"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D200000000070133"
-					type: "item"
-					item: {
-						id: "productivebees:honey_treat"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000070133"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-			]
-			dependencies: ["C200000000070130"]
-		}
-		{
-			id: "C200000000070134"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D200000000070134"
-					type: "item"
-					item: {
-						id: "productivebees:advanced_oak_beehive"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000070134"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-			]
-			dependencies: ["C200000000070130"]
-		}
-		{
-			id: "C200000000070135"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000070135"
-					type: "item"
-					item: {
-						id: "productivebees:expansion_box_oak"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000070135"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 4
-					}
-				}
-				{
-					id: "D100000000070135"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C200000000070130"]
-		}
-		{
-			id: "C200000000070136"
-			x: 1.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000070136"
-					type: "item"
-					item: {
-						id: "productivebees:bottler"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000070136"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-			]
-			dependencies: ["C200000000070135"]
-		}
-		{
 			id: "C200000000070137"
-			x: 1.8d
-			y: 2.6d
+			x: 0.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000070137"
 					type: "item"
 					item: {
-						id: "productivebees:centrifuge"
+						id: "productivebees:oak_wood_nest"
 						count: 1
 					}
 				}
@@ -222,23 +31,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 4
 					}
 				}
+				{
+					id: "D100000000070137"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000070135"]
 		}
 		{
 			id: "C200000000070138"
-			x: 1.8d
-			y: 3.9d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000070138"
 					type: "item"
 					item: {
-						id: "productivebees:powered_centrifuge"
-						count: 1
+						id: "minecraft:dandelion"
+						count: 8
 					}
 				}
 			]
@@ -252,19 +65,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000070135"]
+			dependencies: ["C200000000070137"]
 		}
 		{
 			id: "C200000000070139"
-			x: 1.8d
-			y: 5.2d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000070139"
 					type: "item"
 					item: {
-						id: "productivebees:honey_treat"
-						count: 16
+						id: "minecraft:bee_nest"
+						count: 1
 					}
 				}
 			]
@@ -278,19 +91,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000070135"]
+			dependencies: ["C200000000070137"]
 		}
 		{
 			id: "C20000000007013A"
-			x: 3.6d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000007013A"
 					type: "item"
 					item: {
-						id: "productivebees:catcher"
-						count: 1
+						id: "minecraft:honeycomb"
+						count: 16
 					}
 				}
 			]
@@ -300,27 +113,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 4
+						count: 3
 					}
 				}
-				{
-					id: "D10000000007013A"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C200000000070135"]
+			dependencies: ["C200000000070137"]
 		}
 		{
 			id: "C20000000007013B"
-			x: 3.6d
-			y: 1.3d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000007013B"
 					type: "item"
 					item: {
-						id: "productivebees:incubator"
+						id: "minecraft:beehive"
 						count: 1
 					}
 				}
@@ -335,19 +143,19 @@
 					}
 				}
 			]
-			dependencies: ["C20000000007013A"]
+			dependencies: ["C200000000070137"]
 		}
 		{
 			id: "C20000000007013C"
-			x: 3.6d
-			y: 2.6d
+			x: 1.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D20000000007013C"
 					type: "item"
 					item: {
-						id: "productivebees:gene_indexer"
-						count: 1
+						id: "minecraft:honey_bottle"
+						count: 8
 					}
 				}
 			]
@@ -357,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 4
 					}
 				}
+				{
+					id: "D10000000007013C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C20000000007013A"]
+			dependencies: ["C200000000070137"]
 		}
 		{
 			id: "C20000000007013D"
-			x: 3.6d
-			y: 3.9d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000007013D"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:diamond_seeds"
-						count: 1
+						id: "productivebees:honey_treat"
+						count: 8
 					}
 				}
 			]
@@ -387,18 +200,18 @@
 					}
 				}
 			]
-			dependencies: ["C20000000007013A"]
+			dependencies: ["C20000000007013C"]
 		}
 		{
 			id: "C20000000007013E"
-			x: 3.6d
-			y: 5.2d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000007013E"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:redstone_seeds"
+						id: "productivebees:gravel_nest"
 						count: 1
 					}
 				}
@@ -413,18 +226,18 @@
 					}
 				}
 			]
-			dependencies: ["C20000000007013A"]
+			dependencies: ["C20000000007013C"]
 		}
 		{
 			id: "C20000000007013F"
-			x: 5.4d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000007013F"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:lapis_lazuli_seeds"
+						id: "productivebees:coarse_dirt_nest"
 						count: 1
 					}
 				}
@@ -435,27 +248,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 4
+						count: 3
 					}
 				}
-				{
-					id: "D10000000007013F"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C20000000007013A"]
+			dependencies: ["C20000000007013C"]
 		}
 		{
 			id: "C200000000070140"
-			x: 5.4d
-			y: 1.3d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000070140"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:nether_quartz_seeds"
+						id: "productivebees:stone_nest"
 						count: 1
 					}
 				}
@@ -470,18 +278,18 @@
 					}
 				}
 			]
-			dependencies: ["C20000000007013F"]
+			dependencies: ["C20000000007013C"]
 		}
 		{
 			id: "C200000000070141"
-			x: 5.4d
-			y: 2.6d
+			x: 3.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000070141"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:glowstone_seeds"
+						id: "productivebees:advanced_oak_beehive"
 						count: 1
 					}
 				}
@@ -492,22 +300,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 4
 					}
 				}
+				{
+					id: "D100000000070141"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C20000000007013F"]
+			dependencies: ["C20000000007013C"]
 		}
 		{
 			id: "C200000000070142"
-			x: 5.4d
-			y: 3.9d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000070142"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:obsidian_seeds"
+						id: "productivebees:expansion_box_oak"
 						count: 1
 					}
 				}
@@ -522,19 +335,19 @@
 					}
 				}
 			]
-			dependencies: ["C20000000007013F"]
+			dependencies: ["C200000000070141"]
 		}
 		{
 			id: "C200000000070143"
-			x: 5.4d
-			y: 5.2d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000070143"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:imperium_essence"
-						count: 16
+						id: "productivebees:bottler"
+						count: 1
 					}
 				}
 			]
@@ -548,19 +361,19 @@
 					}
 				}
 			]
-			dependencies: ["C20000000007013F"]
+			dependencies: ["C200000000070141"]
 		}
 		{
 			id: "C200000000070144"
-			x: 7.2d
-			y: 0.0d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000070144"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:supremium_essence"
-						count: 8
+						id: "productivebees:centrifuge"
+						count: 1
 					}
 				}
 			]
@@ -570,28 +383,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 4
+						count: 3
 					}
 				}
-				{
-					id: "D100000000070144"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C20000000007013F"]
+			dependencies: ["C200000000070141"]
 		}
 		{
 			id: "C200000000070145"
-			x: 7.2d
-			y: 1.3d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000070145"
 					type: "item"
 					item: {
-						id: "minecraft:honey_block"
-						count: 8
+						id: "productivebees:powered_centrifuge"
+						count: 1
 					}
 				}
 			]
@@ -605,19 +413,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000070144"]
+			dependencies: ["C200000000070141"]
 		}
 		{
 			id: "C200000000070146"
-			x: -3.5d
-			y: 7.5d
+			x: 5.4d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000070146"
 					type: "item"
 					item: {
-						id: "productivebees:bee_cage"
-						count: 4
+						id: "productivebees:catcher"
+						count: 1
 					}
 				}
 			]
@@ -627,25 +435,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
 				}
+				{
+					id: "D100000000070146"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000070141"]
 		}
 		{
 			id: "C200000000070147"
-			x: -2.0d
-			y: 7.5d
+			x: 5.4d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000070147"
 					type: "item"
 					item: {
-						id: "productivebees:honey_generator"
-						count: 1
+						id: "productivebees:bee_cage"
+						count: 4
 					}
 				}
 			]
@@ -655,24 +466,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000070146"]
 		}
 		{
 			id: "C200000000070148"
-			x: -0.5d
-			y: 7.5d
+			x: 5.4d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000070148"
 					type: "item"
 					item: {
-						id: "productivebees:jar_oak"
+						id: "productivebees:incubator"
 						count: 1
 					}
 				}
@@ -683,24 +492,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000070146"]
 		}
 		{
 			id: "C200000000070149"
-			x: 1.0d
-			y: 7.5d
+			x: 5.4d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000070149"
 					type: "item"
 					item: {
-						id: "minecraft:bee_spawn_egg"
+						id: "productivebees:breeding_chamber"
 						count: 1
 					}
 				}
@@ -711,24 +518,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000070146"]
 		}
 		{
 			id: "C20000000007014A"
-			x: 2.5d
-			y: 7.5d
+			x: 5.4d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000007014A"
 					type: "item"
 					item: {
-						id: "minecraft:shears"
+						id: "productivebees:gene_indexer"
 						count: 1
 					}
 				}
@@ -739,25 +544,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000070146"]
 		}
 		{
 			id: "C20000000007014B"
-			x: 4.0d
-			y: 7.5d
+			x: 7.2d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D20000000007014B"
 					type: "item"
 					item: {
-						id: "minecraft:campfire"
-						count: 1
+						id: "productivebees:honey_treat"
+						count: 16
 					}
 				}
 			]
@@ -767,25 +570,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
 				}
+				{
+					id: "D10000000007014B"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000070146"]
 		}
 		{
 			id: "C20000000007014C"
-			x: -3.5d
-			y: 9.0d
+			x: 7.2d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000007014C"
 					type: "item"
 					item: {
-						id: "minecraft:flowering_azalea"
-						count: 4
+						id: "mysticalagriculture:diamond_seeds"
+						count: 1
 					}
 				}
 			]
@@ -795,25 +601,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000007014B"]
 		}
 		{
 			id: "C20000000007014D"
-			x: -2.0d
-			y: 9.0d
+			x: 7.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000007014D"
 					type: "item"
 					item: {
-						id: "minecraft:sunflower"
-						count: 4
+						id: "mysticalagriculture:redstone_seeds"
+						count: 1
 					}
 				}
 			]
@@ -823,25 +627,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000007014B"]
 		}
 		{
 			id: "C20000000007014E"
-			x: -0.5d
-			y: 9.0d
+			x: 7.2d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000007014E"
 					type: "item"
 					item: {
-						id: "minecraft:lilac"
-						count: 4
+						id: "mysticalagriculture:lapis_lazuli_seeds"
+						count: 1
 					}
 				}
 			]
@@ -851,25 +653,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000007014B"]
 		}
 		{
 			id: "C20000000007014F"
-			x: 1.0d
-			y: 9.0d
+			x: 7.2d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000007014F"
 					type: "item"
 					item: {
-						id: "minecraft:rose_bush"
-						count: 4
+						id: "mysticalagriculture:nether_quartz_seeds"
+						count: 1
 					}
 				}
 			]
@@ -879,25 +679,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000007014B"]
 		}
 		{
 			id: "C200000000070150"
-			x: 2.5d
-			y: 9.0d
+			x: 9.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000070150"
 					type: "item"
 					item: {
-						id: "minecraft:peony"
-						count: 4
+						id: "mysticalagriculture:glowstone_seeds"
+						count: 1
 					}
 				}
 			]
@@ -907,25 +705,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 4
 					}
 				}
+				{
+					id: "D100000000070150"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
-			dependencies: ["C200000000070131"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000007014B"]
 		}
 		{
 			id: "C200000000070151"
-			x: 4.0d
-			y: 9.0d
+			x: 9.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000070151"
 					type: "item"
 					item: {
-						id: "minecraft:orange_tulip"
-						count: 8
+						id: "mysticalagriculture:obsidian_seeds"
+						count: 1
 					}
 				}
 			]
@@ -935,22 +736,558 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["C200000000070150"]
+		}
+		{
+			id: "C200000000070152"
+			x: 9.0d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D200000000070152"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:imperium_essence"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070152"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["C200000000070150"]
+		}
+		{
+			id: "C200000000070153"
+			x: 9.0d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D200000000070153"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:supremium_essence"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070153"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["C200000000070150"]
+		}
+		{
+			id: "C200000000070154"
+			x: 9.0d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D200000000070154"
+					type: "item"
+					item: {
+						id: "minecraft:honey_block"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070154"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["C200000000070150"]
+		}
+		{
+			id: "C200000000070136"
+			x: 1.8d
+			y: -1.4d
+			tasks: [
+				{
+					type: "observation"
+					observe_type: 5
+					timer: 0
+					to_observe: "minecraft:bee"
+					id: "D200000000070136"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "minecraft:shears"
+						count: 1
+					}
+					id: "E200000000070136"
+				}
+				{
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 4
+					}
+					id: "E200000001070136"
+				}
+				{
+					type: "xp_levels"
+					xp_levels: 1
+					id: "E200000002070136"
+				}
+			]
+			shape: "diamond"
+		}
+		{
+			id: "C200000000070155"
+			x: 5.4d
+			y: -1.4d
+			tasks: [
+				{
+					type: "observation"
+					observe_type: 5
+					timer: 0
+					to_observe: "productivebees:configurable_bee"
+					id: "D200000000070155"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "productivebees:honey_treat"
+						count: 8
+					}
+					id: "E200000000070155"
+				}
+				{
+					type: "xp_levels"
+					xp_levels: 2
+					id: "E200000001070155"
+				}
+			]
+			shape: "diamond"
+		}
+		{
+			id: "C200000000070156"
+			x: -3.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000070156"
+					type: "item"
+					item: {
+						id: "productivebees:sand_nest"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070156"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
 						count: 1
 					}
 				}
 			]
 			optional: true
-			dependencies: ["C200000000070131"]
+			dependencies: ["C200000000070138"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000070152"
+			id: "C200000000070157"
+			x: -2.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000070157"
+					type: "item"
+					item: {
+						id: "productivebees:sugar_cane_nest"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070157"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000070158"
+			x: -0.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000070158"
+					type: "item"
+					item: {
+						id: "productivebees:slimy_nest"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070158"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000070159"
+			x: 1.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000070159"
+					type: "item"
+					item: {
+						id: "productivebees:bumble_bee_nest"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070159"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C20000000007015A"
+			x: 2.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D20000000007015A"
+					type: "item"
+					item: {
+						id: "productivebees:snow_nest"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000007015A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C20000000007015B"
+			x: 4.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D20000000007015B"
+					type: "item"
+					item: {
+						id: "productivebees:honey_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000007015B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C20000000007015C"
+			x: -3.5d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D20000000007015C"
+					type: "item"
+					item: {
+						id: "productivebees:jar_oak"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000007015C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C20000000007015D"
+			x: -2.0d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D20000000007015D"
+					type: "item"
+					item: {
+						id: "minecraft:campfire"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000007015D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C20000000007015E"
+			x: -0.5d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D20000000007015E"
+					type: "item"
+					item: {
+						id: "minecraft:flowering_azalea"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000007015E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C20000000007015F"
+			x: 1.0d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D20000000007015F"
+					type: "item"
+					item: {
+						id: "minecraft:sunflower"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000007015F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000070160"
+			x: 2.5d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D200000000070160"
+					type: "item"
+					item: {
+						id: "minecraft:lilac"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070160"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000070161"
+			x: 4.0d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D200000000070161"
+					type: "item"
+					item: {
+						id: "minecraft:rose_bush"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070161"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000070162"
+			x: -3.5d
+			y: 10.5d
+			tasks: [
+				{
+					id: "D200000000070162"
+					type: "item"
+					item: {
+						id: "minecraft:peony"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070162"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000070163"
+			x: -2.0d
+			y: 10.5d
+			tasks: [
+				{
+					id: "D200000000070163"
+					type: "item"
+					item: {
+						id: "minecraft:orange_tulip"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000070163"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000070138"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000070164"
 			x: 12.0d
 			y: -2.0d
 			tasks: [
 				{
 					type: "checkmark"
-					id: "D200000000070152"
+					id: "D200000000070164"
 				}
 			]
 			rewards: [
@@ -960,27 +1297,25 @@
 						id: "ninjacatskies:strand_token_swarm"
 						count: 1
 					}
-					id: "E200000000070152"
+					id: "E200000000070164"
 				}
 				{
-					type: "command"
-					command: "loot give @p loot ninjacatskies:steward_cache/swarm"
-					silent: true
-					elevate_perms: true
-					id: "E200000001070152"
+					type: "loot"
+					table_id: "F100000000000007"
+					id: "E200000001070164"
 				}
 				{
 					type: "xp_levels"
 					xp_levels: 3
-					id: "E200000002070152"
+					id: "E200000002070164"
 				}
 			]
-			dependencies: ["C200000000070131", "C200000000070134", "C200000000070137", "C20000000007013B", "C200000000070143"]
+			dependencies: ["C200000000070137", "C20000000007013B", "C200000000070141", "C200000000070144", "C200000000070148", "C200000000070152"]
 			shape: "hexagon"
 			size: 1.5d
 		}
 		{
-			id: "C200000000070153"
+			id: "C200000000070165"
 			x: 13.6d
 			y: -2.0d
 			tasks: [
@@ -988,7 +1323,7 @@
 					type: "advancement"
 					advancement: "ninjacatskies:strand/swarm"
 					criterion: ""
-					id: "D200000000070153"
+					id: "D200000000070165"
 				}
 			]
 			rewards: [
@@ -998,7 +1333,7 @@
 						id: "ninjacatskies:frayed_thread"
 						count: 6
 					}
-					id: "E200000000070153"
+					id: "E200000000070165"
 				}
 				{
 					type: "item"
@@ -1006,11 +1341,37 @@
 						id: "ninjacatskies:codex_page"
 						count: 1
 					}
-					id: "E200000001070153"
+					id: "E200000001070165"
 				}
 			]
-			dependencies: ["C200000000070152"]
+			dependencies: ["C200000000070164"]
 			shape: "diamond"
+		}
+		{
+			id: "C200000000070166"
+			x: -3.0d
+			y: -2.0d
+			tasks: [
+				{
+					type: "kill"
+					entity: "minecraft:bee"
+					value: 1
+					id: "D200000000070166"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "minecraft:honey_bottle"
+						count: 1
+					}
+					id: "E200000000070166"
+				}
+			]
+			shape: "octagon"
+			invisible: true
+			invisible_until_tasks: 1
 		}
 	]
 }

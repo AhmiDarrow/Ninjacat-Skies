@@ -199,9 +199,10 @@ BRAID = [
      "**Clock.** Create. Water wheels, presses, mixers, belts — one cog, then the same cog again.\n\nThe "
      "precision mechanism wants a Binding Knot at its heart. That is the Loom asking to be included."),
     ("colony", "Colony", "Swarm", "productivebees:advanced_beehive", 8, 0, "edge",
-     "**Swarm.** Productive Bees and deep crops. Living industry that forgives mistakes machines do not.\n\n"
-     "A honeycomb, a hive, a bottle: Swarm's token is earned by keeping something alive that keeps something "
-     "else alive."),
+     "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of "
+     "oak logs around a small flower, placed on the pad. Wait. Wings.\n\nEvery nest is the same trick with a "
+     "different ring — gravel, coarse dirt, stone, quartz, end stone. Then hives, a centrifuge, an incubator, "
+     "and deep essence crops. Keep something alive that keeps something else alive."),
     ("hum", "Hum", "Spark", "tribalpower:drumheart", 8, 2, "edge",
      "**Spark.** Strike a Drumheart before you touch a wire. Spirit Pulse is the power fantasy here; Powah "
      "and Mekanism are bridges you cross later, if you want.\n\nBone Chime, Spirit Shard, Copper Resonator, "
