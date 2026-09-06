@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_stone",
+      "item": {
+        "id": "ninjacatskies:strand_token_stone",
+        "count": 1
+      },
       "title": "Stone Strand",
       "text": "*The mesh does not find the ore. The mesh gives the ore somewhere to land.*\n\nSeated. The Grit-singers answer when this Post hums."
     }

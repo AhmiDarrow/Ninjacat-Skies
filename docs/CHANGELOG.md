@@ -4,7 +4,7 @@
 
 ### Scope
 - Target playtime: **40–60 hours** Normal first clear
-- FTB Quests: **1328** quests across **34** chapters (item-ID + dead-end audit clean; Strand chapters authored in `en_us.snbt`)
+- FTB Quests: **1323** quests across **34** chapters (item-ID + dead-end audit clean; Strand chapters authored in `en_us.snbt`)
 - Island starters: Frayed Thread, Ninjacat Pad, Dojo Cottage (Skyblock Builder templates)
 
 ### Custom mods
@@ -139,7 +139,12 @@ rewards the token, a Steward Cache, and levels; a **Seat** quest clears when the
 - In-voice descriptions for the Strand chapters (`LORE` table); "Watering Can" duplicate → Bone Block; pad "spare" filler
   quests retired.
 
+### Verification + side chapters (2026-09-06, later)
+- **Headless dedicated-server run** (NeoForge 21.1.249, all 64 mods, pack overrides): reaches Done; 8/8 KubeJS scripts, 0 failed recipes (48 added); FTB Quests loads 34 chapters / 1323 quests; Modonomicon loads the Whisker Codex with no entry errors (spotlight pages fixed to ItemStack form). Client rendering/sound still unverified.
+- Known item-id list is now the live item registry dump (6,315 ids) instead of a model-file scrape; five stale quest ids fixed (Powah crystals, Ex Deorum pebbles) and five nonexistent ones removed (PackagedAuto AE variants, Pipez clear upgrade). Quest count 1328 → 1323.
+- **Every quest description is authored**: `tools/quest_side_lore.py` carries 937 in-voice lines for chapters 10–34 and the remaining Strand-chapter side beats; zero two-word descriptions remain.
+- **Clowder Hall Reweave Ring**: twelve deepslate pillars around the ceremony pad; each rewoven Clowder lights a sea lantern and a glowing name plaque. Refreshed on every Hall entry.
+
 ### Known gaps
 - Client playtest still unchecked after dependency fix (re-import required)
-- Side chapters (10–34) still carry short one-line descriptions; Strand chapters are authored
 - Optional: Drippy loading screen / macOS window icon

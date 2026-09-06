@@ -615,7 +615,7 @@
 					id: "D2000000000A01CE"
 					type: "item"
 					item: {
-						id: "exdeorum:calcite"
+						id: "exdeorum:calcite_pebble"
 						count: 16
 					}
 				}
@@ -643,7 +643,7 @@
 					id: "D2000000000A01CF"
 					type: "item"
 					item: {
-						id: "exdeorum:tuff"
+						id: "exdeorum:tuff_pebble"
 						count: 16
 					}
 				}

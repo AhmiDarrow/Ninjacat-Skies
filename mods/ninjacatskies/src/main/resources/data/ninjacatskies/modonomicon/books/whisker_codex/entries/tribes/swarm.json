@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_swarm",
+      "item": {
+        "id": "ninjacatskies:strand_token_swarm",
+        "count": 1
+      },
       "title": "Swarm Strand",
       "text": "*You do not own a hive. You are on good terms with it.*\n\nSeated. The Colony-keepers answer when this Post hums."
     }

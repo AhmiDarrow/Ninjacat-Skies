@@ -346,8 +346,8 @@
 					id: "D2000000001A03AF"
 					type: "item"
 					item: {
-						id: "pipez:clear_upgrade"
-						count: 1
+						id: "minecraft:hopper"
+						count: 16
 					}
 				}
 			]
@@ -372,8 +372,8 @@
 					id: "D2000000001A03B0"
 					type: "item"
 					item: {
-						id: "minecraft:hopper"
-						count: 16
+						id: "minecraft:dropper"
+						count: 8
 					}
 				}
 			]
@@ -398,8 +398,8 @@
 					id: "D2000000001A03B1"
 					type: "item"
 					item: {
-						id: "minecraft:dropper"
-						count: 8
+						id: "minecraft:dispenser"
+						count: 4
 					}
 				}
 			]
@@ -424,8 +424,8 @@
 					id: "D2000000001A03B2"
 					type: "item"
 					item: {
-						id: "minecraft:dispenser"
-						count: 4
+						id: "minecraft:comparator"
+						count: 8
 					}
 				}
 			]
@@ -455,7 +455,7 @@
 					id: "D2000000001A03B3"
 					type: "item"
 					item: {
-						id: "minecraft:comparator"
+						id: "minecraft:observer"
 						count: 8
 					}
 				}
@@ -481,8 +481,8 @@
 					id: "D2000000001A03B4"
 					type: "item"
 					item: {
-						id: "minecraft:observer"
-						count: 8
+						id: "minecraft:redstone_torch"
+						count: 16
 					}
 				}
 			]
@@ -507,7 +507,7 @@
 					id: "D2000000001A03B5"
 					type: "item"
 					item: {
-						id: "minecraft:redstone_torch"
+						id: "minecraft:repeater"
 						count: 16
 					}
 				}
@@ -533,8 +533,8 @@
 					id: "D2000000001A03B6"
 					type: "item"
 					item: {
-						id: "minecraft:repeater"
-						count: 16
+						id: "minecraft:target"
+						count: 4
 					}
 				}
 			]
@@ -559,8 +559,8 @@
 					id: "D2000000001A03B7"
 					type: "item"
 					item: {
-						id: "minecraft:target"
-						count: 4
+						id: "minecraft:daylight_detector"
+						count: 2
 					}
 				}
 			]
@@ -590,8 +590,8 @@
 					id: "D2000000001A03B8"
 					type: "item"
 					item: {
-						id: "minecraft:daylight_detector"
-						count: 2
+						id: "minecraft:lectern"
+						count: 1
 					}
 				}
 			]
@@ -616,8 +616,8 @@
 					id: "D2000000001A03B9"
 					type: "item"
 					item: {
-						id: "minecraft:lectern"
-						count: 1
+						id: "minecraft:trapped_chest"
+						count: 2
 					}
 				}
 			]
@@ -642,8 +642,8 @@
 					id: "D2000000001A03BA"
 					type: "item"
 					item: {
-						id: "minecraft:trapped_chest"
-						count: 2
+						id: "create:andesite_funnel"
+						count: 8
 					}
 				}
 			]
@@ -668,8 +668,8 @@
 					id: "D2000000001A03BB"
 					type: "item"
 					item: {
-						id: "create:andesite_funnel"
-						count: 8
+						id: "create:brass_funnel"
+						count: 4
 					}
 				}
 			]
@@ -694,8 +694,8 @@
 					id: "D2000000001A03BC"
 					type: "item"
 					item: {
-						id: "create:brass_funnel"
-						count: 4
+						id: "create:chute"
+						count: 8
 					}
 				}
 			]
@@ -725,8 +725,8 @@
 					id: "D2000000001A03BD"
 					type: "item"
 					item: {
-						id: "create:chute"
-						count: 8
+						id: "create:smart_chute"
+						count: 4
 					}
 				}
 			]
@@ -751,8 +751,8 @@
 					id: "D2000000001A03BE"
 					type: "item"
 					item: {
-						id: "create:smart_chute"
-						count: 4
+						id: "mekanism:basic_logistical_transporter"
+						count: 16
 					}
 				}
 			]
@@ -777,7 +777,7 @@
 					id: "D2000000001A03BF"
 					type: "item"
 					item: {
-						id: "mekanism:basic_logistical_transporter"
+						id: "mekanism:basic_mechanical_pipe"
 						count: 16
 					}
 				}
@@ -803,7 +803,7 @@
 					id: "D2000000001A03C0"
 					type: "item"
 					item: {
-						id: "mekanism:basic_mechanical_pipe"
+						id: "mekanism:basic_universal_cable"
 						count: 16
 					}
 				}
@@ -829,8 +829,8 @@
 					id: "D2000000001A03C1"
 					type: "item"
 					item: {
-						id: "mekanism:basic_universal_cable"
-						count: 16
+						id: "mekanism:basic_pressurized_tube"
+						count: 8
 					}
 				}
 			]
@@ -860,7 +860,7 @@
 					id: "D2000000001A03C2"
 					type: "item"
 					item: {
-						id: "mekanism:basic_pressurized_tube"
+						id: "mekanism:advanced_logistical_transporter"
 						count: 8
 					}
 				}
@@ -886,8 +886,8 @@
 					id: "D2000000001A03C3"
 					type: "item"
 					item: {
-						id: "mekanism:advanced_logistical_transporter"
-						count: 8
+						id: "mekanism:elite_logistical_transporter"
+						count: 4
 					}
 				}
 			]
@@ -912,8 +912,8 @@
 					id: "D2000000001A03C4"
 					type: "item"
 					item: {
-						id: "mekanism:elite_logistical_transporter"
-						count: 4
+						id: "mekanism:ultimate_logistical_transporter"
+						count: 2
 					}
 				}
 			]
@@ -938,8 +938,8 @@
 					id: "D2000000001A03C5"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_logistical_transporter"
-						count: 2
+						id: "mekanism:ultimate_universal_cable"
+						count: 4
 					}
 				}
 			]
@@ -951,37 +951,6 @@
 						id: "ninjacatskies:frayed_thread"
 						count: 2
 					}
-				}
-			]
-			dependencies: ["C2000000001A03C1"]
-		}
-		{
-			id: "C2000000001A03C6"
-			x: 12.6d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001A03C6"
-					type: "item"
-					item: {
-						id: "mekanism:ultimate_universal_cable"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001A03C6"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001A03C6"
-					type: "xp_levels"
-					xp_levels: 1
 				}
 			]
 			dependencies: ["C2000000001A03C1"]

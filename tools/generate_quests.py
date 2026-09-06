@@ -6,6 +6,10 @@ import json
 import math
 from pathlib import Path
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from quest_side_lore import SIDE_LORE  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 QUESTS = ROOT / "pack/overrides/config/ftbquests/quests"
 CHAPTERS = QUESTS / "chapters"
@@ -167,7 +171,9 @@ def item_quest(
     if item in FORCE_OPTIONAL:
         optional = True
         desc = list(desc) + ["Optional — the void may never offer one."]
-    if strand_i in STRAND_CHAPTERS and title in LORE:
+    if strand_i in SIDE_LORE and title in SIDE_LORE[strand_i]:
+        desc = [SIDE_LORE[strand_i][title]]
+    if strand_i in STRAND_CHAPTERS and title in LORE and len(LORE[title][0].split()) > 2:
         desc = list(LORE[title])
     reward = reward_item or "ninjacatskies:frayed_thread"
     if not valid_item(reward):
@@ -1236,8 +1242,8 @@ def build_exdeorum_side() -> list[dict]:
     ]) + grid_optional(s, [
         ("Blackstone Pebble", "exdeorum:blackstone_pebble", 32, "Nether stone."),
         ("Deepslate Pebble", "exdeorum:deepslate_pebble", 32, "Deep grit."),
-        ("Calcite", "exdeorum:calcite", 16, "White stone."),
-        ("Tuff", "exdeorum:tuff", 16, "Grey stone."),
+        ("Calcite", "exdeorum:calcite_pebble", 16, "White stone."),
+        ("Tuff", "exdeorum:tuff_pebble", 16, "Grey stone."),
         ("Dripstone", "minecraft:pointed_dripstone", 8, "Cave spike."),
         ("Sponge", "minecraft:sponge", 1, "Dry the pad."),
     ], origin=(0.0, 7.5), cols=6)
@@ -1318,9 +1324,9 @@ def build_powah_side() -> list[dict]:
         ("Energy Hopper Basic", "powah:energy_hopper_basic", 1, "Charge inventories."),
         ("Energizing Rod Basic", "powah:energizing_rod_basic", 1, "Faster energize."),
         ("Battery Basic", "powah:battery_basic", 1, "Pocket FE+."),
-        ("Niotic Crystal", "powah:niotic_crystal", 4, "Crystal tier."),
-        ("Spirited Crystal", "powah:spirited_crystal", 2, "Higher crystal."),
-        ("Nitro Crystal", "powah:nitro_crystal", 1, "Top crystal."),
+        ("Niotic Crystal", "powah:crystal_niotic", 4, "Crystal tier."),
+        ("Spirited Crystal", "powah:crystal_spirited", 2, "Higher crystal."),
+        ("Nitro Crystal", "powah:crystal_nitro", 1, "Top crystal."),
     ])
 
 
@@ -1796,7 +1802,6 @@ def build_pipes_side() -> list[dict]:
         ("Ultimate Upgrade", "pipez:ultimate_upgrade", 1, "Top Pipez throughput tier."),
         ("Infinity Upgrade", "pipez:infinity_upgrade", 1, "Remove Pipez rate caps."),
         ("Filter Tool", "pipez:filter_destination_tool", 1, "Route smart."),
-        ("Clear Upgrade", "pipez:clear_upgrade", 1, "Reset a pipe's filters and modes."),
         ("Hopper Spare", "minecraft:hopper", 16, "Vanilla move."),
         ("Dropper Line", "minecraft:dropper", 8, "Dropper line for logistics."),
         ("Dispenser Line", "minecraft:dispenser", 4, "Automate a right-click."),
@@ -2055,17 +2060,13 @@ def build_voidcraft_side() -> list[dict]:
 def build_packaged_side() -> list[dict]:
     s = 31
     return chain(s, [
-        ("Packaged Guide", "packagedauto:guide", 1, "Read the boxes."),
         ("Package Component", "packagedauto:package_component", 8, "Box guts."),
         ("ME Package Comp", "packagedauto:me_package_component", 4, "AE box guts."),
         ("Packager", "packagedauto:packager", 1, "Make packages."),
-        ("Packager AE", "packagedauto:packager_ae", 1, "AE packager."),
         ("Packager Ext", "packagedauto:packager_extension", 2, "Extend packing."),
         ("Unpackager", "packagedauto:unpackager", 1, "Open packages."),
-        ("Unpackager AE", "packagedauto:unpackager_ae", 1, "AE unpack."),
         ("Encoder", "packagedauto:encoder", 1, "Encode recipes."),
         ("Crafter", "packagedauto:crafter", 1, "Craft packages."),
-        ("Crafter AE", "packagedauto:crafter_ae", 1, "AE craft."),
         ("Distributor", "packagedauto:distributor", 1, "Route packages."),
         ("Distributor Marker", "packagedauto:distributor_marker", 4, "Mark routes."),
         ("Packaging Provider", "packagedauto:packaging_provider", 1, "Provide packs."),

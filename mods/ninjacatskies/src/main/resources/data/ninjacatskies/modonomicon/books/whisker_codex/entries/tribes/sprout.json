@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_sprout",
+      "item": {
+        "id": "ninjacatskies:strand_token_sprout",
+        "count": 1
+      },
       "title": "Sprout Strand",
       "text": "*Roots are the only rope the void respects.*\n\nSeated. The Rootbinders answer when this Post hums."
     }

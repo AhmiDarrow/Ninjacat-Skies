@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_sigil",
+      "item": {
+        "id": "ninjacatskies:strand_token_sigil",
+        "count": 1
+      },
       "title": "Sigil Strand",
       "text": "*Spirit goes where it is asked politely and stays where it is fed.*\n\nSeated. The Seal-carvers answer when this Post hums."
     }

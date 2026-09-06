@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_clock",
+      "item": {
+        "id": "ninjacatskies:strand_token_clock",
+        "count": 1
+      },
       "title": "Clock Strand",
       "text": "*A factory is a song that has stopped needing the singer.*\n\nSeated. The Pattern-weavers answer when this Post hums."
     }

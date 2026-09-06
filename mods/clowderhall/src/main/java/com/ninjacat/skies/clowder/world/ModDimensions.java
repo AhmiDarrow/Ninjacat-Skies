@@ -62,12 +62,14 @@ public final class ModDimensions {
 
         if (player.level().dimension().equals(CLOWDER_HALL)) {
             ensureHubHall(hub);
+            ReweaveRing.refresh(hub, PAD_CENTER);
             player.displayClientMessage(msg("message.clowderhall.hub_already", NinjacatText.GOLD), true);
             return true;
         }
 
         storeReturnPoint(player);
         ensureHubHall(hub);
+        ReweaveRing.refresh(hub, PAD_CENTER);
 
         // South apron, facing the beacon (north).
         double x = 0.5;
