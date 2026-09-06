@@ -1,0 +1,10 @@
+# Pack metadata. Shipped via CurseForge zip export (tools/export-curseforge.ps1).
+# Mods live as loose jars in pack/mods — not a packwiz index refresh workflow.
+name = "Ninjacat Skies"
+author = "Ninjacat Skies"
+version = "0.1.0-alpha"
+pack-format = "packwiz:1.1.0"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.249"

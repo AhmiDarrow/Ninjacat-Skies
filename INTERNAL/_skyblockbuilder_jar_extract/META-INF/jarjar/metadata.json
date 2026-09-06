@@ -1,0 +1,16 @@
+{
+  "jars": [
+    {
+      "identifier": {
+        "group": "SkyblockBuilder",
+        "artifact": "coremods"
+      },
+      "version": {
+        "range": "[21.1.31,)",
+        "artifactVersion": "21.1.31"
+      },
+      "path": "META-INF/jarjar/skyblockbuilder-coremods-21.1.31.jar",
+      "isObfuscated": false
+    }
+  ]
+}

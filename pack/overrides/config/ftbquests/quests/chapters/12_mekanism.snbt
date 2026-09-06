@@ -1,0 +1,690 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "12_mekanism"
+	group: "A100000000000004"
+	icon: {
+		id: "mekanism:ingot_steel"
+	}
+	id: "B10000000000000C"
+	images: [ ]
+	order_index: 11
+	quest_links: [ ]
+	quests: [
+		{
+			id: "C2000000000C01E2"
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E2"
+					type: "item"
+					item: {
+						id: "mekanism:ingot_steel"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E2"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "C2000000000C01E3"
+			x: 1.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E3"
+					type: "item"
+					item: {
+						id: "mekanism:ingot_osmium"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E3"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E2"]
+		}
+		{
+			id: "C2000000000C01E4"
+			x: 2.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E4"
+					type: "item"
+					item: {
+						id: "mekanism:ingot_refined_obsidian"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E3"]
+		}
+		{
+			id: "C2000000000C01E5"
+			x: 4.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E5"
+					type: "item"
+					item: {
+						id: "mekanism:basic_control_circuit"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E4"]
+		}
+		{
+			id: "C2000000000C01E6"
+			x: 5.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E6"
+					type: "item"
+					item: {
+						id: "mekanism:advanced_control_circuit"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E6"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E5"]
+		}
+		{
+			id: "C2000000000C01E7"
+			x: 7.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E7"
+					type: "item"
+					item: {
+						id: "mekanism:elite_control_circuit"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E6"]
+		}
+		{
+			id: "C2000000000C01E8"
+			x: 8.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E8"
+					type: "item"
+					item: {
+						id: "mekanism:metallurgic_infuser"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E8"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E7"]
+		}
+		{
+			id: "C2000000000C01E9"
+			x: 9.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01E9"
+					type: "item"
+					item: {
+						id: "mekanism:enrichment_chamber"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01E9"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E8"]
+		}
+		{
+			id: "C2000000000C01EA"
+			x: 11.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01EA"
+					type: "item"
+					item: {
+						id: "mekanism:crusher"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01EA"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01E9"]
+		}
+		{
+			id: "C2000000000C01EB"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01EB"
+					type: "item"
+					item: {
+						id: "mekanism:energized_smelter"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01EB"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01EA"]
+		}
+		{
+			id: "C2000000000C01EC"
+			x: 14.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01EC"
+					type: "item"
+					item: {
+						id: "mekanism:purification_chamber"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01EC"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01EB"]
+		}
+		{
+			id: "C2000000000C01ED"
+			x: 15.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01ED"
+					type: "item"
+					item: {
+						id: "mekanism:chemical_injection_chamber"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01ED"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000C01EC"]
+		}
+		{
+			id: "C2000000000C01EE"
+			x: 16.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01EE"
+					type: "item"
+					item: {
+						id: "mekanism:osmium_compressor"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01EE"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01ED"]
+		}
+		{
+			id: "C2000000000C01EF"
+			x: 18.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01EF"
+					type: "item"
+					item: {
+						id: "mekanism:basic_bin"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01EF"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01EE"]
+		}
+		{
+			id: "C2000000000C01F0"
+			x: 19.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01F0"
+					type: "item"
+					item: {
+						id: "mekanism:basic_fluid_tank"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F0"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01EF"]
+		}
+		{
+			id: "C2000000000C01F1"
+			x: 21.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01F1"
+					type: "item"
+					item: {
+						id: "mekanism:basic_energy_cube"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F1"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000C01F0"]
+		}
+		{
+			id: "C2000000000C01F2"
+			x: 22.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01F2"
+					type: "item"
+					item: {
+						id: "mekanism:basic_universal_cable"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F2"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01F1"]
+		}
+		{
+			id: "C2000000000C01F3"
+			x: 23.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01F3"
+					type: "item"
+					item: {
+						id: "mekanism:basic_mechanical_pipe"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F3"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01F2"]
+		}
+		{
+			id: "C2000000000C01F4"
+			x: 25.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01F4"
+					type: "item"
+					item: {
+						id: "mekanism:basic_logistical_transporter"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C2000000000C01F3"]
+		}
+		{
+			id: "C2000000000C01F5"
+			x: 26.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000C01F5"
+					type: "item"
+					item: {
+						id: "mekanism:configurator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000C01F4"]
+		}
+		{
+			id: "C2000000000C01F6"
+			x: 0.0d
+			y: 2.8d
+			tasks: [
+				{
+					id: "D2000000000C01F6"
+					type: "item"
+					item: {
+						id: "mekanism:jetpack"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F6"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000C01F7"
+			x: 1.5d
+			y: 2.8d
+			tasks: [
+				{
+					id: "D2000000000C01F7"
+					type: "item"
+					item: {
+						id: "mekanism:free_runners"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000C01F8"
+			x: 3.0d
+			y: 2.8d
+			tasks: [
+				{
+					id: "D2000000000C01F8"
+					type: "item"
+					item: {
+						id: "mekanism:atomic_disassembler"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F8"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000C01F9"
+			x: 0.0d
+			y: 4.3d
+			tasks: [
+				{
+					id: "D2000000000C01F9"
+					type: "item"
+					item: {
+						id: "mekanism:steel_casing"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01F9"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000C01FA"
+			x: 1.5d
+			y: 4.3d
+			tasks: [
+				{
+					id: "D2000000000C01FA"
+					type: "item"
+					item: {
+						id: "mekanism:teleporter"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01FA"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000C01FB"
+			x: 3.0d
+			y: 4.3d
+			tasks: [
+				{
+					id: "D2000000000C01FB"
+					type: "item"
+					item: {
+						id: "mekanism:digital_miner"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C01FB"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+	]
+}

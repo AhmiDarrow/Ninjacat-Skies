@@ -1,0 +1,48 @@
+{
+  "interactionBlocksInSpawnProtection": {
+    "allow_list": true,
+    "elements": []
+  },
+
+  "interactionEntitiesInSpawnProtection": {
+    "allow_list": true,
+    "elements": []
+  },
+
+  "interactionItemsInSpawnProtection": {
+    "allow_list": true,
+    "elements": []
+  },
+
+  "radiusToFindValidSpawn": 50,
+
+  "skipCenterIslandCreation": false,
+
+  "spawnDimension": "minecraft:overworld",
+
+  // Do NOT include interact_blocks / interact_items — empty allow-lists would
+  // block Dock chest, lectern, Charter, and Hub Key for non-ops.
+  "spawnProtectionEvents": [
+    "interact_entities",
+    "mob_griefing",
+    "explosions",
+    "crop_grow",
+    "apply_bonemeal",
+    "mobs_spawn",
+    "mobs_spawn_egg",
+    "damage",
+    "healing"
+  ],
+
+  // Protect the shared Clowder Dock at world center (chunk radius).
+  "spawnProtectionRadius": 2,
+
+  "Height": {
+    "heightCalculationType": "set",
+    "offset": 0,
+    "range": {
+      "bottom": 64,
+      "top": 319
+    }
+  }
+}

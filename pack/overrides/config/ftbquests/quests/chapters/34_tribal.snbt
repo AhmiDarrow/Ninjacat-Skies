@@ -1,0 +1,1132 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "34_tribal"
+	group: "A100000000000004"
+	icon: {
+		id: "tribalpower:drumheart"
+	}
+	id: "B100000000000022"
+	images: [ ]
+	order_index: 33
+	quest_links: [ ]
+	quests: [
+		{
+			id: "C200000000220502"
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220502"
+					type: "item"
+					item: {
+						id: "tribalpower:bone_chime"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220502"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "C200000000220503"
+			x: 1.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220503"
+					type: "item"
+					item: {
+						id: "tribalpower:spirit_shard"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220503"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220502"]
+		}
+		{
+			id: "C200000000220504"
+			x: 2.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220504"
+					type: "item"
+					item: {
+						id: "tribalpower:copper_resonator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220504"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220503"]
+		}
+		{
+			id: "C200000000220505"
+			x: 4.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220505"
+					type: "item"
+					item: {
+						id: "tribalpower:ritual_chalk"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220505"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000220504"]
+		}
+		{
+			id: "C200000000220506"
+			x: 5.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220506"
+					type: "item"
+					item: {
+						id: "tribalpower:drumheart"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220506"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220505"]
+		}
+		{
+			id: "C200000000220507"
+			x: 7.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220507"
+					type: "item"
+					item: {
+						id: "tribalpower:spirit_codex"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220507"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220506"]
+		}
+		{
+			id: "C200000000220508"
+			x: 8.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220508"
+					type: "item"
+					item: {
+						id: "tribalpower:ley_collector"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220508"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220507"]
+		}
+		{
+			id: "C200000000220509"
+			x: 9.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220509"
+					type: "item"
+					item: {
+						id: "tribalpower:pulse_cell"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220509"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000220508"]
+		}
+		{
+			id: "C20000000022050A"
+			x: 11.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022050A"
+					type: "item"
+					item: {
+						id: "tribalpower:pulse_resonator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022050A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220509"]
+		}
+		{
+			id: "C20000000022050B"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022050B"
+					type: "item"
+					item: {
+						id: "tribalpower:resonance_totem_earth"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022050B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022050A"]
+		}
+		{
+			id: "C20000000022050C"
+			x: 14.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022050C"
+					type: "item"
+					item: {
+						id: "tribalpower:resonance_totem_fire"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022050C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022050B"]
+		}
+		{
+			id: "C20000000022050D"
+			x: 15.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022050D"
+					type: "item"
+					item: {
+						id: "tribalpower:resonance_totem_water"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022050D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000022050C"]
+		}
+		{
+			id: "C20000000022050E"
+			x: 16.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022050E"
+					type: "item"
+					item: {
+						id: "tribalpower:resonance_totem_air"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022050E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022050D"]
+		}
+		{
+			id: "C20000000022050F"
+			x: 18.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022050F"
+					type: "item"
+					item: {
+						id: "tribalpower:resonance_totem_spirit"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022050F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022050E"]
+		}
+		{
+			id: "C200000000220510"
+			x: 19.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220510"
+					type: "item"
+					item: {
+						id: "tribalpower:song_bench"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220510"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022050F"]
+		}
+		{
+			id: "C200000000220511"
+			x: 21.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220511"
+					type: "item"
+					item: {
+						id: "tribalpower:lattice_conductor"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220511"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000220510"]
+		}
+		{
+			id: "C200000000220512"
+			x: 22.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220512"
+					type: "item"
+					item: {
+						id: "tribalpower:echo_shatter"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220512"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220511"]
+		}
+		{
+			id: "C200000000220513"
+			x: 23.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220513"
+					type: "item"
+					item: {
+						id: "tribalpower:echo_shard"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220513"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220512"]
+		}
+		{
+			id: "C200000000220514"
+			x: 25.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220514"
+					type: "item"
+					item: {
+						id: "tribalpower:echo_attune"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220514"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220513"]
+		}
+		{
+			id: "C200000000220515"
+			x: 26.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220515"
+					type: "item"
+					item: {
+						id: "tribalpower:attuned_echo"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220515"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000220514"]
+		}
+		{
+			id: "C200000000220516"
+			x: 28.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220516"
+					type: "item"
+					item: {
+						id: "tribalpower:echo_bind"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220516"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220515"]
+		}
+		{
+			id: "C200000000220517"
+			x: 29.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220517"
+					type: "item"
+					item: {
+						id: "tribalpower:bound_echo"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220517"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220516"]
+		}
+		{
+			id: "C200000000220518"
+			x: 30.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220518"
+					type: "item"
+					item: {
+						id: "tribalpower:echo_manifest"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220518"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220517"]
+		}
+		{
+			id: "C200000000220519"
+			x: 32.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220519"
+					type: "item"
+					item: {
+						id: "tribalpower:manifested_ingot"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220519"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000220518"]
+		}
+		{
+			id: "C20000000022051A"
+			x: 33.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022051A"
+					type: "item"
+					item: {
+						id: "tribalpower:ancestral_cache"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022051A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220519"]
+		}
+		{
+			id: "C20000000022051B"
+			x: 35.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022051B"
+					type: "item"
+					item: {
+						id: "tribalpower:deep_cache"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022051B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022051A"]
+		}
+		{
+			id: "C20000000022051C"
+			x: 36.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022051C"
+					type: "item"
+					item: {
+						id: "tribalpower:blank_seal"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022051C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022051B"]
+		}
+		{
+			id: "C20000000022051D"
+			x: 37.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022051D"
+					type: "item"
+					item: {
+						id: "tribalpower:earth_seal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022051D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000022051C"]
+		}
+		{
+			id: "C20000000022051E"
+			x: 39.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022051E"
+					type: "item"
+					item: {
+						id: "tribalpower:fire_seal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022051E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022051D"]
+		}
+		{
+			id: "C20000000022051F"
+			x: 40.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000022051F"
+					type: "item"
+					item: {
+						id: "tribalpower:water_seal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022051F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022051E"]
+		}
+		{
+			id: "C200000000220520"
+			x: 42.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220520"
+					type: "item"
+					item: {
+						id: "tribalpower:air_seal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220520"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000022051F"]
+		}
+		{
+			id: "C200000000220521"
+			x: 43.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220521"
+					type: "item"
+					item: {
+						id: "tribalpower:spirit_seal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220521"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000220520"]
+		}
+		{
+			id: "C200000000220522"
+			x: 44.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220522"
+					type: "item"
+					item: {
+						id: "tribalpower:rite_pedestal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220522"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220521"]
+		}
+		{
+			id: "C200000000220523"
+			x: 46.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220523"
+					type: "item"
+					item: {
+						id: "tribalpower:gate_drum"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220523"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220522"]
+		}
+		{
+			id: "C200000000220524"
+			x: 47.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220524"
+					type: "item"
+					item: {
+						id: "tribalpower:spirit_door"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220524"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220523"]
+		}
+		{
+			id: "C200000000220525"
+			x: 49.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220525"
+					type: "item"
+					item: {
+						id: "tribalpower:spiritgear_pickaxe"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220525"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000220524"]
+		}
+		{
+			id: "C200000000220526"
+			x: 50.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000220526"
+					type: "item"
+					item: {
+						id: "tribalpower:spiritgear_blade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220526"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000220525"]
+		}
+		{
+			id: "C200000000220527"
+			x: -3.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000220527"
+					type: "item"
+					item: {
+						id: "tribalpower:march_stone"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220527"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000220528"
+			x: -1.5d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000220528"
+					type: "item"
+					item: {
+						id: "tribalpower:march_cobble"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220528"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000220529"
+			x: 0.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000220529"
+					type: "item"
+					item: {
+						id: "tribalpower:march_log"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000220529"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000022052A"
+			x: -3.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D20000000022052A"
+					type: "item"
+					item: {
+						id: "tribalpower:march_planks"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022052A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000022052B"
+			x: -1.5d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D20000000022052B"
+					type: "item"
+					item: {
+						id: "tribalpower:march_leaf"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022052B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000022052C"
+			x: 0.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D20000000022052C"
+					type: "item"
+					item: {
+						id: "tribalpower:spirit_reed"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000022052C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+	]
+}

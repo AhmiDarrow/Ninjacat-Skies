@@ -1,0 +1,1210 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "03_sprout"
+	group: "A100000000000001"
+	icon: {
+		id: "minecraft:wheat_seeds"
+	}
+	id: "B100000000000003"
+	images: [ ]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "C20000000003007A"
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003007A"
+					type: "item"
+					item: {
+						id: "minecraft:iron_hoe"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003007A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "C20000000003007B"
+			x: 1.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003007B"
+					type: "item"
+					item: {
+						id: "minecraft:wheat"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003007B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003007A"]
+		}
+		{
+			id: "C20000000003007C"
+			x: 2.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003007C"
+					type: "item"
+					item: {
+						id: "minecraft:wheat_seeds"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003007C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003007B"]
+		}
+		{
+			id: "C20000000003007D"
+			x: 4.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003007D"
+					type: "item"
+					item: {
+						id: "minecraft:bone_meal"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003007D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000003007C"]
+		}
+		{
+			id: "C20000000003007E"
+			x: 5.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003007E"
+					type: "item"
+					item: {
+						id: "farmersdelight:flint_knife"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003007E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003007D"]
+		}
+		{
+			id: "C20000000003007F"
+			x: 7.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003007F"
+					type: "item"
+					item: {
+						id: "farmersdelight:cutting_board"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003007F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003007E"]
+		}
+		{
+			id: "C200000000030080"
+			x: 8.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030080"
+					type: "item"
+					item: {
+						id: "farmersdelight:cooking_pot"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030080"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003007F"]
+		}
+		{
+			id: "C200000000030081"
+			x: 9.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030081"
+					type: "item"
+					item: {
+						id: "farmersdelight:cabbage"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030081"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000030080"]
+		}
+		{
+			id: "C200000000030082"
+			x: 11.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030082"
+					type: "item"
+					item: {
+						id: "farmersdelight:tomato"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030082"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030081"]
+		}
+		{
+			id: "C200000000030083"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030083"
+					type: "item"
+					item: {
+						id: "farmersdelight:onion"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030083"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030082"]
+		}
+		{
+			id: "C200000000030084"
+			x: 14.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030084"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:inferium_essence"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030084"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030083"]
+		}
+		{
+			id: "C200000000030085"
+			x: 15.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030085"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:prosperity_shard"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030085"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000030084"]
+		}
+		{
+			id: "C200000000030086"
+			x: 16.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030086"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:infusion_altar"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030086"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030085"]
+		}
+		{
+			id: "C200000000030087"
+			x: 18.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030087"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:infusion_pedestal"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030087"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030086"]
+		}
+		{
+			id: "C200000000030088"
+			x: 19.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030088"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:dirt_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030088"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030087"]
+		}
+		{
+			id: "C200000000030089"
+			x: 21.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030089"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:wood_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030089"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000030088"]
+		}
+		{
+			id: "C20000000003008A"
+			x: 22.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003008A"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:stone_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003008A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030089"]
+		}
+		{
+			id: "C20000000003008B"
+			x: 23.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003008B"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:iron_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003008B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003008A"]
+		}
+		{
+			id: "C20000000003008C"
+			x: 25.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003008C"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:copper_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003008C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003008B"]
+		}
+		{
+			id: "C20000000003008D"
+			x: 26.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003008D"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:gold_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003008D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000003008C"]
+		}
+		{
+			id: "C20000000003008E"
+			x: 28.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003008E"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:coal_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003008E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003008D"]
+		}
+		{
+			id: "C20000000003008F"
+			x: 29.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000003008F"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:water_seeds"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003008F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003008E"]
+		}
+		{
+			id: "C200000000030090"
+			x: 30.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030090"
+					type: "item"
+					item: {
+						id: "botanypots:terracotta_botany_pot"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030090"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000003008F"]
+		}
+		{
+			id: "C200000000030091"
+			x: 32.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030091"
+					type: "item"
+					item: {
+						id: "botanypots:terracotta_hopper_botany_pot"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030091"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000030090"]
+		}
+		{
+			id: "C200000000030092"
+			x: 33.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030092"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:prudentium_essence"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030092"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030091"]
+		}
+		{
+			id: "C200000000030093"
+			x: 35.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030093"
+					type: "item"
+					item: {
+						id: "mysticalagriculture:tertium_essence"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030093"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030092"]
+		}
+		{
+			id: "C200000000030094"
+			x: 36.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030094"
+					type: "item"
+					item: {
+						id: "minecraft:water_bucket"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030094"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030093"]
+		}
+		{
+			id: "C200000000030095"
+			x: 37.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030095"
+					type: "item"
+					item: {
+						id: "minecraft:hay_block"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030095"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000030094"]
+		}
+		{
+			id: "C200000000030096"
+			x: 39.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030096"
+					type: "item"
+					item: {
+						id: "farmersdelight:rich_soil"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030096"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030095"]
+		}
+		{
+			id: "C200000000030097"
+			x: 40.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000030097"
+					type: "item"
+					item: {
+						id: "farmersdelight:organic_compost"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030097"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030096"]
+		}
+		{
+			id: "C200000000030098"
+			x: -4.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000030098"
+					type: "item"
+					item: {
+						id: "minecraft:carrot"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030098"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000030099"
+			x: -2.5d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000030099"
+					type: "item"
+					item: {
+						id: "minecraft:potato"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000030099"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000003009A"
+			x: -1.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D20000000003009A"
+					type: "item"
+					item: {
+						id: "minecraft:beetroot"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003009A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000003009B"
+			x: 0.5d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D20000000003009B"
+					type: "item"
+					item: {
+						id: "minecraft:melon_slice"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003009B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000003009C"
+			x: 2.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D20000000003009C"
+					type: "item"
+					item: {
+						id: "minecraft:pumpkin"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003009C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000003009D"
+			x: -4.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D20000000003009D"
+					type: "item"
+					item: {
+						id: "minecraft:sugar_cane"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003009D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000003009E"
+			x: -2.5d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D20000000003009E"
+					type: "item"
+					item: {
+						id: "minecraft:cactus"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003009E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000003009F"
+			x: -1.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D20000000003009F"
+					type: "item"
+					item: {
+						id: "minecraft:bamboo"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000003009F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A0"
+			x: 0.5d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D2000000000300A0"
+					type: "item"
+					item: {
+						id: "minecraft:sweet_berries"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A0"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A1"
+			x: 2.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D2000000000300A1"
+					type: "item"
+					item: {
+						id: "minecraft:cocoa_beans"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A1"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A2"
+			x: -4.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D2000000000300A2"
+					type: "item"
+					item: {
+						id: "minecraft:apple"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A2"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A3"
+			x: -2.5d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D2000000000300A3"
+					type: "item"
+					item: {
+						id: "minecraft:mushroom_stew"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A3"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A4"
+			x: -1.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D2000000000300A4"
+					type: "item"
+					item: {
+						id: "minecraft:honey_bottle"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A5"
+			x: 0.5d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D2000000000300A5"
+					type: "item"
+					item: {
+						id: "minecraft:glow_berries"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A6"
+			x: 2.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D2000000000300A6"
+					type: "item"
+					item: {
+						id: "minecraft:nether_wart"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A6"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C2000000000300A7"
+			x: 2.0d
+			y: -2.0d
+			tasks: [
+				{
+					id: "D2000000000300A7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:strand_token_sprout"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:strand_token_sprout"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000030097"]
+		}
+	]
+}

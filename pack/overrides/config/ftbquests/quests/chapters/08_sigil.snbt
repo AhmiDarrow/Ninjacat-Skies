@@ -1,0 +1,1132 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "08_sigil"
+	group: "A100000000000003"
+	icon: {
+		id: "minecraft:amethyst_shard"
+	}
+	id: "B100000000000008"
+	images: [ ]
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			id: "C200000000080154"
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080154"
+					type: "item"
+					item: {
+						id: "minecraft:amethyst_shard"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080154"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "C200000000080155"
+			x: 1.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080155"
+					type: "item"
+					item: {
+						id: "ninjacatskies:braid_cord"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080155"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080154"]
+		}
+		{
+			id: "C200000000080156"
+			x: 2.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080156"
+					type: "item"
+					item: {
+						id: "minecraft:writable_book"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080156"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080155"]
+		}
+		{
+			id: "C200000000080157"
+			x: 4.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080157"
+					type: "item"
+					item: {
+						id: "minecraft:enchanting_table"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080157"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000080156"]
+		}
+		{
+			id: "C200000000080158"
+			x: 5.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080158"
+					type: "item"
+					item: {
+						id: "minecraft:lapis_block"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080158"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080157"]
+		}
+		{
+			id: "C200000000080159"
+			x: 7.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080159"
+					type: "item"
+					item: {
+						id: "minecraft:bookshelf"
+						count: 15
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080159"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080158"]
+		}
+		{
+			id: "C20000000008015A"
+			x: 8.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008015A"
+					type: "item"
+					item: {
+						id: "minecraft:golden_apple"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008015A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080159"]
+		}
+		{
+			id: "C20000000008015B"
+			x: 9.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008015B"
+					type: "item"
+					item: {
+						id: "minecraft:ender_pearl"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008015B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000008015A"]
+		}
+		{
+			id: "C20000000008015C"
+			x: 11.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008015C"
+					type: "item"
+					item: {
+						id: "minecraft:brewing_stand"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008015C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000008015B"]
+		}
+		{
+			id: "C20000000008015D"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008015D"
+					type: "item"
+					item: {
+						id: "minecraft:blaze_powder"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008015D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000008015C"]
+		}
+		{
+			id: "C20000000008015E"
+			x: 14.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008015E"
+					type: "item"
+					item: {
+						id: "minecraft:blaze_rod"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008015E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000008015D"]
+		}
+		{
+			id: "C20000000008015F"
+			x: 15.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008015F"
+					type: "item"
+					item: {
+						id: "minecraft:fermented_spider_eye"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008015F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000008015E"]
+		}
+		{
+			id: "C200000000080160"
+			x: 16.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080160"
+					type: "item"
+					item: {
+						id: "minecraft:glowstone_dust"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080160"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000008015F"]
+		}
+		{
+			id: "C200000000080161"
+			x: 18.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080161"
+					type: "item"
+					item: {
+						id: "minecraft:dragon_breath"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080161"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080160"]
+		}
+		{
+			id: "C200000000080162"
+			x: 19.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080162"
+					type: "item"
+					item: {
+						id: "minecraft:totem_of_undying"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080162"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080161"]
+		}
+		{
+			id: "C200000000080163"
+			x: 21.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080163"
+					type: "item"
+					item: {
+						id: "ars_nouveau:source_gem"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080163"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000080162"]
+		}
+		{
+			id: "C200000000080164"
+			x: 22.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080164"
+					type: "item"
+					item: {
+						id: "ars_nouveau:blue_archwood_log"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080164"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080163"]
+		}
+		{
+			id: "C200000000080165"
+			x: 23.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080165"
+					type: "item"
+					item: {
+						id: "ars_nouveau:novice_spell_book"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080165"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080164"]
+		}
+		{
+			id: "C200000000080166"
+			x: 25.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080166"
+					type: "item"
+					item: {
+						id: "ars_nouveau:magebloom"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080166"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080165"]
+		}
+		{
+			id: "C200000000080167"
+			x: 26.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080167"
+					type: "item"
+					item: {
+						id: "ars_nouveau:ritual_brazier"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080167"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000080166"]
+		}
+		{
+			id: "C200000000080168"
+			x: 28.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080168"
+					type: "item"
+					item: {
+						id: "ars_nouveau:arcane_pedestal"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080168"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080167"]
+		}
+		{
+			id: "C200000000080169"
+			x: 29.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000080169"
+					type: "item"
+					item: {
+						id: "ars_nouveau:scribes_table"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080169"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080168"]
+		}
+		{
+			id: "C20000000008016A"
+			x: 30.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008016A"
+					type: "item"
+					item: {
+						id: "ars_nouveau:imbuement_chamber"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008016A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000080169"]
+		}
+		{
+			id: "C20000000008016B"
+			x: 32.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008016B"
+					type: "item"
+					item: {
+						id: "ars_nouveau:source_jar"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008016B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000008016A"]
+		}
+		{
+			id: "C20000000008016C"
+			x: 33.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008016C"
+					type: "item"
+					item: {
+						id: "occultism:dictionary_of_spirits"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008016C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000008016B"]
+		}
+		{
+			id: "C20000000008016D"
+			x: 35.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000008016D"
+					type: "item"
+					item: {
+						id: "occultism:spirit_fire"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008016D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000008016C"]
+		}
+		{
+			id: "C20000000008016E"
+			x: -4.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D20000000008016E"
+					type: "item"
+					item: {
+						id: "occultism:golden_sacrificial_bowl"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008016E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000008016F"
+			x: -2.5d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D20000000008016F"
+					type: "item"
+					item: {
+						id: "naturesaura:nature_altar"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008016F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080170"
+			x: -1.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000080170"
+					type: "item"
+					item: {
+						id: "naturesaura:gold_fiber"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080170"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080171"
+			x: 0.5d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000080171"
+					type: "item"
+					item: {
+						id: "naturesaura:gold_leaf"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080171"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080172"
+			x: 2.0d
+			y: 3.0d
+			tasks: [
+				{
+					id: "D200000000080172"
+					type: "item"
+					item: {
+						id: "naturesaura:infused_iron"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080172"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080173"
+			x: -4.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000080173"
+					type: "item"
+					item: {
+						id: "naturesaura:eye"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080173"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080174"
+			x: -2.5d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000080174"
+					type: "item"
+					item: {
+						id: "naturesaura:token_joy"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080174"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080175"
+			x: -1.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000080175"
+					type: "item"
+					item: {
+						id: "ars_nouveau:spell_parchment"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080175"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080176"
+			x: 0.5d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000080176"
+					type: "item"
+					item: {
+						id: "ars_nouveau:warp_scroll"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080176"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080177"
+			x: 2.0d
+			y: 4.5d
+			tasks: [
+				{
+					id: "D200000000080177"
+					type: "item"
+					item: {
+						id: "ars_nouveau:magebloom_crop"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080177"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080178"
+			x: -4.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D200000000080178"
+					type: "item"
+					item: {
+						id: "ars_nouveau:blank_glyph"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080178"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C200000000080179"
+			x: -2.5d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D200000000080179"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:iron_spell_book"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000080179"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000008017A"
+			x: -1.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D20000000008017A"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:arcane_essence"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008017A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000008017B"
+			x: 0.5d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D20000000008017B"
+					type: "item"
+					item: {
+						id: "irons_spellbooks:common_ink"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008017B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000008017C"
+			x: 2.0d
+			y: 6.0d
+			tasks: [
+				{
+					id: "D20000000008017C"
+					type: "item"
+					item: {
+						id: "minecraft:allium"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008017C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000008017D"
+			x: -4.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D20000000008017D"
+					type: "item"
+					item: {
+						id: "minecraft:echo_shard"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008017D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+		}
+		{
+			id: "C20000000008017E"
+			x: 2.0d
+			y: -2.0d
+			tasks: [
+				{
+					id: "D20000000008017E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:strand_token_sigil"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000008017E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:strand_token_sigil"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000008016D"]
+		}
+	]
+}

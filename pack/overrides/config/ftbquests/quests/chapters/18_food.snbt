@@ -1,0 +1,638 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "18_food"
+	group: "A100000000000004"
+	icon: {
+		id: "farmersdelight:cooking_pot"
+	}
+	id: "B100000000000012"
+	images: [ ]
+	order_index: 17
+	quest_links: [ ]
+	quests: [
+		{
+			id: "C20000000012026E"
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012026E"
+					type: "item"
+					item: {
+						id: "farmersdelight:cooking_pot"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012026E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+		}
+		{
+			id: "C20000000012026F"
+			x: 1.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012026F"
+					type: "item"
+					item: {
+						id: "farmersdelight:skillet"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012026F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000012026E"]
+		}
+		{
+			id: "C200000000120270"
+			x: 2.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120270"
+					type: "item"
+					item: {
+						id: "farmersdelight:stove"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120270"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000012026F"]
+		}
+		{
+			id: "C200000000120271"
+			x: 4.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120271"
+					type: "item"
+					item: {
+						id: "farmersdelight:cutting_board"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120271"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000120270"]
+		}
+		{
+			id: "C200000000120272"
+			x: 5.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120272"
+					type: "item"
+					item: {
+						id: "farmersdelight:wooden_basket"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120272"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120271"]
+		}
+		{
+			id: "C200000000120273"
+			x: 7.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120273"
+					type: "item"
+					item: {
+						id: "farmersdelight:rope"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120273"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120272"]
+		}
+		{
+			id: "C200000000120274"
+			x: 8.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120274"
+					type: "item"
+					item: {
+						id: "farmersdelight:safety_net"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120274"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120273"]
+		}
+		{
+			id: "C200000000120275"
+			x: 9.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120275"
+					type: "item"
+					item: {
+						id: "farmersdelight:rich_soil"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120275"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000120274"]
+		}
+		{
+			id: "C200000000120276"
+			x: 11.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120276"
+					type: "item"
+					item: {
+						id: "farmersdelight:organic_compost"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120276"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120275"]
+		}
+		{
+			id: "C200000000120277"
+			x: 12.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120277"
+					type: "item"
+					item: {
+						id: "farmersdelight:cabbage_rolls"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120277"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120276"]
+		}
+		{
+			id: "C200000000120278"
+			x: 14.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120278"
+					type: "item"
+					item: {
+						id: "farmersdelight:bacon_sandwich"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120278"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120277"]
+		}
+		{
+			id: "C200000000120279"
+			x: 15.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120279"
+					type: "item"
+					item: {
+						id: "farmersdelight:hamburger"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120279"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000120278"]
+		}
+		{
+			id: "C20000000012027A"
+			x: 16.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012027A"
+					type: "item"
+					item: {
+						id: "farmersdelight:chicken_soup"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012027A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120279"]
+		}
+		{
+			id: "C20000000012027B"
+			x: 18.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012027B"
+					type: "item"
+					item: {
+						id: "farmersdelight:beef_stew"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012027B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000012027A"]
+		}
+		{
+			id: "C20000000012027C"
+			x: 19.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012027C"
+					type: "item"
+					item: {
+						id: "farmersdelight:noodle_soup"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012027C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000012027B"]
+		}
+		{
+			id: "C20000000012027D"
+			x: 21.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012027D"
+					type: "item"
+					item: {
+						id: "farmersdelight:apple_pie"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012027D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000012027C"]
+		}
+		{
+			id: "C20000000012027E"
+			x: 22.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012027E"
+					type: "item"
+					item: {
+						id: "farmersdelight:sweet_berry_cheesecake"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012027E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000012027D"]
+		}
+		{
+			id: "C20000000012027F"
+			x: 23.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000012027F"
+					type: "item"
+					item: {
+						id: "farmersdelight:rice"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000012027F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000012027E"]
+		}
+		{
+			id: "C200000000120280"
+			x: 25.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120280"
+					type: "item"
+					item: {
+						id: "farmersdelight:fried_rice"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120280"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C20000000012027F"]
+		}
+		{
+			id: "C200000000120281"
+			x: 26.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120281"
+					type: "item"
+					item: {
+						id: "farmersdelight:dumplings"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120281"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000120280"]
+		}
+		{
+			id: "C200000000120282"
+			x: 28.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120282"
+					type: "item"
+					item: {
+						id: "farmersdelight:hot_cocoa"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120282"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120281"]
+		}
+		{
+			id: "C200000000120283"
+			x: 29.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120283"
+					type: "item"
+					item: {
+						id: "farmersdelight:melon_juice"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120283"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120282"]
+		}
+		{
+			id: "C200000000120284"
+			x: 30.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120284"
+					type: "item"
+					item: {
+						id: "farmersdelight:canvas"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120284"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			dependencies: ["C200000000120283"]
+		}
+		{
+			id: "C200000000120285"
+			x: 32.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000120285"
+					type: "item"
+					item: {
+						id: "farmersdelight:tatami"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000120285"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000120284"]
+		}
+	]
+}

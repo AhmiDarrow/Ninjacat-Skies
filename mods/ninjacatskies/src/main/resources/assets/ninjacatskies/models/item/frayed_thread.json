@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ninjacatskies:item/frayed_thread"
+  }
+}
