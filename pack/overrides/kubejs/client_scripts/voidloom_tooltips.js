@@ -28,6 +28,9 @@ ItemEvents.modifyTooltips(event => {
   ])
   event.add('ninjacatskies:braid_cord', Text.gray('Two braid paths, one cord. Heart of the molecular assembler.'))
   event.add('ninjacatskies:spindle_loom_fragment', Text.gold('Seat it at the Tension Post to Reweave.'))
+  event.add(/productivebees:.*_nest$/, Text.gray('A ring of this around a small flower. Place it on the pad and wait for wings.'))
+  event.add('productivebees:oak_wood_nest', Text.darkGray('Also spawns plain honey bees — the root of every breeding line.'))
+  event.add('minecraft:bee_nest', Text.gray('Planks and flowers. A wild bee will move in; shear it with smoke underneath.'))
   if (Item.exists('tribalpower:pulse_resonator')) {
     event.add('tribalpower:pulse_resonator', Text.gray('Feed coal or charcoal — denser Spirit Pulse for the lattice.'))
     event.add('tribalpower:ley_collector', Text.gray('Draw ambient ley into Pulse near a Drumheart.'))

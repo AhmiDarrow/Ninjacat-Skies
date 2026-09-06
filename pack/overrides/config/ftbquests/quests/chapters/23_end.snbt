@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C200000000170310"
+			id: "C200000000170325"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000170310"
+					id: "D200000000170325"
 					type: "item"
 					item: {
 						id: "minecraft:end_stone"
@@ -27,598 +27,31 @@
 			]
 			rewards: [
 				{
-					id: "E200000000170310"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D100000000170310"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C200000000170311"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000170311"
-					type: "item"
-					item: {
-						id: "minecraft:end_stone_bricks"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170311"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170310"]
-		}
-		{
-			id: "C200000000170312"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000170312"
-					type: "item"
-					item: {
-						id: "minecraft:purpur_block"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170312"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170310"]
-		}
-		{
-			id: "C200000000170313"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D200000000170313"
-					type: "item"
-					item: {
-						id: "minecraft:purpur_pillar"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170313"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170310"]
-		}
-		{
-			id: "C200000000170314"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D200000000170314"
-					type: "item"
-					item: {
-						id: "minecraft:end_rod"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170314"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170310"]
-		}
-		{
-			id: "C200000000170315"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000170315"
-					type: "item"
-					item: {
-						id: "minecraft:chorus_fruit"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170315"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D100000000170315"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C200000000170310"]
-		}
-		{
-			id: "C200000000170316"
-			x: 1.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000170316"
-					type: "item"
-					item: {
-						id: "minecraft:popped_chorus_fruit"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170316"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170315"]
-		}
-		{
-			id: "C200000000170317"
-			x: 1.8d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000170317"
-					type: "item"
-					item: {
-						id: "minecraft:ender_pearl"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170317"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170315"]
-		}
-		{
-			id: "C200000000170318"
-			x: 1.8d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D200000000170318"
-					type: "item"
-					item: {
-						id: "minecraft:ender_eye"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170318"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170315"]
-		}
-		{
-			id: "C200000000170319"
-			x: 1.8d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D200000000170319"
-					type: "item"
-					item: {
-						id: "minecraft:dragon_breath"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170319"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000170315"]
-		}
-		{
-			id: "C20000000017031A"
-			x: 3.6d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000017031A"
-					type: "item"
-					item: {
-						id: "minecraft:dragon_egg"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000017031A"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D10000000017031A"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C200000000170315"]
-		}
-		{
-			id: "C20000000017031B"
-			x: 3.6d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D20000000017031B"
-					type: "item"
-					item: {
-						id: "minecraft:elytra"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000017031B"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031A"]
-			optional: true
-		}
-		{
-			id: "C20000000017031C"
-			x: 3.6d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D20000000017031C"
-					type: "item"
-					item: {
-						id: "minecraft:shulker_shell"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000017031C"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031A"]
-		}
-		{
-			id: "C20000000017031D"
-			x: 3.6d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D20000000017031D"
-					type: "item"
-					item: {
-						id: "minecraft:shulker_box"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000017031D"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031A"]
-		}
-		{
-			id: "C20000000017031E"
-			x: 3.6d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D20000000017031E"
-					type: "item"
-					item: {
-						id: "minecraft:end_crystal"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000017031E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031A"]
-		}
-		{
-			id: "C20000000017031F"
-			x: 5.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000017031F"
-					type: "item"
-					item: {
-						id: "minecraft:ender_chest"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000017031F"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D10000000017031F"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C20000000017031A"]
-		}
-		{
-			id: "C200000000170320"
-			x: 5.4d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000170320"
-					type: "item"
-					item: {
-						id: "minecraft:chorus_flower"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170320"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031F"]
-		}
-		{
-			id: "C200000000170321"
-			x: 5.4d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000170321"
-					type: "item"
-					item: {
-						id: "minecraft:end_portal_frame"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170321"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031F"]
-		}
-		{
-			id: "C200000000170322"
-			x: 5.4d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D200000000170322"
-					type: "item"
-					item: {
-						id: "minecraft:black_concrete"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170322"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031F"]
-		}
-		{
-			id: "C200000000170323"
-			x: 5.4d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D200000000170323"
-					type: "item"
-					item: {
-						id: "minecraft:purple_concrete"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170323"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000017031F"]
-		}
-		{
-			id: "C200000000170324"
-			x: 7.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000170324"
-					type: "item"
-					item: {
-						id: "minecraft:obsidian"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000170324"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D100000000170324"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C20000000017031F"]
-		}
-		{
-			id: "C200000000170325"
-			x: 7.2d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000170325"
-					type: "item"
-					item: {
-						id: "minecraft:crying_obsidian"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E200000000170325"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D100000000170325"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000170324"]
 		}
 		{
 			id: "C200000000170326"
-			x: 7.2d
-			y: 2.6d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000170326"
 					type: "item"
 					item: {
-						id: "minecraft:respawn_anchor"
-						count: 1
+						id: "minecraft:end_stone_bricks"
+						count: 32
 					}
 				}
 			]
@@ -632,19 +65,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000170324"]
+			dependencies: ["C200000000170325"]
 		}
 		{
 			id: "C200000000170327"
-			x: 7.2d
-			y: 3.9d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000170327"
 					type: "item"
 					item: {
-						id: "minecraft:totem_of_undying"
-						count: 1
+						id: "minecraft:purpur_block"
+						count: 32
 					}
 				}
 			]
@@ -658,20 +91,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000170324"]
-			optional: true
+			dependencies: ["C200000000170325"]
 		}
 		{
 			id: "C200000000170328"
-			x: 7.2d
-			y: 5.2d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000170328"
 					type: "item"
 					item: {
-						id: "minecraft:nether_star"
-						count: 1
+						id: "minecraft:purpur_pillar"
+						count: 8
 					}
 				}
 			]
@@ -685,19 +117,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000170324"]
+			dependencies: ["C200000000170325"]
 		}
 		{
 			id: "C200000000170329"
-			x: 9.0d
-			y: 0.0d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000170329"
 					type: "item"
 					item: {
-						id: "minecraft:beacon"
-						count: 1
+						id: "minecraft:end_rod"
+						count: 8
 					}
 				}
 			]
@@ -707,28 +139,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D100000000170329"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C200000000170324"]
+			dependencies: ["C200000000170325"]
 		}
 		{
 			id: "C20000000017032A"
-			x: 9.0d
-			y: 1.3d
+			x: 1.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D20000000017032A"
 					type: "item"
 					item: {
-						id: "minecraft:conduit"
-						count: 1
+						id: "minecraft:chorus_fruit"
+						count: 16
 					}
 				}
 			]
@@ -738,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D10000000017032A"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000170329"]
+			dependencies: ["C200000000170325"]
 		}
 		{
 			id: "C20000000017032B"
-			x: 9.0d
-			y: 2.6d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000017032B"
 					type: "item"
 					item: {
-						id: "minecraft:nautilus_shell"
-						count: 8
+						id: "minecraft:popped_chorus_fruit"
+						count: 16
 					}
 				}
 			]
@@ -768,19 +200,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000170329"]
+			dependencies: ["C20000000017032A"]
 		}
 		{
 			id: "C20000000017032C"
-			x: 9.0d
-			y: 3.9d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000017032C"
 					type: "item"
 					item: {
-						id: "minecraft:trident"
-						count: 1
+						id: "minecraft:ender_pearl"
+						count: 32
 					}
 				}
 			]
@@ -794,7 +226,575 @@
 					}
 				}
 			]
-			dependencies: ["C200000000170329"]
+			dependencies: ["C20000000017032A"]
+		}
+		{
+			id: "C20000000017032D"
+			x: 1.8d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D20000000017032D"
+					type: "item"
+					item: {
+						id: "minecraft:ender_eye"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017032D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017032A"]
+		}
+		{
+			id: "C20000000017032E"
+			x: 1.8d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D20000000017032E"
+					type: "item"
+					item: {
+						id: "minecraft:dragon_breath"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017032E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017032A"]
+		}
+		{
+			id: "C20000000017032F"
+			x: 3.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000017032F"
+					type: "item"
+					item: {
+						id: "minecraft:dragon_egg"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017032F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D10000000017032F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C20000000017032A"]
+		}
+		{
+			id: "C200000000170330"
+			x: 3.6d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D200000000170330"
+					type: "item"
+					item: {
+						id: "minecraft:elytra"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170330"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017032F"]
+			optional: true
+		}
+		{
+			id: "C200000000170331"
+			x: 3.6d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D200000000170331"
+					type: "item"
+					item: {
+						id: "minecraft:shulker_shell"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170331"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017032F"]
+		}
+		{
+			id: "C200000000170332"
+			x: 3.6d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D200000000170332"
+					type: "item"
+					item: {
+						id: "minecraft:shulker_box"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170332"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017032F"]
+		}
+		{
+			id: "C200000000170333"
+			x: 3.6d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D200000000170333"
+					type: "item"
+					item: {
+						id: "minecraft:end_crystal"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170333"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017032F"]
+		}
+		{
+			id: "C200000000170334"
+			x: 5.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000170334"
+					type: "item"
+					item: {
+						id: "minecraft:ender_chest"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170334"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D100000000170334"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C20000000017032F"]
+		}
+		{
+			id: "C200000000170335"
+			x: 5.4d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D200000000170335"
+					type: "item"
+					item: {
+						id: "minecraft:chorus_flower"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170335"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170334"]
+		}
+		{
+			id: "C200000000170336"
+			x: 5.4d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D200000000170336"
+					type: "item"
+					item: {
+						id: "minecraft:end_portal_frame"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170336"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170334"]
+		}
+		{
+			id: "C200000000170337"
+			x: 5.4d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D200000000170337"
+					type: "item"
+					item: {
+						id: "minecraft:black_concrete"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170337"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170334"]
+		}
+		{
+			id: "C200000000170338"
+			x: 5.4d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D200000000170338"
+					type: "item"
+					item: {
+						id: "minecraft:purple_concrete"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170338"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170334"]
+		}
+		{
+			id: "C200000000170339"
+			x: 7.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000170339"
+					type: "item"
+					item: {
+						id: "minecraft:obsidian"
+						count: 32
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170339"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D100000000170339"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C200000000170334"]
+		}
+		{
+			id: "C20000000017033A"
+			x: 7.2d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D20000000017033A"
+					type: "item"
+					item: {
+						id: "minecraft:crying_obsidian"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017033A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170339"]
+		}
+		{
+			id: "C20000000017033B"
+			x: 7.2d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D20000000017033B"
+					type: "item"
+					item: {
+						id: "minecraft:respawn_anchor"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017033B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170339"]
+		}
+		{
+			id: "C20000000017033C"
+			x: 7.2d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D20000000017033C"
+					type: "item"
+					item: {
+						id: "minecraft:totem_of_undying"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017033C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170339"]
+			optional: true
+		}
+		{
+			id: "C20000000017033D"
+			x: 7.2d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D20000000017033D"
+					type: "item"
+					item: {
+						id: "minecraft:nether_star"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017033D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000170339"]
+		}
+		{
+			id: "C20000000017033E"
+			x: 9.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000017033E"
+					type: "item"
+					item: {
+						id: "minecraft:beacon"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017033E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D10000000017033E"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C200000000170339"]
+		}
+		{
+			id: "C20000000017033F"
+			x: 9.0d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D20000000017033F"
+					type: "item"
+					item: {
+						id: "minecraft:conduit"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000017033F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017033E"]
+		}
+		{
+			id: "C200000000170340"
+			x: 9.0d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D200000000170340"
+					type: "item"
+					item: {
+						id: "minecraft:nautilus_shell"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170340"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017033E"]
+		}
+		{
+			id: "C200000000170341"
+			x: 9.0d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D200000000170341"
+					type: "item"
+					item: {
+						id: "minecraft:trident"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000170341"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000017033E"]
 			optional: true
 		}
 	]

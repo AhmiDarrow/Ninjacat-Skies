@@ -134,6 +134,9 @@ def to_snbt(obj, indent=0) -> str:
 
 def write_chapter(filename: str, chapter_id: str, group: str, order: int, icon: str, quests: list[dict], title: str) -> None:
     lang[f"chapter.{chapter_id}.title"] = title
+    if order + 1 in CHAPTER_SUBTITLES:
+        lang[f"chapter.{chapter_id}.subtitle"] = CHAPTER_SUBTITLES[order + 1]
+    quests = list(quests) + secret_quest(order + 1, -3.0, -2.0)
     quests = finalize_chapter(order + 1, quests)
     body = {
         "default_hide_dependency_lines": False,
@@ -436,7 +439,7 @@ KNOT_BEATS = {
     "claw": ["Blueprint Package", "Pick Blueprint", "Iron Chestplate", "Obsidian Frame", "Enchanting Table"],
     "spark": ["Hum: Bone Chime", "Hum: Drumheart", "Hum: Pulse Cell", "Hum: Pulse Resonator"],
     "clock": ["Water Wheel", "Mechanical Press", "Mechanical Mixer", "Encased Fan", "Precision Mechanism"],
-    "swarm": ["Beehive", "Advanced Beehive", "Centrifuge", "Incubator", "Imperium"],
+    "swarm": ["Ring of Oak", "Beehive", "Advanced Beehive", "Centrifuge", "Incubator", "Imperium"],
     "sigil": ["Braid Cord", "Brewing Stand", "Novice Spell Book", "Occultism Dictionary"],
     "spindle": ["Splice a Braid", "Digital Loom", "Gate Drum", "March Stone"],
 }
@@ -447,7 +450,7 @@ KNOT_TEXT = {
     "claw": ("Claw Knot", "Edge", ["Plans, iron on your back, a door out.", "Tension the Strand: the Edge-walkers answer. The braid opens."]),
     "spark": ("Spark Knot", "Hum", ["A drum struck, a Pulse held, a resonator burning.", "Tension the Strand: the Drumhearts answer."]),
     "clock": ("Clock Knot", "Pattern", ["A wheel, a press, a mixer, a fan, a clockwork heart.", "Tension the Strand: the Pattern-weavers answer."]),
-    "swarm": ("Swarm Knot", "Colony", ["Hives, a centrifuge, an incubator, essence fields.", "Tension the Strand: the Colony-keepers answer."]),
+    "swarm": ("Swarm Knot", "Colony", ["A nest you built, a hive you moved, a centrifuge, an incubator, essence fields.", "Tension the Strand: the Colony-keepers answer."]),
     "sigil": ("Sigil Knot", "Bind", ["A braid spun, potions bottled, spells and spirits called.", "Tension the Strand: the Seal-carvers answer."]),
     "spindle": ("Spindle Knot", "Reweave", ["A braid, a digital loom, a gate, a stone from the March.", "Tension the ninth Strand. Then the Fragment, then the Post."]),
 }
@@ -486,6 +489,46 @@ def reward_xp_levels(n):
     return {"type": "xp_levels", "xp_levels": n}
 
 
+REWARD_TABLE_IDS = {name: hid(0xF100000000000000 + i + 1) for i, name in enumerate(
+    ["soil", "stone", "sprout", "claw", "spark", "clock", "swarm", "sigil", "spindle", "reweave"])}
+
+
+def reward_crate(name):
+    """A Steward Cache loot crate — FTB Quests reward table backed by the mod's vanilla loot table."""
+    return {"type": "loot", "table_id": REWARD_TABLE_IDS[name]}
+
+
+def write_reward_tables():
+    folder = QUESTS / "reward_tables"
+    folder.mkdir(parents=True, exist_ok=True)
+    tribes = {"soil": "Pad-keepers", "stone": "Grit-singers", "sprout": "Rootbinders", "claw": "Edge-walkers", "spark": "Drumhearts",
+              "clock": "Pattern-weavers", "swarm": "Colony-keepers", "sigil": "Seal-carvers", "spindle": "Loom-stitchers", "reweave": "Nine Tribes"}
+    icons = {"soil": "minecraft:oak_sapling", "stone": "voidloom:void_yarn", "sprout": "mysticalagriculture:inferium_essence",
+             "claw": "minecraft:iron_ingot", "spark": "minecraft:redstone", "clock": "create:cogwheel", "swarm": "minecraft:honeycomb",
+             "sigil": "minecraft:amethyst_shard", "spindle": "ae2:fluix_crystal", "reweave": "ninjacatskies:spindle_loom_fragment"}
+    colors = {"soil": 0x6B8E3A, "stone": 0x8A8580, "sprout": 0x5AAF5A, "claw": 0x8C8C96, "spark": 0xD4A84B, "clock": 0xC87A3A,
+              "swarm": 0xE6C478, "sigil": 0x8A5FB8, "spindle": 0x3D7A7A, "reweave": 0xE8E0D5}
+    for name, tid in REWARD_TABLE_IDS.items():
+        body = {
+            "id": tid,
+            "title": f"Steward Cache: {tribes[name]}",
+            "icon": {"id": icons[name]},
+            "loot_size": 1,
+            "hide_tooltip": False,
+            "use_title": True,
+            "loot_table_id": f"ninjacatskies:steward_cache/{name}",
+            "loot_crate": {
+                "string_id": f"steward_{name}",
+                "item_name": f"Steward Cache ({tribes[name]})",
+                "color": colors[name],
+                "glow": True,
+                "drops": {"passive": 0, "monster": 0, "boss": 0},
+            },
+            "rewards": [],
+        }
+        (folder / f"steward_cache_{name}.snbt").write_text(to_snbt(body) + "\n", encoding="utf-8")
+
+
 def reward_loot(table):
     """Steward Cache: a vanilla loot table handed over by command (FTB's own 'loot' type wants a RewardTable)."""
     return {"type": "command", "command": f"loot give @p loot {table}", "silent": True, "elevate_perms": True}
@@ -506,7 +549,7 @@ def knot_finale(strand_i, token, main, x, y):
         task={"type": "checkmark"},
         rewards=[
             reward_item(f"ninjacatskies:strand_token_{token}", 1),
-            reward_loot(f"ninjacatskies:steward_cache/{token}"),
+            reward_crate(token),
             reward_xp_levels(3),
         ],
         deps=deps,
@@ -527,6 +570,44 @@ def knot_finale(strand_i, token, main, x, y):
         shape="diamond",
     )
     return [knot, seat]
+
+
+SECRETS = {
+    1: ("Something Came Up", ["A zombie on a pad with no caves. The void sends its regards.", "Light the edges."], {"type": "kill", "entity": "minecraft:zombie", "value": 1}, [reward_item("minecraft:torch", 16), reward_item("ninjacatskies:codex_page", 1)]),
+    2: ("Boom, Later", ["A creeper, dealt with. Gunpowder is worth more than the fright."], {"type": "kill", "entity": "minecraft:creeper", "value": 3}, [reward_item("minecraft:gunpowder", 8), reward_xp_levels(1)]),
+    3: ("Wrong Potato", ["Every Rootbinder pulls one eventually.", "Do not eat it. Do not throw it away either."], {"type": "item", "item": {"id": "minecraft:poisonous_potato", "count": 1}}, [reward_item("minecraft:golden_carrot", 4)]),
+    4: ("Edge of the Edge", ["Something tall looked back. Edge-walkers called them door-wardens."], {"type": "kill", "entity": "minecraft:enderman", "value": 1}, [reward_item("minecraft:ender_pearl", 2), reward_xp_levels(2)]),
+    5: ("Bottled Trouble", ["A witch, on your pad, at night. The drums did not warn you."], {"type": "kill", "entity": "minecraft:witch", "value": 1}, [reward_item("minecraft:glowstone_dust", 8), reward_item("minecraft:redstone", 16)]),
+    6: ("Rattle in the Gears", ["Twenty skeletons. The pattern holds if you keep the lights on."], {"type": "kill", "entity": "minecraft:skeleton", "value": 20}, [reward_item("minecraft:bone_block", 8), reward_xp_levels(2)]),
+    7: ("Regret", ["You killed a bee.", "The Colony-keepers would like a word. Here is a bottle; think about it."], {"type": "kill", "entity": "minecraft:bee", "value": 1}, [reward_item("minecraft:honey_bottle", 1)]),
+    8: ("Old Gold", ["An apple the stewards never ate. Neither should you, probably."], {"type": "item", "item": {"id": "minecraft:enchanted_golden_apple", "count": 1}}, [reward_xp_levels(5), reward_item("ninjacatskies:codex_page", 1)]),
+    9: ("A Star, Somehow", ["A wither, on a pad, in the sky. The Loom-stitchers would have been impressed and then furious."], {"type": "item", "item": {"id": "minecraft:nether_star", "count": 1}}, [reward_xp_levels(10), reward_item("ninjacatskies:frayed_thread", 24)]),
+}
+
+CHAPTER_SUBTITLES = {
+    1: ["Wake — survive, claim the pad, let the Codex wake."],
+    2: ["Recover — pull the fallen world back into matter."],
+    3: ["Root — grow anchors so the pad stops fraying."],
+    4: ["Edge — kit up and leave the pad on purpose."],
+    5: ["Hum — rhythm and pulse before wires."],
+    6: ["Pattern — a factory as a song that carries itself."],
+    7: ["Colony — keep something alive that keeps something else alive."],
+    8: ["Bind — seals, rites, and two braid paths in a cord."],
+    9: ["Reweave — the digital loom, the March, the Fragment."],
+    15: ["Teams, the Hall, the Post, and the Fray."],
+    16: ["Spend Thread. No dependencies, no order."],
+    25: ["Every nest is a ring of something around a flower."],
+}
+
+
+def secret_quest(strand_i, x, y):
+    if strand_i not in SECRETS:
+        return []
+    title, desc, task, rewards = SECRETS[strand_i]
+    q = task_quest(strand_i, title=title, desc=desc, task=task, rewards=rewards, x=x, y=y, shape="octagon")
+    q["invisible"] = True
+    q["invisible_until_tasks"] = 1
+    return [q]
 
 
 def apply_voice(desc):
@@ -1031,46 +1112,71 @@ def build_clock() -> list[dict]:
 
 def build_swarm() -> list[dict]:
     s = 7
+    # Colony: you cannot find a bee in the void, so you make somewhere a bee wants to be.
+    wings = task_quest(
+        s, title="First Wings", subtitle="Colony",
+        desc=["Place the oak nest on the pad and wait. Something with wings will come out of the wood.", "Look at it. That counts."],
+        task={"type": "observation", "observe_type": 5, "timer": 0, "to_observe": "minecraft:bee"},
+        rewards=[reward_item("minecraft:shears", 1), reward_item("ninjacatskies:frayed_thread", 4), reward_xp_levels(1)],
+        x=1.8, y=-1.4, shape="diamond",
+    )
     main = chain(s, [
-        ("Honeycomb", "minecraft:honeycomb", 16, "Colonies in the wind."),
-        ("Beehive", "minecraft:beehive", 1, "Home for workers."),
-        ("Honey Bottle", "minecraft:honey_bottle", 8, "Sweet fuel."),
-        ("Honey Treat", "productivebees:honey_treat", 8, "Bee candy."),
-        ("Advanced Beehive", "productivebees:advanced_oak_beehive", 1, "Productive home."),
-        ("Expansion Box", "productivebees:expansion_box_oak", 1, "More room."),
-        ("Bottler", "productivebees:bottler", 1, "Bottle the yield."),
-        ("Centrifuge", "productivebees:centrifuge", 1, "Spin combs."),
-        ("Powered Centrifuge", "productivebees:powered_centrifuge", 1, "FE centrifuge."),
-        ("Feed Upgrade", "productivebees:honey_treat", 16, "Feed the colony well."),
-        ("Catcher", "productivebees:catcher", 1, "Secure bees."),
-        ("Incubator", "productivebees:incubator", 1, "Hatch genes."),
-        ("Gene Indexer", "productivebees:gene_indexer", 1, "Sort traits."),
-        ("Diamond Seeds", "mysticalagriculture:diamond_seeds", 1, "Late crop."),
-        ("Redstone Seeds", "mysticalagriculture:redstone_seeds", 1, "Dust farm."),
-        ("Lapis Seeds", "mysticalagriculture:lapis_lazuli_seeds", 1, "Blue farm."),
-        ("Nether Quartz Seeds", "mysticalagriculture:nether_quartz_seeds", 1, "Quartz leaves."),
-        ("Glowstone Seeds", "mysticalagriculture:glowstone_seeds", 1, "Glow farm."),
+        ("Ring of Oak", "productivebees:oak_wood_nest", 1, "Eight oak logs around a small flower. Place it; the wood remembers wings."),
+        ("A Flower to Argue Over", "minecraft:dandelion", 8, "Bone meal on grass. Bees will not stay where nothing blooms."),
+        ("Bee Nest", "minecraft:bee_nest", 1, "Planks and flowers — a home a wild bee will move into."),
+        ("Honeycomb", "minecraft:honeycomb", 16, "Shears on a full nest. Stand behind a campfire's smoke and nobody gets stung."),
+        ("Beehive", "minecraft:beehive", 1, "Three comb and planks. Now the colony is yours to move."),
+        ("Honey Bottle", "minecraft:honey_bottle", 8, "Bottle from a full hive. Sweet, and the first thing bees make that money cannot."),
+        ("Honey Treat", "productivebees:honey_treat", 8, "Honey and sugar: bee candy. Feed a bee to nudge breeding."),
+        ("Ring of Grit", "productivebees:gravel_nest", 1, "Gravel around a flower. Mining bees and diggers like the dust."),
+        ("Ring of Coarse Dirt", "productivebees:coarse_dirt_nest", 1, "Coarse dirt around a flower. Leafcutters and ashy miners."),
+        ("Ring of Stone", "productivebees:stone_nest", 1, "Stone around a flower. Mason bees, and diggers that eat rock."),
+        ("Advanced Beehive", "productivebees:advanced_oak_beehive", 1, "A productive home: bees inside, combs out the front."),
+        ("Expansion Box", "productivebees:expansion_box_oak", 1, "Room for three more. Colonies like company."),
+        ("Bottler", "productivebees:bottler", 1, "Bottles the yield without a hand on it."),
+        ("Centrifuge", "productivebees:centrifuge", 1, "Spins combs into everything they hide."),
+        ("Powered Centrifuge", "productivebees:powered_centrifuge", 1, "The same, faster, on power."),
+        ("Catcher", "productivebees:catcher", 1, "Scoops wandering bees so the swarm stays on the pad."),
+        ("Bee Cage", "productivebees:bee_cage", 4, "Carry a bee like a lantern."),
+        ("Incubator", "productivebees:incubator", 1, "Hatch the genes you want."),
+        ("Breeding Chamber", "productivebees:breeding_chamber", 1, "Pair two colonies on purpose."),
+        ("Gene Indexer", "productivebees:gene_indexer", 1, "Sort traits like seed."),
+        ("Feed Upgrade", "productivebees:honey_treat", 16, "A stack of treats: the colony's payroll."),
+        ("Diamond Seeds", "mysticalagriculture:diamond_seeds", 1, "Deep crops: the other half of Colony."),
+        ("Redstone Seeds", "mysticalagriculture:redstone_seeds", 1, "Dust from a row instead of a mesh."),
+        ("Lapis Seeds", "mysticalagriculture:lapis_lazuli_seeds", 1, "Blue from leaves."),
+        ("Nether Quartz Seeds", "mysticalagriculture:nether_quartz_seeds", 1, "Quartz without the Nether."),
+        ("Glowstone Seeds", "mysticalagriculture:glowstone_seeds", 1, "Light you can plant."),
         ("Obsidian Seeds", "mysticalagriculture:obsidian_seeds", 1, "Hard leaves."),
-        ("Imperium", "mysticalagriculture:imperium_essence", 16, "High tier essence."),
+        ("Imperium", "mysticalagriculture:imperium_essence", 16, "High essence. The fields are industry now."),
         ("Supremium", "mysticalagriculture:supremium_essence", 8, "Peak green."),
-        ("Honey Block", "minecraft:honey_block", 8, "Swarm surplus."),
+        ("Honey Block", "minecraft:honey_block", 8, "Swarm surplus, stacked."),
     ])
+    hums = task_quest(
+        s, title="Something New Hums", subtitle="Colony",
+        desc=["A bee that did not exist before you built the nest.", "Mining, mason, digger, carpenter — look at one."],
+        task={"type": "observation", "observe_type": 5, "timer": 0, "to_observe": "productivebees:configurable_bee"},
+        rewards=[reward_item("productivebees:honey_treat", 8), reward_xp_levels(2)],
+        x=5.4, y=-1.4, shape="diamond",
+    )
     side = grid_optional(s, [
-        ("Bee Cage", "productivebees:bee_cage", 4, "Cage bees for moving hives."),
-        ("Honey Generator", "productivebees:honey_generator", 1, "Burn honey."),
-        ("Jar", "productivebees:jar_oak", 1, "Display bee."),
-        ("Spawn Egg Bee", "minecraft:bee_spawn_egg", 1, "If available."),
-        ("Shears", "minecraft:shears", 1, "Comb harvest."),
-        ("Campfire", "minecraft:campfire", 1, "Calm hive."),
+        ("Ring of Sand", "productivebees:sand_nest", 1, "Sand around a flower. Ashy and chocolate miners."),
+        ("Ring of Reed", "productivebees:sugar_cane_nest", 1, "Sugar cane around a flower. Reed bees and masons."),
+        ("Ring of Slime", "productivebees:slimy_nest", 1, "Slime blocks around a flower. Guess."),
+        ("Ring of Hay", "productivebees:bumble_bee_nest", 1, "Hay around a flower. Bumble bees, and plain bees too."),
+        ("Ring of Snow", "productivebees:snow_nest", 1, "Snow around a flower. Sweat bees, oddly."),
+        ("Honey Generator", "productivebees:honey_generator", 1, "Burns honey for power. The Drumhearts would call it cheating."),
+        ("Jar", "productivebees:jar_oak", 1, "A bee on a shelf. Decorative, and a little sad."),
+        ("Campfire", "minecraft:campfire", 1, "Smoke under a hive keeps the harvest calm."),
         ("Flowering Azalea", "minecraft:flowering_azalea", 4, "Bee food."),
-        ("Sunflower", "minecraft:sunflower", 4, "Bee food."),
+        ("Sunflower", "minecraft:sunflower", 4, "Bee food that faces the same way you do."),
         ("Lilac", "minecraft:lilac", 4, "Bee food."),
         ("Rose Bush", "minecraft:rose_bush", 4, "Bee food."),
         ("Peony", "minecraft:peony", 4, "Bee food."),
         ("Orange Tulip", "minecraft:orange_tulip", 8, "Bee food."),
     ], origin=(-3.5, 7.5), cols=6)
     finale = knot_finale(s, "swarm", main, 12.0, -2.0)
-    return main + side + finale
+    return main + [wings, hums] + side + finale
 
 
 def build_sigil() -> list[dict]:
@@ -1206,7 +1312,7 @@ def build_spindle() -> list[dict]:
         subtitle="The cut, closed",
         desc=["Seat the Fragment at the Tension Post.", "Nine tribes, one thread. Go and see what the March kept for you."],
         task={"type": "advancement", "advancement": "ninjacatskies:reweave", "criterion": ""},
-        rewards=[reward_loot("ninjacatskies:steward_cache/reweave"), reward_xp_levels(10)],
+        rewards=[reward_crate("reweave"), reward_xp_levels(10)],
         deps=[fragment["id"]],
         x=16.8,
         y=-2.0,
@@ -1737,6 +1843,16 @@ def build_crops_side() -> list[dict]:
 def build_bees_side() -> list[dict]:
     s = 25
     main = chain(s, [
+        ("Nest Locator", "productivebees:nest_locator", 1, "Points at nests you placed and forgot about."),
+        ("Ring of Birch", "productivebees:birch_wood_nest", 1, "Birch logs around a flower: carpenter bees of a different colour."),
+        ("Ring of Spruce", "productivebees:spruce_wood_nest", 1, "Spruce around a flower: resin bees."),
+        ("Ring of Dark Oak", "productivebees:dark_oak_wood_nest", 1, "Dark oak around a flower: blue-banded bees."),
+        ("Ring of Glowstone", "productivebees:glowstone_nest", 1, "Glowstone around a flower: bees that light up."),
+        ("Ring of Quartz", "productivebees:nether_quartz_nest", 1, "Quartz around a flower: crystalline bees, the root of the ore lines."),
+        ("Ring of Nether Brick", "productivebees:nether_brick_nest", 1, "Nether bricks around a flower: magmatic."),
+        ("Ring of Soul Sand", "productivebees:soul_sand_nest", 1, "Soul sand around a flower: ghostly."),
+        ("Ring of End Stone", "productivebees:end_stone_nest", 1, "End stone around a flower: ender bees, and the far end of breeding."),
+        ("Ring of Obsidian", "productivebees:obsidian_nest", 1, "Obsidian around a flower: draconic. Do not ask what it eats."),
         ("Advanced Oak Hive", "productivebees:advanced_oak_beehive", 1, "Serious swarm home."),
         ("Expansion Box", "productivebees:expansion_box_oak", 2, "More bee rooms."),
         ("Jar Oak", "productivebees:jar_oak", 1, "Catch and keep."),
@@ -2329,6 +2445,7 @@ def write_groups():
 
 def main() -> None:
     write_groups()
+    write_reward_tables()
     write_chapter("01_soil", CH["soil"], GROUP_SURVIVAL, 0, "minecraft:dirt", build_soil(), "Strand: Soil")
     write_chapter("02_stone", CH["stone"], GROUP_SURVIVAL, 1, "minecraft:cobblestone", build_stone(), "Strand: Stone")
     write_chapter("03_sprout", CH["sprout"], GROUP_SURVIVAL, 2, "minecraft:wheat_seeds", build_sprout(), "Strand: Sprout")

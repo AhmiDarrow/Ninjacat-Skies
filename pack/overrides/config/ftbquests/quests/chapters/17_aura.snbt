@@ -12,582 +12,15 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C20000000011025B"
-			x: 0.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000011025B"
-					type: "item"
-					item: {
-						id: "naturesaura:eye"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011025B"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D10000000011025B"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C20000000011025C"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D20000000011025C"
-					type: "item"
-					item: {
-						id: "naturesaura:gold_fiber"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011025C"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011025B"]
-		}
-		{
-			id: "C20000000011025D"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D20000000011025D"
-					type: "item"
-					item: {
-						id: "naturesaura:gold_leaf"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011025D"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011025B"]
-		}
-		{
-			id: "C20000000011025E"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D20000000011025E"
-					type: "item"
-					item: {
-						id: "naturesaura:golden_leaves"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011025E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011025B"]
-		}
-		{
-			id: "C20000000011025F"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D20000000011025F"
-					type: "item"
-					item: {
-						id: "naturesaura:wood_stand"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011025F"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011025B"]
-		}
-		{
-			id: "C200000000110260"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000110260"
-					type: "item"
-					item: {
-						id: "naturesaura:nature_altar"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110260"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D100000000110260"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C20000000011025B"]
-		}
-		{
-			id: "C200000000110261"
-			x: 1.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000110261"
-					type: "item"
-					item: {
-						id: "naturesaura:infused_iron"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110261"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110260"]
-		}
-		{
-			id: "C200000000110262"
-			x: 1.8d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000110262"
-					type: "item"
-					item: {
-						id: "naturesaura:ancient_bark"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110262"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110260"]
-		}
-		{
-			id: "C200000000110263"
-			x: 1.8d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D200000000110263"
-					type: "item"
-					item: {
-						id: "naturesaura:token_joy"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110263"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110260"]
-		}
-		{
-			id: "C200000000110264"
-			x: 1.8d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D200000000110264"
-					type: "item"
-					item: {
-						id: "naturesaura:token_fear"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110264"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110260"]
-		}
-		{
-			id: "C200000000110265"
-			x: 3.6d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D200000000110265"
-					type: "item"
-					item: {
-						id: "naturesaura:token_anger"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110265"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D100000000110265"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C200000000110260"]
-		}
-		{
-			id: "C200000000110266"
-			x: 3.6d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000110266"
-					type: "item"
-					item: {
-						id: "naturesaura:token_sorrow"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110266"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110265"]
-		}
-		{
-			id: "C200000000110267"
-			x: 3.6d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000110267"
-					type: "item"
-					item: {
-						id: "naturesaura:calling_spirit"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110267"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110265"]
-		}
-		{
-			id: "C200000000110268"
-			x: 3.6d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D200000000110268"
-					type: "item"
-					item: {
-						id: "naturesaura:birth_spirit"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110268"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110265"]
-		}
-		{
-			id: "C200000000110269"
-			x: 3.6d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D200000000110269"
-					type: "item"
-					item: {
-						id: "naturesaura:aura_trove"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000110269"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C200000000110265"]
-		}
-		{
-			id: "C20000000011026A"
-			x: 5.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D20000000011026A"
-					type: "item"
-					item: {
-						id: "naturesaura:generator_limit_remover"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011026A"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D10000000011026A"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C200000000110265"]
-		}
-		{
-			id: "C20000000011026B"
-			x: 5.4d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D20000000011026B"
-					type: "item"
-					item: {
-						id: "naturesaura:eye_improved"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011026B"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011026A"]
-		}
-		{
-			id: "C20000000011026C"
-			x: 5.4d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D20000000011026C"
-					type: "item"
-					item: {
-						id: "naturesaura:crushing_catalyst"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011026C"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011026A"]
-		}
-		{
-			id: "C20000000011026D"
-			x: 5.4d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D20000000011026D"
-					type: "item"
-					item: {
-						id: "naturesaura:conversion_catalyst"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011026D"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011026A"]
-		}
-		{
-			id: "C20000000011026E"
-			x: 5.4d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D20000000011026E"
-					type: "item"
-					item: {
-						id: "naturesaura:depth_ingot"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011026E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C20000000011026A"]
-		}
-		{
-			id: "C20000000011026F"
-			x: 0.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "D20000000011026F"
-					type: "item"
-					item: {
-						id: "naturesaura:farming_stencil"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E20000000011026F"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			optional: true
-			dependencies: ["C20000000011025C"]
-			hide_until_deps_complete: true
-		}
-		{
 			id: "C200000000110270"
-			x: 1.5d
-			y: 7.5d
+			x: 0.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000110270"
 					type: "item"
 					item: {
-						id: "naturesaura:projectile_generator"
+						id: "naturesaura:eye"
 						count: 1
 					}
 				}
@@ -598,25 +31,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D100000000110270"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
-			dependencies: ["C20000000011025C"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000110271"
-			x: 3.0d
-			y: 7.5d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000110271"
 					type: "item"
 					item: {
-						id: "naturesaura:flower_generator"
-						count: 1
+						id: "naturesaura:gold_fiber"
+						count: 16
 					}
 				}
 			]
@@ -626,25 +61,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C20000000011025C"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000110270"]
 		}
 		{
 			id: "C200000000110272"
-			x: 4.5d
-			y: 7.5d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000110272"
 					type: "item"
 					item: {
-						id: "naturesaura:oak_generator"
-						count: 1
+						id: "naturesaura:gold_leaf"
+						count: 16
 					}
 				}
 			]
@@ -654,25 +87,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C20000000011025C"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000110270"]
 		}
 		{
 			id: "C200000000110273"
-			x: 6.0d
-			y: 7.5d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000110273"
 					type: "item"
 					item: {
-						id: "naturesaura:end_flower"
-						count: 1
+						id: "naturesaura:golden_leaves"
+						count: 8
 					}
 				}
 			]
@@ -682,24 +113,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C20000000011025C"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000110270"]
 		}
 		{
 			id: "C200000000110274"
-			x: 7.5d
-			y: 7.5d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000110274"
 					type: "item"
 					item: {
-						id: "naturesaura:spawn_lamp"
+						id: "naturesaura:wood_stand"
 						count: 1
 					}
 				}
@@ -710,12 +139,583 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000110270"]
+		}
+		{
+			id: "C200000000110275"
+			x: 1.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000110275"
+					type: "item"
+					item: {
+						id: "naturesaura:nature_altar"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110275"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D100000000110275"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C200000000110270"]
+		}
+		{
+			id: "C200000000110276"
+			x: 1.8d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D200000000110276"
+					type: "item"
+					item: {
+						id: "naturesaura:infused_iron"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110276"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000110275"]
+		}
+		{
+			id: "C200000000110277"
+			x: 1.8d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D200000000110277"
+					type: "item"
+					item: {
+						id: "naturesaura:ancient_bark"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110277"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000110275"]
+		}
+		{
+			id: "C200000000110278"
+			x: 1.8d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D200000000110278"
+					type: "item"
+					item: {
+						id: "naturesaura:token_joy"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110278"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000110275"]
+		}
+		{
+			id: "C200000000110279"
+			x: 1.8d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D200000000110279"
+					type: "item"
+					item: {
+						id: "naturesaura:token_fear"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110279"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000110275"]
+		}
+		{
+			id: "C20000000011027A"
+			x: 3.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000011027A"
+					type: "item"
+					item: {
+						id: "naturesaura:token_anger"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000011027A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D10000000011027A"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C200000000110275"]
+		}
+		{
+			id: "C20000000011027B"
+			x: 3.6d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D20000000011027B"
+					type: "item"
+					item: {
+						id: "naturesaura:token_sorrow"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000011027B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027A"]
+		}
+		{
+			id: "C20000000011027C"
+			x: 3.6d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D20000000011027C"
+					type: "item"
+					item: {
+						id: "naturesaura:calling_spirit"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000011027C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027A"]
+		}
+		{
+			id: "C20000000011027D"
+			x: 3.6d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D20000000011027D"
+					type: "item"
+					item: {
+						id: "naturesaura:birth_spirit"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000011027D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027A"]
+		}
+		{
+			id: "C20000000011027E"
+			x: 3.6d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D20000000011027E"
+					type: "item"
+					item: {
+						id: "naturesaura:aura_trove"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000011027E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027A"]
+		}
+		{
+			id: "C20000000011027F"
+			x: 5.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000011027F"
+					type: "item"
+					item: {
+						id: "naturesaura:generator_limit_remover"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000011027F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D10000000011027F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C20000000011027A"]
+		}
+		{
+			id: "C200000000110280"
+			x: 5.4d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D200000000110280"
+					type: "item"
+					item: {
+						id: "naturesaura:eye_improved"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110280"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027F"]
+		}
+		{
+			id: "C200000000110281"
+			x: 5.4d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D200000000110281"
+					type: "item"
+					item: {
+						id: "naturesaura:crushing_catalyst"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110281"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027F"]
+		}
+		{
+			id: "C200000000110282"
+			x: 5.4d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D200000000110282"
+					type: "item"
+					item: {
+						id: "naturesaura:conversion_catalyst"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110282"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027F"]
+		}
+		{
+			id: "C200000000110283"
+			x: 5.4d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D200000000110283"
+					type: "item"
+					item: {
+						id: "naturesaura:depth_ingot"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110283"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000011027F"]
+		}
+		{
+			id: "C200000000110284"
+			x: 0.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000110284"
+					type: "item"
+					item: {
+						id: "naturesaura:farming_stencil"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110284"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
 						count: 1
 					}
 				}
 			]
 			optional: true
-			dependencies: ["C20000000011025C"]
+			dependencies: ["C200000000110271"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000110285"
+			x: 1.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000110285"
+					type: "item"
+					item: {
+						id: "naturesaura:projectile_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110285"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000110271"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000110286"
+			x: 3.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000110286"
+					type: "item"
+					item: {
+						id: "naturesaura:flower_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110286"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000110271"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000110287"
+			x: 4.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000110287"
+					type: "item"
+					item: {
+						id: "naturesaura:oak_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110287"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000110271"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000110288"
+			x: 6.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000110288"
+					type: "item"
+					item: {
+						id: "naturesaura:end_flower"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110288"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000110271"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000110289"
+			x: 7.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000110289"
+					type: "item"
+					item: {
+						id: "naturesaura:spawn_lamp"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000110289"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000110271"]
 			hide_until_deps_complete: true
 		}
 	]

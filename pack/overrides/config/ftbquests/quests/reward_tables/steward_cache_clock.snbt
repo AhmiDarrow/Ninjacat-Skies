@@ -1,0 +1,23 @@
+{
+	id: "F100000000000006"
+	title: "Steward Cache: Pattern-weavers"
+	icon: {
+		id: "create:cogwheel"
+	}
+	loot_size: 1
+	hide_tooltip: false
+	use_title: true
+	loot_table_id: "ninjacatskies:steward_cache/clock"
+	loot_crate: {
+		string_id: "steward_clock"
+		item_name: "Steward Cache (Pattern-weavers)"
+		color: 13138490
+		glow: true
+		drops: {
+			passive: 0
+			monster: 0
+			boss: 0
+		}
+	}
+	rewards: [ ]
+}

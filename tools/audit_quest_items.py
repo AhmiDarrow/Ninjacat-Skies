@@ -30,6 +30,8 @@ text = ""
 for p in (ROOT / "pack/overrides/config/ftbquests").rglob("*.snbt"):
     text += p.read_text(encoding="utf-8") + "\n"
 items = sorted(set(re.findall(r'id: "([a-z0-9_]+:[a-z0-9_/]+)"', text)))
+# reward-table loot_table_id values are vanilla loot tables, not items
+items = [i for i in items if not i.startswith("ninjacatskies:steward_cache/")]
 
 
 

@@ -2,7 +2,7 @@
 # Mods live as loose jars in pack/mods — not a packwiz index refresh workflow.
 name = "Ninjacat Skies"
 author = "Ninjacat Skies"
-version = "0.2.0-alpha"
+version = "0.2.1-alpha"
 pack-format = "packwiz:1.1.0"
 
 [versions]

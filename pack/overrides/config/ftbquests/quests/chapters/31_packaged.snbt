@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000001F048D"
+			id: "C2000000001F04AC"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001F048D"
+					id: "D2000000001F04AC"
 					type: "item"
 					item: {
 						id: "packagedauto:package_component"
@@ -27,7 +27,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F048D"
+					id: "E2000000001F04AC"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -35,19 +35,19 @@
 					}
 				}
 				{
-					id: "D1000000001F048D"
+					id: "D1000000001F04AC"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 		}
 		{
-			id: "C2000000001F048E"
+			id: "C2000000001F04AD"
 			x: 0.0d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D2000000001F048E"
+					id: "D2000000001F04AD"
 					type: "item"
 					item: {
 						id: "packagedauto:me_package_component"
@@ -57,7 +57,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F048E"
+					id: "E2000000001F04AD"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -65,15 +65,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F048D"]
+			dependencies: ["C2000000001F04AC"]
 		}
 		{
-			id: "C2000000001F048F"
+			id: "C2000000001F04AE"
 			x: 0.0d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D2000000001F048F"
+					id: "D2000000001F04AE"
 					type: "item"
 					item: {
 						id: "packagedauto:packager"
@@ -83,7 +83,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F048F"
+					id: "E2000000001F04AE"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -91,15 +91,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F048D"]
+			dependencies: ["C2000000001F04AC"]
 		}
 		{
-			id: "C2000000001F0490"
+			id: "C2000000001F04AF"
 			x: 0.0d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D2000000001F0490"
+					id: "D2000000001F04AF"
 					type: "item"
 					item: {
 						id: "packagedauto:packager_extension"
@@ -109,7 +109,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0490"
+					id: "E2000000001F04AF"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -117,15 +117,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F048D"]
+			dependencies: ["C2000000001F04AC"]
 		}
 		{
-			id: "C2000000001F0491"
+			id: "C2000000001F04B0"
 			x: 0.0d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D2000000001F0491"
+					id: "D2000000001F04B0"
 					type: "item"
 					item: {
 						id: "packagedauto:unpackager"
@@ -135,7 +135,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0491"
+					id: "E2000000001F04B0"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -143,15 +143,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F048D"]
+			dependencies: ["C2000000001F04AC"]
 		}
 		{
-			id: "C2000000001F0492"
+			id: "C2000000001F04B1"
 			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001F0492"
+					id: "D2000000001F04B1"
 					type: "item"
 					item: {
 						id: "packagedauto:encoder"
@@ -161,7 +161,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0492"
+					id: "E2000000001F04B1"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -169,20 +169,20 @@
 					}
 				}
 				{
-					id: "D1000000001F0492"
+					id: "D1000000001F04B1"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001F048D"]
+			dependencies: ["C2000000001F04AC"]
 		}
 		{
-			id: "C2000000001F0493"
+			id: "C2000000001F04B2"
 			x: 1.8d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D2000000001F0493"
+					id: "D2000000001F04B2"
 					type: "item"
 					item: {
 						id: "packagedauto:crafter"
@@ -192,7 +192,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0493"
+					id: "E2000000001F04B2"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -200,15 +200,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0492"]
+			dependencies: ["C2000000001F04B1"]
 		}
 		{
-			id: "C2000000001F0494"
+			id: "C2000000001F04B3"
 			x: 1.8d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D2000000001F0494"
+					id: "D2000000001F04B3"
 					type: "item"
 					item: {
 						id: "packagedauto:distributor"
@@ -218,7 +218,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0494"
+					id: "E2000000001F04B3"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -226,15 +226,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0492"]
+			dependencies: ["C2000000001F04B1"]
 		}
 		{
-			id: "C2000000001F0495"
+			id: "C2000000001F04B4"
 			x: 1.8d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D2000000001F0495"
+					id: "D2000000001F04B4"
 					type: "item"
 					item: {
 						id: "packagedauto:distributor_marker"
@@ -244,7 +244,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0495"
+					id: "E2000000001F04B4"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -252,15 +252,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0492"]
+			dependencies: ["C2000000001F04B1"]
 		}
 		{
-			id: "C2000000001F0496"
+			id: "C2000000001F04B5"
 			x: 1.8d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D2000000001F0496"
+					id: "D2000000001F04B5"
 					type: "item"
 					item: {
 						id: "packagedauto:packaging_provider"
@@ -270,7 +270,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0496"
+					id: "E2000000001F04B5"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -278,15 +278,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0492"]
+			dependencies: ["C2000000001F04B1"]
 		}
 		{
-			id: "C2000000001F0497"
+			id: "C2000000001F04B6"
 			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001F0497"
+					id: "D2000000001F04B6"
 					type: "item"
 					item: {
 						id: "packagedauto:crafting_proxy"
@@ -296,7 +296,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0497"
+					id: "E2000000001F04B6"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -304,20 +304,20 @@
 					}
 				}
 				{
-					id: "D1000000001F0497"
+					id: "D1000000001F04B6"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001F0492"]
+			dependencies: ["C2000000001F04B1"]
 		}
 		{
-			id: "C2000000001F0498"
+			id: "C2000000001F04B7"
 			x: 3.6d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D2000000001F0498"
+					id: "D2000000001F04B7"
 					type: "item"
 					item: {
 						id: "packagedauto:recipe_holder"
@@ -327,7 +327,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0498"
+					id: "E2000000001F04B7"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -335,15 +335,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0497"]
+			dependencies: ["C2000000001F04B6"]
 		}
 		{
-			id: "C2000000001F0499"
+			id: "C2000000001F04B8"
 			x: 3.6d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D2000000001F0499"
+					id: "D2000000001F04B8"
 					type: "item"
 					item: {
 						id: "packagedauto:settings_cloner"
@@ -353,7 +353,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F0499"
+					id: "E2000000001F04B8"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -361,15 +361,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0497"]
+			dependencies: ["C2000000001F04B6"]
 		}
 		{
-			id: "C2000000001F049A"
+			id: "C2000000001F04B9"
 			x: 3.6d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D2000000001F049A"
+					id: "D2000000001F04B9"
 					type: "item"
 					item: {
 						id: "packagedauto:fluid_package_filler"
@@ -379,7 +379,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F049A"
+					id: "E2000000001F04B9"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -387,15 +387,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0497"]
+			dependencies: ["C2000000001F04B6"]
 		}
 		{
-			id: "C2000000001F049B"
+			id: "C2000000001F04BA"
 			x: 3.6d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D2000000001F049B"
+					id: "D2000000001F04BA"
 					type: "item"
 					item: {
 						id: "packagedauto:package"
@@ -405,7 +405,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F049B"
+					id: "E2000000001F04BA"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -413,15 +413,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F0497"]
+			dependencies: ["C2000000001F04B6"]
 		}
 		{
-			id: "C2000000001F049C"
+			id: "C2000000001F04BB"
 			x: 5.4d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001F049C"
+					id: "D2000000001F04BB"
 					type: "item"
 					item: {
 						id: "packagedauto:volume_package"
@@ -431,7 +431,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F049C"
+					id: "E2000000001F04BB"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -439,20 +439,20 @@
 					}
 				}
 				{
-					id: "D1000000001F049C"
+					id: "D1000000001F04BB"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001F0497"]
+			dependencies: ["C2000000001F04B6"]
 		}
 		{
-			id: "C2000000001F049D"
+			id: "C2000000001F04BC"
 			x: 5.4d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D2000000001F049D"
+					id: "D2000000001F04BC"
 					type: "item"
 					item: {
 						id: "packagedauto:proxy_marker"
@@ -462,7 +462,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F049D"
+					id: "E2000000001F04BC"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -470,15 +470,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F049C"]
+			dependencies: ["C2000000001F04BB"]
 		}
 		{
-			id: "C2000000001F049E"
+			id: "C2000000001F04BD"
 			x: 5.4d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D2000000001F049E"
+					id: "D2000000001F04BD"
 					type: "item"
 					item: {
 						id: "ae2:interface"
@@ -488,7 +488,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F049E"
+					id: "E2000000001F04BD"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -496,15 +496,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F049C"]
+			dependencies: ["C2000000001F04BB"]
 		}
 		{
-			id: "C2000000001F049F"
+			id: "C2000000001F04BE"
 			x: 5.4d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D2000000001F049F"
+					id: "D2000000001F04BE"
 					type: "item"
 					item: {
 						id: "ae2:pattern_provider"
@@ -514,7 +514,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F049F"
+					id: "E2000000001F04BE"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -522,15 +522,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F049C"]
+			dependencies: ["C2000000001F04BB"]
 		}
 		{
-			id: "C2000000001F04A0"
+			id: "C2000000001F04BF"
 			x: 5.4d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D2000000001F04A0"
+					id: "D2000000001F04BF"
 					type: "item"
 					item: {
 						id: "ae2:molecular_assembler"
@@ -540,7 +540,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F04A0"
+					id: "E2000000001F04BF"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -548,15 +548,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F049C"]
+			dependencies: ["C2000000001F04BB"]
 		}
 		{
-			id: "C2000000001F04A1"
+			id: "C2000000001F04C0"
 			x: 7.2d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001F04A1"
+					id: "D2000000001F04C0"
 					type: "item"
 					item: {
 						id: "ae2:controller"
@@ -566,7 +566,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F04A1"
+					id: "E2000000001F04C0"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -574,20 +574,20 @@
 					}
 				}
 				{
-					id: "D1000000001F04A1"
+					id: "D1000000001F04C0"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001F049C"]
+			dependencies: ["C2000000001F04BB"]
 		}
 		{
-			id: "C2000000001F04A2"
+			id: "C2000000001F04C1"
 			x: 7.2d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D2000000001F04A2"
+					id: "D2000000001F04C1"
 					type: "item"
 					item: {
 						id: "ae2:fluix_glass_cable"
@@ -597,7 +597,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F04A2"
+					id: "E2000000001F04C1"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -605,15 +605,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F04A1"]
+			dependencies: ["C2000000001F04C0"]
 		}
 		{
-			id: "C2000000001F04A3"
+			id: "C2000000001F04C2"
 			x: 7.2d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D2000000001F04A3"
+					id: "D2000000001F04C2"
 					type: "item"
 					item: {
 						id: "create:packager"
@@ -623,7 +623,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F04A3"
+					id: "E2000000001F04C2"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -631,15 +631,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F04A1"]
+			dependencies: ["C2000000001F04C0"]
 		}
 		{
-			id: "C2000000001F04A4"
+			id: "C2000000001F04C3"
 			x: 7.2d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D2000000001F04A4"
+					id: "D2000000001F04C3"
 					type: "item"
 					item: {
 						id: "create:repackager"
@@ -649,7 +649,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F04A4"
+					id: "E2000000001F04C3"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -657,15 +657,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F04A1"]
+			dependencies: ["C2000000001F04C0"]
 		}
 		{
-			id: "C2000000001F04A5"
+			id: "C2000000001F04C4"
 			x: 7.2d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D2000000001F04A5"
+					id: "D2000000001F04C4"
 					type: "item"
 					item: {
 						id: "create:stock_ticker"
@@ -675,7 +675,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F04A5"
+					id: "E2000000001F04C4"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -683,15 +683,15 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001F04A1"]
+			dependencies: ["C2000000001F04C0"]
 		}
 		{
-			id: "C2000000001F04A6"
+			id: "C2000000001F04C5"
 			x: 9.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001F04A6"
+					id: "D2000000001F04C5"
 					type: "item"
 					item: {
 						id: "create:item_vault"
@@ -701,7 +701,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001F04A6"
+					id: "E2000000001F04C5"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -709,12 +709,12 @@
 					}
 				}
 				{
-					id: "D1000000001F04A6"
+					id: "D1000000001F04C5"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001F04A1"]
+			dependencies: ["C2000000001F04C0"]
 		}
 	]
 }

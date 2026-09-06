@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C20000000010023D"
+			id: "C200000000100252"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D20000000010023D"
+					id: "D200000000100252"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -28,7 +28,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010023D"
+					id: "E200000000100252"
 					type: "item"
 					item: {
 						id: "minecraft:oak_sapling"
@@ -37,7 +37,7 @@
 					team_reward: false
 				}
 				{
-					id: "D10000000010023D"
+					id: "D100000000100252"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
@@ -46,12 +46,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010023E"
+			id: "C200000000100253"
 			x: 0.0d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D20000000010023E"
+					id: "D200000000100253"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -62,7 +62,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010023E"
+					id: "E200000000100253"
 					type: "item"
 					item: {
 						id: "minecraft:bucket"
@@ -74,12 +74,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010023F"
+			id: "C200000000100254"
 			x: 0.0d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D20000000010023F"
+					id: "D200000000100254"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -90,7 +90,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010023F"
+					id: "E200000000100254"
 					type: "item"
 					item: {
 						id: "minecraft:bone_meal"
@@ -102,12 +102,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100240"
+			id: "C200000000100255"
 			x: 0.0d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D200000000100240"
+					id: "D200000000100255"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -118,7 +118,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100240"
+					id: "E200000000100255"
 					type: "item"
 					item: {
 						id: "voidloom:void_yarn"
@@ -130,12 +130,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100241"
+			id: "C200000000100256"
 			x: 0.0d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D200000000100241"
+					id: "D200000000100256"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -146,7 +146,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100241"
+					id: "E200000000100256"
 					type: "item"
 					item: {
 						id: "voidloom:thread_mesh_string"
@@ -158,12 +158,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100242"
+			id: "C200000000100257"
 			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000100242"
+					id: "D200000000100257"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -174,7 +174,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100242"
+					id: "E200000000100257"
 					type: "item"
 					item: {
 						id: "voidloom:spindle_crook"
@@ -183,7 +183,7 @@
 					team_reward: false
 				}
 				{
-					id: "D100000000100242"
+					id: "D100000000100257"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
@@ -192,12 +192,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100243"
+			id: "C200000000100258"
 			x: 1.8d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D200000000100243"
+					id: "D200000000100258"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -208,7 +208,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100243"
+					id: "E200000000100258"
 					type: "item"
 					item: {
 						id: "minecraft:dirt"
@@ -220,12 +220,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100244"
+			id: "C200000000100259"
 			x: 1.8d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D200000000100244"
+					id: "D200000000100259"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -236,7 +236,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100244"
+					id: "E200000000100259"
 					type: "item"
 					item: {
 						id: "minecraft:cobblestone"
@@ -248,12 +248,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100245"
+			id: "C20000000010025A"
 			x: 1.8d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D200000000100245"
+					id: "D20000000010025A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -264,7 +264,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100245"
+					id: "E20000000010025A"
 					type: "item"
 					item: {
 						id: "minecraft:iron_nugget"
@@ -276,12 +276,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100246"
+			id: "C20000000010025B"
 			x: 1.8d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D200000000100246"
+					id: "D20000000010025B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -292,7 +292,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100246"
+					id: "E20000000010025B"
 					type: "item"
 					item: {
 						id: "minecraft:slime_ball"
@@ -304,12 +304,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100247"
+			id: "C20000000010025C"
 			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000100247"
+					id: "D20000000010025C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -320,7 +320,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100247"
+					id: "E20000000010025C"
 					type: "item"
 					item: {
 						id: "minecraft:ender_pearl"
@@ -329,7 +329,7 @@
 					team_reward: false
 				}
 				{
-					id: "D100000000100247"
+					id: "D10000000010025C"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
@@ -338,12 +338,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100248"
+			id: "C20000000010025D"
 			x: 3.6d
 			y: 1.3d
 			tasks: [
 				{
-					id: "D200000000100248"
+					id: "D20000000010025D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -354,7 +354,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100248"
+					id: "E20000000010025D"
 					type: "item"
 					item: {
 						id: "minecraft:feather"
@@ -366,12 +366,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100249"
+			id: "C20000000010025E"
 			x: 3.6d
 			y: 2.6d
 			tasks: [
 				{
-					id: "D200000000100249"
+					id: "D20000000010025E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -382,7 +382,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100249"
+					id: "E20000000010025E"
 					type: "item"
 					item: {
 						id: "minecraft:lapis_lazuli"
@@ -394,12 +394,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010024A"
+			id: "C20000000010025F"
 			x: 3.6d
 			y: 3.9d
 			tasks: [
 				{
-					id: "D20000000010024A"
+					id: "D20000000010025F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -410,7 +410,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010024A"
+					id: "E20000000010025F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:codex_page"
@@ -422,12 +422,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010024B"
+			id: "C200000000100260"
 			x: 3.6d
 			y: 5.2d
 			tasks: [
 				{
-					id: "D20000000010024B"
+					id: "D200000000100260"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -438,7 +438,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010024B"
+					id: "E200000000100260"
 					type: "item"
 					item: {
 						id: "minecraft:bread"
@@ -450,12 +450,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010024C"
+			id: "C200000000100261"
 			x: 5.4d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D20000000010024C"
+					id: "D200000000100261"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -466,7 +466,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010024C"
+					id: "E200000000100261"
 					type: "item"
 					item: {
 						id: "minecraft:torch"
@@ -475,7 +475,7 @@
 					team_reward: false
 				}
 				{
-					id: "D10000000010024C"
+					id: "D100000000100261"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
@@ -484,12 +484,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010024D"
+			id: "C200000000100262"
 			x: -3.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010024D"
+					id: "D200000000100262"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -500,7 +500,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010024D"
+					id: "E200000000100262"
 					type: "item"
 					item: {
 						id: "minecraft:experience_bottle"
@@ -513,12 +513,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010024E"
+			id: "C200000000100263"
 			x: -1.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010024E"
+					id: "D200000000100263"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -529,7 +529,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010024E"
+					id: "E200000000100263"
 					type: "item"
 					item: {
 						id: "minecraft:emerald"
@@ -542,12 +542,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010024F"
+			id: "C200000000100264"
 			x: 0.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010024F"
+					id: "D200000000100264"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -558,7 +558,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010024F"
+					id: "E200000000100264"
 					type: "item"
 					item: {
 						id: "minecraft:diamond"
@@ -571,12 +571,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100250"
+			id: "C200000000100265"
 			x: 1.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D200000000100250"
+					id: "D200000000100265"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -587,7 +587,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100250"
+					id: "E200000000100265"
 					type: "item"
 					item: {
 						id: "minecraft:shulker_box"
@@ -600,12 +600,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100251"
+			id: "C200000000100266"
 			x: 3.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D200000000100251"
+					id: "D200000000100266"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -616,7 +616,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100251"
+					id: "E200000000100266"
 					type: "item"
 					item: {
 						id: "create:item_vault"
@@ -629,12 +629,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100252"
+			id: "C200000000100267"
 			x: 4.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D200000000100252"
+					id: "D200000000100267"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -645,7 +645,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100252"
+					id: "E200000000100267"
 					type: "item"
 					item: {
 						id: "minecraft:gold_ingot"
@@ -658,12 +658,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100253"
+			id: "C200000000100268"
 			x: -3.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100253"
+					id: "D200000000100268"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -674,7 +674,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100253"
+					id: "E200000000100268"
 					type: "item"
 					item: {
 						id: "minecraft:copper_ingot"
@@ -687,12 +687,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100254"
+			id: "C200000000100269"
 			x: -1.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100254"
+					id: "D200000000100269"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -703,7 +703,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100254"
+					id: "E200000000100269"
 					type: "item"
 					item: {
 						id: "minecraft:amethyst_shard"
@@ -716,12 +716,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100255"
+			id: "C20000000010026A"
 			x: 0.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100255"
+					id: "D20000000010026A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -732,7 +732,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100255"
+					id: "E20000000010026A"
 					type: "item"
 					item: {
 						id: "minecraft:leather"
@@ -745,12 +745,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100256"
+			id: "C20000000010026B"
 			x: 1.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100256"
+					id: "D20000000010026B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -761,7 +761,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100256"
+					id: "E20000000010026B"
 					type: "item"
 					item: {
 						id: "minecraft:honeycomb"
@@ -774,12 +774,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100257"
+			id: "C20000000010026C"
 			x: 3.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100257"
+					id: "D20000000010026C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -790,7 +790,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100257"
+					id: "E20000000010026C"
 					type: "item"
 					item: {
 						id: "minecraft:nether_wart"
@@ -803,12 +803,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100258"
+			id: "C20000000010026D"
 			x: 4.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100258"
+					id: "D20000000010026D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -819,7 +819,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100258"
+					id: "E20000000010026D"
 					type: "item"
 					item: {
 						id: "minecraft:chorus_fruit"
@@ -832,12 +832,12 @@
 			repeatable: true
 		}
 		{
-			id: "C200000000100259"
+			id: "C20000000010026E"
 			x: -3.0d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000100259"
+					id: "D20000000010026E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -848,7 +848,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100259"
+					id: "E20000000010026E"
 					type: "item"
 					item: {
 						id: "minecraft:obsidian"
@@ -861,12 +861,12 @@
 			repeatable: true
 		}
 		{
-			id: "C20000000010025A"
+			id: "C20000000010026F"
 			x: -1.5d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D20000000010025A"
+					id: "D20000000010026F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -877,7 +877,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010025A"
+					id: "E20000000010026F"
 					type: "item"
 					item: {
 						id: "minecraft:nether_star"

@@ -12,150 +12,16 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000000600FF"
-			x: 0.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000600FF"
-					type: "item"
-					item: {
-						id: "create:andesite_alloy"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000600FF"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000000600FF"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C200000000060100"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000060100"
-					type: "item"
-					item: {
-						id: "create:shaft"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000060100"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000600FF"]
-		}
-		{
-			id: "C200000000060101"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000060101"
-					type: "item"
-					item: {
-						id: "create:cogwheel"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000060101"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000600FF"]
-		}
-		{
-			id: "C200000000060102"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D200000000060102"
-					type: "item"
-					item: {
-						id: "create:large_cogwheel"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000060102"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000600FF"]
-		}
-		{
-			id: "C200000000060103"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D200000000060103"
-					type: "item"
-					item: {
-						id: "create:andesite_casing"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000060103"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000600FF"]
-		}
-		{
 			id: "C200000000060104"
-			x: 1.8d
+			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000060104"
 					type: "item"
 					item: {
-						id: "create:water_wheel"
-						count: 1
+						id: "create:andesite_alloy"
+						count: 32
 					}
 				}
 			]
@@ -174,19 +40,18 @@
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000600FF"]
 		}
 		{
 			id: "C200000000060105"
-			x: 1.8d
+			x: 0.0d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000060105"
 					type: "item"
 					item: {
-						id: "create:hand_crank"
-						count: 1
+						id: "create:shaft"
+						count: 16
 					}
 				}
 			]
@@ -204,15 +69,15 @@
 		}
 		{
 			id: "C200000000060106"
-			x: 1.8d
+			x: 0.0d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000060106"
 					type: "item"
 					item: {
-						id: "create:millstone"
-						count: 1
+						id: "create:cogwheel"
+						count: 16
 					}
 				}
 			]
@@ -230,15 +95,15 @@
 		}
 		{
 			id: "C200000000060107"
-			x: 1.8d
+			x: 0.0d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000060107"
 					type: "item"
 					item: {
-						id: "create:basin"
-						count: 1
+						id: "create:large_cogwheel"
+						count: 8
 					}
 				}
 			]
@@ -256,15 +121,15 @@
 		}
 		{
 			id: "C200000000060108"
-			x: 1.8d
+			x: 0.0d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000060108"
 					type: "item"
 					item: {
-						id: "create:mechanical_press"
-						count: 1
+						id: "create:andesite_casing"
+						count: 16
 					}
 				}
 			]
@@ -282,14 +147,14 @@
 		}
 		{
 			id: "C200000000060109"
-			x: 3.6d
+			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000060109"
 					type: "item"
 					item: {
-						id: "create:mechanical_mixer"
+						id: "create:water_wheel"
 						count: 1
 					}
 				}
@@ -313,15 +178,15 @@
 		}
 		{
 			id: "C20000000006010A"
-			x: 3.6d
+			x: 1.8d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000006010A"
 					type: "item"
 					item: {
-						id: "create:depot"
-						count: 4
+						id: "create:hand_crank"
+						count: 1
 					}
 				}
 			]
@@ -339,15 +204,15 @@
 		}
 		{
 			id: "C20000000006010B"
-			x: 3.6d
+			x: 1.8d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000006010B"
 					type: "item"
 					item: {
-						id: "create:belt_connector"
-						count: 8
+						id: "create:millstone"
+						count: 1
 					}
 				}
 			]
@@ -365,15 +230,15 @@
 		}
 		{
 			id: "C20000000006010C"
-			x: 3.6d
+			x: 1.8d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000006010C"
 					type: "item"
 					item: {
-						id: "create:chute"
-						count: 8
+						id: "create:basin"
+						count: 1
 					}
 				}
 			]
@@ -391,15 +256,15 @@
 		}
 		{
 			id: "C20000000006010D"
-			x: 3.6d
+			x: 1.8d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000006010D"
 					type: "item"
 					item: {
-						id: "create:encased_fan"
-						count: 2
+						id: "create:mechanical_press"
+						count: 1
 					}
 				}
 			]
@@ -417,14 +282,14 @@
 		}
 		{
 			id: "C20000000006010E"
-			x: 5.4d
+			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D20000000006010E"
 					type: "item"
 					item: {
-						id: "create:deployer"
+						id: "create:mechanical_mixer"
 						count: 1
 					}
 				}
@@ -448,15 +313,15 @@
 		}
 		{
 			id: "C20000000006010F"
-			x: 5.4d
+			x: 3.6d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000006010F"
 					type: "item"
 					item: {
-						id: "create:mechanical_saw"
-						count: 1
+						id: "create:depot"
+						count: 4
 					}
 				}
 			]
@@ -474,15 +339,15 @@
 		}
 		{
 			id: "C200000000060110"
-			x: 5.4d
+			x: 3.6d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000060110"
 					type: "item"
 					item: {
-						id: "create:mechanical_drill"
-						count: 1
+						id: "create:belt_connector"
+						count: 8
 					}
 				}
 			]
@@ -500,15 +365,15 @@
 		}
 		{
 			id: "C200000000060111"
-			x: 5.4d
+			x: 3.6d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000060111"
 					type: "item"
 					item: {
-						id: "create:mechanical_harvester"
-						count: 1
+						id: "create:chute"
+						count: 8
 					}
 				}
 			]
@@ -526,15 +391,15 @@
 		}
 		{
 			id: "C200000000060112"
-			x: 5.4d
+			x: 3.6d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000060112"
 					type: "item"
 					item: {
-						id: "create:portable_storage_interface"
-						count: 1
+						id: "create:encased_fan"
+						count: 2
 					}
 				}
 			]
@@ -552,14 +417,14 @@
 		}
 		{
 			id: "C200000000060113"
-			x: 7.2d
+			x: 5.4d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000060113"
 					type: "item"
 					item: {
-						id: "create:item_vault"
+						id: "create:deployer"
 						count: 1
 					}
 				}
@@ -583,15 +448,15 @@
 		}
 		{
 			id: "C200000000060114"
-			x: 7.2d
+			x: 5.4d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000060114"
 					type: "item"
 					item: {
-						id: "create:fluid_tank"
-						count: 2
+						id: "create:mechanical_saw"
+						count: 1
 					}
 				}
 			]
@@ -609,14 +474,14 @@
 		}
 		{
 			id: "C200000000060115"
-			x: 7.2d
+			x: 5.4d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000060115"
 					type: "item"
 					item: {
-						id: "create:spout"
+						id: "create:mechanical_drill"
 						count: 1
 					}
 				}
@@ -635,14 +500,14 @@
 		}
 		{
 			id: "C200000000060116"
-			x: 7.2d
+			x: 5.4d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000060116"
 					type: "item"
 					item: {
-						id: "create:hose_pulley"
+						id: "create:mechanical_harvester"
 						count: 1
 					}
 				}
@@ -661,15 +526,15 @@
 		}
 		{
 			id: "C200000000060117"
-			x: 7.2d
+			x: 5.4d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000060117"
 					type: "item"
 					item: {
-						id: "create:copper_casing"
-						count: 8
+						id: "create:portable_storage_interface"
+						count: 1
 					}
 				}
 			]
@@ -687,15 +552,15 @@
 		}
 		{
 			id: "C200000000060118"
-			x: 9.0d
+			x: 7.2d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000060118"
 					type: "item"
 					item: {
-						id: "create:brass_casing"
-						count: 8
+						id: "create:item_vault"
+						count: 1
 					}
 				}
 			]
@@ -718,14 +583,14 @@
 		}
 		{
 			id: "C200000000060119"
-			x: 9.0d
+			x: 7.2d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000060119"
 					type: "item"
 					item: {
-						id: "create:precision_mechanism"
+						id: "create:fluid_tank"
 						count: 2
 					}
 				}
@@ -744,14 +609,14 @@
 		}
 		{
 			id: "C20000000006011A"
-			x: 9.0d
+			x: 7.2d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000006011A"
 					type: "item"
 					item: {
-						id: "create:rotation_speed_controller"
+						id: "create:spout"
 						count: 1
 					}
 				}
@@ -770,15 +635,15 @@
 		}
 		{
 			id: "C20000000006011B"
-			x: 9.0d
+			x: 7.2d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000006011B"
 					type: "item"
 					item: {
-						id: "create:gearbox"
-						count: 2
+						id: "create:hose_pulley"
+						count: 1
 					}
 				}
 			]
@@ -796,15 +661,15 @@
 		}
 		{
 			id: "C20000000006011C"
-			x: 9.0d
+			x: 7.2d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000006011C"
 					type: "item"
 					item: {
-						id: "create:clutch"
-						count: 1
+						id: "create:copper_casing"
+						count: 8
 					}
 				}
 			]
@@ -822,15 +687,15 @@
 		}
 		{
 			id: "C20000000006011D"
-			x: 10.8d
+			x: 9.0d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D20000000006011D"
 					type: "item"
 					item: {
-						id: "create:gearshift"
-						count: 1
+						id: "create:brass_casing"
+						count: 8
 					}
 				}
 			]
@@ -853,15 +718,15 @@
 		}
 		{
 			id: "C20000000006011E"
-			x: 10.8d
+			x: 9.0d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000006011E"
 					type: "item"
 					item: {
-						id: "create:sequenced_gearshift"
-						count: 1
+						id: "create:precision_mechanism"
+						count: 2
 					}
 				}
 			]
@@ -879,14 +744,14 @@
 		}
 		{
 			id: "C20000000006011F"
-			x: -4.0d
-			y: 7.5d
+			x: 9.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000006011F"
 					type: "item"
 					item: {
-						id: "create:whisk"
+						id: "create:rotation_speed_controller"
 						count: 1
 					}
 				}
@@ -897,25 +762,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000060100"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000006011D"]
 		}
 		{
 			id: "C200000000060120"
-			x: -2.5d
-			y: 7.5d
+			x: 9.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000060120"
 					type: "item"
 					item: {
-						id: "create:propeller"
-						count: 1
+						id: "create:gearbox"
+						count: 2
 					}
 				}
 			]
@@ -925,25 +788,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000060100"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000006011D"]
 		}
 		{
 			id: "C200000000060121"
-			x: -1.0d
-			y: 7.5d
+			x: 9.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000060121"
 					type: "item"
 					item: {
-						id: "create:white_sail"
-						count: 4
+						id: "create:clutch"
+						count: 1
 					}
 				}
 			]
@@ -953,24 +814,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000060100"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000006011D"]
 		}
 		{
 			id: "C200000000060122"
-			x: 0.5d
-			y: 7.5d
+			x: 10.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000060122"
 					type: "item"
 					item: {
-						id: "create:windmill_bearing"
+						id: "create:gearshift"
 						count: 1
 					}
 				}
@@ -981,24 +840,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D100000000060122"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
-			dependencies: ["C200000000060100"]
-			hide_until_deps_complete: true
+			dependencies: ["C20000000006011D"]
 		}
 		{
 			id: "C200000000060123"
-			x: 2.0d
-			y: 7.5d
+			x: 10.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000060123"
 					type: "item"
 					item: {
-						id: "create:mechanical_bearing"
+						id: "create:sequenced_gearshift"
 						count: 1
 					}
 				}
@@ -1009,24 +871,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000060100"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000060122"]
 		}
 		{
 			id: "C200000000060124"
-			x: 3.5d
+			x: -4.0d
 			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000060124"
 					type: "item"
 					item: {
-						id: "create:gantry_carriage"
+						id: "create:whisk"
 						count: 1
 					}
 				}
@@ -1042,19 +902,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000060125"
-			x: -4.0d
-			y: 9.0d
+			x: -2.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000060125"
 					type: "item"
 					item: {
-						id: "create:cart_assembler"
+						id: "create:propeller"
 						count: 1
 					}
 				}
@@ -1070,20 +930,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000060126"
-			x: -2.5d
-			y: 9.0d
+			x: -1.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000060126"
 					type: "item"
 					item: {
-						id: "create:minecart_coupling"
-						count: 1
+						id: "create:white_sail"
+						count: 4
 					}
 				}
 			]
@@ -1098,20 +958,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000060127"
-			x: -1.0d
-			y: 9.0d
+			x: 0.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000060127"
 					type: "item"
 					item: {
-						id: "create:track"
-						count: 32
+						id: "create:windmill_bearing"
+						count: 1
 					}
 				}
 			]
@@ -1126,19 +986,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000060128"
-			x: 0.5d
-			y: 9.0d
+			x: 2.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000060128"
 					type: "item"
 					item: {
-						id: "create:train_door"
+						id: "create:mechanical_bearing"
 						count: 1
 					}
 				}
@@ -1154,19 +1014,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000060129"
-			x: 2.0d
-			y: 9.0d
+			x: 3.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000060129"
 					type: "item"
 					item: {
-						id: "create:schedule"
+						id: "create:gantry_carriage"
 						count: 1
 					}
 				}
@@ -1182,19 +1042,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000006012A"
-			x: 3.5d
+			x: -4.0d
 			y: 9.0d
 			tasks: [
 				{
 					id: "D20000000006012A"
 					type: "item"
 					item: {
-						id: "create:display_link"
+						id: "create:cart_assembler"
 						count: 1
 					}
 				}
@@ -1210,19 +1070,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000006012B"
-			x: -4.0d
-			y: 10.5d
+			x: -2.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D20000000006012B"
 					type: "item"
 					item: {
-						id: "create:display_board"
+						id: "create:minecart_coupling"
 						count: 1
 					}
 				}
@@ -1238,20 +1098,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000006012C"
-			x: -2.5d
-			y: 10.5d
+			x: -1.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D20000000006012C"
 					type: "item"
 					item: {
-						id: "create:potato_cannon"
-						count: 1
+						id: "create:track"
+						count: 32
 					}
 				}
 			]
@@ -1266,19 +1126,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000006012D"
-			x: -1.0d
-			y: 10.5d
+			x: 0.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D20000000006012D"
 					type: "item"
 					item: {
-						id: "create:extendo_grip"
+						id: "create:train_door"
 						count: 1
 					}
 				}
@@ -1294,17 +1154,157 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000060100"]
+			dependencies: ["C200000000060105"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000006012E"
+			x: 2.0d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D20000000006012E"
+					type: "item"
+					item: {
+						id: "create:schedule"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000006012E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000060105"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C20000000006012F"
+			x: 3.5d
+			y: 9.0d
+			tasks: [
+				{
+					id: "D20000000006012F"
+					type: "item"
+					item: {
+						id: "create:display_link"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000006012F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000060105"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000060130"
+			x: -4.0d
+			y: 10.5d
+			tasks: [
+				{
+					id: "D200000000060130"
+					type: "item"
+					item: {
+						id: "create:display_board"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000060130"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000060105"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000060131"
+			x: -2.5d
+			y: 10.5d
+			tasks: [
+				{
+					id: "D200000000060131"
+					type: "item"
+					item: {
+						id: "create:potato_cannon"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000060131"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000060105"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000060132"
+			x: -1.0d
+			y: 10.5d
+			tasks: [
+				{
+					id: "D200000000060132"
+					type: "item"
+					item: {
+						id: "create:extendo_grip"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000060132"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C200000000060105"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000060133"
 			x: 12.0d
 			y: -2.0d
 			tasks: [
 				{
 					type: "checkmark"
-					id: "D20000000006012E"
+					id: "D200000000060133"
 				}
 			]
 			rewards: [
@@ -1314,27 +1314,25 @@
 						id: "ninjacatskies:strand_token_clock"
 						count: 1
 					}
-					id: "E20000000006012E"
+					id: "E200000000060133"
 				}
 				{
-					type: "command"
-					command: "loot give @p loot ninjacatskies:steward_cache/clock"
-					silent: true
-					elevate_perms: true
-					id: "E20000000106012E"
+					type: "loot"
+					table_id: "F100000000000006"
+					id: "E200000001060133"
 				}
 				{
 					type: "xp_levels"
 					xp_levels: 3
-					id: "E20000000206012E"
+					id: "E200000002060133"
 				}
 			]
-			dependencies: ["C200000000060104", "C200000000060108", "C200000000060109", "C20000000006010D", "C200000000060119"]
+			dependencies: ["C200000000060109", "C20000000006010D", "C20000000006010E", "C200000000060112", "C20000000006011E"]
 			shape: "hexagon"
 			size: 1.5d
 		}
 		{
-			id: "C20000000006012F"
+			id: "C200000000060134"
 			x: 13.6d
 			y: -2.0d
 			tasks: [
@@ -1342,7 +1340,7 @@
 					type: "advancement"
 					advancement: "ninjacatskies:strand/clock"
 					criterion: ""
-					id: "D20000000006012F"
+					id: "D200000000060134"
 				}
 			]
 			rewards: [
@@ -1352,7 +1350,7 @@
 						id: "ninjacatskies:frayed_thread"
 						count: 6
 					}
-					id: "E20000000006012F"
+					id: "E200000000060134"
 				}
 				{
 					type: "item"
@@ -1360,11 +1358,42 @@
 						id: "ninjacatskies:codex_page"
 						count: 1
 					}
-					id: "E20000000106012F"
+					id: "E200000001060134"
 				}
 			]
-			dependencies: ["C20000000006012E"]
+			dependencies: ["C200000000060133"]
 			shape: "diamond"
+		}
+		{
+			id: "C200000000060135"
+			x: -3.0d
+			y: -2.0d
+			tasks: [
+				{
+					type: "kill"
+					entity: "minecraft:skeleton"
+					value: 20
+					id: "D200000000060135"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "minecraft:bone_block"
+						count: 8
+					}
+					id: "E200000000060135"
+				}
+				{
+					type: "xp_levels"
+					xp_levels: 2
+					id: "E200000001060135"
+				}
+			]
+			shape: "octagon"
+			invisible: true
+			invisible_until_tasks: 1
 		}
 	]
 }

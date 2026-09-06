@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C200000000030077"
+			id: "C200000000030079"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000030077"
+					id: "D200000000030079"
 					type: "item"
 					item: {
 						id: "minecraft:iron_hoe"
@@ -27,7 +27,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000030077"
+					id: "E200000000030079"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -35,74 +35,22 @@
 					}
 				}
 				{
-					id: "D100000000030077"
+					id: "D100000000030079"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 		}
 		{
-			id: "C200000000030078"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D200000000030078"
-					type: "item"
-					item: {
-						id: "minecraft:wheat"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000030078"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C200000000030077"]
-		}
-		{
-			id: "C200000000030079"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D200000000030079"
-					type: "item"
-					item: {
-						id: "minecraft:wheat_seeds"
-						count: 32
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E200000000030079"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			dependencies: ["C200000000030077"]
-		}
-		{
 			id: "C20000000003007A"
 			x: 0.0d
-			y: 3.9d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000003007A"
 					type: "item"
 					item: {
-						id: "minecraft:bone_meal"
+						id: "minecraft:wheat"
 						count: 32
 					}
 				}
@@ -117,19 +65,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030077"]
+			dependencies: ["C200000000030079"]
 		}
 		{
 			id: "C20000000003007B"
 			x: 0.0d
-			y: 5.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000003007B"
 					type: "item"
 					item: {
-						id: "farmersdelight:flint_knife"
-						count: 1
+						id: "minecraft:wheat_seeds"
+						count: 32
 					}
 				}
 			]
@@ -143,19 +91,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030077"]
+			dependencies: ["C200000000030079"]
 		}
 		{
 			id: "C20000000003007C"
-			x: 1.8d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000003007C"
 					type: "item"
 					item: {
-						id: "farmersdelight:cutting_board"
-						count: 1
+						id: "minecraft:bone_meal"
+						count: 32
 					}
 				}
 			]
@@ -165,27 +113,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 1
 					}
 				}
-				{
-					id: "D10000000003007C"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C200000000030077"]
+			dependencies: ["C200000000030079"]
 		}
 		{
 			id: "C20000000003007D"
-			x: 1.8d
-			y: 1.3d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000003007D"
 					type: "item"
 					item: {
-						id: "farmersdelight:cooking_pot"
+						id: "farmersdelight:flint_knife"
 						count: 1
 					}
 				}
@@ -200,19 +143,19 @@
 					}
 				}
 			]
-			dependencies: ["C20000000003007C"]
+			dependencies: ["C200000000030079"]
 		}
 		{
 			id: "C20000000003007E"
 			x: 1.8d
-			y: 2.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D20000000003007E"
 					type: "item"
 					item: {
-						id: "farmersdelight:cabbage"
-						count: 8
+						id: "farmersdelight:cutting_board"
+						count: 1
 					}
 				}
 			]
@@ -222,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
+				{
+					id: "D10000000003007E"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C20000000003007C"]
+			dependencies: ["C200000000030079"]
 		}
 		{
 			id: "C20000000003007F"
 			x: 1.8d
-			y: 3.9d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000003007F"
 					type: "item"
 					item: {
-						id: "farmersdelight:tomato"
-						count: 8
+						id: "farmersdelight:cooking_pot"
+						count: 1
 					}
 				}
 			]
@@ -252,18 +200,18 @@
 					}
 				}
 			]
-			dependencies: ["C20000000003007C"]
+			dependencies: ["C20000000003007E"]
 		}
 		{
 			id: "C200000000030080"
 			x: 1.8d
-			y: 5.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000030080"
 					type: "item"
 					item: {
-						id: "farmersdelight:onion"
+						id: "farmersdelight:cabbage"
 						count: 8
 					}
 				}
@@ -278,19 +226,19 @@
 					}
 				}
 			]
-			dependencies: ["C20000000003007C"]
+			dependencies: ["C20000000003007E"]
 		}
 		{
 			id: "C200000000030081"
-			x: 3.6d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000030081"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:inferium_essence"
-						count: 16
+						id: "farmersdelight:tomato"
+						count: 8
 					}
 				}
 			]
@@ -300,27 +248,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 1
 					}
 				}
-				{
-					id: "D100000000030081"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C20000000003007C"]
+			dependencies: ["C20000000003007E"]
 		}
 		{
 			id: "C200000000030082"
-			x: 3.6d
-			y: 1.3d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000030082"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:prosperity_shard"
+						id: "farmersdelight:onion"
 						count: 8
 					}
 				}
@@ -335,19 +278,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030081"]
+			dependencies: ["C20000000003007E"]
 		}
 		{
 			id: "C200000000030083"
 			x: 3.6d
-			y: 2.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000030083"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:infusion_altar"
-						count: 1
+						id: "mysticalagriculture:inferium_essence"
+						count: 16
 					}
 				}
 			]
@@ -357,23 +300,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
+				{
+					id: "D100000000030083"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000030081"]
+			dependencies: ["C20000000003007E"]
 		}
 		{
 			id: "C200000000030084"
 			x: 3.6d
-			y: 3.9d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000030084"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:infusion_pedestal"
-						count: 4
+						id: "mysticalagriculture:prosperity_shard"
+						count: 8
 					}
 				}
 			]
@@ -387,18 +335,18 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030081"]
+			dependencies: ["C200000000030083"]
 		}
 		{
 			id: "C200000000030085"
 			x: 3.6d
-			y: 5.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000030085"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:dirt_seeds"
+						id: "mysticalagriculture:infusion_altar"
 						count: 1
 					}
 				}
@@ -413,19 +361,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030081"]
+			dependencies: ["C200000000030083"]
 		}
 		{
 			id: "C200000000030086"
-			x: 5.4d
-			y: 0.0d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000030086"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:wood_seeds"
-						count: 1
+						id: "mysticalagriculture:infusion_pedestal"
+						count: 4
 					}
 				}
 			]
@@ -435,27 +383,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 1
 					}
 				}
-				{
-					id: "D100000000030086"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C200000000030081"]
+			dependencies: ["C200000000030083"]
 		}
 		{
 			id: "C200000000030087"
-			x: 5.4d
-			y: 1.3d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000030087"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:stone_seeds"
+						id: "mysticalagriculture:dirt_seeds"
 						count: 1
 					}
 				}
@@ -470,18 +413,18 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030086"]
+			dependencies: ["C200000000030083"]
 		}
 		{
 			id: "C200000000030088"
 			x: 5.4d
-			y: 2.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000030088"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:iron_seeds"
+						id: "mysticalagriculture:wood_seeds"
 						count: 1
 					}
 				}
@@ -492,22 +435,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
+				{
+					id: "D100000000030088"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000030086"]
+			dependencies: ["C200000000030083"]
 		}
 		{
 			id: "C200000000030089"
 			x: 5.4d
-			y: 3.9d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000030089"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:copper_seeds"
+						id: "mysticalagriculture:stone_seeds"
 						count: 1
 					}
 				}
@@ -522,18 +470,18 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030086"]
+			dependencies: ["C200000000030088"]
 		}
 		{
 			id: "C20000000003008A"
 			x: 5.4d
-			y: 5.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000003008A"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:gold_seeds"
+						id: "mysticalagriculture:iron_seeds"
 						count: 1
 					}
 				}
@@ -548,18 +496,18 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030086"]
+			dependencies: ["C200000000030088"]
 		}
 		{
 			id: "C20000000003008B"
-			x: 7.2d
-			y: 0.0d
+			x: 5.4d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D20000000003008B"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:coal_seeds"
+						id: "mysticalagriculture:copper_seeds"
 						count: 1
 					}
 				}
@@ -570,27 +518,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 1
 					}
 				}
-				{
-					id: "D10000000003008B"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C200000000030086"]
+			dependencies: ["C200000000030088"]
 		}
 		{
 			id: "C20000000003008C"
-			x: 7.2d
-			y: 1.3d
+			x: 5.4d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D20000000003008C"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:water_seeds"
+						id: "mysticalagriculture:gold_seeds"
 						count: 1
 					}
 				}
@@ -605,18 +548,18 @@
 					}
 				}
 			]
-			dependencies: ["C20000000003008B"]
+			dependencies: ["C200000000030088"]
 		}
 		{
 			id: "C20000000003008D"
 			x: 7.2d
-			y: 2.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D20000000003008D"
 					type: "item"
 					item: {
-						id: "botanypots:terracotta_botany_pot"
+						id: "mysticalagriculture:coal_seeds"
 						count: 1
 					}
 				}
@@ -627,22 +570,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
+				{
+					id: "D10000000003008D"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C20000000003008B"]
+			dependencies: ["C200000000030088"]
 		}
 		{
 			id: "C20000000003008E"
 			x: 7.2d
-			y: 3.9d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D20000000003008E"
 					type: "item"
 					item: {
-						id: "botanypots:terracotta_hopper_botany_pot"
+						id: "mysticalagriculture:water_seeds"
 						count: 1
 					}
 				}
@@ -657,19 +605,19 @@
 					}
 				}
 			]
-			dependencies: ["C20000000003008B"]
+			dependencies: ["C20000000003008D"]
 		}
 		{
 			id: "C20000000003008F"
 			x: 7.2d
-			y: 5.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D20000000003008F"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:prudentium_essence"
-						count: 16
+						id: "botanypots:terracotta_botany_pot"
+						count: 1
 					}
 				}
 			]
@@ -683,19 +631,19 @@
 					}
 				}
 			]
-			dependencies: ["C20000000003008B"]
+			dependencies: ["C20000000003008D"]
 		}
 		{
 			id: "C200000000030090"
-			x: 9.0d
-			y: 0.0d
+			x: 7.2d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000030090"
 					type: "item"
 					item: {
-						id: "mysticalagriculture:tertium_essence"
-						count: 8
+						id: "botanypots:terracotta_hopper_botany_pot"
+						count: 1
 					}
 				}
 			]
@@ -705,28 +653,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 1
 					}
 				}
-				{
-					id: "D100000000030090"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C20000000003008B"]
+			dependencies: ["C20000000003008D"]
 		}
 		{
 			id: "C200000000030091"
-			x: 9.0d
-			y: 1.3d
+			x: 7.2d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000030091"
 					type: "item"
 					item: {
-						id: "minecraft:bone_block"
-						count: 4
+						id: "mysticalagriculture:prudentium_essence"
+						count: 16
 					}
 				}
 			]
@@ -740,18 +683,18 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030090"]
+			dependencies: ["C20000000003008D"]
 		}
 		{
 			id: "C200000000030092"
 			x: 9.0d
-			y: 2.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D200000000030092"
 					type: "item"
 					item: {
-						id: "minecraft:hay_block"
+						id: "mysticalagriculture:tertium_essence"
 						count: 8
 					}
 				}
@@ -762,23 +705,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
+				{
+					id: "D100000000030092"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C200000000030090"]
+			dependencies: ["C20000000003008D"]
 		}
 		{
 			id: "C200000000030093"
 			x: 9.0d
-			y: 3.9d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D200000000030093"
 					type: "item"
 					item: {
-						id: "farmersdelight:rich_soil"
-						count: 8
+						id: "minecraft:bone_block"
+						count: 4
 					}
 				}
 			]
@@ -792,18 +740,18 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030090"]
+			dependencies: ["C200000000030092"]
 		}
 		{
 			id: "C200000000030094"
 			x: 9.0d
-			y: 5.2d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D200000000030094"
 					type: "item"
 					item: {
-						id: "farmersdelight:organic_compost"
+						id: "minecraft:hay_block"
 						count: 8
 					}
 				}
@@ -818,19 +766,19 @@
 					}
 				}
 			]
-			dependencies: ["C200000000030090"]
+			dependencies: ["C200000000030092"]
 		}
 		{
 			id: "C200000000030095"
-			x: -4.0d
-			y: 7.5d
+			x: 9.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D200000000030095"
 					type: "item"
 					item: {
-						id: "minecraft:carrot"
-						count: 16
+						id: "farmersdelight:rich_soil"
+						count: 8
 					}
 				}
 			]
@@ -844,21 +792,19 @@
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000030078"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000030092"]
 		}
 		{
 			id: "C200000000030096"
-			x: -2.5d
-			y: 7.5d
+			x: 9.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D200000000030096"
 					type: "item"
 					item: {
-						id: "minecraft:potato"
-						count: 16
+						id: "farmersdelight:organic_compost"
+						count: 8
 					}
 				}
 			]
@@ -872,20 +818,18 @@
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C200000000030078"]
-			hide_until_deps_complete: true
+			dependencies: ["C200000000030092"]
 		}
 		{
 			id: "C200000000030097"
-			x: -1.0d
+			x: -4.0d
 			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000030097"
 					type: "item"
 					item: {
-						id: "minecraft:beetroot"
+						id: "minecraft:carrot"
 						count: 16
 					}
 				}
@@ -901,19 +845,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000030098"
-			x: 0.5d
+			x: -2.5d
 			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000030098"
 					type: "item"
 					item: {
-						id: "minecraft:melon_slice"
+						id: "minecraft:potato"
 						count: 16
 					}
 				}
@@ -929,20 +873,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C200000000030099"
-			x: 2.0d
+			x: -1.0d
 			y: 7.5d
 			tasks: [
 				{
 					id: "D200000000030099"
 					type: "item"
 					item: {
-						id: "minecraft:pumpkin"
-						count: 8
+						id: "minecraft:beetroot"
+						count: 16
 					}
 				}
 			]
@@ -957,19 +901,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000003009A"
-			x: 3.5d
+			x: 0.5d
 			y: 7.5d
 			tasks: [
 				{
 					id: "D20000000003009A"
 					type: "item"
 					item: {
-						id: "minecraft:sugar_cane"
+						id: "minecraft:melon_slice"
 						count: 16
 					}
 				}
@@ -985,19 +929,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000003009B"
-			x: -4.0d
-			y: 9.0d
+			x: 2.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D20000000003009B"
 					type: "item"
 					item: {
-						id: "minecraft:cactus"
+						id: "minecraft:pumpkin"
 						count: 8
 					}
 				}
@@ -1013,19 +957,19 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000003009C"
-			x: -2.5d
-			y: 9.0d
+			x: 3.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D20000000003009C"
 					type: "item"
 					item: {
-						id: "minecraft:bamboo"
+						id: "minecraft:sugar_cane"
 						count: 16
 					}
 				}
@@ -1041,20 +985,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000003009D"
-			x: -1.0d
+			x: -4.0d
 			y: 9.0d
 			tasks: [
 				{
 					id: "D20000000003009D"
 					type: "item"
 					item: {
-						id: "minecraft:sweet_berries"
-						count: 16
+						id: "minecraft:cactus"
+						count: 8
 					}
 				}
 			]
@@ -1069,20 +1013,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000003009E"
-			x: 0.5d
+			x: -2.5d
 			y: 9.0d
 			tasks: [
 				{
 					id: "D20000000003009E"
 					type: "item"
 					item: {
-						id: "minecraft:cocoa_beans"
-						count: 8
+						id: "minecraft:bamboo"
+						count: 16
 					}
 				}
 			]
@@ -1097,20 +1041,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C20000000003009F"
-			x: 2.0d
+			x: -1.0d
 			y: 9.0d
 			tasks: [
 				{
 					id: "D20000000003009F"
 					type: "item"
 					item: {
-						id: "minecraft:apple"
-						count: 8
+						id: "minecraft:sweet_berries"
+						count: 16
 					}
 				}
 			]
@@ -1125,20 +1069,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000300A0"
-			x: 3.5d
+			x: 0.5d
 			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000300A0"
 					type: "item"
 					item: {
-						id: "minecraft:mushroom_stew"
-						count: 4
+						id: "minecraft:cocoa_beans"
+						count: 8
 					}
 				}
 			]
@@ -1153,20 +1097,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000300A1"
-			x: -4.0d
-			y: 10.5d
+			x: 2.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000300A1"
 					type: "item"
 					item: {
-						id: "minecraft:honey_bottle"
-						count: 4
+						id: "minecraft:apple"
+						count: 8
 					}
 				}
 			]
@@ -1181,20 +1125,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000300A2"
-			x: -2.5d
-			y: 10.5d
+			x: 3.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D2000000000300A2"
 					type: "item"
 					item: {
-						id: "minecraft:glow_berries"
-						count: 8
+						id: "minecraft:mushroom_stew"
+						count: 4
 					}
 				}
 			]
@@ -1209,20 +1153,20 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000300A3"
-			x: -1.0d
+			x: -4.0d
 			y: 10.5d
 			tasks: [
 				{
 					id: "D2000000000300A3"
 					type: "item"
 					item: {
-						id: "minecraft:nether_wart"
-						count: 8
+						id: "minecraft:honey_bottle"
+						count: 4
 					}
 				}
 			]
@@ -1237,17 +1181,73 @@
 				}
 			]
 			optional: true
-			dependencies: ["C200000000030078"]
+			dependencies: ["C20000000003007A"]
 			hide_until_deps_complete: true
 		}
 		{
 			id: "C2000000000300A4"
+			x: -2.5d
+			y: 10.5d
+			tasks: [
+				{
+					id: "D2000000000300A4"
+					type: "item"
+					item: {
+						id: "minecraft:glow_berries"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000003007A"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000300A5"
+			x: -1.0d
+			y: 10.5d
+			tasks: [
+				{
+					id: "D2000000000300A5"
+					type: "item"
+					item: {
+						id: "minecraft:nether_wart"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000300A5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000003007A"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000300A6"
 			x: 12.0d
 			y: -2.0d
 			tasks: [
 				{
 					type: "checkmark"
-					id: "D2000000000300A4"
+					id: "D2000000000300A6"
 				}
 			]
 			rewards: [
@@ -1257,27 +1257,25 @@
 						id: "ninjacatskies:strand_token_sprout"
 						count: 1
 					}
-					id: "E2000000000300A4"
+					id: "E2000000000300A6"
 				}
 				{
-					type: "command"
-					command: "loot give @p loot ninjacatskies:steward_cache/sprout"
-					silent: true
-					elevate_perms: true
-					id: "E2000000010300A4"
+					type: "loot"
+					table_id: "F100000000000003"
+					id: "E2000000010300A6"
 				}
 				{
 					type: "xp_levels"
 					xp_levels: 3
-					id: "E2000000020300A4"
+					id: "E2000000020300A6"
 				}
 			]
-			dependencies: ["C200000000030078", "C20000000003007D", "C200000000030083", "C200000000030088", "C20000000003008F"]
+			dependencies: ["C20000000003007A", "C20000000003007F", "C200000000030085", "C20000000003008A", "C200000000030091"]
 			shape: "hexagon"
 			size: 1.5d
 		}
 		{
-			id: "C2000000000300A5"
+			id: "C2000000000300A7"
 			x: 13.6d
 			y: -2.0d
 			tasks: [
@@ -1285,7 +1283,7 @@
 					type: "advancement"
 					advancement: "ninjacatskies:strand/sprout"
 					criterion: ""
-					id: "D2000000000300A5"
+					id: "D2000000000300A7"
 				}
 			]
 			rewards: [
@@ -1295,7 +1293,7 @@
 						id: "ninjacatskies:frayed_thread"
 						count: 6
 					}
-					id: "E2000000000300A5"
+					id: "E2000000000300A7"
 				}
 				{
 					type: "item"
@@ -1303,11 +1301,39 @@
 						id: "ninjacatskies:codex_page"
 						count: 1
 					}
-					id: "E2000000010300A5"
+					id: "E2000000010300A7"
 				}
 			]
-			dependencies: ["C2000000000300A4"]
+			dependencies: ["C2000000000300A6"]
 			shape: "diamond"
+		}
+		{
+			id: "C2000000000300A8"
+			x: -3.0d
+			y: -2.0d
+			tasks: [
+				{
+					type: "item"
+					item: {
+						id: "minecraft:poisonous_potato"
+						count: 1
+					}
+					id: "D2000000000300A8"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "minecraft:golden_carrot"
+						count: 4
+					}
+					id: "E2000000000300A8"
+				}
+			]
+			shape: "octagon"
+			invisible: true
+			invisible_until_tasks: 1
 		}
 	]
 }

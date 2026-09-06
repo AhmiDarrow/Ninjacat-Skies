@@ -1,0 +1,23 @@
+{
+	id: "F10000000000000A"
+	title: "Steward Cache: Nine Tribes"
+	icon: {
+		id: "ninjacatskies:spindle_loom_fragment"
+	}
+	loot_size: 1
+	hide_tooltip: false
+	use_title: true
+	loot_table_id: "ninjacatskies:steward_cache/reweave"
+	loot_crate: {
+		string_id: "steward_reweave"
+		item_name: "Steward Cache (Nine Tribes)"
+		color: 15261909
+		glow: true
+		drops: {
+			passive: 0
+			monster: 0
+			boss: 0
+		}
+	}
+	rewards: [ ]
+}
