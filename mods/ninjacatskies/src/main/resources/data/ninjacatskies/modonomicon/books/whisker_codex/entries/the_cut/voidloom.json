@@ -11,25 +11,37 @@
   "pages": [
     {
       "type": "modonomicon:spotlight",
-      "item": "voidloom:void_yarn",
+      "item": {
+        "id": "voidloom:void_yarn",
+        "count": 1
+      },
       "title": "Void Yarn",
       "text": "Thread that remembers where it came from. Early: four string make two yarn. Later: string and an ender pearl in the Tension Barrel make two. The Loomframe combs a little out of dirt as **Loom Lint** — four lint, one yarn."
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "voidloom:binding_knot",
+      "item": {
+        "id": "voidloom:binding_knot",
+        "count": 1
+      },
       "title": "Binding Knot",
       "text": "A ring of yarn around a slime ball. Early slime is pad compost: dirt, seeds, bone meal.\n\nThe Knot is the Loom's soft gate: Loomframes, Tension Posts, the first precision mechanism, and the AE2 controller all want one."
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "voidloom:loomframe",
+      "item": {
+        "id": "voidloom:loomframe",
+        "count": 1
+      },
       "title": "Loomframe",
       "text": "Stretch a mesh, load it with dirt or gravel, and let it work — one piece every few seconds with a shuttle clack. Hoppers feed the top and pull the sides.\n\nThread meshes catch what Ex Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand Filament** on iron."
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "voidloom:tension_barrel",
+      "item": {
+        "id": "voidloom:tension_barrel",
+        "count": 1
+      },
       "title": "Tension Barrel",
       "text": "Pour water (the bucket comes straight back), add up to eight dirt, come back for clay. String and pearls in the same barrel make yarn.\n\nClay to porcelain clay to a porcelain bucket: that is how a pad first carries lava."
     }

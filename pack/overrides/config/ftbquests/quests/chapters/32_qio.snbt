@@ -12,16 +12,150 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000002004AC"
+			id: "C2000000002004A7"
 			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000002004A7"
+					type: "item"
+					item: {
+						id: "mekanism:qio_drive_base"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000002004A7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000002004A7"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+		}
+		{
+			id: "C2000000002004A8"
+			x: 0.0d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000002004A8"
+					type: "item"
+					item: {
+						id: "mekanism:qio_drive_hyper_dense"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000002004A8"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000002004A7"]
+		}
+		{
+			id: "C2000000002004A9"
+			x: 0.0d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000002004A9"
+					type: "item"
+					item: {
+						id: "mekanism:qio_drive_time_dilating"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000002004A9"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000002004A7"]
+		}
+		{
+			id: "C2000000002004AA"
+			x: 0.0d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000002004AA"
+					type: "item"
+					item: {
+						id: "mekanism:qio_drive_supermassive"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000002004AA"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000002004A7"]
+		}
+		{
+			id: "C2000000002004AB"
+			x: 0.0d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000002004AB"
+					type: "item"
+					item: {
+						id: "mekanism:qio_drive_array"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000002004AB"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000002004A7"]
+		}
+		{
+			id: "C2000000002004AC"
+			x: 1.8d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004AC"
 					type: "item"
 					item: {
-						id: "mekanism:qio_drive_base"
-						count: 2
+						id: "mekanism:qio_dashboard"
+						count: 1
 					}
 				}
 			]
@@ -40,17 +174,18 @@
 					xp_levels: 1
 				}
 			]
+			dependencies: ["C2000000002004A7"]
 		}
 		{
 			id: "C2000000002004AD"
-			x: 0.0d
+			x: 1.8d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004AD"
 					type: "item"
 					item: {
-						id: "mekanism:qio_drive_hyper_dense"
+						id: "mekanism:portable_qio_dashboard"
 						count: 1
 					}
 				}
@@ -69,15 +204,15 @@
 		}
 		{
 			id: "C2000000002004AE"
-			x: 0.0d
+			x: 1.8d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004AE"
 					type: "item"
 					item: {
-						id: "mekanism:qio_drive_time_dilating"
-						count: 1
+						id: "mekanism:steel_casing"
+						count: 16
 					}
 				}
 			]
@@ -95,14 +230,14 @@
 		}
 		{
 			id: "C2000000002004AF"
-			x: 0.0d
+			x: 1.8d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004AF"
 					type: "item"
 					item: {
-						id: "mekanism:qio_drive_supermassive"
+						id: "mekanism:ultimate_energy_cube"
 						count: 1
 					}
 				}
@@ -121,15 +256,15 @@
 		}
 		{
 			id: "C2000000002004B0"
-			x: 0.0d
+			x: 1.8d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004B0"
 					type: "item"
 					item: {
-						id: "mekanism:qio_drive_array"
-						count: 1
+						id: "mekanism:ultimate_bin"
+						count: 2
 					}
 				}
 			]
@@ -147,14 +282,14 @@
 		}
 		{
 			id: "C2000000002004B1"
-			x: 1.8d
+			x: 3.6d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004B1"
 					type: "item"
 					item: {
-						id: "mekanism:qio_dashboard"
+						id: "mekanism:ultimate_smelting_factory"
 						count: 1
 					}
 				}
@@ -178,14 +313,14 @@
 		}
 		{
 			id: "C2000000002004B2"
-			x: 1.8d
+			x: 3.6d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004B2"
 					type: "item"
 					item: {
-						id: "mekanism:portable_qio_dashboard"
+						id: "mekanism:ultimate_enriching_factory"
 						count: 1
 					}
 				}
@@ -204,15 +339,15 @@
 		}
 		{
 			id: "C2000000002004B3"
-			x: 1.8d
+			x: 3.6d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004B3"
 					type: "item"
 					item: {
-						id: "mekanism:steel_casing"
-						count: 16
+						id: "mekanism:ultimate_crushing_factory"
+						count: 1
 					}
 				}
 			]
@@ -230,14 +365,14 @@
 		}
 		{
 			id: "C2000000002004B4"
-			x: 1.8d
+			x: 3.6d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004B4"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_energy_cube"
+						id: "mekanism:digital_miner"
 						count: 1
 					}
 				}
@@ -256,15 +391,15 @@
 		}
 		{
 			id: "C2000000002004B5"
-			x: 1.8d
+			x: 3.6d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004B5"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_bin"
-						count: 2
+						id: "mekanism:atomic_disassembler"
+						count: 1
 					}
 				}
 			]
@@ -282,14 +417,14 @@
 		}
 		{
 			id: "C2000000002004B6"
-			x: 3.6d
+			x: 5.4d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004B6"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_smelting_factory"
+						id: "mekanism:configurator"
 						count: 1
 					}
 				}
@@ -313,14 +448,14 @@
 		}
 		{
 			id: "C2000000002004B7"
-			x: 3.6d
+			x: 5.4d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004B7"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_enriching_factory"
+						id: "mekanism:teleporter"
 						count: 1
 					}
 				}
@@ -339,15 +474,15 @@
 		}
 		{
 			id: "C2000000002004B8"
-			x: 3.6d
+			x: 5.4d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004B8"
 					type: "item"
 					item: {
-						id: "mekanism:ultimate_crushing_factory"
-						count: 1
+						id: "mekanism:teleporter_frame"
+						count: 16
 					}
 				}
 			]
@@ -365,15 +500,15 @@
 		}
 		{
 			id: "C2000000002004B9"
-			x: 3.6d
+			x: 5.4d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004B9"
 					type: "item"
 					item: {
-						id: "mekanism:digital_miner"
-						count: 1
+						id: "mekanism:sps_casing"
+						count: 8
 					}
 				}
 			]
@@ -391,15 +526,15 @@
 		}
 		{
 			id: "C2000000002004BA"
-			x: 3.6d
+			x: 5.4d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004BA"
 					type: "item"
 					item: {
-						id: "mekanism:atomic_disassembler"
-						count: 1
+						id: "mekanism:sps_port"
+						count: 2
 					}
 				}
 			]
@@ -417,14 +552,14 @@
 		}
 		{
 			id: "C2000000002004BB"
-			x: 5.4d
+			x: 7.2d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004BB"
 					type: "item"
 					item: {
-						id: "mekanism:configurator"
+						id: "mekanism:supercharged_coil"
 						count: 1
 					}
 				}
@@ -448,14 +583,14 @@
 		}
 		{
 			id: "C2000000002004BC"
-			x: 5.4d
+			x: 7.2d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004BC"
 					type: "item"
 					item: {
-						id: "mekanism:teleporter"
+						id: "mekanism:isotopic_centrifuge"
 						count: 1
 					}
 				}
@@ -474,15 +609,15 @@
 		}
 		{
 			id: "C2000000002004BD"
-			x: 5.4d
+			x: 7.2d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004BD"
 					type: "item"
 					item: {
-						id: "mekanism:teleporter_frame"
-						count: 16
+						id: "mekanism:chemical_dissolution_chamber"
+						count: 1
 					}
 				}
 			]
@@ -500,15 +635,15 @@
 		}
 		{
 			id: "C2000000002004BE"
-			x: 5.4d
+			x: 7.2d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004BE"
 					type: "item"
 					item: {
-						id: "mekanism:sps_casing"
-						count: 8
+						id: "mekanism:chemical_washer"
+						count: 1
 					}
 				}
 			]
@@ -526,15 +661,15 @@
 		}
 		{
 			id: "C2000000002004BF"
-			x: 5.4d
+			x: 7.2d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004BF"
 					type: "item"
 					item: {
-						id: "mekanism:sps_port"
-						count: 2
+						id: "mekanism:chemical_crystallizer"
+						count: 1
 					}
 				}
 			]
@@ -552,14 +687,14 @@
 		}
 		{
 			id: "C2000000002004C0"
-			x: 7.2d
+			x: 9.0d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004C0"
 					type: "item"
 					item: {
-						id: "mekanism:supercharged_coil"
+						id: "mekanism:solar_neutron_activator"
 						count: 1
 					}
 				}
@@ -583,14 +718,14 @@
 		}
 		{
 			id: "C2000000002004C1"
-			x: 7.2d
+			x: 9.0d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004C1"
 					type: "item"
 					item: {
-						id: "mekanism:isotopic_centrifuge"
+						id: "mekanism:resistive_heater"
 						count: 1
 					}
 				}
@@ -609,14 +744,14 @@
 		}
 		{
 			id: "C2000000002004C2"
-			x: 7.2d
+			x: 9.0d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004C2"
 					type: "item"
 					item: {
-						id: "mekanism:chemical_dissolution_chamber"
+						id: "mekanism:fuelwood_heater"
 						count: 1
 					}
 				}
@@ -635,14 +770,14 @@
 		}
 		{
 			id: "C2000000002004C3"
-			x: 7.2d
+			x: 9.0d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004C3"
 					type: "item"
 					item: {
-						id: "mekanism:chemical_washer"
+						id: "mekanism:antiprotonic_nucleosynthesizer"
 						count: 1
 					}
 				}
@@ -661,14 +796,14 @@
 		}
 		{
 			id: "C2000000002004C4"
-			x: 7.2d
+			x: 9.0d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004C4"
 					type: "item"
 					item: {
-						id: "mekanism:chemical_crystallizer"
+						id: "mekanism:meka_tool"
 						count: 1
 					}
 				}
@@ -687,14 +822,14 @@
 		}
 		{
 			id: "C2000000002004C5"
-			x: 9.0d
+			x: 10.8d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004C5"
 					type: "item"
 					item: {
-						id: "mekanism:solar_neutron_activator"
+						id: "mekanism:mekasuit_helmet"
 						count: 1
 					}
 				}
@@ -718,14 +853,14 @@
 		}
 		{
 			id: "C2000000002004C6"
-			x: 9.0d
+			x: 10.8d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004C6"
 					type: "item"
 					item: {
-						id: "mekanism:resistive_heater"
+						id: "mekanism:mekasuit_bodyarmor"
 						count: 1
 					}
 				}
@@ -744,14 +879,14 @@
 		}
 		{
 			id: "C2000000002004C7"
-			x: 9.0d
+			x: 10.8d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004C7"
 					type: "item"
 					item: {
-						id: "mekanism:fuelwood_heater"
+						id: "mekanism:mekasuit_pants"
 						count: 1
 					}
 				}
@@ -770,14 +905,14 @@
 		}
 		{
 			id: "C2000000002004C8"
-			x: 9.0d
+			x: 10.8d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004C8"
 					type: "item"
 					item: {
-						id: "mekanism:antiprotonic_nucleosynthesizer"
+						id: "mekanism:mekasuit_boots"
 						count: 1
 					}
 				}
@@ -796,15 +931,15 @@
 		}
 		{
 			id: "C2000000002004C9"
-			x: 9.0d
+			x: 10.8d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004C9"
 					type: "item"
 					item: {
-						id: "mekanism:meka_tool"
-						count: 1
+						id: "mekanism:boiler_casing"
+						count: 16
 					}
 				}
 			]
@@ -822,15 +957,15 @@
 		}
 		{
 			id: "C2000000002004CA"
-			x: 10.8d
+			x: 12.6d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004CA"
 					type: "item"
 					item: {
-						id: "mekanism:mekasuit_helmet"
-						count: 1
+						id: "mekanism:elite_energy_cube"
+						count: 2
 					}
 				}
 			]
@@ -853,15 +988,15 @@
 		}
 		{
 			id: "C2000000002004CB"
-			x: 10.8d
+			x: 12.6d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004CB"
 					type: "item"
 					item: {
-						id: "mekanism:mekasuit_bodyarmor"
-						count: 1
+						id: "mekanism:advanced_energy_cube"
+						count: 2
 					}
 				}
 			]
@@ -879,15 +1014,15 @@
 		}
 		{
 			id: "C2000000002004CC"
-			x: 10.8d
+			x: 12.6d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004CC"
 					type: "item"
 					item: {
-						id: "mekanism:mekasuit_pants"
-						count: 1
+						id: "mekanism:basic_energy_cube"
+						count: 2
 					}
 				}
 			]
@@ -905,14 +1040,14 @@
 		}
 		{
 			id: "C2000000002004CD"
-			x: 10.8d
+			x: 12.6d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004CD"
 					type: "item"
 					item: {
-						id: "mekanism:mekasuit_boots"
+						id: "mekanism:metallurgic_infuser"
 						count: 1
 					}
 				}
@@ -931,15 +1066,15 @@
 		}
 		{
 			id: "C2000000002004CE"
-			x: 10.8d
+			x: 12.6d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004CE"
 					type: "item"
 					item: {
-						id: "mekanism:boiler_casing"
-						count: 16
+						id: "mekanism:enrichment_chamber"
+						count: 1
 					}
 				}
 			]
@@ -957,15 +1092,15 @@
 		}
 		{
 			id: "C2000000002004CF"
-			x: 12.6d
+			x: 14.4d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004CF"
 					type: "item"
 					item: {
-						id: "mekanism:elite_energy_cube"
-						count: 2
+						id: "mekanism:crusher"
+						count: 1
 					}
 				}
 			]
@@ -988,15 +1123,15 @@
 		}
 		{
 			id: "C2000000002004D0"
-			x: 12.6d
+			x: 14.4d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004D0"
 					type: "item"
 					item: {
-						id: "mekanism:advanced_energy_cube"
-						count: 2
+						id: "mekanism:energized_smelter"
+						count: 1
 					}
 				}
 			]
@@ -1014,15 +1149,15 @@
 		}
 		{
 			id: "C2000000002004D1"
-			x: 12.6d
+			x: 14.4d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004D1"
 					type: "item"
 					item: {
-						id: "mekanism:basic_energy_cube"
-						count: 2
+						id: "mekanism:precision_sawmill"
+						count: 1
 					}
 				}
 			]
@@ -1040,14 +1175,14 @@
 		}
 		{
 			id: "C2000000002004D2"
-			x: 12.6d
+			x: 14.4d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004D2"
 					type: "item"
 					item: {
-						id: "mekanism:metallurgic_infuser"
+						id: "mekanism:electrolytic_separator"
 						count: 1
 					}
 				}
@@ -1066,14 +1201,14 @@
 		}
 		{
 			id: "C2000000002004D3"
-			x: 12.6d
+			x: 14.4d
 			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000002004D3"
 					type: "item"
 					item: {
-						id: "mekanism:enrichment_chamber"
+						id: "mekanism:chemical_infuser"
 						count: 1
 					}
 				}
@@ -1092,14 +1227,14 @@
 		}
 		{
 			id: "C2000000002004D4"
-			x: 14.4d
+			x: 16.2d
 			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000002004D4"
 					type: "item"
 					item: {
-						id: "mekanism:crusher"
+						id: "mekanism:purification_chamber"
 						count: 1
 					}
 				}
@@ -1123,14 +1258,14 @@
 		}
 		{
 			id: "C2000000002004D5"
-			x: 14.4d
+			x: 16.2d
 			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000002004D5"
 					type: "item"
 					item: {
-						id: "mekanism:energized_smelter"
+						id: "mekanism:chemical_injection_chamber"
 						count: 1
 					}
 				}
@@ -1149,14 +1284,14 @@
 		}
 		{
 			id: "C2000000002004D6"
-			x: 14.4d
+			x: 16.2d
 			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000002004D6"
 					type: "item"
 					item: {
-						id: "mekanism:precision_sawmill"
+						id: "mekanism:osmium_compressor"
 						count: 1
 					}
 				}
@@ -1175,14 +1310,14 @@
 		}
 		{
 			id: "C2000000002004D7"
-			x: 14.4d
+			x: 16.2d
 			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000002004D7"
 					type: "item"
 					item: {
-						id: "mekanism:electrolytic_separator"
+						id: "mekanism:combiner"
 						count: 1
 					}
 				}
@@ -1198,141 +1333,6 @@
 				}
 			]
 			dependencies: ["C2000000002004D4"]
-		}
-		{
-			id: "C2000000002004D8"
-			x: 14.4d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000002004D8"
-					type: "item"
-					item: {
-						id: "mekanism:chemical_infuser"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000002004D8"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000002004D4"]
-		}
-		{
-			id: "C2000000002004D9"
-			x: 16.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000002004D9"
-					type: "item"
-					item: {
-						id: "mekanism:purification_chamber"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000002004D9"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000002004D9"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000002004D4"]
-		}
-		{
-			id: "C2000000002004DA"
-			x: 16.2d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000002004DA"
-					type: "item"
-					item: {
-						id: "mekanism:chemical_injection_chamber"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000002004DA"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000002004D9"]
-		}
-		{
-			id: "C2000000002004DB"
-			x: 16.2d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000002004DB"
-					type: "item"
-					item: {
-						id: "mekanism:osmium_compressor"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000002004DB"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000002004D9"]
-		}
-		{
-			id: "C2000000002004DC"
-			x: 16.2d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000002004DC"
-					type: "item"
-					item: {
-						id: "mekanism:combiner"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000002004DC"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000002004D9"]
 		}
 	]
 }

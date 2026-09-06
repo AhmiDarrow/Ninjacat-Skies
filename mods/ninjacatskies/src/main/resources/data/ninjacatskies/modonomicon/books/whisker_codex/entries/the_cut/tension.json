@@ -11,7 +11,10 @@
   "pages": [
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:tension_post",
+      "item": {
+        "id": "ninjacatskies:tension_post",
+        "count": 1
+      },
       "title": "Tension Post",
       "text": "Logs, a Binding Knot, and a scrap of Thread make a **Tension Post**. Raise one on the pad. Right-click it with a Strand token to seat that Strand; the notch lights, the tribe chimes, and the Post starts to hum."
     },

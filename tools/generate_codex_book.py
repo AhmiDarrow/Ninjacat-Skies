@@ -25,7 +25,7 @@ def text(title: str, body: str) -> dict:
 
 
 def spotlight(item: str, title: str, body: str) -> dict:
-    return {"type": "modonomicon:spotlight", "item": item, "title": title, "text": body}
+    return {"type": "modonomicon:spotlight", "item": {"id": item, "count": 1}, "title": title, "text": body}
 
 
 def entry(cat: str, eid: str, name: str, desc: str, icon: str, x: int, y: int, pages: list, *,

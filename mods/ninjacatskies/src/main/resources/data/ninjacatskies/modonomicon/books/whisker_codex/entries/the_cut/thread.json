@@ -11,7 +11,10 @@
   "pages": [
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:frayed_thread",
+      "item": {
+        "id": "ninjacatskies:frayed_thread",
+        "count": 1
+      },
       "title": "Frayed Thread",
       "text": "Every quest returns a little **Frayed Thread** — scraps of the Loom that still hold. Unravel one for three string. Or keep it: the **Frayed Thread Desk** (a quest chapter) sells saplings, buckets, meshes, pearls, and other things a pad runs short of."
     },

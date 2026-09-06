@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_spindle",
+      "item": {
+        "id": "ninjacatskies:strand_token_spindle",
+        "count": 1
+      },
       "title": "Spindle Strand",
       "text": "*The Loom was never one thread. It was nine agreeing.*\n\nSeated. The Loom-stitchers answer when this Post hums."
     }

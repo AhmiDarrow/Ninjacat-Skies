@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_soil",
+      "item": {
+        "id": "ninjacatskies:strand_token_soil",
+        "count": 1
+      },
       "title": "Soil Strand",
       "text": "*We never called it dirt. We called it what was left, and we kept it warm.*\n\nSeated. The Pad-keepers answer when this Post hums."
     }

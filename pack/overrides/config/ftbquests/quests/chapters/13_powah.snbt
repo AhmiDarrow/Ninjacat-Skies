@@ -372,7 +372,7 @@
 					id: "D2000000000D020D"
 					type: "item"
 					item: {
-						id: "powah:niotic_crystal"
+						id: "powah:crystal_niotic"
 						count: 4
 					}
 				}
@@ -398,7 +398,7 @@
 					id: "D2000000000D020E"
 					type: "item"
 					item: {
-						id: "powah:spirited_crystal"
+						id: "powah:crystal_spirited"
 						count: 2
 					}
 				}
@@ -424,7 +424,7 @@
 					id: "D2000000000D020F"
 					type: "item"
 					item: {
-						id: "powah:nitro_crystal"
+						id: "powah:crystal_nitro"
 						count: 1
 					}
 				}

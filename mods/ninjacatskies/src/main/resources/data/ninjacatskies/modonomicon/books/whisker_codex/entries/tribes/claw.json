@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_claw",
+      "item": {
+        "id": "ninjacatskies:strand_token_claw",
+        "count": 1
+      },
       "title": "Claw Strand",
       "text": "*Boots first. Then the bridge. Then the courage; it arrives on its own.*\n\nSeated. The Edge-walkers answer when this Post hums."
     }

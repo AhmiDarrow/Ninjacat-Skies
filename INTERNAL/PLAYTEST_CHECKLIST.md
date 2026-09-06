@@ -65,6 +65,8 @@ Do not mark items done from agent disk audits. Check only after a live client ru
 - [ ] Loomframe: load 64 dirt, walk away, come back to scraps; hopper on top feeds, hopper on side pulls
 - [ ] Tension Barrel: water bucket returns immediately; 8 dirt → 8 clay unattended
 
+- [ ] Clowder Hall: after a Reweave, re-enter the Hall — one ring pillar lit with the Clowder's name plaque
+
 ## Root → Edge
 
 - [ ] Living pad / farm foothold (Soil–Root feel) without Tribal softlock

@@ -16,7 +16,10 @@
     },
     {
       "type": "modonomicon:spotlight",
-      "item": "ninjacatskies:strand_token_spark",
+      "item": {
+        "id": "ninjacatskies:strand_token_spark",
+        "count": 1
+      },
       "title": "Spark Strand",
       "text": "*The drum is not loud. The drum is steady. Be the drum.*\n\nSeated. The Drumhearts answer when this Post hums."
     }
