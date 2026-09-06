@@ -1,6 +1,9 @@
 # Changelog
 
-## 0.1.0-alpha (in progress)
+## 0.2.0-alpha — Loom Tension
+
+Uploaded to CurseForge 2026-09-06 (file 8825972). First CurseForge alpha. Everything below the "Scope" block was landed 2026-09-05/06; see the dated sections for the Loom Tension layer, Voidloom rework, quest regeneration, and headless verification.
+
 
 ### Scope
 - Target playtime: **40–60 hours** Normal first clear
