@@ -1,23 +1,34 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "loom"
 	filename: "16_shop"
-	group: "A100000000000004"
+	group: "2100000000000004"
 	icon: {
 		id: "ninjacatskies:frayed_thread"
 	}
-	id: "B100000000000010"
-	images: [ ]
+	id: "3100000000000010"
+	images: [
+		{
+			id: "6700000000000010"
+			x: 3.0d
+			y: -4.2d
+			width: 16.0d
+			height: 2.5d
+			image: "ninjacatskies:textures/gui/quests/chapter_16.png"
+			order: -10
+			position_locked: true
+		}
+	]
 	order_index: 15
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C200000000100259"
+			id: "420000000010025A"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000100259"
+					id: "520000000010025A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -28,7 +39,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100259"
+					id: "620000000010025A"
 					type: "item"
 					item: {
 						id: "minecraft:oak_sapling"
@@ -37,21 +48,22 @@
 					team_reward: false
 				}
 				{
-					id: "D100000000100259"
+					id: "510000000010025A"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C20000000010025A"
+			id: "420000000010025B"
 			x: 0.0d
-			y: 1.3d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D20000000010025A"
+					id: "520000000010025B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -62,7 +74,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010025A"
+					id: "620000000010025B"
 					type: "item"
 					item: {
 						id: "minecraft:bucket"
@@ -72,14 +84,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C20000000010025B"
+			id: "420000000010025C"
 			x: 0.0d
-			y: 2.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D20000000010025B"
+					id: "520000000010025C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -90,7 +103,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010025B"
+					id: "620000000010025C"
 					type: "item"
 					item: {
 						id: "minecraft:bone_meal"
@@ -100,14 +113,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C20000000010025C"
+			id: "420000000010025D"
 			x: 0.0d
-			y: 3.9d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D20000000010025C"
+					id: "520000000010025D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -118,7 +132,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010025C"
+					id: "620000000010025D"
 					type: "item"
 					item: {
 						id: "voidloom:void_yarn"
@@ -128,14 +142,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C20000000010025D"
+			id: "420000000010025E"
 			x: 0.0d
-			y: 5.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D20000000010025D"
+					id: "520000000010025E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -146,7 +161,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010025D"
+					id: "620000000010025E"
 					type: "item"
 					item: {
 						id: "voidloom:thread_mesh_string"
@@ -156,14 +171,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C20000000010025E"
-			x: 1.8d
+			id: "420000000010025F"
+			x: 2.2d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D20000000010025E"
+					id: "520000000010025F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -174,7 +190,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010025E"
+					id: "620000000010025F"
 					type: "item"
 					item: {
 						id: "voidloom:spindle_crook"
@@ -183,21 +199,22 @@
 					team_reward: false
 				}
 				{
-					id: "D10000000010025E"
+					id: "510000000010025F"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C20000000010025F"
-			x: 1.8d
-			y: 1.3d
+			id: "4200000000100260"
+			x: 2.2d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D20000000010025F"
+					id: "5200000000100260"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -208,7 +225,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010025F"
+					id: "6200000000100260"
 					type: "item"
 					item: {
 						id: "minecraft:dirt"
@@ -218,14 +235,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100260"
-			x: 1.8d
-			y: 2.6d
+			id: "4200000000100261"
+			x: 2.2d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D200000000100260"
+					id: "5200000000100261"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -236,7 +254,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100260"
+					id: "6200000000100261"
 					type: "item"
 					item: {
 						id: "minecraft:cobblestone"
@@ -246,14 +264,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100261"
-			x: 1.8d
-			y: 3.9d
+			id: "4200000000100262"
+			x: 2.2d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D200000000100261"
+					id: "5200000000100262"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -264,7 +283,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100261"
+					id: "6200000000100262"
 					type: "item"
 					item: {
 						id: "minecraft:iron_nugget"
@@ -274,14 +293,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100262"
-			x: 1.8d
-			y: 5.2d
+			id: "4200000000100263"
+			x: 2.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D200000000100262"
+					id: "5200000000100263"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -292,7 +312,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100262"
+					id: "6200000000100263"
 					type: "item"
 					item: {
 						id: "minecraft:slime_ball"
@@ -302,14 +322,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100263"
-			x: 3.6d
+			id: "4200000000100264"
+			x: 4.4d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000100263"
+					id: "5200000000100264"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -320,7 +341,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100263"
+					id: "6200000000100264"
 					type: "item"
 					item: {
 						id: "minecraft:ender_pearl"
@@ -329,21 +350,22 @@
 					team_reward: false
 				}
 				{
-					id: "D100000000100263"
+					id: "5100000000100264"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100264"
-			x: 3.6d
-			y: 1.3d
+			id: "4200000000100265"
+			x: 4.4d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D200000000100264"
+					id: "5200000000100265"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -354,7 +376,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100264"
+					id: "6200000000100265"
 					type: "item"
 					item: {
 						id: "minecraft:feather"
@@ -364,14 +386,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100265"
-			x: 3.6d
-			y: 2.6d
+			id: "4200000000100266"
+			x: 4.4d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D200000000100265"
+					id: "5200000000100266"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -382,7 +405,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100265"
+					id: "6200000000100266"
 					type: "item"
 					item: {
 						id: "minecraft:lapis_lazuli"
@@ -392,14 +415,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100266"
-			x: 3.6d
-			y: 3.9d
+			id: "4200000000100267"
+			x: 4.4d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D200000000100266"
+					id: "5200000000100267"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -410,7 +434,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100266"
+					id: "6200000000100267"
 					type: "item"
 					item: {
 						id: "ninjacatskies:codex_page"
@@ -420,14 +444,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100267"
-			x: 3.6d
-			y: 5.2d
+			id: "4200000000100268"
+			x: 4.4d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D200000000100267"
+					id: "5200000000100268"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -438,7 +463,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100267"
+					id: "6200000000100268"
 					type: "item"
 					item: {
 						id: "minecraft:bread"
@@ -448,14 +473,15 @@
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100268"
-			x: 5.4d
+			id: "4200000000100269"
+			x: 6.6d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000100268"
+					id: "5200000000100269"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -466,7 +492,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100268"
+					id: "6200000000100269"
 					type: "item"
 					item: {
 						id: "minecraft:torch"
@@ -475,21 +501,22 @@
 					team_reward: false
 				}
 				{
-					id: "D100000000100268"
+					id: "5100000000100269"
 					type: "xp_levels"
 					xp_levels: 1
 					team_reward: false
 				}
 			]
 			repeatable: true
+			shape: "loom"
 		}
 		{
-			id: "C200000000100269"
+			id: "420000000010026A"
 			x: -3.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D200000000100269"
+					id: "520000000010026A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -500,7 +527,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100269"
+					id: "620000000010026A"
 					type: "item"
 					item: {
 						id: "minecraft:experience_bottle"
@@ -511,14 +538,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C20000000010026A"
+			id: "420000000010026B"
 			x: -1.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010026A"
+					id: "520000000010026B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -529,7 +558,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010026A"
+					id: "620000000010026B"
 					type: "item"
 					item: {
 						id: "minecraft:emerald"
@@ -540,14 +569,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C20000000010026B"
+			id: "420000000010026C"
 			x: 0.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010026B"
+					id: "520000000010026C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -558,7 +589,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010026B"
+					id: "620000000010026C"
 					type: "item"
 					item: {
 						id: "minecraft:diamond"
@@ -569,14 +600,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C20000000010026C"
+			id: "420000000010026D"
 			x: 1.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010026C"
+					id: "520000000010026D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -587,7 +620,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010026C"
+					id: "620000000010026D"
 					type: "item"
 					item: {
 						id: "minecraft:shulker_box"
@@ -598,14 +631,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C20000000010026D"
+			id: "420000000010026E"
 			x: 3.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010026D"
+					id: "520000000010026E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -616,7 +651,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010026D"
+					id: "620000000010026E"
 					type: "item"
 					item: {
 						id: "create:item_vault"
@@ -627,14 +662,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C20000000010026E"
+			id: "420000000010026F"
 			x: 4.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000010026E"
+					id: "520000000010026F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -645,7 +682,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010026E"
+					id: "620000000010026F"
 					type: "item"
 					item: {
 						id: "minecraft:gold_ingot"
@@ -656,14 +693,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C20000000010026F"
+			id: "4200000000100270"
 			x: -3.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D20000000010026F"
+					id: "5200000000100270"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -674,7 +713,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000010026F"
+					id: "6200000000100270"
 					type: "item"
 					item: {
 						id: "minecraft:copper_ingot"
@@ -685,14 +724,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C200000000100270"
+			id: "4200000000100271"
 			x: -1.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100270"
+					id: "5200000000100271"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -703,7 +744,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100270"
+					id: "6200000000100271"
 					type: "item"
 					item: {
 						id: "minecraft:amethyst_shard"
@@ -714,14 +755,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C200000000100271"
+			id: "4200000000100272"
 			x: 0.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100271"
+					id: "5200000000100272"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -732,7 +775,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100271"
+					id: "6200000000100272"
 					type: "item"
 					item: {
 						id: "minecraft:leather"
@@ -743,14 +786,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C200000000100272"
+			id: "4200000000100273"
 			x: 1.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100272"
+					id: "5200000000100273"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -761,7 +806,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100272"
+					id: "6200000000100273"
 					type: "item"
 					item: {
 						id: "minecraft:honeycomb"
@@ -772,14 +817,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C200000000100273"
+			id: "4200000000100274"
 			x: 3.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100273"
+					id: "5200000000100274"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -790,7 +837,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100273"
+					id: "6200000000100274"
 					type: "item"
 					item: {
 						id: "minecraft:nether_wart"
@@ -801,14 +848,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C200000000100274"
+			id: "4200000000100275"
 			x: 4.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000100274"
+					id: "5200000000100275"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -819,7 +868,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100274"
+					id: "6200000000100275"
 					type: "item"
 					item: {
 						id: "minecraft:chorus_fruit"
@@ -830,14 +879,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C200000000100275"
+			id: "4200000000100276"
 			x: -3.0d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000100275"
+					id: "5200000000100276"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -848,7 +899,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100275"
+					id: "6200000000100276"
 					type: "item"
 					item: {
 						id: "minecraft:obsidian"
@@ -859,14 +910,16 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 		{
-			id: "C200000000100276"
+			id: "4200000000100277"
 			x: -1.5d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000100276"
+					id: "5200000000100277"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -877,7 +930,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000100276"
+					id: "6200000000100277"
 					type: "item"
 					item: {
 						id: "minecraft:nether_star"
@@ -888,6 +941,8 @@
 			]
 			optional: true
 			repeatable: true
+			shape: "loom"
+			size: 0.85d
 		}
 	]
 }

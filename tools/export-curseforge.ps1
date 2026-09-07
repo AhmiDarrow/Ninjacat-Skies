@@ -27,6 +27,11 @@ if ($packToml -match '(?m)^version\s*=\s*"([^"]+)"') { $packVersion = $Matches[1
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
 $stage = Join-Path $OutDir "stage-ninjacat-skies-$stamp"
 $zipPath = Join-Path $OutDir "NinjacatSkies-$packVersion-$stamp.zip"
+$stage = [IO.Path]::GetFullPath($stage)
+$exportRoot = [IO.Path]::GetFullPath($OutDir).TrimEnd('\', '/') + [IO.Path]::DirectorySeparatorChar
+if (-not $stage.StartsWith($exportRoot, [StringComparison]::OrdinalIgnoreCase)) {
+    throw "Export staging directory must remain inside the output directory"
+}
 Remove-Item $stage -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path $stage | Out-Null
 
@@ -195,6 +200,9 @@ Get-ChildItem $stage -Recurse -Force | Where-Object {
     $_.FullName -match '\\INTERNAL\\|\\agent\\|requirements' -or
     $_.Extension -match '\.(ps1|py)$'
 } | ForEach-Object {
+    if (-not $_.FullName.StartsWith($stage + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
+        throw "Refusing to clean a path outside export staging"
+    }
     Remove-Item $_.FullName -Force -Recurse -ErrorAction SilentlyContinue
 }
 
@@ -216,7 +224,6 @@ finally {
 
 Remove-Item $stage -Recurse -Force
 
-$mf = Get-Content $zipPath -ErrorAction SilentlyContinue | Out-Null
 # Re-open to report counts
 $check = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
 try {

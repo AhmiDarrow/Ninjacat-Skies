@@ -199,7 +199,7 @@ BRAID = [
     ("pattern", "Pattern", "Clock", "create:cogwheel", 8, -2, "edge",
      "**Clock.** Create. Water wheels, presses, mixers, belts — one cog, then the same cog again.\n\nThe "
      "precision mechanism wants a Binding Knot at its heart. That is the Loom asking to be included."),
-    ("colony", "Colony", "Swarm", "productivebees:advanced_beehive", 8, 0, "edge",
+    ("colony", "Colony", "Swarm", "productivebees:advanced_oak_beehive", 8, 0, "edge",
      "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of "
      "oak logs around a small flower, placed on the pad. Wait. Wings.\n\nEvery nest is the same trick with a "
      "different ring — gravel, coarse dirt, stone, quartz, end stone. Then hives, a centrifuge, an incubator, "
@@ -222,6 +222,13 @@ for eid, name, strand, icon, x, y, parent, body in BRAID:
     if eid == "bind":
         parents = ["pattern", "colony", "hum"]
     entry("braid", eid, name, f"{strand} Strand.", icon, x, y, [text(name, body)], parents=parents)
+
+entry("braid", "living_lattice", "The Living Lattice", "Workshops, rites and paths.", "tribalpower:resonant_core", 8, 5, [
+    text("The camp answers", "Tribal Weave is the workshop beside the nine Strands. Rhythm, a living landscape and reusable Echo catalysts make its Pulse. Distinct totem voices strengthen the Resonator. No fuel fire is needed."),
+    text("Hands become a workshop", "Four Echo stations refine batches and accept shared ingredients. Bind can weave Loom Lint into string and Void Yarn into Spiritweave. The Pulse Adapter sends the camp's harmony into standard FE machines."),
+    text("Three distances", "Cargo rituals grow from Local to Longreach to Astral. Player paths grow from Waystone to Horizon to Astral. March Crystal opens the final tier for both: across dimensions. Leave both cargo endpoints loaded and a safe floor for travellers."),
+    text("Conduct the camp", "Redstone pauses stations, storage, relays and sustained rituals. Comparators report supplies and activity. The Drumheart listens for rising edges instead: a clock is a drum pattern. Find the full builds in Tribal Weave."),
+], parents=["hum"])
 
 # ------------------------------------------------------------------------------------ Nine Tribes
 

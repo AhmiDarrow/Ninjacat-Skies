@@ -1,0 +1,40 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "The Living Lattice",
+  "description": "Workshops, rites and paths.",
+  "icon": "tribalpower:resonant_core",
+  "x": 8,
+  "y": 5,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The camp answers",
+      "text": "Tribal Weave is the workshop beside the nine Strands. Rhythm, a living landscape and reusable Echo catalysts make its Pulse. Distinct totem voices strengthen the Resonator. No fuel fire is needed."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Hands become a workshop",
+      "text": "Four Echo stations refine batches and accept shared ingredients. Bind can weave Loom Lint into string and Void Yarn into Spiritweave. The Pulse Adapter sends the camp's harmony into standard FE machines."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Three distances",
+      "text": "Cargo rituals grow from Local to Longreach to Astral. Player paths grow from Waystone to Horizon to Astral. March Crystal opens the final tier for both: across dimensions. Leave both cargo endpoints loaded and a safe floor for travellers."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Conduct the camp",
+      "text": "Redstone pauses stations, storage, relays and sustained rituals. Comparators report supplies and activity. The Drumheart listens for rising edges instead: a clock is a drum pattern. Find the full builds in Tribal Weave."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/hum",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

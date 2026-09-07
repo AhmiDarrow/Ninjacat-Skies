@@ -84,6 +84,11 @@ public class TensionPostBlock extends BaseEntityBlock {
         return n;
     }
 
+    @Override protected boolean hasAnalogOutputSignal(BlockState state) { return true; }
+    @Override protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
+        return state.getValue(REWOVEN) ? 15 : seatedCount(state);
+    }
+
     public static BlockState withBits(BlockState state, int bits, boolean rewoven) {
         for (Strand s : Strand.ALL) {
             state = state.setValue(SEATED.get(s), (bits & s.bit()) != 0);
@@ -156,6 +161,10 @@ public class TensionPostBlock extends BaseEntityBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (level.hasNeighborSignal(pos)) {
+            if (!level.isClientSide) player.displayClientMessage(net.minecraft.network.chat.Component.literal("The Post is locked by redstone."), true);
+            return ItemInteractionResult.CONSUME;
+        }
         if (stack.isEmpty()) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
@@ -220,6 +229,7 @@ public class TensionPostBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (level.hasNeighborSignal(pos)) return InteractionResult.CONSUME;
         if (level.isClientSide || !(player instanceof ServerPlayer sp)) {
             return InteractionResult.SUCCESS;
         }

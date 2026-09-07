@@ -1,0 +1,39 @@
+// Ninjacat Skies: the Loom journal. FTB Quests merges this after its built-in defaults.
+[*]
+background: ninjacatskies:textures/gui/quest_atlas.png
+key_reference_background: #F0111A22
+chapter_panel_background: hollow_rectangle:#73533B; round_edges + #F2111A22; padding=1
+context_menu: hollow_rectangle:#A77A4E; round_edges + #F5111A22; padding=1
+quest_view_background: hollow_rectangle:#A77A4E; round_edges + #F5111A22; padding=1
+quest_view_border: #A77A4E
+quest_view_title: #E1D9BD
+selected_chapter_highlight_1: #9060B7A7
+selected_chapter_highlight_2: #3056B7A7
+text_color: #E1D9BD
+hover_text_color: #B1EFD4
+disabled_text_color: #849294
+tasks_text_color: #80CFC0
+rewards_text_color: #D6B36F
+widget_border: #76543D
+widget_background: #A020343B
+button: hollow_rectangle:#76543D; round_edges + #D0192B32; padding=1
+hover_button: hollow_rectangle:#B1EFD4; round_edges + #E029494B; padding=1
+disabled_button: hollow_rectangle:#425257; round_edges + #90111A22; padding=1
+scroll_bar_background: #A0111A22
+scroll_bar: #A77A4E
+container_slot: hollow_rectangle:#526465 + #C0111A22; padding=1
+text_box: hollow_rectangle:#76543D + #F0111A22; padding=1
+modpack_icon: ninjacatskies:textures/item/spindle_loom_fragment.png
+quest_completed_color: #FF74D4B2
+quest_started_color: #FFE4BE79
+quest_not_started_color: #FFC6D3CF
+quest_locked_color: #FF596B72
+dependency_line_completed_color: #9B74D4B2
+dependency_line_uncompleted_color: #907C9796
+dependency_line_unavailable_color: #504A606B
+dependency_line_requires_color: #E4BE79
+dependency_line_required_for_color: #B1EFD4
+dependency_line_thickness: 0.09
+dependency_line_selected_speed: 0.35
+dependency_line_unselected_speed: 0.0
+quest_spacing: 1.0

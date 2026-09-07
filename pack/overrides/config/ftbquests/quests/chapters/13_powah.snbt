@@ -1,23 +1,34 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "loom"
 	filename: "13_powah"
-	group: "A100000000000004"
+	group: "2100000000000004"
 	icon: {
 		id: "powah:energy_cell_basic"
 	}
-	id: "B10000000000000D"
-	images: [ ]
+	id: "310000000000000D"
+	images: [
+		{
+			id: "670000000000000D"
+			x: 6.0d
+			y: -4.2d
+			width: 16.0d
+			height: 2.5d
+			image: "ninjacatskies:textures/gui/quests/chapter_13.png"
+			order: -10
+			position_locked: true
+		}
+	]
 	order_index: 12
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000000D021C"
+			id: "42000000000D021D"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000D021C"
+					id: "52000000000D021D"
 					type: "item"
 					item: {
 						id: "powah:dielectric_paste"
@@ -27,7 +38,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D021C"
+					id: "62000000000D021D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -35,19 +46,20 @@
 					}
 				}
 				{
-					id: "D1000000000D021C"
+					id: "51000000000D021D"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D021D"
+			id: "42000000000D021E"
 			x: 0.0d
-			y: 1.3d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000D021D"
+					id: "52000000000D021E"
 					type: "item"
 					item: {
 						id: "powah:capacitor_basic"
@@ -57,7 +69,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D021D"
+					id: "62000000000D021E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -65,15 +77,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021C"]
+			dependencies: ["42000000000D021D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D021E"
+			id: "42000000000D021F"
 			x: 0.0d
-			y: 2.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000D021E"
+					id: "52000000000D021F"
 					type: "item"
 					item: {
 						id: "powah:energy_cell_basic"
@@ -83,7 +96,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D021E"
+					id: "62000000000D021F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -91,15 +104,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021C"]
+			dependencies: ["42000000000D021D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D021F"
+			id: "42000000000D0220"
 			x: 0.0d
-			y: 3.9d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000D021F"
+					id: "52000000000D0220"
 					type: "item"
 					item: {
 						id: "powah:furnator_basic"
@@ -109,7 +123,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D021F"
+					id: "62000000000D0220"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -117,15 +131,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021C"]
+			dependencies: ["42000000000D021D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0220"
+			id: "42000000000D0221"
 			x: 0.0d
-			y: 5.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000D0220"
+					id: "52000000000D0221"
 					type: "item"
 					item: {
 						id: "powah:magmator_basic"
@@ -135,7 +150,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0220"
+					id: "62000000000D0221"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -143,15 +158,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021C"]
+			dependencies: ["42000000000D021D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0221"
-			x: 1.8d
+			id: "42000000000D0222"
+			x: 2.2d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000D0221"
+					id: "52000000000D0222"
 					type: "item"
 					item: {
 						id: "powah:solar_panel_basic"
@@ -161,7 +177,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0221"
+					id: "62000000000D0222"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -169,20 +185,21 @@
 					}
 				}
 				{
-					id: "D1000000000D0221"
+					id: "51000000000D0222"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000D021C"]
+			dependencies: ["42000000000D021D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0222"
-			x: 1.8d
-			y: 1.3d
+			id: "42000000000D0223"
+			x: 2.2d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000D0222"
+					id: "52000000000D0223"
 					type: "item"
 					item: {
 						id: "powah:thermo_generator_basic"
@@ -192,7 +209,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0222"
+					id: "62000000000D0223"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -200,15 +217,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0221"]
+			dependencies: ["42000000000D0222"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0223"
-			x: 1.8d
-			y: 2.6d
+			id: "42000000000D0224"
+			x: 2.2d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000D0223"
+					id: "52000000000D0224"
 					type: "item"
 					item: {
 						id: "powah:reactor_basic"
@@ -218,7 +236,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0223"
+					id: "62000000000D0224"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -226,15 +244,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0221"]
+			dependencies: ["42000000000D0222"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0224"
-			x: 1.8d
-			y: 3.9d
+			id: "42000000000D0225"
+			x: 2.2d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000D0224"
+					id: "52000000000D0225"
 					type: "item"
 					item: {
 						id: "powah:energy_cable_basic"
@@ -244,7 +263,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0224"
+					id: "62000000000D0225"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -252,15 +271,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0221"]
+			dependencies: ["42000000000D0222"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0225"
-			x: 1.8d
-			y: 5.2d
+			id: "42000000000D0226"
+			x: 2.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000D0225"
+					id: "52000000000D0226"
 					type: "item"
 					item: {
 						id: "powah:player_transmitter_basic"
@@ -270,7 +290,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0225"
+					id: "62000000000D0226"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -278,15 +298,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0221"]
+			dependencies: ["42000000000D0222"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0226"
-			x: 3.6d
+			id: "42000000000D0227"
+			x: 4.4d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000D0226"
+					id: "52000000000D0227"
 					type: "item"
 					item: {
 						id: "powah:energy_hopper_basic"
@@ -296,7 +317,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0226"
+					id: "62000000000D0227"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -304,20 +325,21 @@
 					}
 				}
 				{
-					id: "D1000000000D0226"
+					id: "51000000000D0227"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000D0221"]
+			dependencies: ["42000000000D0222"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0227"
-			x: 3.6d
-			y: 1.3d
+			id: "42000000000D0228"
+			x: 4.4d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000D0227"
+					id: "52000000000D0228"
 					type: "item"
 					item: {
 						id: "powah:energizing_rod_basic"
@@ -327,7 +349,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0227"
+					id: "62000000000D0228"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -335,15 +357,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0226"]
+			dependencies: ["42000000000D0227"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0228"
-			x: 3.6d
-			y: 2.6d
+			id: "42000000000D0229"
+			x: 4.4d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000D0228"
+					id: "52000000000D0229"
 					type: "item"
 					item: {
 						id: "powah:battery_basic"
@@ -353,7 +376,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0228"
+					id: "62000000000D0229"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -361,15 +384,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0226"]
+			dependencies: ["42000000000D0227"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D0229"
-			x: 3.6d
-			y: 3.9d
+			id: "42000000000D022A"
+			x: 4.4d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000D0229"
+					id: "52000000000D022A"
 					type: "item"
 					item: {
 						id: "powah:crystal_niotic"
@@ -379,7 +403,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0229"
+					id: "62000000000D022A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -387,15 +411,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0226"]
+			dependencies: ["42000000000D0227"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D022A"
-			x: 3.6d
-			y: 5.2d
+			id: "42000000000D022B"
+			x: 4.4d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000D022A"
+					id: "52000000000D022B"
 					type: "item"
 					item: {
 						id: "powah:crystal_spirited"
@@ -405,7 +430,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D022A"
+					id: "62000000000D022B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -413,15 +438,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D0226"]
+			dependencies: ["42000000000D0227"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000D022B"
-			x: 5.4d
+			id: "42000000000D022C"
+			x: 6.6d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000D022B"
+					id: "52000000000D022C"
 					type: "item"
 					item: {
 						id: "powah:crystal_nitro"
@@ -431,7 +457,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D022B"
+					id: "62000000000D022C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -439,12 +465,13 @@
 					}
 				}
 				{
-					id: "D1000000000D022B"
+					id: "51000000000D022C"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000D0226"]
+			dependencies: ["42000000000D0227"]
+			shape: "loom"
 		}
 	]
 }

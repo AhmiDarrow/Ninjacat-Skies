@@ -1,23 +1,34 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "loom"
 	filename: "27_occult"
-	group: "A100000000000004"
+	group: "2100000000000004"
 	icon: {
 		id: "occultism:dictionary_of_spirits"
 	}
-	id: "B10000000000001B"
-	images: [ ]
+	id: "310000000000001B"
+	images: [
+		{
+			id: "670000000000001B"
+			x: 3.0d
+			y: -4.2d
+			width: 16.0d
+			height: 2.5d
+			image: "ninjacatskies:textures/gui/quests/chapter_27.png"
+			order: -10
+			position_locked: true
+		}
+	]
 	order_index: 26
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000001B03F3"
+			id: "42000000001B03F4"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001B03F3"
+					id: "52000000001B03F4"
 					type: "item"
 					item: {
 						id: "occultism:dictionary_of_spirits"
@@ -27,7 +38,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03F3"
+					id: "62000000001B03F4"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -35,19 +46,20 @@
 					}
 				}
 				{
-					id: "D1000000001B03F3"
+					id: "51000000001B03F4"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03F4"
+			id: "42000000001B03F5"
 			x: 0.0d
-			y: 1.3d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000001B03F4"
+					id: "52000000001B03F5"
 					type: "item"
 					item: {
 						id: "occultism:spirit_fire"
@@ -57,7 +69,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03F4"
+					id: "62000000001B03F5"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -65,15 +77,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F3"]
+			dependencies: ["42000000001B03F4"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03F5"
+			id: "42000000001B03F6"
 			x: 0.0d
-			y: 2.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000001B03F5"
+					id: "52000000001B03F6"
 					type: "item"
 					item: {
 						id: "occultism:divination_rod"
@@ -83,7 +96,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03F5"
+					id: "62000000001B03F6"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -91,15 +104,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F3"]
+			dependencies: ["42000000001B03F4"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03F6"
+			id: "42000000001B03F7"
 			x: 0.0d
-			y: 3.9d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000001B03F6"
+					id: "52000000001B03F7"
 					type: "item"
 					item: {
 						id: "occultism:brush"
@@ -109,7 +123,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03F6"
+					id: "62000000001B03F7"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -117,15 +131,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F3"]
+			dependencies: ["42000000001B03F4"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03F7"
+			id: "42000000001B03F8"
 			x: 0.0d
-			y: 5.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000001B03F7"
+					id: "52000000001B03F8"
 					type: "item"
 					item: {
 						id: "occultism:otherworld_sapling"
@@ -135,7 +150,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03F7"
+					id: "62000000001B03F8"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -143,15 +158,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F3"]
+			dependencies: ["42000000001B03F4"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03F8"
-			x: 1.8d
+			id: "42000000001B03F9"
+			x: 2.2d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001B03F8"
+					id: "52000000001B03F9"
 					type: "item"
 					item: {
 						id: "occultism:otherworld_log"
@@ -161,7 +177,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03F8"
+					id: "62000000001B03F9"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -169,20 +185,21 @@
 					}
 				}
 				{
-					id: "D1000000001B03F8"
+					id: "51000000001B03F9"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001B03F3"]
+			dependencies: ["42000000001B03F4"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03F9"
-			x: 1.8d
-			y: 1.3d
+			id: "42000000001B03FA"
+			x: 2.2d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000001B03F9"
+					id: "52000000001B03FA"
 					type: "item"
 					item: {
 						id: "occultism:sacrificial_bowl"
@@ -192,7 +209,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03F9"
+					id: "62000000001B03FA"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -200,15 +217,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F8"]
+			dependencies: ["42000000001B03F9"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03FA"
-			x: 1.8d
-			y: 2.6d
+			id: "42000000001B03FB"
+			x: 2.2d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000001B03FA"
+					id: "52000000001B03FB"
 					type: "item"
 					item: {
 						id: "occultism:golden_sacrificial_bowl"
@@ -218,7 +236,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03FA"
+					id: "62000000001B03FB"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -226,15 +244,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F8"]
+			dependencies: ["42000000001B03F9"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03FB"
-			x: 1.8d
-			y: 3.9d
+			id: "42000000001B03FC"
+			x: 2.2d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000001B03FB"
+					id: "52000000001B03FC"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_empty"
@@ -244,7 +263,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03FB"
+					id: "62000000001B03FC"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -252,15 +271,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F8"]
+			dependencies: ["42000000001B03F9"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03FC"
-			x: 1.8d
-			y: 5.2d
+			id: "42000000001B03FD"
+			x: 2.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000001B03FC"
+					id: "52000000001B03FD"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_foliot"
@@ -270,7 +290,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03FC"
+					id: "62000000001B03FD"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -278,15 +298,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03F8"]
+			dependencies: ["42000000001B03F9"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03FD"
-			x: 3.6d
+			id: "42000000001B03FE"
+			x: 4.4d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001B03FD"
+					id: "52000000001B03FE"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_djinni"
@@ -296,7 +317,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03FD"
+					id: "62000000001B03FE"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -304,20 +325,21 @@
 					}
 				}
 				{
-					id: "D1000000001B03FD"
+					id: "51000000001B03FE"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001B03F8"]
+			dependencies: ["42000000001B03F9"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03FE"
-			x: 3.6d
-			y: 1.3d
+			id: "42000000001B03FF"
+			x: 4.4d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000001B03FE"
+					id: "52000000001B03FF"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_afrit"
@@ -327,7 +349,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03FE"
+					id: "62000000001B03FF"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -335,15 +357,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03FD"]
+			dependencies: ["42000000001B03FE"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B03FF"
-			x: 3.6d
-			y: 2.6d
+			id: "42000000001B0400"
+			x: 4.4d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000001B03FF"
+					id: "52000000001B0400"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_marid"
@@ -353,7 +376,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B03FF"
+					id: "62000000001B0400"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -361,15 +384,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03FD"]
+			dependencies: ["42000000001B03FE"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0400"
-			x: 3.6d
-			y: 3.9d
+			id: "42000000001B0401"
+			x: 4.4d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000001B0400"
+					id: "52000000001B0401"
 					type: "item"
 					item: {
 						id: "occultism:spirit_attuned_gem"
@@ -379,7 +403,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0400"
+					id: "62000000001B0401"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -387,15 +411,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03FD"]
+			dependencies: ["42000000001B03FE"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0401"
-			x: 3.6d
-			y: 5.2d
+			id: "42000000001B0402"
+			x: 4.4d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000001B0401"
+					id: "52000000001B0402"
 					type: "item"
 					item: {
 						id: "occultism:raw_iesnium"
@@ -405,7 +430,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0401"
+					id: "62000000001B0402"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -413,15 +438,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B03FD"]
+			dependencies: ["42000000001B03FE"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0402"
-			x: 5.4d
+			id: "42000000001B0403"
+			x: 6.6d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001B0402"
+					id: "52000000001B0403"
 					type: "item"
 					item: {
 						id: "occultism:iesnium_ingot"
@@ -431,7 +457,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0402"
+					id: "62000000001B0403"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -439,20 +465,21 @@
 					}
 				}
 				{
-					id: "D1000000001B0402"
+					id: "51000000001B0403"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001B03FD"]
+			dependencies: ["42000000001B03FE"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0403"
-			x: 5.4d
-			y: 1.3d
+			id: "42000000001B0404"
+			x: 6.6d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000001B0403"
+					id: "52000000001B0404"
 					type: "item"
 					item: {
 						id: "occultism:dimensional_mineshaft"
@@ -462,7 +489,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0403"
+					id: "62000000001B0404"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -470,15 +497,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0402"]
+			dependencies: ["42000000001B0403"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0404"
-			x: 5.4d
-			y: 2.6d
+			id: "42000000001B0405"
+			x: 6.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000001B0404"
+					id: "52000000001B0405"
 					type: "item"
 					item: {
 						id: "occultism:miner_foliot_unspecialized"
@@ -488,7 +516,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0404"
+					id: "62000000001B0405"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -496,15 +524,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0402"]
+			dependencies: ["42000000001B0403"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0405"
-			x: 5.4d
-			y: 3.9d
+			id: "42000000001B0406"
+			x: 6.6d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000001B0405"
+					id: "52000000001B0406"
 					type: "item"
 					item: {
 						id: "occultism:storage_controller"
@@ -514,7 +543,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0405"
+					id: "62000000001B0406"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -522,15 +551,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0402"]
+			dependencies: ["42000000001B0403"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0406"
-			x: 5.4d
-			y: 5.2d
+			id: "42000000001B0407"
+			x: 6.6d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000001B0406"
+					id: "52000000001B0407"
 					type: "item"
 					item: {
 						id: "minecraft:amethyst_shard"
@@ -540,7 +570,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0406"
+					id: "62000000001B0407"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -548,15 +578,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0402"]
+			dependencies: ["42000000001B0403"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0407"
-			x: 7.2d
+			id: "42000000001B0408"
+			x: 8.8d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001B0407"
+					id: "52000000001B0408"
 					type: "item"
 					item: {
 						id: "minecraft:gold_ingot"
@@ -566,7 +597,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0407"
+					id: "62000000001B0408"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -574,20 +605,21 @@
 					}
 				}
 				{
-					id: "D1000000001B0407"
+					id: "51000000001B0408"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001B0402"]
+			dependencies: ["42000000001B0403"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0408"
-			x: 7.2d
-			y: 1.3d
+			id: "42000000001B0409"
+			x: 8.8d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000001B0408"
+					id: "52000000001B0409"
 					type: "item"
 					item: {
 						id: "minecraft:book"
@@ -597,7 +629,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0408"
+					id: "62000000001B0409"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -605,15 +637,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0407"]
+			dependencies: ["42000000001B0408"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0409"
-			x: 7.2d
-			y: 2.6d
+			id: "42000000001B040A"
+			x: 8.8d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000001B0409"
+					id: "52000000001B040A"
 					type: "item"
 					item: {
 						id: "minecraft:purple_dye"
@@ -623,7 +656,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0409"
+					id: "62000000001B040A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -631,15 +664,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0407"]
+			dependencies: ["42000000001B0408"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B040A"
-			x: 7.2d
-			y: 3.9d
+			id: "42000000001B040B"
+			x: 8.8d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000001B040A"
+					id: "52000000001B040B"
 					type: "item"
 					item: {
 						id: "minecraft:white_dye"
@@ -649,7 +683,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B040A"
+					id: "62000000001B040B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -657,15 +691,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0407"]
+			dependencies: ["42000000001B0408"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B040B"
-			x: 7.2d
-			y: 5.2d
+			id: "42000000001B040C"
+			x: 8.8d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000001B040B"
+					id: "52000000001B040C"
 					type: "item"
 					item: {
 						id: "minecraft:black_dye"
@@ -675,7 +710,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B040B"
+					id: "62000000001B040C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -683,15 +718,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B0407"]
+			dependencies: ["42000000001B0408"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B040C"
-			x: 9.0d
+			id: "42000000001B040D"
+			x: 11.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001B040C"
+					id: "52000000001B040D"
 					type: "item"
 					item: {
 						id: "minecraft:soul_sand"
@@ -701,7 +737,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B040C"
+					id: "62000000001B040D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -709,20 +745,21 @@
 					}
 				}
 				{
-					id: "D1000000001B040C"
+					id: "51000000001B040D"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000001B0407"]
+			dependencies: ["42000000001B0408"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B040D"
-			x: 9.0d
-			y: 1.3d
+			id: "42000000001B040E"
+			x: 11.0d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000001B040D"
+					id: "52000000001B040E"
 					type: "item"
 					item: {
 						id: "minecraft:netherrack"
@@ -732,7 +769,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B040D"
+					id: "62000000001B040E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -740,15 +777,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B040C"]
+			dependencies: ["42000000001B040D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B040E"
-			x: 9.0d
-			y: 2.6d
+			id: "42000000001B040F"
+			x: 11.0d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000001B040E"
+					id: "52000000001B040F"
 					type: "item"
 					item: {
 						id: "minecraft:obsidian"
@@ -758,7 +796,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B040E"
+					id: "62000000001B040F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -766,15 +804,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B040C"]
+			dependencies: ["42000000001B040D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B040F"
-			x: 9.0d
-			y: 3.9d
+			id: "42000000001B0410"
+			x: 11.0d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000001B040F"
+					id: "52000000001B0410"
 					type: "item"
 					item: {
 						id: "minecraft:ender_pearl"
@@ -784,7 +823,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B040F"
+					id: "62000000001B0410"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -792,15 +831,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B040C"]
+			dependencies: ["42000000001B040D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0410"
-			x: 9.0d
-			y: 5.2d
+			id: "42000000001B0411"
+			x: 11.0d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000001B0410"
+					id: "52000000001B0411"
 					type: "item"
 					item: {
 						id: "minecraft:diamond"
@@ -810,7 +850,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0410"
+					id: "62000000001B0411"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -818,15 +858,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001B040C"]
+			dependencies: ["42000000001B040D"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000001B0411"
+			id: "42000000001B0412"
 			x: -3.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D2000000001B0411"
+					id: "52000000001B0412"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_bound_foliot"
@@ -836,7 +877,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0411"
+					id: "62000000001B0412"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -845,16 +886,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000001B03F4"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000001B03F5"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C2000000001B0412"
+			id: "42000000001B0413"
 			x: -1.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D2000000001B0412"
+					id: "52000000001B0413"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_bound_djinni"
@@ -864,7 +907,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0412"
+					id: "62000000001B0413"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -873,16 +916,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000001B03F4"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000001B03F5"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C2000000001B0413"
+			id: "42000000001B0414"
 			x: 0.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D2000000001B0413"
+					id: "52000000001B0414"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_bound_afrit"
@@ -892,7 +937,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0413"
+					id: "62000000001B0414"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -901,16 +946,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000001B03F4"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000001B03F5"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C2000000001B0414"
+			id: "42000000001B0415"
 			x: 1.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D2000000001B0414"
+					id: "52000000001B0415"
 					type: "item"
 					item: {
 						id: "occultism:book_of_binding_bound_marid"
@@ -920,7 +967,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0414"
+					id: "62000000001B0415"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -929,16 +976,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000001B03F4"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000001B03F5"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C2000000001B0415"
+			id: "42000000001B0416"
 			x: 3.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D2000000001B0415"
+					id: "52000000001B0416"
 					type: "item"
 					item: {
 						id: "occultism:iesnium_ore"
@@ -948,7 +997,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0415"
+					id: "62000000001B0416"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -957,16 +1006,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000001B03F4"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000001B03F5"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C2000000001B0416"
+			id: "42000000001B0417"
 			x: 4.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D2000000001B0416"
+					id: "52000000001B0417"
 					type: "item"
 					item: {
 						id: "occultism:miner_afrit_deeps"
@@ -976,7 +1027,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001B0416"
+					id: "62000000001B0417"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -985,7 +1036,9 @@
 				}
 			]
 			optional: true
-			dependencies: ["C2000000001B03F4"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000001B03F5"]
 			hide_until_deps_complete: true
 		}
 	]

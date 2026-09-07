@@ -199,6 +199,8 @@ foreach ($rel in $pushScanDirs) {
 $resourceDocs = Get-ChildItem (Join-Path $root "mods") -Recurse -File -ErrorAction SilentlyContinue |
     Where-Object { $_.FullName -match '\\src\\main\\resources\\' -and $_.Name -match '\.(md|txt)$' }
 foreach ($f in $resourceDocs) {
+    # FTB Quests consumes this exact .txt path as runtime theme configuration.
+    if ($f.FullName -match '\\assets\\ftbquests\\ftb_quests_theme\.txt$') { continue }
     Add-Fail "Unexpected doc in mod resources (would ship in jar): $($f.FullName.Substring($root.Length))"
 }
 

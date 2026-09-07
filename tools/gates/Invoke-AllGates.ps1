@@ -43,19 +43,9 @@ try {
     if ($WithExportDryRun) {
         Invoke-Gate "ExportDryRun" {
             pwsh -NoProfile -File (Join-Path $root "tools\export-curseforge.ps1")
-            $z = Get-ChildItem (Join-Path $root "dist") -Filter "NinjacatSkies-*.zip" |
-                Sort-Object LastWriteTime -Descending |
-                Select-Object -First 1
-            if (-not $z) { exit 1 }
-            $tmp = Join-Path $root "dist\_gate_unzip"
-            Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
-            Expand-Archive $z.FullName -DestinationPath $tmp -Force
-            if (Test-Path (Join-Path $tmp "INTERNAL")) { Write-Host "INTERNAL in zip"; exit 1 }
-            if (Get-ChildItem $tmp -Recurse -Filter ".env" -ErrorAction SilentlyContinue) { Write-Host ".env in zip"; exit 1 }
-            if (Get-ChildItem $tmp -Recurse -Filter "*.ps1" -ErrorAction SilentlyContinue) { Write-Host "scripts in zip"; exit 1 }
-            Write-Host "PASS ExportDryRun ($($z.Name))"
-            Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
-            exit 0
+            if ($LASTEXITCODE -eq 0) {
+                python (Join-Path $gateDir "test_export_archive.py") (Join-Path $root "dist")
+            }
         }
     }
 } finally {

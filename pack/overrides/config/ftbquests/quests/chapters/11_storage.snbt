@@ -1,23 +1,34 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "loom"
 	filename: "11_storage"
-	group: "A100000000000004"
+	group: "2100000000000004"
 	icon: {
 		id: "functionalstorage:oak_1"
 	}
-	id: "B10000000000000B"
-	images: [ ]
+	id: "310000000000000B"
+	images: [
+		{
+			id: "670000000000000B"
+			x: 6.0d
+			y: -4.2d
+			width: 16.0d
+			height: 2.5d
+			image: "ninjacatskies:textures/gui/quests/chapter_11.png"
+			order: -10
+			position_locked: true
+		}
+	]
 	order_index: 10
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000000B01E7"
+			id: "42000000000B01E8"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000B01E7"
+					id: "52000000000B01E8"
 					type: "item"
 					item: {
 						id: "sophisticatedstorage:controller"
@@ -27,7 +38,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01E7"
+					id: "62000000000B01E8"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -35,19 +46,20 @@
 					}
 				}
 				{
-					id: "D1000000000B01E7"
+					id: "51000000000B01E8"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01E8"
+			id: "42000000000B01E9"
 			x: 0.0d
-			y: 1.3d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000B01E8"
+					id: "52000000000B01E9"
 					type: "item"
 					item: {
 						id: "sophisticatedstorage:copper_barrel"
@@ -57,7 +69,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01E8"
+					id: "62000000000B01E9"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -65,15 +77,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01E7"]
+			dependencies: ["42000000000B01E8"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01E9"
+			id: "42000000000B01EA"
 			x: 0.0d
-			y: 2.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000B01E9"
+					id: "52000000000B01EA"
 					type: "item"
 					item: {
 						id: "sophisticatedstorage:iron_barrel"
@@ -83,7 +96,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01E9"
+					id: "62000000000B01EA"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -91,15 +104,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01E7"]
+			dependencies: ["42000000000B01E8"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01EA"
+			id: "42000000000B01EB"
 			x: 0.0d
-			y: 3.9d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000B01EA"
+					id: "52000000000B01EB"
 					type: "item"
 					item: {
 						id: "sophisticatedstorage:advanced_magnet_upgrade"
@@ -109,7 +123,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01EA"
+					id: "62000000000B01EB"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -117,15 +131,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01E7"]
+			dependencies: ["42000000000B01E8"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01EB"
+			id: "42000000000B01EC"
 			x: 0.0d
-			y: 5.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000B01EB"
+					id: "52000000000B01EC"
 					type: "item"
 					item: {
 						id: "sophisticatedstorage:hopper_upgrade"
@@ -135,7 +150,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01EB"
+					id: "62000000000B01EC"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -143,15 +158,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01E7"]
+			dependencies: ["42000000000B01E8"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01EC"
-			x: 1.8d
+			id: "42000000000B01ED"
+			x: 2.2d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000B01EC"
+					id: "52000000000B01ED"
 					type: "item"
 					item: {
 						id: "sophisticatedstorage:advanced_void_upgrade"
@@ -161,7 +177,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01EC"
+					id: "62000000000B01ED"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -169,20 +185,21 @@
 					}
 				}
 				{
-					id: "D1000000000B01EC"
+					id: "51000000000B01ED"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000B01E7"]
+			dependencies: ["42000000000B01E8"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01ED"
-			x: 1.8d
-			y: 1.3d
+			id: "42000000000B01EE"
+			x: 2.2d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000B01ED"
+					id: "52000000000B01EE"
 					type: "item"
 					item: {
 						id: "sophisticatedstorage:advanced_pickup_upgrade"
@@ -192,7 +209,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01ED"
+					id: "62000000000B01EE"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -200,15 +217,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01EC"]
+			dependencies: ["42000000000B01ED"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01EE"
-			x: 1.8d
-			y: 2.6d
+			id: "42000000000B01EF"
+			x: 2.2d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000B01EE"
+					id: "52000000000B01EF"
 					type: "item"
 					item: {
 						id: "functionalstorage:oak_1"
@@ -218,7 +236,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01EE"
+					id: "62000000000B01EF"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -226,15 +244,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01EC"]
+			dependencies: ["42000000000B01ED"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01EF"
-			x: 1.8d
-			y: 3.9d
+			id: "42000000000B01F0"
+			x: 2.2d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000B01EF"
+					id: "52000000000B01F0"
 					type: "item"
 					item: {
 						id: "functionalstorage:oak_2"
@@ -244,7 +263,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01EF"
+					id: "62000000000B01F0"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -252,15 +271,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01EC"]
+			dependencies: ["42000000000B01ED"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F0"
-			x: 1.8d
-			y: 5.2d
+			id: "42000000000B01F1"
+			x: 2.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000B01F0"
+					id: "52000000000B01F1"
 					type: "item"
 					item: {
 						id: "functionalstorage:oak_4"
@@ -270,7 +290,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F0"
+					id: "62000000000B01F1"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -278,15 +298,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01EC"]
+			dependencies: ["42000000000B01ED"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F1"
-			x: 3.6d
+			id: "42000000000B01F2"
+			x: 4.4d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000B01F1"
+					id: "52000000000B01F2"
 					type: "item"
 					item: {
 						id: "functionalstorage:compacting_drawer"
@@ -296,7 +317,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F1"
+					id: "62000000000B01F2"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -304,20 +325,21 @@
 					}
 				}
 				{
-					id: "D1000000000B01F1"
+					id: "51000000000B01F2"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000B01EC"]
+			dependencies: ["42000000000B01ED"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F2"
-			x: 3.6d
-			y: 1.3d
+			id: "42000000000B01F3"
+			x: 4.4d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000B01F2"
+					id: "52000000000B01F3"
 					type: "item"
 					item: {
 						id: "functionalstorage:storage_controller"
@@ -327,7 +349,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F2"
+					id: "62000000000B01F3"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -335,15 +357,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F1"]
+			dependencies: ["42000000000B01F2"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F3"
-			x: 3.6d
-			y: 2.6d
+			id: "42000000000B01F4"
+			x: 4.4d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000B01F3"
+					id: "52000000000B01F4"
 					type: "item"
 					item: {
 						id: "functionalstorage:collector_upgrade"
@@ -353,7 +376,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F3"
+					id: "62000000000B01F4"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -361,15 +384,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F1"]
+			dependencies: ["42000000000B01F2"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F4"
-			x: 3.6d
-			y: 3.9d
+			id: "42000000000B01F5"
+			x: 4.4d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000B01F4"
+					id: "52000000000B01F5"
 					type: "item"
 					item: {
 						id: "functionalstorage:puller_upgrade"
@@ -379,7 +403,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F4"
+					id: "62000000000B01F5"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -387,15 +411,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F1"]
+			dependencies: ["42000000000B01F2"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F5"
-			x: 3.6d
-			y: 5.2d
+			id: "42000000000B01F6"
+			x: 4.4d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000B01F5"
+					id: "52000000000B01F6"
 					type: "item"
 					item: {
 						id: "functionalstorage:pusher_upgrade"
@@ -405,7 +430,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F5"
+					id: "62000000000B01F6"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -413,15 +438,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F1"]
+			dependencies: ["42000000000B01F2"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F6"
-			x: 5.4d
+			id: "42000000000B01F7"
+			x: 6.6d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000B01F6"
+					id: "52000000000B01F7"
 					type: "item"
 					item: {
 						id: "functionalstorage:void_upgrade"
@@ -431,7 +457,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F6"
+					id: "62000000000B01F7"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -439,20 +465,21 @@
 					}
 				}
 				{
-					id: "D1000000000B01F6"
+					id: "51000000000B01F7"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000B01F1"]
+			dependencies: ["42000000000B01F2"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F7"
-			x: 5.4d
-			y: 1.3d
+			id: "42000000000B01F8"
+			x: 6.6d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000B01F7"
+					id: "52000000000B01F8"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:backpack"
@@ -462,7 +489,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F7"
+					id: "62000000000B01F8"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -470,15 +497,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F6"]
+			dependencies: ["42000000000B01F7"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F8"
-			x: 5.4d
-			y: 2.6d
+			id: "42000000000B01F9"
+			x: 6.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000B01F8"
+					id: "52000000000B01F9"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:iron_backpack"
@@ -488,7 +516,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F8"
+					id: "62000000000B01F9"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -496,15 +524,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F6"]
+			dependencies: ["42000000000B01F7"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01F9"
-			x: 5.4d
-			y: 3.9d
+			id: "42000000000B01FA"
+			x: 6.6d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000B01F9"
+					id: "52000000000B01FA"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:gold_backpack"
@@ -514,7 +543,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01F9"
+					id: "62000000000B01FA"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -522,15 +551,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F6"]
+			dependencies: ["42000000000B01F7"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01FA"
-			x: 5.4d
-			y: 5.2d
+			id: "42000000000B01FB"
+			x: 6.6d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000B01FA"
+					id: "52000000000B01FB"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:diamond_backpack"
@@ -540,7 +570,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01FA"
+					id: "62000000000B01FB"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -548,15 +578,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01F6"]
+			dependencies: ["42000000000B01F7"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01FB"
-			x: 7.2d
+			id: "42000000000B01FC"
+			x: 8.8d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000B01FB"
+					id: "52000000000B01FC"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:pickup_upgrade"
@@ -566,7 +597,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01FB"
+					id: "62000000000B01FC"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -574,20 +605,21 @@
 					}
 				}
 				{
-					id: "D1000000000B01FB"
+					id: "51000000000B01FC"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000B01F6"]
+			dependencies: ["42000000000B01F7"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01FC"
-			x: 7.2d
-			y: 1.3d
+			id: "42000000000B01FD"
+			x: 8.8d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000B01FC"
+					id: "52000000000B01FD"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:filter_upgrade"
@@ -597,7 +629,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01FC"
+					id: "62000000000B01FD"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -605,15 +637,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01FB"]
+			dependencies: ["42000000000B01FC"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01FD"
-			x: 7.2d
-			y: 2.6d
+			id: "42000000000B01FE"
+			x: 8.8d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D2000000000B01FD"
+					id: "52000000000B01FE"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:crafting_upgrade"
@@ -623,7 +656,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01FD"
+					id: "62000000000B01FE"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -631,15 +664,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01FB"]
+			dependencies: ["42000000000B01FC"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01FE"
-			x: 7.2d
-			y: 3.9d
+			id: "42000000000B01FF"
+			x: 8.8d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D2000000000B01FE"
+					id: "52000000000B01FF"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:feeding_upgrade"
@@ -649,7 +683,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01FE"
+					id: "62000000000B01FF"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -657,15 +691,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01FB"]
+			dependencies: ["42000000000B01FC"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B01FF"
-			x: 7.2d
-			y: 5.2d
+			id: "42000000000B0200"
+			x: 8.8d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D2000000000B01FF"
+					id: "52000000000B0200"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:restock_upgrade"
@@ -675,7 +710,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B01FF"
+					id: "62000000000B0200"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -683,15 +718,16 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B01FB"]
+			dependencies: ["42000000000B01FC"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B0200"
-			x: 9.0d
+			id: "42000000000B0201"
+			x: 11.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000B0200"
+					id: "52000000000B0201"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:deposit_upgrade"
@@ -701,7 +737,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B0200"
+					id: "62000000000B0201"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -709,20 +745,21 @@
 					}
 				}
 				{
-					id: "D1000000000B0200"
+					id: "51000000000B0201"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000B01FB"]
+			dependencies: ["42000000000B01FC"]
+			shape: "loom"
 		}
 		{
-			id: "C2000000000B0201"
-			x: 9.0d
-			y: 1.3d
+			id: "42000000000B0202"
+			x: 11.0d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D2000000000B0201"
+					id: "52000000000B0202"
 					type: "item"
 					item: {
 						id: "sophisticatedbackpacks:tank_upgrade"
@@ -732,7 +769,7 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000B0201"
+					id: "62000000000B0202"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -740,7 +777,8 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000B0200"]
+			dependencies: ["42000000000B0201"]
+			shape: "loom"
 		}
 	]
 }

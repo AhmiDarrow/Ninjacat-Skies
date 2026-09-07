@@ -27,6 +27,9 @@
   "message.voidloom.loomframe.idle": "Loaded and waiting. Empty hand takes scraps; sneak to pull the mesh.",
   "message.voidloom.tension.holding": "Holding — water %s, dirt %s, string %s, pearls %s.",
   "message.voidloom.tension.water_full": "The barrel can't take more water yet.",
+  "message.voidloom.tension.water_added": "Water in the barrel: %s measures.",
+  "message.voidloom.tension.input_added": "Sealed into the Tension Barrel: %s.",
+  "message.voidloom.tension.collected": "Tension settles — you take what it made.",
   "subtitles.voidloom.loomframe_sift": "Loomframe sifts",
   "subtitles.voidloom.barrel_settle": "Barrel settles"
 }

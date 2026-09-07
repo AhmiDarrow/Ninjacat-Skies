@@ -21,6 +21,7 @@ public final class ClowderCommands {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(
                 Commands.literal("clowder")
+                        .executes(ClowderCommands::help)
                         .then(Commands.literal("help").executes(ClowderCommands::help))
                         .then(Commands.literal("hub").executes(ClowderCommands::hubTeleport))
                         .then(Commands.literal("return").executes(ClowderCommands::returnFromHub))
