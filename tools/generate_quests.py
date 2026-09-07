@@ -2466,6 +2466,31 @@ def build_tribal_side() -> list[dict]:
         if q: expansion.append(q);specimens.append(q['id'])
     end = item_quest(s, title="Thirteen voices, one sky", desc=["The field notes are complete. The gentle harvests and recovered relics have become cloth and Echoes again. Beneath the night veil, the camp answers with a fuller song."], item="tribalpower:resonant_core", deps=specimens, x=5.4, y=29, reward_item="tribalpower:greater_pulse_cell", reward_count=1)
     if end: expansion.append(end)
+    camp = [
+        ('spirit_lantern', 'A light for the returning', ['spirit_shard'], 'Hang the camp\'s song in copper. A Spirit Lantern gives full light without fuel; redstone dims it. Mark safe paths back from the dark.'),
+        ('rain_chime', 'Listen to the weather', ['bone_chime'], 'The chime is both ornament and instrument. Its comparator gives 0 in clear skies, 8 in rain and 15 in thunder. Redstone silences it.'),
+        ('offering_table', 'A place at the hearth', ['bound_echo'], 'A carved table holds 27 stacks. Standard item pipes and relays can share its offerings; comparators read fullness and redstone locks access.'),
+        ('grove_tender', 'The garden keeps singing', ['earth_seal', 'bound_echo'], 'Place the tender at crop height in a 9-by-9 bed. Put seeds in the first row; harvests fill the lower two rows. Planting costs 4 Pulse, harvest and replant costs 12. Supply power within eight blocks. A full output preserves the crop; redstone pauses the work.'),
+        ('hush_totem', 'Quiet at the camp edge', ['spirit_seal', 'gate_drum'], 'Eight Pulse each second wards hostile spawning within 24 blocks. Existing creatures remain. The ward also prevents hostile cradle summons, so keep your summoning ground outside it. Redstone immediately silences the ward.'),
+        ('wayanchor', 'A camp that remembers', ['march_crystal', 'resonant_core'], 'The Wayanchor holds its own chunk awake for 16 Pulse each second. Place one at a distant relay receiver and sustain its local power supply. At most 32 anchors may run in one dimension. Redstone or an empty buffer releases the chunk.'),
+        ('binding_effigy', 'Borrow a living voice', ['ritual_brazier', 'spiritweave', 'resonant_core'], 'Sneak-use an uncharged effigy on a supported creature to take a harmless imprint. The effigy remembers the species. Bosses cannot be bound; the Codex explains compatible spirits and renewal.'),
+        ('summoning_cradle', 'A hearth for borrowed life', ['binding_effigy', 'march_crystal'], 'Seat an awakened effigy in the first slot and Spiritweave in the second. Each successful summon uses 80 Pulse, one Spiritweave and one binding thread. Leave safe flooring within three blocks. Eight nearby mobs pause the cradle; redstone pauses all work and automation.'),
+    ]
+    for i, (item, title, parents, description) in enumerate(camp):
+        q = item_quest(s, title=title, desc=[description], item='tribalpower:'+item,
+                       deps=[existing[parent] for parent in parents], x=(i % 4)*3.6, y=32+(i // 4)*2.2, reward_count=3)
+        if q:
+            expansion.append(q)
+            existing[item] = q['id']
+    binding = task_quest(s, title='Three voices awaken the thread',
+        desc=['Set a Spirit Seal in a Ritual Brazier. Bring Earth, Air and Spirit Totems within eight blocks, 200 nearby Pulse and three Spiritweave in your inventory. Use the imprinted effigy on the brazier to awaken 512 summon threads. When all are spent, repeat this ritual to renew the binding.'],
+        task={'type':'advancement', 'advancement':'tribalpower:bind_effigy', 'criterion':''},
+        rewards=[reward_item('tribalpower:spiritweave', 3)], deps=[existing['binding_effigy']], x=7.2, y=37)
+    expansion.append(binding)
+    expansion.append(task_quest(s, title='An answer from the cradle',
+        desc=['Complete one successful summoning. Failed or blocked attempts consume no threads or offerings. Each binding lasts 512 successful summons; breaking and replacing the cradle never renews it. The effigy tooltip shows uses left, and a comparator reads the cradle\'s remaining binding strength.'],
+        task={'type':'advancement', 'advancement':'tribalpower:first_summon', 'criterion':''},
+        rewards=[reward_item('tribalpower:spiritweave', 4)], deps=[binding['id'], existing['summoning_cradle']], x=10.8, y=39.2))
     return main + side + expansion
 
 

@@ -22932,6 +22932,7 @@ tribalpower:astral_fluid_relay
 tribalpower:astral_item_relay
 tribalpower:attuned_echo
 tribalpower:bell_fragment
+tribalpower:binding_effigy
 tribalpower:blank_seal
 tribalpower:bone_chime
 tribalpower:bound_echo
@@ -22968,8 +22969,10 @@ tribalpower:gold_grit
 tribalpower:gold_grit_blasting
 tribalpower:gold_grit_smelting
 tribalpower:greater_pulse_cell
+tribalpower:grove_tender
 tribalpower:hollow_sentinel_spawn_egg
 tribalpower:horizon_compass
+tribalpower:hush_totem
 tribalpower:iron_grit
 tribalpower:iron_grit_blasting
 tribalpower:iron_grit_smelting
@@ -22999,11 +23002,13 @@ tribalpower:march_stone_from_cobble
 tribalpower:mossback_scale
 tribalpower:mossback_spawn_egg
 tribalpower:mourning_bell_spawn_egg
+tribalpower:offering_table
 tribalpower:prism_carapace
 tribalpower:pulse_adapter
 tribalpower:pulse_cell
 tribalpower:pulse_resonator
 tribalpower:quartz
+tribalpower:rain_chime
 tribalpower:reed_fang
 tribalpower:reed_stalker_spawn_egg
 tribalpower:resonance_maul
@@ -23025,6 +23030,7 @@ tribalpower:song_bench
 tribalpower:spirit_cistern
 tribalpower:spirit_codex
 tribalpower:spirit_door
+tribalpower:spirit_lantern
 tribalpower:spirit_reed
 tribalpower:spirit_seal
 tribalpower:spirit_shard
@@ -23040,7 +23046,9 @@ tribalpower:spiritweave_leggings
 tribalpower:spiritweave_robe
 tribalpower:storm_moth_spawn_egg
 tribalpower:storm_wing
+tribalpower:summoning_cradle
 tribalpower:water_seal
+tribalpower:wayanchor
 tribalpower:wayfarer_satchel
 tribalpower:waystone_compass
 voidloom:binding_knot
