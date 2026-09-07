@@ -104,3 +104,7 @@ Generated the new masked-cat/aurora logo, preserved the master in art/branding, 
 - Replaced outdated public description with current 1,485 quests / 38 chapters, Tribal Power 2.2.1 canonical project link, thirteen creatures, auroras, automation/transport, shared three-lives-per-member pool and six one-time life milestones. UI confirmed Changes saved successfully.
 - Ninjacat Skies 0.5.1-alpha file 8828040 remains subject to CurseForge processing/review; GitHub release ZIP is uploaded. Tribal Power 2.2.1 file 8827923 is on canonical project 1684851.
 
+
+## 0.5.2 Field Guide hotfix
+Removed popup mode and raw multiline source values; aligned single-line text elements to a 1280x720 scale basis. Spoiler-free essentials only, with Back action. Full-pack 854x480 client screenshot confirms all text and button visible (docs/images/field-guide.png; QA asset cache uses previous logo). Native configuration structure and element bounds checked. Temporary Tribal Power screenshot instrumentation restored; QA client stopped. Former local Ninjacat Skies CurseForge profile no longer exists, so distribute the corrected import ZIP. Export sanitization and archive checks passed.
+
