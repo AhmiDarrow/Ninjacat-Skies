@@ -81,6 +81,11 @@ final class FtbTeamsBridge {
         }
 
         @Override
+        public Collection<UUID> memberIds() {
+            return team.getMembers().isEmpty() ? java.util.Set.of(team.getOwner()) : team.getMembers();
+        }
+
+        @Override
         public Collection<ServerPlayer> onlineMembers() {
             return team.getOnlineMembers();
         }

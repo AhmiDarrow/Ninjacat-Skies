@@ -24,3 +24,16 @@ dependencies {
             'modonomicon-*-neoforge-*.jar',
     ])
 }
+
+neoForge {
+    mods {
+        ninjacatlib { sourceSet(project(':ninjacat-lib').sourceSets.main) }
+    }
+    runs {
+        verification {
+            type = 'gameTestServer'
+            gameDirectory = project.file('build/verification')
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'ninjacatskies'
+        }
+    }
+}

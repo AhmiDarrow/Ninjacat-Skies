@@ -1360,7 +1360,8 @@
 	quest.4200000000060134.title: "Clock Knot"
 	quest.4200000000060135.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"The notch lights, the tribe chimes, the pad changes.",
+		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
 	quest.4200000000060135.title: "Seat Clock"
 	quest.4200000000060136.quest_desc: [
@@ -1750,7 +1751,8 @@
 	quest.4200000000080192.title: "Sigil Knot"
 	quest.4200000000080193.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"The notch lights, the tribe chimes, the pad changes.",
+		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
 	quest.4200000000080193.title: "Seat Sigil"
 	quest.4200000000080194.quest_desc: [
@@ -1987,7 +1989,8 @@
 	quest.42000000000901CB.title: "Loom Fragment"
 	quest.42000000000901CC.quest_desc: [
 		"Seat the Fragment at the Tension Post.",
-		"Nine tribes, one thread. Go and see what the March kept for you."
+		"Nine tribes, one thread. Go and see what the March kept for you.",
+		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
 	quest.42000000000901CC.subtitle: "The cut, closed"
 	quest.42000000000901CC.title: "Reweave"
@@ -3445,7 +3448,8 @@
 	]
 	quest.4200000000170336.title: "Dragon Breath Stock"
 	quest.4200000000170337.quest_desc: [
-		"The dragon's only trophy. It never sits still when clicked."
+		"The dragon's only trophy. It never sits still when clicked.",
+		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
 	quest.4200000000170337.title: "Dragon Egg Show"
 	quest.4200000000170338.quest_desc: [
@@ -5134,7 +5138,8 @@
 	]
 	quest.42000000002004DC.title: "Steel Casing (QIO)"
 	quest.42000000002004DD.quest_desc: [
-		"Stores an enormous amount of power in one block."
+		"Stores an enormous amount of power in one block.",
+		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
 	quest.42000000002004DD.title: "Ultimate Cube"
 	quest.42000000002004DE.quest_desc: [
@@ -5734,308 +5739,388 @@
 		"Open your personal 54-slot Deep Cache from the road. This is the same vault, shared between your caches and satchel. March attunement removes its opening cost."
 	]
 	quest.4200000000220572.title: "The camp in your keeping"
-	quest.4200000000230573.quest_desc: [
+	quest.4200000000220573.quest_desc: [
+		"The Gate opens onto a living country. Some creatures still carry the old song; others guard its broken pieces. Brush the gentle ones. Face the guardians with charged cells and a return route."
+	]
+	quest.4200000000220573.title: "The Returning Song"
+	quest.4200000000220574.quest_desc: [
+		"A dawn grazer that carries the old forest song in its antlers. Breed with wheat; brush adults for Dawn Velvet.",
+		"Seek it in Overworld forests and the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.4200000000220574.title: "Dawn Stag: a song returned"
+	quest.4200000000220575.quest_desc: [
+		"A shy dusk forager whose tail marks safe paths. Breed with sweet berries; brush adults for Lantern Down.",
+		"Seek it in Overworld forests and the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.4200000000220575.title: "Lantern Fox: a song returned"
+	quest.4200000000220576.quest_desc: [
+		"A patient wetland gardener with a living shell. Breed with seagrass; brush adults for a naturally shed Mossback Scale.",
+		"Seek it in Overworld swamps and the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.4200000000220576.title: "Mossback: a song returned"
+	quest.4200000000220577.quest_desc: [
+		"The remains of a broken fire rite. Its melee strikes briefly ignite; keep water close.",
+		"Seek it in Overworld forests and the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.4200000000220577.title: "Ashbound: a song returned"
+	quest.4200000000220578.quest_desc: [
+		"A grove guardian twisted by a severed ley line. Slow but sturdy; its blows root travellers briefly.",
+		"Seek it in Overworld forests and the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.4200000000220578.title: "Rootbound: a song returned"
+	quest.4200000000220579.quest_desc: [
+		"A marsh hunter concealed among spirit reeds. Fast strikes carry a short poison.",
+		"Seek it in Overworld swamps and the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.4200000000220579.title: "Reed Stalker: a song returned"
+	quest.420000000022057A.quest_desc: [
+		"A crystal-field scavenger armored in singing stone. Keep your distance from its heavy shove.",
+		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.420000000022057A.title: "Shardback: a song returned"
+	quest.420000000022057B.quest_desc: [
+		"An empty watchman that still guards the ancient roads. Its touch weakens the grip of attackers.",
+		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.420000000022057B.title: "Hollow Sentinel: a song returned"
+	quest.420000000022057C.quest_desc: [
+		"A storm-fed spirit with vast veil wings. A bright gathering of motes warns of its gust; cover breaks the attack.",
+		"Seek it in the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.420000000022057C.title: "Storm Moth: a song returned"
+	quest.420000000022057D.quest_desc: [
+		"A nimble ember spirit. It gathers sparks before a burning bolt; the spell never ignites terrain.",
+		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.420000000022057D.title: "Cinder Imp: a song returned"
+	quest.420000000022057E.quest_desc: [
+		"A floating relic that remembers the lost tribes. Its telegraphed chime slows; shelter interrupts the song.",
+		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.420000000022057E.title: "Mourning Bell: a song returned"
+	quest.420000000022057F.quest_desc: [
+		"A hunter drawn to tears in the lattice. It closes distance quickly but cannot cross worlds by itself.",
+		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.420000000022057F.title: "Rift Hound: a song returned"
+	quest.4200000000220580.quest_desc: [
+		"An eight-legged keeper of broken songs. Its bite slows prey without placing webs or damaging the camp.",
+		"Seek it in the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness."
+	]
+	quest.4200000000220580.title: "Echo Weaver: a song returned"
+	quest.4200000000220581.quest_desc: [
+		"The field notes are complete. The gentle harvests and recovered relics have become cloth and Echoes again. Beneath the night veil, the camp answers with a fuller song.",
+		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
+	]
+	quest.4200000000220581.title: "Thirteen voices, one sky"
+	quest.4200000000230582.quest_desc: [
 		"Grit-singers never cut a stone the same way twice. This bench remembers every cut."
 	]
-	quest.4200000000230573.title: "Mason Table"
-	quest.4200000000230574.quest_desc: [
+	quest.4200000000230582.title: "Mason Table"
+	quest.4200000000230583.quest_desc: [
 		"The same trick for wood — a hundred planks from one."
 	]
-	quest.4200000000230574.title: "Carpenter's Table"
-	quest.4200000000230575.quest_desc: [
+	quest.4200000000230583.title: "Carpenter's Table"
+	quest.4200000000230584.quest_desc: [
 		"Sand into glass, then glass into every shape the light will take."
 	]
-	quest.4200000000230575.title: "Glassblower"
-	quest.4200000000230576.quest_desc: [
+	quest.4200000000230584.title: "Glassblower"
+	quest.4200000000230585.quest_desc: [
 		"Wool and cloth, rewoven — fitting, for a pad that is mending a loom."
 	]
-	quest.4200000000230576.title: "Loom Table"
-	quest.4200000000230577.quest_desc: [
+	quest.4200000000230585.title: "Loom Table"
+	quest.4200000000230586.quest_desc: [
 		"Leaves, saplings, and growing things, sorted into their variations."
 	]
-	quest.4200000000230577.title: "Botanist Workbench"
-	quest.4200000000230578.quest_desc: [
+	quest.4200000000230586.title: "Botanist Workbench"
+	quest.4200000000230587.quest_desc: [
 		"Coloured blocks and stranger stone. Pick a variant; the bench holds the rest."
 	]
-	quest.4200000000230578.title: "Alchemy Bench"
-	quest.4200000000230579.quest_desc: [
+	quest.4200000000230587.title: "Alchemy Bench"
+	quest.4200000000230588.quest_desc: [
 		"Metal and machine-facing blocks, cut to taste."
 	]
-	quest.4200000000230579.title: "Tinkering Table"
-	quest.420000000023057A.quest_desc: [
+	quest.4200000000230588.title: "Tinkering Table"
+	quest.4200000000230589.quest_desc: [
 		"Feed a block into the Mason Table and choose from the wall of variants."
 	]
-	quest.420000000023057A.title: "A Cut of Stone"
-	quest.420000000023057B.quest_desc: [
+	quest.4200000000230589.title: "A Cut of Stone"
+	quest.420000000023058A.quest_desc: [
 		"The Carpenter's Table does the same for wood."
 	]
-	quest.420000000023057B.title: "A Cut of Planks"
-	quest.420000000023057C.quest_desc: [
+	quest.420000000023058A.title: "A Cut of Planks"
+	quest.420000000023058B.quest_desc: [
 		"Every pane the Glassblower knows starts here."
 	]
-	quest.420000000023057C.title: "A Cut of Glass"
-	quest.420000000023057D.quest_desc: [
+	quest.420000000023058B.title: "A Cut of Glass"
+	quest.420000000023058C.quest_desc: [
 		"Grit-singers' favourite stone to argue over."
 	]
-	quest.420000000023057D.title: "Deepslate Variety"
-	quest.420000000023057E.quest_desc: [
+	quest.420000000023058C.title: "Deepslate Variety"
+	quest.420000000023058D.quest_desc: [
 		"Fired clay, a hundred ways."
 	]
-	quest.420000000023057E.title: "Bricks Variety"
-	quest.420000000023057F.quest_desc: [
+	quest.420000000023058D.title: "Bricks Variety"
+	quest.420000000023058E.quest_desc: [
 		"Pad grit, cut fine."
 	]
-	quest.420000000023057F.title: "Sandstone Variety"
-	quest.4200000000240580.quest_desc: [
+	quest.420000000023058E.title: "Sandstone Variety"
+	quest.420000000024058F.quest_desc: [
 		"The first thing that turns a pad into a place someone lives."
 	]
-	quest.4200000000240580.title: "A Chair"
-	quest.4200000000240581.quest_desc: [
+	quest.420000000024058F.title: "A Chair"
+	quest.4200000000240590.quest_desc: [
 		"Somewhere to put the Codex down while you think."
 	]
-	quest.4200000000240581.title: "A Table"
-	quest.4200000000240582.quest_desc: [
+	quest.4200000000240590.title: "A Table"
+	quest.4200000000240591.quest_desc: [
 		"Room for a Clowder to sit while the barrel works."
 	]
-	quest.4200000000240582.title: "A Bench"
-	quest.4200000000240583.quest_desc: [
+	quest.4200000000240591.title: "A Bench"
+	quest.4200000000240592.quest_desc: [
 		"For the Codex Pages you keep meaning to reread."
 	]
-	quest.4200000000240583.title: "A Shelf"
-	quest.4200000000240584.quest_desc: [
+	quest.4200000000240592.title: "A Shelf"
+	quest.4200000000240593.quest_desc: [
 		"Handcrafted storage that looks like it belongs."
 	]
-	quest.4200000000240584.title: "A Cupboard"
-	quest.4200000000240585.quest_desc: [
+	quest.4200000000240593.title: "A Cupboard"
+	quest.4200000000240594.quest_desc: [
 		"The Pad-keepers slept well. So should you."
 	]
-	quest.4200000000240585.title: "A Fancy Bed"
-	quest.4200000000240586.quest_desc: [
+	quest.4200000000240594.title: "A Fancy Bed"
+	quest.4200000000240595.quest_desc: [
 		"A lantern, a page, a place for both."
 	]
-	quest.4200000000240586.title: "A Nightstand"
-	quest.4200000000240587.quest_desc: [
+	quest.4200000000240595.title: "A Nightstand"
+	quest.4200000000240596.quest_desc: [
 		"Cut a frame, then dress it in any block. One shape, every skin."
 	]
-	quest.4200000000240587.title: "Framing Saw"
-	quest.4200000000240588.quest_desc: [
+	quest.4200000000240596.title: "Framing Saw"
+	quest.4200000000240597.quest_desc: [
 		"A blank cube waiting for a camouflage block."
 	]
-	quest.4200000000240588.title: "Framed Cube"
-	quest.4200000000240589.quest_desc: [
+	quest.4200000000240597.title: "Framed Cube"
+	quest.4200000000240598.quest_desc: [
 		"Half a frame; twice the options."
 	]
-	quest.4200000000240589.title: "Framed Slab"
-	quest.420000000024058A.quest_desc: [
+	quest.4200000000240598.title: "Framed Slab"
+	quest.4200000000240599.quest_desc: [
 		"Steps that wear whatever wall they sit in."
 	]
-	quest.420000000024058A.title: "Framed Stairs"
-	quest.420000000024058B.quest_desc: [
+	quest.4200000000240599.title: "Framed Stairs"
+	quest.420000000024059A.quest_desc: [
 		"For roofs and rooflines the void never gave you."
 	]
-	quest.420000000024058B.title: "Framed Slope"
-	quest.420000000024058C.quest_desc: [
+	quest.420000000024059A.title: "Framed Slope"
+	quest.420000000024059B.quest_desc: [
 		"Edge-walkers spanned the void with less. Reach the next pad in style."
 	]
-	quest.420000000024058C.title: "Rope Bridge"
-	quest.420000000024058D.quest_desc: [
+	quest.420000000024059B.title: "Rope Bridge"
+	quest.420000000024059C.quest_desc: [
 		"A roof over the pad. The rain up here is only ever ambition."
 	]
-	quest.420000000024058D.title: "Attic Roof"
-	quest.420000000024058E.quest_desc: [
+	quest.420000000024059C.title: "Attic Roof"
+	quest.420000000024059D.quest_desc: [
 		"Comfort is infrastructure too."
 	]
-	quest.420000000024058E.title: "Couch"
-	quest.420000000024058F.quest_desc: [
+	quest.420000000024059D.title: "Couch"
+	quest.420000000024059E.quest_desc: [
 		"A kitchen edge for the Farmer's Delight line."
 	]
-	quest.420000000024058F.title: "Counter"
-	quest.4200000000240590.quest_desc: [
+	quest.420000000024059E.title: "Counter"
+	quest.420000000024059F.quest_desc: [
 		"Where the Whisker Codex gets its margins."
 	]
-	quest.4200000000240590.title: "Desk"
-	quest.4200000000240591.quest_desc: [
+	quest.420000000024059F.title: "Desk"
+	quest.42000000002405A0.quest_desc: [
 		"Small storage that matches the table."
 	]
-	quest.4200000000240591.title: "Drawer"
-	quest.4200000000240592.quest_desc: [
+	quest.42000000002405A0.title: "Drawer"
+	quest.42000000002405A1.quest_desc: [
 		"A threshold that hides in the wall."
 	]
-	quest.4200000000240592.title: "Framed Door"
-	quest.4200000000240593.quest_desc: [
+	quest.42000000002405A1.title: "Framed Door"
+	quest.42000000002405A2.quest_desc: [
 		"Thin cover; full disguise."
 	]
-	quest.4200000000240593.title: "Framed Panel"
-	quest.4200000000240594.quest_desc: [
+	quest.42000000002405A2.title: "Framed Panel"
+	quest.42000000002405A3.quest_desc: [
 		"An edge rail you can dress to taste."
 	]
-	quest.4200000000240594.title: "Framed Fence"
-	quest.4200000000240595.quest_desc: [
+	quest.42000000002405A3.title: "Framed Fence"
+	quest.42000000002405A4.quest_desc: [
 		"Grey and honest, like the grit it came from."
 	]
-	quest.4200000000240595.title: "Andesite Bridge"
-	quest.4200000000250596.quest_desc: [
+	quest.42000000002405A4.title: "Andesite Bridge"
+	quest.42000000002505A5.quest_desc: [
 		"A wall light that is not a torch stuck in shame. The stewards had standards."
 	]
-	quest.4200000000250596.title: "Sconce"
-	quest.4200000000250597.quest_desc: [
+	quest.42000000002505A5.title: "Sconce"
+	quest.42000000002505A6.quest_desc: [
 		"Sand, falling. The only honest clock before the Clock Strand."
 	]
-	quest.4200000000250597.title: "Hourglass"
-	quest.4200000000250598.quest_desc: [
+	quest.42000000002505A6.title: "Hourglass"
+	quest.42000000002505A7.quest_desc: [
 		"Drip a fluid out of a block. Small; oddly satisfying."
 	]
-	quest.4200000000250598.title: "Faucet"
-	quest.4200000000250599.quest_desc: [
+	quest.42000000002505A7.title: "Faucet"
+	quest.42000000002505A8.quest_desc: [
 		"Turn it by hand. The Drumhearts started somewhere too."
 	]
-	quest.4200000000250599.title: "Crank"
-	quest.420000000025059A.quest_desc: [
+	quest.42000000002505A8.title: "Crank"
+	quest.42000000002505A9.quest_desc: [
 		"Show a thing off. A token, a page, a trophy."
 	]
-	quest.420000000025059A.title: "Item Shelf"
-	quest.420000000025059B.quest_desc: [
+	quest.42000000002505A9.title: "Item Shelf"
+	quest.42000000002505AA.quest_desc: [
 		"A bag that holds bags. Recover's clutter, tidied."
 	]
-	quest.420000000025059B.title: "Sack"
-	quest.420000000025059C.quest_desc: [
+	quest.42000000002505AA.title: "Sack"
+	quest.42000000002505AB.quest_desc: [
 		"Lock the Frayed Thread away from your own worse ideas."
 	]
-	quest.420000000025059C.title: "Safe"
-	quest.420000000025059D.quest_desc: [
+	quest.42000000002505AB.title: "Safe"
+	quest.42000000002505AC.quest_desc: [
 		"Pin a page where the whole Clowder reads it."
 	]
-	quest.420000000025059D.title: "Notice Board"
-	quest.420000000025059E.quest_desc: [
+	quest.42000000002505AC.title: "Notice Board"
+	quest.42000000002505AD.quest_desc: [
 		"A pot with ambitions. Grow a little where the pad is thin."
 	]
-	quest.420000000025059E.title: "Planter"
-	quest.420000000025059F.quest_desc: [
+	quest.42000000002505AD.title: "Planter"
+	quest.42000000002505AE.quest_desc: [
 		"Raise the Spindle Loom Fragment where it can be admired."
 	]
-	quest.420000000025059F.title: "Pedestal"
-	quest.42000000002505A0.quest_desc: [
+	quest.42000000002505AE.title: "Pedestal"
+	quest.42000000002505AF.quest_desc: [
 		"Store cookies, bees, or the small dignity of order."
 	]
-	quest.42000000002505A0.title: "Jar (37)"
-	quest.42000000002505A1.quest_desc: [
+	quest.42000000002505AF.title: "Jar (37)"
+	quest.42000000002505B0.quest_desc: [
 		"Set a spawn without hauling a whole bed up the ladder."
 	]
-	quest.42000000002505A1.title: "Sleeping Bag"
-	quest.42000000002505A2.quest_desc: [
+	quest.42000000002505B0.title: "Sleeping Bag"
+	quest.42000000002505B1.quest_desc: [
 		"Sleep through the day so the mobs meet a rested Skybound."
 	]
-	quest.42000000002505A2.title: "Hammock"
-	quest.42000000002505A3.quest_desc: [
+	quest.42000000002505B1.title: "Hammock"
+	quest.42000000002505B2.quest_desc: [
 		"Hang the hammock between two posts, over the drop, and dare it."
 	]
-	quest.42000000002505A3.title: "Rope and Nail"
-	quest.42000000002505A4.quest_desc: [
+	quest.42000000002505B2.title: "Rope and Nail"
+	quest.42000000002505B3.quest_desc: [
 		"A steadier flame for the pad's long nights."
 	]
-	quest.42000000002505A4.title: "Candle Holder"
-	quest.42000000002505A5.quest_desc: [
+	quest.42000000002505B3.title: "Candle Holder"
+	quest.42000000002505B4.quest_desc: [
 		"Climb, hang, or bridge. Edge-walkers swore by it."
 	]
-	quest.42000000002505A5.title: "Rope (37)"
-	quest.42000000002505A6.quest_desc: [
+	quest.42000000002505B4.title: "Rope (37)"
+	quest.42000000002505B5.quest_desc: [
 		"Raise and lower the rope on a redstone whim."
 	]
-	quest.42000000002505A6.title: "Pulley Block"
-	quest.42000000002505A7.quest_desc: [
+	quest.42000000002505B5.title: "Pulley Block"
+	quest.42000000002505B6.quest_desc: [
 		"Fall onto it and the void forgets to punish you."
 	]
-	quest.42000000002505A7.title: "Feather Block"
-	quest.42000000002505A8.quest_desc: [
+	quest.42000000002505B6.title: "Feather Block"
+	quest.42000000002505B7.quest_desc: [
 		"Chalk a plan the whole Clowder can argue with."
 	]
-	quest.42000000002505A8.title: "Blackboard"
-	quest.42000000002505A9.quest_desc: [
+	quest.42000000002505B7.title: "Blackboard"
+	quest.42000000002505B8.quest_desc: [
 		"Carry a small thing that would rather you didn't."
 	]
-	quest.42000000002505A9.title: "Cage"
-	quest.42000000002605AA.quest_desc: [
+	quest.42000000002505B8.title: "Cage"
+	quest.42000000002605B9.quest_desc: [
 		"The first wire. The pulse the Drumhearts kept now has somewhere to go."
 	]
-	quest.42000000002605AA.title: "Copper Wire"
-	quest.42000000002605AB.quest_desc: [
+	quest.42000000002605B9.title: "Copper Wire"
+	quest.42000000002605BA.quest_desc: [
 		"Rotation on one side, Forge Energy on the other. Two Strands shaking hands."
 	]
-	quest.42000000002605AB.title: "Connector"
-	quest.42000000002605AC.quest_desc: [
+	quest.42000000002605BA.title: "Connector"
+	quest.42000000002605BB.quest_desc: [
 		"Energy back into rotation. The Clock Strand runs on the Spark Strand now."
 	]
-	quest.42000000002605AC.title: "Electric Motor"
-	quest.42000000002605AD.quest_desc: [
+	quest.42000000002605BB.title: "Electric Motor"
+	quest.42000000002605BC.quest_desc: [
 		"Hold a charge between the wire and the work."
 	]
-	quest.42000000002605AD.title: "Capacitor"
-	quest.42000000002605AE.quest_desc: [
+	quest.42000000002605BC.title: "Capacitor"
+	quest.42000000002605BD.quest_desc: [
 		"A wall of stored current, built as big as the pad allows."
 	]
-	quest.42000000002605AE.title: "Modular Accumulator"
-	quest.42000000002605AF.quest_desc: [
+	quest.42000000002605BD.title: "Modular Accumulator"
+	quest.42000000002605BE.quest_desc: [
 		"Rods and wire from ingots — Create's answer to the press."
 	]
-	quest.42000000002605AF.title: "Rolling Mill"
-	quest.42000000002605B0.quest_desc: [
+	quest.42000000002605BE.title: "Rolling Mill"
+	quest.42000000002605BF.quest_desc: [
 		"Enchant without the table's superstition. Feed it experience, get intent."
 	]
-	quest.42000000002605B0.title: "Blaze Enchanter"
-	quest.42000000002605B1.quest_desc: [
+	quest.42000000002605BF.title: "Blaze Enchanter"
+	quest.42000000002605C0.quest_desc: [
 		"Liquid practice, carried. The stewards would have found this vulgar and useful."
 	]
-	quest.42000000002605B1.title: "Experience Bucket"
-	quest.42000000002605B2.quest_desc: [
+	quest.42000000002605C0.title: "Experience Bucket"
+	quest.42000000002605C1.quest_desc: [
 		"Copy a book, a plan, a page. The Codex approves, quietly."
 	]
-	quest.42000000002605B2.title: "Printer"
-	quest.42000000002605B3.quest_desc: [
+	quest.42000000002605C1.title: "Printer"
+	quest.42000000002605C2.quest_desc: [
 		"Lava and heat into power. A bridge, not the Hum itself."
 	]
-	quest.42000000002605B3.title: "Heat Generator"
-	quest.42000000002605B4.quest_desc: [
+	quest.42000000002605C2.title: "Heat Generator"
+	quest.42000000002605C3.quest_desc: [
 		"On a pad that is all sky, the sun is the one resource nobody rations."
 	]
-	quest.42000000002605B4.title: "Solar Generator"
-	quest.42000000002605B5.quest_desc: [
+	quest.42000000002605C3.title: "Solar Generator"
+	quest.42000000002605C4.quest_desc: [
 		"The higher the pad, the harder it turns. Build tall."
 	]
-	quest.42000000002605B5.title: "Wind Generator"
-	quest.42000000002605B6.quest_desc: [
+	quest.42000000002605C4.title: "Wind Generator"
+	quest.42000000002605C5.quest_desc: [
 		"Burn the Sprout Strand's surplus. Nothing on a pad is waste."
 	]
-	quest.42000000002605B6.title: "Bio Generator"
-	quest.42000000002605B7.quest_desc: [
+	quest.42000000002605C5.title: "Bio Generator"
+	quest.42000000002605C6.quest_desc: [
 		"Late power for a Clowder that went deep on Mekanism."
 	]
-	quest.42000000002605B7.title: "Gas-Burning Generator"
-	quest.42000000002605B8.quest_desc: [
+	quest.42000000002605C6.title: "Gas-Burning Generator"
+	quest.42000000002605C7.quest_desc: [
 		"The digital loom, in your pocket. Reweave from anywhere on the pad."
 	]
-	quest.42000000002605B8.title: "Wireless Terminal (38)"
-	quest.42000000002605B9.quest_desc: [
+	quest.42000000002605C7.title: "Wireless Terminal (38)"
+	quest.42000000002605C8.quest_desc: [
 		"Mekanism's chemicals, stored in the AE2 network. Two late pillars, braided."
 	]
-	quest.42000000002605B9.title: "Chemical Cell"
-	quest.42000000002605BA.quest_desc: [
+	quest.42000000002605C8.title: "Chemical Cell"
+	quest.42000000002605C9.quest_desc: [
 		"For when the copper wire cannot carry the whole pulse."
 	]
-	quest.42000000002605BA.title: "Large Connector"
-	quest.42000000002605BB.quest_desc: [
+	quest.42000000002605C9.title: "Large Connector"
+	quest.42000000002605CA.quest_desc: [
 		"A cake that levels you. Do not tell the Kitchen line."
 	]
-	quest.42000000002605BB.title: "Experience Cake"
-	quest.42000000002605BC.quest_desc: [
+	quest.42000000002605CA.title: "Experience Cake"
+	quest.42000000002605CB.quest_desc: [
 		"A bigger bite of the same free sky."
 	]
-	quest.42000000002605BC.title: "Advanced Solar"
-	quest.42000000002605BD.quest_desc: [
+	quest.42000000002605CB.title: "Advanced Solar"
+	quest.42000000002605CC.quest_desc: [
 		"The shell every chemical cell needs."
 	]
-	quest.42000000002605BD.title: "Chemical Housing"
-	quest.42000000002605BE.quest_desc: [
+	quest.42000000002605CC.title: "Chemical Housing"
+	quest.42000000002605CD.quest_desc: [
 		"Carry a measure of gas off the network."
 	]
-	quest.42000000002605BE.title: "Portable Chemical Cell"
+	quest.42000000002605CD.title: "Portable Chemical Cell"
+	reward.5000000000060135.title: "Thread of Return: +1 Clowder life"
+	reward.5000000000080193.title: "Thread of Return: +1 Clowder life"
+	reward.50000000000901CC.title: "Thread of Return: +1 Clowder life"
+	reward.5000000000170337.title: "Thread of Return: +1 Clowder life"
+	reward.50000000002004DD.title: "Thread of Return: +1 Clowder life"
+	reward.5000000000220581.title: "Thread of Return: +1 Clowder life"
 }

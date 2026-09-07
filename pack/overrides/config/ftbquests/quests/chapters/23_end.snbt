@@ -329,6 +329,17 @@
 					type: "xp_levels"
 					xp_levels: 1
 				}
+				{
+					id: "5000000000170337"
+					type: "command"
+					command: "skybound rewardlife @s dragon"
+					silent: true
+					elevate_perms: true
+					team_reward: true
+					icon: {
+						id: "minecraft:totem_of_undying"
+					}
+				}
 			]
 			dependencies: ["4200000000170332"]
 			shape: "loom"

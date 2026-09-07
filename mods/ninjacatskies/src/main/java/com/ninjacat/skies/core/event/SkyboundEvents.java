@@ -3,6 +3,10 @@ package com.ninjacat.skies.core.event;
 import com.ninjacat.skies.core.NinjacatSkies;
 import com.ninjacat.skies.core.config.SkiesConfig;
 import com.ninjacat.skies.core.item.ModItems;
+import com.ninjacat.skies.core.tension.ClowderLives;
+import com.ninjacat.skies.core.tension.LoomTension;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -23,8 +27,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 public final class SkyboundEvents {
     private static final String ROOT = NinjacatSkies.MOD_ID;
     private static final String FLAG_JOINED = "received_skybound_kit";
-    private static final String LIVES_KEY = "skybound_lives";
-    private static final String LIVES_INIT = "skybound_lives_init";
+    private static final String EXHAUSTED = "skybound_exhausted";
 
     @SubscribeEvent
     public void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
@@ -35,10 +38,9 @@ public final class SkyboundEvents {
         CompoundTag persistent = player.getPersistentData();
         CompoundTag data = persistent.getCompound(ROOT);
 
-        ensureLivesInitialized(player, data);
-
         if (data.getBoolean(FLAG_JOINED)) {
             persistent.put(ROOT, data);
+            enforceLives(player);
             return;
         }
 
@@ -71,6 +73,7 @@ public final class SkyboundEvents {
 
         data.putBoolean(FLAG_JOINED, true);
         persistent.put(ROOT, data);
+        enforceLives(player);
 
         player.displayClientMessage(NinjacatText.teal("Skybound. The Loom is cut. Start with Soil."), true);
         player.displayClientMessage(
@@ -79,89 +82,92 @@ public final class SkyboundEvents {
         );
     }
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onDeath(LivingDeathEvent event) {
-        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) {
-            return;
-        }
-        if (!(event.getEntity() instanceof ServerPlayer player) || event.isCanceled()) {
-            return;
-        }
-
-        CompoundTag data = player.getPersistentData().getCompound(ROOT);
-        ensureLivesInitialized(player, data);
-        int lives = data.getInt(LIVES_KEY);
-        if (lives <= 0) {
-            return;
-        }
-
-        lives -= 1;
-        data.putInt(LIVES_KEY, lives);
-        player.getPersistentData().put(ROOT, data);
-        // Spectator applied on respawn — death-time gamemode is overwritten by vanilla respawn.
+        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get() || event.isCanceled()
+                || !(event.getEntity() instanceof ServerPlayer player)
+                || player.isCreative() || player.isSpectator()) return;
+        LoomTension.clowderOf(player).ifPresent(team -> {
+            int lives = ClowderLives.spend(team, SkiesConfig.STARTING_LIVES.get());
+            for (ServerPlayer member : team.onlineMembers()) {
+                member.sendSystemMessage(NinjacatText.gold(player.getGameProfile().getName()
+                        + " fell. Clowder lives remaining: " + lives));
+                // The dying member's mode is applied after vanilla respawn.
+                if (member != player) enforceLives(member);
+            }
+        });
     }
 
     @SubscribeEvent
     public void onRespawn(PlayerEvent.PlayerRespawnEvent event) {
-        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) {
-            return;
-        }
-        if (!(event.getEntity() instanceof ServerPlayer player)) {
-            return;
-        }
-        CompoundTag data = player.getPersistentData().getCompound(ROOT);
-        ensureLivesInitialized(player, data);
-        int lives = data.getInt(LIVES_KEY);
-        if (lives <= 0) {
-            player.setGameMode(GameType.SPECTATOR);
-            player.displayClientMessage(
-                    NinjacatText.gold("Last life spent. Spectator — /clowder revive (self), mate /clowder revive <you>, or op /skybound revive."),
-                    false
-            );
-        } else {
-            player.displayClientMessage(
-                    NinjacatText.teal("Skybound lives remaining: " + lives),
-                    false
-            );
+        if (event.getEntity() instanceof ServerPlayer player) enforceLives(player);
+    }
+
+    @SubscribeEvent
+    public void onClone(PlayerEvent.Clone event) {
+        // NeoForge does not retain arbitrary persistent tags through player cloning.
+        event.getEntity().getPersistentData().put(ROOT,
+                event.getOriginal().getPersistentData().getCompound(ROOT).copy());
+        event.getEntity().getPersistentData().putBoolean(EXHAUSTED,
+                event.getOriginal().getPersistentData().getBoolean(EXHAUSTED));
+    }
+
+    @SubscribeEvent
+    public void onTick(PlayerTickEvent.Post event) {
+        if (event.getEntity() instanceof ServerPlayer player && player.tickCount % 20 == 0
+                && player.isAlive()) enforceLives(player);
+    }
+
+    public static int remainingLives(ServerPlayer player) {
+        return LoomTension.clowderOf(player)
+                .map(team -> ClowderLives.remaining(team, SkiesConfig.STARTING_LIVES.get())).orElse(0);
+    }
+
+    private static void enforceLives(ServerPlayer player) {
+        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return;
+        int lives = remainingLives(player);
+        if (lives == 0 && !player.isCreative()) {
+            if (!player.isSpectator()) {
+                player.getPersistentData().putBoolean(EXHAUSTED, true);
+                player.setGameMode(GameType.SPECTATOR);
+                player.sendSystemMessage(NinjacatText.gold(
+                        "Your Clowder has spent its last life. A rare life reward or an operator revive can restore the pool."));
+            }
+        } else if (lives > 0 && player.getPersistentData().getBoolean(EXHAUSTED)) {
+            player.getPersistentData().remove(EXHAUSTED);
+            if (player.isSpectator()) {
+                seatAtRespawnOrDock(player);
+                player.setGameMode(GameType.SURVIVAL);
+            }
         }
     }
 
-    private static void ensureLivesInitialized(ServerPlayer player, CompoundTag data) {
-        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get() || data.getBoolean(LIVES_INIT)) {
-            return;
-        }
-        data.putInt(LIVES_KEY, SkiesConfig.STARTING_LIVES.get());
-        data.putBoolean(LIVES_INIT, true);
-        player.displayClientMessage(
-                NinjacatText.gold("Soft hardcore on — starting lives: " + SkiesConfig.STARTING_LIVES.get()),
-                false
-        );
+    public static boolean awardLife(ServerPlayer player, String milestone) {
+        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return false;
+        return LoomTension.clowderOf(player).map(team -> {
+            if (!ClowderLives.award(team, SkiesConfig.STARTING_LIVES.get(), milestone)) return false;
+            for (ServerPlayer member : team.onlineMembers()) {
+                enforceLives(member);
+                member.sendSystemMessage(NinjacatText.gold("A Thread of Return: +1 shared Clowder life. Remaining: "
+                        + ClowderLives.remaining(team, SkiesConfig.STARTING_LIVES.get())));
+            }
+            return true;
+        }).orElse(false);
     }
 
-    /** Restores starting lives. Caller must check config. */
     public static int resetLives(ServerPlayer player) {
-        CompoundTag data = player.getPersistentData().getCompound(ROOT);
-        int lives = SkiesConfig.STARTING_LIVES.get();
-        data.putInt(LIVES_KEY, lives);
-        data.putBoolean(LIVES_INIT, true);
-        player.getPersistentData().put(ROOT, data);
-        return lives;
+        return LoomTension.clowderOf(player)
+                .map(team -> ClowderLives.reset(team, SkiesConfig.STARTING_LIVES.get())).orElse(0);
     }
 
-    /**
-     * Full soft-hardcore revive: reset lives, seat at respawn/Dock, Survival.
-     * @return restored life count, or -1 if lives are disabled
-     */
+    /** Restore the team's pool; offline exhausted members recover on their next login. */
     public static int revivePlayer(ServerPlayer player) {
-        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) {
-            return -1;
-        }
+        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return -1;
         int lives = resetLives(player);
-        seatAtRespawnOrDock(player);
-        if (player.isSpectator()) {
-            player.setGameMode(GameType.SURVIVAL);
-        }
-        player.displayClientMessage(NinjacatText.gold("Skybound revive — lives restored."), false);
+        LoomTension.clowderOf(player).ifPresent(team -> {
+            for (ServerPlayer member : team.onlineMembers()) enforceLives(member);
+        });
+        player.sendSystemMessage(NinjacatText.gold("Clowder revive — shared lives restored: " + lives));
         return lives;
     }
 

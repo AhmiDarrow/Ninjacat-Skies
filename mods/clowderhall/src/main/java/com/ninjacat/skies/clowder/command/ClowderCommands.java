@@ -26,6 +26,7 @@ public final class ClowderCommands {
                         .then(Commands.literal("hub").executes(ClowderCommands::hubTeleport))
                         .then(Commands.literal("return").executes(ClowderCommands::returnFromHub))
                         .then(Commands.literal("revive")
+                                .requires(source -> source.hasPermission(2))
                                 .executes(ClowderCommands::reviveSelf)
                                 .then(Commands.argument("player", EntityArgument.player())
                                         .executes(ClowderCommands::reviveMate)))

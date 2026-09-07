@@ -1634,6 +1634,17 @@
 					xp_levels: 10
 					id: "62000000010901CC"
 				}
+				{
+					id: "50000000000901CC"
+					type: "command"
+					command: "skybound rewardlife @s reweave"
+					silent: true
+					elevate_perms: true
+					team_reward: true
+					icon: {
+						id: "minecraft:totem_of_undying"
+					}
+				}
 			]
 			dependencies: ["42000000000901CB"]
 			shape: "gear"

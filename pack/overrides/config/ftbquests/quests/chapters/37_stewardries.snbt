@@ -23,12 +23,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "4200000000250596"
+			id: "42000000002505A5"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "5200000000250596"
+					id: "52000000002505A5"
 					type: "item"
 					item: {
 						id: "supplementaries:sconce"
@@ -38,452 +38,31 @@
 			]
 			rewards: [
 				{
-					id: "6200000000250596"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "5100000000250596"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			shape: "loom"
-		}
-		{
-			id: "4200000000250597"
-			x: 0.0d
-			y: 1.4d
-			tasks: [
-				{
-					id: "5200000000250597"
-					type: "item"
-					item: {
-						id: "supplementaries:hourglass"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000250597"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000250596"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000250598"
-			x: 0.0d
-			y: 2.8d
-			tasks: [
-				{
-					id: "5200000000250598"
-					type: "item"
-					item: {
-						id: "supplementaries:faucet"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000250598"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000250596"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000250599"
-			x: 0.0d
-			y: 4.2d
-			tasks: [
-				{
-					id: "5200000000250599"
-					type: "item"
-					item: {
-						id: "supplementaries:crank"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000250599"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000250596"]
-			shape: "loom"
-		}
-		{
-			id: "420000000025059A"
-			x: 0.0d
-			y: 5.6d
-			tasks: [
-				{
-					id: "520000000025059A"
-					type: "item"
-					item: {
-						id: "supplementaries:item_shelf"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000025059A"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000250596"]
-			shape: "loom"
-		}
-		{
-			id: "420000000025059B"
-			x: 2.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "520000000025059B"
-					type: "item"
-					item: {
-						id: "supplementaries:sack"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000025059B"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "510000000025059B"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["4200000000250596"]
-			shape: "loom"
-		}
-		{
-			id: "420000000025059C"
-			x: 2.2d
-			y: 1.4d
-			tasks: [
-				{
-					id: "520000000025059C"
-					type: "item"
-					item: {
-						id: "supplementaries:safe"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000025059C"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["420000000025059B"]
-			shape: "loom"
-		}
-		{
-			id: "420000000025059D"
-			x: 2.2d
-			y: 2.8d
-			tasks: [
-				{
-					id: "520000000025059D"
-					type: "item"
-					item: {
-						id: "supplementaries:notice_board"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000025059D"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["420000000025059B"]
-			shape: "loom"
-		}
-		{
-			id: "420000000025059E"
-			x: 2.2d
-			y: 4.2d
-			tasks: [
-				{
-					id: "520000000025059E"
-					type: "item"
-					item: {
-						id: "supplementaries:planter"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000025059E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["420000000025059B"]
-			shape: "loom"
-		}
-		{
-			id: "420000000025059F"
-			x: 2.2d
-			y: 5.6d
-			tasks: [
-				{
-					id: "520000000025059F"
-					type: "item"
-					item: {
-						id: "supplementaries:pedestal"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000025059F"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["420000000025059B"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002505A0"
-			x: 4.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "52000000002505A0"
-					type: "item"
-					item: {
-						id: "supplementaries:jar"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002505A0"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "51000000002505A0"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["420000000025059B"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002505A1"
-			x: 4.4d
-			y: 1.4d
-			tasks: [
-				{
-					id: "52000000002505A1"
-					type: "item"
-					item: {
-						id: "comforts:sleeping_bag_white"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002505A1"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002505A0"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002505A2"
-			x: 4.4d
-			y: 2.8d
-			tasks: [
-				{
-					id: "52000000002505A2"
-					type: "item"
-					item: {
-						id: "comforts:hammock_white"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002505A2"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002505A0"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002505A3"
-			x: 4.4d
-			y: 4.2d
-			tasks: [
-				{
-					id: "52000000002505A3"
-					type: "item"
-					item: {
-						id: "comforts:rope_and_nail"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002505A3"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002505A0"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002505A4"
-			x: -4.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "52000000002505A4"
-					type: "item"
-					item: {
-						id: "supplementaries:candle_holder"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002505A4"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			optional: true
-			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000250597"]
-			hide_until_deps_complete: true
-		}
-		{
-			id: "42000000002505A5"
-			x: -2.5d
-			y: 7.5d
-			tasks: [
-				{
-					id: "52000000002505A5"
-					type: "item"
-					item: {
-						id: "supplementaries:rope"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "62000000002505A5"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "51000000002505A5"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000250597"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002505A6"
-			x: -1.0d
-			y: 7.5d
+			x: 0.0d
+			y: 1.4d
 			tasks: [
 				{
 					id: "52000000002505A6"
 					type: "item"
 					item: {
-						id: "supplementaries:pulley_block"
+						id: "supplementaries:hourglass"
 						count: 1
 					}
 				}
@@ -494,27 +73,24 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["42000000002505A5"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000250597"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002505A7"
-			x: 0.5d
-			y: 7.5d
+			x: 0.0d
+			y: 2.8d
 			tasks: [
 				{
 					id: "52000000002505A7"
 					type: "item"
 					item: {
-						id: "supplementaries:feather_block"
-						count: 2
+						id: "supplementaries:faucet"
+						count: 1
 					}
 				}
 			]
@@ -524,26 +100,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["42000000002505A5"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000250597"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002505A8"
-			x: 2.0d
-			y: 7.5d
+			x: 0.0d
+			y: 4.2d
 			tasks: [
 				{
 					id: "52000000002505A8"
 					type: "item"
 					item: {
-						id: "supplementaries:blackboard"
+						id: "supplementaries:crank"
 						count: 1
 					}
 				}
@@ -554,33 +127,310 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["42000000002505A5"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000250597"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002505A9"
-			x: 3.5d
-			y: 7.5d
+			x: 0.0d
+			y: 5.6d
 			tasks: [
 				{
 					id: "52000000002505A9"
 					type: "item"
 					item: {
-						id: "supplementaries:cage"
-						count: 1
+						id: "supplementaries:item_shelf"
+						count: 2
 					}
 				}
 			]
 			rewards: [
 				{
 					id: "62000000002505A9"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505A5"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505AA"
+			x: 2.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "52000000002505AA"
+					type: "item"
+					item: {
+						id: "supplementaries:sack"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505AA"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "51000000002505AA"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["42000000002505A5"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505AB"
+			x: 2.2d
+			y: 1.4d
+			tasks: [
+				{
+					id: "52000000002505AB"
+					type: "item"
+					item: {
+						id: "supplementaries:safe"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505AB"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505AA"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505AC"
+			x: 2.2d
+			y: 2.8d
+			tasks: [
+				{
+					id: "52000000002505AC"
+					type: "item"
+					item: {
+						id: "supplementaries:notice_board"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505AC"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505AA"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505AD"
+			x: 2.2d
+			y: 4.2d
+			tasks: [
+				{
+					id: "52000000002505AD"
+					type: "item"
+					item: {
+						id: "supplementaries:planter"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505AD"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505AA"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505AE"
+			x: 2.2d
+			y: 5.6d
+			tasks: [
+				{
+					id: "52000000002505AE"
+					type: "item"
+					item: {
+						id: "supplementaries:pedestal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505AE"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505AA"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505AF"
+			x: 4.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "52000000002505AF"
+					type: "item"
+					item: {
+						id: "supplementaries:jar"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505AF"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "51000000002505AF"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["42000000002505AA"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505B0"
+			x: 4.4d
+			y: 1.4d
+			tasks: [
+				{
+					id: "52000000002505B0"
+					type: "item"
+					item: {
+						id: "comforts:sleeping_bag_white"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B0"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505AF"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505B1"
+			x: 4.4d
+			y: 2.8d
+			tasks: [
+				{
+					id: "52000000002505B1"
+					type: "item"
+					item: {
+						id: "comforts:hammock_white"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B1"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505AF"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505B2"
+			x: 4.4d
+			y: 4.2d
+			tasks: [
+				{
+					id: "52000000002505B2"
+					type: "item"
+					item: {
+						id: "comforts:rope_and_nail"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B2"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002505AF"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002505B3"
+			x: -4.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002505B3"
+					type: "item"
+					item: {
+						id: "supplementaries:candle_holder"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B3"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -591,7 +441,157 @@
 			optional: true
 			shape: "loom"
 			size: 0.85d
-			dependencies: ["4200000000250597"]
+			dependencies: ["42000000002505A6"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002505B4"
+			x: -2.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002505B4"
+					type: "item"
+					item: {
+						id: "supplementaries:rope"
+						count: 16
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002505A6"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002505B5"
+			x: -1.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002505B5"
+					type: "item"
+					item: {
+						id: "supplementaries:pulley_block"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002505A6"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002505B6"
+			x: 0.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002505B6"
+					type: "item"
+					item: {
+						id: "supplementaries:feather_block"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B6"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002505A6"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002505B7"
+			x: 2.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002505B7"
+					type: "item"
+					item: {
+						id: "supplementaries:blackboard"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002505A6"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002505B8"
+			x: 3.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002505B8"
+					type: "item"
+					item: {
+						id: "supplementaries:cage"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002505B8"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002505A6"]
 			hide_until_deps_complete: true
 		}
 	]

@@ -50,6 +50,9 @@ foreach ($gid in @("2100000000000001", "2100000000000002", "2100000000000003")) 
     }
 }
 
+python -X utf8 (Join-Path $PSScriptRoot "test_life_rewards.py")
+if ($LASTEXITCODE -ne 0) { [void]$failures.Add("Rare team life reward invariants failed") }
+
 if ($failures.Count -gt 0) {
     Write-Host "FAIL Test-QuestConsistency ($($failures.Count) issue(s), titles=$titleCount)"
     $failures | ForEach-Object { Write-Host " - $_" }

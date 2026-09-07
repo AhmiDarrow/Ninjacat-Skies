@@ -270,6 +270,17 @@
 						count: 2
 					}
 				}
+				{
+					id: "50000000002004DD"
+					type: "command"
+					command: "skybound rewardlife @s power"
+					silent: true
+					elevate_perms: true
+					team_reward: true
+					icon: {
+						id: "minecraft:totem_of_undying"
+					}
+				}
 			]
 			dependencies: ["42000000002004DA"]
 			shape: "loom"

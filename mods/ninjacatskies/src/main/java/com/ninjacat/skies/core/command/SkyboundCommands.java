@@ -1,6 +1,7 @@
 package com.ninjacat.skies.core.command;
 
 import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.ninjacat.skies.core.event.SkyboundEvents;
@@ -16,6 +17,18 @@ public final class SkyboundCommands {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(
                 Commands.literal("skybound")
+                        .then(Commands.literal("lives").executes(ctx -> {
+                            ServerPlayer player = ctx.getSource().getPlayerOrException();
+                            ctx.getSource().sendSuccess(() -> NinjacatText.teal("Clowder lives remaining: "
+                                    + SkyboundEvents.remainingLives(player)), false);
+                            return 1;
+                        }))
+                        .then(Commands.literal("rewardlife").requires(source -> source.hasPermission(2))
+                                .then(Commands.argument("player", EntityArgument.player())
+                                        .then(Commands.argument("milestone", StringArgumentType.word())
+                                                .executes(ctx -> SkyboundEvents.awardLife(
+                                                        EntityArgument.getPlayer(ctx, "player"),
+                                                        StringArgumentType.getString(ctx, "milestone")) ? 1 : 0))))
                         .then(Commands.literal("revive")
                                 .requires(source -> source.hasPermission(2))
                                 .executes(SkyboundCommands::reviveSelf)

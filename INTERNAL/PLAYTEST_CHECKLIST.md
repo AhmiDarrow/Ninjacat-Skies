@@ -38,7 +38,7 @@ Do not mark items done from agent disk audits. Check only after a live client ru
 - [ ] **Hub Key** right-click also enters Clowder Hall
 - [ ] Ceremony pad present (beacon, lectern, banners, plaques, starter chest with Codex/Charter/Hub Key)
 - [ ] `/clowder return` only works **while in Hall**; restores saved pad / Dock fallback
-- [ ] Soft hardcore (if enabled): mate `/clowder revive <player>` works for same Skyblock/FTB team spectator
+- [ ] Shared lives: deaths debit the FTB team; zero exhausts all members; six one-time milestone rewards add one life each; revive commands require operator permission
 
 ## Wake → Recover (Voidloom-led)
 
