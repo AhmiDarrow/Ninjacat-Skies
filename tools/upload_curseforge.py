@@ -26,7 +26,7 @@ LOADER_TYPE = 68441  # modloader version type
 def load_secrets() -> dict[str, str]:
     env_file = ROOT / "tools/secrets/.env"
     if not env_file.exists():
-        raise SystemExit("Missing tools/secrets/.env — copy .env.example and fill it in")
+        raise SystemExit("Missing tools/secrets/.env - copy .env.example and fill it in")
     out: dict[str, str] = {}
     for line in env_file.read_text(encoding="utf-8").splitlines():
         line = line.strip()
@@ -76,12 +76,13 @@ def main() -> int:
     ap.add_argument("--display-name", default="")
     ap.add_argument("--changelog-file", default="")
     ap.add_argument("--skip-sanitize", action="store_true")
+    ap.add_argument("--environment", choices=["Client", "Server"], action="append", default=[], help="Required environment labels for standalone mods; omit for modpacks")
     args = ap.parse_args()
 
     if not args.skip_sanitize:
         r = subprocess.run([sys.executable, str(ROOT / "tools/gates/test_sanitized_public_surface.py")])
         if r.returncode != 0:
-            raise SystemExit("Sanitization gate failed — refusing to upload")
+            raise SystemExit("Sanitization gate failed - refusing to upload")
 
     secrets = load_secrets()
     token = secrets.get("CF_AUTHOR_TOKEN", "")
@@ -89,7 +90,7 @@ def main() -> int:
         raise SystemExit("CF_AUTHOR_TOKEN missing from tools/secrets/.env")
     project_id = args.project_id or int(secrets.get("CF_PROJECT_ID", "0") or 0)
     if project_id <= 0:
-        raise SystemExit("CF_PROJECT_ID not set — create the project in the Author Console and put its id in tools/secrets/.env")
+        raise SystemExit("CF_PROJECT_ID not set - create the project in the Author Console and put its id in tools/secrets/.env")
 
     zip_path = Path(args.zip)
     if not zip_path.exists():
@@ -99,6 +100,7 @@ def main() -> int:
 
     versions = api_get("/game/versions", token)
     game_versions = [resolve_version_id(versions, "1.21.1", MC_TYPE), resolve_version_id(versions, "NeoForge", LOADER_TYPE)]
+    game_versions.extend(resolve_version_id(versions, name, 75208) for name in dict.fromkeys(args.environment))
     metadata = json.dumps({
         "changelog": changelog,
         "changelogType": "markdown",
@@ -106,7 +108,7 @@ def main() -> int:
         "gameVersions": game_versions,
         "releaseType": args.release_type,
     })
-    print(f"Uploading {zip_path.name} ({zip_path.stat().st_size // 1024} KiB) → project {project_id} as {args.release_type}; gameVersions={game_versions}")
+    print(f"Uploading {zip_path.name} ({zip_path.stat().st_size // 1024} KiB) -> project {project_id} as {args.release_type}; gameVersions={game_versions}")
     body, boundary = multipart({
         "metadata": ("", metadata.encode("utf-8"), "application/json"),
         "file": (zip_path.name, zip_path.read_bytes(), "application/zip"),
@@ -130,7 +132,7 @@ def main() -> int:
     parsed = json.loads(resp)
     if not parsed.get("id"):
         raise SystemExit(f"Upload response missing file id: {resp[:300]}")
-    print(f"OK — CurseForge file id={parsed['id']}")
+    print(f"OK - CurseForge file id={parsed['id']}")
     return 0
 
 

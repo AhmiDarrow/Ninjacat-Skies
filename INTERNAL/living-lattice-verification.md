@@ -49,3 +49,7 @@ Export verification no longer exits the entire gate runner early, which could co
 Validation: Tribal Power build + all 26 GameTests PASS; Voidloom all 5 GameTests PASS; all four Skies modules build PASS; all six pack gates PASS; four quest-format regressions PASS; two export regressions PASS. Quest totals remain 1,470 across 38 chapters, with 1,140 distinct item references and zero reported missing IDs/dead ends. Final source review covered relay transactions, FE conversion, equipment, cache persistence, processing backpressure and travel failure paths. This round did not repeat client visual checks or a complete modpack playthrough. Existing upstream optional warnings remain outside the scope of these fixes.
 
 Current export: `dist/NinjacatSkies-0.4.0-alpha-20260906-233345.zip`. ZIP integrity passed; all five included custom jars were compared byte-for-byte with pack artifacts, and Tribal Power/Voidloom artifacts match their latest builds. No public upload was performed.
+
+## Authorized publication
+
+Both repositories pushed to GitHub. Tribal Power: `rewrite/shamanic-technomancy`, commit `8838a6a`. Ninjacat Skies: private `AhmiDarrow/Ninjacat-Skies`, branch `master`. CurseForge accepted alpha uploads: Tribal Power project 253197 / file 8827582; Ninjacat Skies project 1684777 / file 8827579. Core API verified both filenames and display names; both reported isAvailable=false immediately after upload. Standalone mod uploads require Client and Server environment version labels; the reusable uploader now supports them explicitly.
