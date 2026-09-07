@@ -4,6 +4,11 @@ $root = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $chapDir = Join-Path $root "pack\overrides\config\ftbquests\quests\chapters"
 $langFile = Join-Path $root "pack\overrides\config\ftbquests\quests\lang\en_us.snbt"
 $failures = [System.Collections.Generic.List[string]]::new()
+python (Join-Path $PSScriptRoot 'test_quest_runtime_ids.py')
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'FAIL Test-QuestConsistency — IDs are not safe for the FTB runtime'
+    exit 1
+}
 
 if (-not (Test-Path $chapDir) -or -not (Test-Path $langFile)) {
     Write-Host "FAIL Test-QuestConsistency — missing quests files"
@@ -39,7 +44,7 @@ foreach ($c in $chapters) {
 }
 
 # Group titles
-foreach ($gid in @("A100000000000001", "A100000000000002", "A100000000000003")) {
+foreach ($gid in @("2100000000000001", "2100000000000002", "2100000000000003")) {
     if ($lang -notmatch [regex]::Escape("chapter_group.$gid.title")) {
         [void]$failures.Add("Missing chapter_group title $gid")
     }

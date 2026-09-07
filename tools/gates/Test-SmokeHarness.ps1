@@ -5,6 +5,7 @@ param(
     [switch]$LaunchClient
 )
 $ErrorActionPreference = "Stop"
+. (Join-Path $PSScriptRoot "Get-CustomModVersion.ps1")
 $root = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $failures = [System.Collections.Generic.List[string]]::new()
 
@@ -24,10 +25,10 @@ foreach ($jar in $jars) {
 
 # 2) Custom jars contain expected mod metadata
 foreach ($pair in @(
-    @{ Jar = "ninjacatskies-0.1.0.jar"; Needle = "ninjacatskies" },
-    @{ Jar = "voidloom-0.1.0.jar"; Needle = "voidloom" },
-    @{ Jar = "clowderhall-0.1.0.jar"; Needle = "clowderhall" },
-    @{ Jar = "ninjacatlib-0.1.0.jar"; Needle = "ninjacatlib" }
+    @{ Jar = "ninjacatskies-${customModVersion}.jar"; Needle = "ninjacatskies" },
+    @{ Jar = "voidloom-${customModVersion}.jar"; Needle = "voidloom" },
+    @{ Jar = "clowderhall-${customModVersion}.jar"; Needle = "clowderhall" },
+    @{ Jar = "ninjacatlib-${customModVersion}.jar"; Needle = "ninjacatlib" }
 )) {
     $path = Join-Path $root "pack\mods\$($pair.Jar)"
     if (-not (Test-Path $path)) { Add-Fail "Missing $($pair.Jar)"; continue }

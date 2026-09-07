@@ -3,13 +3,14 @@ param(
     [switch]$SkipIfJarsPresent
 )
 $ErrorActionPreference = "Stop"
+. (Join-Path $PSScriptRoot "Get-CustomModVersion.ps1")
 $root = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $modsRoot = Join-Path $root "mods"
 $needed = @(
-    "ninjacatlib-0.1.0.jar",
-    "ninjacatskies-0.1.0.jar",
-    "voidloom-0.1.0.jar",
-    "clowderhall-0.1.0.jar"
+    "ninjacatlib-${customModVersion}.jar",
+    "ninjacatskies-${customModVersion}.jar",
+    "voidloom-${customModVersion}.jar",
+    "clowderhall-${customModVersion}.jar"
 )
 $packMods = Join-Path $root "pack\mods"
 $allPresent = $true
@@ -33,9 +34,9 @@ try {
     Pop-Location
 }
 
-# Refresh pack copies
+# Refresh only this version; build/libs may retain artifacts from older releases.
 Get-ChildItem $modsRoot -Recurse -Filter "*.jar" |
-    Where-Object { $_.FullName -match '\\build\\libs\\' -and $_.Name -notmatch 'sources|javadoc' } |
+    Where-Object { $_.FullName -match '\\build\\libs\\' -and $_.Name -in $needed } |
     ForEach-Object { Copy-Item $_.FullName $packMods -Force }
 
 foreach ($n in $needed) {

@@ -28,6 +28,17 @@ import javax.annotation.Nullable;
  * Hand: siftables load in, empty hand takes scraps (then grit, then the mesh when sneaking).
  */
 public class LoomframeBlock extends BaseEntityBlock {
+    @Override protected boolean hasAnalogOutputSignal(BlockState state) { return true; }
+    @Override protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
+        if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be)) return 0;
+        var inventory = be.handler();
+        float fullness = 0; boolean occupied = false;
+        for (int i=1; i<inventory.getSlots(); i++) {
+            ItemStack stack = inventory.getStackInSlot(i);
+            if (!stack.isEmpty()) { occupied = true; fullness += (float)stack.getCount()/stack.getMaxStackSize(); }
+        }
+        return occupied ? 1 + (int)(14 * fullness / (inventory.getSlots()-1)) : 0;
+    }
     public static final MapCodec<LoomframeBlock> CODEC = simpleCodec(LoomframeBlock::new);
 
     public LoomframeBlock(Properties properties) {
@@ -58,6 +69,10 @@ public class LoomframeBlock extends BaseEntityBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (level.hasNeighborSignal(pos)) {
+            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            return ItemInteractionResult.CONSUME;
+        }
         if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be)) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
@@ -107,6 +122,10 @@ public class LoomframeBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (level.hasNeighborSignal(pos)) {
+            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            return InteractionResult.CONSUME;
+        }
         if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be)) {
             return InteractionResult.PASS;
         }

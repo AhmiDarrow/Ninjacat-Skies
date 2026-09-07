@@ -94,6 +94,8 @@ def main() -> int:
     for p in (ROOT / "mods").rglob("*"):
         s = str(p).replace("\\", "/")
         if "/src/main/resources/" in s and p.suffix in (".md", ".txt"):
+            if s.endswith('/assets/ftbquests/ftb_quests_theme.txt'):
+                continue  # Runtime theme configuration, not a development document.
             fails.append(f"Doc file inside mod resources: {p.relative_to(ROOT)}")
     if fails:
         print(f"FAIL sanitized public surface ({len(fails)})")

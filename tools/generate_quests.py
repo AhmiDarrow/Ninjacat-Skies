@@ -9,6 +9,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from quest_side_lore import SIDE_LORE  # noqa: E402
+from quest_visuals import chapter_images
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTS = ROOT / "pack/overrides/config/ftbquests/quests"
@@ -22,7 +23,9 @@ WARNED: set[str] = set()
 
 
 def hid(n: int) -> str:
-    return f"{n:016X}"
+    # FTB Quests uses Long.parseLong(hex, 16), not parseUnsignedLong.
+    # A high sign bit makes it silently replace IDs and lose cross-references.
+    return f"{n & 0x7FFFFFFFFFFFFFFF:016X}"
 
 
 GROUP_SURVIVAL = hid(0xA100000000000001)
@@ -73,7 +76,7 @@ CH = {
 
 lang: dict[str, object] = {
     f"chapter_group.{GROUP_SURVIVAL}.title": "Skybound",
-    f"chapter_group.{GROUP_CRAFT}.title": "Craft & Tension",
+    f"chapter_group.{GROUP_CRAFT}.title": "Craft and Tension",
     f"chapter_group.{GROUP_LATE}.title": "Reweave",
     f"chapter_group.{GROUP_SIDE}.title": "Side Paths",
     "file.0000000000000001.title": "Ninjacat Skies",
@@ -117,7 +120,7 @@ def to_snbt(obj, indent=0) -> str:
         if not obj:
             return "[ ]"
         if all(isinstance(x, str) for x in obj):
-            return "[" + ", ".join(json.dumps(x) for x in obj) + "]"
+            return "[" + ", ".join(json.dumps(x, ensure_ascii=False) for x in obj) + "]"
         lines = ["["]
         for v in obj:
             lines.append(f"{sp}\t{to_snbt(v, indent + 1)}")
@@ -132,7 +135,7 @@ def to_snbt(obj, indent=0) -> str:
     if isinstance(obj, str):
         if obj.endswith("d") and obj[:-1].replace(".", "", 1).replace("-", "", 1).isdigit():
             return obj
-        return json.dumps(obj)
+        return json.dumps(obj, ensure_ascii=False)
     raise TypeError(type(obj))
 
 
@@ -144,12 +147,12 @@ def write_chapter(filename: str, chapter_id: str, group: str, order: int, icon: 
     quests = finalize_chapter(order + 1, quests)
     body = {
         "default_hide_dependency_lines": False,
-        "default_quest_shape": "",
+        "default_quest_shape": "loom",
         "filename": filename,
         "group": group,
         "icon": {"id": icon},
         "id": chapter_id,
-        "images": [],
+        "images": chapter_images(chapter_id, order+1, title, quests),
         "order_index": order,
         "quest_links": [],
         "quests": quests,
@@ -382,7 +385,7 @@ LORE = {
     "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Chime, Shard, leather — the Desk sells leather."],
     "Hum: Pulse Cell": ["Carry Pulse between drum and lattice."],
     "Hum: Ley Collector": ["Draw ambient ley into beats near a Drumheart."],
-    "Hum: Pulse Resonator": ["Burn coal for denser beats beside Drumheart and Ley."],
+    "Hum: Pulse Resonator": ["Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony."],
     "Powah Starter Cell": ["A buffer for Forge Energy — the bridge from Pulse to wire, if you want one."],
     "Powah Furnator": ["Burn fuel for Forge Energy."],
     "Powah Cable": ["Move energy along."],
@@ -632,6 +635,9 @@ def finalize_chapter(strand_i, quests):
     mainline = [q for q in quests if not q.get("optional")]
     gate = mainline[1]["id"] if len(mainline) > 1 else None
     for q in quests:
+        if q.get('shape') == 'hexagon': q['shape'] = 'loom_milestone'
+        elif not q.get('shape'): q['shape'] = 'loom'
+        if q.get('optional'): q.setdefault('size', '0.85d')
         if q.get("optional") and not q.get("dependencies") and gate and strand_i != 16:
             q["dependencies"] = [gate]
             q["hide_until_deps_complete"] = True
@@ -668,8 +674,8 @@ def chain(strand_i: int, steps: list[tuple], start_x: float = 0.0, y: float = 0.
         reward_count = step[5] if len(step) > 5 else (1 + band if member else 2 + band)
         optional = step[6] if len(step) > 6 else False
         consume = step[7] if len(step) > 7 else False
-        x = start_x + cluster * 1.8
-        yy = y + member * 1.3
+        x = start_x + cluster * 2.2
+        yy = y + member * 1.4
         deps = None
         if member == 0:
             deps = [prev_head] if prev_head else None
@@ -1012,7 +1018,7 @@ def build_spark() -> list[dict]:
         ("Hum: Drumheart", "tribalpower:drumheart", 1, "Strike the heart. Store Spirit Pulse — needs Chime + Shard."),
         ("Hum: Pulse Cell", "tribalpower:pulse_cell", 1, "Carry Pulse — needs Resonator + Shard."),
         ("Hum: Ley Collector", "tribalpower:ley_collector", 1, "Draw ley into beats — Resonator + Shard + copper."),
-        ("Hum: Pulse Resonator", "tribalpower:pulse_resonator", 1, "Burn coal for denser beats beside Drumheart and Ley."),
+        ("Hum: Pulse Resonator", "tribalpower:pulse_resonator", 1, "Reusable echoes and distinct totems turn harmony into Pulse."),
         # FE bridges — secondary to Tribal Pulse identity
         ("Powah Starter Cell", "powah:energy_cell_starter", 1, "FE bridge buffer — not the Hum religion."),
         ("Powah Furnator", "powah:furnator_starter", 1, "Burn for FE."),
@@ -1058,7 +1064,10 @@ def build_spark() -> list[dict]:
         ("Ritual Chalk", "tribalpower:ritual_chalk", 4, "Mark lattice lines — needs a Spirit Shard."),
     ], origin=(-4.0, 7.5), cols=6)
     finale = knot_finale(s, "spark", main, 12.0, -2.0)
-    return main + side + finale
+    bridge = item_quest(s, title="Hum becomes current", item="tribalpower:pulse_adapter",
+                        desc=["Follow Tribal Weave through Echo refinement to a Resonant Core. The Pulse Adapter turns the camp's reusable harmony into FE for this chapter's machines. Redstone pauses both conversion and export."],
+                        deps=[main[10]['id']], x=12.0, y=11.0, optional=True, reward_count=4)
+    return main + side + finale + ([bridge] if bridge else [])
 
 
 def build_clock() -> list[dict]:
@@ -2358,7 +2367,7 @@ def build_tribal_side() -> list[dict]:
         ("Spirit Codex", "tribalpower:spirit_codex", 1, "Nine tribes hummed once — needs a spare Chime + Shard."),
         ("Ley Collector", "tribalpower:ley_collector", 1, "Draw ley into beats."),
         ("Pulse Cell", "tribalpower:pulse_cell", 4, "Carry a measure of Pulse."),
-        ("Pulse Resonator", "tribalpower:pulse_resonator", 1, "Burn coal for denser beats — feed lattice and cells."),
+        ("Pulse Resonator", "tribalpower:pulse_resonator", 1, "Seat a reusable Echo catalyst; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it."),
         ("Earth Totem", "tribalpower:resonance_totem_earth", 1, "Tribe of stone answers."),
         ("Fire Totem", "tribalpower:resonance_totem_fire", 1, "Tribe of flame answers."),
         ("Water Totem", "tribalpower:resonance_totem_water", 1, "Tribe of tide answers."),
@@ -2384,7 +2393,7 @@ def build_tribal_side() -> list[dict]:
         ("Spirit Seal", "tribalpower:spirit_seal", 1, "Seal of the steward tribe."),
         ("Rite Pedestal", "tribalpower:rite_pedestal", 1, "Offer seals. Ask the Loom."),
         ("Gate Drum", "tribalpower:gate_drum", 1, "Strike open The March."),
-        ("Spirit Door", "tribalpower:spirit_door", 1, "Threshold for spirit traffic."),
+        ("Spirit Door", "tribalpower:spirit_door", 1, "Dress your camp's threshold with a carved spirit frame. Compasses and the Gate Drum perform travel."),
         ("Spiritgear Pick", "tribalpower:spiritgear_pickaxe", 1, "Tool that spends Pulse."),
         ("Spiritgear Blade", "tribalpower:spiritgear_blade", 1, "Edge that spends Pulse."),
     ])
@@ -2396,7 +2405,45 @@ def build_tribal_side() -> list[dict]:
         ("March Leaf", "tribalpower:march_leaf", 16, "Whispering canopy."),
         ("Spirit Reed", "tribalpower:spirit_reed", 8, "Reed that hums."),
     ], origin=(-3.0, 7.5), cols=6)
-    return main + side
+    # Append after the original 43 quests to preserve IDs and existing player progress.
+    existing = {q['tasks'][0]['item']['id'].split(':', 1)[1]: q['id'] for q in main + side}
+    workshops = [
+        ('iron_grit', 'Ore remembers twice', 'echo_shatter', 'Feed raw iron into Echo Shatter beside an Earth Totem. Two grits emerge; smelt or blast them into ingots. Other mods can supply tagged raw metals.'),
+        ('spiritweave', 'Cloth with a voice', 'echo_bind', 'Water binds wool into Spiritweave. Feed the station above or from its sides and draw finished work out below.'),
+        ('resonant_core', 'The living heart', 'manifested_ingot', 'Manifest a Manifested Ingot again under Spirit. The Resonant Core opens stronger equipment and distant paths.'),
+        ('greater_pulse_cell', 'A longer song', 'resonant_core', 'Carry 1,200 Pulse in one Greater Cell. Charge it at a Drumheart or Resonator before setting out.'),
+        ('spirit_cistern', 'Rain held in copper', 'bound_echo', 'Sixteen buckets in one cistern. Buckets and fluid pipes both work. A comparator reads fullness; redstone locks filling and draining.'),
+        ('lattice_tuner', 'Name the far end', 'attuned_echo', 'Touch the destination face with the tuner, then touch a relay. Sneak-use to replace your marked destination.'),
+        ('item_relay', 'A path for supplies', 'lattice_tuner', 'Place above a source inventory. Local cargo reaches 32 blocks, moving up to 16 items each second for 4 Pulse. Redstone pauses the relay.'),
+        ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Place above a source tank and bind a receiving face. Local fluid reaches 32 blocks: 250 mB per second for 4 Pulse. Both ends must be loaded.'),
+        ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 8 Pulse per successful beat. Use standard inventories from any compatible mod.'),
+        ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 8 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.'),
+        ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE, up to 2,000 FE per second. Redstone stops conversion and export.'),
+        ('spirit_staff', 'Five voices in one hand', 'resonant_core', 'Sneak-use to cycle Earth, Fire, Water, Air and Spirit. Use to cast. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
+        ('resonance_maul', 'Stone yields a doorway', 'resonant_core', 'Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.'),
+        ('spiritweave_hood', 'Eyes in the quiet', 'spiritweave', 'The hood lends night sight while charged cells sustain it. Each active Spiritweave piece draws 2 Pulse every four seconds.'),
+        ('spiritweave_robe', 'A woven shelter', 'spiritweave', 'The robe grants resistance. Wear it into the work and keep your cells charged.'),
+        ('spiritweave_leggings', 'The camp keeps pace', 'spiritweave', 'Woven leggings lend speed. Their Pulse cost is separate from the other pieces.'),
+        ('spiritweave_boots', 'A gentler descent', 'spiritweave', 'Boots can lend slow falling during descent while Pulse remains. A bound return path is still worth carrying.'),
+        ('ritual_brazier', 'A blessing that stays', 'spirit_seal', 'Seat a reusable seal beside its matching totem. A six-block blessing costs 8 Pulse every two seconds. High redstone pauses it; sneak empty-handed to recover the seal.'),
+        ('waystone_compass', 'The first return path', 'bound_echo', 'Sneak-use the top of a solid floor to bind it. Return within 128 blocks in the same world for 20 Pulse. Power the landing floor to lock arrivals.'),
+        ('horizon_compass', 'Beyond the horizon', 'waystone_compass', 'Return across any distance within one dimension for 40 Pulse. Leave a dry landing with two clear blocks above it.'),
+        ('march_crystal', 'A voice beyond the veil', 'gate_drum', 'Seek March Crystal beyond the Gate Drum. Astral paths for people, items and fluids all draw on the same late-game material.'),
+        ('astral_compass', 'A path between worlds', 'horizon_compass', 'The final compass crosses dimensions for 100 Pulse. Bind a safe return before exploring. Travel waits five seconds between uses.'),
+        ('astral_item_relay', 'Supplies cross the veil', 'longreach_item_relay', 'Astral cargo crosses dimensions without a distance limit. Each successful beat costs 16 Pulse. The receiver must already be loaded; no hidden chunk loading.'),
+        ('astral_fluid_relay', 'Rain crosses the veil', 'longreach_fluid_relay', 'Astral fluid follows the same dimensional tier as players and items. Keep the destination tank loaded. A full tank or unloaded world pauses without consuming cargo.'),
+        ('wayfarer_satchel', 'The camp in your keeping', 'deep_cache', 'Open your personal 54-slot Deep Cache from the road. This is the same vault, shared between your caches and satchel. March attunement removes its opening cost.'),
+    ]
+    expansion = []
+    for i, (item, title, parent, description) in enumerate(workshops):
+        deps = [existing[parent]]
+        if item.startswith('astral_'): deps.append(existing['march_crystal'])
+        q = item_quest(s, title=title, desc=[description], item='tribalpower:'+item,
+                       deps=deps, x=(i % 5)*2.7, y=11+(i // 5)*1.8, reward_count=3)
+        if q:
+            expansion.append(q)
+            existing[item] = q['id']
+    return main + side + expansion
 
 
 def build_shop() -> list[dict]:
@@ -2572,10 +2619,10 @@ def write_lang():
     for k in sorted(lang.keys(), key=str):
         v = lang[k]
         if isinstance(v, list):
-            arr = ",\n\t\t".join(json.dumps(x) for x in v)
+            arr = ",\n\t\t".join(json.dumps(x, ensure_ascii=False) for x in v)
             lines.append(f"\t{k}: [\n\t\t{arr}\n\t]")
         else:
-            lines.append(f"\t{k}: {json.dumps(v)}")
+            lines.append(f"\t{k}: {json.dumps(v, ensure_ascii=False)}")
     lines.append("}")
     (LANG / "en_us.snbt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -2605,7 +2652,7 @@ def main() -> None:
     write_chapter("08_sigil", CH["sigil"], GROUP_LATE, 7, "minecraft:amethyst_shard", build_sigil(), "Strand: Sigil")
     write_chapter("09_spindle", CH["spindle"], GROUP_LATE, 8, "ae2:controller", build_spindle(), "Strand: Spindle")
     write_chapter("10_exdeorum", CH["exdeorum"], GROUP_SIDE, 9, "exdeorum:oak_sieve", build_exdeorum_side(), "Deep Sieve")
-    write_chapter("11_storage", CH["storage"], GROUP_SIDE, 10, "functionalstorage:oak_1", build_storage_side(), "Storage & Packs")
+    write_chapter("11_storage", CH["storage"], GROUP_SIDE, 10, "functionalstorage:oak_1", build_storage_side(), "Storage and Packs")
     write_chapter("12_mekanism", CH["mekanism"], GROUP_SIDE, 11, "mekanism:ingot_steel", build_mekanism_side(), "Mekanism Works")
     write_chapter("13_powah", CH["powah"], GROUP_SIDE, 12, "powah:energy_cell_basic", build_powah_side(), "Powah Grid")
     write_chapter("14_ars", CH["ars"], GROUP_SIDE, 13, "ars_nouveau:source_gem", build_ars_side(), "Arcane Side")
@@ -2626,8 +2673,8 @@ def main() -> None:
     write_chapter("29_network", CH["network"], GROUP_SIDE, 28, "ae2:drive", build_network_side(), "Spindle Network")
     write_chapter("30_voidcraft", CH["voidcraft"], GROUP_SIDE, 29, "voidloom:loomframe", build_voidcraft_side(), "Voidcraft")
     write_chapter("31_packaged", CH["packaged"], GROUP_SIDE, 30, "packagedauto:packager", build_packaged_side(), "Packaged Lines")
-    write_chapter("32_qio", CH["qio"], GROUP_SIDE, 31, "mekanism:qio_dashboard", build_qio_side(), "QIO & Mek Peak")
-    write_chapter("33_mobfarm", CH["mobfarm"], GROUP_SIDE, 32, "minecraft:rotten_flesh", build_mobfarm_side(), "Hunt & Farm")
+    write_chapter("32_qio", CH["qio"], GROUP_SIDE, 31, "mekanism:qio_dashboard", build_qio_side(), "QIO and Mek Peak")
+    write_chapter("33_mobfarm", CH["mobfarm"], GROUP_SIDE, 32, "minecraft:rotten_flesh", build_mobfarm_side(), "Hunt and Farm")
     write_chapter("34_tribal", CH["tribal"], GROUP_SIDE, 33, "tribalpower:drumheart", build_tribal_side(), "Tribal Weave")
     write_chapter("35_stonemason", CH["stonemason"], GROUP_SIDE, 34, "chipped:mason_table", build_stonemason(), "Stonemason")
     write_chapter("36_furnish", CH["furnish"], GROUP_SIDE, 35, "handcrafted:oak_chair", build_furnish(), "Furnishings")

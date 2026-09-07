@@ -51,6 +51,8 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     private ItemStack mesh = ItemStack.EMPTY;
     private ItemStack input = ItemStack.EMPTY;
     private final NonNullList<ItemStack> output = NonNullList.withSize(OUTPUT_SLOTS, ItemStack.EMPTY);
+    // At most one paid sift waits here when its random results exceed output capacity.
+    private final NonNullList<ItemStack> pending = NonNullList.withSize(9, ItemStack.EMPTY);
     private int progress;
     private final IItemHandler handler = new Handler();
 
@@ -176,33 +178,21 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         return out;
     }
 
-    private boolean canStore(ItemStack stack) {
-        for (ItemStack s : output) {
-            if (s.isEmpty() || (ItemStack.isSameItemSameComponents(s, stack) && s.getCount() + stack.getCount() <= s.getMaxStackSize())) {
-                return true;
+    private boolean flushPending() {
+        boolean blocked = false;
+        boolean changed = false;
+        for (int i = 0; i < pending.size(); i++) {
+            ItemStack stack = pending.get(i);
+            if (stack.isEmpty()) continue;
+            int remaining = OutputStorage.insert(output, stack, false);
+            if (remaining != stack.getCount()) {
+                pending.set(i, remaining == 0 ? ItemStack.EMPTY : stack.copyWithCount(remaining));
+                changed = true;
             }
+            blocked |= remaining > 0;
         }
-        return false;
-    }
-
-    private void store(ItemStack stack) {
-        for (int i = 0; i < output.size(); i++) {
-            ItemStack s = output.get(i);
-            if (!s.isEmpty() && ItemStack.isSameItemSameComponents(s, stack) && s.getCount() + stack.getCount() <= s.getMaxStackSize()) {
-                s.grow(stack.getCount());
-                return;
-            }
-        }
-        for (int i = 0; i < output.size(); i++) {
-            if (output.get(i).isEmpty()) {
-                output.set(i, stack);
-                return;
-            }
-        }
-        // Two scraps raced for the last slot — spill rather than lose it.
-        if (level != null) {
-            net.minecraft.world.Containers.dropItemStack(level, worldPosition.getX() + 0.5, worldPosition.getY() + 1.0, worldPosition.getZ() + 0.5, stack);
-        }
+        if (changed) sync();
+        return !blocked;
     }
 
     public int progressPercent() {
@@ -212,7 +202,9 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     // ------------------------------------------------------------ the sift
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, LoomframeBlockEntity be) {
-        if (be.mesh.isEmpty() || be.input.isEmpty()) {
+        if (level.hasNeighborSignal(pos)) return;
+        if (!be.flushPending()) return;
+        if (!isMeshItem(be.mesh) || !isSiftable(be.input)) {
             if (be.progress != 0) {
                 be.progress = 0;
                 be.setChanged();
@@ -220,6 +212,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
             return;
         }
         be.progress++;
+        be.setChanged();
         if (be.progress < SIFT_TICKS) {
             if (be.progress % 10 == 0 && level instanceof ServerLevel sl) {
                 sl.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, be.input.is(Items.GRAVEL) ? Blocks.GRAVEL.defaultBlockState() : Blocks.DIRT.defaultBlockState()),
@@ -229,19 +222,12 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         }
         be.progress = 0;
         List<ItemStack> drops = be.roll(level.random, be.input, be.meshTier());
-        // Only sift if everything that fell can be stored — never lose a scrap.
-        for (ItemStack d : drops) {
-            if (!be.canStore(d)) {
-                return;
-            }
-        }
         be.input.shrink(1);
         if (be.input.isEmpty()) {
             be.input = ItemStack.EMPTY;
         }
-        for (ItemStack d : drops) {
-            be.store(d);
-        }
+        for (int i = 0; i < drops.size(); i++) be.pending.set(i, drops.get(i));
+        be.flushPending();
         level.playSound(null, pos, ModSounds.LOOMFRAME_SIFT.get(), SoundSource.BLOCKS, 0.55F, 0.95F + level.random.nextFloat() * 0.1F);
         if (level instanceof ServerLevel sl && !drops.isEmpty()) {
             sl.sendParticles(ParticleTypes.END_ROD, pos.getX() + 0.5, pos.getY() + 1.05, pos.getZ() + 0.5, 2, 0.15, 0.02, 0.15, 0.0);
@@ -305,6 +291,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (level != null && level.hasNeighborSignal(worldPosition)) return stack;
             if (slot != 0 || stack.isEmpty()) {
                 return stack;
             }
@@ -317,6 +304,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack extractItem(int slot, int amount, boolean simulate) {
+            if (level != null && level.hasNeighborSignal(worldPosition)) return ItemStack.EMPTY;
             if (slot == 0 || amount <= 0) {
                 return ItemStack.EMPTY;
             }
@@ -350,6 +338,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     // ------------------------------------------------------------ plumbing
 
     private void sync() {
+        if (level != null) level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
         setChanged();
         if (level != null && !level.isClientSide) {
             level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
@@ -361,6 +350,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         mesh = ItemStack.EMPTY;
         input = ItemStack.EMPTY;
         output.clear();
+        pending.clear();
         progress = 0;
         sync();
     }
@@ -372,8 +362,11 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         for (ItemStack s : output) {
             if (!s.isEmpty()) all.add(s);
         }
+        for (ItemStack s : pending) if (!s.isEmpty()) all.add(s);
+        pending.clear();
         mesh = ItemStack.EMPTY;
         input = ItemStack.EMPTY;
+        progress = 0;
         for (int i = 0; i < output.size(); i++) output.set(i, ItemStack.EMPTY);
         return all;
     }
@@ -385,7 +378,9 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         input = tag.contains("Input") ? ItemStack.parse(registries, tag.getCompound("Input")).orElse(ItemStack.EMPTY) : ItemStack.EMPTY;
         for (int i = 0; i < output.size(); i++) output.set(i, ItemStack.EMPTY);
         ContainerHelper.loadAllItems(tag, output, registries);
-        progress = tag.getInt("Progress");
+        pending.clear();
+        ContainerHelper.loadAllItems(tag.getCompound("Pending"), pending, registries);
+        progress = Math.clamp(tag.getInt("Progress"), 0, SIFT_TICKS - 1);
     }
 
     @Override
@@ -394,6 +389,9 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         if (!mesh.isEmpty()) tag.put("Mesh", mesh.save(registries));
         if (!input.isEmpty()) tag.put("Input", input.save(registries));
         ContainerHelper.saveAllItems(tag, output, registries);
+        var pendingTag = new CompoundTag();
+        ContainerHelper.saveAllItems(pendingTag, pending, registries);
+        tag.put("Pending", pendingTag);
         tag.putInt("Progress", progress);
     }
 

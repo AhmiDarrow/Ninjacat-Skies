@@ -89,6 +89,10 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         }
         water += WATER_PER_BUCKET;
         sync();
+        return emptyWaterCarrier(bucket);
+    }
+
+    private static ItemStack emptyWaterCarrier(ItemStack bucket) {
         boolean porcelain = !bucket.is(Items.WATER_BUCKET);
         return porcelain
                 ? BuiltInRegistries.ITEM.getOptional(PORCELAIN_BUCKET).map(ItemStack::new).orElseGet(() -> new ItemStack(Items.BUCKET))
@@ -159,30 +163,12 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
     }
 
     private boolean canStore(ItemStack stack) {
-        for (ItemStack s : output) {
-            if (s.isEmpty() || (ItemStack.isSameItemSameComponents(s, stack) && s.getCount() + stack.getCount() <= s.getMaxStackSize())) {
-                return true;
-            }
-        }
-        return false;
+        return OutputStorage.insert(output, stack, true) == 0;
     }
 
     private void store(ItemStack stack) {
-        for (ItemStack s : output) {
-            if (!s.isEmpty() && ItemStack.isSameItemSameComponents(s, stack) && s.getCount() + stack.getCount() <= s.getMaxStackSize()) {
-                s.grow(stack.getCount());
-                return;
-            }
-        }
-        for (int i = 0; i < output.size(); i++) {
-            if (output.get(i).isEmpty()) {
-                output.set(i, stack);
-                return;
-            }
-        }
-        if (level != null) {
-            Containers.dropItemStack(level, worldPosition.getX() + 0.5, worldPosition.getY() + 1.0, worldPosition.getZ() + 0.5, stack);
-        }
+        if (!canStore(stack)) throw new IllegalStateException("Output capacity changed during processing");
+        OutputStorage.insert(output, stack, false);
     }
 
     // ------------------------------------------------------------ work
@@ -209,6 +195,7 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
     }
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, TensionBarrelBlockEntity be) {
+        if (level.hasNeighborSignal(pos)) return;
         Recipe recipe = be.match();
         if (recipe == null) {
             if (be.progress != 0) {
@@ -294,11 +281,12 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            if (level != null && level.hasNeighborSignal(worldPosition)) return stack;
             if (slot != 0 || stack.isEmpty()) {
                 return stack;
             }
             if (isWaterCarrier(stack)) {
-                if (water + WATER_PER_BUCKET > WATER_MAX || !canStore(new ItemStack(Items.BUCKET))) {
+                if (water + WATER_PER_BUCKET > WATER_MAX || !canStore(emptyWaterCarrier(stack))) {
                     return stack;
                 }
                 if (!simulate) {
@@ -317,6 +305,7 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack extractItem(int slot, int amount, boolean simulate) {
+            if (level != null && level.hasNeighborSignal(worldPosition)) return ItemStack.EMPTY;
             if (slot == 0 || amount <= 0) {
                 return ItemStack.EMPTY;
             }
@@ -350,6 +339,7 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
     // ------------------------------------------------------------ plumbing
 
     private void sync() {
+        if (level != null) level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
         setChanged();
         if (level != null && !level.isClientSide) {
             level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
@@ -378,12 +368,14 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        water = tag.getInt("Water");
-        dirt = tag.getInt("Dirt");
-        string = tag.getInt("String");
-        pearls = tag.getInt("Pearls");
+        water = Math.clamp(tag.getInt("Water"), 0, WATER_MAX);
+        dirt = Math.clamp(tag.getInt("Dirt"), 0, DRY_MAX);
+        string = Math.clamp(tag.getInt("String"), 0, DRY_MAX);
+        pearls = Math.clamp(tag.getInt("Pearls"), 0, DRY_MAX);
         progress = tag.getInt("Progress");
         progressTotal = tag.getInt("ProgressTotal");
+        if (progressTotal != CLAY_TIME && progressTotal != YARN_TIME) progressTotal = 0;
+        if (progress < 0 || progress >= progressTotal) progress = 0;
         for (int i = 0; i < output.size(); i++) output.set(i, ItemStack.EMPTY);
         ContainerHelper.loadAllItems(tag, output, registries);
     }

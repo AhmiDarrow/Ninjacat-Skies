@@ -1,7 +1,6 @@
 package com.ninjacat.skies.voidloom.block;
 
 import com.mojang.serialization.MapCodec;
-import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -25,6 +24,17 @@ import javax.annotation.Nullable;
 
 /** Tension Barrel: pour water, drop in dirt (or string and pearls), come back for what settled. */
 public class TensionBarrelBlock extends BaseEntityBlock {
+    @Override protected boolean hasAnalogOutputSignal(BlockState state) { return true; }
+    @Override protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
+        if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be)) return 0;
+        var inventory = be.handler();
+        float fullness = 0; boolean occupied = false;
+        for (int i=1; i<inventory.getSlots(); i++) {
+            ItemStack stack = inventory.getStackInSlot(i);
+            if (!stack.isEmpty()) { occupied = true; fullness += (float)stack.getCount()/stack.getMaxStackSize(); }
+        }
+        return occupied ? 1 + (int)(14 * fullness / (inventory.getSlots()-1)) : 0;
+    }
     public static final MapCodec<TensionBarrelBlock> CODEC = simpleCodec(TensionBarrelBlock::new);
 
     public TensionBarrelBlock(Properties properties) {
@@ -55,6 +65,10 @@ public class TensionBarrelBlock extends BaseEntityBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (level.hasNeighborSignal(pos)) {
+            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            return ItemInteractionResult.CONSUME;
+        }
         if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be) || stack.isEmpty()) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
@@ -79,7 +93,7 @@ public class TensionBarrelBlock extends BaseEntityBlock {
                 give(level, pos, player, empty);
             }
             level.playSound(null, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 0.7F, 1.0F);
-            player.displayClientMessage(NinjacatText.teal("Water in the barrel: " + be.getWater() + " measures. Bucket back in hand."), true);
+            player.displayClientMessage(Component.translatable("message.voidloom.tension.water_added", be.getWater()), true);
             return ItemInteractionResult.CONSUME;
         }
 
@@ -92,12 +106,16 @@ public class TensionBarrelBlock extends BaseEntityBlock {
             stack.shrink(taken);
         }
         level.playSound(null, pos, SoundEvents.BARREL_CLOSE, SoundSource.BLOCKS, 0.5F, 1.2F);
-        player.displayClientMessage(NinjacatText.teal("Sealed into the Tension Barrel: " + taken + "."), true);
+        player.displayClientMessage(Component.translatable("message.voidloom.tension.input_added", taken), true);
         return ItemInteractionResult.CONSUME;
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (level.hasNeighborSignal(pos)) {
+            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            return InteractionResult.CONSUME;
+        }
         if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be)) {
             return InteractionResult.PASS;
         }
@@ -109,7 +127,7 @@ public class TensionBarrelBlock extends BaseEntityBlock {
                 give(level, pos, player, out);
             }
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 0.4F, 1.0F);
-            player.displayClientMessage(NinjacatText.gold("Tension settles — you take what it made."), true);
+            player.displayClientMessage(Component.translatable("message.voidloom.tension.collected"), true);
             return InteractionResult.CONSUME;
         }
         if (player.isShiftKeyDown()) {

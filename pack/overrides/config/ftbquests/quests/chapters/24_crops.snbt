@@ -1,23 +1,34 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "loom"
 	filename: "24_crops"
-	group: "A100000000000004"
+	group: "2100000000000004"
 	icon: {
 		id: "mysticalagriculture:infusion_altar"
 	}
-	id: "B100000000000018"
-	images: [ ]
+	id: "3100000000000018"
+	images: [
+		{
+			id: "6700000000000018"
+			x: 1.0d
+			y: -4.2d
+			width: 16.0d
+			height: 2.5d
+			image: "ninjacatskies:textures/gui/quests/chapter_24.png"
+			order: -10
+			position_locked: true
+		}
+	]
 	order_index: 23
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C200000000180349"
+			id: "420000000018034A"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000180349"
+					id: "520000000018034A"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:inferium_essence"
@@ -27,7 +38,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180349"
+					id: "620000000018034A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -35,19 +46,20 @@
 					}
 				}
 				{
-					id: "D100000000180349"
+					id: "510000000018034A"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018034A"
+			id: "420000000018034B"
 			x: 0.0d
-			y: 1.3d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D20000000018034A"
+					id: "520000000018034B"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:prosperity_seed_base"
@@ -57,7 +69,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018034A"
+					id: "620000000018034B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -65,15 +77,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180349"]
+			dependencies: ["420000000018034A"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018034B"
+			id: "420000000018034C"
 			x: 0.0d
-			y: 2.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D20000000018034B"
+					id: "520000000018034C"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:infusion_crystal"
@@ -83,7 +96,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018034B"
+					id: "620000000018034C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -91,15 +104,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180349"]
+			dependencies: ["420000000018034A"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018034C"
+			id: "420000000018034D"
 			x: 0.0d
-			y: 3.9d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D20000000018034C"
+					id: "520000000018034D"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:prudentium_essence"
@@ -109,7 +123,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018034C"
+					id: "620000000018034D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -117,15 +131,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180349"]
+			dependencies: ["420000000018034A"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018034D"
+			id: "420000000018034E"
 			x: 0.0d
-			y: 5.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D20000000018034D"
+					id: "520000000018034E"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:tertium_essence"
@@ -135,7 +150,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018034D"
+					id: "620000000018034E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -143,15 +158,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180349"]
+			dependencies: ["420000000018034A"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018034E"
-			x: 1.8d
+			id: "420000000018034F"
+			x: 2.2d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D20000000018034E"
+					id: "520000000018034F"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:imperium_essence"
@@ -161,7 +177,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018034E"
+					id: "620000000018034F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -169,20 +185,21 @@
 					}
 				}
 				{
-					id: "D10000000018034E"
+					id: "510000000018034F"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C200000000180349"]
+			dependencies: ["420000000018034A"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018034F"
-			x: 1.8d
-			y: 1.3d
+			id: "4200000000180350"
+			x: 2.2d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D20000000018034F"
+					id: "5200000000180350"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:supremium_essence"
@@ -192,7 +209,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018034F"
+					id: "6200000000180350"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -200,15 +217,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018034E"]
+			dependencies: ["420000000018034F"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180350"
-			x: 1.8d
-			y: 2.6d
+			id: "4200000000180351"
+			x: 2.2d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D200000000180350"
+					id: "5200000000180351"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:awakened_supremium_essence"
@@ -218,7 +236,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180350"
+					id: "6200000000180351"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -226,15 +244,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018034E"]
+			dependencies: ["420000000018034F"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180351"
-			x: 1.8d
-			y: 3.9d
+			id: "4200000000180352"
+			x: 2.2d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D200000000180351"
+					id: "5200000000180352"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:awakening_altar"
@@ -244,7 +263,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180351"
+					id: "6200000000180352"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -252,15 +271,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018034E"]
+			dependencies: ["420000000018034F"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180352"
-			x: 1.8d
-			y: 5.2d
+			id: "4200000000180353"
+			x: 2.2d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D200000000180352"
+					id: "5200000000180353"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:awakening_pedestal"
@@ -270,7 +290,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180352"
+					id: "6200000000180353"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -278,15 +298,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018034E"]
+			dependencies: ["420000000018034F"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180353"
-			x: 3.6d
+			id: "4200000000180354"
+			x: 4.4d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000180353"
+					id: "5200000000180354"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:master_infusion_crystal"
@@ -296,7 +317,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180353"
+					id: "6200000000180354"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -304,20 +325,21 @@
 					}
 				}
 				{
-					id: "D100000000180353"
+					id: "5100000000180354"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C20000000018034E"]
+			dependencies: ["420000000018034F"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180354"
-			x: 3.6d
-			y: 1.3d
+			id: "4200000000180355"
+			x: 4.4d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D200000000180354"
+					id: "5200000000180355"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:essence_vessel"
@@ -327,7 +349,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180354"
+					id: "6200000000180355"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -335,15 +357,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180353"]
+			dependencies: ["4200000000180354"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180355"
-			x: 3.6d
-			y: 2.6d
+			id: "4200000000180356"
+			x: 4.4d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D200000000180355"
+					id: "5200000000180356"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:machine_frame"
@@ -353,7 +376,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180355"
+					id: "6200000000180356"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -361,15 +384,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180353"]
+			dependencies: ["4200000000180354"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180356"
-			x: 3.6d
-			y: 3.9d
+			id: "4200000000180357"
+			x: 4.4d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D200000000180356"
+					id: "5200000000180357"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:harvester"
@@ -379,7 +403,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180356"
+					id: "6200000000180357"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -387,15 +411,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180353"]
+			dependencies: ["4200000000180354"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180357"
-			x: 3.6d
-			y: 5.2d
+			id: "4200000000180358"
+			x: 4.4d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D200000000180357"
+					id: "5200000000180358"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:seed_reprocessor"
@@ -405,7 +430,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180357"
+					id: "6200000000180358"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -413,15 +438,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180353"]
+			dependencies: ["4200000000180354"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180358"
-			x: 5.4d
+			id: "4200000000180359"
+			x: 6.6d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000180358"
+					id: "5200000000180359"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:inferium_growth_accelerator"
@@ -431,7 +457,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180358"
+					id: "6200000000180359"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -439,20 +465,21 @@
 					}
 				}
 				{
-					id: "D100000000180358"
+					id: "5100000000180359"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C200000000180353"]
+			dependencies: ["4200000000180354"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180359"
-			x: 5.4d
-			y: 1.3d
+			id: "420000000018035A"
+			x: 6.6d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D200000000180359"
+					id: "520000000018035A"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:prudentium_growth_accelerator"
@@ -462,7 +489,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180359"
+					id: "620000000018035A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -470,15 +497,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180358"]
+			dependencies: ["4200000000180359"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018035A"
-			x: 5.4d
-			y: 2.6d
+			id: "420000000018035B"
+			x: 6.6d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D20000000018035A"
+					id: "520000000018035B"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:tertium_growth_accelerator"
@@ -488,7 +516,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018035A"
+					id: "620000000018035B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -496,15 +524,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180358"]
+			dependencies: ["4200000000180359"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018035B"
-			x: 5.4d
-			y: 3.9d
+			id: "420000000018035C"
+			x: 6.6d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D20000000018035B"
+					id: "520000000018035C"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:imperium_growth_accelerator"
@@ -514,7 +543,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018035B"
+					id: "620000000018035C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -522,15 +551,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180358"]
+			dependencies: ["4200000000180359"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018035C"
-			x: 5.4d
-			y: 5.2d
+			id: "420000000018035D"
+			x: 6.6d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D20000000018035C"
+					id: "520000000018035D"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:supremium_growth_accelerator"
@@ -540,7 +570,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018035C"
+					id: "620000000018035D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -548,15 +578,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180358"]
+			dependencies: ["4200000000180359"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018035D"
-			x: 7.2d
+			id: "420000000018035E"
+			x: 8.8d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D20000000018035D"
+					id: "520000000018035E"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:watering_can"
@@ -566,7 +597,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018035D"
+					id: "620000000018035E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -574,20 +605,21 @@
 					}
 				}
 				{
-					id: "D10000000018035D"
+					id: "510000000018035E"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C200000000180358"]
+			dependencies: ["4200000000180359"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018035E"
-			x: 7.2d
-			y: 1.3d
+			id: "420000000018035F"
+			x: 8.8d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D20000000018035E"
+					id: "520000000018035F"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:inferium_watering_can"
@@ -597,7 +629,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018035E"
+					id: "620000000018035F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -605,15 +637,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018035D"]
+			dependencies: ["420000000018035E"]
+			shape: "loom"
 		}
 		{
-			id: "C20000000018035F"
-			x: 7.2d
-			y: 2.6d
+			id: "4200000000180360"
+			x: 8.8d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D20000000018035F"
+					id: "5200000000180360"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:prudentium_watering_can"
@@ -623,7 +656,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018035F"
+					id: "6200000000180360"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -631,15 +664,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018035D"]
+			dependencies: ["420000000018035E"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180360"
-			x: 7.2d
-			y: 3.9d
+			id: "4200000000180361"
+			x: 8.8d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D200000000180360"
+					id: "5200000000180361"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:tertium_watering_can"
@@ -649,7 +683,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180360"
+					id: "6200000000180361"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -657,15 +691,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018035D"]
+			dependencies: ["420000000018035E"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180361"
-			x: 7.2d
-			y: 5.2d
+			id: "4200000000180362"
+			x: 8.8d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D200000000180361"
+					id: "5200000000180362"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:imperium_watering_can"
@@ -675,7 +710,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180361"
+					id: "6200000000180362"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -683,15 +718,16 @@
 					}
 				}
 			]
-			dependencies: ["C20000000018035D"]
+			dependencies: ["420000000018035E"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180362"
-			x: 9.0d
+			id: "4200000000180363"
+			x: 11.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000180362"
+					id: "5200000000180363"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:supremium_watering_can"
@@ -701,7 +737,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180362"
+					id: "6200000000180363"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -709,20 +745,21 @@
 					}
 				}
 				{
-					id: "D100000000180362"
+					id: "5100000000180363"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C20000000018035D"]
+			dependencies: ["420000000018035E"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180363"
-			x: 9.0d
-			y: 1.3d
+			id: "4200000000180364"
+			x: 11.0d
+			y: 1.4d
 			tasks: [
 				{
-					id: "D200000000180363"
+					id: "5200000000180364"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:fertilized_essence"
@@ -732,7 +769,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180363"
+					id: "6200000000180364"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -740,15 +777,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180362"]
+			dependencies: ["4200000000180363"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180364"
-			x: 9.0d
-			y: 2.6d
+			id: "4200000000180365"
+			x: 11.0d
+			y: 2.8d
 			tasks: [
 				{
-					id: "D200000000180364"
+					id: "5200000000180365"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:soulium_dust"
@@ -758,7 +796,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180364"
+					id: "6200000000180365"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -766,15 +804,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180362"]
+			dependencies: ["4200000000180363"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180365"
-			x: 9.0d
-			y: 3.9d
+			id: "4200000000180366"
+			x: 11.0d
+			y: 4.2d
 			tasks: [
 				{
-					id: "D200000000180365"
+					id: "5200000000180366"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:soulium_ingot"
@@ -784,7 +823,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180365"
+					id: "6200000000180366"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -792,15 +831,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180362"]
+			dependencies: ["4200000000180363"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180366"
-			x: 9.0d
-			y: 5.2d
+			id: "4200000000180367"
+			x: 11.0d
+			y: 5.6d
 			tasks: [
 				{
-					id: "D200000000180366"
+					id: "5200000000180367"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:soulium_dagger"
@@ -810,7 +850,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180366"
+					id: "6200000000180367"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -818,15 +858,16 @@
 					}
 				}
 			]
-			dependencies: ["C200000000180362"]
+			dependencies: ["4200000000180363"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180367"
-			x: 10.8d
+			id: "4200000000180368"
+			x: 13.2d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D200000000180367"
+					id: "5200000000180368"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:soulium_seed_base"
@@ -836,7 +877,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180367"
+					id: "6200000000180368"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -844,20 +885,21 @@
 					}
 				}
 				{
-					id: "D100000000180367"
+					id: "5100000000180368"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C200000000180362"]
+			dependencies: ["4200000000180363"]
+			shape: "loom"
 		}
 		{
-			id: "C200000000180368"
+			id: "4200000000180369"
 			x: -5.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D200000000180368"
+					id: "5200000000180369"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:redstone_seeds"
@@ -867,7 +909,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180368"
+					id: "6200000000180369"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -876,16 +918,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180369"
+			id: "420000000018036A"
 			x: -3.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D200000000180369"
+					id: "520000000018036A"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:lapis_lazuli_seeds"
@@ -895,7 +939,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180369"
+					id: "620000000018036A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -904,16 +948,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018036A"
+			id: "420000000018036B"
 			x: -2.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000018036A"
+					id: "520000000018036B"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:diamond_seeds"
@@ -923,7 +969,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018036A"
+					id: "620000000018036B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -932,16 +978,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018036B"
+			id: "420000000018036C"
 			x: -0.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000018036B"
+					id: "520000000018036C"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:emerald_seeds"
@@ -951,7 +999,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018036B"
+					id: "620000000018036C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -960,16 +1008,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018036C"
+			id: "420000000018036D"
 			x: 1.0d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000018036C"
+					id: "520000000018036D"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:obsidian_seeds"
@@ -979,7 +1029,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018036C"
+					id: "620000000018036D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -988,16 +1038,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018036D"
+			id: "420000000018036E"
 			x: 2.5d
 			y: 7.5d
 			tasks: [
 				{
-					id: "D20000000018036D"
+					id: "520000000018036E"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:nether_quartz_seeds"
@@ -1007,7 +1059,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018036D"
+					id: "620000000018036E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1016,16 +1068,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018036E"
+			id: "420000000018036F"
 			x: -5.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D20000000018036E"
+					id: "520000000018036F"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:glowstone_seeds"
@@ -1035,7 +1089,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018036E"
+					id: "620000000018036F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1044,16 +1098,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018036F"
+			id: "4200000000180370"
 			x: -3.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D20000000018036F"
+					id: "5200000000180370"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:netherite_seeds"
@@ -1063,7 +1119,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018036F"
+					id: "6200000000180370"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1072,16 +1128,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180370"
+			id: "4200000000180371"
 			x: -2.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000180370"
+					id: "5200000000180371"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:amethyst_seeds"
@@ -1091,7 +1149,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180370"
+					id: "6200000000180371"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1100,16 +1158,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180371"
+			id: "4200000000180372"
 			x: -0.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000180371"
+					id: "5200000000180372"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:honey_seeds"
@@ -1119,7 +1179,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180371"
+					id: "6200000000180372"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1128,16 +1188,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180372"
+			id: "4200000000180373"
 			x: 1.0d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000180372"
+					id: "5200000000180373"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:prismarine_seeds"
@@ -1147,7 +1209,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180372"
+					id: "6200000000180373"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1156,16 +1218,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180373"
+			id: "4200000000180374"
 			x: 2.5d
 			y: 9.0d
 			tasks: [
 				{
-					id: "D200000000180373"
+					id: "5200000000180374"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:basalt_seeds"
@@ -1175,7 +1239,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180373"
+					id: "6200000000180374"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1184,16 +1248,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180374"
+			id: "4200000000180375"
 			x: -5.0d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000180374"
+					id: "5200000000180375"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:nether_seeds"
@@ -1203,7 +1269,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180374"
+					id: "6200000000180375"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1212,16 +1278,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180375"
+			id: "4200000000180376"
 			x: -3.5d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000180375"
+					id: "5200000000180376"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:end_seeds"
@@ -1231,7 +1299,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180375"
+					id: "6200000000180376"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1240,16 +1308,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180376"
+			id: "4200000000180377"
 			x: -2.0d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000180376"
+					id: "5200000000180377"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:sky_stone_seeds"
@@ -1259,7 +1329,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180376"
+					id: "6200000000180377"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1268,16 +1338,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180377"
+			id: "4200000000180378"
 			x: -0.5d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000180377"
+					id: "5200000000180378"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:certus_quartz_seeds"
@@ -1287,7 +1359,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180377"
+					id: "6200000000180378"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1296,16 +1368,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180378"
+			id: "4200000000180379"
 			x: 1.0d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000180378"
+					id: "5200000000180379"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:fluix_seeds"
@@ -1315,7 +1389,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180378"
+					id: "6200000000180379"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1324,16 +1398,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180379"
+			id: "420000000018037A"
 			x: 2.5d
 			y: 10.5d
 			tasks: [
 				{
-					id: "D200000000180379"
+					id: "520000000018037A"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:silicon_seeds"
@@ -1343,7 +1419,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180379"
+					id: "620000000018037A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1352,16 +1428,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018037A"
+			id: "420000000018037B"
 			x: -5.0d
 			y: 12.0d
 			tasks: [
 				{
-					id: "D20000000018037A"
+					id: "520000000018037B"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:steel_seeds"
@@ -1371,7 +1449,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018037A"
+					id: "620000000018037B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1380,16 +1458,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018037B"
+			id: "420000000018037C"
 			x: -3.5d
 			y: 12.0d
 			tasks: [
 				{
-					id: "D20000000018037B"
+					id: "520000000018037C"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:osmium_seeds"
@@ -1399,7 +1479,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018037B"
+					id: "620000000018037C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1408,16 +1488,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018037C"
+			id: "420000000018037D"
 			x: -2.0d
 			y: 12.0d
 			tasks: [
 				{
-					id: "D20000000018037C"
+					id: "520000000018037D"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:tin_seeds"
@@ -1427,7 +1509,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018037C"
+					id: "620000000018037D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1436,16 +1518,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018037D"
+			id: "420000000018037E"
 			x: -0.5d
 			y: 12.0d
 			tasks: [
 				{
-					id: "D20000000018037D"
+					id: "520000000018037E"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:aluminum_seeds"
@@ -1455,7 +1539,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018037D"
+					id: "620000000018037E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1464,16 +1548,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018037E"
+			id: "420000000018037F"
 			x: 1.0d
 			y: 12.0d
 			tasks: [
 				{
-					id: "D20000000018037E"
+					id: "520000000018037F"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:uranium_seeds"
@@ -1483,7 +1569,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018037E"
+					id: "620000000018037F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1492,16 +1578,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018037F"
+			id: "4200000000180380"
 			x: 2.5d
 			y: 12.0d
 			tasks: [
 				{
-					id: "D20000000018037F"
+					id: "5200000000180380"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:uraninite_seeds"
@@ -1511,7 +1599,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018037F"
+					id: "6200000000180380"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1520,16 +1608,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180380"
+			id: "4200000000180381"
 			x: -5.0d
 			y: 13.5d
 			tasks: [
 				{
-					id: "D200000000180380"
+					id: "5200000000180381"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:experience_seeds"
@@ -1539,7 +1629,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180380"
+					id: "6200000000180381"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1548,16 +1638,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180381"
+			id: "4200000000180382"
 			x: -3.5d
 			y: 13.5d
 			tasks: [
 				{
-					id: "D200000000180381"
+					id: "5200000000180382"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:slime_seeds"
@@ -1567,7 +1659,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180381"
+					id: "6200000000180382"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1576,16 +1668,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180382"
+			id: "4200000000180383"
 			x: -2.0d
 			y: 13.5d
 			tasks: [
 				{
-					id: "D200000000180382"
+					id: "5200000000180383"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:blaze_seeds"
@@ -1595,7 +1689,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180382"
+					id: "6200000000180383"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1604,16 +1698,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180383"
+			id: "4200000000180384"
 			x: -0.5d
 			y: 13.5d
 			tasks: [
 				{
-					id: "D200000000180383"
+					id: "5200000000180384"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:ghast_seeds"
@@ -1623,7 +1719,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180383"
+					id: "6200000000180384"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1632,16 +1728,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180384"
+			id: "4200000000180385"
 			x: 1.0d
 			y: 13.5d
 			tasks: [
 				{
-					id: "D200000000180384"
+					id: "5200000000180385"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:enderman_seeds"
@@ -1651,7 +1749,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180384"
+					id: "6200000000180385"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1660,16 +1758,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180385"
+			id: "4200000000180386"
 			x: 2.5d
 			y: 13.5d
 			tasks: [
 				{
-					id: "D200000000180385"
+					id: "5200000000180386"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:wither_skeleton_seeds"
@@ -1679,7 +1779,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180385"
+					id: "6200000000180386"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1688,16 +1788,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180386"
+			id: "4200000000180387"
 			x: -5.0d
 			y: 15.0d
 			tasks: [
 				{
-					id: "D200000000180386"
+					id: "5200000000180387"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:cow_seeds"
@@ -1707,7 +1809,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180386"
+					id: "6200000000180387"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1716,16 +1818,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180387"
+			id: "4200000000180388"
 			x: -3.5d
 			y: 15.0d
 			tasks: [
 				{
-					id: "D200000000180387"
+					id: "5200000000180388"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:sheep_seeds"
@@ -1735,7 +1839,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180387"
+					id: "6200000000180388"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1744,16 +1848,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180388"
+			id: "4200000000180389"
 			x: -2.0d
 			y: 15.0d
 			tasks: [
 				{
-					id: "D200000000180388"
+					id: "5200000000180389"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:chicken_seeds"
@@ -1763,7 +1869,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180388"
+					id: "6200000000180389"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1772,16 +1878,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180389"
+			id: "420000000018038A"
 			x: -0.5d
 			y: 15.0d
 			tasks: [
 				{
-					id: "D200000000180389"
+					id: "520000000018038A"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:pig_seeds"
@@ -1791,7 +1899,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180389"
+					id: "620000000018038A"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1800,16 +1908,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018038A"
+			id: "420000000018038B"
 			x: 1.0d
 			y: 15.0d
 			tasks: [
 				{
-					id: "D20000000018038A"
+					id: "520000000018038B"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:skeleton_seeds"
@@ -1819,7 +1929,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018038A"
+					id: "620000000018038B"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1828,16 +1938,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018038B"
+			id: "420000000018038C"
 			x: 2.5d
 			y: 15.0d
 			tasks: [
 				{
-					id: "D20000000018038B"
+					id: "520000000018038C"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:zombie_seeds"
@@ -1847,7 +1959,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018038B"
+					id: "620000000018038C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1856,16 +1968,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018038C"
+			id: "420000000018038D"
 			x: -5.0d
 			y: 16.5d
 			tasks: [
 				{
-					id: "D20000000018038C"
+					id: "520000000018038D"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:creeper_seeds"
@@ -1875,7 +1989,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018038C"
+					id: "620000000018038D"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1884,16 +1998,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018038D"
+			id: "420000000018038E"
 			x: -3.5d
 			y: 16.5d
 			tasks: [
 				{
-					id: "D20000000018038D"
+					id: "520000000018038E"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:iron_essence"
@@ -1903,7 +2019,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018038D"
+					id: "620000000018038E"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1912,16 +2028,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018038E"
+			id: "420000000018038F"
 			x: -2.0d
 			y: 16.5d
 			tasks: [
 				{
-					id: "D20000000018038E"
+					id: "520000000018038F"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:gold_essence"
@@ -1931,7 +2049,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018038E"
+					id: "620000000018038F"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1940,16 +2058,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C20000000018038F"
+			id: "4200000000180390"
 			x: -0.5d
 			y: 16.5d
 			tasks: [
 				{
-					id: "D20000000018038F"
+					id: "5200000000180390"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:diamond_essence"
@@ -1959,7 +2079,7 @@
 			]
 			rewards: [
 				{
-					id: "E20000000018038F"
+					id: "6200000000180390"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1968,16 +2088,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180390"
+			id: "4200000000180391"
 			x: 1.0d
 			y: 16.5d
 			tasks: [
 				{
-					id: "D200000000180390"
+					id: "5200000000180391"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:coal_essence"
@@ -1987,7 +2109,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180390"
+					id: "6200000000180391"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -1996,16 +2118,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180391"
+			id: "4200000000180392"
 			x: 2.5d
 			y: 16.5d
 			tasks: [
 				{
-					id: "D200000000180391"
+					id: "5200000000180392"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:copper_essence"
@@ -2015,7 +2139,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180391"
+					id: "6200000000180392"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -2024,16 +2148,18 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 		{
-			id: "C200000000180392"
+			id: "4200000000180393"
 			x: -5.0d
 			y: 18.0d
 			tasks: [
 				{
-					id: "D200000000180392"
+					id: "5200000000180393"
 					type: "item"
 					item: {
 						id: "mysticalagriculture:redstone_essence"
@@ -2043,7 +2169,7 @@
 			]
 			rewards: [
 				{
-					id: "E200000000180392"
+					id: "6200000000180393"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
@@ -2052,7 +2178,9 @@
 				}
 			]
 			optional: true
-			dependencies: ["C20000000018034A"]
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["420000000018034B"]
 			hide_until_deps_complete: true
 		}
 	]
