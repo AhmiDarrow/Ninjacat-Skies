@@ -83,15 +83,20 @@ def main() -> int:
         "manifestVersion": 1,
         "name": "Ninjacat Skies",
         "version": version,
-        "author": "Ninjacat Skies",
+        "author": "Ahmi & Risika Darrow",
+        "image": "profileImage/ninjacat-skies.png",
         "files": manifest_files,
         "overrides": "overrides",
     }
     (stage / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     # icon + store helpers + install notes
-    icon = ROOT / "docs/public/pack-icon.png"
+    icon = ROOT / "docs/public/pack-icon-400.png"
+    if not icon.is_file():
+        raise FileNotFoundError(f"Required profile logo missing: {icon}")
     if icon.exists():
+        (stage / "profileImage").mkdir(exist_ok=True)
+        shutil.copy2(icon, stage / "profileImage/ninjacat-skies.png")
         shutil.copy2(icon, stage / "icon.png")
         shutil.copy2(icon, stage / "overrides/pack-icon.png")
     for name in ("store-description.html", "store-description.md"):
@@ -108,7 +113,7 @@ def main() -> int:
         "  Or Custom RAM Allocation = 8192 MB. 4096 MB is not enough.\n"
         "  Minimum viable: 6144 MB. Recommended: 8192–10240 MB.\n\n"
         "ICON\n"
-        "  Root icon.png + overrides/pack-icon.png ship the pack paw (512×512).\n"
+        "  manifest.image references the bundled 400x400 sky-cat profile logo.\n"
         "  CurseForge PROJECT page avatar/description must still be set in the\n"
         "  Author Console (General + Description tabs) — zip import alone does not.\n\n"
         "UI\n"
