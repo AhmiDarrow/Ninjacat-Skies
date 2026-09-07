@@ -23,295 +23,16 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "42000000002605B9"
-			x: 0.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "52000000002605B9"
-					type: "item"
-					item: {
-						id: "createaddition:copper_wire"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605B9"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "51000000002605B9"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605BA"
-			x: 0.0d
-			y: 1.4d
-			tasks: [
-				{
-					id: "52000000002605BA"
-					type: "item"
-					item: {
-						id: "createaddition:connector"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605BA"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605B9"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605BB"
-			x: 0.0d
-			y: 2.8d
-			tasks: [
-				{
-					id: "52000000002605BB"
-					type: "item"
-					item: {
-						id: "createaddition:electric_motor"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605BB"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605B9"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605BC"
-			x: 0.0d
-			y: 4.2d
-			tasks: [
-				{
-					id: "52000000002605BC"
-					type: "item"
-					item: {
-						id: "createaddition:capacitor"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605BC"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605B9"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605BD"
-			x: 0.0d
-			y: 5.6d
-			tasks: [
-				{
-					id: "52000000002605BD"
-					type: "item"
-					item: {
-						id: "createaddition:modular_accumulator"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605BD"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605B9"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605BE"
-			x: 2.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "52000000002605BE"
-					type: "item"
-					item: {
-						id: "createaddition:rolling_mill"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605BE"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "51000000002605BE"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["42000000002605B9"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605BF"
-			x: 2.2d
-			y: 1.4d
-			tasks: [
-				{
-					id: "52000000002605BF"
-					type: "item"
-					item: {
-						id: "create_enchantment_industry:blaze_enchanter"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605BF"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605BE"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605C0"
-			x: 2.2d
-			y: 2.8d
-			tasks: [
-				{
-					id: "52000000002605C0"
-					type: "item"
-					item: {
-						id: "create_enchantment_industry:experience_bucket"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605C0"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605BE"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605C1"
-			x: 2.2d
-			y: 4.2d
-			tasks: [
-				{
-					id: "52000000002605C1"
-					type: "item"
-					item: {
-						id: "create_enchantment_industry:printer"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605C1"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605BE"]
-			shape: "loom"
-		}
-		{
-			id: "42000000002605C2"
-			x: 2.2d
-			y: 5.6d
-			tasks: [
-				{
-					id: "52000000002605C2"
-					type: "item"
-					item: {
-						id: "mekanismgenerators:heat_generator"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "62000000002605C2"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["42000000002605BE"]
-			shape: "loom"
-		}
-		{
 			id: "42000000002605C3"
-			x: 4.4d
+			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
 					id: "52000000002605C3"
 					type: "item"
 					item: {
-						id: "mekanismgenerators:solar_generator"
-						count: 1
+						id: "createaddition:copper_wire"
+						count: 8
 					}
 				}
 			]
@@ -330,20 +51,19 @@
 					xp_levels: 1
 				}
 			]
-			dependencies: ["42000000002605BE"]
 			shape: "loom"
 		}
 		{
 			id: "42000000002605C4"
-			x: 4.4d
+			x: 0.0d
 			y: 1.4d
 			tasks: [
 				{
 					id: "52000000002605C4"
 					type: "item"
 					item: {
-						id: "mekanismgenerators:wind_generator"
-						count: 1
+						id: "createaddition:connector"
+						count: 2
 					}
 				}
 			]
@@ -362,14 +82,14 @@
 		}
 		{
 			id: "42000000002605C5"
-			x: 4.4d
+			x: 0.0d
 			y: 2.8d
 			tasks: [
 				{
 					id: "52000000002605C5"
 					type: "item"
 					item: {
-						id: "mekanismgenerators:bio_generator"
+						id: "createaddition:electric_motor"
 						count: 1
 					}
 				}
@@ -389,14 +109,14 @@
 		}
 		{
 			id: "42000000002605C6"
-			x: 4.4d
+			x: 0.0d
 			y: 4.2d
 			tasks: [
 				{
 					id: "52000000002605C6"
 					type: "item"
 					item: {
-						id: "mekanismgenerators:gas_burning_generator"
+						id: "createaddition:capacitor"
 						count: 1
 					}
 				}
@@ -416,14 +136,14 @@
 		}
 		{
 			id: "42000000002605C7"
-			x: 4.4d
+			x: 0.0d
 			y: 5.6d
 			tasks: [
 				{
 					id: "52000000002605C7"
 					type: "item"
 					item: {
-						id: "ae2wtlib:wireless_universal_terminal"
+						id: "createaddition:modular_accumulator"
 						count: 1
 					}
 				}
@@ -443,14 +163,14 @@
 		}
 		{
 			id: "42000000002605C8"
-			x: 6.6d
+			x: 2.2d
 			y: 0.0d
 			tasks: [
 				{
 					id: "52000000002605C8"
 					type: "item"
 					item: {
-						id: "appmek:chemical_storage_cell_1k"
+						id: "createaddition:rolling_mill"
 						count: 1
 					}
 				}
@@ -475,14 +195,14 @@
 		}
 		{
 			id: "42000000002605C9"
-			x: -4.0d
-			y: 7.5d
+			x: 2.2d
+			y: 1.4d
 			tasks: [
 				{
 					id: "52000000002605C9"
 					type: "item"
 					item: {
-						id: "createaddition:large_connector"
+						id: "create_enchantment_industry:blaze_enchanter"
 						count: 1
 					}
 				}
@@ -493,26 +213,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["42000000002605C8"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["42000000002605BA"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002605CA"
-			x: -2.5d
-			y: 7.5d
+			x: 2.2d
+			y: 2.8d
 			tasks: [
 				{
 					id: "52000000002605CA"
 					type: "item"
 					item: {
-						id: "create_enchantment_industry:experience_cake"
+						id: "create_enchantment_industry:experience_bucket"
 						count: 1
 					}
 				}
@@ -523,26 +240,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["42000000002605C8"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["42000000002605BA"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002605CB"
-			x: -1.0d
-			y: 7.5d
+			x: 2.2d
+			y: 4.2d
 			tasks: [
 				{
 					id: "52000000002605CB"
 					type: "item"
 					item: {
-						id: "mekanismgenerators:advanced_solar_generator"
+						id: "create_enchantment_industry:printer"
 						count: 1
 					}
 				}
@@ -553,27 +267,24 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["42000000002605C8"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["42000000002605BA"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002605CC"
-			x: 0.5d
-			y: 7.5d
+			x: 2.2d
+			y: 5.6d
 			tasks: [
 				{
 					id: "52000000002605CC"
 					type: "item"
 					item: {
-						id: "appmek:chemical_cell_housing"
-						count: 2
+						id: "mekanismgenerators:heat_generator"
+						count: 1
 					}
 				}
 			]
@@ -583,26 +294,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["42000000002605C8"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["42000000002605BA"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "42000000002605CD"
-			x: 2.0d
-			y: 7.5d
+			x: 4.4d
+			y: 0.0d
 			tasks: [
 				{
 					id: "52000000002605CD"
 					type: "item"
 					item: {
-						id: "appmek:portable_chemical_cell_1k"
+						id: "mekanismgenerators:solar_generator"
 						count: 1
 					}
 				}
@@ -613,6 +321,178 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "51000000002605CD"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["42000000002605C8"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002605CE"
+			x: 4.4d
+			y: 1.4d
+			tasks: [
+				{
+					id: "52000000002605CE"
+					type: "item"
+					item: {
+						id: "mekanismgenerators:wind_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605CE"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002605CD"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002605CF"
+			x: 4.4d
+			y: 2.8d
+			tasks: [
+				{
+					id: "52000000002605CF"
+					type: "item"
+					item: {
+						id: "mekanismgenerators:bio_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605CF"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002605CD"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002605D0"
+			x: 4.4d
+			y: 4.2d
+			tasks: [
+				{
+					id: "52000000002605D0"
+					type: "item"
+					item: {
+						id: "mekanismgenerators:gas_burning_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D0"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002605CD"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002605D1"
+			x: 4.4d
+			y: 5.6d
+			tasks: [
+				{
+					id: "52000000002605D1"
+					type: "item"
+					item: {
+						id: "ae2wtlib:wireless_universal_terminal"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D1"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["42000000002605CD"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002605D2"
+			x: 6.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "52000000002605D2"
+					type: "item"
+					item: {
+						id: "appmek:chemical_storage_cell_1k"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D2"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "51000000002605D2"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["42000000002605CD"]
+			shape: "loom"
+		}
+		{
+			id: "42000000002605D3"
+			x: -4.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002605D3"
+					type: "item"
+					item: {
+						id: "createaddition:large_connector"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D3"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
 						count: 1
 					}
 				}
@@ -620,7 +500,127 @@
 			optional: true
 			shape: "loom"
 			size: 0.85d
-			dependencies: ["42000000002605BA"]
+			dependencies: ["42000000002605C4"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002605D4"
+			x: -2.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002605D4"
+					type: "item"
+					item: {
+						id: "create_enchantment_industry:experience_cake"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002605C4"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002605D5"
+			x: -1.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002605D5"
+					type: "item"
+					item: {
+						id: "mekanismgenerators:advanced_solar_generator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002605C4"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002605D6"
+			x: 0.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002605D6"
+					type: "item"
+					item: {
+						id: "appmek:chemical_cell_housing"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D6"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002605C4"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002605D7"
+			x: 2.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002605D7"
+					type: "item"
+					item: {
+						id: "appmek:portable_chemical_cell_1k"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002605D7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["42000000002605C4"]
 			hide_until_deps_complete: true
 		}
 	]

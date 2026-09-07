@@ -56,3 +56,7 @@ Third-party mods remain under their own licenses — see in-pack attribution.
 Animated night auroras and a distinct March sky accompany three new breedable animals and ten hostile spirits. Brush the gentle fauna for renewable materials, recover guardian reagents, and return them to Echo processing. Overworld forests and swamps share some species with the March; its three biomes provide a route to every creature. Client settings control sky brightness and detail.
 
 A fifteen-quest bestiary branch after the Gate Drum supplies a brush and guides the thirteen discoveries.
+
+## A camp with a living heart
+
+Tribal Power brings an illustrated, animated Spirit Codex with search, bookmarks, live recipes and a spoiler warning. Ten connected camp quests introduce ritual mob binding, finite-use summoning, chunk anchors, spawn wards, automated crop tending and functional decorations. The pack now contains 1,495 quests across 38 chapters.

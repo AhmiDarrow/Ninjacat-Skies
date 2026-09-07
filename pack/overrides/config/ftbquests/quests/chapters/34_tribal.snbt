@@ -2331,5 +2331,271 @@
 			dependencies: ["4200000000220574", "4200000000220575", "4200000000220576", "4200000000220577", "4200000000220578", "4200000000220579", "420000000022057A", "420000000022057B", "420000000022057C", "420000000022057D", "420000000022057E", "420000000022057F", "4200000000220580"]
 			shape: "loom"
 		}
+		{
+			id: "4200000000220582"
+			x: 0.0d
+			y: 32.0d
+			tasks: [
+				{
+					id: "5200000000220582"
+					type: "item"
+					item: {
+						id: "tribalpower:spirit_lantern"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220582"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["4200000000220530"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000220583"
+			x: 3.6d
+			y: 32.0d
+			tasks: [
+				{
+					id: "5200000000220583"
+					type: "item"
+					item: {
+						id: "tribalpower:rain_chime"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220583"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022052F"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000220584"
+			x: 7.2d
+			y: 32.0d
+			tasks: [
+				{
+					id: "5200000000220584"
+					type: "item"
+					item: {
+						id: "tribalpower:offering_table"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220584"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["4200000000220544"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000220585"
+			x: 10.8d
+			y: 32.0d
+			tasks: [
+				{
+					id: "5200000000220585"
+					type: "item"
+					item: {
+						id: "tribalpower:grove_tender"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220585"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022054A", "4200000000220544"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000220586"
+			x: 0.0d
+			y: 34.2d
+			tasks: [
+				{
+					id: "5200000000220586"
+					type: "item"
+					item: {
+						id: "tribalpower:hush_totem"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220586"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022054E", "4200000000220550"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000220587"
+			x: 3.6d
+			y: 34.2d
+			tasks: [
+				{
+					id: "5200000000220587"
+					type: "item"
+					item: {
+						id: "tribalpower:wayanchor"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220587"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022056E", "420000000022055C"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000220588"
+			x: 7.2d
+			y: 34.2d
+			tasks: [
+				{
+					id: "5200000000220588"
+					type: "item"
+					item: {
+						id: "tribalpower:binding_effigy"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220588"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022056B", "420000000022055B", "420000000022055C"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000220589"
+			x: 10.8d
+			y: 34.2d
+			tasks: [
+				{
+					id: "5200000000220589"
+					type: "item"
+					item: {
+						id: "tribalpower:summoning_cradle"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000220589"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["4200000000220588", "420000000022056E"]
+			shape: "loom"
+		}
+		{
+			id: "420000000022058A"
+			x: 7.2d
+			y: 37d
+			tasks: [
+				{
+					type: "advancement"
+					advancement: "tribalpower:bind_effigy"
+					criterion: ""
+					id: "520000000022058A"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "tribalpower:spiritweave"
+						count: 3
+					}
+					id: "620000000022058A"
+				}
+			]
+			dependencies: ["4200000000220588"]
+			shape: "loom"
+		}
+		{
+			id: "420000000022058B"
+			x: 10.8d
+			y: 39.2d
+			tasks: [
+				{
+					type: "advancement"
+					advancement: "tribalpower:first_summon"
+					criterion: ""
+					id: "520000000022058B"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "tribalpower:spiritweave"
+						count: 4
+					}
+					id: "620000000022058B"
+				}
+			]
+			dependencies: ["420000000022058A", "4200000000220589"]
+			shape: "loom"
+		}
 	]
 }
