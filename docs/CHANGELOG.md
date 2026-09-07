@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.2-alpha — Reachable Roots
+
+_Uploaded to CurseForge 2026-09-07 (file 8826911)._
+
+Void-pad reachability review after the bees fix turned up the same class of bug in two more mods, both now fixed, plus a permanent backstop so it can't recur.
+
+- **Mystical Agriculture** was blocked: Inferium and Prosperity essences smelt from `c:ores/inferium` / `c:ores/prosperity`, worldgen ores that never spawn in the void, and Prosperity has no mob drop — so every essence seed (and the deep-crops half of Colony) was unreachable. Both ores now fall from the sieve (`mystical.js`): Inferium common from dirt (string mesh and up), Prosperity rarer from gravel/sand; Voidloom meshes catch them too, so the Loomframe automates the essence floor.
+- **Farmer's Delight** cabbage, tomato and rice only came from wild plants that generate in the world (tomato seeds even craft from a tomato you can't get yet); onion was fine (zombies drop it). Their seeds and cabbage leaf now come from the sieve (`farmers.js`).
+- **`tools/check_reachability.py`** — new backstop that scans every mod's recipes, the Ex Deorum sieve/hammer/barrel, all loot tables, the KubeJS additions and quest rewards, and flags any non-optional main-line quest item with no producer (the worldgen/mob/structure-only signature). Runs clean; wired into the notes for pre-export checks.
+- Reviewed and cleared as reachable: AE2 (certus from sand), Ars Nouveau (archwood/sourceberry from moss), Mekanism/Powah (ore chunks from the sieve; uranium→uraninite), Occultism (Spirit Fire converts vanilla), Tribal Power (Bone Chime from vanilla; March via Gate Drum), Nature's Aura, Solar Flux (code-generated recipes).
+
 ## 0.2.1-alpha — Colony
 
 - **Bees on a void pad.** Productive Bees nests are craftable: a ring of the material around any small flower (oak/birch/spruce/dark oak/acacia/jungle/cherry logs, hay, coarse dirt, gravel, sand, stone, sugar cane, slime, snow, glowstone, quartz, nether brick, soul sand, gilded blackstone, end stone, obsidian). Placed nests spawn their bees; the oak and hay nests also spawn plain honey bees, so hives, honeycomb and every breeding line start from the pad. Vanilla Bee Nest is craftable from planks and flowers.
