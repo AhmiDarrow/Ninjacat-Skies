@@ -145,7 +145,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade 🔍",
+    "name": "Jade \ud83d\udd0d",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -529,5 +529,14 @@
     "fileId": 8532346,
     "filename": "modonomicon-1.21.1-neoforge-1.120.4.jar",
     "releaseType": 1
+  },
+  {
+    "key": "Tribal Power",
+    "name": "TribalPower",
+    "slug": "tribalpower",
+    "projectId": 1684851,
+    "fileId": 0,
+    "filename": "tribalpower-2.2.0.jar",
+    "releaseType": 3
   }
 ]

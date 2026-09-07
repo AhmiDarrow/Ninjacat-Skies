@@ -70,6 +70,10 @@ foreach ($jar in $jars) {
         -and [int]::TryParse([string]$entry.projectId, [ref]$projId) -and $projId -gt 0 `
         -and [int]::TryParse([string]$entry.fileId, [ref]$fileId) -and $fileId -gt 0
 
+    if ($name -like 'tribalpower-*' -and $null -ne $entry -and $projId -ne 1684851) {
+        throw "Tribal Power dependency metadata must use CurseForge project 1684851"
+    }
+
     if ($Mode -eq "CurseForge" -and $hasCfIds) {
         $manifestFiles.Add([ordered]@{
             projectID = $projId

@@ -52,7 +52,7 @@ Current export: `dist/NinjacatSkies-0.4.0-alpha-20260906-233345.zip`. ZIP integr
 
 ## Authorized publication
 
-Both repositories pushed to GitHub. Tribal Power: `rewrite/shamanic-technomancy`, commit `8838a6a`. Ninjacat Skies: private `AhmiDarrow/Ninjacat-Skies`, branch `master`. CurseForge accepted alpha uploads: Tribal Power project 253197 / file 8827582; Ninjacat Skies project 1684777 / file 8827579. Core API verified both filenames and display names; both reported isAvailable=false immediately after upload. Standalone mod uploads require Client and Server environment version labels; the reusable uploader now supports them explicitly.
+Both repositories pushed to GitHub. Tribal Power: `rewrite/shamanic-technomancy`, commit `8838a6a`. Ninjacat Skies: private `AhmiDarrow/Ninjacat-Skies`, branch `master`. CurseForge accepted alpha uploads: Tribal Power was mistakenly submitted to an unrelated project (superseded; do not reuse that destination); Ninjacat Skies project 1684777 / file 8827579. Core API verified both filenames and display names; both reported isAvailable=false immediately after upload. Standalone mod uploads require Client and Server environment version labels; the reusable uploader now supports them explicitly.
 
 
 ## 2026-09-07: Returning Song, skies, and shared lives
@@ -80,6 +80,10 @@ Main-menu polish: built-in image generation produced the illustrated aurora/sky-
 
 - Tribal Power source pushed to rewrite/shamanic-technomancy at 1f88e11.
 - Ninjacat Skies source pushed to master at 3819508.
-- CurseForge accepted Tribal Power 2.2.0 alpha, file 8827894: https://www.curseforge.com/minecraft/mc-mods/tribal-power/files/8827894
+- The initial Tribal Power 2.2.0 upload targeted an incorrect project. Its former ID and download link have been removed. Canonical project: 1684851, https://www.curseforge.com/minecraft/mc-mods/tribalpower
 - CurseForge accepted Ninjacat Skies 0.5.0-alpha, file 8827897: https://www.curseforge.com/minecraft/modpacks/ninjacat-skies/files/8827897
 - Core API confirmed both filenames and project IDs. Immediately after submission both had isAvailable=false (Tribal fileStatus=3, pack fileStatus=20); public availability is pending CurseForge processing/review.
+
+Canonical Tribal Power CurseForge project ID: **1684851** (user-confirmed and API-verified). All former project-ID references are superseded and removed from local publishing helpers.
+
+Correction status: upload to canonical project 1684851 returned HTTP 500; a subsequent Core API file listing was empty. No successful canonical upload is claimed. Pack dependency metadata now records 1684851 with fileId=0, deliberately retaining the tested bundled JAR until a valid downloadable file exists. Existing GitHub import ZIP contains the JAR directly and has no incorrect Tribal Power manifest reference.
