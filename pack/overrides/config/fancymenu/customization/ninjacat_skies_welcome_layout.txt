@@ -20,8 +20,8 @@ customization {
 
 customization {
   action = autoscale
-  basewidth = 1920
-  baseheight = 1080
+  basewidth = 1280
+  baseheight = 720
 }
 
 menu_background {
@@ -39,7 +39,7 @@ scroll_list_customization {
   repeat_scroll_list_header_texture = false
   repeat_scroll_list_footer_texture = false
   show_screen_background_overlay_on_custom_background = false
-  apply_vanilla_background_blur = true
+  apply_vanilla_background_blur = false
 }
 
 layout_action_executable_blocks {
@@ -103,14 +103,14 @@ element {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 1920
-  auto_sizing_base_screen_height = 1080
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
   sticky_anchor = false
-  anchor_point = mid-centered
-  x = -28
-  y = -118
-  width = 56
-  height = 56
+  anchor_point = top-centered
+  x = -26
+  y = 18
+  width = 52
+  height = 52
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -128,12 +128,12 @@ element {
 
 element {
   interactable = false
-  source = §6Welcome to Ninjacat Skies
+  source = FIELD GUIDE  /  YOUR FIRST STRAND
   source_mode = direct
   shadow = true
   case_mode = normal
-  scale = 1.35
-  base_color = #E8E0D5FF
+  scale = 1.15
+  base_color = #E6BC70FF
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
@@ -150,14 +150,14 @@ element {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 1920
-  auto_sizing_base_screen_height = 1080
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
   sticky_anchor = false
-  anchor_point = mid-centered
-  x = -140
-  y = -54
-  width = 280
-  height = 18
+  anchor_point = top-centered
+  x = -230
+  y = 82
+  width = 460
+  height = 14
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -175,36 +175,20 @@ element {
 
 element {
   interactable = false
-  source = §7The Loom was cut. Reweave it—one Strand at a time.§r
-
-§fYou wake on §bClowder Dock§f (shared hub).
-
-§eHow to claim your pad§f
-§71.§f Right-click your §eIsland Charter§f
-   §8(or press §eC§8 — Sky GUIs)§f
-§72.§f Click §aCreate Team§f
-§73.§f Type a Clowder name
-§74.§f Pick a pad template:
-   §aNinjacat Pad§f = Normal (start here)
-   §bDojo Cottage§f = Easy
-   §cFrayed Thread§f = Hard
-§75.§f Click §aCreate§f — you teleport to your pad
-§76.§f Open §eFTB Quests§f → start §aSoil§f
-
-§8Chat shortcut §7/skyblock create <name>§8 skips the pad picker.
+  source = Spoiler-free essentials. Discover the story as you play.
   source_mode = direct
   shadow = true
   case_mode = normal
-  scale = 0.95
-  base_color = #C8C0B5FF
-  text_border = 2
-  line_spacing = 2
-  enable_scrolling = true
-  auto_line_wrapping = true
+  scale = 1
+  base_color = #A7C9D0FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
-  instance_identifier = ncs-welcome-body-001
+  instance_identifier = ncs-welcome-intro-001
   appearance_delay = no_delay
   appearance_delay_seconds = 1.0
   fade_in_v2 = no_fading
@@ -213,19 +197,442 @@ element {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 1920
-  auto_sizing_base_screen_height = 1080
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
   sticky_anchor = false
-  anchor_point = mid-centered
-  x = -160
-  y = -28
-  width = 320
-  height = 150
+  anchor_point = top-centered
+  x = -230
+  y = 105
+  width = 460
+  height = 14
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
-  element_loading_requirement_container_identifier = ncs-welcome-body-req-001
-  [loading_requirement_container_meta:ncs-welcome-body-req-001] = [groups:][instances:]
+  element_loading_requirement_container_identifier = ncs-welcome-intro-req-001
+  [loading_requirement_container_meta:ncs-welcome-intro-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = 01  CLAIM A PLACE IN THE SKY
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #61DDD2FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-start-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 135
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-start-req-001
+  [loading_requirement_container_meta:ncs-welcome-start-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = At Clowder Dock, right-click your Island Charter.
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #E8E0D5FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-charter-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 153
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-charter-req-001
+  [loading_requirement_container_meta:ncs-welcome-charter-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = Choose Create Team, then give your Clowder a name.
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #E8E0D5FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-team-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 168
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-team-req-001
+  [loading_requirement_container_meta:ncs-welcome-team-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = Choose a pad: Ninjacat = Normal | Dojo = Easy | Frayed = Hard.
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #E8E0D5FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-pads-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 183
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-pads-req-001
+  [loading_requirement_container_meta:ncs-welcome-pads-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = Select Create to travel to your island.
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #E8E0D5FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-create-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 198
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-create-req-001
+  [loading_requirement_container_meta:ncs-welcome-create-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = 02  FOLLOW THE WHISKER CODEX
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #61DDD2FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-quests-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 222
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-quests-req-001
+  [loading_requirement_container_meta:ncs-welcome-quests-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = Open FTB Quests from your inventory and begin with Soil.
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #E8E0D5FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-soil-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 240
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-soil-req-001
+  [loading_requirement_container_meta:ncs-welcome-soil-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = Your team shares lives: 3 per member. Deaths spend from the pool.
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #E8E0D5FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-lives-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 255
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-lives-req-001
+  [loading_requirement_container_meta:ncs-welcome-lives-req-001] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #3D7A7AFF
+  layer_hidden_in_editor = false
+}
+
+element {
+  interactable = false
+  source = Rare story milestones grant extra lives. Check with /skybound lives.
+  source_mode = direct
+  shadow = true
+  case_mode = normal
+  scale = 1
+  base_color = #A7C9D0FF
+  text_border = 0
+  line_spacing = 1
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = false
+  element_type = text_v2
+  instance_identifier = ncs-welcome-rewards-001
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
+  sticky_anchor = false
+  anchor_point = top-centered
+  x = -230
+  y = 270
+  width = 460
+  height = 14
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = ncs-welcome-rewards-req-001
+  [loading_requirement_container_meta:ncs-welcome-rewards-req-001] = [groups:][instances:]
   enable_parallax = false
   parallax_intensity_v2 = 0.5
   invert_parallax = false
@@ -248,7 +655,7 @@ element {
   nine_slice_custom_background = true
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = Let's Go
+  label = Back
   navigatable = true
   widget_active_state_requirement_container_identifier = ncs-welcome-go-active-001
   [loading_requirement_container_meta:ncs-welcome-go-active-001] = [groups:][instances:]
@@ -274,14 +681,14 @@ element {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 1920
-  auto_sizing_base_screen_height = 1080
+  auto_sizing_base_screen_width = 1280
+  auto_sizing_base_screen_height = 720
   sticky_anchor = false
-  anchor_point = mid-centered
+  anchor_point = top-centered
   x = -90
-  y = 132
+  y = 308
   width = 180
-  height = 24
+  height = 22
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
