@@ -1433,6 +1433,17 @@
 					}
 					id: "6200000001060135"
 				}
+				{
+					id: "5000000000060135"
+					type: "command"
+					command: "skybound rewardlife @s clock"
+					silent: true
+					elevate_perms: true
+					team_reward: true
+					icon: {
+						id: "minecraft:totem_of_undying"
+					}
+				}
 			]
 			dependencies: ["4200000000060134"]
 			shape: "diamond"

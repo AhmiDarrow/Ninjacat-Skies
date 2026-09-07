@@ -645,6 +645,17 @@ def finalize_chapter(strand_i, quests):
             q.pop("dependencies", None)
         title_key = f"quest.{q['id']}.title"
         title = lang.get(title_key)
+        life_milestone = {"Seat Clock": "clock", "Dragon Egg Show": "dragon", "Ultimate Cube": "power", "Seat Sigil": "sigil", "Thirteen voices, one sky": "bestiary", "Reweave": "reweave"}.get(title)
+        if life_milestone:
+            rid = hid(int(q["id"], 16) + 0x0E00000000000000)
+            q.setdefault("rewards", []).append({
+                "id": rid, "type": "command", "command": f"skybound rewardlife @s {life_milestone}",
+                "silent": True, "elevate_perms": True, "team_reward": True,
+                "icon": {"id": "minecraft:totem_of_undying"},
+            })
+            lang[f"reward.{rid}.title"] = "Thread of Return: +1 Clowder life"
+            lang.setdefault(f"quest.{q['id']}.quest_desc", []).append(
+                "Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign.")
         if title:
             n = CURRENT["title_counts"].get(title, 0)
             CURRENT["title_counts"][title] = n + 1
@@ -2443,6 +2454,18 @@ def build_tribal_side() -> list[dict]:
         if q:
             expansion.append(q)
             existing[item] = q['id']
+    # The nine tribes call this bestiary the Returning Song. All habitats remain reachable through the March.
+    bestiary = json.loads((ROOT / "tools/tribal_bestiary.json").read_text(encoding="utf-8"))
+    journal = item_quest(s, title="The Returning Song", desc=["The Gate opens onto a living country. Some creatures still carry the old song; others guard its broken pieces. Brush the gentle ones. Face the guardians with charged cells and a return route."], item="tribalpower:spirit_codex", deps=[existing['gate_drum']], x=0, y=21, reward_item="minecraft:brush")
+    if journal: expansion.append(journal)
+    specimens = []
+    for i, creature in enumerate(bestiary):
+        habitat = {"forest":"Overworld forests and the March", "swamp":"Overworld swamps and the March", "march":"the March"}[creature['habitat']]
+        recipe = "Echo Bind under Water" if creature['kind']=='animal' or creature['id'] in ('storm_moth','echo_weaver') else "Echo Attune under Spirit"
+        q = item_quest(s, title=creature['name']+": a song returned", desc=[creature['notes'], "Seek it in "+habitat+". Return its reagent to "+recipe+" for a useful material. Build lighted paths; hostile spirits require darkness."], item="tribalpower:"+creature['reagent'], deps=[journal['id']], x=(i%5)*2.7, y=23+(i//5)*1.8, reward_count=3)
+        if q: expansion.append(q);specimens.append(q['id'])
+    end = item_quest(s, title="Thirteen voices, one sky", desc=["The field notes are complete. The gentle harvests and recovered relics have become cloth and Echoes again. Beneath the night veil, the camp answers with a fuller song."], item="tribalpower:resonant_core", deps=specimens, x=5.4, y=29, reward_item="tribalpower:greater_pulse_cell", reward_count=1)
+    if end: expansion.append(end)
     return main + side + expansion
 
 

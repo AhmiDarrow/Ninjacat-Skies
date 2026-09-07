@@ -48,9 +48,9 @@ Tension from Wake+Recover+Root+Edge plus any two braid clears plus Bind feeds Sp
 
 ## Difficulty presets
 
-- **Easy (Dojo Cottage):** more kit, gentler sieve tables, lives optional off
+- **Easy (Dojo Cottage):** more kit, gentler sieve tables, three lives per member in the shared team pool
 - **Normal (Ninjacat Pad):** design center for 40–60h
-- **Hard (Frayed Thread):** sparse kit, leaner drops, optional lives on
+- **Hard (Frayed Thread):** sparse kit, leaner drops, three lives per member in the shared team pool
 
 ## Multiplayer
 

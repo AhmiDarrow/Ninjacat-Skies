@@ -22,4 +22,7 @@ public interface Clowder {
     void markDirty();
 
     Collection<ServerPlayer> onlineMembers();
+
+    /** All members, including offline players, for starting-life contributions. */
+    default Collection<UUID> memberIds() { return java.util.List.of(id()); }
 }

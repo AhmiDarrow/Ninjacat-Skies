@@ -23,437 +23,15 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "4200000000240580"
-			x: 0.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "5200000000240580"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_chair"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240580"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "5100000000240580"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240581"
-			x: 0.0d
-			y: 1.4d
-			tasks: [
-				{
-					id: "5200000000240581"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_table"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240581"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240580"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240582"
-			x: 0.0d
-			y: 2.8d
-			tasks: [
-				{
-					id: "5200000000240582"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_bench"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240582"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240580"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240583"
-			x: 0.0d
-			y: 4.2d
-			tasks: [
-				{
-					id: "5200000000240583"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_shelf"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240583"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240580"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240584"
-			x: 0.0d
-			y: 5.6d
-			tasks: [
-				{
-					id: "5200000000240584"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_cupboard"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240584"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240580"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240585"
-			x: 2.2d
-			y: 0.0d
-			tasks: [
-				{
-					id: "5200000000240585"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_fancy_bed"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240585"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "5100000000240585"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["4200000000240580"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240586"
-			x: 2.2d
-			y: 1.4d
-			tasks: [
-				{
-					id: "5200000000240586"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_nightstand"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240586"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240585"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240587"
-			x: 2.2d
-			y: 2.8d
-			tasks: [
-				{
-					id: "5200000000240587"
-					type: "item"
-					item: {
-						id: "framedblocks:framing_saw"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240587"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240585"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240588"
-			x: 2.2d
-			y: 4.2d
-			tasks: [
-				{
-					id: "5200000000240588"
-					type: "item"
-					item: {
-						id: "framedblocks:framed_cube"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240588"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240585"]
-			shape: "loom"
-		}
-		{
-			id: "4200000000240589"
-			x: 2.2d
-			y: 5.6d
-			tasks: [
-				{
-					id: "5200000000240589"
-					type: "item"
-					item: {
-						id: "framedblocks:framed_slab"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "6200000000240589"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["4200000000240585"]
-			shape: "loom"
-		}
-		{
-			id: "420000000024058A"
-			x: 4.4d
-			y: 0.0d
-			tasks: [
-				{
-					id: "520000000024058A"
-					type: "item"
-					item: {
-						id: "framedblocks:framed_stairs"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000024058A"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "510000000024058A"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["4200000000240585"]
-			shape: "loom"
-		}
-		{
-			id: "420000000024058B"
-			x: 4.4d
-			y: 1.4d
-			tasks: [
-				{
-					id: "520000000024058B"
-					type: "item"
-					item: {
-						id: "framedblocks:framed_slope"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000024058B"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["420000000024058A"]
-			shape: "loom"
-		}
-		{
-			id: "420000000024058C"
-			x: 4.4d
-			y: 2.8d
-			tasks: [
-				{
-					id: "520000000024058C"
-					type: "item"
-					item: {
-						id: "mcwbridges:balustrade_cobblestone_bridge"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000024058C"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["420000000024058A"]
-			shape: "loom"
-		}
-		{
-			id: "420000000024058D"
-			x: 4.4d
-			y: 4.2d
-			tasks: [
-				{
-					id: "520000000024058D"
-					type: "item"
-					item: {
-						id: "mcwroofs:oak_attic_roof"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000024058D"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["420000000024058A"]
-			shape: "loom"
-		}
-		{
-			id: "420000000024058E"
-			x: -4.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "520000000024058E"
-					type: "item"
-					item: {
-						id: "handcrafted:oak_couch"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "620000000024058E"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 1
-					}
-				}
-			]
-			optional: true
-			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000240581"]
-			hide_until_deps_complete: true
-		}
-		{
 			id: "420000000024058F"
-			x: -2.5d
-			y: 7.5d
+			x: 0.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "520000000024058F"
 					type: "item"
 					item: {
-						id: "handcrafted:oak_counter"
+						id: "handcrafted:oak_chair"
 						count: 1
 					}
 				}
@@ -464,26 +42,27 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "510000000024058F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000240581"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "4200000000240590"
-			x: -1.0d
-			y: 7.5d
+			x: 0.0d
+			y: 1.4d
 			tasks: [
 				{
 					id: "5200000000240590"
 					type: "item"
 					item: {
-						id: "handcrafted:oak_desk"
+						id: "handcrafted:oak_table"
 						count: 1
 					}
 				}
@@ -494,26 +73,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["420000000024058F"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000240581"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "4200000000240591"
-			x: 0.5d
-			y: 7.5d
+			x: 0.0d
+			y: 2.8d
 			tasks: [
 				{
 					id: "5200000000240591"
 					type: "item"
 					item: {
-						id: "handcrafted:oak_drawer"
+						id: "handcrafted:oak_bench"
 						count: 1
 					}
 				}
@@ -524,26 +100,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["420000000024058F"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000240581"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "4200000000240592"
-			x: 2.0d
-			y: 7.5d
+			x: 0.0d
+			y: 4.2d
 			tasks: [
 				{
 					id: "5200000000240592"
 					type: "item"
 					item: {
-						id: "framedblocks:framed_door"
+						id: "handcrafted:oak_shelf"
 						count: 1
 					}
 				}
@@ -554,27 +127,24 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["420000000024058F"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000240581"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "4200000000240593"
-			x: 3.5d
-			y: 7.5d
+			x: 0.0d
+			y: 5.6d
 			tasks: [
 				{
 					id: "5200000000240593"
 					type: "item"
 					item: {
-						id: "framedblocks:framed_panel"
-						count: 8
+						id: "handcrafted:oak_cupboard"
+						count: 1
 					}
 				}
 			]
@@ -584,27 +154,24 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
+			dependencies: ["420000000024058F"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000240581"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "4200000000240594"
-			x: -4.0d
-			y: 9.0d
+			x: 2.2d
+			y: 0.0d
 			tasks: [
 				{
 					id: "5200000000240594"
 					type: "item"
 					item: {
-						id: "framedblocks:framed_fence"
-						count: 8
+						id: "handcrafted:oak_fancy_bed"
+						count: 1
 					}
 				}
 			]
@@ -614,26 +181,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "5100000000240594"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
+			dependencies: ["420000000024058F"]
 			shape: "loom"
-			size: 0.85d
-			dependencies: ["4200000000240581"]
-			hide_until_deps_complete: true
 		}
 		{
 			id: "4200000000240595"
-			x: -2.5d
-			y: 9.0d
+			x: 2.2d
+			y: 1.4d
 			tasks: [
 				{
 					id: "5200000000240595"
 					type: "item"
 					item: {
-						id: "mcwbridges:balustrade_andesite_bridge"
+						id: "handcrafted:oak_nightstand"
 						count: 1
 					}
 				}
@@ -644,6 +213,227 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["4200000000240594"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000240596"
+			x: 2.2d
+			y: 2.8d
+			tasks: [
+				{
+					id: "5200000000240596"
+					type: "item"
+					item: {
+						id: "framedblocks:framing_saw"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000240596"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["4200000000240594"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000240597"
+			x: 2.2d
+			y: 4.2d
+			tasks: [
+				{
+					id: "5200000000240597"
+					type: "item"
+					item: {
+						id: "framedblocks:framed_cube"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000240597"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["4200000000240594"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000240598"
+			x: 2.2d
+			y: 5.6d
+			tasks: [
+				{
+					id: "5200000000240598"
+					type: "item"
+					item: {
+						id: "framedblocks:framed_slab"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000240598"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["4200000000240594"]
+			shape: "loom"
+		}
+		{
+			id: "4200000000240599"
+			x: 4.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "5200000000240599"
+					type: "item"
+					item: {
+						id: "framedblocks:framed_stairs"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000240599"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "5100000000240599"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["4200000000240594"]
+			shape: "loom"
+		}
+		{
+			id: "420000000024059A"
+			x: 4.4d
+			y: 1.4d
+			tasks: [
+				{
+					id: "520000000024059A"
+					type: "item"
+					item: {
+						id: "framedblocks:framed_slope"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000024059A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["4200000000240599"]
+			shape: "loom"
+		}
+		{
+			id: "420000000024059B"
+			x: 4.4d
+			y: 2.8d
+			tasks: [
+				{
+					id: "520000000024059B"
+					type: "item"
+					item: {
+						id: "mcwbridges:balustrade_cobblestone_bridge"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000024059B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["4200000000240599"]
+			shape: "loom"
+		}
+		{
+			id: "420000000024059C"
+			x: 4.4d
+			y: 4.2d
+			tasks: [
+				{
+					id: "520000000024059C"
+					type: "item"
+					item: {
+						id: "mcwroofs:oak_attic_roof"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000024059C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["4200000000240599"]
+			shape: "loom"
+		}
+		{
+			id: "420000000024059D"
+			x: -4.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "520000000024059D"
+					type: "item"
+					item: {
+						id: "handcrafted:oak_couch"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000024059D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
 						count: 1
 					}
 				}
@@ -651,7 +441,217 @@
 			optional: true
 			shape: "loom"
 			size: 0.85d
-			dependencies: ["4200000000240581"]
+			dependencies: ["4200000000240590"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "420000000024059E"
+			x: -2.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "520000000024059E"
+					type: "item"
+					item: {
+						id: "handcrafted:oak_counter"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000024059E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["4200000000240590"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "420000000024059F"
+			x: -1.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "520000000024059F"
+					type: "item"
+					item: {
+						id: "handcrafted:oak_desk"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000024059F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["4200000000240590"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002405A0"
+			x: 0.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002405A0"
+					type: "item"
+					item: {
+						id: "handcrafted:oak_drawer"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002405A0"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["4200000000240590"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002405A1"
+			x: 2.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002405A1"
+					type: "item"
+					item: {
+						id: "framedblocks:framed_door"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002405A1"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["4200000000240590"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002405A2"
+			x: 3.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "52000000002405A2"
+					type: "item"
+					item: {
+						id: "framedblocks:framed_panel"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002405A2"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["4200000000240590"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002405A3"
+			x: -4.0d
+			y: 9.0d
+			tasks: [
+				{
+					id: "52000000002405A3"
+					type: "item"
+					item: {
+						id: "framedblocks:framed_fence"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002405A3"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["4200000000240590"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "42000000002405A4"
+			x: -2.5d
+			y: 9.0d
+			tasks: [
+				{
+					id: "52000000002405A4"
+					type: "item"
+					item: {
+						id: "mcwbridges:balustrade_andesite_bridge"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "62000000002405A4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+			dependencies: ["4200000000240590"]
 			hide_until_deps_complete: true
 		}
 	]

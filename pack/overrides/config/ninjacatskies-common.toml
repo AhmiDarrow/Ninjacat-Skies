@@ -1,0 +1,4 @@
+[hardcore]
+# Each member contributes three lives once to the shared FTB team pool.
+livesEnabled = true
+startingLives = 3

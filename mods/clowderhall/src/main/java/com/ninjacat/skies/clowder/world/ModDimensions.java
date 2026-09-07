@@ -348,9 +348,9 @@ public final class ModDimensions {
                 )),
                 Filterable.passThrough(Component.literal(
                         "SOFT HARDCORE\n\n" +
-                                "If lives are on and you go spectator:\n" +
-                                "• /clowder revive (self)\n" +
-                                "• Mate: /clowder revive <you>\n" +
+                                "Each mate adds three shared lives:\n" +
+                                "• Deaths spend a shared life\n" +
+                                "• /skybound lives checks the pool\n" +
                                 "• Op: /skybound revive [player]\n\n" +
                                 "Hub Key toggles Hall enter/leave.\n" +
                                 "Charter seals spawn on solid pad ground."

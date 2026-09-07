@@ -26,7 +26,7 @@ Follow the **Whisker Codex** through nine Strands — Soil, Stone, Sprout, Claw,
 
 - Void islands with Clowder Dock spawn and Easy / Normal / Hard pads
 - Clowder Hall hub dimension (`/clowder hub`)
-- FTB Quests Loom Braid progression — 1,300+ authored quests across 34 chapters
+- FTB Quests Loom Braid progression — 1,485 authored quests across 38 chapters
 - **Tension Post**: seat Strand tokens on your pad; each tribe chimes, the notches light, and the pad itself changes (hearth, footing, haste, luck)
 - **The Fray**: the cut in the sky, visible over the Dock, thinning as the server reweaves
 - **Whisker Codex** in-game book (Modonomicon): the Cut, the Loom Braid, and Nine Tribes entries that unlock as you play
@@ -34,7 +34,7 @@ Follow the **Whisker Codex** through nine Strands — Soil, Stone, Sprout, Claw,
 - **Bees on a void pad**: craft a nest from a ring of logs or grit around a flower and wait for wings; every Productive Bees line starts there
 - Voidloom stations: a Loomframe that sifts on its own, a Tension Barrel that batches — the pad's first machines
 - FancyMenu branded title (void sky, paw logo, indigo/teal buttons)
-- Tribal Power 2.0.1 as a core pack pillar (also playable standalone)
+- Tribal Power 2.2.0 as a core pack pillar (also playable standalone)
 - Create, Mystical Agriculture, Productive Bees, AE2, Mekanism, Occultism, and more — woven into original quests
 
 ## Mods
@@ -50,3 +50,9 @@ Form a Clowder, claim an island together, and progress as a team. Skyblock Build
 Original pack configuration, quests, custom mods (Voidloom, Clowder Hall, Ninjacat Skies), and story: pack authors.  
 **Tribal Power** by Ahmi & Risika Darrow (bundled pillar).  
 Third-party mods remain under their own licenses — see in-pack attribution.
+
+## The Returning Song
+
+Animated night auroras and a distinct March sky accompany three new breedable animals and ten hostile spirits. Brush the gentle fauna for renewable materials, recover guardian reagents, and return them to Echo processing. Overworld forests and swamps share some species with the March; its three biomes provide a route to every creature. Client settings control sky brightness and detail.
+
+A fifteen-quest bestiary branch after the Gate Drum supplies a brush and guides the thirteen discoveries.

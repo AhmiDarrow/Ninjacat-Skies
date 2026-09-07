@@ -41,10 +41,10 @@ public final class SkiesConfig {
 
         builder.push("hardcore");
         HARDCORE_LIVES_ENABLED = builder
-                .comment("Optional soft hardcore. Default off. /clowder revive (self) or <player> mate. Ops: /skybound revive [player]")
-                .define("livesEnabled", false);
+                .comment("Shared Clowder lives. Every survival death spends one team life. Rare quest rewards add lives; operator /skybound revive restores the team.")
+                .define("livesEnabled", true);
         STARTING_LIVES = builder
-                .comment("Starting lives when hardcore lives are enabled (also restore count on revive).")
+                .comment("Lives contributed once by each member to the shared team pool; operator revive restores this count times current members.")
                 .defineInRange("startingLives", 3, 1, 99);
         builder.pop();
 
