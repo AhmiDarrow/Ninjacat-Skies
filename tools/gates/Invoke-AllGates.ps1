@@ -32,6 +32,9 @@ try {
     Invoke-Gate "QuestItemIds" {
         pwsh -NoProfile -File (Join-Path $gateDir "Test-QuestItemIds.ps1")
     }
+    Invoke-Gate "PackKeybindings" {
+        python (Join-Path $gateDir "test_pack_keybindings.py")
+    }
     Invoke-Gate "CustomModsBuild" {
         $buildArgs = @()
         if ($SkipBuild) { $buildArgs += "-SkipIfJarsPresent" }

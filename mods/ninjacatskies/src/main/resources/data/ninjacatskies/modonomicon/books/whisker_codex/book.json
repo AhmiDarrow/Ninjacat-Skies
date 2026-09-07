@@ -1,9 +1,8 @@
 {
-  "name": "Whisker Codex",
+  "name": "Whisker Field Notes",
   "tooltip": "Damaged, but it still assigns work.",
   "description": "The Loom was cut. This is what is left of the manual.",
-  "generate_book_item": false,
-  "custom_book_item": "ninjacatskies:whisker_codex",
+  "generate_book_item": true,
   "default_title_color": 13936715,
   "auto_add_read_conditions": false
 }

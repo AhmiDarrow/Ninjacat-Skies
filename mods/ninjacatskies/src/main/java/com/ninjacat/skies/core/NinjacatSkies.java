@@ -44,6 +44,8 @@ public final class NinjacatSkies {
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
         if (FMLEnvironment.dist.isClient()) {
             NeoForge.EVENT_BUS.register(new SkyTint());
+            NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.PackKeybindings());
+            if (Boolean.getBoolean("ninjacatskies.uiVerification")) NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.UiVerification());
         }
 
         container.registerConfig(ModConfig.Type.COMMON, SkiesConfig.SPEC);

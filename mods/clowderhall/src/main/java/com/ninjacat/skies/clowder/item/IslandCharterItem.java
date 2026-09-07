@@ -17,7 +17,7 @@ import net.minecraft.world.item.component.WrittenBookContent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.lang.reflect.Method;
+import net.neoforged.fml.ModList;
 import java.util.List;
 
 /**
@@ -28,7 +28,7 @@ import java.util.List;
 public class IslandCharterItem extends Item {
     private static final String RULES_TITLE = "Clowder Rules";
     private static final String RULES_AUTHOR = "Clowder Hall";
-    private static final String CREATE_TEAM_SCREEN = "de.melanx.skyguis.client.screen.CreateTeamScreen";
+
 
     public IslandCharterItem(Properties properties) {
         super(properties);
@@ -39,14 +39,14 @@ public class IslandCharterItem extends Item {
         ItemStack stack = player.getItemInHand(hand);
         boolean onDock = isOnDock(level, player);
         if (level.isClientSide) {
-            // Create Team only on overworld Dock — never in Hall or on a claimed pad.
-            if (onDock) {
-                openCreateTeamScreen();
+            if (!player.isShiftKeyDown()) {
+                if (ModList.get().isLoaded("skyguis")) com.ninjacat.skies.clowder.client.ClowderClient.open();
+                else player.displayClientMessage(NinjacatText.gold("Clowder UI requires Sky GUIs. Use /skyblock help for island commands."), false);
             }
         } else if (player instanceof ServerPlayer serverPlayer) {
             // Seal spawn only on an overworld pad — never Dock, Hall, Nether, or End.
             boolean onPad = level.dimension().equals(Level.OVERWORLD) && !onDock;
-            if (onPad) {
+            if (onPad && player.isShiftKeyDown()) {
                 if (!hasSolidFooting(level, serverPlayer.blockPosition())) {
                     serverPlayer.displayClientMessage(
                             NinjacatText.gold("Stand on solid pad ground before sealing spawn."),
@@ -80,16 +80,16 @@ public class IslandCharterItem extends Item {
 
             if (onDock) {
                 serverPlayer.displayClientMessage(
-                        NinjacatText.teal("Create Team should be open — name your Clowder, then pick a pad."),
+                        NinjacatText.teal("Open Create Team in the Clowder panel, name your Clowder, then pick a pad."),
                         false
                 );
                 serverPlayer.displayClientMessage(
-                        NinjacatText.gold("After you land, right-click Charter again to seal pad spawn. Lost? /clowder hub"),
+                        NinjacatText.gold("After you land, sneak-use Charter to seal pad spawn. Lost? /clowder hub"),
                         false
                 );
             } else if (!onPad) {
                 serverPlayer.displayClientMessage(
-                        NinjacatText.gold("Create Team only on Clowder Dock — Hub Key /clowder return, then Charter."),
+                        NinjacatText.gold("Charter opens the Clowder panel. Sneak-use on your Overworld pad to seal spawn."),
                         false
                 );
             }
@@ -115,37 +115,7 @@ public class IslandCharterItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(NinjacatText.indigo("Names a pad as yours. Ink still wet."));
-        tooltip.add(Component.literal("Dock: Create Team. Overworld pad: seal spawn."));
-    }
-
-    private static void openCreateTeamScreen() {
-        try {
-            Class<?> screen = Class.forName(CREATE_TEAM_SCREEN);
-            Method open = screen.getMethod("open");
-            open.invoke(null);
-        } catch (ReflectiveOperationException ex) {
-            // Sky GUIs optional at compile; present in pack runtime.
-            // Reflect Minecraft so this common class stays server-safe if the API renames.
-            try {
-                Class<?> mcClass = Class.forName("net.minecraft.client.Minecraft");
-                Object mc = mcClass.getMethod("getInstance").invoke(null);
-                Object player = mcClass.getField("player").get(mc);
-                if (player != null) {
-                    Method tell = player.getClass().getMethod(
-                            "displayClientMessage",
-                            net.minecraft.network.chat.Component.class,
-                            boolean.class
-                    );
-                    tell.invoke(
-                            player,
-                            NinjacatText.gold("Create Team UI missing — press C (Sky GUIs) or /skyblock team."),
-                            false
-                    );
-                }
-            } catch (ReflectiveOperationException | RuntimeException ignored) {
-                // Dedicated server / no client player — server-side Charter lines already guide.
-            }
-        }
+        tooltip.add(Component.literal("Use: Clowder panel. Sneak-use on your pad: seal spawn."));
     }
 
     private static boolean playerHasRulesBook(ServerPlayer player) {
@@ -187,7 +157,7 @@ public class IslandCharterItem extends Item {
                 Filterable.passThrough(Component.literal(
                         "How to start (OOC)\n\n" +
                                 "1) Right-click Island Charter\n" +
-                                "   (or press C — Sky GUIs)\n" +
+                                "   (or press K — Clowder panel)\n" +
                                 "2) Create Team → type a name\n" +
                                 "3) Pick a pad template:\n" +
                                 "   Ninjacat Pad = Normal\n" +
@@ -200,11 +170,11 @@ public class IslandCharterItem extends Item {
                 Filterable.passThrough(Component.literal(
                         "If you feel lost\n\n" +
                                 "• Dock is the hub, not your pad.\n" +
-                                "• On Dock: Charter opens Create Team (pick a pad).\n" +
-                                "• On your pad: Charter seals spawn here.\n" +
+                                "• Charter opens Clowders; Create Team picks a pad.\n" +
+                                "• On your pad: sneak-use Charter seals spawn here.\n" +
                                 "• /clowder hub is always safe.\n" +
                                 "• /clowder return leaves the Hall.\n" +
-                                "• Whisker Codex = in-world voice guide.\n" +
+                                "• Whisker Codex = quests, rewards and hints.\n" +
                                 "• How to Start book = plain OOC steps."
                 ))
         );
