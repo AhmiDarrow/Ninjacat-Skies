@@ -21,6 +21,10 @@ Rebuild floating pads from nothing—sieve, farm, forge, automate—and reweave 
 | `docs/` | Public design notes (story, style, changelog) |
 | `art/` | Source art (not all files ship in the pack zip) |
 
+## Credits
+
+See the [mod credits](docs/CREDITS.md) for all 87 outside mods, their authors, and links to their CurseForge pages. Thank you to the creators whose work makes this pack possible.
+
 ## License
 
 Original pack configuration, quests, and custom code/assets: All rights reserved unless a file says otherwise.  
