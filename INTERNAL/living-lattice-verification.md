@@ -71,6 +71,15 @@ Validation:
 - Six pack gates and exported archive validation passed. 1154 quest item references, no missing IDs or detected dead ends. New rarity gate requires exactly six nonrepeatable team life rewards in the intended chapters.
 - Export: dist/NinjacatSkies-0.5.0-alpha-20260907-002743.zip. Embedded Tribal Power, Skies, and Clowder Hall jars match current pack binaries byte-for-byte; enabled shared-life config is present.
 
-Limitations: this is targeted automated and full-client QA, not a complete survival campaign or a sustained multi-human multiplayer playthrough. Existing third-party optional-model/Moonlight warnings remain. Changing FTB teams switches pools. This new feature build has not been pushed or uploaded; the preceding 2.1.0 / 0.4.0-alpha release remains the last published submission.
+Limitations: this is targeted automated and full-client QA, not a complete survival campaign or a sustained multi-human multiplayer playthrough. Existing third-party optional-model/Moonlight warnings remain. Changing FTB teams switches pools. This feature build was subsequently pushed and submitted to CurseForge; see the publication record below.
 
 Main-menu polish: built-in image generation produced the illustrated aurora/sky-island backdrop now shipped as title_aurora.png. Enlarged title and responsive controls, centralized the Field Guide, retained native actions, and verified the actual full-pack menu at 854x480. Preview: docs/images/main-menu.png. Prompt/provenance: docs/menu-art.md. Dev-only menu capture hook does nothing in normal launches.
+
+
+## 2026-09-07 publication: Returning Song
+
+- Tribal Power source pushed to rewrite/shamanic-technomancy at 1f88e11.
+- Ninjacat Skies source pushed to master at 3819508.
+- CurseForge accepted Tribal Power 2.2.0 alpha, file 8827894: https://www.curseforge.com/minecraft/mc-mods/tribal-power/files/8827894
+- CurseForge accepted Ninjacat Skies 0.5.0-alpha, file 8827897: https://www.curseforge.com/minecraft/modpacks/ninjacat-skies/files/8827897
+- Core API confirmed both filenames and project IDs. Immediately after submission both had isAvailable=false (Tribal fileStatus=3, pack fileStatus=20); public availability is pending CurseForge processing/review.
