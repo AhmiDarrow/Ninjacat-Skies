@@ -108,3 +108,6 @@ Generated the new masked-cat/aurora logo, preserved the master in art/branding, 
 ## 0.5.2 Field Guide hotfix
 Removed popup mode and raw multiline source values; aligned single-line text elements to a 1280x720 scale basis. Spoiler-free essentials only, with Back action. Full-pack 854x480 client screenshot confirms all text and button visible (docs/images/field-guide.png; QA asset cache uses previous logo). Native configuration structure and element bounds checked. Temporary Tribal Power screenshot instrumentation restored; QA client stopped. Former local Ninjacat Skies CurseForge profile no longer exists, so distribute the corrected import ZIP. Export sanitization and archive checks passed.
 
+
+Packaging correction: the initial 0.5.2 Python export lacked manifest.image; its archive gate failed. Corrected Python exporter parity with required 400x400 profile image and author. 0.5.3 export passed sanitization and ExportDryRun. Use 0.5.3 instead of 0.5.2.
+
