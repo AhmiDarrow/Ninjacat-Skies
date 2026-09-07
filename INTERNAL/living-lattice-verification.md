@@ -98,3 +98,9 @@ Verified the installed CurseForge 1.320.0.9172 import/export implementation: pro
 Generated the new masked-cat/aurora logo, preserved the master in art/branding, checked readability at 160px, and refreshed profile/resource-pack/window assets and the GitHub README. Three exporter regression tests and final archive validation passed. Latest GitHub import ZIP: NinjacatSkies-0.5.0-alpha-20260907-005658.zip.
 
 0.5.1-alpha publication: CurseForge accepted file 8828040 on project 1684777, containing the new logo/import branding and Tribal Power 2.2.1. Public project avatar update requires Author Console sign-in; the archive itself already includes the logo.
+
+## 2026-09-07 CurseForge branding published
+- Authenticated Author Console project 1684777: uploaded docs/public/pack-icon.png, accepted square crop, saved logo and new story/quests/lives/aurora summary. UI confirmed Changes saved successfully.
+- Replaced outdated public description with current 1,485 quests / 38 chapters, Tribal Power 2.2.1 canonical project link, thirteen creatures, auroras, automation/transport, shared three-lives-per-member pool and six one-time life milestones. UI confirmed Changes saved successfully.
+- Ninjacat Skies 0.5.1-alpha file 8828040 remains subject to CurseForge processing/review; GitHub release ZIP is uploaded. Tribal Power 2.2.1 file 8827923 is on canonical project 1684851.
+
