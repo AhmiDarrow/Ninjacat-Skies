@@ -1,5 +1,7 @@
 # Ninjacat Skies
 
+<img src="docs/public/pack-icon.png" width="256" alt="Ninjacat Skies logo: a masked sky-cat framed by an aurora" />
+
 A multiplayer skyblock quest modpack for **Minecraft 1.21.1 / NeoForge**.
 
 Rebuild floating pads from nothing—sieve, farm, forge, automate—and reweave the Loom across nine Strands.

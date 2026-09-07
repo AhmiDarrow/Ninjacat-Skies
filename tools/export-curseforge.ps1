@@ -123,7 +123,7 @@ if (-not (Test-Path $manifestOut)) {
   "manifestVersion": 1,
   "name": "Ninjacat Skies",
   "version": "$packVersion",
-  "author": "Ninjacat Skies",
+  "author": "Ahmi & Risika Darrow",
   "files": $filesJson,
   "overrides": "overrides"
 }
@@ -133,10 +133,16 @@ if (-not (Test-Path $manifestOut)) {
 }
 
 # --- pack icon (CF project / profile avatar) ---
-# CF moderation requires square avatar >= 400x400. Ship root icon.png for import/profile.
+# CurseForge import resolves manifest.image; merely including icon.png does not set the profile image.
 $iconSrc = Join-Path $root "docs\public\pack-icon.png"
 if (-not (Test-Path $iconSrc)) { $iconSrc = Join-Path $root "pack\overrides\pack-icon.png" }
 if (Test-Path $iconSrc) {
+    $profileImageDir = Join-Path $stage "profileImage"
+    New-Item -ItemType Directory -Force $profileImageDir | Out-Null
+    Copy-Item $iconSrc (Join-Path $profileImageDir "ninjacat-skies.png") -Force
+    $brandedManifest = Get-Content $manifestOut -Raw | ConvertFrom-Json
+    $brandedManifest | Add-Member -NotePropertyName image -NotePropertyValue "profileImage/ninjacat-skies.png" -Force
+    [System.IO.File]::WriteAllText($manifestOut, ($brandedManifest | ConvertTo-Json -Depth 30), $utf8)
     Copy-Item $iconSrc (Join-Path $stage "icon.png") -Force
     Copy-Item $iconSrc (Join-Path $stage "overrides\pack-icon.png") -Force
 }
@@ -165,9 +171,12 @@ MEMORY (required)
   Minimum viable: 6144 MB. Recommended: 8192–10240 MB.
 
 ICON
-  Root icon.png + overrides/pack-icon.png ship the pack paw (512×512).
+  manifest.image references the bundled profileImage/ninjacat-skies.png (512×512).
+  CurseForge uses this field to load the imported profile artwork.
   CurseForge PROJECT page avatar/description must still be set in the
   Author Console (General + Description tabs) — zip import alone does not.
+  Imported custom profiles may still display My creation rather than a project author.
+  The included store-description.html contains the full pack description.
 
 UI
   Enable the ninjacat-skies-ui resource pack if title/splashes look vanilla.
