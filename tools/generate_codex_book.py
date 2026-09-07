@@ -72,11 +72,10 @@ def advancement(path: str) -> dict:
 # ------------------------------------------------------------------------------------ book
 
 w(BOOK / "book.json", {
-    "name": "Whisker Codex",
+    "name": "Whisker Field Notes",
     "tooltip": "Damaged, but it still assigns work.",
     "description": "The Loom was cut. This is what is left of the manual.",
-    "generate_book_item": False,
-    "custom_book_item": f"{NS}:whisker_codex",
+    "generate_book_item": True,
     "default_title_color": 0xD4A84B,
     "auto_add_read_conditions": False,
 })

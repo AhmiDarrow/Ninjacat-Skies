@@ -25,5 +25,6 @@
   "subtitles.ninjacatskies.loom_hum": "The Loom hums",
   "subtitles.ninjacatskies.reweave": "The cut closes",
   "subtitles.ninjacatskies.page": "Page turns",
-  "advancements.ninjacatskies.reweave.title": "Reweave"
+  "advancements.ninjacatskies.reweave.title": "Reweave",
+  "tooltip.ninjacatskies.codex.quests": "Right-click: quests and rewards. Sneak-use: next-step hint."
 }

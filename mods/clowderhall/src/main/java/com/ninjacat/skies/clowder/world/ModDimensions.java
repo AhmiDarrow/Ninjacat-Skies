@@ -299,7 +299,7 @@ public final class ModDimensions {
                                 "/clowder revive (self) or <mate>\n\n" +
                                 "Create Team is Dock-only:\n" +
                                 "return to Clowder Dock, then\n" +
-                                "right-click Island Charter (or C)."
+                                "right-click Island Charter (or K)."
                 ))
         );
         WrittenBookContent content = new WrittenBookContent(
@@ -325,7 +325,7 @@ public final class ModDimensions {
                 Filterable.passThrough(Component.literal(
                         "CLAIM A PAD\n\n" +
                                 "1) Leave Hall (Hub Key / /clowder return)\n" +
-                                "2) On Clowder Dock: Island Charter (or C)\n" +
+                                "2) On Clowder Dock: Island Charter (or K)\n" +
                                 "3) Create Team → name your Clowder\n" +
                                 "4) Pick a pad:\n" +
                                 "   Ninjacat Pad = Normal\n" +
@@ -353,7 +353,7 @@ public final class ModDimensions {
                                 "• /skybound lives checks the pool\n" +
                                 "• Op: /skybound revive [player]\n\n" +
                                 "Hub Key toggles Hall enter/leave.\n" +
-                                "Charter seals spawn on solid pad ground."
+                                "Sneak-use Charter seals spawn on solid pad ground."
                 ))
         );
         WrittenBookContent content = new WrittenBookContent(

@@ -1,0 +1,302 @@
+[
+  {
+    "name": "key.ftbquests.quests",
+    "key": "key.keyboard.grave.accent",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "skyguis.key.all_teams_screen",
+    "key": "key.keyboard.k",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_open_map",
+    "key": "key.keyboard.m",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.sophisticatedbackpacks.open_backpack",
+    "key": "key.keyboard.b",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.curios.open.desc",
+    "key": "key.keyboard.g",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.ars_nouveau.open_book",
+    "key": "key.keyboard.c",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.ars_nouveau.selection_hud",
+    "key": "key.keyboard.v",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.ars_nouveau.next_slot",
+    "key": "key.keyboard.x",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.ars_nouveau.previous_slot",
+    "key": "key.keyboard.z",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.irons_spellbooks.spellbook_cast",
+    "key": "key.keyboard.r",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.irons_spellbooks.spell_wheel",
+    "key": "key.keyboard.h",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.mekanism.mode",
+    "key": "key.keyboard.n",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.mekanism.module_tweaker",
+    "key": "key.keyboard.backslash",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.mekanism.key_hud",
+    "key": "key.keyboard.f10",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.ae2.wireless_terminal",
+    "key": "key.keyboard.j",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_new_waypoint",
+    "key": "key.keyboard.y",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_waypoints_key",
+    "key": "key.keyboard.u",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_enlarge_map",
+    "key": "key.keyboard.o",
+    "modifier": "NONE",
+    "context": "world"
+  },
+  {
+    "name": "key.ftbchunks.map",
+    "key": "key.keyboard.m",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "key.ftbchunks.claim_manager",
+    "key": "key.keyboard.comma",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "key.ftbquests.cycle_pinned_tracker",
+    "key": "key.keyboard.grave.accent",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "key.occultism.backpack",
+    "key": "key.keyboard.b",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "key.occultism.storage_remote",
+    "key": "key.keyboard.n",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "key.ae2.wireless_pattern_access_terminal",
+    "key": "key.keyboard.j",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "key.ae2.portable_item_cell",
+    "key": "key.keyboard.i",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_minimap_settings",
+    "key": "key.keyboard.y",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_toggle_map",
+    "key": "key.keyboard.o",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_toggle_waypoints",
+    "key": "key.keyboard.u",
+    "modifier": "CONTROL",
+    "context": "world"
+  },
+  {
+    "name": "key.ftbteams.open_gui",
+    "key": "key.keyboard.k",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.mekanism.head_mode",
+    "key": "key.keyboard.v",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.mekanism.chest_mode",
+    "key": "key.keyboard.g",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.mekanism.legs_mode",
+    "key": "key.keyboard.j",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.mekanism.feet_mode",
+    "key": "key.keyboard.b",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.ars_nouveau.head_curio_hotkey",
+    "key": "key.keyboard.c",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.occultism.ender_bag",
+    "key": "key.keyboard.n",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.ae2.wireless_pattern_encoding_terminal",
+    "key": "key.keyboard.p",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.ae2.portable_fluid_cell",
+    "key": "key.keyboard.i",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "supplementaries.keybind.quiver",
+    "key": "key.keyboard.r",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "gui.xaero_open_settings",
+    "key": "key.keyboard.y",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.guideme.guide",
+    "key": "key.keyboard.g",
+    "modifier": "CONTROL",
+    "context": "original"
+  },
+  {
+    "name": "key.kubejs.kubedex",
+    "key": "key.keyboard.f8",
+    "modifier": "NONE",
+    "context": "original"
+  },
+  {
+    "name": "key.modularrouters.configure",
+    "key": "key.keyboard.c",
+    "modifier": "CONTROL",
+    "context": "original"
+  },
+  {
+    "name": "key.modularrouters.moduleInfo",
+    "key": "key.keyboard.i",
+    "modifier": "NONE",
+    "context": "original"
+  },
+  {
+    "name": "key.silentgear.cycle.back",
+    "key": "key.keyboard.z",
+    "modifier": "CONTROL",
+    "context": "original"
+  },
+  {
+    "name": "key.silentgear.cycle.next",
+    "key": "key.keyboard.x",
+    "modifier": "CONTROL",
+    "context": "original"
+  },
+  {
+    "name": "key.silentgear.openItem",
+    "key": "key.keyboard.x",
+    "modifier": "ALT",
+    "context": "original"
+  },
+  {
+    "name": "key.sophisticatedbackpacks.inventory_interaction",
+    "key": "key.keyboard.semicolon",
+    "modifier": "ALT",
+    "context": "original"
+  },
+  {
+    "name": "key.sophisticatedbackpacks.tool_swap",
+    "key": "key.keyboard.semicolon",
+    "modifier": "CONTROL",
+    "context": "original"
+  },
+  {
+    "name": "key.saveToolbarActivator",
+    "key": "key.keyboard.f6",
+    "modifier": "NONE",
+    "context": "original"
+  },
+  {
+    "name": "key.loadToolbarActivator",
+    "key": "key.keyboard.f7",
+    "modifier": "NONE",
+    "context": "original"
+  }
+]

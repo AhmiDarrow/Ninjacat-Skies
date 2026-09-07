@@ -19,6 +19,7 @@ dependencies {
     // Jars come from tools/download-mods.ps1 into pack/mods.
     compileOnly fileTree(dir: rootProject.file('../pack/mods'), include: [
             'ftb-teams-neoforge-*.jar',
+            'ftb-quests-neoforge-*.jar',
             'ftb-library-neoforge-*.jar',
             'architectury-*-neoforge.jar',
             'modonomicon-*-neoforge-*.jar',
