@@ -96,3 +96,5 @@ Publication correction completed: packaging-only Tribal Power version bump to 2.
 Verified the installed CurseForge 1.320.0.9172 import/export implementation: profile images are referenced by manifest.image, normally under profileImage/. Added that field and a bundled PNG to the exporter; root icon.png alone was insufficient. Full descriptions remain project-page metadata; HTML/Markdown descriptions continue to ship in the profile. Updated the existing local profile image/custom author with a backup under ignored build/profile-branding-backups; UI refresh may require reopening CurseForge.
 
 Generated the new masked-cat/aurora logo, preserved the master in art/branding, checked readability at 160px, and refreshed profile/resource-pack/window assets and the GitHub README. Three exporter regression tests and final archive validation passed. Latest GitHub import ZIP: NinjacatSkies-0.5.0-alpha-20260907-005658.zip.
+
+0.5.1-alpha publication: CurseForge accepted file 8828040 on project 1684777, containing the new logo/import branding and Tribal Power 2.2.1. Public project avatar update requires Author Console sign-in; the archive itself already includes the logo.
