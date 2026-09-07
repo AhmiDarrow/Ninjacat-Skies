@@ -87,3 +87,5 @@ Main-menu polish: built-in image generation produced the illustrated aurora/sky-
 Canonical Tribal Power CurseForge project ID: **1684851** (user-confirmed and API-verified). All former project-ID references are superseded and removed from local publishing helpers.
 
 Correction status: upload to canonical project 1684851 returned HTTP 500; a subsequent Core API file listing was empty. No successful canonical upload is claimed. Pack dependency metadata now records 1684851 with fileId=0, deliberately retaining the tested bundled JAR until a valid downloadable file exists. Existing GitHub import ZIP contains the JAR directly and has no incorrect Tribal Power manifest reference.
+
+Publication correction completed: packaging-only Tribal Power version bump to 2.2.1 successfully uploaded to canonical project 1684851 as file 8827923. The earlier HTTP 500 did not recur with the new version. Refreshed GitHub import archive: NinjacatSkies-0.5.0-alpha-20260907-003936.zip, bundling the exact 2.2.1 binary.
