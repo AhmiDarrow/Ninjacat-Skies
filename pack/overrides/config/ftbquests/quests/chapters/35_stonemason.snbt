@@ -1,0 +1,374 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "35_stonemason"
+	group: "A100000000000004"
+	icon: {
+		id: "chipped:mason_table"
+	}
+	id: "B100000000000023"
+	images: [ ]
+	order_index: 34
+	quest_links: [ ]
+	quests: [
+		{
+			id: "C200000000230559"
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D200000000230559"
+					type: "item"
+					item: {
+						id: "chipped:mason_table"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000230559"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D100000000230559"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+		}
+		{
+			id: "C20000000023055A"
+			x: 0.0d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D20000000023055A"
+					type: "item"
+					item: {
+						id: "chipped:carpenters_table"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000023055A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000230559"]
+		}
+		{
+			id: "C20000000023055B"
+			x: 0.0d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D20000000023055B"
+					type: "item"
+					item: {
+						id: "chipped:glassblower"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000023055B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000230559"]
+		}
+		{
+			id: "C20000000023055C"
+			x: 0.0d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D20000000023055C"
+					type: "item"
+					item: {
+						id: "chipped:loom_table"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000023055C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000230559"]
+		}
+		{
+			id: "C20000000023055D"
+			x: 0.0d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D20000000023055D"
+					type: "item"
+					item: {
+						id: "chipped:botanist_workbench"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000023055D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C200000000230559"]
+		}
+		{
+			id: "C20000000023055E"
+			x: 1.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D20000000023055E"
+					type: "item"
+					item: {
+						id: "chipped:alchemy_bench"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000023055E"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D10000000023055E"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C200000000230559"]
+		}
+		{
+			id: "C20000000023055F"
+			x: 1.8d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D20000000023055F"
+					type: "item"
+					item: {
+						id: "chipped:tinkering_table"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E20000000023055F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C20000000023055E"]
+		}
+		{
+			id: "C200000000230560"
+			x: -3.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000230560"
+					type: "item"
+					item: {
+						id: "minecraft:stone_bricks"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000230560"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000023055A"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000230561"
+			x: -1.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000230561"
+					type: "item"
+					item: {
+						id: "minecraft:oak_planks"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000230561"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000023055A"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000230562"
+			x: 0.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000230562"
+					type: "item"
+					item: {
+						id: "minecraft:glass"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000230562"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000023055A"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000230563"
+			x: 1.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000230563"
+					type: "item"
+					item: {
+						id: "minecraft:polished_deepslate"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000230563"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000023055A"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000230564"
+			x: 3.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000230564"
+					type: "item"
+					item: {
+						id: "minecraft:bricks"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000230564"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000023055A"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C200000000230565"
+			x: 4.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D200000000230565"
+					type: "item"
+					item: {
+						id: "minecraft:sandstone"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E200000000230565"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C20000000023055A"]
+			hide_until_deps_complete: true
+		}
+	]
+}

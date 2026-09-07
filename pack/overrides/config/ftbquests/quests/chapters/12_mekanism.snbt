@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000000C01FB"
+			id: "C2000000000C0202"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000C01FB"
+					id: "D2000000000C0202"
 					type: "item"
 					item: {
 						id: "mekanism:ingot_steel"
@@ -27,218 +27,31 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000C01FB"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000000C01FB"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C2000000000C01FC"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000000C01FC"
-					type: "item"
-					item: {
-						id: "mekanism:ingot_osmium"
-						count: 16
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000C01FC"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000C01FB"]
-		}
-		{
-			id: "C2000000000C01FD"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000000C01FD"
-					type: "item"
-					item: {
-						id: "mekanism:ingot_refined_obsidian"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000C01FD"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000C01FB"]
-		}
-		{
-			id: "C2000000000C01FE"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000000C01FE"
-					type: "item"
-					item: {
-						id: "mekanism:basic_control_circuit"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000C01FE"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000C01FB"]
-		}
-		{
-			id: "C2000000000C01FF"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000000C01FF"
-					type: "item"
-					item: {
-						id: "mekanism:advanced_control_circuit"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000C01FF"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000C01FB"]
-		}
-		{
-			id: "C2000000000C0200"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000C0200"
-					type: "item"
-					item: {
-						id: "mekanism:elite_control_circuit"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000C0200"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000000C0200"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000000C01FB"]
-		}
-		{
-			id: "C2000000000C0201"
-			x: 1.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000000C0201"
-					type: "item"
-					item: {
-						id: "mekanism:metallurgic_infuser"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000C0201"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000C0200"]
-		}
-		{
-			id: "C2000000000C0202"
-			x: 1.8d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000000C0202"
-					type: "item"
-					item: {
-						id: "mekanism:enrichment_chamber"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E2000000000C0202"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000C0202"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000C0200"]
 		}
 		{
 			id: "C2000000000C0203"
-			x: 1.8d
-			y: 3.9d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000C0203"
 					type: "item"
 					item: {
-						id: "mekanism:crusher"
-						count: 1
+						id: "mekanism:ingot_osmium"
+						count: 16
 					}
 				}
 			]
@@ -252,19 +65,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C0200"]
+			dependencies: ["C2000000000C0202"]
 		}
 		{
 			id: "C2000000000C0204"
-			x: 1.8d
-			y: 5.2d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000C0204"
 					type: "item"
 					item: {
-						id: "mekanism:energized_smelter"
-						count: 1
+						id: "mekanism:ingot_refined_obsidian"
+						count: 4
 					}
 				}
 			]
@@ -278,19 +91,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C0200"]
+			dependencies: ["C2000000000C0202"]
 		}
 		{
 			id: "C2000000000C0205"
-			x: 3.6d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000C0205"
 					type: "item"
 					item: {
-						id: "mekanism:purification_chamber"
-						count: 1
+						id: "mekanism:basic_control_circuit"
+						count: 8
 					}
 				}
 			]
@@ -300,28 +113,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000000C0205"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000000C0200"]
+			dependencies: ["C2000000000C0202"]
 		}
 		{
 			id: "C2000000000C0206"
-			x: 3.6d
-			y: 1.3d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000C0206"
 					type: "item"
 					item: {
-						id: "mekanism:chemical_injection_chamber"
-						count: 1
+						id: "mekanism:advanced_control_circuit"
+						count: 4
 					}
 				}
 			]
@@ -335,19 +143,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C0205"]
+			dependencies: ["C2000000000C0202"]
 		}
 		{
 			id: "C2000000000C0207"
-			x: 3.6d
-			y: 2.6d
+			x: 1.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000C0207"
 					type: "item"
 					item: {
-						id: "mekanism:osmium_compressor"
-						count: 1
+						id: "mekanism:elite_control_circuit"
+						count: 2
 					}
 				}
 			]
@@ -357,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000C0207"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000C0205"]
+			dependencies: ["C2000000000C0202"]
 		}
 		{
 			id: "C2000000000C0208"
-			x: 3.6d
-			y: 3.9d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000C0208"
 					type: "item"
 					item: {
-						id: "mekanism:basic_bin"
-						count: 2
+						id: "mekanism:metallurgic_infuser"
+						count: 1
 					}
 				}
 			]
@@ -387,19 +200,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C0205"]
+			dependencies: ["C2000000000C0207"]
 		}
 		{
 			id: "C2000000000C0209"
-			x: 3.6d
-			y: 5.2d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000C0209"
 					type: "item"
 					item: {
-						id: "mekanism:basic_fluid_tank"
-						count: 2
+						id: "mekanism:enrichment_chamber"
+						count: 1
 					}
 				}
 			]
@@ -413,18 +226,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C0205"]
+			dependencies: ["C2000000000C0207"]
 		}
 		{
 			id: "C2000000000C020A"
-			x: 5.4d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000C020A"
 					type: "item"
 					item: {
-						id: "mekanism:basic_energy_cube"
+						id: "mekanism:crusher"
 						count: 1
 					}
 				}
@@ -435,28 +248,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000000C020A"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000000C0205"]
+			dependencies: ["C2000000000C0207"]
 		}
 		{
 			id: "C2000000000C020B"
-			x: 5.4d
-			y: 1.3d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000C020B"
 					type: "item"
 					item: {
-						id: "mekanism:basic_universal_cable"
-						count: 16
+						id: "mekanism:energized_smelter"
+						count: 1
 					}
 				}
 			]
@@ -470,19 +278,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C020A"]
+			dependencies: ["C2000000000C0207"]
 		}
 		{
 			id: "C2000000000C020C"
-			x: 5.4d
-			y: 2.6d
+			x: 3.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000C020C"
 					type: "item"
 					item: {
-						id: "mekanism:basic_mechanical_pipe"
-						count: 16
+						id: "mekanism:purification_chamber"
+						count: 1
 					}
 				}
 			]
@@ -492,23 +300,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000C020C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000C020A"]
+			dependencies: ["C2000000000C0207"]
 		}
 		{
 			id: "C2000000000C020D"
-			x: 5.4d
-			y: 3.9d
+			x: 3.6d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000C020D"
 					type: "item"
 					item: {
-						id: "mekanism:basic_logistical_transporter"
-						count: 16
+						id: "mekanism:chemical_injection_chamber"
+						count: 1
 					}
 				}
 			]
@@ -522,18 +335,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C020A"]
+			dependencies: ["C2000000000C020C"]
 		}
 		{
 			id: "C2000000000C020E"
-			x: 5.4d
-			y: 5.2d
+			x: 3.6d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000C020E"
 					type: "item"
 					item: {
-						id: "mekanism:configurator"
+						id: "mekanism:osmium_compressor"
 						count: 1
 					}
 				}
@@ -548,19 +361,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000C020A"]
+			dependencies: ["C2000000000C020C"]
 		}
 		{
 			id: "C2000000000C020F"
-			x: 0.0d
-			y: 7.5d
+			x: 3.6d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000C020F"
 					type: "item"
 					item: {
-						id: "mekanism:jetpack"
-						count: 1
+						id: "mekanism:basic_bin"
+						count: 2
 					}
 				}
 			]
@@ -570,25 +383,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000C01FC"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000C020C"]
 		}
 		{
 			id: "C2000000000C0210"
-			x: 1.5d
-			y: 7.5d
+			x: 3.6d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000C0210"
 					type: "item"
 					item: {
-						id: "mekanism:free_runners"
-						count: 1
+						id: "mekanism:basic_fluid_tank"
+						count: 2
 					}
 				}
 			]
@@ -598,24 +409,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000C01FC"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000C020C"]
 		}
 		{
 			id: "C2000000000C0211"
-			x: 3.0d
-			y: 7.5d
+			x: 5.4d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000C0211"
 					type: "item"
 					item: {
-						id: "mekanism:atomic_disassembler"
+						id: "mekanism:basic_energy_cube"
 						count: 1
 					}
 				}
@@ -626,25 +435,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000C0211"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			optional: true
-			dependencies: ["C2000000000C01FC"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000C020C"]
 		}
 		{
 			id: "C2000000000C0212"
-			x: 4.5d
-			y: 7.5d
+			x: 5.4d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000C0212"
 					type: "item"
 					item: {
-						id: "mekanism:steel_casing"
-						count: 8
+						id: "mekanism:basic_universal_cable"
+						count: 16
 					}
 				}
 			]
@@ -654,25 +466,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000C01FC"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000C0211"]
 		}
 		{
 			id: "C2000000000C0213"
-			x: 6.0d
-			y: 7.5d
+			x: 5.4d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000C0213"
 					type: "item"
 					item: {
-						id: "mekanism:teleporter"
-						count: 1
+						id: "mekanism:basic_mechanical_pipe"
+						count: 16
 					}
 				}
 			]
@@ -682,25 +492,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 1
+						count: 2
 					}
 				}
 			]
-			optional: true
-			dependencies: ["C2000000000C01FC"]
-			hide_until_deps_complete: true
+			dependencies: ["C2000000000C0211"]
 		}
 		{
 			id: "C2000000000C0214"
-			x: 7.5d
-			y: 7.5d
+			x: 5.4d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000C0214"
 					type: "item"
 					item: {
-						id: "mekanism:digital_miner"
-						count: 1
+						id: "mekanism:basic_logistical_transporter"
+						count: 16
 					}
 				}
 			]
@@ -710,12 +518,204 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000C0211"]
+		}
+		{
+			id: "C2000000000C0215"
+			x: 5.4d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000000C0215"
+					type: "item"
+					item: {
+						id: "mekanism:configurator"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C0215"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000C0211"]
+		}
+		{
+			id: "C2000000000C0216"
+			x: 0.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D2000000000C0216"
+					type: "item"
+					item: {
+						id: "mekanism:jetpack"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C0216"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
 						count: 1
 					}
 				}
 			]
 			optional: true
-			dependencies: ["C2000000000C01FC"]
+			dependencies: ["C2000000000C0203"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000C0217"
+			x: 1.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D2000000000C0217"
+					type: "item"
+					item: {
+						id: "mekanism:free_runners"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C0217"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000C0203"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000C0218"
+			x: 3.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D2000000000C0218"
+					type: "item"
+					item: {
+						id: "mekanism:atomic_disassembler"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C0218"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000C0203"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000C0219"
+			x: 4.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D2000000000C0219"
+					type: "item"
+					item: {
+						id: "mekanism:steel_casing"
+						count: 8
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C0219"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000C0203"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000C021A"
+			x: 6.0d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D2000000000C021A"
+					type: "item"
+					item: {
+						id: "mekanism:teleporter"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C021A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000C0203"]
+			hide_until_deps_complete: true
+		}
+		{
+			id: "C2000000000C021B"
+			x: 7.5d
+			y: 7.5d
+			tasks: [
+				{
+					id: "D2000000000C021B"
+					type: "item"
+					item: {
+						id: "mekanism:digital_miner"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000C021B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+			]
+			optional: true
+			dependencies: ["C2000000000C0203"]
 			hide_until_deps_complete: true
 		}
 	]

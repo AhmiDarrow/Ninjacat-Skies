@@ -20,8 +20,8 @@
 					id: "D2000000000B01E7"
 					type: "item"
 					item: {
-						id: "functionalstorage:oak_1"
-						count: 2
+						id: "sophisticatedstorage:controller"
+						count: 1
 					}
 				}
 			]
@@ -50,7 +50,7 @@
 					id: "D2000000000B01E8"
 					type: "item"
 					item: {
-						id: "functionalstorage:oak_2"
+						id: "sophisticatedstorage:copper_barrel"
 						count: 2
 					}
 				}
@@ -76,8 +76,8 @@
 					id: "D2000000000B01E9"
 					type: "item"
 					item: {
-						id: "functionalstorage:oak_4"
-						count: 2
+						id: "sophisticatedstorage:iron_barrel"
+						count: 1
 					}
 				}
 			]
@@ -102,7 +102,7 @@
 					id: "D2000000000B01EA"
 					type: "item"
 					item: {
-						id: "functionalstorage:compacting_drawer"
+						id: "sophisticatedstorage:advanced_magnet_upgrade"
 						count: 1
 					}
 				}
@@ -128,7 +128,7 @@
 					id: "D2000000000B01EB"
 					type: "item"
 					item: {
-						id: "functionalstorage:storage_controller"
+						id: "sophisticatedstorage:hopper_upgrade"
 						count: 1
 					}
 				}
@@ -154,7 +154,7 @@
 					id: "D2000000000B01EC"
 					type: "item"
 					item: {
-						id: "functionalstorage:collector_upgrade"
+						id: "sophisticatedstorage:advanced_void_upgrade"
 						count: 1
 					}
 				}
@@ -185,7 +185,7 @@
 					id: "D2000000000B01ED"
 					type: "item"
 					item: {
-						id: "functionalstorage:puller_upgrade"
+						id: "sophisticatedstorage:advanced_pickup_upgrade"
 						count: 1
 					}
 				}
@@ -211,8 +211,8 @@
 					id: "D2000000000B01EE"
 					type: "item"
 					item: {
-						id: "functionalstorage:pusher_upgrade"
-						count: 1
+						id: "functionalstorage:oak_1"
+						count: 2
 					}
 				}
 			]
@@ -237,8 +237,8 @@
 					id: "D2000000000B01EF"
 					type: "item"
 					item: {
-						id: "functionalstorage:void_upgrade"
-						count: 1
+						id: "functionalstorage:oak_2"
+						count: 2
 					}
 				}
 			]
@@ -263,8 +263,8 @@
 					id: "D2000000000B01F0"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:backpack"
-						count: 1
+						id: "functionalstorage:oak_4"
+						count: 2
 					}
 				}
 			]
@@ -289,7 +289,7 @@
 					id: "D2000000000B01F1"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:iron_backpack"
+						id: "functionalstorage:compacting_drawer"
 						count: 1
 					}
 				}
@@ -320,7 +320,7 @@
 					id: "D2000000000B01F2"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:gold_backpack"
+						id: "functionalstorage:storage_controller"
 						count: 1
 					}
 				}
@@ -346,7 +346,7 @@
 					id: "D2000000000B01F3"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:diamond_backpack"
+						id: "functionalstorage:collector_upgrade"
 						count: 1
 					}
 				}
@@ -372,7 +372,7 @@
 					id: "D2000000000B01F4"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:pickup_upgrade"
+						id: "functionalstorage:puller_upgrade"
 						count: 1
 					}
 				}
@@ -398,7 +398,7 @@
 					id: "D2000000000B01F5"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:filter_upgrade"
+						id: "functionalstorage:pusher_upgrade"
 						count: 1
 					}
 				}
@@ -424,7 +424,7 @@
 					id: "D2000000000B01F6"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:crafting_upgrade"
+						id: "functionalstorage:void_upgrade"
 						count: 1
 					}
 				}
@@ -455,7 +455,7 @@
 					id: "D2000000000B01F7"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:feeding_upgrade"
+						id: "sophisticatedbackpacks:backpack"
 						count: 1
 					}
 				}
@@ -481,7 +481,7 @@
 					id: "D2000000000B01F8"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:restock_upgrade"
+						id: "sophisticatedbackpacks:iron_backpack"
 						count: 1
 					}
 				}
@@ -507,7 +507,7 @@
 					id: "D2000000000B01F9"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:deposit_upgrade"
+						id: "sophisticatedbackpacks:gold_backpack"
 						count: 1
 					}
 				}
@@ -533,7 +533,7 @@
 					id: "D2000000000B01FA"
 					type: "item"
 					item: {
-						id: "sophisticatedbackpacks:tank_upgrade"
+						id: "sophisticatedbackpacks:diamond_backpack"
 						count: 1
 					}
 				}
@@ -549,6 +549,198 @@
 				}
 			]
 			dependencies: ["C2000000000B01F6"]
+		}
+		{
+			id: "C2000000000B01FB"
+			x: 7.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000B01FB"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:pickup_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000B01FB"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000000B01FB"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000000B01F6"]
+		}
+		{
+			id: "C2000000000B01FC"
+			x: 7.2d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000000B01FC"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:filter_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000B01FC"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000B01FB"]
+		}
+		{
+			id: "C2000000000B01FD"
+			x: 7.2d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000000B01FD"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:crafting_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000B01FD"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000B01FB"]
+		}
+		{
+			id: "C2000000000B01FE"
+			x: 7.2d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000000B01FE"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:feeding_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000B01FE"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000B01FB"]
+		}
+		{
+			id: "C2000000000B01FF"
+			x: 7.2d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000000B01FF"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:restock_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000B01FF"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000B01FB"]
+		}
+		{
+			id: "C2000000000B0200"
+			x: 9.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000B0200"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:deposit_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000B0200"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000000B0200"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000000B01FB"]
+		}
+		{
+			id: "C2000000000B0201"
+			x: 9.0d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000000B0201"
+					type: "item"
+					item: {
+						id: "sophisticatedbackpacks:tank_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000B0201"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000B0200"]
 		}
 	]
 }

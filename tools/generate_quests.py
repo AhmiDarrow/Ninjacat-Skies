@@ -65,6 +65,10 @@ CH = {
     "qio": hid(0xB100000000000020),
     "mobfarm": hid(0xB100000000000021),
     "tribal": hid(0xB100000000000022),
+    "stonemason": hid(0xB100000000000023),
+    "furnish": hid(0xB100000000000024),
+    "stewardries": hid(0xB100000000000025),
+    "current": hid(0xB100000000000026),
 }
 
 lang: dict[str, object] = {
@@ -597,6 +601,10 @@ CHAPTER_SUBTITLES = {
     15: ["Teams, the Hall, the Post, and the Fray."],
     16: ["Spend Thread. No dependencies, no order."],
     25: ["Every nest is a ring of something around a flower."],
+    35: ["Grit-singers cut one stone a hundred ways."],
+    36: ["A pad is a ledge until someone puts a chair on it."],
+    37: ["The little machines the stewards left."],
+    38: ["The Drumhearts' pulse learns to run in copper."],
 }
 
 
@@ -1355,9 +1363,21 @@ def build_exdeorum_side() -> list[dict]:
     ], origin=(0.0, 7.5), cols=6)
 
 
+def _sophisticated_storage_rows():
+    return [
+        ("Storage Controller", "sophisticatedstorage:controller", 1, "Link a wall of barrels into one network you reach from a single face."),
+        ("Copper Barrel", "sophisticatedstorage:copper_barrel", 2, "A barrel that upgrades: filters, hoppers, magnets, void."),
+        ("Iron Barrel", "sophisticatedstorage:iron_barrel", 1, "More slots, more upgrade rows."),
+        ("Stack Upgrade", "sophisticatedstorage:advanced_magnet_upgrade", 1, "Pull dropped items straight into the barrel from across the pad."),
+        ("Hopper Upgrade", "sophisticatedstorage:hopper_upgrade", 1, "In one side, out the other, no hopper block needed."),
+        ("Void Upgrade", "sophisticatedstorage:advanced_void_upgrade", 1, "Throw away the overflow the sieve keeps making."),
+        ("Pickup Upgrade", "sophisticatedstorage:advanced_pickup_upgrade", 1, "The barrel grabs what it is filtered for, automatically."),
+    ]
+
+
 def build_storage_side() -> list[dict]:
     s = 11
-    return chain(s, [
+    return chain(s, _sophisticated_storage_rows() + [
         ("Oak Drawer 1x1", "functionalstorage:oak_1", 2, "Simple drawers."),
         ("Oak Drawer 1x2", "functionalstorage:oak_2", 2, "Split drawer."),
         ("Oak Drawer 2x2", "functionalstorage:oak_4", 2, "Quad drawer."),
@@ -1903,9 +1923,21 @@ def build_bees_side() -> list[dict]:
     return main + side
 
 
+def _modular_router_rows():
+    return [
+        ("Modular Router", "modularrouters:modular_router", 1, "One block that moves items where you tell it — the pad's nervous system."),
+        ("Blank Module", "modularrouters:blank_module", 4, "The card every router behaviour is written onto."),
+        ("Puller Module", "modularrouters:puller_module_1", 1, "Pull items out of a neighbour into the router."),
+        ("Sender Module", "modularrouters:sender_module_1", 1, "Push items to a marked spot across the pad."),
+        ("Breaker Module", "modularrouters:breaker_module", 1, "Break a block in front of the router and keep the drop."),
+        ("Placer Module", "modularrouters:placer_module", 1, "Place a block where the router points."),
+        ("Detector Module", "modularrouters:detector_module", 1, "Emit redstone when the router's contents cross a threshold."),
+    ]
+
+
 def build_pipes_side() -> list[dict]:
     s = 26
-    return chain(s, [
+    return chain(s, _modular_router_rows() + [
         ("Item Pipe", "pipez:item_pipe", 16, "Move stacks."),
         ("Fluid Pipe", "pipez:fluid_pipe", 16, "Move liquids."),
         ("Energy Pipe", "pipez:energy_pipe", 16, "Move power."),
@@ -2417,6 +2449,123 @@ def build_shop() -> list[dict]:
     return shop
 
 
+
+def build_stonemason() -> list[dict]:
+    """Grit-singers cut one stone a hundred ways — Chipped."""
+    s = 35
+    main = chain(s, [
+        ("Mason Table", "chipped:mason_table", 1, "Grit-singers never cut a stone the same way twice. This bench remembers every cut."),
+        ("Carpenter's Table", "chipped:carpenters_table", 1, "The same trick for wood — a hundred planks from one."),
+        ("Glassblower", "chipped:glassblower", 1, "Sand into glass, then glass into every shape the light will take."),
+        ("Loom Table", "chipped:loom_table", 1, "Wool and cloth, rewoven — fitting, for a pad that is mending a loom."),
+        ("Botanist Workbench", "chipped:botanist_workbench", 1, "Leaves, saplings, and growing things, sorted into their variations."),
+        ("Alchemy Bench", "chipped:alchemy_bench", 1, "Coloured blocks and stranger stone. Pick a variant; the bench holds the rest."),
+        ("Tinkering Table", "chipped:tinkering_table", 1, "Metal and machine-facing blocks, cut to taste."),
+    ])
+    side = grid_optional(s, [
+        ("A Cut of Stone", "minecraft:stone_bricks", 8, "Feed a block into the Mason Table and choose from the wall of variants."),
+        ("A Cut of Planks", "minecraft:oak_planks", 8, "The Carpenter's Table does the same for wood."),
+        ("A Cut of Glass", "minecraft:glass", 8, "Every pane the Glassblower knows starts here."),
+        ("Deepslate Variety", "minecraft:polished_deepslate", 8, "Grit-singers' favourite stone to argue over."),
+        ("Bricks Variety", "minecraft:bricks", 8, "Fired clay, a hundred ways."),
+        ("Sandstone Variety", "minecraft:sandstone", 8, "Pad grit, cut fine."),
+    ], origin=(-3.0, 7.5), cols=6)
+    return main + side
+
+
+def build_furnish() -> list[dict]:
+    """A pad is a ledge until someone puts a chair on it — Handcrafted, Macaw's, FramedBlocks."""
+    s = 36
+    main = chain(s, [
+        ("A Chair", "handcrafted:oak_chair", 1, "The first thing that turns a pad into a place someone lives."),
+        ("A Table", "handcrafted:oak_table", 1, "Somewhere to put the Codex down while you think."),
+        ("A Bench", "handcrafted:oak_bench", 1, "Room for a Clowder to sit while the barrel works."),
+        ("A Shelf", "handcrafted:oak_shelf", 1, "For the Codex Pages you keep meaning to reread."),
+        ("A Cupboard", "handcrafted:oak_cupboard", 1, "Handcrafted storage that looks like it belongs."),
+        ("A Fancy Bed", "handcrafted:oak_fancy_bed", 1, "The Pad-keepers slept well. So should you."),
+        ("A Nightstand", "handcrafted:oak_nightstand", 1, "A lantern, a page, a place for both."),
+        ("Framing Saw", "framedblocks:framing_saw", 1, "Cut a frame, then dress it in any block. One shape, every skin."),
+        ("Framed Cube", "framedblocks:framed_cube", 8, "A blank cube waiting for a camouflage block."),
+        ("Framed Slab", "framedblocks:framed_slab", 8, "Half a frame; twice the options."),
+        ("Framed Stairs", "framedblocks:framed_stairs", 8, "Steps that wear whatever wall they sit in."),
+        ("Framed Slope", "framedblocks:framed_slope", 8, "For roofs and rooflines the void never gave you."),
+        ("Rope Bridge", "mcwbridges:balustrade_cobblestone_bridge", 1, "Edge-walkers spanned the void with less. Reach the next pad in style."),
+        ("Attic Roof", "mcwroofs:oak_attic_roof", 4, "A roof over the pad. The rain up here is only ever ambition."),
+    ])
+    side = grid_optional(s, [
+        ("Couch", "handcrafted:oak_couch", 1, "Comfort is infrastructure too."),
+        ("Counter", "handcrafted:oak_counter", 1, "A kitchen edge for the Farmer's Delight line."),
+        ("Desk", "handcrafted:oak_desk", 1, "Where the Whisker Codex gets its margins."),
+        ("Drawer", "handcrafted:oak_drawer", 1, "Small storage that matches the table."),
+        ("Framed Door", "framedblocks:framed_door", 1, "A threshold that hides in the wall."),
+        ("Framed Panel", "framedblocks:framed_panel", 8, "Thin cover; full disguise."),
+        ("Framed Fence", "framedblocks:framed_fence", 8, "An edge rail you can dress to taste."),
+        ("Andesite Bridge", "mcwbridges:balustrade_andesite_bridge", 1, "Grey and honest, like the grit it came from."),
+    ], origin=(-4.0, 7.5), cols=6)
+    return main + side
+
+
+def build_stewardries() -> list[dict]:
+    """The little machines the stewards left — Supplementaries, Comforts."""
+    s = 37
+    main = chain(s, [
+        ("Sconce", "supplementaries:sconce", 4, "A wall light that is not a torch stuck in shame. The stewards had standards."),
+        ("Hourglass", "supplementaries:hourglass", 1, "Sand, falling. The only honest clock before the Clock Strand."),
+        ("Faucet", "supplementaries:faucet", 1, "Drip a fluid out of a block. Small; oddly satisfying."),
+        ("Crank", "supplementaries:crank", 1, "Turn it by hand. The Drumhearts started somewhere too."),
+        ("Item Shelf", "supplementaries:item_shelf", 2, "Show a thing off. A token, a page, a trophy."),
+        ("Sack", "supplementaries:sack", 1, "A bag that holds bags. Recover's clutter, tidied."),
+        ("Safe", "supplementaries:safe", 1, "Lock the Frayed Thread away from your own worse ideas."),
+        ("Notice Board", "supplementaries:notice_board", 1, "Pin a page where the whole Clowder reads it."),
+        ("Planter", "supplementaries:planter", 2, "A pot with ambitions. Grow a little where the pad is thin."),
+        ("Pedestal", "supplementaries:pedestal", 1, "Raise the Spindle Loom Fragment where it can be admired."),
+        ("Jar", "supplementaries:jar", 4, "Store cookies, bees, or the small dignity of order."),
+        ("Sleeping Bag", "comforts:sleeping_bag_white", 1, "Set a spawn without hauling a whole bed up the ladder."),
+        ("Hammock", "comforts:hammock_white", 1, "Sleep through the day so the mobs meet a rested Skybound."),
+        ("Rope and Nail", "comforts:rope_and_nail", 2, "Hang the hammock between two posts, over the drop, and dare it."),
+    ])
+    side = grid_optional(s, [
+        ("Candle Holder", "supplementaries:candle_holder", 4, "A steadier flame for the pad's long nights."),
+        ("Rope", "supplementaries:rope", 16, "Climb, hang, or bridge. Edge-walkers swore by it."),
+        ("Pulley Block", "supplementaries:pulley_block", 1, "Raise and lower the rope on a redstone whim."),
+        ("Feather Block", "supplementaries:feather_block", 2, "Fall onto it and the void forgets to punish you."),
+        ("Blackboard", "supplementaries:blackboard", 1, "Chalk a plan the whole Clowder can argue with."),
+        ("Cage", "supplementaries:cage", 1, "Carry a small thing that would rather you didn't."),
+    ], origin=(-4.0, 7.5), cols=6)
+    return main + side
+
+
+def build_current() -> list[dict]:
+    """The Drumhearts' pulse learns to run in copper — Create Addition, Enchantment Industry, Mek Generators, wireless AE2."""
+    s = 38
+    main = chain(s, [
+        ("Copper Wire", "createaddition:copper_wire", 8, "The first wire. The pulse the Drumhearts kept now has somewhere to go."),
+        ("Connector", "createaddition:connector", 2, "Rotation on one side, Forge Energy on the other. Two Strands shaking hands."),
+        ("Electric Motor", "createaddition:electric_motor", 1, "Energy back into rotation. The Clock Strand runs on the Spark Strand now."),
+        ("Capacitor", "createaddition:capacitor", 1, "Hold a charge between the wire and the work."),
+        ("Modular Accumulator", "createaddition:modular_accumulator", 1, "A wall of stored current, built as big as the pad allows."),
+        ("Rolling Mill", "createaddition:rolling_mill", 1, "Rods and wire from ingots — Create's answer to the press."),
+        ("Blaze Enchanter", "create_enchantment_industry:blaze_enchanter", 1, "Enchant without the table's superstition. Feed it experience, get intent."),
+        ("Experience Bucket", "create_enchantment_industry:experience_bucket", 1, "Liquid practice, carried. The stewards would have found this vulgar and useful."),
+        ("Printer", "create_enchantment_industry:printer", 1, "Copy a book, a plan, a page. The Codex approves, quietly."),
+        ("Heat Generator", "mekanismgenerators:heat_generator", 1, "Lava and heat into power. A bridge, not the Hum itself."),
+        ("Solar Generator", "mekanismgenerators:solar_generator", 1, "On a pad that is all sky, the sun is the one resource nobody rations."),
+        ("Wind Generator", "mekanismgenerators:wind_generator", 1, "The higher the pad, the harder it turns. Build tall."),
+        ("Bio Generator", "mekanismgenerators:bio_generator", 1, "Burn the Sprout Strand's surplus. Nothing on a pad is waste."),
+        ("Gas-Burning Generator", "mekanismgenerators:gas_burning_generator", 1, "Late power for a Clowder that went deep on Mekanism."),
+        ("Wireless Terminal", "ae2wtlib:wireless_universal_terminal", 1, "The digital loom, in your pocket. Reweave from anywhere on the pad."),
+        ("Chemical Cell", "appmek:chemical_storage_cell_1k", 1, "Mekanism's chemicals, stored in the AE2 network. Two late pillars, braided."),
+    ])
+    side = grid_optional(s, [
+        ("Large Connector", "createaddition:large_connector", 1, "For when the copper wire cannot carry the whole pulse."),
+        ("Experience Cake", "create_enchantment_industry:experience_cake", 1, "A cake that levels you. Do not tell the Kitchen line."),
+        ("Advanced Solar", "mekanismgenerators:advanced_solar_generator", 1, "A bigger bite of the same free sky."),
+        ("Chemical Housing", "appmek:chemical_cell_housing", 2, "The shell every chemical cell needs."),
+        ("Portable Chemical Cell", "appmek:portable_chemical_cell_1k", 1, "Carry a measure of gas off the network."),
+    ], origin=(-4.0, 7.5), cols=6)
+    return main + side
+
+
 def write_lang():
     LANG.mkdir(parents=True, exist_ok=True)
     lines = ["{"]
@@ -2480,6 +2629,10 @@ def main() -> None:
     write_chapter("32_qio", CH["qio"], GROUP_SIDE, 31, "mekanism:qio_dashboard", build_qio_side(), "QIO & Mek Peak")
     write_chapter("33_mobfarm", CH["mobfarm"], GROUP_SIDE, 32, "minecraft:rotten_flesh", build_mobfarm_side(), "Hunt & Farm")
     write_chapter("34_tribal", CH["tribal"], GROUP_SIDE, 33, "tribalpower:drumheart", build_tribal_side(), "Tribal Weave")
+    write_chapter("35_stonemason", CH["stonemason"], GROUP_SIDE, 34, "chipped:mason_table", build_stonemason(), "Stonemason")
+    write_chapter("36_furnish", CH["furnish"], GROUP_SIDE, 35, "handcrafted:oak_chair", build_furnish(), "Furnishings")
+    write_chapter("37_stewardries", CH["stewardries"], GROUP_SIDE, 36, "supplementaries:hourglass", build_stewardries(), "Small Stewardries")
+    write_chapter("38_current", CH["current"], GROUP_SIDE, 37, "createaddition:electric_motor", build_current(), "The Current")
     write_lang()
     titles = sum(1 for k in lang if k.startswith("quest.") and k.endswith(".title"))
     print(f"Wrote chapters + lang. Quest titles: {titles}. Skipped invalid: {len(WARNED)}")

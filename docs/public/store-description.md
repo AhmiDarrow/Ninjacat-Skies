@@ -37,6 +37,10 @@ Follow the **Whisker Codex** through nine Strands — Soil, Stone, Sprout, Claw,
 - Tribal Power 2.0.1 as a core pack pillar (also playable standalone)
 - Create, Mystical Agriculture, Productive Bees, AE2, Mekanism, Occultism, and more — woven into original quests
 
+## Mods
+
+Over 90 mods, all woven into the questline — Create, Mekanism, AE2, Powah, Mystical Agriculture, Productive Bees, Ars Nouveau, Occultism, Tribal Power, plus a deep decoration set (Chipped, Supplementaries, Handcrafted, Macaw's, FramedBlocks), storage (Sophisticated, Functional, AE2 wireless), logistics (Modular Routers, Pipez), and quality-of-life (Xaero's maps, JEI/JER/JEP, Clumps).
+
 ## Multiplayer
 
 Form a Clowder, claim an island together, and progress as a team. Skyblock Builder + FTB Teams power shared pads and quest credit.
