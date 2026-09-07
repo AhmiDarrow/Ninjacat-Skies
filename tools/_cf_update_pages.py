@@ -31,8 +31,8 @@ NCS = {
     "avatar": ASSETS / "ninjacat-skies-avatar-512.png",
 }
 TP = {
-    "id": 253197,
-    "slug": "tribal-power",
+    "id": 1684851,
+    "slug": "tribalpower",
     "name": "Tribal Power",
     "kind": "mod",
     "summary": (

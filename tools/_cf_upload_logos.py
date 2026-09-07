@@ -11,7 +11,7 @@ NCS_ROOT = Path(__file__).resolve().parents[1]
 ASSETS = NCS_ROOT / "docs" / "public" / "cf-assets"
 PROJECTS = [
     (1684777, ASSETS / "ninjacat-skies-avatar-512.png"),
-    (253197, ASSETS / "tribal-power-avatar-512.png"),
+    (1684851, ASSETS / "tribal-power-avatar-512.png"),
 ]
 
 

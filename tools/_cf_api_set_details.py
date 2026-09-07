@@ -22,7 +22,7 @@ PROJECTS = [
         "avatar": str(ASSETS / "ninjacat-skies-avatar-512.png"),
     },
     {
-        "id": 253197,
+        "id": 1684851,
         "summary": "Shamanic technomancy for NeoForge 1.21.1 — Spirit Pulse, Totem Lattice, Song Bench Echo, and The March.",
         "description": TP_HTML,
         "avatar": str(ASSETS / "tribal-power-avatar-512.png"),

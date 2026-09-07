@@ -26,7 +26,7 @@ PROJECTS = [
         ).read_text(encoding="utf-8"),
     },
     {
-        "id": 253197,
+        "id": 1684851,
         "name": "Tribal Power",
         "summary": (
             "Shamanic technomancy for NeoForge 1.21.1 — Spirit Pulse, Totem Lattice, "
