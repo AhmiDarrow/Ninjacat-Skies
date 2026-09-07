@@ -88,7 +88,10 @@ def main() -> int:
     token = secrets.get("CF_AUTHOR_TOKEN", "")
     if not token or token.startswith("your-"):
         raise SystemExit("CF_AUTHOR_TOKEN missing from tools/secrets/.env")
-    project_id = args.project_id or int(secrets.get("CF_PROJECT_ID", "0") or 0)
+    is_tribal = Path(args.zip).name.lower().startswith("tribalpower-")
+    if is_tribal and args.project_id not in (0, 1684851):
+        raise SystemExit("Tribal Power must upload to its canonical CurseForge project: 1684851")
+    project_id = (1684851 if is_tribal else args.project_id or int(secrets.get("CF_PROJECT_ID", "0") or 0))
     if project_id <= 0:
         raise SystemExit("CF_PROJECT_ID not set - create the project in the Author Console and put its id in tools/secrets/.env")
 
