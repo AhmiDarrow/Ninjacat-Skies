@@ -92,6 +92,36 @@ $ModTargets = @(
     @{ Key = "Titanium";               Slugs = @("titanium"); Search = "Titanium" }
     @{ Key = "Player Animator";        Slugs = @("playeranimator", "player-animator"); Search = "Player Animator" }
     @{ Key = "Modonomicon";            Slugs = @("modonomicon"); Search = "Modonomicon" }
+    # --- added 0.3.0 (resolve CF ids on a machine with CurseForge access) ---
+    @{ Key = "Chipped";                Slugs = @("chipped"); Search = "Chipped" }
+    @{ Key = "Athena";                 Slugs = @("athena-ctm","athena"); Search = "Athena" }
+    @{ Key = "Supplementaries";        Slugs = @("supplementaries"); Search = "Supplementaries" }
+    @{ Key = "Moonlight Lib";          Slugs = @("selene","moonlight"); Search = "Moonlight Lib" }
+    @{ Key = "Amendments";             Slugs = @("amendments"); Search = "Amendments" }
+    @{ Key = "Handcrafted";            Slugs = @("handcrafted"); Search = "Handcrafted" }
+    @{ Key = "Macaw's Bridges";        Slugs = @("macaws-bridges"); Search = "Macaws Bridges" }
+    @{ Key = "Macaw's Roofs";          Slugs = @("macaws-roofs"); Search = "Macaws Roofs" }
+    @{ Key = "FramedBlocks";           Slugs = @("framedblocks"); Search = "FramedBlocks" }
+    @{ Key = "Sophisticated Storage";  Slugs = @("sophisticated-storage"); Search = "Sophisticated Storage" }
+    @{ Key = "Modular Routers";        Slugs = @("modular-routers"); Search = "Modular Routers" }
+    @{ Key = "Create Crafts & Additions"; Slugs = @("create-crafts-additions","createaddition"); Search = "Create Crafts Additions" }
+    @{ Key = "Create Enchantment Industry"; Slugs = @("create-enchantment-industry"); Search = "Create Enchantment Industry" }
+    @{ Key = "Create Dragons Lib";     Slugs = @("create-dragons-plus","create-dragon-lib"); Search = "Create Dragons" }
+    @{ Key = "Mekanism Generators";    Slugs = @("mekanism"); Search = "Mekanism Generators" }
+    @{ Key = "Applied Mekanistics";    Slugs = @("applied-mekanistics"); Search = "Applied Mekanistics" }
+    @{ Key = "AE2 Wireless Terminals"; Slugs = @("ae2wtlib","applied-energistics-2-wireless-terminals"); Search = "AE2WTLib" }
+    @{ Key = "Xaero's Minimap";        Slugs = @("xaeros-minimap"); Search = "Xaeros Minimap" }
+    @{ Key = "Xaero's World Map";      Slugs = @("xaeros-world-map"); Search = "Xaeros World Map" }
+    @{ Key = "Clumps";                 Slugs = @("clumps"); Search = "Clumps" }
+    @{ Key = "Controlling";            Slugs = @("controlling"); Search = "Controlling" }
+    @{ Key = "Mouse Tweaks";           Slugs = @("mouse-tweaks"); Search = "Mouse Tweaks" }
+    @{ Key = "TrashSlot";              Slugs = @("trashslot"); Search = "TrashSlot" }
+    @{ Key = "Just Enough Resources";  Slugs = @("just-enough-resources-jer"); Search = "Just Enough Resources" }
+    @{ Key = "Just Enough Professions"; Slugs = @("just-enough-professions-jep"); Search = "Just Enough Professions" }
+    @{ Key = "Comforts";               Slugs = @("comforts"); Search = "Comforts" }
+    @{ Key = "Resourceful Lib";        Slugs = @("resourceful-lib"); Search = "Resourceful Lib" }
+    @{ Key = "Searchables";            Slugs = @("searchables"); Search = "Searchables" }
+
 )
 
 function Invoke-CfGet {

@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000000D0215"
+			id: "C2000000000D021C"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000000D0215"
+					id: "D2000000000D021C"
 					type: "item"
 					item: {
 						id: "powah:dielectric_paste"
@@ -27,218 +27,31 @@
 			]
 			rewards: [
 				{
-					id: "E2000000000D0215"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000000D0215"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C2000000000D0216"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000000D0216"
-					type: "item"
-					item: {
-						id: "powah:capacitor_basic"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000D0216"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000D0215"]
-		}
-		{
-			id: "C2000000000D0217"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000000D0217"
-					type: "item"
-					item: {
-						id: "powah:energy_cell_basic"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000D0217"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000D0215"]
-		}
-		{
-			id: "C2000000000D0218"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000000D0218"
-					type: "item"
-					item: {
-						id: "powah:furnator_basic"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000D0218"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000D0215"]
-		}
-		{
-			id: "C2000000000D0219"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000000D0219"
-					type: "item"
-					item: {
-						id: "powah:magmator_basic"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000D0219"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000D0215"]
-		}
-		{
-			id: "C2000000000D021A"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000000D021A"
-					type: "item"
-					item: {
-						id: "powah:solar_panel_basic"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000D021A"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000000D021A"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000000D0215"]
-		}
-		{
-			id: "C2000000000D021B"
-			x: 1.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000000D021B"
-					type: "item"
-					item: {
-						id: "powah:thermo_generator_basic"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000000D021B"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000000D021A"]
-		}
-		{
-			id: "C2000000000D021C"
-			x: 1.8d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000000D021C"
-					type: "item"
-					item: {
-						id: "powah:reactor_basic"
-						count: 1
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E2000000000D021C"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000D021C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000D021A"]
 		}
 		{
 			id: "C2000000000D021D"
-			x: 1.8d
-			y: 3.9d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000D021D"
 					type: "item"
 					item: {
-						id: "powah:energy_cable_basic"
-						count: 16
+						id: "powah:capacitor_basic"
+						count: 8
 					}
 				}
 			]
@@ -252,18 +65,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021A"]
+			dependencies: ["C2000000000D021C"]
 		}
 		{
 			id: "C2000000000D021E"
-			x: 1.8d
-			y: 5.2d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000D021E"
 					type: "item"
 					item: {
-						id: "powah:player_transmitter_basic"
+						id: "powah:energy_cell_basic"
 						count: 1
 					}
 				}
@@ -278,18 +91,18 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021A"]
+			dependencies: ["C2000000000D021C"]
 		}
 		{
 			id: "C2000000000D021F"
-			x: 3.6d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000D021F"
 					type: "item"
 					item: {
-						id: "powah:energy_hopper_basic"
+						id: "powah:furnator_basic"
 						count: 1
 					}
 				}
@@ -300,27 +113,22 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000000D021F"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000000D021A"]
+			dependencies: ["C2000000000D021C"]
 		}
 		{
 			id: "C2000000000D0220"
-			x: 3.6d
-			y: 1.3d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000000D0220"
 					type: "item"
 					item: {
-						id: "powah:energizing_rod_basic"
+						id: "powah:magmator_basic"
 						count: 1
 					}
 				}
@@ -335,19 +143,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021F"]
+			dependencies: ["C2000000000D021C"]
 		}
 		{
 			id: "C2000000000D0221"
-			x: 3.6d
-			y: 2.6d
+			x: 1.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000000D0221"
 					type: "item"
 					item: {
-						id: "powah:battery_basic"
-						count: 1
+						id: "powah:solar_panel_basic"
+						count: 4
 					}
 				}
 			]
@@ -357,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000000D0221"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000000D021F"]
+			dependencies: ["C2000000000D021C"]
 		}
 		{
 			id: "C2000000000D0222"
-			x: 3.6d
-			y: 3.9d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000000D0222"
 					type: "item"
 					item: {
-						id: "powah:crystal_niotic"
-						count: 4
+						id: "powah:thermo_generator_basic"
+						count: 1
 					}
 				}
 			]
@@ -387,19 +200,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021F"]
+			dependencies: ["C2000000000D0221"]
 		}
 		{
 			id: "C2000000000D0223"
-			x: 3.6d
-			y: 5.2d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000000D0223"
 					type: "item"
 					item: {
-						id: "powah:crystal_spirited"
-						count: 2
+						id: "powah:reactor_basic"
+						count: 1
 					}
 				}
 			]
@@ -413,19 +226,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000000D021F"]
+			dependencies: ["C2000000000D0221"]
 		}
 		{
 			id: "C2000000000D0224"
-			x: 5.4d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000000D0224"
 					type: "item"
 					item: {
-						id: "powah:crystal_nitro"
-						count: 1
+						id: "powah:energy_cable_basic"
+						count: 16
 					}
 				}
 			]
@@ -435,16 +248,203 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000D0221"]
+		}
+		{
+			id: "C2000000000D0225"
+			x: 1.8d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000000D0225"
+					type: "item"
+					item: {
+						id: "powah:player_transmitter_basic"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000D0225"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000D0221"]
+		}
+		{
+			id: "C2000000000D0226"
+			x: 3.6d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000D0226"
+					type: "item"
+					item: {
+						id: "powah:energy_hopper_basic"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000D0226"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
 						count: 3
 					}
 				}
 				{
-					id: "D1000000000D0224"
+					id: "D1000000000D0226"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
-			dependencies: ["C2000000000D021F"]
+			dependencies: ["C2000000000D0221"]
+		}
+		{
+			id: "C2000000000D0227"
+			x: 3.6d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000000D0227"
+					type: "item"
+					item: {
+						id: "powah:energizing_rod_basic"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000D0227"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000D0226"]
+		}
+		{
+			id: "C2000000000D0228"
+			x: 3.6d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000000D0228"
+					type: "item"
+					item: {
+						id: "powah:battery_basic"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000D0228"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000D0226"]
+		}
+		{
+			id: "C2000000000D0229"
+			x: 3.6d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000000D0229"
+					type: "item"
+					item: {
+						id: "powah:crystal_niotic"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000D0229"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000D0226"]
+		}
+		{
+			id: "C2000000000D022A"
+			x: 3.6d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000000D022A"
+					type: "item"
+					item: {
+						id: "powah:crystal_spirited"
+						count: 2
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000D022A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000000D0226"]
+		}
+		{
+			id: "C2000000000D022B"
+			x: 5.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000000D022B"
+					type: "item"
+					item: {
+						id: "powah:crystal_nitro"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000000D022B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000000D022B"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000000D0226"]
 		}
 	]
 }

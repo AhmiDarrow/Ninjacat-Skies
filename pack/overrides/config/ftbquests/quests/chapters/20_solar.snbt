@@ -12,12 +12,12 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "C2000000001402B6"
+			id: "C2000000001402BD"
 			x: 0.0d
 			y: 0.0d
 			tasks: [
 				{
-					id: "D2000000001402B6"
+					id: "D2000000001402BD"
 					type: "item"
 					item: {
 						id: "solarflux:mirror"
@@ -27,218 +27,31 @@
 			]
 			rewards: [
 				{
-					id: "E2000000001402B6"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001402B6"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-		}
-		{
-			id: "C2000000001402B7"
-			x: 0.0d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001402B7"
-					type: "item"
-					item: {
-						id: "solarflux:photovoltaic_cell_1"
-						count: 8
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001402B7"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001402B6"]
-		}
-		{
-			id: "C2000000001402B8"
-			x: 0.0d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001402B8"
-					type: "item"
-					item: {
-						id: "solarflux:photovoltaic_cell_2"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001402B8"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001402B6"]
-		}
-		{
-			id: "C2000000001402B9"
-			x: 0.0d
-			y: 3.9d
-			tasks: [
-				{
-					id: "D2000000001402B9"
-					type: "item"
-					item: {
-						id: "solarflux:photovoltaic_cell_3"
-						count: 4
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001402B9"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001402B6"]
-		}
-		{
-			id: "C2000000001402BA"
-			x: 0.0d
-			y: 5.2d
-			tasks: [
-				{
-					id: "D2000000001402BA"
-					type: "item"
-					item: {
-						id: "solarflux:photovoltaic_cell_4"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001402BA"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001402B6"]
-		}
-		{
-			id: "C2000000001402BB"
-			x: 1.8d
-			y: 0.0d
-			tasks: [
-				{
-					id: "D2000000001402BB"
-					type: "item"
-					item: {
-						id: "solarflux:photovoltaic_cell_5"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001402BB"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 3
-					}
-				}
-				{
-					id: "D1000000001402BB"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			dependencies: ["C2000000001402B6"]
-		}
-		{
-			id: "C2000000001402BC"
-			x: 1.8d
-			y: 1.3d
-			tasks: [
-				{
-					id: "D2000000001402BC"
-					type: "item"
-					item: {
-						id: "solarflux:photovoltaic_cell_6"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
-					id: "E2000000001402BC"
-					type: "item"
-					item: {
-						id: "ninjacatskies:frayed_thread"
-						count: 2
-					}
-				}
-			]
-			dependencies: ["C2000000001402BB"]
-		}
-		{
-			id: "C2000000001402BD"
-			x: 1.8d
-			y: 2.6d
-			tasks: [
-				{
-					id: "D2000000001402BD"
-					type: "item"
-					item: {
-						id: "solarflux:capacity_upgrade"
-						count: 2
-					}
-				}
-			]
-			rewards: [
-				{
 					id: "E2000000001402BD"
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001402BD"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001402BB"]
 		}
 		{
 			id: "C2000000001402BE"
-			x: 1.8d
-			y: 3.9d
+			x: 0.0d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001402BE"
 					type: "item"
 					item: {
-						id: "solarflux:efficiency_upgrade"
-						count: 2
+						id: "solarflux:photovoltaic_cell_1"
+						count: 8
 					}
 				}
 			]
@@ -252,19 +65,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001402BB"]
+			dependencies: ["C2000000001402BD"]
 		}
 		{
 			id: "C2000000001402BF"
-			x: 1.8d
-			y: 5.2d
+			x: 0.0d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001402BF"
 					type: "item"
 					item: {
-						id: "solarflux:transfer_rate_upgrade"
-						count: 2
+						id: "solarflux:photovoltaic_cell_2"
+						count: 4
 					}
 				}
 			]
@@ -278,19 +91,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001402BB"]
+			dependencies: ["C2000000001402BD"]
 		}
 		{
 			id: "C2000000001402C0"
-			x: 3.6d
-			y: 0.0d
+			x: 0.0d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001402C0"
 					type: "item"
 					item: {
-						id: "solarflux:traversal_upgrade"
-						count: 1
+						id: "solarflux:photovoltaic_cell_3"
+						count: 4
 					}
 				}
 			]
@@ -300,28 +113,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001402C0"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001402BB"]
+			dependencies: ["C2000000001402BD"]
 		}
 		{
 			id: "C2000000001402C1"
-			x: 3.6d
-			y: 1.3d
+			x: 0.0d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001402C1"
 					type: "item"
 					item: {
-						id: "solarflux:dispersive_upgrade"
-						count: 1
+						id: "solarflux:photovoltaic_cell_4"
+						count: 2
 					}
 				}
 			]
@@ -335,19 +143,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001402C0"]
+			dependencies: ["C2000000001402BD"]
 		}
 		{
 			id: "C2000000001402C2"
-			x: 3.6d
-			y: 2.6d
+			x: 1.8d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001402C2"
 					type: "item"
 					item: {
-						id: "solarflux:block_charging_upgrade"
-						count: 1
+						id: "solarflux:photovoltaic_cell_5"
+						count: 2
 					}
 				}
 			]
@@ -357,23 +165,28 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 2
+						count: 3
 					}
 				}
+				{
+					id: "D1000000001402C2"
+					type: "xp_levels"
+					xp_levels: 1
+				}
 			]
-			dependencies: ["C2000000001402C0"]
+			dependencies: ["C2000000001402BD"]
 		}
 		{
 			id: "C2000000001402C3"
-			x: 3.6d
-			y: 3.9d
+			x: 1.8d
+			y: 1.3d
 			tasks: [
 				{
 					id: "D2000000001402C3"
 					type: "item"
 					item: {
-						id: "solarflux:furnace_upgrade"
-						count: 1
+						id: "solarflux:photovoltaic_cell_6"
+						count: 2
 					}
 				}
 			]
@@ -387,19 +200,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001402C0"]
+			dependencies: ["C2000000001402C2"]
 		}
 		{
 			id: "C2000000001402C4"
-			x: 3.6d
-			y: 5.2d
+			x: 1.8d
+			y: 2.6d
 			tasks: [
 				{
 					id: "D2000000001402C4"
 					type: "item"
 					item: {
-						id: "solarflux:emerald_glass"
-						count: 4
+						id: "solarflux:capacity_upgrade"
+						count: 2
 					}
 				}
 			]
@@ -413,19 +226,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001402C0"]
+			dependencies: ["C2000000001402C2"]
 		}
 		{
 			id: "C2000000001402C5"
-			x: 5.4d
-			y: 0.0d
+			x: 1.8d
+			y: 3.9d
 			tasks: [
 				{
 					id: "D2000000001402C5"
 					type: "item"
 					item: {
-						id: "solarflux:ender_glass"
-						count: 4
+						id: "solarflux:efficiency_upgrade"
+						count: 2
 					}
 				}
 			]
@@ -435,28 +248,23 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
-						count: 3
+						count: 2
 					}
 				}
-				{
-					id: "D1000000001402C5"
-					type: "xp_levels"
-					xp_levels: 1
-				}
 			]
-			dependencies: ["C2000000001402C0"]
+			dependencies: ["C2000000001402C2"]
 		}
 		{
 			id: "C2000000001402C6"
-			x: 5.4d
-			y: 1.3d
+			x: 1.8d
+			y: 5.2d
 			tasks: [
 				{
 					id: "D2000000001402C6"
 					type: "item"
 					item: {
-						id: "solarflux:blazing_coating"
-						count: 4
+						id: "solarflux:transfer_rate_upgrade"
+						count: 2
 					}
 				}
 			]
@@ -470,19 +278,19 @@
 					}
 				}
 			]
-			dependencies: ["C2000000001402C5"]
+			dependencies: ["C2000000001402C2"]
 		}
 		{
 			id: "C2000000001402C7"
-			x: 5.4d
-			y: 2.6d
+			x: 3.6d
+			y: 0.0d
 			tasks: [
 				{
 					id: "D2000000001402C7"
 					type: "item"
 					item: {
-						id: "solarflux:blank_upgrade"
-						count: 4
+						id: "solarflux:traversal_upgrade"
+						count: 1
 					}
 				}
 			]
@@ -492,11 +300,203 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001402C7"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001402C2"]
+		}
+		{
+			id: "C2000000001402C8"
+			x: 3.6d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001402C8"
+					type: "item"
+					item: {
+						id: "solarflux:dispersive_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001402C8"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
 						count: 2
 					}
 				}
 			]
-			dependencies: ["C2000000001402C5"]
+			dependencies: ["C2000000001402C7"]
+		}
+		{
+			id: "C2000000001402C9"
+			x: 3.6d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001402C9"
+					type: "item"
+					item: {
+						id: "solarflux:block_charging_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001402C9"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001402C7"]
+		}
+		{
+			id: "C2000000001402CA"
+			x: 3.6d
+			y: 3.9d
+			tasks: [
+				{
+					id: "D2000000001402CA"
+					type: "item"
+					item: {
+						id: "solarflux:furnace_upgrade"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001402CA"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001402C7"]
+		}
+		{
+			id: "C2000000001402CB"
+			x: 3.6d
+			y: 5.2d
+			tasks: [
+				{
+					id: "D2000000001402CB"
+					type: "item"
+					item: {
+						id: "solarflux:emerald_glass"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001402CB"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001402C7"]
+		}
+		{
+			id: "C2000000001402CC"
+			x: 5.4d
+			y: 0.0d
+			tasks: [
+				{
+					id: "D2000000001402CC"
+					type: "item"
+					item: {
+						id: "solarflux:ender_glass"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001402CC"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+				{
+					id: "D1000000001402CC"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			dependencies: ["C2000000001402C7"]
+		}
+		{
+			id: "C2000000001402CD"
+			x: 5.4d
+			y: 1.3d
+			tasks: [
+				{
+					id: "D2000000001402CD"
+					type: "item"
+					item: {
+						id: "solarflux:blazing_coating"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001402CD"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001402CC"]
+		}
+		{
+			id: "C2000000001402CE"
+			x: 5.4d
+			y: 2.6d
+			tasks: [
+				{
+					id: "D2000000001402CE"
+					type: "item"
+					item: {
+						id: "solarflux:blank_upgrade"
+						count: 4
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "E2000000001402CE"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 2
+					}
+				}
+			]
+			dependencies: ["C2000000001402CC"]
 		}
 	]
 }

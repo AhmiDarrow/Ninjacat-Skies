@@ -62,47 +62,6 @@ layout_action_executable_blocks {
 }
 
 element {
-  ticker_element_executable_block_identifier = ncs-title-welcome-ticker-exec-001
-  [executable_action_instance:ncs-title-welcome-opengui-001][action_type:opengui] = ninjacat_skies_welcome
-  [executable_block:ncs-title-welcome-ticker-exec-001][type:generic] = [executables:ncs-title-welcome-opengui-001;]
-  is_async = false
-  tick_delay = 40
-  tick_mode = once_per_session
-  element_type = fancymenu_customization_item_ticker
-  instance_identifier = ncs-title-welcome-ticker-001
-  appearance_delay = no_delay
-  appearance_delay_seconds = 0.5
-  fade_in_v2 = no_fading
-  fade_in_speed = 1.0
-  fade_out = no_fading
-  fade_out_speed = 1.0
-  base_opacity = 1.0
-  auto_sizing = false
-  auto_sizing_base_screen_width = 1920
-  auto_sizing_base_screen_height = 1080
-  sticky_anchor = false
-  anchor_point = mid-centered
-  x = 0
-  y = 0
-  width = 1
-  height = 1
-  stretch_x = false
-  stretch_y = false
-  stay_on_screen = true
-  element_loading_requirement_container_identifier = ncs-title-welcome-ticker-req-001
-  [loading_requirement_container_meta:ncs-title-welcome-ticker-req-001] = [groups:][instances:ncs-title-welcome-var-req-001;]
-  [loading_requirement:fancymenu_visibility_requirement_is_variable_value][requirement_mode:if_not][req_id:ncs-title-welcome-var-req-001] = ncs_welcome_seen:1
-  enable_parallax = false
-  parallax_intensity_v2 = 0.5
-  invert_parallax = false
-  animated_offset_x = 0
-  animated_offset_y = 0
-  load_once_per_session = false
-  in_editor_color = #3D7A7AFF
-  layer_hidden_in_editor = false
-}
-
-element {
   button_element_executable_block_identifier = ncs-title-guide-exec-001
   [executable_action_instance:ncs-title-guide-opengui-001][action_type:opengui] = ninjacat_skies_welcome
   [executable_block:ncs-title-guide-exec-001][type:generic] = [executables:ncs-title-guide-opengui-001;]

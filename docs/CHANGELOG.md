@@ -1,8 +1,28 @@
 # Changelog
 
-## 0.2.2-alpha — Reachable Roots
+## 0.3.0-alpha — Wider Sky
 
-_Uploaded to CurseForge 2026-09-07 (file 8826911)._
+_Uploaded to CurseForge 2026-09-07 (file 8827030)._
+
+Twenty-eight mods added (content + libraries), each wired into the questline, plus fixes to the FancyMenu onboarding and a KubeJS crash.
+
+**New mods, woven into new chapters**
+- **Stonemason** (Chipped): every workbench — mason, carpenter, glassblower, loom, botanist, alchemy, tinkering — for thousands of block variants from vanilla stock.
+- **Furnishings** (Handcrafted, Macaw's Bridges & Roofs, FramedBlocks, Amendments): chairs, tables, beds, shelves, bridges to span the void, roofs, and camouflage frames.
+- **Small Stewardries** (Supplementaries, Comforts): sconces, hourglass, faucet, crank, sack, safe, notice board, pedestal, sleeping bag, hammock, rope.
+- **The Current** (Create: Crafts & Additions, Create: Enchantment Industry, Mekanism Generators, AE2 Wireless Terminals, Applied Mekanistics): wires and motors bridging Create rotation to Forge Energy, liquid-XP enchanting, Mekanism power generators, a pocket AE2 terminal, and Mek chemicals in the AE2 network — tied to Spark, Clock and Spindle.
+- **Woven into existing chapters**: Sophisticated Storage into Storage & Packs; Modular Routers into Pipeworks.
+- **Quality of life / maps** (no quests needed): Xaero's Minimap & World Map, Clumps, Controlling, Mouse Tweaks, TrashSlot, Just Enough Resources, Just Enough Professions, plus libraries (Moonlight, Resourceful Lib, Searchables, Athena, Create Dragons Lib).
+
+All new mods sourced for NeoForge 1.21.1 and boot-verified together on a dedicated server (28 added, 0 load errors, 0 failed recipes). Quest count 1354 → 1444; item-id, dead-end and reachability audits all clean against the live 15,000-item registry.
+
+**Fixes**
+- **FancyMenu**: removed the pack's custom welcome popup auto-open (the "How to Start" title button still opens it on demand). All FancyMenu self-suppressors remain set: modpack_mode, welcome screen off, buddy off, customization overlay off.
+- **KubeJS**: `jei_hides.js` no longer crashes on load — the old `JEIEvents` reference is guarded (KubeJS 2101 renamed the JEI event binding).
+
+Note for a public (non-alpha) release: the new mods are bundled in `overrides/mods/` for now because the CurseForge project API is unreachable from here. Run `tools/download-mods.ps1` on a machine with CurseForge access to convert them to manifest (CF-hosted) entries for proper author attribution before promoting past alpha.
+
+## 0.2.2-alpha — Reachable Roots
 
 Void-pad reachability review after the bees fix turned up the same class of bug in two more mods, both now fixed, plus a permanent backstop so it can't recur.
 
