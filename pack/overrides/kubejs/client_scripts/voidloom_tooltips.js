@@ -28,6 +28,12 @@ ItemEvents.modifyTooltips(event => {
   ])
   event.add('ninjacatskies:braid_cord', Text.gray('Two braid paths, one cord. Heart of the molecular assembler.'))
   event.add('ninjacatskies:spindle_loom_fragment', Text.gold('Seat it at the Tension Post to Reweave.'))
+  if (Item.exists('mysticalagriculture:inferium_ore')) {
+    event.add('mysticalagriculture:inferium_essence', Text.gray('Smelt Inferium Ore — sieve dirt for it. Hostile mobs drop essence too.'))
+    event.add('mysticalagriculture:prosperity_shard', Text.gray('Smelt Prosperity Ore — sieve gravel or sand. Rarer than Inferium; it gates seed bases.'))
+    event.add('mysticalagriculture:inferium_ore', Text.gray('From the sieve. Smelt for Inferium Essence — the floor of every crop tier.'))
+    event.add('mysticalagriculture:prosperity_ore', Text.gray('From the sieve. Smelt for a Prosperity Shard — every seed base needs one.'))
+  }
   event.add(/productivebees:.*_nest$/, Text.gray('A ring of this around a small flower. Place it on the pad and wait for wings.'))
   event.add('productivebees:oak_wood_nest', Text.darkGray('Also spawns plain honey bees — the root of every breeding line.'))
   event.add('minecraft:bee_nest', Text.gray('Planks and flowers. A wild bee will move in; shear it with smoke underneath.'))

@@ -30,6 +30,7 @@ Follow the **Whisker Codex** through nine Strands — Soil, Stone, Sprout, Claw,
 - **Tension Post**: seat Strand tokens on your pad; each tribe chimes, the notches light, and the pad itself changes (hearth, footing, haste, luck)
 - **The Fray**: the cut in the sky, visible over the Dock, thinning as the server reweaves
 - **Whisker Codex** in-game book (Modonomicon): the Cut, the Loom Braid, and Nine Tribes entries that unlock as you play
+- **Skyblock-tuned**: every mod is reachable from a bare pad — bees, Mystical Agriculture essences, Ars archwood and more all bootstrap from the sieve, no worldgen required
 - **Bees on a void pad**: craft a nest from a ring of logs or grit around a flower and wait for wings; every Productive Bees line starts there
 - Voidloom stations: a Loomframe that sifts on its own, a Tension Barrel that batches — the pad's first machines
 - FancyMenu branded title (void sky, paw logo, indigo/teal buttons)

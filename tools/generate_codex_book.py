@@ -190,8 +190,9 @@ BRAID = [
      "clay; clay makes porcelain; porcelain carries lava.\n\nThen the sieve. It is a tool inside Recover, not "
      "the name of it. Iron mesh is the target: that is where Strand Filament starts falling."),
     ("root", "Root", "Sprout", "mysticalagriculture:inferium_essence", 4, 0, "recover",
-     "**Sprout.** A wheat field, a kitchen, Mystical Agriculture from Inferium up. Botany pots if you like "
-     "compact.\n\nFood is infrastructure here. A Clowder that eats well leaves the pad sooner."),
+     "**Sprout.** A wheat field, a kitchen, then Mystical Agriculture. Sieve dirt for Inferium Ore and "
+     "gravel for Prosperity Ore — smelt them, and the essence-seed tiers open up. Botany pots if you like compact.\n\n"
+     "Food is infrastructure here. A Clowder that eats well leaves the pad sooner."),
     ("edge", "Edge", "Claw", "silentgear:blueprint_paper", 6, 0, "root",
      "**Claw.** Silent Gear blueprints, iron on your back, a bow, a portal frame. Leave the pad on purpose.\n\n"
      "Edge opens the braid: after Claw, Pattern, Colony, and Hum are all yours to choose from."),
