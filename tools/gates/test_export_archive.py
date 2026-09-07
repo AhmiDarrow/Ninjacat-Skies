@@ -19,6 +19,11 @@ def verify(archive):
         manifest = json.loads(z.read("manifest.json"))
         if manifest.get("manifestType") != "minecraftModpack" or "overrides" not in manifest:
             raise ValueError("Invalid modpack manifest")
+        icon = manifest.get("image")
+        if not icon or icon not in z.namelist():
+            raise ValueError("Manifest must reference a bundled profile image for CurseForge import")
+        if not z.read(icon).startswith(b"\x89PNG\r\n\x1a\n"):
+            raise ValueError("Profile image must be a valid PNG asset")
     print(f"PASS ExportDryRun ({archive.name})")
 
 

@@ -18,9 +18,20 @@ class ExportGateTests(unittest.TestCase):
                     z.writestr(extra,"bad")
                 with self.assertRaises(ValueError): verify(path)
             with zipfile.ZipFile(path,"w") as z:
-                z.writestr("manifest.json",json.dumps({"manifestType":"minecraftModpack","overrides":"overrides"}))
+                z.writestr("manifest.json",json.dumps({"manifestType":"minecraftModpack","overrides":"overrides","image":"profileImage/logo.png"}))
                 z.writestr("overrides/config/ok.json","{}")
+                z.writestr("profileImage/logo.png", b"\x89PNG\r\n\x1a\n")
             verify(path)
+
+    def test_import_branding_requires_manifest_reference_and_asset(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "branding.zip"
+            for image in [None, "profileImage/missing.png"]:
+                with zipfile.ZipFile(path, "w") as z:
+                    z.writestr("manifest.json", json.dumps({"manifestType": "minecraftModpack", "overrides": "overrides", "image": image}))
+                    z.writestr("icon.png", b"\x89PNG\r\n\x1a\n")
+                with self.assertRaisesRegex(ValueError, "profile image"):
+                    verify(path)
 
     def test_export_success_cannot_mask_prior_gate_failure(self):
         with tempfile.TemporaryDirectory() as directory:
