@@ -3,7 +3,7 @@
 export-curseforge.ps1 — same layout, same exclusions, version read from pack/pack.toml.
 
   python tools/export_curseforge.py                # CurseForge mode (CF-hosted mods in manifest.files)
-  python tools/export_curseforge.py --self-contained   # every jar bundled under overrides/mods/
+  Third-party mods must have verified CurseForge manifest references; never bundle them.
 """
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ import subprocess
 import sys
 import time
 import zipfile
+from cf_distribution import is_owned_jar, manifest_entries
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +35,18 @@ def main() -> int:
     ap.add_argument("--self-contained", action="store_true")
     ap.add_argument("--skip-sanitize", action="store_true")
     args = ap.parse_args()
+    if args.self_contained:
+        raise SystemExit("Self-contained exports are disabled: third-party jars must be installed through CurseForge.")
+    source_overrides = ROOT / "pack/overrides"
+    if any(p.suffix.lower() == ".jar" for p in source_overrides.rglob("*")):
+        raise SystemExit("Do not place jars inside pack/overrides; use verified pack/mods dependency metadata.")
+    resolved_path = ROOT / "pack/modlist-resolved.json"
+    resolved = json.loads(resolved_path.read_text(encoding="utf-8"))
+    jars = sorted((ROOT / "pack/mods").glob("*.jar"))
+    if not jars:
+        raise SystemExit("No jars in pack/mods")
+    manifest_files = manifest_entries(jars, resolved)
+
 
     if not args.skip_sanitize:
         print("Running sanitization gate (no tokens / personal paths)...")
@@ -55,25 +68,10 @@ def main() -> int:
     ov_mods = stage / "overrides/mods"
     ov_mods.mkdir(parents=True, exist_ok=True)
 
-    # resolve CF-hosted vs bundled
-    resolved_path = ROOT / "pack/modlist-resolved.json"
-    resolved = json.loads(resolved_path.read_text(encoding="utf-8")) if resolved_path.exists() else []
-    by_file = {r["filename"]: r for r in resolved if r.get("filename")}
-    jars = sorted((ROOT / "pack/mods").glob("*.jar"))
-    if not jars:
-        raise SystemExit("No jars in pack/mods")
-    manifest_files = []
+    # Only our four unhosted companion mods may be redistributed as override jars.
     bundled = []
     for jar in jars:
-        entry = by_file.get(jar.name)
-        try:
-            pid = int(entry.get("projectId", 0)) if entry else 0
-            fid = int(entry.get("fileId", 0)) if entry else 0
-        except (TypeError, ValueError):
-            pid = fid = 0
-        if not args.self_contained and pid > 0 and fid > 0:
-            manifest_files.append({"projectID": pid, "fileID": fid, "required": True})
-        else:
+        if is_owned_jar(jar.name):
             shutil.copy2(jar, ov_mods / jar.name)
             bundled.append(jar.name)
 

@@ -23,6 +23,9 @@ try {
     Invoke-Gate "SanitizedPublicSurface" {
         pwsh -NoProfile -File (Join-Path $gateDir "Test-SanitizedPublicSurface.ps1")
     }
+    Invoke-Gate "CurseForgeDistribution" {
+        python -X utf8 (Join-Path $gateDir "test_cf_distribution.py")
+    }
     Invoke-Gate "PackStructure" {
         pwsh -NoProfile -File (Join-Path $gateDir "Test-PackStructure.ps1")
     }
