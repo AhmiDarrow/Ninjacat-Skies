@@ -4,7 +4,7 @@ The pack applies its curated defaults once on first launch or upgrade. Existing 
 
 ## Everyday controls
 
-- **Grave / backtick (`):** quests. Right-click the Whisker Codex also opens the live quest book; sneak-use gives a story hint.
+- **Grave / backtick (`):** quests. Right-click the Whisker Codex also opens the live quest book; Shift + right-click opens its lore pages.
 - **K:** Clowder island and invitation panel. The Island Charter opens the same panel anywhere; sneak-use on solid Overworld pad ground seals spawn.
 - **Alt+K:** FTB party team panel.
 - **M:** Xaero world map. **Ctrl+M:** FTB claims map. **Ctrl+Comma:** claim manager.

@@ -17,8 +17,8 @@ import net.neoforged.fml.ModList;
 import java.util.List;
 
 /**
- * The damaged assigner. Right-click opens the live quest book; sneak-right-click asks it
- * for the next practical step. It never lectures; it points.
+ * The damaged assigner. Right-click opens quests; sneak-right-click opens the lore book.
+ * Without either optional book mod, it still offers a practical next-step hint.
  */
 public class WhiskerCodexItem extends Item {
     private static final boolean MODONOMICON = ModList.get().isLoaded("modonomicon");
@@ -51,7 +51,7 @@ public class WhiskerCodexItem extends Item {
         if (!(player instanceof ServerPlayer sp)) {
             return InteractionResultHolder.sidedSuccess(stack, true);
         }
-        if (!player.isShiftKeyDown() && MODONOMICON && CodexBookHook.open(sp)) {
+        if (MODONOMICON && CodexBookHook.open(sp)) {
             return InteractionResultHolder.sidedSuccess(stack, false);
         }
         nudge(sp);

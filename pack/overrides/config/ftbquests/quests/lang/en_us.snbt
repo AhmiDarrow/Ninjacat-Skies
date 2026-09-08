@@ -156,7 +156,7 @@
 	quest.420000000001000E.title: "Frayed Currency"
 	quest.420000000001000F.quest_desc: [
 		"Damaged, but it still assigns work.",
-		"Right-click to open. Sneak-click when you are lost."
+		"Right-click for quests and rewards. Shift + right-click for the lore pages."
 	]
 	quest.420000000001000F.title: "Codex in Hand"
 	quest.4200000000010010.quest_desc: [

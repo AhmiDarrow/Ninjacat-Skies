@@ -15,7 +15,7 @@ public final class UiVerification {
     private int stage;
     private long next;
     @SubscribeEvent public void tick(ClientTickEvent.Post event) {
-        if(!Boolean.getBoolean("ninjacatskies.uiVerification") || stage>7)return;
+        if(!Boolean.getBoolean("ninjacatskies.uiVerification") || stage>9)return;
         var mc=Minecraft.getInstance();
         if(mc.player==null||mc.level==null||mc.gameMode==null)return;
         if(next==0){next=System.currentTimeMillis()+12000;return;}
@@ -38,6 +38,20 @@ public final class UiVerification {
             mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(mc.player));
         }
         if(stage==7)capture(mc,"steward-cache-models");
+        if(stage==8){
+            mc.setScreen(null);
+            mc.player.connection.sendCommand("give @s ninjacatskies:whisker_codex");
+            mc.player.setShiftKeyDown(true);
+            mc.player.connection.send(new net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket(mc.player,
+                    net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action.PRESS_SHIFT_KEY));
+            use(mc,"ninjacatskies:whisker_codex");
+        }
+        if(stage==9){
+            capture(mc,"lore-from-codex");
+            mc.player.setShiftKeyDown(false);
+            mc.player.connection.send(new net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket(mc.player,
+                    net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket.Action.RELEASE_SHIFT_KEY));
+        }
         stage++;
     }
     private static void use(Minecraft mc,String id){
