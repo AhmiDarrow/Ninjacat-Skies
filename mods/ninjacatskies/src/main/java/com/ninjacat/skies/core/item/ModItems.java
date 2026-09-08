@@ -23,6 +23,13 @@ public final class ModItems {
             new Item.Properties()
     );
 
+    public static final DeferredItem<StewardCacheItem> SMALL_STEWARD_CACHE = ITEMS.register(
+            "small_steward_cache", () -> new StewardCacheItem("small"));
+    public static final DeferredItem<StewardCacheItem> MEDIUM_STEWARD_CACHE = ITEMS.register(
+            "medium_steward_cache", () -> new StewardCacheItem("medium"));
+    public static final DeferredItem<StewardCacheItem> LARGE_STEWARD_CACHE = ITEMS.register(
+            "large_steward_cache", () -> new StewardCacheItem("large"));
+
     public static final DeferredItem<CodexPageItem> CODEX_PAGE = ITEMS.register(
             "codex_page",
             () -> new CodexPageItem(new Item.Properties().stacksTo(16))

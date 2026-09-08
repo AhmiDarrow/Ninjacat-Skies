@@ -20,6 +20,9 @@ public final class ModCreativeTabs {
                     .displayItems((params, out) -> {
                         out.accept(ModItems.WHISKER_CODEX.get());
                         out.accept(ModItems.FRAYED_THREAD.get());
+                        out.accept(ModItems.SMALL_STEWARD_CACHE.get());
+                        out.accept(ModItems.MEDIUM_STEWARD_CACHE.get());
+                        out.accept(ModItems.LARGE_STEWARD_CACHE.get());
                         out.accept(ModItems.CODEX_PAGE.get());
                         out.accept(ModItems.STRAND_TOKEN_SOIL.get());
                         out.accept(ModItems.STRAND_TOKEN_STONE.get());

@@ -18485,6 +18485,9 @@ naturesaura:zombified_piglin
 ninjacatskies:braid_cord
 ninjacatskies:codex_page
 ninjacatskies:frayed_thread
+ninjacatskies:large_steward_cache
+ninjacatskies:medium_steward_cache
+ninjacatskies:small_steward_cache
 ninjacatskies:spindle_loom_fragment
 ninjacatskies:strand_token_claw
 ninjacatskies:strand_token_clock

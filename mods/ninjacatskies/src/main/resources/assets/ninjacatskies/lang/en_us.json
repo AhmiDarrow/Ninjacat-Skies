@@ -26,5 +26,15 @@
   "subtitles.ninjacatskies.reweave": "The cut closes",
   "subtitles.ninjacatskies.page": "Page turns",
   "advancements.ninjacatskies.reweave.title": "Reweave",
-  "tooltip.ninjacatskies.codex.quests": "Right-click: quests and rewards. Sneak-use: next-step hint."
+  "tooltip.ninjacatskies.codex.quests": "Right-click: quests and rewards. Sneak-use: next-step hint.",
+  "item.ninjacatskies.small_steward_cache": "Small Steward Cache",
+  "item.ninjacatskies.medium_steward_cache": "Medium Steward Cache",
+  "item.ninjacatskies.large_steward_cache": "Large Steward Cache",
+  "tooltip.ninjacatskies.cache_lore": "Provisions set aside by the Nine Tribes.",
+  "tooltip.ninjacatskies.cache_small": "2 random parcels of food, growing and building supplies.",
+  "tooltip.ninjacatskies.cache_medium": "5 random parcels; may include leather and copper.",
+  "tooltip.ninjacatskies.cache_large": "12 random parcels; may include ingots, books and bottled experience.",
+  "tooltip.ninjacatskies.cache_open": "Use to unwrap. Supplies can repeat. No machines or extra lives.",
+  "tooltip.ninjacatskies.cache_combine": "Craft 4 small \u2192 1 medium; 3 medium \u2192 1 large.",
+  "message.ninjacatskies.cache_empty": "The cache could not open. Its supplies table is empty; the seal is kept."
 }

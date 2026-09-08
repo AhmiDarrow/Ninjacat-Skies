@@ -50,6 +50,14 @@
 					type: "xp_levels"
 					xp_levels: 1
 				}
+				{
+					id: "4F000000002004D5"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			shape: "loom"
 		}
@@ -128,6 +136,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000002004D8"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -214,6 +230,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000002004DB"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -308,6 +332,14 @@
 						count: 2
 					}
 				}
+				{
+					id: "4F000000002004DE"
+					type: "item"
+					item: {
+						id: "ninjacatskies:medium_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004DA"]
 			shape: "loom"
@@ -392,6 +424,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000002004E1"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -480,6 +520,14 @@
 					type: "xp_levels"
 					xp_levels: 1
 				}
+				{
+					id: "4F000000002004E4"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004DF"]
 			shape: "loom"
@@ -559,6 +607,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000002004E7"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -647,6 +703,14 @@
 						count: 2
 					}
 				}
+				{
+					id: "4F000000002004EA"
+					type: "item"
+					item: {
+						id: "ninjacatskies:medium_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004E9"]
 			shape: "loom"
@@ -726,6 +790,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000002004ED"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -814,6 +886,14 @@
 						count: 2
 					}
 				}
+				{
+					id: "4F000000002004F0"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004EE"]
 			shape: "loom"
@@ -900,6 +980,14 @@
 					type: "xp_levels"
 					xp_levels: 1
 				}
+				{
+					id: "4F000000002004F3"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004EE"]
 			shape: "loom"
@@ -979,6 +1067,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000002004F6"
+					type: "item"
+					item: {
+						id: "ninjacatskies:medium_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -1067,6 +1163,14 @@
 						count: 2
 					}
 				}
+				{
+					id: "4F000000002004F9"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004F8"]
 			shape: "loom"
@@ -1146,6 +1250,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000002004FC"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -1234,6 +1346,14 @@
 						count: 2
 					}
 				}
+				{
+					id: "4F000000002004FF"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004FD"]
 			shape: "loom"
@@ -1320,6 +1440,14 @@
 					type: "xp_levels"
 					xp_levels: 1
 				}
+				{
+					id: "4F00000000200502"
+					type: "item"
+					item: {
+						id: "ninjacatskies:medium_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000002004FD"]
 			shape: "loom"
@@ -1399,6 +1527,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F00000000200505"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]

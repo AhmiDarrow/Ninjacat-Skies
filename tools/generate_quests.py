@@ -634,6 +634,7 @@ def finalize_chapter(strand_i, quests):
     CURRENT["strand_i"] = strand_i
     mainline = [q for q in quests if not q.get("optional")]
     gate = mainline[1]["id"] if len(mainline) > 1 else None
+    cache_index = 0
     for q in quests:
         if q.get('shape') == 'hexagon': q['shape'] = 'loom_milestone'
         elif not q.get('shape'): q['shape'] = 'loom'
@@ -643,6 +644,23 @@ def finalize_chapter(strand_i, quests):
             q["hide_until_deps_complete"] = True
         if strand_i == 16:
             q.pop("dependencies", None)
+        # Additive rewards preserve every existing quest/task/reward ID and the Thread economy.
+        # The repeatable Desk is excluded; caches can never be bought back with their contents.
+        thread_reward = any(r.get("item", {}).get("id") == "ninjacatskies:frayed_thread"
+                            for r in q.get("rewards", []))
+        if strand_i != 16 and not q.get("repeatable") and thread_reward:
+            cache_index += 1
+            if cache_index % 3 == 1:
+                tier = "large" if cache_index % 60 == 58 else "medium" if cache_index % 12 == 10 else "small"
+                rid = hid(int(q["id"], 16) + 0x0D00000000000000)
+                q["rewards"].append({"id": rid, "type": "item",
+                                     "item": {"id": f"ninjacatskies:{tier}_steward_cache", "count": 1}})
+                if cache_index == 1:
+                    lang.setdefault(f"quest.{q['id']}.quest_desc", []).append(
+                        "The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, "
+                        "or craft four small caches into a medium and three mediums into a large. "
+                        "Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. "
+                        "No machines, progression tokens or extra lives hide inside.")
         title_key = f"quest.{q['id']}.title"
         title = lang.get(title_key)
         life_milestone = {"Seat Clock": "clock", "Dragon Egg Show": "dragon", "Ultimate Cube": "power", "Seat Sigil": "sigil", "Thirteen voices, one sky": "bestiary", "Reweave": "reweave"}.get(title)
