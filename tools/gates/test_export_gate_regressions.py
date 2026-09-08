@@ -40,6 +40,8 @@ class ExportGateTests(unittest.TestCase):
             shutil.copyfile(source/"Invoke-AllGates.ps1",gates/"Invoke-AllGates.ps1")
             for name in ["SanitizedPublicSurface","PackStructure","QuestConsistency","QuestItemIds","CustomModsBuild","SmokeHarness"]:
                 (gates/f"Test-{name}.ps1").write_text("exit 1" if name=="PackStructure" else "exit 0")
+            for name in ["test_steward_caches.py", "test_pack_keybindings.py", "test_cf_distribution.py"]:
+                (gates/name).write_text("raise SystemExit(0)")
             (root/"tools"/"export-curseforge.ps1").write_text("exit 0")
             (gates/"test_export_archive.py").write_text("print('PASS stub export verification')")
             result=subprocess.run(["pwsh","-NoProfile","-File",str(gates/"Invoke-AllGates.ps1"),"-WithExportDryRun"],capture_output=True,text=True)

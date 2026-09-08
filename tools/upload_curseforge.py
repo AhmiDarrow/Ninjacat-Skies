@@ -98,6 +98,9 @@ def main() -> int:
     zip_path = Path(args.zip)
     if not zip_path.exists():
         raise SystemExit(f"Zip not found: {zip_path}")
+    if zip_path.suffix.lower() == ".zip":
+        from gates.test_export_archive import verify
+        verify(zip_path)
     display = args.display_name or zip_path.stem
     changelog = Path(args.changelog_file).read_text(encoding="utf-8") if args.changelog_file else f"## {display}\n\nNinjacat Skies alpha.\n"
 

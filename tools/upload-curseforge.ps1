@@ -49,6 +49,8 @@ if (-not $ZipPath -or -not (Test-Path $ZipPath)) {
     throw "Zip not found. Pass -ZipPath or allow export."
 }
 $ZipPath = (Resolve-Path $ZipPath).Path
+& python -X utf8 (Join-Path $PSScriptRoot "gates/test_export_archive.py") $ZipPath
+if ($LASTEXITCODE -ne 0) { throw "Archive distribution check failed; refusing to upload" }
 $zipName = [IO.Path]::GetFileNameWithoutExtension($ZipPath)
 if (-not $DisplayName) { $DisplayName = $zipName }
 if (-not $Changelog) {

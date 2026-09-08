@@ -107,7 +107,7 @@ $ModTargets = @(
     @{ Key = "Create Crafts & Additions"; Slugs = @("create-crafts-additions","createaddition"); Search = "Create Crafts Additions" }
     @{ Key = "Create Enchantment Industry"; Slugs = @("create-enchantment-industry"); Search = "Create Enchantment Industry" }
     @{ Key = "Create Dragons Lib";     Slugs = @("create-dragons-plus","create-dragon-lib"); Search = "Create Dragons" }
-    @{ Key = "Mekanism Generators";    Slugs = @("mekanism"); Search = "Mekanism Generators" }
+    @{ Key = "Mekanism Generators";    Slugs = @("mekanism-generators"); Search = "Mekanism Generators" }
     @{ Key = "Applied Mekanistics";    Slugs = @("applied-mekanistics"); Search = "Applied Mekanistics" }
     @{ Key = "AE2 Wireless Terminals"; Slugs = @("ae2wtlib","applied-energistics-2-wireless-terminals"); Search = "AE2WTLib" }
     @{ Key = "Xaero's Minimap";        Slugs = @("xaeros-minimap"); Search = "Xaeros Minimap" }
@@ -344,6 +344,11 @@ foreach ($target in $ModTargets) {
             Save-ModFile -Urls $urls -Dest $dest | Out-Null
         }
 
+        $expectedSha1 = @($file.hashes | Where-Object { $_.algo -eq 1 } | Select-Object -First 1)
+        $actualSha1 = (Get-FileHash -LiteralPath $dest -Algorithm SHA1).Hash.ToLowerInvariant()
+        if ($expectedSha1.Count -ne 1 -or $expectedSha1[0].value.ToLowerInvariant().PadLeft(40, '0') -ne $actualSha1) {
+            throw "Local jar does not match its official CurseForge SHA-1; use -Force to download the official file"
+        }
         $entry = [ordered]@{
             key       = $key
             name      = $project.name
@@ -352,6 +357,7 @@ foreach ($target in $ModTargets) {
             fileId    = [int]$file.id
             filename  = $fileName
             releaseType = [int]$file.releaseType
+            sha1 = $actualSha1
         }
         $resolved += [pscustomobject]$entry
         $downloaded += $key

@@ -35,7 +35,7 @@ SKIP_DIRS = {"build", ".gradle", "run", "runs", "mdk-extract", "dist", "node_mod
              "_skyblockbuilder_jar_extract", "_fm_ref", "_sb_ref", "_sb_cmd", "_sg_cmd", "_fm_btn"}
 PUBLIC_ROOTS = ["pack/overrides", "mods", "docs", "README.md", "pack/pack.toml"]
 PUSH_ROOTS = ["pack/overrides", "mods", "docs", "art", "INTERNAL", "tools", "README.md", ".gitignore"]
-TOOL_ALLOW = re.compile(r"tools/(Load-Secrets\.ps1|upload-curseforge\.ps1|download-mods\.ps1|export-curseforge\.ps1|export_curseforge\.py|upload_curseforge\.py|gates/|secrets/\.env\.example)")
+TOOL_ALLOW = re.compile(r"tools/(Load-Secrets\.ps1|upload-curseforge\.ps1|download-mods\.ps1|export-curseforge\.ps1|export_curseforge\.py|resolve_cf_manifest\.py|upload_curseforge\.py|gates/|secrets/\.env\.example)")
 
 
 def textish(p: Path) -> bool:
