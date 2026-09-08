@@ -7,7 +7,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.network.Filterable;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -97,6 +99,20 @@ public class IslandCharterItem extends Item {
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
     }
 
+    /** Right-click another player while holding the Charter: invite them to your Clowder. */
+    @Override
+    public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity target, InteractionHand hand) {
+        if (player.level().isClientSide) {
+            return target instanceof Player ? InteractionResult.SUCCESS : InteractionResult.PASS;
+        }
+        if (player instanceof ServerPlayer actor && target instanceof ServerPlayer invitee
+                && ModList.get().isLoaded("skyblockbuilder")) {
+            com.ninjacat.skies.clowder.command.ClowderCommands.doInvite(actor, invitee);
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
+    }
+
     /** Overworld shared spawn only — Clowder Hall pad center must not count as Dock. */
     private static boolean isOnDock(Level level, Player player) {
         if (!level.dimension().equals(Level.OVERWORLD)) {
@@ -115,7 +131,7 @@ public class IslandCharterItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(NinjacatText.indigo("Names a pad as yours. Ink still wet."));
-        tooltip.add(Component.literal("Use: Clowder panel. Sneak-use on your pad: seal spawn."));
+        tooltip.add(Component.literal("Use: Clowder panel. Right-click a friend: invite. Sneak-use on your pad: seal spawn."));
     }
 
     private static boolean playerHasRulesBook(ServerPlayer player) {
@@ -164,8 +180,10 @@ public class IslandCharterItem extends Item {
                                 "   Dojo Cottage = Easy\n" +
                                 "   Frayed Thread = Hard\n" +
                                 "4) Open FTB Quests — start Soil.\n\n" +
-                                "Also: /clowder help · /clowder hub · Hub Key.\n" +
-                                "Advanced: /skyblock create <name> skips pad pick."
+                                "Invite a friend: hold this Charter and\n" +
+                                "right-click them, or /clowder invite <name>.\n" +
+                                "They accept with /clowder accept.\n\n" +
+                                "Also: /clowder help · /clowder hub · Hub Key."
                 )),
                 Filterable.passThrough(Component.literal(
                         "If you feel lost\n\n" +

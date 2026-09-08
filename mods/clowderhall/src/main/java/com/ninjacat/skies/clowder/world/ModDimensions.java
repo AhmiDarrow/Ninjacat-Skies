@@ -19,6 +19,7 @@ import net.minecraft.server.network.Filterable;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.component.WrittenBookContent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -62,6 +63,7 @@ public final class ModDimensions {
 
         if (player.level().dimension().equals(CLOWDER_HALL)) {
             ensureHubHall(hub);
+            restockCeremonyChest(hub);
             ReweaveRing.refresh(hub, PAD_CENTER);
             player.displayClientMessage(msg("message.clowderhall.hub_already", NinjacatText.GOLD), true);
             return true;
@@ -69,6 +71,7 @@ public final class ModDimensions {
 
         storeReturnPoint(player);
         ensureHubHall(hub);
+        restockCeremonyChest(hub);
         ReweaveRing.refresh(hub, PAD_CENTER);
 
         // South apron, facing the beacon (north).
@@ -93,7 +96,8 @@ public final class ModDimensions {
             return false;
         }
 
-        CompoundTag root = player.getPersistentData().getCompound(ROOT);
+        CompoundTag persisted = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag root = persisted.getCompound(ROOT);
         if (!root.contains(RETURN_TAG)) {
             return teleportOverworldSpawn(player);
         }
@@ -218,13 +222,7 @@ public final class ModDimensions {
                 Blocks.CHEST.defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
         );
         if (level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest && chest.isEmpty()) {
-            chest.setItem(0, new ItemStack(com.ninjacat.skies.core.item.ModItems.WHISKER_CODEX.get()));
-            chest.setItem(1, new ItemStack(ModItems.ISLAND_CHARTER.get()));
-            chest.setItem(2, new ItemStack(ModItems.HUB_KEY.get()));
-            chest.setItem(3, createHowToStartBook());
-            chest.setItem(4, new ItemStack(Items.BREAD, 8));
-            chest.setItem(5, new ItemStack(Items.TORCH, 8));
-            chest.setItem(6, new ItemStack(com.ninjacat.skies.core.item.ModItems.FRAYED_THREAD.get(), 4));
+            fillCeremonyChest(chest);
         }
 
         // Glow plaques.
@@ -256,6 +254,24 @@ public final class ModDimensions {
         }, DyeColor.WHITE);
 
         ClowderHall.LOGGER.info("Clowder Hall ceremony pad raised at {}", PAD_CENTER);
+    }
+
+    private static void fillCeremonyChest(ChestBlockEntity chest) {
+        chest.setItem(0, new ItemStack(com.ninjacat.skies.core.item.ModItems.WHISKER_CODEX.get()));
+        chest.setItem(1, new ItemStack(ModItems.ISLAND_CHARTER.get()));
+        chest.setItem(2, new ItemStack(ModItems.HUB_KEY.get()));
+        chest.setItem(3, createHowToStartBook());
+        chest.setItem(4, new ItemStack(Items.BREAD, 8));
+        chest.setItem(5, new ItemStack(Items.TORCH, 8));
+        chest.setItem(6, new ItemStack(com.ninjacat.skies.core.item.ModItems.FRAYED_THREAD.get(), 4));
+    }
+
+    /** Refill the ceremony chest whenever it is found empty, so later arrivals still get a kit. */
+    public static void restockCeremonyChest(ServerLevel level) {
+        BlockPos chestPos = PAD_CENTER.offset(1, 1, 1);
+        if (level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest && chest.isEmpty()) {
+            fillCeremonyChest(chest);
+        }
     }
 
     private static void placeBannerPost(ServerLevel level, BlockPos base, BlockState banner) {
@@ -295,11 +311,12 @@ public final class ModDimensions {
                 Filterable.passThrough(Component.literal(
                         "Begin\n\n" +
                                 "/clowder help\n" +
-                                "Hub Key toggles leave Hall.\n" +
-                                "/clowder revive (self) or <mate>\n\n" +
-                                "Create Team is Dock-only:\n" +
-                                "return to Clowder Dock, then\n" +
-                                "right-click Island Charter (or K)."
+                                "Hub Key toggles the Hall.\n\n" +
+                                "Invite a friend: hold the Charter\n" +
+                                "and right-click them, or\n" +
+                                "/clowder invite <name>. They run\n" +
+                                "/clowder accept.\n\n" +
+                                "Ops only: /clowder revive."
                 ))
         );
         WrittenBookContent content = new WrittenBookContent(
@@ -324,15 +341,14 @@ public final class ModDimensions {
                 )),
                 Filterable.passThrough(Component.literal(
                         "CLAIM A PAD\n\n" +
-                                "1) Leave Hall (Hub Key / /clowder return)\n" +
-                                "2) On Clowder Dock: Island Charter (or K)\n" +
-                                "3) Create Team → name your Clowder\n" +
-                                "4) Pick a pad:\n" +
+                                "1) Island Charter (or press K)\n" +
+                                "2) Create Team → name your Clowder\n" +
+                                "3) Pick a pad:\n" +
                                 "   Ninjacat Pad = Normal\n" +
                                 "   Dojo Cottage = Easy\n" +
                                 "   Frayed Thread = Hard\n" +
-                                "5) Open FTB Quests — start Soil.\n\n" +
-                                "Create Team is Dock-only."
+                                "4) Open FTB Quests — start Soil.\n\n" +
+                                "Playing together? See the last page."
                 )),
                 Filterable.passThrough(Component.literal(
                         "QUESTS / RECOVER\n\n" +
@@ -354,6 +370,16 @@ public final class ModDimensions {
                                 "• Op: /skybound revive [player]\n\n" +
                                 "Hub Key toggles Hall enter/leave.\n" +
                                 "Sneak-use Charter seals spawn on solid pad ground."
+                )),
+                Filterable.passThrough(Component.literal(
+                        "PLAY TOGETHER\n\n" +
+                                "One Clowder shares one pad, one\n" +
+                                "quest book and one life pool.\n\n" +
+                                "Invite: hold the Charter and\n" +
+                                "right-click a friend, or\n" +
+                                "/clowder invite <name>.\n\n" +
+                                "They accept with /clowder accept\n" +
+                                "or the panel's Review Invites."
                 ))
         );
         WrittenBookContent content = new WrittenBookContent(
@@ -387,7 +413,8 @@ public final class ModDimensions {
     }
 
     private static void storeReturnPoint(ServerPlayer player) {
-        CompoundTag root = player.getPersistentData().getCompound(ROOT);
+        CompoundTag persisted = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag root = persisted.getCompound(ROOT);
         CompoundTag ret = new CompoundTag();
         ret.putString("dim", player.level().dimension().location().toString());
         ret.putDouble("x", player.getX());
@@ -396,7 +423,9 @@ public final class ModDimensions {
         ret.putFloat("yaw", player.getYRot());
         ret.putFloat("pitch", player.getXRot());
         root.put(RETURN_TAG, ret);
-        player.getPersistentData().put(ROOT, root);
+        // Nest under PlayerPersisted so dying in the Hall does not lose the pad return point.
+        persisted.put(ROOT, root);
+        player.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
     }
 
     private static boolean teleportOverworldSpawn(ServerPlayer player) {
