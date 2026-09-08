@@ -68,7 +68,7 @@ Side content (Clowder Hall bounties, dimension footholds, shop unlocks) fills ga
 
 ## Story devices
 
-- **Whisker Codex** — a real book (Modonomicon): The Cut, The Loom Braid, Nine Tribes. Right-click opens it; sneak-click gives the next practical step. Never a lore dump.
+- **Whisker Codex** — a real book (Modonomicon): The Cut, The Loom Braid, Nine Tribes. Right-click opens the live quest book; Shift + right-click opens the lore pages. Without the book mod it still points at the next practical step. Never a lore dump.
 - **Frayed Thread** — currency; Frayed Thread Desk + craft sinks for QoL and alternate mats
 - **Strand tokens** — proof, never fuel. Earned once per Strand from its Knot quest; seated at a Tension Post; never crafted or consumed by recipes.
 - **Tension Post** — each Clowder's monument. Nine notches light per tribe; seating a token chimes for the whole Clowder, raises a thread helix, and changes the pad (hearth, footing, haste, luck). Braid Cord and the Spindle Loom Fragment are spun here.

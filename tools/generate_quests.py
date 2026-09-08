@@ -292,7 +292,7 @@ LORE = {
     "Cook a Meal": ["Hunger is a soft void. Eight loaves closes it for a while."],
     "Catch the Rain": ["Place lava, melt ice into a source, fill the bucket.", "Easy ships water; Normal and Hard ship the pieces."],
     "Frayed Currency": ["Scraps of the Loom that still hold. Every quest returns some.", "Unravel one for string, or spend them at the Desk."],
-    "Codex in Hand": ["Damaged, but it still assigns work.", "Right-click to open. Sneak-click when you are lost."],
+    "Codex in Hand": ["Damaged, but it still assigns work.", "Right-click for quests and rewards. Shift + right-click for the lore pages."],
     # Stone
     "Pull Void Yarn": ["Thread that remembers where it came from.", "Unravel Thread to string; four string spin two yarn."],
     "Spindle Hammer": ["Cobble and sticks. Break fallen grit into gravel, sand, dust."],
