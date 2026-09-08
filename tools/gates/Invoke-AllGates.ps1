@@ -32,6 +32,9 @@ try {
     Invoke-Gate "QuestItemIds" {
         pwsh -NoProfile -File (Join-Path $gateDir "Test-QuestItemIds.ps1")
     }
+    Invoke-Gate "StewardCaches" {
+        python -X utf8 (Join-Path $gateDir "test_steward_caches.py")
+    }
     Invoke-Gate "PackKeybindings" {
         python (Join-Path $gateDir "test_pack_keybindings.py")
     }

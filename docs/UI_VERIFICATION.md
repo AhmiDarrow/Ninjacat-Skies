@@ -7,3 +7,5 @@ Set `-Dninjacatskies.uiVerification=true` for `runPackClientVerification`. The o
 After the tour, run `python tools/gates/test_pack_keybindings.py ../tribal-power/build/pack-client/options.txt` to verify every preset action exists in the real pack and saves its intended chord. Keep a separate options file with custom bindings to check migration preservation. Normal profiles do not run the UI tour.
 
 Minecraft 1.21.1 places KeyBindsScreen under `net.minecraft.client.gui.screens.options.controls`, not `screens.controls`. Check mapped sources when updating. Use NeoForge's modifier-aware key lookup and release handling; do not use modifier-dependent conflict contexts, which can interfere with releasing held keys.
+
+The final stage displays all three Steward cache models in the inventory and saves `steward-cache-models.png`. These preview stacks are client-side test fixtures; server GameTests validate actual opening and consumption.

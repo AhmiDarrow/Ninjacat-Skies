@@ -44,6 +44,14 @@
 					}
 					id: "62000000000F0242"
 				}
+				{
+					id: "4F000000000F0242"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			shape: "loom_milestone"
 		}
@@ -151,6 +159,14 @@
 						count: 2
 					}
 				}
+				{
+					id: "4F000000000F0246"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000000F0245"]
 			shape: "loom"
@@ -230,6 +246,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000000F0249"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -316,6 +340,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000000F024C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:medium_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -406,6 +438,14 @@
 					type: "xp_levels"
 					xp_levels: 1
 				}
+				{
+					id: "4F000000000F024F"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
+					}
+				}
 			]
 			dependencies: ["42000000000F024A"]
 			shape: "loom"
@@ -485,6 +525,14 @@
 					item: {
 						id: "ninjacatskies:frayed_thread"
 						count: 2
+					}
+				}
+				{
+					id: "4F000000000F0252"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
+						count: 1
 					}
 				}
 			]
@@ -568,6 +616,14 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+				{
+					id: "4F000000000F0255"
+					type: "item"
+					item: {
+						id: "ninjacatskies:small_steward_cache"
 						count: 1
 					}
 				}
@@ -658,6 +714,14 @@
 					type: "item"
 					item: {
 						id: "ninjacatskies:frayed_thread"
+						count: 1
+					}
+				}
+				{
+					id: "4F000000000F0258"
+					type: "item"
+					item: {
+						id: "ninjacatskies:medium_steward_cache"
 						count: 1
 					}
 				}

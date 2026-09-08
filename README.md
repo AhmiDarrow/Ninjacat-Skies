@@ -8,6 +8,8 @@ Rebuild floating pads from nothing—sieve, farm, forge, automate—and reweave 
 
 **Designed playtime:** about **40–60 hours** for a Normal first clear.
 
+Collect lore-themed [Steward caches](docs/STEWARD_CACHES.md) along the questline: unwrap useful random supplies or combine small parcels into larger ones.
+
 ## Play requirements
 
 - Java **21**

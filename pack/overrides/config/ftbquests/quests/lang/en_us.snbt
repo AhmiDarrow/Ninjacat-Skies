@@ -92,7 +92,8 @@
 	file.0000000000000001.title: "Ninjacat Skies"
 	quest.4200000000010001.quest_desc: [
 		"You are Skybound. This is what did not fall.",
-		"Eight logs. Start with the tree; it started with you."
+		"Eight logs. Start with the tree; it started with you.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000010001.title: "Wake on a Pad"
 	quest.4200000000010002.quest_desc: [
@@ -372,7 +373,8 @@
 	quest.4200000000010043.title: "Something Came Up"
 	quest.4200000000020044.quest_desc: [
 		"Thread that remembers where it came from.",
-		"Unravel Thread to string; four string spin two yarn."
+		"Unravel Thread to string; four string spin two yarn.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000020044.title: "Pull Void Yarn"
 	quest.4200000000020045.quest_desc: [
@@ -591,7 +593,8 @@
 	]
 	quest.4200000000020078.title: "Boom, Later"
 	quest.4200000000030079.quest_desc: [
-		"Scratch rows into the pad."
+		"Scratch rows into the pad.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000030079.title: "Iron Hoe"
 	quest.420000000003007A.quest_desc: [
@@ -787,7 +790,8 @@
 	]
 	quest.42000000000300A8.title: "Wrong Potato"
 	quest.42000000000400A9.quest_desc: [
-		"Cut the void on your terms. Eight sheets of plans."
+		"Cut the void on your terms. Eight sheets of plans.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000400A9.title: "Blueprint Paper"
 	quest.42000000000400AA.quest_desc: [
@@ -939,7 +943,8 @@
 	]
 	quest.42000000000400CD.title: "Edge of the Edge"
 	quest.42000000000500CE.quest_desc: [
-		"A brief signal before the Hum. Sixty-four dust."
+		"A brief signal before the Hum. Sixty-four dust.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000500CE.title: "Redstone Dust"
 	quest.42000000000500CF.quest_desc: [
@@ -1164,7 +1169,8 @@
 	]
 	quest.4200000000050104.title: "Bottled Trouble"
 	quest.4200000000060105.quest_desc: [
-		"Hands that work while you sleep. Thirty-two."
+		"Hands that work while you sleep. Thirty-two.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000060105.title: "Andesite Alloy"
 	quest.4200000000060106.quest_desc: [
@@ -1375,7 +1381,8 @@
 	quest.4200000000070137.subtitle: "Colony"
 	quest.4200000000070137.title: "First Wings"
 	quest.4200000000070138.quest_desc: [
-		"Eight oak logs around a small flower. Place it; the wood remembers wings."
+		"Eight oak logs around a small flower. Place it; the wood remembers wings.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000070138.title: "Ring of Oak"
 	quest.4200000000070139.quest_desc: [
@@ -1573,7 +1580,8 @@
 	]
 	quest.4200000000070167.title: "Regret"
 	quest.4200000000080168.quest_desc: [
-		"The stewards left tricks in crystal. Thirty-two shards."
+		"The stewards left tricks in crystal. Thirty-two shards.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000080168.title: "Amethyst"
 	quest.4200000000080169.quest_desc: [
@@ -1761,7 +1769,8 @@
 	quest.4200000000080194.title: "Old Gold"
 	quest.4200000000090195.quest_desc: [
 		"An iron mesh, gravel or sand, patience.",
-		"Strand Filament is the Loom's own thread. The braid is spun from it."
+		"Strand Filament is the Loom's own thread. The braid is spun from it.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000090195.title: "Spin the Filament"
 	quest.4200000000090196.quest_desc: [
@@ -1999,7 +2008,8 @@
 	]
 	quest.42000000000901CD.title: "A Star, Somehow"
 	quest.42000000000A01CE.quest_desc: [
-		"Leaves drop more saplings."
+		"Leaves drop more saplings.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000A01CE.title: "Crook Basics"
 	quest.42000000000A01CF.quest_desc: [
@@ -2103,7 +2113,8 @@
 	]
 	quest.42000000000A01E7.title: "Sponge"
 	quest.42000000000B01E8.quest_desc: [
-		"Links every drawer on the pad into one searchable network."
+		"Links every drawer on the pad into one searchable network.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000B01E8.title: "Storage Controller"
 	quest.42000000000B01E9.quest_desc: [
@@ -2211,7 +2222,8 @@
 	]
 	quest.42000000000B0202.title: "Tank Upgrade"
 	quest.42000000000C0203.quest_desc: [
-		"The backbone metal behind most machines and casings on this line."
+		"The backbone metal behind most machines and casings on this line.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000C0203.title: "Steel Ingot"
 	quest.42000000000C0204.quest_desc: [
@@ -2315,7 +2327,8 @@
 	]
 	quest.42000000000C021C.title: "Digital Miner"
 	quest.42000000000D021D.quest_desc: [
-		"A sticky base ingredient behind most of the grid's machines."
+		"A sticky base ingredient behind most of the grid's machines.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000D021D.title: "Dielectric Paste"
 	quest.42000000000D021E.quest_desc: [
@@ -2379,7 +2392,8 @@
 	]
 	quest.42000000000D022C.title: "Nitro Crystal"
 	quest.42000000000E022D.quest_desc: [
-		"Spun from magebloom, and woven into robes and spell gear."
+		"Spun from magebloom, and woven into robes and spell gear.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000E022D.title: "Mage Fiber"
 	quest.42000000000E022E.quest_desc: [
@@ -2464,7 +2478,8 @@
 	quest.42000000000E0241.title: "Deny Scroll"
 	quest.42000000000F0242.quest_desc: [
 		"Logs around a Binding Knot, Thread on top. Place it on the pad.",
-		"Stand near it: the pad starts mending you once a Strand is seated."
+		"Stand near it: the pad starts mending you once a Strand is seated.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000000F0242.title: "Raise the Post"
 	quest.42000000000F0243.quest_desc: [
@@ -2684,7 +2699,8 @@
 	]
 	quest.4200000000100277.title: "Buy Beacon Frame"
 	quest.4200000000110278.quest_desc: [
-		"Shows where aura pools thick or thin across the land."
+		"Shows where aura pools thick or thin across the land.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000110278.title: "Eye (Aura)"
 	quest.4200000000110279.quest_desc: [
@@ -2788,7 +2804,8 @@
 	]
 	quest.4200000000110291.title: "Spawn Lamp"
 	quest.4200000000120292.quest_desc: [
-		"Cooks stew-type meals that feed more than one plate at once."
+		"Cooks stew-type meals that feed more than one plate at once.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000120292.title: "Cooking Pot (Kitchen)"
 	quest.4200000000120293.quest_desc: [
@@ -2884,7 +2901,8 @@
 	]
 	quest.42000000001202A9.title: "Tatami"
 	quest.42000000001302AA.quest_desc: [
-		"The first book that lets you cast spells in a real fight."
+		"The first book that lets you cast spells in a real fight.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001302AA.title: "Iron Spell Book"
 	quest.42000000001302AB.quest_desc: [
@@ -2964,7 +2982,8 @@
 	]
 	quest.42000000001302BD.title: "Ruined Codex"
 	quest.42000000001402BE.quest_desc: [
-		"Redirects sunlight toward a solar tower for a bigger yield."
+		"Redirects sunlight toward a solar tower for a bigger yield.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001402BE.title: "Mirror"
 	quest.42000000001402BF.quest_desc: [
@@ -3036,7 +3055,8 @@
 	]
 	quest.42000000001402CF.title: "Blank Upgrade"
 	quest.42000000001502D0.quest_desc: [
-		"Plain, dependable stone for walls and floors."
+		"Plain, dependable stone for walls and floors.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001502D0.title: "Stone Bricks"
 	quest.42000000001502D1.quest_desc: [
@@ -3288,7 +3308,8 @@
 	]
 	quest.420000000015030E.title: "Shulker Shell"
 	quest.420000000016030F.quest_desc: [
-		"The floor and walls of anywhere you're building over lava."
+		"The floor and walls of anywhere you're building over lava.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.420000000016030F.title: "Netherrack Stock"
 	quest.4200000000160310.quest_desc: [
@@ -3408,7 +3429,8 @@
 	]
 	quest.420000000016032C.title: "Fire Charge"
 	quest.420000000017032D.quest_desc: [
-		"Pale stone from the far side. Heavy, plain, and endless."
+		"Pale stone from the far side. Heavy, plain, and endless.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.420000000017032D.title: "End Stone"
 	quest.420000000017032E.quest_desc: [
@@ -3526,7 +3548,8 @@
 	]
 	quest.4200000000170349.title: "Trident Show"
 	quest.420000000018034A.quest_desc: [
-		"Base essence. Feeds growth accelerators and reprocessors alike."
+		"Base essence. Feeds growth accelerators and reprocessors alike.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.420000000018034A.title: "Inferium Stock"
 	quest.420000000018034B.quest_desc: [
@@ -3822,7 +3845,8 @@
 	]
 	quest.4200000000180393.title: "Redstone Essence"
 	quest.4200000000190394.quest_desc: [
-		"Points at nests you placed and forgot about."
+		"Points at nests you placed and forgot about.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000190394.title: "Nest Locator"
 	quest.4200000000190395.quest_desc: [
@@ -4038,7 +4062,8 @@
 	]
 	quest.42000000001903C9.title: "Shears Spare"
 	quest.42000000001A03CA.quest_desc: [
-		"One block that moves items where you tell it — the pad's nervous system."
+		"One block that moves items where you tell it — the pad's nervous system.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001A03CA.title: "Modular Router"
 	quest.42000000001A03CB.quest_desc: [
@@ -4206,7 +4231,8 @@
 	]
 	quest.42000000001A03F3.title: "Ult Cable"
 	quest.42000000001B03F4.quest_desc: [
-		"Lists every spirit you can bind and what it needs."
+		"Lists every spirit you can bind and what it needs.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001B03F4.title: "Dictionary of Spirits"
 	quest.42000000001B03F5.quest_desc: [
@@ -4350,7 +4376,8 @@
 	]
 	quest.42000000001B0417.title: "Miner Afrit Deeps"
 	quest.42000000001C0418.quest_desc: [
-		"Turn it by hand when nothing else is spinning yet."
+		"Turn it by hand when nothing else is spinning yet.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001C0418.title: "Hand Crank (Clockworks)"
 	quest.42000000001C0419.quest_desc: [
@@ -4610,7 +4637,8 @@
 	]
 	quest.42000000001C0458.title: "Gantry Carriage (Clockworks)"
 	quest.42000000001D0459.quest_desc: [
-		"Grows in caves and holds a network's memory."
+		"Grows in caves and holds a network's memory.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001D0459.title: "Certus Crystal"
 	quest.42000000001D045A.quest_desc: [
@@ -4862,7 +4890,8 @@
 	]
 	quest.42000000001D0497.title: "Cell Workbench"
 	quest.42000000001E0498.quest_desc: [
-		"Fired clay, a step toward porcelain tools."
+		"Fired clay, a step toward porcelain tools.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001E0498.title: "Porcelain Clay (Voidcraft)"
 	quest.42000000001E0499.quest_desc: [
@@ -5002,7 +5031,8 @@
 	]
 	quest.42000000001E04BA.title: "Whisker Codex"
 	quest.42000000001F04BB.quest_desc: [
-		"The paper inside a package, before it's sealed shut."
+		"The paper inside a package, before it's sealed shut.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000001F04BB.title: "Package Component"
 	quest.42000000001F04BC.quest_desc: [
@@ -5106,7 +5136,8 @@
 	]
 	quest.42000000001F04D4.title: "Item Vault (Packaged)"
 	quest.42000000002004D5.quest_desc: [
-		"A basic quantum storage disk for the QIO network."
+		"A basic quantum storage disk for the QIO network.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000002004D5.title: "QIO Drive Base"
 	quest.42000000002004D6.quest_desc: [
@@ -5303,7 +5334,8 @@
 	]
 	quest.4200000000200505.title: "Combiner"
 	quest.4200000000210506.quest_desc: [
-		"Zombies drop it whether you want it or not."
+		"Zombies drop it whether you want it or not.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000210506.title: "Rotten Flesh Stock"
 	quest.4200000000210507.quest_desc: [
@@ -5468,7 +5500,8 @@
 	]
 	quest.420000000021052E.title: "Player Head"
 	quest.420000000022052F.quest_desc: [
-		"First craft yields 2 — keep one for Codex later."
+		"First craft yields 2 — keep one for Codex later.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.420000000022052F.title: "Bone Chime"
 	quest.4200000000220530.quest_desc: [
@@ -5854,7 +5887,8 @@
 	]
 	quest.420000000022058B.title: "An answer from the cradle"
 	quest.420000000023058C.quest_desc: [
-		"Grit-singers never cut a stone the same way twice. This bench remembers every cut."
+		"Grit-singers never cut a stone the same way twice. This bench remembers every cut.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.420000000023058C.title: "Mason Table"
 	quest.420000000023058D.quest_desc: [
@@ -5906,7 +5940,8 @@
 	]
 	quest.4200000000230598.title: "Sandstone Variety"
 	quest.4200000000240599.quest_desc: [
-		"The first thing that turns a pad into a place someone lives."
+		"The first thing that turns a pad into a place someone lives.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.4200000000240599.title: "A Chair"
 	quest.420000000024059A.quest_desc: [
@@ -5994,7 +6029,8 @@
 	]
 	quest.42000000002405AE.title: "Andesite Bridge"
 	quest.42000000002505AF.quest_desc: [
-		"A wall light that is not a torch stuck in shame. The stewards had standards."
+		"A wall light that is not a torch stuck in shame. The stewards had standards.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000002505AF.title: "Sconce"
 	quest.42000000002505B0.quest_desc: [
@@ -6074,7 +6110,8 @@
 	]
 	quest.42000000002505C2.title: "Cage"
 	quest.42000000002605C3.quest_desc: [
-		"The first wire. The pulse the Drumhearts kept now has somewhere to go."
+		"The first wire. The pulse the Drumhearts kept now has somewhere to go.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
 	]
 	quest.42000000002605C3.title: "Copper Wire"
 	quest.42000000002605C4.quest_desc: [

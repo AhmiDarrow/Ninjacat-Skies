@@ -15,7 +15,7 @@ public final class UiVerification {
     private int stage;
     private long next;
     @SubscribeEvent public void tick(ClientTickEvent.Post event) {
-        if(!Boolean.getBoolean("ninjacatskies.uiVerification") || stage>6)return;
+        if(!Boolean.getBoolean("ninjacatskies.uiVerification") || stage>7)return;
         var mc=Minecraft.getInstance();
         if(mc.player==null||mc.level==null||mc.gameMode==null)return;
         if(next==0){next=System.currentTimeMillis()+12000;return;}
@@ -30,7 +30,14 @@ public final class UiVerification {
         if(stage==3){capture(mc,"create-team-from-panel");mc.setScreen(null);press("key.keyboard.k");}
         if(stage==4){capture(mc,"clowders-from-key");mc.setScreen(null);press("key.keyboard.grave.accent");}
         if(stage==5){capture(mc,"quests-from-key");mc.setScreen(new net.minecraft.client.gui.screens.options.controls.KeyBindsScreen(null,mc.options));}
-        if(stage==6){capture(mc,"pack-controls");mc.options.save();}
+        if(stage==6){
+            capture(mc,"pack-controls");mc.options.save();
+            int slot=9;
+            for(String tier:new String[]{"small","medium","large"})
+                mc.player.getInventory().setItem(slot++,new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse("ninjacatskies:"+tier+"_steward_cache"))));
+            mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(mc.player));
+        }
+        if(stage==7)capture(mc,"steward-cache-models");
         stage++;
     }
     private static void use(Minecraft mc,String id){

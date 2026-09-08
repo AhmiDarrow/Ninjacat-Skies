@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ninjacatskies:medium_steward_cache"
+    },
+    {
+      "item": "ninjacatskies:medium_steward_cache"
+    },
+    {
+      "item": "ninjacatskies:medium_steward_cache"
+    }
+  ],
+  "result": {
+    "id": "ninjacatskies:large_steward_cache",
+    "count": 1
+  }
+}
