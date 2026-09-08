@@ -15,5 +15,8 @@ apply from: rootProject.file('neoforge-mod.gradle')
 dependencies {
     implementation project(':ninjacat-lib')
     implementation project(':ninjacatskies')
-    compileOnly fileTree(dir: rootProject.file('../pack/mods'), include: ['SkyGUIs-*.jar', 'SkyblockBuilder-*.jar', 'LibX-*.jar'])
+    compileOnly fileTree(dir: rootProject.file('../pack/mods'), include: [
+            'SkyGUIs-*.jar', 'SkyblockBuilder-*.jar', 'LibX-*.jar',
+            'ftb-teams-neoforge-*.jar', 'ftb-library-neoforge-*.jar',
+    ])
 }

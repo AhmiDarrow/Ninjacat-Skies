@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.ninjacat.skies.clowder.command.ClowderCommands;
 import com.ninjacat.skies.clowder.item.ModCreativeTabs;
 import com.ninjacat.skies.clowder.item.ModItems;
+import com.ninjacat.skies.clowder.team.ClowderSync;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,6 +22,7 @@ public final class ClowderHall {
         ModCreativeTabs.TABS.register(modBus);
         modBus.addListener(this::onCommonSetup);
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
+        ClowderSync.register(NeoForge.EVENT_BUS);
     }
 
     private void onCommonSetup(FMLCommonSetupEvent event) {

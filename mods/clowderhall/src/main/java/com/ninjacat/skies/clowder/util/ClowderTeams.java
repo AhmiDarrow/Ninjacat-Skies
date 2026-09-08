@@ -1,65 +1,28 @@
 package com.ninjacat.skies.clowder.util;
 
+import com.ninjacat.skies.clowder.team.FtbParties;
+import com.ninjacat.skies.clowder.team.SkyTeams;
 import net.minecraft.server.level.ServerPlayer;
-
-import java.lang.reflect.Method;
-import java.util.UUID;
+import net.neoforged.fml.ModList;
 
 /**
- * Soft checks for "same Clowder" without compile deps on Skyblock Builder / FTB Teams.
- * Prefer Skyblock pad team (Create Team / Charter), then FTB party team.
+ * "Same Clowder?" — the Skyblock pad team when Skyblock Builder is present, then the FTB party.
+ * Calls both APIs directly (guarded by ModList); the mod-typed work is isolated in the team package,
+ * so nothing here is resolved unless the relevant mod is loaded.
  */
 public final class ClowderTeams {
     private ClowderTeams() {}
+
+    private static final boolean SKY = ModList.get().isLoaded("skyblockbuilder");
+    private static final boolean FTB = ModList.get().isLoaded("ftbteams");
 
     public static boolean sameClowder(ServerPlayer a, ServerPlayer b) {
         if (a.getUUID().equals(b.getUUID())) {
             return true;
         }
-        if (sameSkyblockTeam(a, b)) {
+        if (SKY && SkyTeams.sameTeam(a.server, a.getUUID(), b.getUUID())) {
             return true;
         }
-        return sameFtbTeam(a, b);
-    }
-
-    private static boolean sameSkyblockTeam(ServerPlayer a, ServerPlayer b) {
-        try {
-            Class<?> dataClass = Class.forName("de.melanx.skyblockbuilder.data.SkyblockSavedData");
-            Method get = dataClass.getMethod("get", net.minecraft.world.level.Level.class);
-            // Skyblock island data lives on the overworld — Hall/Nether revive must not miss the team.
-            Object data = get.invoke(null, a.server.overworld());
-            if (data == null) {
-                return false;
-            }
-            Method teamOf = dataClass.getMethod("getTeamFromPlayer", net.minecraft.world.entity.player.Player.class);
-            Object team = teamOf.invoke(data, a);
-            if (team == null) {
-                return false;
-            }
-            Method hasPlayer = team.getClass().getMethod("hasPlayer", net.minecraft.world.entity.player.Player.class);
-            Object result = hasPlayer.invoke(team, b);
-            return Boolean.TRUE.equals(result);
-        } catch (ReflectiveOperationException | RuntimeException ignored) {
-            return false;
-        }
-    }
-
-    private static boolean sameFtbTeam(ServerPlayer a, ServerPlayer b) {
-        try {
-            Class<?> apiClass = Class.forName("dev.ftb.mods.ftbteams.api.FTBTeamsAPI");
-            Method apiMethod = apiClass.getMethod("api");
-            Object api = apiMethod.invoke(null);
-            Method loaded = api.getClass().getMethod("isManagerLoaded");
-            if (!Boolean.TRUE.equals(loaded.invoke(api))) {
-                return false;
-            }
-            Method getManager = api.getClass().getMethod("getManager");
-            Object manager = getManager.invoke(api);
-            Method same = manager.getClass().getMethod("arePlayersInSameTeam", UUID.class, UUID.class);
-            Object result = same.invoke(manager, a.getUUID(), b.getUUID());
-            return Boolean.TRUE.equals(result);
-        } catch (ReflectiveOperationException | RuntimeException ignored) {
-            return false;
-        }
+        return FTB && FtbParties.loaded() && FtbParties.sameTeam(a.server, a.getUUID(), b.getUUID());
     }
 }
