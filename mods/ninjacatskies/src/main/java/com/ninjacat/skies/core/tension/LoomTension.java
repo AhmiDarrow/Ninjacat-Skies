@@ -50,6 +50,28 @@ public final class LoomTension {
 
     private LoomTension() {}
 
+    /** Called once from mod construction. */
+    public static void init() {
+        if (FTB_TEAMS) {
+            try {
+                FtbTeamsBridge.registerPartyEvents();
+            } catch (Throwable t) {
+                NinjacatSkies.LOGGER.warn("FTB Teams party events unavailable: {}", t.toString());
+            }
+        }
+    }
+
+    /** Login / party change: sync the client and grant the Strand advancements this Clowder has already seated. */
+    public static void onClowderChanged(ServerPlayer player) {
+        clowderOf(player).ifPresent(c -> {
+            for (Strand s : Strand.ALL) {
+                if (isSeated(c, s)) awardAdvancement(player, s.advancementId());
+            }
+            if (isRewoven(c)) awardAdvancement(player, ResourceLocation.fromNamespaceAndPath(NinjacatSkies.MOD_ID, "reweave"));
+            sync(player, c);
+        });
+    }
+
     // ---------------------------------------------------------------- lookup
 
     public static Optional<Clowder> clowderOf(ServerPlayer player) {

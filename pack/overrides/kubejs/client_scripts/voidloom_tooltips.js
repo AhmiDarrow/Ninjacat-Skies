@@ -34,7 +34,7 @@ ItemEvents.modifyTooltips(event => {
     event.add('mysticalagriculture:inferium_ore', Text.gray('From the sieve. Smelt for Inferium Essence — the floor of every crop tier.'))
     event.add('mysticalagriculture:prosperity_ore', Text.gray('From the sieve. Smelt for a Prosperity Shard — every seed base needs one.'))
   }
-  event.add(/productivebees:.*_nest$/, Text.gray('A ring of this around a small flower. Place it on the pad and wait for wings.'))
+  event.add(/productivebees:.*_nest$/, Text.gray('A ring of this around a small flower. Place it, then right-click it with a small flower to wake the bee.'))
   event.add('productivebees:oak_wood_nest', Text.darkGray('Also spawns plain honey bees — the root of every breeding line.'))
   event.add('minecraft:bee_nest', Text.gray('Planks and flowers. A wild bee will move in; shear it with smoke underneath.'))
   if (Item.exists('tribalpower:pulse_resonator')) {

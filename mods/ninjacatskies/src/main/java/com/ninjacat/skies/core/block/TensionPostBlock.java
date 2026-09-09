@@ -171,6 +171,10 @@ public class TensionPostBlock extends BaseEntityBlock {
         if (!(level instanceof ServerLevel serverLevel) || !(player instanceof ServerPlayer sp)) {
             return ItemInteractionResult.SUCCESS;
         }
+        if (!owns(serverLevel, pos, sp)) {
+            player.displayClientMessage(NinjacatText.teal("This Post answers to another Clowder."), true);
+            return ItemInteractionResult.CONSUME;
+        }
 
         // Strand token → seat it.
         Strand strand = Strand.byToken(BuiltInRegistries.ITEM.getKey(stack.getItem()));
@@ -233,6 +237,10 @@ public class TensionPostBlock extends BaseEntityBlock {
         if (level.isClientSide || !(player instanceof ServerPlayer sp)) {
             return InteractionResult.SUCCESS;
         }
+        if (!owns((ServerLevel) level, pos, sp)) {
+            player.displayClientMessage(NinjacatText.teal("This Post answers to another Clowder."), true);
+            return InteractionResult.CONSUME;
+        }
         refresh((ServerLevel) level, pos, sp);
         LoomTension.clowderOf(sp).ifPresent(c -> {
             int bits = LoomTension.strandBits(c);
@@ -254,6 +262,20 @@ public class TensionPostBlock extends BaseEntityBlock {
             }
         });
         return InteractionResult.CONSUME;
+    }
+
+    /**
+     * A Post belongs to the Clowder that first used it. Unowned posts (placed before this rule, or whose
+     * Clowder no longer exists — e.g. a party that was disbanded) are claimed by the next Clowder to use them.
+     */
+    private static boolean owns(ServerLevel level, BlockPos pos, ServerPlayer player) {
+        if (!(level.getBlockEntity(pos) instanceof TensionPostBlockEntity be) || be.getClowder() == null) return true;
+        var mine = LoomTension.clowderOf(player);
+        if (mine.isEmpty()) return true;
+        if (be.getClowder().equals(mine.get().id())) return true;
+        if (LoomTension.clowderById(level.getServer(), be.getClowder()).isPresent()) return false;
+        // Unknown id: a disbanded party (reclaimable) — but never a solo player who is merely offline.
+        return level.getServer().getProfileCache() == null || level.getServer().getProfileCache().get(be.getClowder()).isEmpty();
     }
 
     /** Re-read the Clowder's state into the blockstate (covers posts placed before a seat elsewhere). */

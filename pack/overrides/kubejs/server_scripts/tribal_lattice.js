@@ -1,6 +1,7 @@
 // Pack-only workshop uses. Standalone Tribal Power recipes remain self-contained.
 // These are normal, synced recipes and appear in Tribal Power's JEI category.
 ServerEvents.recipes(event => {
+  if (!Platform.isLoaded('tribalpower')) return
   const lattice = (id, station, ingredient, result, count, attunement, seconds, pulse) => {
     event.custom({
       type: 'tribalpower:lattice', station: station,

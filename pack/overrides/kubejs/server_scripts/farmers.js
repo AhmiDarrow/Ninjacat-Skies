@@ -6,15 +6,16 @@ ServerEvents.recipes(event => {
   const sieve = (input, mesh, result, p, compressed) => {
     event.custom({
       type: compressed ? 'exdeorum:compressed_sieve' : 'exdeorum:sieve',
-      ingredient: { item: input },
+      // Compressed sieves take the compressed block (Ex Deorum tag) and roll 7x — same shape as Ex Deorum's own tables.
+      ingredient: compressed ? { tag: 'exdeorum:compressed/' + input.split(':')[1] } : { item: input },
       mesh: { item: mesh },
       result: { id: result, count: 1 },
-      result_amount: { type: 'minecraft:binomial', n: 1.0, p: p },
+      result_amount: { type: 'minecraft:binomial', n: compressed ? 7.0 : 1.0, p: p },
     }).id(`ninjacatskies:farmers/${compressed ? 'compressed_' : ''}${input.split(':')[1]}_${mesh.split(':')[1]}_${result.split(':')[1]}`)
   }
   const both = (input, mesh, result, p) => {
     sieve(input, mesh, result, p, false)
-    sieve(input, mesh, result, Math.min(1, p * 4), true)
+    sieve(input, mesh, result, p, true)
   }
 
   // Seeds from dirt, like the vanilla ones Ex Deorum already sieves. String mesh so Root can start.

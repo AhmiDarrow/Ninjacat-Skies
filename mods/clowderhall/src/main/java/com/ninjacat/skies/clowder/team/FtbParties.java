@@ -17,7 +17,7 @@ import java.util.UUID;
  * Direct FTB Teams access — the mirror that keeps a Skyblock pad team and an FTB party in step,
  * so Loom Tension, the shared-life pool and FTB Quests (all keyed on the FTB team) follow the pad.
  * Only referenced when "ftbteams" is loaded and its manager is up. Conservative: it only ever creates
- * a party or adds members; it removes a member only when they leave the Skyblock team themselves.
+ * a party or adds members; it removes a member only when they leave (or are removed from) the Skyblock team.
  */
 public final class FtbParties {
     private FtbParties() {}
@@ -47,9 +47,12 @@ public final class FtbParties {
                 ServerPlayer anchor = firstOnline(server, memberIds);
                 if (anchor == null) return; // nobody online to own/create the party yet
                 Team anchorTeam = manager.getTeamForPlayer(anchor).orElse(null);
-                if (anchorTeam != null && anchorTeam.isPartyTeam()) {
-                    party = anchorTeam;
+                if (anchorTeam != null && anchorTeam.isPartyTeam() && !isMirror(anchorTeam)) {
+                    party = anchorTeam;                       // adopt a hand-made party as the mirror
                 } else {
+                    if (anchorTeam instanceof PartyTeam stale && isMirror(anchorTeam)) {
+                        stale.kickPlayerForcibly(anchor);     // anchor still sits in another pad's mirror: leave it first
+                    }
                     party = createParty(anchor, displayName);
                 }
                 if (party == null) return;
@@ -60,11 +63,21 @@ public final class FtbParties {
             for (UUID id : memberIds) {
                 ServerPlayer member = server.getPlayerList().getPlayer(id);
                 if (member == null) continue;
-                Team current = manager.getTeamForPlayer(member).orElse(null);
-                if (current == null || !current.getTeamId().equals(partyId)) {
+                try {
+                    Team current = manager.getTeamForPlayer(member).orElse(null);
+                    if (current != null && current.getTeamId().equals(partyId)) continue;
+                    if (current instanceof PartyTeam other && other.isPartyTeam()) {
+                        if (!isMirror(other)) {
+                            ClowderHall.LOGGER.info("Not moving {} out of hand-made party {} for pad team {}", member.getGameProfile().getName(), other.getShortName(), skyTeamId);
+                            continue;
+                        }
+                        other.kickPlayerForcibly(member);     // stale mirror from a previous pad
+                    }
                     if (party instanceof PartyTeam pt) {
                         pt.join(member);
                     }
+                } catch (Throwable t) {
+                    ClowderHall.LOGGER.warn("Could not add {} to mirror party for Skyblock team {}: {}", id, skyTeamId, t.toString());
                 }
             }
         } catch (Throwable t) {
@@ -78,7 +91,12 @@ public final class FtbParties {
             TeamManager manager = FTBTeamsAPI.api().getManager();
             Team current = manager.getTeamForPlayerID(player).orElse(null);
             if (current instanceof PartyTeam pt && isMirror(current)) {
-                pt.leave(player);
+                ServerPlayer online = server.getPlayerList().getPlayer(player);
+                if (online != null) {
+                    pt.kickPlayerForcibly(online);            // handles the owner case (transfers ownership / disbands)
+                } else {
+                    pt.leave(player);
+                }
             }
         } catch (Throwable t) {
             ClowderHall.LOGGER.warn("Could not remove {} from a mirror party", player, t);

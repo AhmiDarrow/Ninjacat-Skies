@@ -1,6 +1,8 @@
 // Colony-keepers — bees in a world with no trees to find them in.
 // Productive Bees nests normally only generate in worldgen; on a void pad you build one: a ring of the
-// material the bee likes around a small flower, place it, and wait. Placed nests spawn their bee on their own.
+// material the bee likes around a small flower, place it, then right-click it with a small flower to wake it.
+// (Productive Bees' default wake item is a Honey Treat — which needs honeycomb, i.e. bees — so every
+// bee_spawning recipe without its own spawn_item is pointed at small flowers instead.)
 // The oak wood nest also spawns plain honey bees so Beehives / honeycomb / breeding all start from the pad.
 ServerEvents.recipes(event => {
   const ring = (nest, material, id) => {
@@ -47,14 +49,29 @@ ServerEvents.recipes(event => {
     type: 'productivebees:bee_spawning',
     ingredient: { item: 'productivebees:oak_wood_nest' },
     results: ['minecraft:bee'],
+    spawn_item: { tag: 'minecraft:small_flowers' },
     biomes: '#c:is_overworld'
   }).id('ninjacatskies:bees/oak_wood_nest_honey_bee')
   event.custom({
     type: 'productivebees:bee_spawning',
     ingredient: { item: 'productivebees:bumble_bee_nest' },
     results: ['minecraft:bee'],
+    spawn_item: { tag: 'minecraft:small_flowers' },
     biomes: '#c:is_overworld'
   }).id('ninjacatskies:bees/bumble_bee_nest_honey_bee')
+
+  // Productive Bees' own nest recipes: give every one that relies on the Honey Treat default a reachable wake item.
+  let woken = 0
+  event.forEachRecipe({ type: 'productivebees:bee_spawning' }, r => {
+    try {
+      if (r.json.has('spawn_item')) return
+      r.merge({ spawn_item: { tag: 'minecraft:small_flowers' } })
+      woken++
+    } catch (err) {
+      console.warn('[Ninjacat Skies] bee wake item skipped for ' + r.getId() + ': ' + err)
+    }
+  })
+  console.info('[Ninjacat Skies] ' + woken + ' Productive Bees nests wake with a small flower')
 
   // A vanilla bee nest for the pad, so a colony can be moved in without an Advanced Beehive first.
   event.shaped('minecraft:bee_nest', [
