@@ -108,14 +108,12 @@ def main() -> int:
     versions = api_get("/game/versions", token)
     game_versions = [resolve_version_id(versions, "1.21.1", MC_TYPE), resolve_version_id(versions, "NeoForge", LOADER_TYPE)]
     game_versions.extend(resolve_version_id(versions, name, 75208) for name in dict.fromkeys(args.environment))
-    metadata = json.dumps({
-        "changelog": changelog,
-        "changelogType": "markdown",
-        "displayName": display,
-        "gameVersions": game_versions,
-        "releaseType": args.release_type,
-        **({"parentFileID": args.parent_file_id} if args.parent_file_id else {}),
-    })
+    meta = {"changelog": changelog, "changelogType": "markdown", "displayName": display, "releaseType": args.release_type}
+    if args.parent_file_id:
+        meta["parentFileID"] = args.parent_file_id          # an additional file inherits its parent's game versions; CF rejects both together
+    else:
+        meta["gameVersions"] = game_versions
+    metadata = json.dumps(meta)
     print(f"Uploading {zip_path.name} ({zip_path.stat().st_size // 1024} KiB) -> project {project_id} as {args.release_type}; gameVersions={game_versions}")
     body, boundary = multipart({
         "metadata": ("", metadata.encode("utf-8"), "application/json"),
