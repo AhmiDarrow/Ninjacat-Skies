@@ -3,7 +3,7 @@ import hashlib
 import re
 
 # These are original companion mods maintained in this repository, not CF-hosted dependencies.
-OWN_JAR = re.compile(r"(?:ninjacatskies|ninjacatlib|clowderhall|voidloom)-[0-9][A-Za-z0-9.+_-]*\.jar")
+OWN_JAR = re.compile(r"(?:ninjacatskies|ninjacatlib|clowderhall|voidloom|guardians)-[0-9][A-Za-z0-9.+_-]*\.jar")
 
 
 def is_owned_jar(name):

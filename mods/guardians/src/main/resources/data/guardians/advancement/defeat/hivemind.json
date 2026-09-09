@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "id": "guardians:relic_hivecall"
+    },
+    "title": "The Hivemind answers for the Cut",
+    "description": "Defeat the Hivemind in its arena.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "guardians:defeat/root"
+}

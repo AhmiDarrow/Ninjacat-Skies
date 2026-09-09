@@ -39,7 +39,7 @@ $jars = @(Get-ChildItem (Join-Path $root "pack\mods") -Filter "*.jar" -ErrorActi
 if ($jars.Count -lt 20) {
     [void]$failures.Add("Expected at least 20 jars in pack/mods (found $($jars.Count))")
 }
-foreach ($name in @("ninjacatskies-${customModVersion}.jar","voidloom-${customModVersion}.jar","clowderhall-${customModVersion}.jar","ninjacatlib-${customModVersion}.jar")) {
+foreach ($name in @("ninjacatskies-${customModVersion}.jar","voidloom-${customModVersion}.jar","clowderhall-${customModVersion}.jar","ninjacatlib-${customModVersion}.jar","guardians-${customModVersion}.jar")) {
     if (-not (Test-Path (Join-Path $root "pack\mods\$name"))) {
         [void]$failures.Add("Missing custom jar pack/mods/$name - run mods build + copy")
     }

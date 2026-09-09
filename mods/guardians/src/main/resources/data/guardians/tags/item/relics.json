@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "guardians:relic_rootheart",
+    "guardians:relic_grindcore",
+    "guardians:relic_thornseed",
+    "guardians:relic_edgestep",
+    "guardians:relic_drumpulse",
+    "guardians:relic_cogloop",
+    "guardians:relic_hivecall",
+    "guardians:relic_sealmark",
+    "guardians:relic_loomthread",
+    "guardians:relic_lintwisp",
+    "guardians:relic_knotcharm",
+    "guardians:relic_firstcut_shard",
+    "guardians:relic_overweaver_shuttle"
+  ]
+}

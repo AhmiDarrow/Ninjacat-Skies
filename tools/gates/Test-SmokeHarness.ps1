@@ -28,7 +28,8 @@ foreach ($pair in @(
     @{ Jar = "ninjacatskies-${customModVersion}.jar"; Needle = "ninjacatskies" },
     @{ Jar = "voidloom-${customModVersion}.jar"; Needle = "voidloom" },
     @{ Jar = "clowderhall-${customModVersion}.jar"; Needle = "clowderhall" },
-    @{ Jar = "ninjacatlib-${customModVersion}.jar"; Needle = "ninjacatlib" }
+    @{ Jar = "ninjacatlib-${customModVersion}.jar"; Needle = "ninjacatlib" },
+    @{ Jar = "guardians-${customModVersion}.jar"; Needle = "guardians" }
 )) {
     $path = Join-Path $root "pack\mods\$($pair.Jar)"
     if (-not (Test-Path $path)) { Add-Fail "Missing $($pair.Jar)"; continue }

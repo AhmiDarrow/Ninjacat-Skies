@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OWN_MODS = ("ninjacatlib-", "ninjacatskies-", "clowderhall-", "voidloom-", "tribalpower-")
+OWN_MODS = ("ninjacatlib-", "ninjacatskies-", "clowderhall-", "voidloom-", "guardians-", "tribalpower-")
 
 
 def main():
