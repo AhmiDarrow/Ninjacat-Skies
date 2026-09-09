@@ -273,8 +273,14 @@ public final class TensionEffects {
     @SubscribeEvent
     public void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
         if (event.getEntity() instanceof ServerPlayer player) {
-            LoomTension.sync(player);
+            LoomTension.onClowderChanged(player);   // also grants advancements earned while offline
         }
+    }
+
+    @SubscribeEvent
+    public void onServerStopping(net.neoforged.neoforge.event.server.ServerStoppingEvent event) {
+        SCRIPTS.clear();
+        PENDING.clear();
     }
 
     @SubscribeEvent

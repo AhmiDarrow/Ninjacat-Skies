@@ -121,7 +121,8 @@ public final class ClowderCommands {
         int result = SkyTeams.accept(actor.server, actor);
         switch (result) {
             case SkyTeams.OK -> {
-                ClowderSync.reconcilePlayer(actor.server, actor.getUUID());
+                // Accepting is a deliberate team action: create the FTB mirror party now (login-only paths never create).
+                ClowderSync.reconcileTeam(actor.server, SkyTeams.teamId(actor.server, actor.getUUID()));
                 actor.sendSystemMessage(teal("message.clowderhall.accept_ok"));
                 return 1;
             }

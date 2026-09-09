@@ -120,8 +120,10 @@ public final class ModDimensions {
         float yaw = ret.getFloat("yaw");
         float pitch = ret.getFloat("pitch");
 
-        BlockPos feet = BlockPos.containing(x, y, z);
-        ensureLandingClearance(target, feet);
+        // Never edit the player's world on return: if the spot is no longer safe, fall back to spawn instead.
+        if (!safeToStand(target, x, y, z)) {
+            return teleportOverworldSpawn(player);
+        }
 
         player.changeDimension(new DimensionTransition(
                 target,
@@ -404,6 +406,21 @@ public final class ModDimensions {
         }
     }
 
+    /** Something to stand on (the block at the feet, e.g. a slab/farmland, or the one below) and head room. */
+    private static boolean safeToStand(ServerLevel level, double x, double y, double z) {
+        BlockPos feet = BlockPos.containing(x, y, z);
+        BlockState atFeet = level.getBlockState(feet);
+        boolean footing = !atFeet.getCollisionShape(level, feet).isEmpty()
+                || level.getBlockState(feet.below()).blocksMotion()
+                || !level.getBlockState(feet.below()).getCollisionShape(level, feet.below()).isEmpty();
+        if (!footing) return false;
+        BlockPos head = feet.above();
+        boolean headRoom = !level.getBlockState(head).isSuffocating(level, head)
+                && !level.getBlockState(head.above()).isSuffocating(level, head.above());
+        return headRoom;
+    }
+
+    /** World spawn only: make sure there is a floor and head room (spawn is pack-owned, not a player's build). */
     private static void ensureLandingClearance(ServerLevel level, BlockPos feet) {
         BlockPos ground = feet.below();
         if (!level.getBlockState(ground).blocksMotion()) {

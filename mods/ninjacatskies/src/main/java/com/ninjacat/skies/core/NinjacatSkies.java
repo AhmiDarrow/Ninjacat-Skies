@@ -41,6 +41,7 @@ public final class NinjacatSkies {
 
         NeoForge.EVENT_BUS.register(new SkyboundEvents());
         NeoForge.EVENT_BUS.register(new TensionEffects());
+        com.ninjacat.skies.core.tension.LoomTension.init();
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
         if (FMLEnvironment.dist.isClient()) {
             NeoForge.EVENT_BUS.register(new SkyTint());

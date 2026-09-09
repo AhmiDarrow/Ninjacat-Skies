@@ -73,10 +73,8 @@ public class TensionBarrelBlock extends BaseEntityBlock {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
         if (!TensionBarrelBlockEntity.isAcceptedInput(stack)) {
-            if (!level.isClientSide) {
-                be.tellStatus(player);
-            }
-            return ItemInteractionResult.CONSUME;
+            // Not an input: let the empty-hand interaction (collect output / status) run instead of swallowing the click.
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
         if (level.isClientSide) {
             return ItemInteractionResult.SUCCESS;

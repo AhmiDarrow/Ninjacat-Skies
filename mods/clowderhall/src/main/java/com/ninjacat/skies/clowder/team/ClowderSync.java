@@ -17,6 +17,7 @@ public final class ClowderSync {
     private ClowderSync() {}
 
     private static final boolean SKY = ModList.get().isLoaded("skyblockbuilder");
+    private static final boolean FTB = ModList.get().isLoaded("ftbteams") && ModList.get().isLoaded("ftblibrary");
 
     public static void register(IEventBus gameBus) {
         if (SKY) {
@@ -24,18 +25,17 @@ public final class ClowderSync {
         }
     }
 
-    /** Enable social defaults for the team, then mirror it into an FTB party once it has two members. */
-    /** Forward team actions (invite/accept/join/op-add) may create a party; passive ones (login) may only join. */
+    /** Forward team actions (invite/accept/join/op-add) turn social defaults on and may create a party; passive ones (login) may only join. */
     public static void reconcileTeam(MinecraftServer server, UUID skyTeamId) {
         reconcileTeam(server, skyTeamId, true);
     }
 
     public static void reconcileTeam(MinecraftServer server, UUID skyTeamId, boolean allowCreate) {
         if (!SKY || skyTeamId == null) return;
-        SkyTeams.enableSocial(server, skyTeamId);
+        if (allowCreate) SkyTeams.enableSocial(server, skyTeamId);   // never rewrite a team's settings on a passive login
         Set<UUID> members = SkyTeams.members(server, skyTeamId);
         if (members == null || members.size() < 2) return;
-        if (FtbParties.loaded()) {
+        if (FTB && FtbParties.loaded()) {
             FtbParties.reconcile(server, skyTeamId, members, SkyTeams.name(server, skyTeamId), allowCreate);
         }
     }
@@ -50,7 +50,7 @@ public final class ClowderSync {
     }
 
     public static void onLeave(MinecraftServer server, UUID player) {
-        if (FtbParties.loaded()) {
+        if (FTB && FtbParties.loaded()) {
             FtbParties.leaveMirror(server, player);
         }
     }

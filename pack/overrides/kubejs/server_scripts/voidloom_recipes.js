@@ -139,15 +139,30 @@ ServerEvents.tags('item', event => {
   event.add('ninjacatskies:meshes/iron', 'voidloom:thread_mesh_iron')
 })
 
-// Share sieve (and compressed sieve) drops between Ex Deorum and voidloom meshes
+// Share sieve (and compressed sieve) drops between Ex Deorum and voidloom meshes.
+// Ex Deorum's `mesh` is an Ingredient and its recipe cache expands tags, so rewriting the mesh to the tier tag
+// makes every Ex Deorum table fire for the voidloom mesh of the same tier. (replaceInput cannot see `mesh`:
+// it is not a schema input key, so the old approach silently did nothing.)
 ServerEvents.recipes(event => {
-  const meshAliases = {
-    'exdeorum:string_mesh': '#ninjacatskies:meshes/string',
-    'exdeorum:flint_mesh': '#ninjacatskies:meshes/flint',
-    'exdeorum:iron_mesh': '#ninjacatskies:meshes/iron',
+  const meshTags = {
+    'exdeorum:string_mesh': 'ninjacatskies:meshes/string',
+    'exdeorum:flint_mesh': 'ninjacatskies:meshes/flint',
+    'exdeorum:iron_mesh': 'ninjacatskies:meshes/iron',
   }
-  for (const [from, to] of Object.entries(meshAliases)) {
-    event.replaceInput({ type: 'exdeorum:sieve' }, from, to)
-    event.replaceInput({ type: 'exdeorum:compressed_sieve' }, from, to)
+  let changed = 0
+  for (const type of ['exdeorum:sieve', 'exdeorum:compressed_sieve']) {
+    event.forEachRecipe({ type }, r => {
+      try {
+        const mesh = r.json.get('mesh')
+        if (!mesh || !mesh.isJsonObject() || !mesh.getAsJsonObject().has('item')) return
+        const tag = meshTags[String(mesh.getAsJsonObject().get('item').getAsString())]
+        if (!tag) return
+        r.merge({ mesh: { tag } })
+        changed++
+      } catch (err) {
+        console.warn('[Ninjacat Skies] mesh alias skipped for ' + r.getId() + ': ' + err)
+      }
+    })
   }
+  console.info('[Ninjacat Skies] voidloom meshes share ' + changed + ' Ex Deorum sieve tables')
 })

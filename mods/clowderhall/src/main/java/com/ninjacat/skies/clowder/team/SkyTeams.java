@@ -8,12 +8,14 @@ import de.melanx.skyblockbuilder.events.SkyblockJoinRequestEvent;
 import de.melanx.skyblockbuilder.events.SkyblockManageTeamEvent;
 import de.melanx.skyblockbuilder.events.SkyblockOpManageEvent;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.TickTask;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
@@ -40,15 +42,55 @@ public final class SkyTeams {
         bus.addListener(SkyTeams::onAccept);
         bus.addListener(SkyTeams::onJoinAccepted);
         bus.addListener(SkyTeams::onOpAdd);
+        bus.addListener(SkyTeams::onOpRemove);
+        bus.addListener(SkyTeams::onOpDelete);
+        bus.addListener(SkyTeams::onOpClear);
         bus.addListener(SkyTeams::onLeave);
         bus.addListener(SkyTeams::onLogin);
+    }
+
+    /** Run after the current command/packet has finished (Skyblock fires its events before it acts). */
+    private static void later(MinecraftServer server, Runnable task) {
+        server.tell(new TickTask(server.getTickCount() + 1, task));
     }
 
     private static void onCreate(SkyblockCreateTeamEvent event) {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
         if (server == null) return;
         String name = event.getName();
-        server.execute(() -> enableSocialByName(server, name));
+        later(server, () -> enableSocialByName(server, name));
+    }
+
+    private static void onOpRemove(SkyblockOpManageEvent.RemoveFromTeam event) {
+        MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+        if (server == null || event.getPlayers() == null) return;
+        Set<UUID> removed = new HashSet<>();
+        for (ServerPlayer p : event.getPlayers()) removed.add(p.getUUID());
+        later(server, () -> leaveIfGone(server, removed));
+    }
+
+    private static void onOpDelete(SkyblockOpManageEvent.DeleteTeam event) {
+        deferLeaveAll(event.getTeam());
+    }
+
+    private static void onOpClear(SkyblockOpManageEvent.ClearTeam event) {
+        deferLeaveAll(event.getTeam());
+    }
+
+    private static void deferLeaveAll(Team team) {
+        MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+        if (server == null || team == null) return;
+        Set<UUID> members = new HashSet<>(team.getPlayers());
+        later(server, () -> leaveIfGone(server, members));
+    }
+
+    /** Only drop players from the mirror party if Skyblock really removed them (the event may have been denied). */
+    private static void leaveIfGone(MinecraftServer server, Set<UUID> players) {
+        for (UUID id : players) {
+            if (teamId(server, id) == null) {
+                ClowderSync.onLeave(server, id);
+            }
+        }
     }
 
     private static void onAccept(SkyblockInvitationEvent.Accept event) {
@@ -67,22 +109,22 @@ public final class SkyTeams {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
         if (server == null || event.getPlayer() == null) return;
         UUID left = event.getPlayer().getUUID();
-        server.execute(() -> ClowderSync.onLeave(server, left));
+        later(server, () -> leaveIfGone(server, Set.of(left)));
     }
 
     private static void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
         MinecraftServer server = player.server;
         UUID id = player.getUUID();
-        // Give Skyblock a couple of ticks to settle team/login state before mirroring.
-        server.execute(() -> server.execute(() -> ClowderSync.reconcilePlayer(server, id)));
+        // Let Skyblock finish its own login handling before mirroring (next tick).
+        later(server, () -> ClowderSync.reconcilePlayer(server, id));
     }
 
     private static void deferReconcile(Team team) {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
         if (server == null || team == null) return;
         UUID id = team.getId();
-        server.execute(() -> ClowderSync.reconcileTeam(server, id));
+        later(server, () -> ClowderSync.reconcileTeam(server, id));
     }
 
     /** Team id for a player, or null when they are on no (non-spawn) team. */
@@ -137,7 +179,7 @@ public final class SkyTeams {
         if (d.hasPlayerTeam(player)) return TARGET_TEAM;
         var invites = d.getInvites(player);
         if (invites == null || invites.isEmpty()) return NO_TEAM;
-        Team team = d.getTeam(invites.get(0));
+        Team team = d.getTeam(invites.get(invites.size() - 1));   // most recent invite = the prompt they just clicked
         if (team == null) return NO_TEAM;
         boolean ok = d.acceptInvite(team, player);
         if (ok) d.setDirty();

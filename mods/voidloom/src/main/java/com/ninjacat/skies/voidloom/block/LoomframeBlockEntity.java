@@ -226,7 +226,12 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         if (be.input.isEmpty()) {
             be.input = ItemStack.EMPTY;
         }
-        for (int i = 0; i < drops.size(); i++) be.pending.set(i, drops.get(i));
+        for (int i = 0; i < drops.size(); i++) {
+            int slot = i % be.pending.size();
+            if (i > 0 && slot == 0) be.flushPending();   // more rolls than pending slots: push the earlier batch out first
+            if (be.pending.get(slot).isEmpty()) be.pending.set(slot, drops.get(i));
+            else net.minecraft.world.Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, drops.get(i));
+        }
         be.flushPending();
         level.playSound(null, pos, ModSounds.LOOMFRAME_SIFT.get(), SoundSource.BLOCKS, 0.55F, 0.95F + level.random.nextFloat() * 0.1F);
         if (level instanceof ServerLevel sl && !drops.isEmpty()) {

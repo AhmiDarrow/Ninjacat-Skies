@@ -27,6 +27,16 @@ final class FtbTeamsBridge {
         return FTBTeamsAPI.api().isManagerLoaded();
     }
 
+    /** Party membership changes re-sync the client and hand out any Strand advancements the new Clowder already earned. */
+    static void registerPartyEvents() {
+        dev.ftb.mods.ftbteams.api.event.TeamEvent.PLAYER_JOINED_PARTY.register(e -> {
+            if (e.getPlayer() != null) LoomTension.onClowderChanged(e.getPlayer());
+        });
+        dev.ftb.mods.ftbteams.api.event.TeamEvent.PLAYER_LEFT_PARTY.register(e -> {
+            if (e.getPlayer() != null) LoomTension.onClowderChanged(e.getPlayer());
+        });
+    }
+
     static Optional<Clowder> forPlayer(ServerPlayer player) {
         if (!ready()) {
             return Optional.empty();
@@ -48,9 +58,14 @@ final class FtbTeamsBridge {
         }
         TeamManager manager = FTBTeamsAPI.api().getManager();
         for (Team team : manager.getTeams()) {
-            if (team.isValid()) {
-                out.add(new TeamClowder(team));
+            if (!team.isValid() || team.isServerTeam()) continue;
+            // A player-team whose owner currently sits in a party is not a Clowder of its own.
+            if (team.isPlayerTeam()) {
+                boolean inParty = manager.getTeamForPlayerID(team.getOwner())
+                        .map(t -> !t.getId().equals(team.getId())).orElse(false);
+                if (inParty) continue;
             }
+            out.add(new TeamClowder(team));
         }
         return out;
     }
