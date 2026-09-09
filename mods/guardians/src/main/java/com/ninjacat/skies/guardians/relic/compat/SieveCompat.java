@@ -85,6 +85,8 @@ public final class SieveCompat {
         }
     }
 
+    public static void clearAll() { PENDING.clear(); }
+
     /** True for the plain (non-mechanical) sieves the passive applies to. */
     public static boolean isHandSieve(BlockEntity be) { return be instanceof SieveBlockEntity || be instanceof CompressedSieveBlockEntity; }
 }

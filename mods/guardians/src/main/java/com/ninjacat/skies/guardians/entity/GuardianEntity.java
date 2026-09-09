@@ -24,6 +24,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -55,6 +56,7 @@ public abstract class GuardianEntity extends Monster {
 
     public final GuardianKind kind;
     private final ServerBossEvent bossEvent;
+    private int lastClang = -100;
     protected int arenaSlot = -1;
     @Nullable protected UUID partyId;
     protected int attackCooldown = 0, attackTimer = -1, deathTimer = -1, ageInFight = 0;
@@ -81,6 +83,11 @@ public abstract class GuardianEntity extends Monster {
                 .add(Attributes.STEP_HEIGHT, 2.0)
                 .add(Attributes.ARMOR, 4.0);
     }
+
+    /** A guardian never suffocates in its own stage (the Unwoven stands in its warp curtain, the Edgewalker in tuff). */
+    @Override public boolean isInWall() { return false; }
+    /** Bosses this size make the walk-node evaluator scan width×height×depth blocks per node; cap the search so a stuck Tangle or a Beddown chasing a kiting player cannot eat the tick. */
+    @Override protected PathNavigation createNavigation(Level level) { PathNavigation nav = super.createNavigation(level); nav.setMaxVisitedNodesMultiplier(0.25F); return nav; }
 
     // ------------------------------------------------------------------ synched state
     @Override
@@ -190,9 +197,12 @@ public abstract class GuardianEntity extends Monster {
         if (level().isClientSide) return false;
         if (deathTimer >= 0) return false;
         if (src.is(net.minecraft.tags.DamageTypeTags.IS_FALL) || src.is(net.minecraft.tags.DamageTypeTags.IS_DROWNING) || src.is(net.minecraft.tags.DamageTypeTags.IS_FIRE)) return false;
+        if (src.is(net.minecraft.tags.DamageTypeTags.IS_FALL) || src.is(net.minecraft.world.damagesource.DamageTypes.IN_WALL) || src.is(net.minecraft.world.damagesource.DamageTypes.CRAMMING)) return false;
         if (isImmune() && !src.is(net.minecraft.tags.DamageTypeTags.BYPASSES_INVULNERABILITY)) {
-            if (src.getEntity() instanceof ServerPlayer p && tickCount % 10 == 0) p.displayClientMessage(NinjacatText.teal(immuneMessage()), true);
-            level().playSound(null, blockPosition(), SoundEvents.SHIELD_BLOCK, SoundSource.HOSTILE, 1.0F, 0.6F);
+            if (src.getEntity() != null) {                                       // a real blow: tell the striker (throttled) and clang
+                if (src.getEntity() instanceof ServerPlayer p && p.tickCount % 10 == 0) p.displayClientMessage(NinjacatText.teal(immuneMessage()), true);
+                if (tickCount - lastClang >= 5) { lastClang = tickCount; level().playSound(null, blockPosition(), SoundEvents.SHIELD_BLOCK, SoundSource.HOSTILE, 1.0F, 0.6F); }
+            }
             return false;
         }
         boolean ok = super.hurt(src, amount);
@@ -212,6 +222,8 @@ public abstract class GuardianEntity extends Monster {
     }
     /** Override to clean the arena (revert blocks) — called once at the start of the death clip. */
     protected void onDefeated() { revertTempBlocks(); }
+    /** The fight ended without a death (wipe, leave, restart): the same cleanup the death clip would have run. */
+    public void cleanupArena() { onDefeated(); }
     private void tickDying(ServerLevel sl) {
         deathTimer++;
         bossEvent.setProgress(0);

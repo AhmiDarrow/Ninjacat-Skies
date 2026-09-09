@@ -77,7 +77,7 @@ public final class ArenaManager extends SavedData {
             return "Seat the " + kind.strand.title() + " Strand at your Tension Post first — " + kind.title + " only answers for a Strand that is held.";
         // the party: Clowder members online and within 32 blocks of the summoner (they hear the totem)
         List<ServerPlayer> party = new ArrayList<>(); party.add(summoner);
-        clowder.ifPresent(c -> { for (ServerPlayer m : c.onlineMembers()) if (m != summoner && m.level() == summoner.level() && m.distanceTo(summoner) < 32 && !m.isSpectator()) party.add(m); });
+        clowder.ifPresent(c -> { for (ServerPlayer m : c.onlineMembers()) if (m != summoner && m.level() == summoner.level() && m.distanceTo(summoner) < 32 && !m.isSpectator() && instanceOf(m) == null) party.add(m); });
         int slot = 0; while (active.containsKey(slot)) slot++;
         ArenaData data = ArenaData.get(server, kind);
         BlockPos origin = new BlockPos(slot * SLOT_SPACING + (arena.dimension().equals(ARENA_LEVEL) ? 0 : TEST_OFFSET), FLOOR_Y, arena.dimension().equals(ARENA_LEVEL) ? 0 : TEST_OFFSET);
@@ -218,7 +218,7 @@ public final class ArenaManager extends SavedData {
             switch (inst.state) {
                 case FIGHT -> {
                     if (inside.isEmpty() && inst.age > 100) { wipe(server, inst, "Nobody stands. The totem is spent."); }
-                    else if (inst.boss != null && inst.age > 100 && arena.getEntity(inst.boss) == null && inst.age % 20 == 0) {
+                    else if (inst.boss != null && inst.age > 100 && arena.isLoaded(inst.originPos) && arena.getEntity(inst.boss) == null && inst.age % 20 == 0) {
                         // boss vanished (killed by /kill or unloaded) — count it as a win only if it actually died via die()
                         wipe(server, inst, "The guardian slipped the weave. The totem is spent.");
                     }
@@ -237,7 +237,7 @@ public final class ArenaManager extends SavedData {
             if (p != null && inArena(p)) returnHome(p);
         }
         ServerLevel arena = arenaLevel(server);
-        if (arena != null && inst.boss != null) { Entity e = arena.getEntity(inst.boss); if (e instanceof GuardianEntity g) { g.revertTempBlocks(); g.discard(); } }
+        if (arena != null && inst.boss != null) { Entity e = arena.getEntity(inst.boss); if (e instanceof GuardianEntity g) { g.cleanupArena(); g.discard(); } }
     }
 
     public void wipe(MinecraftServer server, ArenaInstance inst, String line) {

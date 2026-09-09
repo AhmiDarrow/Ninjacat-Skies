@@ -48,7 +48,8 @@ public class OverweaverGuardian extends GuardianEntity {
 
     @Override protected boolean mobile() { return false; }
     @Override protected String immuneMessage() { return "No thread is taut. Kill a shade on its strand-platform to pull one tight."; }
-    private double angle(int k) { return Math.PI * 2 * k / 9 + Math.PI / 2; }
+    /** Strand k's platform. arena_factory puts it at 90° + 40°k; the plan is that mirrored into Minecraft z, so the angle is negated. */
+    private double angle(int k) { return -(Math.PI * 2 * k / 9 + Math.PI / 2); }
     private int tautCount() { int n = 0; for (int t : tautUntil) if (t > tickCount) n++; return n; }
     private int shadeCap() { return (phase() >= 3 ? 9 : phase() >= 2 ? 3 : 1) + Math.max(0, partySize() - 2); }
 

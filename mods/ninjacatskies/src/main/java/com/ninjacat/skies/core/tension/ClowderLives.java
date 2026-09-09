@@ -1,5 +1,7 @@
 package com.ninjacat.skies.core.tension;
 
+import java.util.UUID;
+
 /** One persistent life pool per Clowder, including members who are offline. */
 public final class ClowderLives {
     private static final String KEY = "shared_lives";
@@ -21,15 +23,22 @@ public final class ClowderLives {
         return true;
     }
 
+    /** Player persistent-data flag set by SkyboundEvents when a Clowder's pool hits zero. */
+    public static final String EXHAUSTED_FLAG = "skybound_exhausted";
+
     public static int remaining(Clowder team, int startingLives) {
         var data = team.data();
         int saved = data.getInt(KEY);
         int lives = Math.max(0, Math.min(MAX_LIVES, saved));
         var contributors = data.getCompound(CONTRIBUTORS);
         boolean changed = saved != lives || !data.contains(KEY);
+        // members who have spent a Clowder's last life bring no fresh lives with them: leaving a party and joining
+        // another (or falling back to a solo team) must not be a revive
+        java.util.Set<UUID> exhausted = new java.util.HashSet<>();
+        for (var online : team.onlineMembers()) if (online.getPersistentData().getBoolean(EXHAUSTED_FLAG)) exhausted.add(online.getUUID());
         for (var member : team.memberIds()) {
             if (!contributors.getBoolean(member.toString())) {
-                lives = (int) Math.min(MAX_LIVES, (long) lives + Math.max(1, Math.min(99, startingLives)));
+                if (!exhausted.contains(member)) lives = (int) Math.min(MAX_LIVES, (long) lives + Math.max(1, Math.min(99, startingLives)));
                 contributors.putBoolean(member.toString(), true);
                 changed = true;
             }

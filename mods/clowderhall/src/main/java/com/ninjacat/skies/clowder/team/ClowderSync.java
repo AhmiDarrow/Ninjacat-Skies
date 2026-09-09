@@ -32,7 +32,6 @@ public final class ClowderSync {
 
     public static void reconcileTeam(MinecraftServer server, UUID skyTeamId, boolean allowCreate) {
         if (!SKY || skyTeamId == null) return;
-        if (allowCreate) SkyTeams.enableSocial(server, skyTeamId);   // never rewrite a team's settings on a passive login
         Set<UUID> members = SkyTeams.members(server, skyTeamId);
         if (members == null || members.size() < 2) return;
         if (FTB && FtbParties.loaded()) {

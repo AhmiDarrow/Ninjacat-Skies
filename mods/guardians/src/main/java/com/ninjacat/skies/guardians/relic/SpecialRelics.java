@@ -64,7 +64,7 @@ final class SpecialRelics {
                 Vec3 start = p.getEyePosition(), end = start.add(p.getLookAngle().scale(12));
                 AABB box = p.getBoundingBox().expandTowards(p.getLookAngle().scale(12)).inflate(1.0);
                 EntityHitResult hit = ProjectileUtil.getEntityHitResult(p.level(), p, start, end, box,
-                        ent -> ent instanceof LivingEntity && !(ent instanceof Player) && ent.isAlive() && !ent.isSpectator());
+                        ent -> ent instanceof LivingEntity && !(ent instanceof Player) && !(ent instanceof com.ninjacat.skies.guardians.entity.GuardianEntity) && !(ent instanceof net.minecraft.world.entity.TamableAnimal t && t.isTame()) && !ent.getTags().contains(RelicUtil.BEE_TAG) && ent.isAlive() && !ent.isSpectator());
                 if (hit == null || !(hit.getEntity() instanceof LivingEntity target)) { RelicUtil.note(p, "The knot finds nothing."); return false; }
                 RelicUtil.root(target, 80);                                        // 4 s
                 ServerLevel l = p.serverLevel();
@@ -80,10 +80,8 @@ final class SpecialRelics {
     static RelicPower firstCut() {
         return new BaseRelic("Shard of the First Cut", "Severed: your melee hits ignore 30 % of armour and cut through Guardian ward phases for 25 % damage.",
                 "The Cut: slash a 6-block line ahead; every mob in it takes 12 hearts of true damage and boss projectiles in it are cut apart.", 2400) { // 120 s
-            @Override public void onWearerHit(ServerPlayer p, ItemStack s, LivingEntity target, LivingDamageEvent.Pre e) {
-                if (e.getSource().getDirectEntity() != p || e.getSource().is(DamageTypeTags.IS_PROJECTILE)) return;
-                e.getContainer().addModifier(DamageContainer.Reduction.ARMOR, (c, reduction) -> reduction * 0.7F); // ignore 30 % of armour
-            }
+            // "ignore 30 % of armour" is registered in RelicEvents.onIncoming (the target's LivingIncomingDamageEvent): by the time
+            // LivingDamageEvent.Pre fires, the armour reduction has already been taken and a modifier added there is never run.
             // Ward-phase bypass lives in RelicTimers.onAttack (the boss cancels inside hurt(), before any damage event).
             @Override public boolean activate(ServerPlayer p, ItemStack s) {
                 ServerLevel l = p.serverLevel();
@@ -151,7 +149,7 @@ final class SpecialRelics {
                     if (pulse) {
                         for (MobEffectInstance eff : p.getActiveEffects()) {
                             if (!eff.getEffect().value().isBeneficial()) continue;
-                            m.addEffect(new MobEffectInstance(eff.getEffect(), Math.min(eff.getDuration(), 60), eff.getAmplifier(), true, false, false));
+                            m.addEffect(new MobEffectInstance(eff.getEffect(), eff.isInfiniteDuration() ? 60 : Math.min(eff.getDuration(), 60), eff.getAmplifier(), true, false, false));
                         }
                     }
                     if (p.tickCount % 10 == 0) RelicUtil.line(l, (i++ % 2 == 0) ? RelicUtil.TEAL : RelicUtil.GOLD, p.position().add(0, 1.2, 0), m.position().add(0, 1.2, 0), 12);

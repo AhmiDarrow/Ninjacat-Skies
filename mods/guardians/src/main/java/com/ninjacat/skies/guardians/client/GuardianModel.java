@@ -84,7 +84,7 @@ public final class GuardianModel {
                 for (int k = 0; k < 3; k++) nrm[v*3+k] = b.getFloat();
                 uv[v*2] = b.getFloat(); uv[v*2+1] = b.getFloat();
                 b.get(rgb, v*3, 3); b.get(em, v*3, 3);
-                for (int k = 0; k < 4; k++) bn[v*4+k] = b.getShort();
+                for (int k = 0; k < 4; k++) bn[v*4+k] = (short) (b.getShort() & 0xFFFF);
                 for (int k = 0; k < 4; k++) wt[v*4+k] = b.getFloat();
             }
             int nt = b.getInt(); Part p = new Part(name, tex, nv, nt);

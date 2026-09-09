@@ -217,8 +217,9 @@ public class TensionPostBlock extends BaseEntityBlock {
 
         // The Fragment itself → Reweave.
         if (stack.is(ModItems.SPINDLE_LOOM_FRAGMENT.get())) {
-            if (state.getValue(REWOVEN)) {
-                player.displayClientMessage(NinjacatText.teal("This Post is already rewoven."), true);
+            if (state.getValue(REWOVEN) || LoomTension.clowderOf(sp).map(LoomTension::isRewoven).orElse(false)) {
+                player.displayClientMessage(NinjacatText.teal("Your Clowder has already rewoven its sky."), true);
+                refresh(serverLevel, pos, sp);                                       // a second Post catches up with the Clowder
             } else if (LoomTension.reweave(serverLevel, pos, sp)) {
                 consume(player, stack);
                 refresh(serverLevel, pos, sp);
@@ -274,7 +275,9 @@ public class TensionPostBlock extends BaseEntityBlock {
         if (mine.isEmpty()) return true;
         if (be.getClowder().equals(mine.get().id())) return true;
         if (LoomTension.clowderById(level.getServer(), be.getClowder()).isPresent()) return false;
-        // Unknown id: a disbanded party (reclaimable) — but never a solo player who is merely offline.
+        // Unknown id: a disbanded party (reclaimable) — but never a solo player who is merely offline. A solo Clowder's id is the
+        // player's own UUID, so a saved player file settles it (the profile cache alone forgets players after a month away).
+        if (java.nio.file.Files.exists(level.getServer().getWorldPath(net.minecraft.world.level.storage.LevelResource.PLAYER_DATA_DIR).resolve(be.getClowder() + ".dat"))) return false;
         return level.getServer().getProfileCache() == null || level.getServer().getProfileCache().get(be.getClowder()).isEmpty();
     }
 

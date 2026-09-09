@@ -16,11 +16,14 @@ public final class RelicSlots {
     private RelicSlots() {}
     private static final boolean CURIOS = ModList.get().isLoaded("curios");
 
+    /** The relics in effect: one stack per relic kind (a second copy of the same relic adds nothing), Curios slot first, then off-hand, then hotbar. */
     public static List<ItemStack> worn(ServerPlayer p) {
+        List<ItemStack> found = new ArrayList<>();
+        if (CURIOS) { try { CuriosBridge.collect(p, found); } catch (Throwable ignored) {} }
+        ItemStack off = p.getOffhandItem(); if (off.getItem() instanceof RelicItem) found.add(off);
+        for (int i = 0; i < 9; i++) { ItemStack s = p.getInventory().getItem(i); if (s.getItem() instanceof RelicItem) found.add(s); }
         List<ItemStack> out = new ArrayList<>();
-        ItemStack off = p.getOffhandItem(); if (off.getItem() instanceof RelicItem) out.add(off);
-        for (int i = 0; i < 9; i++) { ItemStack s = p.getInventory().getItem(i); if (s.getItem() instanceof RelicItem && !out.contains(s)) out.add(s); }
-        if (CURIOS) { try { CuriosBridge.collect(p, out); } catch (Throwable ignored) {} }
+        outer: for (ItemStack s : found) { for (ItemStack o : out) if (o.getItem() == s.getItem()) continue outer; out.add(s); }
         return out;
     }
 
@@ -35,7 +38,7 @@ public final class RelicSlots {
             top.theillusivec4.curios.api.CuriosApi.getCuriosInventory(p).ifPresent(inv -> {
                 for (var entry : inv.getCurios().entrySet()) {
                     var stacks = entry.getValue().getStacks();
-                    for (int i = 0; i < stacks.getSlots(); i++) { ItemStack s = stacks.getStackInSlot(i); if (s.getItem() instanceof RelicItem && !out.contains(s)) out.add(s); }
+                    for (int i = 0; i < stacks.getSlots(); i++) { ItemStack s = stacks.getStackInSlot(i); if (s.getItem() instanceof RelicItem) out.add(s); }
                 }
             });
         }

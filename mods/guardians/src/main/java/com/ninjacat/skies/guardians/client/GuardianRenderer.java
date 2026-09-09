@@ -42,8 +42,11 @@ public class GuardianRenderer extends EntityRenderer<GuardianEntity> {
     public void render(GuardianEntity e, float yaw, float partial, PoseStack ps, MultiBufferSource buf, int light) {
         GuardianModel m = GuardianModel.get(e.kind);
         if (m == null) { super.render(e, yaw, partial, ps, buf, light); return; }
+        if (m.clips.length == 0) { super.render(e, yaw, partial, ps, buf, light); return; }
         GuardianModel.Clip clip = m.clip(e.clip()); if (clip == null) clip = m.clips[0];
-        float time = (e.level().getGameTime() + partial - e.clipStart()) / 20F;
+        if (clip.frames <= 0 || clip.bones <= 0) { super.render(e, yaw, partial, ps, buf, light); return; }
+        // subtract in long first: (gameTime + partial) as a float loses the partial tick after ~9.7 days of world age
+        float time = ((float) (e.level().getGameTime() - e.clipStart()) + partial) / 20F;
         float f = time * clip.fps;
         if (clip.loops()) f = ((f % clip.frames) + clip.frames) % clip.frames; else f = Mth.clamp(f, 0, clip.frames - 1.001F);
         int f0 = (int) f, f1 = clip.loops() ? (f0 + 1) % clip.frames : Math.min(f0 + 1, clip.frames - 1); float t = f - f0;

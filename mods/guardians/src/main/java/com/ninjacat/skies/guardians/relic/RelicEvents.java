@@ -34,7 +34,14 @@ public final class RelicEvents {
     }
 
     @SubscribeEvent
+    public void onServerStopped(net.neoforged.neoforge.event.server.ServerStoppedEvent e) { lastWorn.clear(); }
+
+    @SubscribeEvent
     public void onIncoming(LivingIncomingDamageEvent e) {
+        // Shard of the First Cut, "Severed": a wearer's melee blow ignores 30 % of the target's armour. Registered here, before armour is applied.
+        if (e.getSource().getDirectEntity() instanceof ServerPlayer striker && e.getSource().getEntity() == striker && !(e.getEntity() instanceof ServerPlayer)) {
+            for (ItemStack s : RelicSlots.worn(striker)) if (((RelicItem) s.getItem()).kind == com.ninjacat.skies.guardians.GuardianKind.FIRSTCUT) { e.addReductionModifier(net.neoforged.neoforge.common.damagesource.DamageContainer.Reduction.ARMOR, (c, reduction) -> reduction * 0.7F); break; }
+        }
         if (!(e.getEntity() instanceof ServerPlayer p)) return;
         for (ItemStack s : RelicSlots.worn(p)) { ((RelicItem) s.getItem()).power.onWearerHurt(p, s, e); if (e.isCanceled()) return; }
     }
@@ -47,7 +54,7 @@ public final class RelicEvents {
 
     @SubscribeEvent
     public void onDamage(LivingDamageEvent.Pre e) {
-        if (!(e.getSource().getEntity() instanceof ServerPlayer p)) return;
+        if (!(e.getSource().getEntity() instanceof ServerPlayer p) || e.getSource().getDirectEntity() != p) return;   // melee only: arrows, thorns and relic lines are not "hits you land"
         for (ItemStack s : RelicSlots.worn(p)) ((RelicItem) s.getItem()).power.onWearerHit(p, s, e.getEntity(), e);
     }
 }

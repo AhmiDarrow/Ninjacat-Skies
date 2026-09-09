@@ -55,5 +55,6 @@
   "message.clowderhall.accept_ok": "You joined the Clowder — same pad, quests and shared lives now.",
   "message.clowderhall.accept_none": "You have no pending Clowder invite.",
   "message.clowderhall.accept_has_team": "You are already on a Clowder.",
-  "message.clowderhall.accept_failed": "Could not accept that invite."
+  "message.clowderhall.accept_failed": "Could not accept that invite.",
+  "message.clowderhall.invite_already": "%s already has an invite from your Clowder — they can click it or run /clowder accept."
 }

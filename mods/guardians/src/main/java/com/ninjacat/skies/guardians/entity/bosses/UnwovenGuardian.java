@@ -92,13 +92,14 @@ public class UnwovenGuardian extends GuardianEntity {
                 double a = random.nextDouble() * Math.PI * 2; BlockPos core = BlockPos.containing(Mech.polar(o, 6, a, o.y));
                 placeTemp(core, Blocks.SHROOMLIGHT.defaultBlockState()); marks.add(core);
                 for (int x = -8; x <= 8; x++) for (int z = -8; z <= 8; z++) { int r2 = x * x + z * z; if (r2 < 16 || r2 > 64) continue; for (int y = 0; y < 3; y++) placeTemp(BlockPos.containing(o.x + x, o.y + y, o.z + z), Blocks.DIRT.defaultBlockState()); }
+                for (ServerPlayer p : party()) { double r = Mech.horiz(p.position(), o); if (r >= 3.5 && r <= 8.9 && p.getY() < o.y + 3) p.teleportTo(serverLevel(), p.getX(), o.y + 3.1, p.getZ(), p.getYRot(), p.getXRot()); }   // the heave lifts, never traps
                 say("Soil heaves around the Unwoven — dig to the glowing core.");
             }
             case GRIT -> { for (int k = 0; k < 4; k++) { Vec3 at = Mech.polar(o, 10, Math.PI / 2 * k, o.y + 3); serverLevel().addFreshEntity(new net.minecraft.world.entity.item.ItemEntity(level(), at.x, at.y, at.z, new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.GRAVEL))); } say("Grit rattles down — place gravel at its feet to jam the maw."); }
             case PRUNE -> say("Thorns creep in — cut them or it drinks from them.");
             case POUNCE -> say("It lashes like the Edgewalker — leave the gold mark.");
             case BEAT -> say("It beats like the Drumheart — strike on the fourth.");
-            case PATTERN -> { for (int i = 0; i < 3; i++) order.add(random.nextInt(12)); for (int i : order) marks.add(tileAt(o, i)); say("Tiles light like the Cogwright's — walk them in order."); }
+            case PATTERN -> { List<Integer> pool = new ArrayList<>(); for (int i = 0; i < 12; i++) pool.add(i); java.util.Collections.shuffle(pool, new java.util.Random(random.nextLong())); for (int i = 0; i < 3; i++) order.add(pool.get(i)); for (int i : order) marks.add(tileAt(o, i)); say("Tiles light like the Cogwright's — walk them in order."); }
             case WARDS -> {
                 List<Integer> pool = new ArrayList<>(); for (int i = 0; i < 6; i++) pool.add(i); java.util.Collections.shuffle(pool, new java.util.Random(random.nextLong()));
                 for (int i = 0; i < 3; i++) { order.add(pool.get(i)); BlockPos g = wardAt(o, pool.get(i)); placeTemp(g, Blocks.TINTED_GLASS.defaultBlockState()); marks.add(g); }
@@ -121,12 +122,12 @@ public class UnwovenGuardian extends GuardianEntity {
             case PATTERN -> {
                 if (quoteTicks <= 45) { if (quoteTicks % 15 == 1) { lit.restoreAll(level()); BlockPos t = marks.get(quoteTicks / 15); lit.set(level(), t, Blocks.OCHRE_FROGLIGHT.defaultBlockState()); Mech.soundAt(serverLevel(), Vec3.atCenterOf(t), SoundEvents.NOTE_BLOCK_PLING.value(), 2F, 0.6F + 0.2F * (quoteTicks / 15)); } }
                 else if (!solved) { if (quoteTicks == 46) { lit.restoreAll(level()); for (BlockPos t : marks) lit.set(level(), t, Blocks.SHROOMLIGHT.defaultBlockState()); }
-                    for (ServerPlayer p : party()) { BlockPos on = p.getOnPos(); if (on.equals(marks.get(progress))) { progress++; lit.set(level(), on, Blocks.SEA_LANTERN.defaultBlockState()); Mech.soundAt(serverLevel(), p.position(), SoundEvents.NOTE_BLOCK_PLING.value(), 2F, 0.6F + 0.2F * progress); if (progress >= 3) { solved = true; lit.restoreAll(level()); shout("The pattern holds — it opens!"); } break; } for (int i = progress + 1; i < 3; i++) if (on.equals(marks.get(i))) { progress = 0; areaDamage(o, 40, 6, 0.2); shout("Wrong tile! Start again."); for (BlockPos t : marks) lit.set(level(), t, Blocks.SHROOMLIGHT.defaultBlockState()); } }
+                    for (ServerPlayer p : party()) { BlockPos on = p.getOnPos(); if (on.equals(marks.get(progress))) { progress++; lit.set(level(), on, Blocks.SEA_LANTERN.defaultBlockState()); Mech.soundAt(serverLevel(), p.position(), SoundEvents.NOTE_BLOCK_PLING.value(), 2F, 0.6F + 0.2F * progress); if (progress >= 3) { solved = true; lit.restoreAll(level()); shout("The pattern holds — it opens!"); } break; } for (int i = progress + 1; i < 3; i++) if (on.equals(marks.get(i))) { progress = 0; areaDamage(o, 40, 6, 0.2); shout("Wrong tile! The gears arc — the pattern is lost."); lit.restoreAll(level()); quoteTicks = QUOTE_TICKS; break; } }
                     if (quoteTicks > 46 + 240) { areaDamage(o, 40, 6, 0.2); shout("Too slow — the gears arc."); quoteTicks = QUOTE_TICKS; } }
                 immune = !solved;
             }
             case WARDS -> {
-                if (quoteTicks % 200 < 60 && quoteTicks % 20 == 0) { int i = (quoteTicks % 200) / 20; Vec3 w = Vec3.atCenterOf(marks.get(i)); Mech.column(serverLevel(), Mech.GOLD, w, 6, 8); Mech.soundAt(serverLevel(), w, SoundEvents.AMETHYST_BLOCK_CHIME, 2F, 0.7F + 0.2F * i); }
+                if ((quoteTicks - 1) % 200 < 60 && (quoteTicks - 1) % 20 == 0) { int i = ((quoteTicks - 1) % 200) / 20; Vec3 w = Vec3.atCenterOf(marks.get(i)); Mech.column(serverLevel(), Mech.GOLD, w, 6, 8); Mech.soundAt(serverLevel(), w, SoundEvents.AMETHYST_BLOCK_CHIME, 2F, 0.7F + 0.2F * i); }
                 if (!solved && tickCount % 5 == 0) for (int i = 0; i < 3; i++) { BlockPos w = marks.get(i); if (level().getBlockState(w).is(Blocks.TINTED_GLASS) || tempBlocks.contains(w) == false) continue;
                     tempBlocks.remove(w);
                     if (i == progress) { progress++; sound(SoundEvents.RESPAWN_ANCHOR_DEPLETE.value(), 2F, 1.2F); if (progress >= 3) { solved = true; shout("The wards fall — it is exposed!"); } }
@@ -182,8 +183,11 @@ public class UnwovenGuardian extends GuardianEntity {
         for (int tries = 0; tries < 40 && done < 3; tries++) {
             int i = random.nextInt(STRIPS); if (i == 11 || i == 12 || dropped.contains(i)) continue;      // the two strips under the boss stay
             dropped.add(i); done++;
-            int z = (int) Math.floor(o.z) - STRIPS + 2 * i + (random.nextBoolean() ? 0 : 1);
-            for (int x = -HALF_W; x <= HALF_W; x++) { BlockPos p = new BlockPos((int) Math.floor(o.x) + x, (int) o.y - 1, z); if (!level().getBlockState(p).isAir()) floor.clear(level(), p); }
+            // the strip is whichever of the two rows actually carries planks; it unravels into a thread of single blocks (every fourth stays)
+            int z0 = (int) Math.floor(o.z) - STRIPS + 2 * i, z = z0;
+            int n0 = 0, n1 = 0; for (int x = -HALF_W; x <= HALF_W; x++) { if (!level().getBlockState(new BlockPos((int) Math.floor(o.x) + x, (int) o.y - 1, z0)).isAir()) n0++; if (!level().getBlockState(new BlockPos((int) Math.floor(o.x) + x, (int) o.y - 1, z0 + 1)).isAir()) n1++; }
+            if (n1 > n0) z = z0 + 1;
+            for (int x = -HALF_W; x <= HALF_W; x++) { if (Math.floorMod(x, 4) == 0) continue; BlockPos p = new BlockPos((int) Math.floor(o.x) + x, (int) o.y - 1, z); if (!level().getBlockState(p).isAir()) floor.clear(level(), p); }
             serverLevel().sendParticles(ParticleTypes.CLOUD, o.x, o.y, z + 0.5, 30, HALF_W, 0.3, 0.3, 0.02);
         }
         sound(SoundEvents.WOOD_BREAK, 3F, 0.4F); heddle = -1;
@@ -195,7 +199,12 @@ public class UnwovenGuardian extends GuardianEntity {
         Vec3 beam = Mech.standOn(level(), o.x, o.z, (int) o.y + 20, (int) o.y + 34);
         if (beam == null) { for (int x = -3; x <= 3; x++) for (int z = -3; z <= 3; z++) placeTemp(BlockPos.containing(o.x + x, o.y + BEAM_Y - 1, o.z + z), Blocks.SPRUCE_PLANKS.defaultBlockState()); beam = new Vec3(o.x, o.y + BEAM_Y, o.z); }
         BlockState thread = Blocks.SCAFFOLDING.defaultBlockState().setValue(ScaffoldingBlock.DISTANCE, 0);
-        for (int k = 0; k < 4; k++) { Vec3 base = Mech.polar(o, 9, Math.PI / 4 + Math.PI / 2 * k, o.y); for (int y = 0; y < beam.y - o.y; y++) placeTemp(BlockPos.containing(base.x, o.y + y, base.z), thread); }
+        for (int k = 0; k < 4; k++) {
+            Vec3 base = Mech.polar(o, 9, Math.PI / 4 + Math.PI / 2 * k, o.y);
+            BlockPos foot = BlockPos.containing(base.x, o.y - 1, base.z);
+            if (level().getBlockState(foot).isAir()) placeTemp(foot, Blocks.SPRUCE_PLANKS.defaultBlockState());   // a thread needs a footing, or the scaffolding falls
+            for (int y = 0; y < beam.y - o.y; y++) placeTemp(BlockPos.containing(base.x, o.y + y, base.z), thread);
+        }
         teleportTo(beam.x, beam.y, beam.z); setImmune(false);
         shout("The Unwoven unravels into its true form and climbs to the top beam. The warp threads pull taut — climb them and finish it on the beam!");
         sound(SoundEvents.ENDER_DRAGON_GROWL, 3F, 0.5F);

@@ -9,6 +9,7 @@ import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -60,9 +61,20 @@ final class RelicUtil {
         return g;
     }
 
-    static long now(ServerPlayer p) { return p.server.getTickCount(); }
-    /** True while the timed flag {@code key} is still running. */
-    static boolean until(ServerPlayer p, String key) { return tag(p).getLong(key) > now(p); }
+    /**
+     * The relic clock. Timed flags live in the player's persisted NBT, so the clock must survive restarts: the overworld's
+     * game time is saved with the world and shared by every dimension. (The server tick counter restarts at zero every
+     * session, which would leave every saved "until" in the far future.)
+     */
+    static long now(MinecraftServer server) { return server.overworld().getGameTime(); }
+    static long now(ServerPlayer p) { return now(p.server); }
+    /** True while the timed flag {@code key} is still running; an expired flag is dropped from the tag. */
+    static boolean until(ServerPlayer p, String key) {
+        CompoundTag t = tag(p);
+        if (!t.contains(key)) return false;
+        if (t.getLong(key) > now(p)) return true;
+        t.remove(key); return false;
+    }
     static void setUntil(ServerPlayer p, String key, int ticks) { tag(p).putLong(key, now(p) + ticks); }
     static void clear(ServerPlayer p, String key) { tag(p).remove(key); }
 

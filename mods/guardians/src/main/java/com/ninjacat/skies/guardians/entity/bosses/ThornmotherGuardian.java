@@ -29,7 +29,7 @@ import java.util.List;
  * of every station is cleared and she is stunned 4 s (double damage). Composting is folded into cutting — no custom block.
  */
 public class ThornmotherGuardian extends GuardianEntity {
-    private static final int SEED_EVERY = 120, SPREAD_EVERY = 80, MAX_HEDGE = 220, STATION_R = 16, CIRCLE = 4, STUN = 80;
+    private static final int SEED_EVERY = 120, SPREAD_EVERY = 80, MAX_HEDGE = 220, STATION_R = 24, CIRCLE = 4, STUN = 80;
     private static final BlockState HEDGE = Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 2);
     private final List<BlockPos> hedge = new ArrayList<>();
     private final List<Vec3> stations = new ArrayList<>();

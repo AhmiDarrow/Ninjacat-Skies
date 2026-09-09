@@ -103,6 +103,7 @@ public final class ClowderCommands {
             }
             case SkyTeams.NO_TEAM -> actor.sendSystemMessage(gold("message.clowderhall.invite_no_team"));
             case SkyTeams.TARGET_TEAM -> actor.sendSystemMessage(gold("message.clowderhall.invite_target_has_team"));
+            case SkyTeams.ALREADY -> actor.sendSystemMessage(gold("message.clowderhall.invite_already", target.getDisplayName()));
             default -> actor.sendSystemMessage(gold("message.clowderhall.invite_failed"));
         }
         return false;
@@ -215,5 +216,9 @@ public final class ClowderCommands {
 
     private static Component gold(String key) {
         return Component.translatable(key).withStyle(Style.EMPTY.withColor(TextColor.fromRgb(NinjacatText.GOLD)));
+    }
+
+    private static Component gold(String key, Object arg) {
+        return Component.translatable(key, arg).withStyle(Style.EMPTY.withColor(TextColor.fromRgb(NinjacatText.GOLD)));
     }
 }

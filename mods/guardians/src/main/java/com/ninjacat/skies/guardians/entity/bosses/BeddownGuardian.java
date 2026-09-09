@@ -62,7 +62,7 @@ public class BeddownGuardian extends GuardianEntity {
         Vec3 o = origin();
         if (arena() == null) { say("(no arena — the soil stays still)"); return; }
         // pick the seam that surfaces this time and plant the core on the pit floor before the dirt covers it
-        double a = Math.PI * 2 * random.nextInt(SEAMS) / SEAMS;
+        double a = -(Math.PI * 2 * random.nextInt(SEAMS) / SEAMS);            // seams at 2πk/7 in arena_factory, mirrored into -z by the plan
         core = BlockPos.containing(Mech.polar(o, 6, a, o.y));
         if (!serverLevel().getBlockState(core).isAir()) core = BlockPos.containing(o.x, o.y, o.z).offset(3, 0, 3);
         layer.set(level(), core, Blocks.SHROOMLIGHT.defaultBlockState());

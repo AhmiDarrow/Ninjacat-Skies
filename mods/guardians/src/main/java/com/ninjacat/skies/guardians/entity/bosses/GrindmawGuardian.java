@@ -71,8 +71,15 @@ public class GrindmawGuardian extends GuardianEntity {
     }
 
     /** Every 2 s each gravel block on the ring advances one block tangentially; on the maw mark it is eaten. */
+    private final java.util.Set<BlockPos> planGrit = new java.util.HashSet<>();
+    private boolean planGritScanned = false;
     private void carryGrit(Vec3 o) {
         List<BlockPos> found = new ArrayList<>();
+        if (!planGritScanned) {                                                   // gravel the arena plan itself put on the ring
+            planGritScanned = true;
+            BlockPos.MutableBlockPos q = new BlockPos.MutableBlockPos();
+            for (int x = -RING_OUT; x <= RING_OUT; x++) for (int z = -RING_OUT; z <= RING_OUT; z++) { int r2 = x * x + z * z; if (r2 < RING_IN * RING_IN || r2 > RING_OUT * RING_OUT) continue; for (int y = 0; y <= 2; y++) { q.set((int) Math.floor(o.x) + x, (int) o.y + y, (int) Math.floor(o.z) + z); if (level().getBlockState(q).is(Blocks.GRAVEL)) planGrit.add(q.immutable()); } }
+        }
         BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
         for (int x = -RING_OUT; x <= RING_OUT; x++) for (int z = -RING_OUT; z <= RING_OUT; z++) {
             int r2 = x * x + z * z; if (r2 < RING_IN * RING_IN || r2 > RING_OUT * RING_OUT) continue;
@@ -84,8 +91,9 @@ public class GrindmawGuardian extends GuardianEntity {
             for (int k = 1; k <= 3 && np.equals(p); k++) np = BlockPos.containing(Mech.polar(o, r, a + dir * k * 0.8 / r, c.y));
             level().setBlock(p, Blocks.AIR.defaultBlockState(), 3);
             if (level().getBlockState(np).isAir()) { level().setBlock(np, Blocks.GRAVEL.defaultBlockState(), 3); serverLevel().playSound(null, np, SoundEvents.GRAVEL_STEP, net.minecraft.sounds.SoundSource.BLOCKS, 1F, 0.6F); }
-            Vec3 mouth = Mech.polar(o, RING_IN, mouthAngle, o.y);
-            if (Mech.horiz(Vec3.atCenterOf(np), mouth) <= 2.5) { level().setBlock(np, Blocks.AIR.defaultBlockState(), 3); jamOpen(); }
+            if (planGrit.contains(p) || planGrit.contains(np)) { planGrit.remove(p); planGrit.add(np); continue; }   // the quarry's own rubble rides the ring but feeds nothing
+            double da = Math.abs(Math.atan2(Math.sin(Mech.angleOf(o, Vec3.atCenterOf(np)) - mouthAngle), Math.cos(Mech.angleOf(o, Vec3.atCenterOf(np)) - mouthAngle)));
+            if (da <= 2.5 / RING_IN) { level().setBlock(np, Blocks.AIR.defaultBlockState(), 3); jamOpen(); }
         }
     }
 
