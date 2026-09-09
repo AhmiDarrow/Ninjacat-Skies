@@ -227,6 +227,10 @@ entry("braid", "living_lattice", "The Living Lattice", "Workshops, rites and pat
     text("Hands become a workshop", "Four Echo stations refine batches and accept shared ingredients. Bind can weave Loom Lint into string and Void Yarn into Spiritweave. The Pulse Adapter sends the camp's harmony into standard FE machines."),
     text("Three distances", "Cargo rituals grow from Local to Longreach to Astral. Player paths grow from Waystone to Horizon to Astral. March Crystal opens the final tier for both: across dimensions. Leave both cargo endpoints loaded and a safe floor for travellers."),
     text("Conduct the camp", "Redstone pauses stations, storage, relays and sustained rituals. Comparators report supplies and activity. The Drumheart listens for rising edges instead: a clock is a drum pattern. Find the full builds in Tribal Weave."),
+    text("The sixth voice", "Loom joins the five attunements. Loom Thread comes from Ancestor Hall chests, from The Unsung, and from a Loom-stitcher Elder at Friend standing; an Unsung Heart crafts the Loom totem. The Loom Seal blesses Tension in a brazier, the Echo Unweave runs the lattice backwards and salvages worn Spiritgear, and the Sixfold Staff gains Tether and Stitch."),
+    text("Rites", "Six Rite Tablets, each two stone and a reagent around its seal (the seal is handed back). Sneak-use one on a Ritual Brazier with that seal seated and it draws its Pulse from the lattice within eight blocks: Rain Calling, Sky Clearing, Dawn Calling, Green Blessing, Still Night, and Ley Binding, which joins two totems with a thirty-minute ley line."),
+    text("Bound spirits and camps", "A Bonding Charm bonds an adult Lantern Fox, Mossback or Dawn Stag: it follows, never despawns, and yields double when brushed. A Camp Charter, or `/tribalpower camp`, gathers players into a camp that shares a vault, its devices, twelve Wayanchors and a quarter of each member's standing."),
+    text("Reading the lattice", "The Ley Lens shows the ley where you stand. A Pulse Gauge reads any Pulse holder as redstone; a Pulse Threshold emits at a quarter, half, three-quarters or full. Sneak-use the Spirit Codex on any Tribal block and it says, plainly, why it is or is not working."),
 ], parents=["hum"])
 
 # ------------------------------------------------------------------------------------ Nine Tribes
@@ -279,11 +283,37 @@ TRIBES = [
      "will.",
      "The Loom was never one thread. It was nine agreeing."),
 ]
+# 3.0: every tribe keeps a camp in the March — where it stands, what its hearth favours, what its Elder trades.
+CAMPS = {
+    "soil": ("the March steppe", "dirt and moss blocks, bread, Echo Shards", "Earth", "hearths and caches"),
+    "stone": ("the March highlands", "raw ores, grits, Attuned Echo", "Earth", "Echo Shards for raw ore, Attuned Echo for grit"),
+    "sprout": ("the March steppe", "saplings, seeds, Mossback Moss", "Water", "March saplings and Spirit Reed"),
+    "claw": ("the March highlands", "leather, iron, Rift Fang", "Fire", "Spiritgear and footholds"),
+    "spark": ("the March steppe", "copper, charged Pulse Cells, Bone Chimes", "Fire", "Bone Chimes and Pulse Cells"),
+    "clock": ("the March crystal fields", "redstone, clocks, Storm Moth Dust", "Air", "timed songs and automation"),
+    "swarm": ("the March steppe", "honey, flowers, Lantern Fox Ember", "Air", "hives and March flowers"),
+    "sigil": ("the March highlands", "blank and element seals, Spirit Shards", "Spirit", "the tribe's Seal, Blank Seals and rite tablets"),
+    "spindle": ("the March crystal fields, at the Crystal Spire", "March Crystal, Loom Thread, compasses", "Loom", "Loom Thread at Friend and a Horizon Compass at Kin"),
+}
 for sid, tribe, x, y, lore, margin in TRIBES:
+    where, favours, voice, trades = CAMPS[sid]
     entry("tribes", sid, tribe, f"Keepers of the {sid.title()} Strand.", f"{NS}:strand_token_{sid}", x, y, [
         text(tribe, lore),
         spotlight(f"{NS}:strand_token_{sid}", f"{sid.title()} Strand", f"*{margin}*\n\nSeated. The {tribe} answer when this Post hums."),
+        text("Their camp", f"The {tribe} keep a camp in {where}: huts, a fire, a Tribe Hearth, a {voice} totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours {favours}. Their Elder trades {trades}, and at Voice standing presses the tribe's Mark into your hand."),
     ], condition=advancement(f"strand/{sid}"), hide=False)
+
+entry("tribes", "camps", "The Nine Camps", "Standing, offerings, marks.", "tribalpower:tribe_hearth", -4, 0, [
+    text("Standing", "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near the hearth and completed trades count. Hurting Kin costs 25 and turns the Hunters on you; breaking camp blocks costs five each, the hearth forty."),
+    spotlight("tribalpower:tribe_mark", "Tribe Mark", "Given once, by an Elder, at Voice. With the tribe's Resonance Totem and two Spiritweave it becomes a Kinship Totem: an extra voice for the Pulse Resonator. Nine tribes can carry the song to fifteen voices."),
+    text("The camp keeps the beat", "A Drummer plays every few seconds. A Drumheart within eight blocks takes two Pulse from each beat, so a camp is a small, honest source of power. `/tribalpower standing` prints all nine standings."),
+], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:tribes/offering"}, hide=False)
+
+entry("tribes", "the_unsung", "The Unsung", "What the March remembers.", "tribalpower:silent_drum", 4, 2, [
+    text("The halls that kept time", "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, twelve Lore Tablets between them, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."),
+    text("The Drum Circle", "Twelve pillars around a Silent Drum in the March highlands. Strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double."),
+    spotlight("tribalpower:unsung_heart", "Unsung Heart", "One per kill, with Loom Thread and Resonant Cores. It crafts the Resonance Totem (Loom), the sixth voice."),
+], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:march/ancestor_hall"}, hide=False)
 
 entry("tribes", "reweave", "Reweave", "The cut, closed.", f"{NS}:spindle_loom_fragment", 0, 0, [
     text("Reweave",
@@ -291,5 +321,44 @@ entry("tribes", "reweave", "Reweave", "The cut, closed.", f"{NS}:spindle_loom_fr
          "thinner for it. When every Clowder has done the same, it turns to lit thread and stays that way.\n\n"
          "Go and see what the March kept for you. Tell it we are sorry it took so long."),
 ], condition=advancement("reweave"), hide=True)
+
+# ------------------------------------------------------------------------------------ Snapped Guardians
+
+import sys
+sys.path.insert(0, str(ROOT / "tools"))
+from guardians_lore import GUARDIANS, STRAND_TITLES, unlock
+
+category("guardians", "Snapped Guardians", "guardians:frayed_totem_unwoven", 3, "The keepers the Cut snapped. Unlocks as you seat Strands.")
+
+entry("guardians", "the_ritual", "Answer for the Cut", "Totems, arenas, relics.", "guardians:frayed_totem_beddown", 0, 0, [
+    text("Answer for the Cut",
+         "Each Strand had a guardian: a Loom-construct that kept its thread taut. The Cut snapped them. They are not monsters "
+         "to be killed but Strands to be re-tensioned, and the only way to re-tension one is to beat its keeper on its own ground.\n\n"
+         "Craft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena."),
+    text("The arena",
+         "You and every Clowder mate within 32 blocks are pulled to a stage built for that guardian alone: four spawn pads, "
+         "the totem stone, and a sealed gate that opens on a win or a wipe. A fence returns anyone who falls, at a cost in hearts. "
+         "Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**. Wipe and you are spat back "
+         "out with the totem spent; craft another."),
+    text("Relics",
+         "A relic is a trophy with one power: a passive while worn — the Curios relic slot, the off-hand or the hotbar — and a "
+         "right-click on a cooldown. `/guardians status` shows the Clowder's record; `/guardians leave` abandons a fight."),
+])
+
+POS = {"beddown": (-4, -2), "grindmaw": (-2, -3), "thornmother": (0, -4), "edgewalker": (2, -3), "drumheart": (4, -2),
+       "cogwright": (4, 0), "hivemind": (2, 2), "sealbreaker": (0, 3), "unwoven": (-2, 2),
+       "lintgolem": (-4, 0), "tangle": (-4, 2), "firstcut": (4, 3), "overweaver": (4, -4)}
+for gid, title, strand, relic, tier, arena, fight, power in GUARDIANS:
+    x, y = POS[gid]
+    where = f"Keeper of the {STRAND_TITLES[strand]} Strand." if strand else ("A gentle first fight." if tier == "easy" else "After the Reweave.")
+    entry("guardians", gid, title[0].upper() + title[1:], where, f"guardians:frayed_totem_{gid}", x, y, [
+        text(title[0].upper() + title[1:], arena + "\n\n" + fight),
+        spotlight(f"guardians:frayed_totem_{gid}", "Frayed Totem",
+                  "Four Frayed Thread and four of the Strand's block around a Void Yarn." if tier == "gate" else
+                  "Frayed Thread and obsidian around the Loomthread relic; the relic is handed back." if tier == "insane" else
+                  "Four Frayed Thread and four white wool around a Void Yarn." if gid == "lintgolem" else
+                  "Four Frayed Thread and four leaves around a Void Yarn."),
+        spotlight(f"guardians:relic_{relic}", "Woven Relic", power),
+    ], parents=["the_ritual"], condition={"type": "modonomicon:advancement", "advancement_id": unlock(gid, strand)}, hide=False)
 
 print("Whisker Codex book written to", BOOK.relative_to(ROOT))

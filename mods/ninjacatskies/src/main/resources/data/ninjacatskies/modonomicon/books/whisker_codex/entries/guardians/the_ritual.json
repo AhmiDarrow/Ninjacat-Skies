@@ -1,0 +1,28 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "Answer for the Cut",
+  "description": "Totems, arenas, relics.",
+  "icon": "guardians:frayed_totem_beddown",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Answer for the Cut",
+      "text": "Each Strand had a guardian: a Loom-construct that kept its thread taut. The Cut snapped them. They are not monsters to be killed but Strands to be re-tensioned, and the only way to re-tension one is to beat its keeper on its own ground.\n\nCraft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "The arena",
+      "text": "You and every Clowder mate within 32 blocks are pulled to a stage built for that guardian alone: four spawn pads, the totem stone, and a sealed gate that opens on a win or a wipe. A fence returns anyone who falls, at a cost in hearts. Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**. Wipe and you are spat back out with the totem spent; craft another."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Relics",
+      "text": "A relic is a trophy with one power: a passive while worn — the Curios relic slot, the off-hand or the hotbar — and a right-click on a cooldown. `/guardians status` shows the Clowder's record; `/guardians leave` abandons a fight."
+    }
+  ]
+}

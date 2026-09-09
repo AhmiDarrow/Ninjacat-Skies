@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "The Edgewalker",
+  "description": "Keeper of the Claw Strand.",
+  "icon": "guardians:frayed_totem_edgewalker",
+  "x": 2,
+  "y": -3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Edgewalker",
+      "text": "The Sky Shards: ten deepslate shards floating over the void, crumbling bridges between them, gold claw-marks on the main shard where the boss lands.\n\nA pure duel. The Edgewalker leaps shard to shard and pounces whoever stands furthest from a wall; a gold claw-mark shows where, a breath before it lands — step off it. Bridges crumble behind you and return later. Falling costs six hearts and a trip back to your pad."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:frayed_totem_edgewalker",
+        "count": 1
+      },
+      "title": "Frayed Totem",
+      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:relic_edgestep",
+        "count": 1
+      },
+      "title": "Woven Relic",
+      "text": "Edgestep: no fall damage under twelve blocks and no slipping off edges. Edgestep dashes six blocks, twice, with a stronger hit at the end."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:guardians/the_ritual",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/claw"
+  }
+}

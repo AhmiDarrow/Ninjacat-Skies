@@ -22,6 +22,11 @@
       },
       "title": "Sprout Strand",
       "text": "*Roots are the only rope the void respects.*\n\nSeated. The Rootbinders answer when this Post hums."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Their camp",
+      "text": "The Rootbinders keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Water totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours saplings, seeds, Mossback Moss. Their Elder trades March saplings and Spirit Reed, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

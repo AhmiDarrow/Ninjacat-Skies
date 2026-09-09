@@ -48,4 +48,16 @@ ItemEvents.modifyTooltips(event => {
   if (Item.exists('tribalpower:march_stone')) {
     event.add('tribalpower:march_stone', Text.gold('Right-click a Tension Post with it once nine Strands are seated.'))
   }
+  // Tribal Power 3.0 — the Nine Tribes. Camps stand in the March; the pack's quests are in Tribal Weave.
+  if (Item.exists('tribalpower:tribe_hearth')) {
+    event.add('tribalpower:tribe_hearth', Text.gray('Offer what the tribe favours. Standing opens trades, then the Mark. Do not break it.'))
+    event.add('tribalpower:tribe_mark', Text.gray('An Elder gives it once, at Voice. Craft it into a Kinship Totem.'))
+    event.add('tribalpower:kinship_totem', Text.gray('One more voice for the Pulse Resonator — up to fifteen with all nine tribes.'))
+    event.add('tribalpower:loom_thread', Text.gray('Ancestor Halls, The Unsung, or a Loom-stitcher at Friend. The sixth voice starts here.'))
+    event.add('tribalpower:silent_drum', Text.gray('Four strikes, a breath apart. Sneak against the Beat; answer the Silence with the same rhythm.'))
+    event.add(/tribalpower:rite_.*/, Text.gray('Sneak-use on a Ritual Brazier with the matching seal seated. Pulse comes from the lattice around it.'))
+    event.add('tribalpower:bonding_charm', Text.gray('Adult Lantern Fox, Mossback or Dawn Stag. Kept when the bond fails.'))
+    event.add('tribalpower:camp_charter', Text.gray('Use on a Clowder mate to share one vault, one anchor budget, one standing.'))
+    event.add('tribalpower:ley_lens', Text.gray('Hold to see the ley. Sneak-use a Ley Collector for its numbers.'))
+  }
 })

@@ -19,7 +19,24 @@ dependencies {
     localRuntime project(':voidloom')
     compileOnly fileTree(dir: rootProject.file('../pack/mods'), include: [
             'curios-neoforge-*.jar', 'ftb-teams-neoforge-*.jar', 'ftb-library-neoforge-*.jar', 'architectury-*.jar',
+            'exdeorum-*.jar', 'productivebees-*.jar',
     ])
+    // Productive Bees ships ProductiveLib as a nested (jar-in-jar) dependency; its hive block entities implement
+    // ProductiveLib interfaces, so javac needs it on the classpath to compile against them. Unpack it beside the build.
+    compileOnly fileTree(dir: compatLibs(), include: ['productivelib-*.jar'])
+}
+
+def compatLibs() {
+    def dir = layout.buildDirectory.dir('compat').get().asFile
+    fileTree(dir: rootProject.file('../pack/mods'), include: ['productivebees-*.jar']).each { jar ->
+        copy {
+            from(zipTree(jar)) { include 'META-INF/jarjar/productivelib-*.jar' }
+            into dir
+            eachFile { it.path = it.name }
+            includeEmptyDirs = false
+        }
+    }
+    return dir
 }
 
 evaluationDependsOn(':ninjacat-lib'); evaluationDependsOn(':ninjacatskies'); evaluationDependsOn(':clowderhall'); evaluationDependsOn(':voidloom')

@@ -161,7 +161,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade 🔍",
+    "name": "Jade \ud83d\udd0d",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -594,10 +594,10 @@
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8828297,
-    "filename": "tribalpower-2.3.0.jar",
+    "fileId": 0,
+    "filename": "tribalpower-3.0.0.jar",
     "releaseType": 3,
-    "sha1": "d4a52b2f9366705ccf6420b43f27b8cf1956bdfc"
+    "sha1": "40af8d7336b0a7c3464a732f84a6b1f3a0d2d17a"
   },
   {
     "key": "Applied Energistics 2 Wireless Terminals",

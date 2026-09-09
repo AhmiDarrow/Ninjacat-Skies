@@ -25,6 +25,8 @@ public interface RelicPower {
     default void onWearerHurt(ServerPlayer player, ItemStack relic, LivingIncomingDamageEvent e) {}
     /** The wearer dealt melee damage. */
     default void onWearerHit(ServerPlayer player, ItemStack relic, LivingEntity target, LivingDamageEvent.Pre e) {}
+    /** The wearer right-clicked a block (fires before the block handles the click). */
+    default void onWearerUseBlock(ServerPlayer player, ItemStack relic, net.minecraft.core.BlockPos pos) {}
     /** Called once when the relic starts being worn (apply attribute modifiers) and once when it stops. */
     default void onWorn(ServerPlayer player, boolean worn) {}
 }

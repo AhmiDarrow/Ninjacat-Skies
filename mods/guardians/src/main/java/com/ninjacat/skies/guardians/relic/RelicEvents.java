@@ -6,6 +6,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 import java.util.HashMap;
@@ -36,6 +37,12 @@ public final class RelicEvents {
     public void onIncoming(LivingIncomingDamageEvent e) {
         if (!(e.getEntity() instanceof ServerPlayer p)) return;
         for (ItemStack s : RelicSlots.worn(p)) { ((RelicItem) s.getItem()).power.onWearerHurt(p, s, e); if (e.isCanceled()) return; }
+    }
+
+    @SubscribeEvent
+    public void onUseBlock(PlayerInteractEvent.RightClickBlock e) {
+        if (!(e.getEntity() instanceof ServerPlayer p)) return;
+        for (ItemStack s : RelicSlots.worn(p)) ((RelicItem) s.getItem()).power.onWearerUseBlock(p, s, e.getPos());
     }
 
     @SubscribeEvent

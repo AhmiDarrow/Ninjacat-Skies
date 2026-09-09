@@ -73,6 +73,8 @@ public final class ArenaManager extends SavedData {
         Optional<Clowder> clowder = LoomTension.clowderOf(summoner);
         if (kind.tier == GuardianKind.Tier.INSANE && (clowder.isEmpty() || !LoomTension.isRewoven(clowder.get())))
             return "That door only opens after the Reweave.";
+        if (kind.strand != null && (clowder.isEmpty() || !LoomTension.isSeated(clowder.get(), kind.strand)))
+            return "Seat the " + kind.strand.title() + " Strand at your Tension Post first — " + kind.title + " only answers for a Strand that is held.";
         // the party: Clowder members online and within 32 blocks of the summoner (they hear the totem)
         List<ServerPlayer> party = new ArrayList<>(); party.add(summoner);
         clowder.ifPresent(c -> { for (ServerPlayer m : c.onlineMembers()) if (m != summoner && m.level() == summoner.level() && m.distanceTo(summoner) < 32 && !m.isSpectator()) party.add(m); });

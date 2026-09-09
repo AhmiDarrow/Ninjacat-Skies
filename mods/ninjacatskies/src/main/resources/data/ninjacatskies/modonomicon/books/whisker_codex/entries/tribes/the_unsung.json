@@ -1,0 +1,36 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "The Unsung",
+  "description": "What the March remembers.",
+  "icon": "tribalpower:silent_drum",
+  "x": 4,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The halls that kept time",
+      "text": "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, twelve Lore Tablets between them, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "The Drum Circle",
+      "text": "Twelve pillars around a Silent Drum in the March highlands. Strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "tribalpower:unsung_heart",
+        "count": 1
+      },
+      "title": "Unsung Heart",
+      "text": "One per kill, with Loom Thread and Resonant Cores. It crafts the Resonance Totem (Loom), the sixth voice."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "tribalpower:march/ancestor_hall"
+  }
+}

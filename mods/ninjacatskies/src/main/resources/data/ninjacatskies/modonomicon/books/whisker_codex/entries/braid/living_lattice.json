@@ -28,6 +28,26 @@
       "type": "modonomicon:text",
       "title": "Conduct the camp",
       "text": "Redstone pauses stations, storage, relays and sustained rituals. Comparators report supplies and activity. The Drumheart listens for rising edges instead: a clock is a drum pattern. Find the full builds in Tribal Weave."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "The sixth voice",
+      "text": "Loom joins the five attunements. Loom Thread comes from Ancestor Hall chests, from The Unsung, and from a Loom-stitcher Elder at Friend standing; an Unsung Heart crafts the Loom totem. The Loom Seal blesses Tension in a brazier, the Echo Unweave runs the lattice backwards and salvages worn Spiritgear, and the Sixfold Staff gains Tether and Stitch."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Rites",
+      "text": "Six Rite Tablets, each two stone and a reagent around its seal (the seal is handed back). Sneak-use one on a Ritual Brazier with that seal seated and it draws its Pulse from the lattice within eight blocks: Rain Calling, Sky Clearing, Dawn Calling, Green Blessing, Still Night, and Ley Binding, which joins two totems with a thirty-minute ley line."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Bound spirits and camps",
+      "text": "A Bonding Charm bonds an adult Lantern Fox, Mossback or Dawn Stag: it follows, never despawns, and yields double when brushed. A Camp Charter, or `/tribalpower camp`, gathers players into a camp that shares a vault, its devices, twelve Wayanchors and a quarter of each member's standing."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Reading the lattice",
+      "text": "The Ley Lens shows the ley where you stand. A Pulse Gauge reads any Pulse holder as redstone; a Pulse Threshold emits at a quarter, half, three-quarters or full. Sneak-use the Spirit Codex on any Tribal block and it says, plainly, why it is or is not working."
     }
   ],
   "parents": [

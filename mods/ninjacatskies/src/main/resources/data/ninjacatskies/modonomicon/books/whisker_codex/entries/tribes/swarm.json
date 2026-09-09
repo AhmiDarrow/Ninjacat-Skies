@@ -22,6 +22,11 @@
       },
       "title": "Swarm Strand",
       "text": "*You do not own a hive. You are on good terms with it.*\n\nSeated. The Colony-keepers answer when this Post hums."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Their camp",
+      "text": "The Colony-keepers keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Air totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours honey, flowers, Lantern Fox Ember. Their Elder trades hives and March flowers, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

@@ -22,6 +22,11 @@
       },
       "title": "Clock Strand",
       "text": "*A factory is a song that has stopped needing the singer.*\n\nSeated. The Pattern-weavers answer when this Post hums."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Their camp",
+      "text": "The Pattern-weavers keep a camp in the March crystal fields: huts, a fire, a Tribe Hearth, a Air totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours redstone, clocks, Storm Moth Dust. Their Elder trades timed songs and automation, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

@@ -3,6 +3,7 @@ package com.ninjacat.skies.guardians.relic;
 import com.ninjacat.skies.core.tension.LoomTension;
 import com.ninjacat.skies.guardians.Guardians;
 import com.ninjacat.skies.lib.NinjacatText;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleOptions;
@@ -27,6 +28,9 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.block.entity.BeehiveBlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import org.joml.Vector3f;
@@ -138,6 +142,33 @@ final class RelicUtil {
                 b.setTarget(null); b.setPersistentAngerTarget(null); b.setRemainingPersistentAngerTime(0);
             }
         }
+    }
+
+    /** Whether the optional mods the relic passives integrate with are loaded (read once; compat classes stay unloaded otherwise). */
+    static final boolean EXDEORUM = net.neoforged.fml.ModList.get().isLoaded("exdeorum");
+    static final boolean PRODUCTIVEBEES = net.neoforged.fml.ModList.get().isLoaded("productivebees");
+
+    /**
+     * Hivecall's Keeper: every hive within {@code r} blocks of the wearer gets one extra tick. Called every 10 ticks,
+     * that is exactly "hives work 10 % faster". Productive Bees hives go through their own static tick
+     * ({@link com.ninjacat.skies.guardians.relic.compat.HiveCompat}); vanilla hives and nests through
+     * {@link BeehiveBlockEntity#serverTick}. Only the loaded chunks around the player are walked.
+     */
+    static void hurryHives(ServerPlayer p, int r) {
+        ServerLevel l = p.serverLevel();
+        BlockPos c = p.blockPosition();
+        int r2 = r * r;
+        for (int cx = (c.getX() - r) >> 4; cx <= (c.getX() + r) >> 4; cx++)
+            for (int cz = (c.getZ() - r) >> 4; cz <= (c.getZ() + r) >> 4; cz++) {
+                LevelChunk chunk = l.getChunkSource().getChunkNow(cx, cz);
+                if (chunk == null) continue;
+                for (BlockEntity be : new ArrayList<>(chunk.getBlockEntities().values())) {
+                    BlockPos pos = be.getBlockPos();
+                    if (be.isRemoved() || pos.distSqr(c) > r2) continue;
+                    if (PRODUCTIVEBEES && com.ninjacat.skies.guardians.relic.compat.HiveCompat.extraTick(l, pos, be)) continue;
+                    if (be instanceof BeehiveBlockEntity hive) BeehiveBlockEntity.serverTick(l, pos, hive.getBlockState(), hive);
+                }
+            }
     }
 
     // ------------------------------------------------------------------ Clowder

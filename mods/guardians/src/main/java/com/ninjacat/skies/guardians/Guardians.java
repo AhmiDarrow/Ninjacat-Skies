@@ -6,6 +6,7 @@ import com.ninjacat.skies.guardians.arena.ArenaData;
 import com.ninjacat.skies.guardians.arena.ArenaManager;
 import com.ninjacat.skies.guardians.entity.ModEntities;
 import com.ninjacat.skies.guardians.item.ModItems;
+import com.ninjacat.skies.guardians.item.TotemUnlocks;
 import com.ninjacat.skies.guardians.relic.RelicEvents;
 import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.commands.Commands;
@@ -33,6 +34,8 @@ public final class Guardians {
         NeoForge.EVENT_BUS.register(new RelicEvents());
         NeoForge.EVENT_BUS.addListener(this::onServerTick);
         NeoForge.EVENT_BUS.addListener(this::onLogin);
+        NeoForge.EVENT_BUS.addListener(TotemUnlocks::onAdvancement);
+        NeoForge.EVENT_BUS.addListener(TotemUnlocks::onLogin);
         NeoForge.EVENT_BUS.addListener(this::onDeath);
         NeoForge.EVENT_BUS.addListener(this::onCommands);
         NeoForge.EVENT_BUS.addListener((AddReloadListenerEvent e) -> ArenaData.clearCache());

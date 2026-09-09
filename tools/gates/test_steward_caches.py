@@ -23,11 +23,20 @@ class StewardCaches(unittest.TestCase):
         g.write_chapter = capture
         g.main()
 
+    @staticmethod
+    def _added_after_0_6_1(oid: str) -> bool:
+        """Quests appended since the 0.6.1 baseline: chapter 39 (Snapped Guardians) and any per-chapter late block (0x8000+)."""
+        n = int(oid, 16)
+        return (n >> 16) & 0xFF == 0x27 or (n & 0xFFFF) >= 0x8000
+
     def test_existing_save_ids_preserved(self):
         ids = sorted(o['id'] for _, q in self.rows for o in [q] + q.get('tasks', []) + q.get('rewards', [])
                      if not o.get('item', {}).get('id', '').endswith('_steward_cache'))
-        self.assertEqual(hashlib.sha256('\n'.join(ids).encode()).hexdigest(), 'f2940a2e543125304068fe7c0ac6a6e0b253518096f6290a46017fa129144a64')
-        self.assertEqual(len(self.rows), 1495)
+        baseline = [i for i in ids if not self._added_after_0_6_1(i)]
+        # every id a 0.6.1 save knows is still there, unchanged
+        self.assertEqual(hashlib.sha256('\n'.join(baseline).encode()).hexdigest(), 'f2940a2e543125304068fe7c0ac6a6e0b253518096f6290a46017fa129144a64')
+        self.assertEqual(len([r for r in self.rows if not self._added_after_0_6_1(r[1]['id'])]), 1495)
+        self.assertEqual(len(self.rows), 1495 + 31 + 41)
 
     def test_distribution_preserves_threads_and_excludes_repeatable_shop(self):
         caches = {t: 0 for t in TIERS}
@@ -42,7 +51,7 @@ class StewardCaches(unittest.TestCase):
                         self.assertNotEqual(chapter, '16_shop')
                         self.assertFalse(q.get('repeatable'))
                         self.assertEqual(r['item']['count'], 1)
-        self.assertEqual(threads, 1441)
+        self.assertEqual(threads, 1462)
         self.assertTrue(350 <= sum(caches.values()) <= 550, caches)
         self.assertGreater(caches['small'], caches['medium'])
         self.assertGreater(caches['medium'], caches['large'])

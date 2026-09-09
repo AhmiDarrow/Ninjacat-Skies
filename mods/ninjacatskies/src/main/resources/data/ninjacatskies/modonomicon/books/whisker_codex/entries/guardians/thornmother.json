@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "The Thornmother",
+  "description": "Keeper of the Sprout Strand.",
+  "icon": "guardians:frayed_totem_thornmother",
+  "x": 0,
+  "y": -4,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Thornmother",
+      "text": "The Overgrowth Terrace: four garden terraces under a leaf canopy, eight trellis posts, and four pruning stations on the second tier.\n\nThe Thornmother never strikes; she seeds thorn-hedge that spreads and burns to the touch, and heals whenever a pruning station is overgrown. Shears and axes clear it. Compost eight hedge at a station to fire a prune wave that clears the ground and stuns her — the only clean damage window."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:frayed_totem_thornmother",
+        "count": 1
+      },
+      "title": "Frayed Totem",
+      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:relic_thornseed",
+        "count": 1
+      },
+      "title": "Woven Relic",
+      "text": "Thornseed: Thorns and no berry or cactus damage. Bloom raises a ring of hedge and gives Regeneration II to you and your Clowder inside it."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:guardians/the_ritual",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/sprout"
+  }
+}
