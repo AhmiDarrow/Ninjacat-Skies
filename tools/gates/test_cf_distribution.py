@@ -14,14 +14,14 @@ from test_export_archive import verify
 
 
 class DistributionTests(unittest.TestCase):
-    def test_actual_pack_has_only_five_owned_override_jars(self):
+    def test_actual_pack_has_only_six_owned_override_jars(self):
         jars = sorted((ROOT / 'pack/mods').glob('*.jar'))
         rows = json.loads((ROOT / 'pack/modlist-resolved.json').read_text(encoding='utf-8'))
         entries = manifest_entries(jars, rows)
-        self.assertEqual(len(entries), 88)
+        self.assertEqual(len(entries), 87)
         self.assertEqual(len(jars), 93)
-        self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 5)
-        expected = {619320: 8687896, 235577: 8163135, 1684851: 8828297}
+        self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 6)   # five companions + Tribal Power (bundled while in CF review)
+        expected = {619320: 8687896, 235577: 8163135}
         actual = {e['projectID']: e['fileID'] for e in entries}
         for pid, fid in expected.items(): self.assertEqual(actual[pid], fid)
 
@@ -41,7 +41,6 @@ class DistributionTests(unittest.TestCase):
             for name in ['overrides/mods/sophisticatedstorage-1.21.1-1.5.91.2127.jar',
                          'overrides/mods/trashslot-neoforge-1.21.1-21.1.11.jar',
                          'overrides/mods/ae2wtlib-19.5.1.jar',
-                         'overrides/mods/tribalpower-2.3.0.jar',
                          'overrides/hidden/unknown.jar']:
                 with zipfile.ZipFile(p, 'w') as z:
                     z.writestr('manifest.json', json.dumps({'manifestType': 'minecraftModpack', 'overrides': 'overrides', 'image': 'icon.png'}))
