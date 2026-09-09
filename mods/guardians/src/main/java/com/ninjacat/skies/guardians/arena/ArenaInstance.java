@@ -62,7 +62,8 @@ public final class ArenaInstance {
         for (Tag u : t.getList("Party", Tag.TAG_INT_ARRAY)) a.party.add(NbtUtils.loadUUID(u));
         if (t.hasUUID("Clowder")) a.clowderId = t.getUUID("Clowder"); if (t.hasUUID("Boss")) a.boss = t.getUUID("Boss");
         try { a.state = State.valueOf(t.getString("State")); } catch (IllegalArgumentException e) { a.state = State.WIPED; }
-        a.stateTicks = t.getInt("StateTicks"); a.age = t.getInt("Age");
+        a.stateTicks = t.getInt("StateTicks");
+        a.age = 0;                       // a restart mid-fight starts the grace period again: the party and the boss's chunks are not back yet
         return a;
     }
 }

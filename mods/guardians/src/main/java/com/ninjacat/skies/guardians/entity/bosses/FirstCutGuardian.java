@@ -31,7 +31,7 @@ import java.util.List;
  */
 public class FirstCutGuardian extends GuardianEntity {
     private static final int SHARD_R = 42, SEVER_EVERY = 400, SEVER_TELL = 30, GAP_LIFE = 300, BEAM_EVERY = 160, BEAM_TELL = 20, CRUSH_EVERY = 240, CRUSH_TELL = 30, PULL_EVERY = 200, PULL_TELL = 20, MAX_SPLIT = 4, BOSS_KEEP = 7;
-    private static final Vec3 SEAM_DIR = new Vec3(160, 0, 29).normalize();      // the Cut runs ~ (-75,-14) -> (85,15) through the origin
+    private static final Vec3 SEAM_DIR = new Vec3(160, 0, -29).normalize();     // the Cut runs ~ (-75,-14) -> (85,15) in arena_factory; the plan mirrors y into -z
     private final Mech.Ledger gap = new Mech.Ledger(), split = new Mech.Ledger();
     private final List<BlockPos> rubble = new ArrayList<>(); private final List<Integer> rubbleBorn = new ArrayList<>();
     private final List<BlockPos> splitQueue = new ArrayList<>();

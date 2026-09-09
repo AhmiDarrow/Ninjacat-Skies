@@ -30,8 +30,10 @@ public class SealbreakerGuardian extends GuardianEntity {
     public SealbreakerGuardian(EntityType<? extends GuardianEntity> type, Level level) { super(type, level, GuardianKind.SEALBREAKER); }
 
     @Override protected String immuneMessage() { return "The Sealbreaker hides behind its wards. Watch the dais pegs and dispel the wards in that order."; }
-    private Vec3 pillar(int k) { Vec3 o = origin(); return Mech.polar(o, PILLAR_R, Math.PI * 2 * k / PILLARS, o.y); }
-    private Vec3 peg(int k) { Vec3 o = origin(); return Mech.polar(o, PEG_R, Math.PI * 2 * k / PILLARS, o.y + 1.2); }
+    /** Pillar k stands at 90° + 40°k in arena_factory; the plan mirrors Blender y into Minecraft -z, hence the negated angle. */
+    private static double pillarAngle(int k) { return -(Math.PI * 2 * k / PILLARS + Math.PI / 2); }
+    private Vec3 pillar(int k) { Vec3 o = origin(); return Mech.polar(o, PILLAR_R, pillarAngle(k), o.y); }
+    private Vec3 peg(int k) { Vec3 o = origin(); return Mech.polar(o, PEG_R, pillarAngle(k), o.y + 1.2); }
 
     @Override
     protected void tickMechanic() {
@@ -70,7 +72,7 @@ public class SealbreakerGuardian extends GuardianEntity {
         }
         active.clear(); active.addAll(order); if (decoy >= 0) active.add(decoy);
         for (int k : active) {
-            Vec3 at = Mech.polar(origin(), GLYPH_R, Math.PI * 2 * k / PILLARS, origin().y);
+            Vec3 at = Mech.polar(origin(), GLYPH_R, pillarAngle(k), origin().y);
             BlockPos g = Mech.ground(level(), at.x, at.z, (int) origin().y - 2, (int) origin().y + 3);
             BlockPos p = g != null ? g.above() : BlockPos.containing(at);
             placeTemp(p, Blocks.TINTED_GLASS.defaultBlockState()); glyph[k] = p;

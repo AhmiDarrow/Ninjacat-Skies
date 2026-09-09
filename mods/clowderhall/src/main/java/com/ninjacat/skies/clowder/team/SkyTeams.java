@@ -32,6 +32,7 @@ public final class SkyTeams {
     public static final int NO_TEAM = -1;      // invite: actor has no team | accept: no pending invite
     public static final int TARGET_TEAM = -2;  // invite: target already on a team | accept: you already on a team
     public static final int BAD = -3;          // self-invite / internal failure
+    public static final int ALREADY = -4;      // invite: this team already invited that player (no re-send)
 
     private static SkyblockSavedData data(MinecraftServer server) {
         return SkyblockSavedData.get(server.overworld());
@@ -79,7 +80,7 @@ public final class SkyTeams {
 
     private static void deferLeaveAll(Team team) {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-        if (server == null || team == null) return;
+        if (server == null || team == null || team.isSpawn()) return;
         Set<UUID> members = new HashSet<>(team.getPlayers());
         later(server, () -> leaveIfGone(server, members));
     }
@@ -122,7 +123,7 @@ public final class SkyTeams {
 
     private static void deferReconcile(Team team) {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-        if (server == null || team == null) return;
+        if (server == null || team == null || team.isSpawn()) return;          // the Dock's spawn team is not a Clowder
         UUID id = team.getId();
         later(server, () -> ClowderSync.reconcileTeam(server, id));
     }
@@ -169,6 +170,7 @@ public final class SkyTeams {
         Team team = d.getTeamFromPlayer(inviter.getUUID());
         if (team == null) return NO_TEAM;
         if (d.hasPlayerTeam(target)) return TARGET_TEAM;
+        if (d.hasInviteFrom(team, target)) return ALREADY;                      // one prompt per team, not one per right-click
         d.addInvite(team, inviter, target);
         d.setDirty();
         return OK;
@@ -179,7 +181,8 @@ public final class SkyTeams {
         if (d.hasPlayerTeam(player)) return TARGET_TEAM;
         var invites = d.getInvites(player);
         if (invites == null || invites.isEmpty()) return NO_TEAM;
-        Team team = d.getTeam(invites.get(invites.size() - 1));   // most recent invite = the prompt they just clicked
+        Team team = null;
+        for (int i = invites.size() - 1; i >= 0 && team == null; i--) team = d.getTeam(invites.get(i));   // newest invite whose team still exists
         if (team == null) return NO_TEAM;
         boolean ok = d.acceptInvite(team, player);
         if (ok) d.setDirty();

@@ -47,6 +47,7 @@ public final class ModDimensions {
 
     private static final String ROOT = ClowderHall.MOD_ID;
     private static final String RETURN_TAG = "hub_return";
+    private static final String KIT_TAG = "ceremony_kit";
     private static final BlockPos MARKER_POS = new BlockPos(0, 62, 0);
     private static final BlockPos PAD_CENTER = new BlockPos(0, 63, 0);
     private static final int PAD_RADIUS = 7;
@@ -63,7 +64,6 @@ public final class ModDimensions {
 
         if (player.level().dimension().equals(CLOWDER_HALL)) {
             ensureHubHall(hub);
-            restockCeremonyChest(hub);
             ReweaveRing.refresh(hub, PAD_CENTER);
             player.displayClientMessage(msg("message.clowderhall.hub_already", NinjacatText.GOLD), true);
             return true;
@@ -71,13 +71,14 @@ public final class ModDimensions {
 
         storeReturnPoint(player);
         ensureHubHall(hub);
-        restockCeremonyChest(hub);
+        restockCeremonyChest(hub, player);
         ReweaveRing.refresh(hub, PAD_CENTER);
 
         // South apron, facing the beacon (north).
         double x = 0.5;
         double y = 65.0;
         double z = 5.5;
+        dismount(player);
         player.changeDimension(new DimensionTransition(
                 hub,
                 new Vec3(x, y, z),
@@ -125,6 +126,7 @@ public final class ModDimensions {
             return teleportOverworldSpawn(player);
         }
 
+        dismount(player);
         player.changeDimension(new DimensionTransition(
                 target,
                 new Vec3(x, y, z),
@@ -268,11 +270,20 @@ public final class ModDimensions {
         chest.setItem(6, new ItemStack(com.ninjacat.skies.core.item.ModItems.FRAYED_THREAD.get(), 4));
     }
 
-    /** Refill the ceremony chest whenever it is found empty, so later arrivals still get a kit. */
-    public static void restockCeremonyChest(ServerLevel level) {
+    /**
+     * Refill the ceremony chest for a newcomer: once per player, and only when the chest is empty. (Refilling on every
+     * entry made the chest an unlimited Frayed Thread faucet for anyone standing beside it.)
+     */
+    public static void restockCeremonyChest(ServerLevel level, ServerPlayer arriving) {
+        CompoundTag persisted = arriving.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag root = persisted.getCompound(ROOT);
+        if (root.getBoolean(KIT_TAG)) return;
         BlockPos chestPos = PAD_CENTER.offset(1, 1, 1);
         if (level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest && chest.isEmpty()) {
             fillCeremonyChest(chest);
+            root.putBoolean(KIT_TAG, true);
+            persisted.put(ROOT, root);
+            arriving.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
         }
     }
 
@@ -420,13 +431,24 @@ public final class ModDimensions {
         return headRoom;
     }
 
-    /** World spawn only: make sure there is a floor and head room (spawn is pack-owned, not a player's build). */
-    private static void ensureLandingClearance(ServerLevel level, BlockPos feet) {
-        BlockPos ground = feet.below();
-        if (!level.getBlockState(ground).blocksMotion()) {
-            level.setBlockAndUpdate(ground, Blocks.STONE.defaultBlockState());
+    /** changeDimension keeps a rider listed as its vehicle's passenger in the other level, which freezes them: always dismount first. */
+    private static void dismount(ServerPlayer player) {
+        if (player.isPassenger()) player.stopRiding();
+        if (player.isVehicle()) player.ejectPassengers();
+    }
+
+    /**
+     * World spawn only. The Dock is pack-owned but still decorated: never overwrite blocks there. If the spawn column is
+     * not standable, look for a standable spot nearby; the caller falls back to the exact spawn if none is found.
+     */
+    private static BlockPos landingNear(ServerLevel level, BlockPos feet) {
+        if (safeToStand(level, feet.getX() + 0.5, feet.getY(), feet.getZ() + 0.5)) return feet;
+        for (int r = 1; r <= 4; r++) for (int dx = -r; dx <= r; dx++) for (int dz = -r; dz <= r; dz++) for (int dy = 2; dy >= -2; dy--) {
+            if (Math.max(Math.abs(dx), Math.abs(dz)) != r) continue;
+            BlockPos c = feet.offset(dx, dy, dz);
+            if (safeToStand(level, c.getX() + 0.5, c.getY(), c.getZ() + 0.5)) return c;
         }
-        clearColumn(level, feet, 2);
+        return feet;
     }
 
     private static void storeReturnPoint(ServerPlayer player) {
@@ -451,8 +473,8 @@ public final class ModDimensions {
             player.displayClientMessage(msg("message.clowderhall.hub_return_fail", NinjacatText.TEAL), false);
             return false;
         }
-        BlockPos spawn = overworld.getSharedSpawnPos();
-        ensureLandingClearance(overworld, spawn);
+        BlockPos spawn = landingNear(overworld, overworld.getSharedSpawnPos());
+        dismount(player);
         player.changeDimension(new DimensionTransition(
                 overworld,
                 new Vec3(spawn.getX() + 0.5, spawn.getY(), spawn.getZ() + 0.5),

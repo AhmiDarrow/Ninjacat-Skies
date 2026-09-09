@@ -93,7 +93,8 @@ public class DrumheartGuardian extends GuardianEntity {
         lava.clear();
         for (int d = 0; d < 4; d++) for (int r = 4; r <= 22; r++) {
             BlockPos p = BlockPos.containing(Mech.polar(o, r, Math.PI / 4 + Math.PI / 2 * d, o.y));
-            if (level().getBlockState(p).isAir()) { level().setBlock(p, Blocks.LAVA.defaultBlockState(), 3); lava.add(p); }
+            boolean onPad = false; for (int k = 1; k < 8; k += 2) if (Mech.horiz(Vec3.atCenterOf(p), Mech.polar(o, PAD_R, Math.PI / 4 * k, o.y)) < 2.6) onPad = true;   // the four diagonal beat pads stay dry
+            if (!onPad && level().getBlockState(p).isAir()) { level().setBlock(p, Blocks.LAVA.defaultBlockState(), 3); lava.add(p); }
         }
         lavaTimer = LAVA_TICKS; sound(SoundEvents.LAVA_EXTINGUISH, 1.5F, 0.5F);
     }

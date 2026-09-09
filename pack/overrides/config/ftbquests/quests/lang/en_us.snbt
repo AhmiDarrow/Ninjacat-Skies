@@ -1,37 +1,37 @@
 {
-	chapter.3100000000000001.subtitle: [
+	chapter.3100000000000001.chapter_subtitle: [
 		"Wake — survive, claim the pad, let the Codex wake."
 	]
 	chapter.3100000000000001.title: "Strand: Soil"
-	chapter.3100000000000002.subtitle: [
+	chapter.3100000000000002.chapter_subtitle: [
 		"Recover — pull the fallen world back into matter."
 	]
 	chapter.3100000000000002.title: "Strand: Stone"
-	chapter.3100000000000003.subtitle: [
+	chapter.3100000000000003.chapter_subtitle: [
 		"Root — grow anchors so the pad stops fraying."
 	]
 	chapter.3100000000000003.title: "Strand: Sprout"
-	chapter.3100000000000004.subtitle: [
+	chapter.3100000000000004.chapter_subtitle: [
 		"Edge — kit up and leave the pad on purpose."
 	]
 	chapter.3100000000000004.title: "Strand: Claw"
-	chapter.3100000000000005.subtitle: [
+	chapter.3100000000000005.chapter_subtitle: [
 		"Hum — rhythm and pulse before wires."
 	]
 	chapter.3100000000000005.title: "Strand: Spark"
-	chapter.3100000000000006.subtitle: [
+	chapter.3100000000000006.chapter_subtitle: [
 		"Pattern — a factory as a song that carries itself."
 	]
 	chapter.3100000000000006.title: "Strand: Clock"
-	chapter.3100000000000007.subtitle: [
+	chapter.3100000000000007.chapter_subtitle: [
 		"Colony — keep something alive that keeps something else alive."
 	]
 	chapter.3100000000000007.title: "Strand: Swarm"
-	chapter.3100000000000008.subtitle: [
+	chapter.3100000000000008.chapter_subtitle: [
 		"Bind — seals, rites, and two braid paths in a cord."
 	]
 	chapter.3100000000000008.title: "Strand: Sigil"
-	chapter.3100000000000009.subtitle: [
+	chapter.3100000000000009.chapter_subtitle: [
 		"Reweave — the digital loom, the March, the Fragment."
 	]
 	chapter.3100000000000009.title: "Strand: Spindle"
@@ -40,11 +40,11 @@
 	chapter.310000000000000C.title: "Mekanism Works"
 	chapter.310000000000000D.title: "Powah Grid"
 	chapter.310000000000000E.title: "Arcane Side"
-	chapter.310000000000000F.subtitle: [
+	chapter.310000000000000F.chapter_subtitle: [
 		"Teams, the Hall, the Post, and the Fray."
 	]
 	chapter.310000000000000F.title: "Clowder Hall"
-	chapter.3100000000000010.subtitle: [
+	chapter.3100000000000010.chapter_subtitle: [
 		"Spend Thread. No dependencies, no order."
 	]
 	chapter.3100000000000010.title: "Frayed Thread Desk"
@@ -56,7 +56,7 @@
 	chapter.3100000000000016.title: "Nether Foothold"
 	chapter.3100000000000017.title: "End Foothold"
 	chapter.3100000000000018.title: "Essence Fields"
-	chapter.3100000000000019.subtitle: [
+	chapter.3100000000000019.chapter_subtitle: [
 		"Every nest is a ring of something around a flower."
 	]
 	chapter.3100000000000019.title: "Swarm Apiary"
@@ -69,23 +69,23 @@
 	chapter.3100000000000020.title: "QIO and Mek Peak"
 	chapter.3100000000000021.title: "Hunt and Farm"
 	chapter.3100000000000022.title: "Tribal Weave"
-	chapter.3100000000000023.subtitle: [
+	chapter.3100000000000023.chapter_subtitle: [
 		"Grit-singers cut one stone a hundred ways."
 	]
 	chapter.3100000000000023.title: "Stonemason"
-	chapter.3100000000000024.subtitle: [
+	chapter.3100000000000024.chapter_subtitle: [
 		"A pad is a ledge until someone puts a chair on it."
 	]
 	chapter.3100000000000024.title: "Furnishings"
-	chapter.3100000000000025.subtitle: [
+	chapter.3100000000000025.chapter_subtitle: [
 		"The little machines the stewards left."
 	]
 	chapter.3100000000000025.title: "Small Stewardries"
-	chapter.3100000000000026.subtitle: [
+	chapter.3100000000000026.chapter_subtitle: [
 		"The Drumhearts' pulse learns to run in copper."
 	]
 	chapter.3100000000000026.title: "The Current"
-	chapter.3100000000000027.subtitle: [
+	chapter.3100000000000027.chapter_subtitle: [
 		"Thirteen guardians the Cut snapped. Re-tension each Strand by beating its keeper."
 	]
 	chapter.3100000000000027.title: "Snapped Guardians"
@@ -363,7 +363,7 @@
 		"Bench, sapling, hearth, water, Codex. The pad holds.",
 		"Tension the Strand: the Pad-keepers answer, and the token is yours to seat."
 	]
-	quest.4200000000010041.subtitle: "Wake"
+	quest.4200000000010041.quest_subtitle: "Wake"
 	quest.4200000000010041.title: "Soil Knot"
 	quest.4200000000010042.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -585,7 +585,7 @@
 		"Yarn, porcelain, a Loomframe working, iron in the chest.",
 		"Tension the Strand: the Grit-singers answer."
 	]
-	quest.4200000000020076.subtitle: "Recover"
+	quest.4200000000020076.quest_subtitle: "Recover"
 	quest.4200000000020076.title: "Stone Knot"
 	quest.4200000000020077.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -781,7 +781,7 @@
 		"A field, a kitchen, essence rising.",
 		"Tension the Strand: the Rootbinders answer."
 	]
-	quest.42000000000300A6.subtitle: "Root"
+	quest.42000000000300A6.quest_subtitle: "Root"
 	quest.42000000000300A6.title: "Sprout Knot"
 	quest.42000000000300A7.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -935,7 +935,7 @@
 		"Plans, iron on your back, a door out.",
 		"Tension the Strand: the Edge-walkers answer. The braid opens."
 	]
-	quest.42000000000400CB.subtitle: "Edge"
+	quest.42000000000400CB.quest_subtitle: "Edge"
 	quest.42000000000400CB.title: "Claw Knot"
 	quest.42000000000400CC.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -1157,7 +1157,7 @@
 		"A drum struck, a Pulse held, a resonator burning.",
 		"Tension the Strand: the Drumhearts answer."
 	]
-	quest.4200000000050101.subtitle: "Hum"
+	quest.4200000000050101.quest_subtitle: "Hum"
 	quest.4200000000050101.title: "Spark Knot"
 	quest.4200000000050102.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -1366,7 +1366,7 @@
 		"A wheel, a press, a mixer, a fan, a clockwork heart.",
 		"Tension the Strand: the Pattern-weavers answer."
 	]
-	quest.4200000000060134.subtitle: "Pattern"
+	quest.4200000000060134.quest_subtitle: "Pattern"
 	quest.4200000000060134.title: "Clock Knot"
 	quest.4200000000060135.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -1382,7 +1382,7 @@
 		"Place the oak nest on the pad and wait. Something with wings will come out of the wood.",
 		"Look at it. That counts."
 	]
-	quest.4200000000070137.subtitle: "Colony"
+	quest.4200000000070137.quest_subtitle: "Colony"
 	quest.4200000000070137.title: "First Wings"
 	quest.4200000000070138.quest_desc: [
 		"Eight oak logs around a small flower. Place it; the wood remembers wings.",
@@ -1509,7 +1509,7 @@
 		"A bee that did not exist before you built the nest.",
 		"Mining, mason, digger, carpenter — look at one."
 	]
-	quest.4200000000070156.subtitle: "Colony"
+	quest.4200000000070156.quest_subtitle: "Colony"
 	quest.4200000000070156.title: "Something New Hums"
 	quest.4200000000070157.quest_desc: [
 		"Sand around a flower. Ashy and chocolate miners."
@@ -1571,7 +1571,7 @@
 		"A nest you built, a hive you moved, a centrifuge, an incubator, essence fields.",
 		"Tension the Strand: the Colony-keepers answer."
 	]
-	quest.4200000000070165.subtitle: "Colony"
+	quest.4200000000070165.quest_subtitle: "Colony"
 	quest.4200000000070165.title: "Swarm Knot"
 	quest.4200000000070166.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -1759,7 +1759,7 @@
 		"A braid spun, potions bottled, spells and spirits called.",
 		"Tension the Strand: the Seal-carvers answer."
 	]
-	quest.4200000000080192.subtitle: "Bind"
+	quest.4200000000080192.quest_subtitle: "Bind"
 	quest.4200000000080192.title: "Sigil Knot"
 	quest.4200000000080193.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -1987,7 +1987,7 @@
 		"A braid, a digital loom, a gate, a stone from the March.",
 		"Tension the ninth Strand. Then the Fragment, then the Post."
 	]
-	quest.42000000000901C9.subtitle: "Reweave"
+	quest.42000000000901C9.quest_subtitle: "Reweave"
 	quest.42000000000901C9.title: "Spindle Knot"
 	quest.42000000000901CA.quest_desc: [
 		"Right-click your Clowder's Tension Post with the token.",
@@ -1998,14 +1998,14 @@
 		"Nine seated, one March stone, one right-click on the Post: the Fragment.",
 		"Seat it. The cut closes above your pad."
 	]
-	quest.42000000000901CB.subtitle: "Reweave"
+	quest.42000000000901CB.quest_subtitle: "Reweave"
 	quest.42000000000901CB.title: "Loom Fragment"
 	quest.42000000000901CC.quest_desc: [
 		"Seat the Fragment at the Tension Post.",
 		"Nine tribes, one thread. Go and see what the March kept for you.",
 		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
-	quest.42000000000901CC.subtitle: "The cut, closed"
+	quest.42000000000901CC.quest_subtitle: "The cut, closed"
 	quest.42000000000901CC.title: "Reweave"
 	quest.42000000000901CD.quest_desc: [
 		"A wither, on a pad, in the sky. The Loom-stitchers would have been impressed and then furious."

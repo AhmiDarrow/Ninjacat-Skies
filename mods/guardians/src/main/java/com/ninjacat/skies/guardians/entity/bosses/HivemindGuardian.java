@@ -36,7 +36,8 @@ public class HivemindGuardian extends GuardianEntity {
 
     @Override protected boolean mobile() { return false; }
     @Override protected String immuneMessage() { return "The royal chamber is shut. Smoke all six drone cells with lit campfires."; }
-    private Vec3 cell(int k) { Vec3 o = origin(); return Mech.polar(o, CELL_R, Math.PI / 3 * k, o.y); }
+    /** Drone cell k: arena_factory puts the six at 30° + 60°k on the wall (r 33); the plan mirrors y into -z. */
+    private Vec3 cell(int k) { Vec3 o = origin(); return Mech.polar(o, CELL_R, -(Math.PI / 3 * k + Math.PI / 6), o.y); }
     private int droneCap() { return 6 + 3 * partySize(); }
 
     @Override

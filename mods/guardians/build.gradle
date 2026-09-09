@@ -54,5 +54,20 @@ neoForge {
             systemProperty 'neoforge.enabledGameTestNamespaces', 'guardians'
             systemProperty 'guardians.arenaFallbackOverworld', 'true'
         }
+        // Headless play test (tools/guardians_showcase.py drives it under Xvfb + llvmpipe): a flat server the driver owns
+        // through RCON and a client that joins it and takes labelled screenshots.
+        showcaseServer {
+            type = 'server'
+            gameDirectory = project.file('build/showcase-server')
+            programArgument '--nogui'
+            jvmArgument '-Xmx1500m'
+        }
+        showcaseClient {
+            type = 'client'
+            gameDirectory = project.file('build/showcase-client')
+            jvmArgument '-Xmx3G'
+            systemProperty 'guardians.showcase', 'true'
+            programArguments.addAll '--username', 'GuardianQA', '--width', '1280', '--height', '720', '--quickPlayMultiplayer', '127.0.0.1:25599'
+        }
     }
 }

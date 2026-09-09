@@ -21,6 +21,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Bee;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -29,7 +30,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.server.ServerStoppedEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
@@ -66,6 +69,7 @@ final class RelicTimers {
     private static final Map<UUID, ArrayDeque<Snap>> TRAIL = new HashMap<>();
     private static final int TRAIL_TICKS = 60; // Cogloop blinks back 3 s
 
+    static final String STUN_TAG = "guardians_stun_until", BEE_EXPIRY_TAG = "guardians_bee_expiry";
     static final String WARD_KEY = "ward_until";
     static final String REWEAVE_GUARD_KEY = "reweave_guard_until";
 
@@ -82,6 +86,7 @@ final class RelicTimers {
         if (!m.isNoAi()) m.setNoAi(true);
         else if (!STUNNED.containsKey(m)) return; // was NoAI before us: leave it alone
         STUNNED.merge(m, until, Math::max);
+        m.getPersistentData().putLong(STUN_TAG, STUNNED.get(m));                     // survives unload/restart: restored in onJoin
     }
 
     static void timedModifier(LivingEntity e, Holder<Attribute> attr, ResourceLocation id, double amount, AttributeModifier.Operation op, int ticks) {
@@ -97,9 +102,9 @@ final class RelicTimers {
         MODS.remove(new Mod(e, attr, id));
     }
 
-    /** Places a thorn hedge (sweet berry bush, age 3) that is removed after {@code ticks}. */
+    /** Places a thorn hedge (sweet berry bush, age 1) that is removed after {@code ticks}. */
     static void hedge(ServerLevel level, BlockPos pos, int ticks) {
-        level.setBlock(pos, Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3), 3);
+        level.setBlock(pos, Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 1), 3);   // age 1: thorns, no berries to pick
         HEDGES.put(new Hedge(level, pos.immutable()), now + ticks);
     }
 
@@ -117,7 +122,19 @@ final class RelicTimers {
         }
     }
 
-    static void bee(Bee b, UUID owner, int ticks) { BEES.put(b, new BeeInfo(owner, now + ticks)); }
+    static void bee(Bee b, UUID owner, int ticks) { BEES.put(b, new BeeInfo(owner, now + ticks)); b.getPersistentData().putLong(BEE_EXPIRY_TAG, now + ticks); }
+
+    /** A relic bee or a stunned mob that comes back from disk (chunk reload, restart) is settled here rather than left as it was saved. */
+    @SubscribeEvent
+    static void onJoin(EntityJoinLevelEvent e) {
+        if (e.getLevel().isClientSide) return;
+        if (e.getEntity() instanceof Bee b && b.getTags().contains(RelicUtil.BEE_TAG) && !BEES.containsKey(b)) { b.discard(); e.setCanceled(true); return; }
+        if (e.getEntity() instanceof Mob m && m.getPersistentData().contains(STUN_TAG) && !STUNNED.containsKey(m)) { m.setNoAi(false); m.getPersistentData().remove(STUN_TAG); }
+    }
+
+    /** A closed world takes its relic state with it (single-player exits, /stop): nothing from it may fire into the next one. */
+    @SubscribeEvent
+    static void onServerStopped(ServerStoppedEvent e) { TASKS.clear(); STUNNED.clear(); MODS.clear(); HEDGES.clear(); BEES.clear(); TRAIL.clear(); if (RelicUtil.EXDEORUM) com.ninjacat.skies.guardians.relic.compat.SieveCompat.clearAll(); }
 
     static List<Bee> beesOf(ServerPlayer owner) {
         List<Bee> out = new ArrayList<>();
@@ -154,7 +171,7 @@ final class RelicTimers {
     @SubscribeEvent
     static void onTick(ServerTickEvent.Post e) {
         MinecraftServer server = e.getServer();
-        now = server.getTickCount();
+        now = RelicUtil.now(server);
 
         if (!TASKS.isEmpty()) {
             List<Task> due = new ArrayList<>();
@@ -165,7 +182,7 @@ final class RelicTimers {
             Mob m = en.getKey();
             if (!m.isAlive()) return true;
             if (en.getValue() > now) return false;
-            m.setNoAi(false); return true;
+            m.setNoAi(false); m.getPersistentData().remove(STUN_TAG); return true;
         });
         MODS.entrySet().removeIf(en -> {
             if (en.getValue() > now && en.getKey().entity.isAlive()) return false;
@@ -176,6 +193,7 @@ final class RelicTimers {
         HEDGES.entrySet().removeIf(en -> { if (en.getValue() > now) return false; unhedge(en.getKey()); return true; });
         BEES.entrySet().removeIf(en -> {
             Bee b = en.getKey();
+            if (b.isRemoved() && b.getRemovalReason() != null && !b.getRemovalReason().shouldDestroy()) return true;   // unloaded with its chunk: discarded again on reload (onJoin)
             if (b.isRemoved() || !b.isAlive() || en.getValue().expiry <= now) { popBee(b); return true; }
             return false;
         });
@@ -187,6 +205,7 @@ final class RelicTimers {
     static void onIncoming(LivingIncomingDamageEvent e) {
         // Relic bee stings: Poison I for 2 s on whatever they sting.
         if (e.getSource().getEntity() instanceof Bee b && b.getTags().contains(RelicUtil.BEE_TAG)) {
+            if (e.getEntity() instanceof Player) { e.setCanceled(true); return; }               // relic bees never sting people
             RelicUtil.effect(e.getEntity(), MobEffects.POISON, 40, 0);
         }
         if (!(e.getEntity() instanceof ServerPlayer p)) return;

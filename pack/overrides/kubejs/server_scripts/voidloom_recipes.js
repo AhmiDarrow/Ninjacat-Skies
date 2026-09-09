@@ -151,13 +151,13 @@ ServerEvents.recipes(event => {
   }
   let changed = 0
   for (const type of ['exdeorum:sieve', 'exdeorum:compressed_sieve']) {
-    event.forEachRecipe({ type }, r => {
+    event.forEachRecipe({ type: type }, r => {   // Rhino has no ES6 shorthand properties: `{ type }` is a syntax error that kills this whole script
       try {
-        const mesh = r.json.get('mesh')
+        let mesh = r.json.get('mesh')   // let, not const: Rhino re-runs a try block's const as a redeclaration on the second recipe
         if (!mesh || !mesh.isJsonObject() || !mesh.getAsJsonObject().has('item')) return
-        const tag = meshTags[String(mesh.getAsJsonObject().get('item').getAsString())]
+        let tag = meshTags[String(mesh.getAsJsonObject().get('item').getAsString())]
         if (!tag) return
-        r.merge({ mesh: { tag } })
+        r.merge({ mesh: { tag: tag } })
         changed++
       } catch (err) {
         console.warn('[Ninjacat Skies] mesh alias skipped for ' + r.getId() + ': ' + err)

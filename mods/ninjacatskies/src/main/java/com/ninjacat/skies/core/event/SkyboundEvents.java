@@ -124,7 +124,11 @@ public final class SkyboundEvents {
     }
 
     private static void enforceLives(ServerPlayer player) {
-        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return;
+        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) {
+            // lives switched off: nobody stays a spectator for a pool that no longer counts
+            if (player.getPersistentData().getBoolean(EXHAUSTED)) { player.getPersistentData().remove(EXHAUSTED); if (player.isSpectator()) { seatAtRespawnOrDock(player); player.setGameMode(GameType.SURVIVAL); } }
+            return;
+        }
         int lives = remainingLives(player);
         if (lives == 0 && !player.isCreative()) {
             if (!player.isSpectator()) {

@@ -94,8 +94,14 @@ public final class FtbParties {
                 ServerPlayer online = server.getPlayerList().getPlayer(player);
                 if (online != null) {
                     pt.kickPlayerForcibly(online);            // handles the owner case (transfers ownership / disbands)
-                } else {
+                } else if (pt.getMembers().size() <= 1 || !pt.isOwner(player)) {
                     pt.leave(player);
+                } else {
+                    // an offline owner cannot leave a party that still has members: hand it to someone else, then kick
+                    var src = server.createCommandSourceStack();
+                    UUID heir = pt.getMembers().stream().filter(m -> !m.equals(player)).findFirst().orElse(null);
+                    if (heir != null) pt.transferOwnership(src, new com.mojang.authlib.GameProfile(heir, ""));
+                    pt.kick(src, java.util.List.of(new com.mojang.authlib.GameProfile(player, "")));
                 }
             }
         } catch (Throwable t) {
@@ -112,8 +118,8 @@ public final class FtbParties {
     }
 
     private static Team createParty(ServerPlayer anchor, String displayName) throws Exception {
-        String shortName = sanitize(displayName);
-        return FTBTeamsAPI.api().getManager().createPartyTeam(anchor, shortName, displayName, PARTY_COLOR);
+        // createPartyTeam(owner, name, description, colour): the second argument is the party's display name
+        return FTBTeamsAPI.api().getManager().createPartyTeam(anchor, displayName, null, PARTY_COLOR);
     }
 
     private static Team findMirror(TeamManager manager, UUID skyTeamId) {
@@ -152,17 +158,4 @@ public final class FtbParties {
         return null;
     }
 
-    private static String sanitize(String name) {
-        StringBuilder sb = new StringBuilder();
-        for (char c : name.toLowerCase().toCharArray()) {
-            if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '_') {
-                sb.append(c);
-            } else if (c == ' ' || c == '-') {
-                sb.append('_');
-            }
-            if (sb.length() >= 24) break;
-        }
-        String s = sb.toString();
-        return s.isEmpty() ? "clowder" : s;
-    }
 }

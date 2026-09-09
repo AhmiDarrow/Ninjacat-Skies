@@ -156,7 +156,7 @@ def to_snbt(obj, indent=0) -> str:
 def write_chapter(filename: str, chapter_id: str, group: str, order: int, icon: str, quests: list[dict], title: str) -> None:
     lang[f"chapter.{chapter_id}.title"] = title
     if order + 1 in CHAPTER_SUBTITLES:
-        lang[f"chapter.{chapter_id}.subtitle"] = CHAPTER_SUBTITLES[order + 1]
+        lang[f"chapter.{chapter_id}.chapter_subtitle"] = CHAPTER_SUBTITLES[order + 1]   # FTB Quests TranslationKey.CHAPTER_SUBTITLE
     quests = list(quests) + secret_quest(order + 1, -3.0, -2.0)
     quests = finalize_chapter(order + 1, quests)
     body = {
@@ -482,7 +482,7 @@ def task_quest(strand_i, *, title, desc, task, rewards, deps=None, x=0.0, y=0.0,
     lang[f"quest.{q}.title"] = title
     lang[f"quest.{q}.quest_desc"] = desc
     if subtitle:
-        lang[f"quest.{q}.subtitle"] = subtitle
+        lang[f"quest.{q}.quest_subtitle"] = subtitle   # FTB Quests TranslationKey.QUEST_SUBTITLE
     task = dict(task)
     task["id"] = t
     rw = []

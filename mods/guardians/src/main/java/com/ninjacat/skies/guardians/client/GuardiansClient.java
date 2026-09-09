@@ -16,6 +16,7 @@ public final class GuardiansClient {
     public GuardiansClient(IEventBus modBus) {
         modBus.addListener(this::onRenderers);
         modBus.addListener(this::onReload);
+        if (GuardianShowcase.enabled()) net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(GuardianShowcase::onGui);
     }
 
     private void onRenderers(EntityRenderersEvent.RegisterRenderers e) {
