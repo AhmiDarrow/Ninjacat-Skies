@@ -3,7 +3,9 @@ import hashlib
 import re
 
 # These are original companion mods maintained in this repository, not CF-hosted dependencies.
-OWN_JAR = re.compile(r"(?:ninjacatskies|ninjacatlib|clowderhall|voidloom|guardians)-[0-9][A-Za-z0-9.+_-]*\.jar")
+# Tribal Power is Ahmi's own mod (CurseForge project 1684851); it is bundled directly while a release of it is still in
+# CurseForge review — once the file is listed, drop it from this pattern and reference it in pack/modlist-resolved.json.
+OWN_JAR = re.compile(r"(?:ninjacatskies|ninjacatlib|clowderhall|voidloom|guardians|tribalpower)-[0-9][A-Za-z0-9.+_-]*\.jar")
 
 
 def is_owned_jar(name):

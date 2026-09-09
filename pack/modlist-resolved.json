@@ -590,16 +590,6 @@
     "sha1": "1377fec77ba0cb3e4adda0da9ce2f14847e21e40"
   },
   {
-    "key": "Tribal Power",
-    "name": "TribalPower",
-    "slug": "tribalpower",
-    "projectId": 1684851,
-    "fileId": 0,
-    "filename": "tribalpower-3.0.0.jar",
-    "releaseType": 3,
-    "sha1": "40af8d7336b0a7c3464a732f84a6b1f3a0d2d17a"
-  },
-  {
     "key": "Applied Energistics 2 Wireless Terminals",
     "name": "Applied Energistics 2 Wireless Terminals",
     "slug": "applied-energistics-2-wireless-terminals",

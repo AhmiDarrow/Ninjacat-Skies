@@ -77,6 +77,7 @@ def main() -> int:
     ap.add_argument("--changelog-file", default="")
     ap.add_argument("--skip-sanitize", action="store_true")
     ap.add_argument("--environment", choices=["Client", "Server"], action="append", default=[], help="Required environment labels for standalone mods; omit for modpacks")
+    ap.add_argument("--parent-file-id", type=int, default=0, help="Upload as an additional file of this CurseForge file (the dedicated-server pack rides on the client zip)")
     args = ap.parse_args()
 
     if not args.skip_sanitize:
@@ -99,8 +100,8 @@ def main() -> int:
     if not zip_path.exists():
         raise SystemExit(f"Zip not found: {zip_path}")
     if zip_path.suffix.lower() == ".zip":
-        from gates.test_export_archive import verify
-        verify(zip_path)
+        from gates.test_export_archive import verify, verify_server
+        (verify_server if "-Server-" in zip_path.name else verify)(zip_path)
     display = args.display_name or zip_path.stem
     changelog = Path(args.changelog_file).read_text(encoding="utf-8") if args.changelog_file else f"## {display}\n\nNinjacat Skies alpha.\n"
 
@@ -113,6 +114,7 @@ def main() -> int:
         "displayName": display,
         "gameVersions": game_versions,
         "releaseType": args.release_type,
+        **({"parentFileID": args.parent_file_id} if args.parent_file_id else {}),
     })
     print(f"Uploading {zip_path.name} ({zip_path.stat().st_size // 1024} KiB) -> project {project_id} as {args.release_type}; gameVersions={game_versions}")
     body, boundary = multipart({
