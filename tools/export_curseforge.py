@@ -68,7 +68,7 @@ def main() -> int:
     ov_mods = stage / "overrides/mods"
     ov_mods.mkdir(parents=True, exist_ok=True)
 
-    # Only our four unhosted companion mods may be redistributed as override jars.
+    # Only our five unhosted companion mods may be redistributed as override jars.
     bundled = []
     for jar in jars:
         if is_owned_jar(jar.name):

@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "guardians:frayed_totem_beddown",
+    "guardians:frayed_totem_grindmaw",
+    "guardians:frayed_totem_thornmother",
+    "guardians:frayed_totem_edgewalker",
+    "guardians:frayed_totem_drumheart",
+    "guardians:frayed_totem_cogwright",
+    "guardians:frayed_totem_hivemind",
+    "guardians:frayed_totem_sealbreaker",
+    "guardians:frayed_totem_unwoven",
+    "guardians:frayed_totem_lintgolem",
+    "guardians:frayed_totem_tangle",
+    "guardians:frayed_totem_firstcut",
+    "guardians:frayed_totem_overweaver"
+  ]
+}

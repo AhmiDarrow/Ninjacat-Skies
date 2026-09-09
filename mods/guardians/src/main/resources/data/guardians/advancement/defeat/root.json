@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "id": "guardians:frayed_totem_beddown"
+    },
+    "title": "Snapped Guardians",
+    "description": "Thirteen guardians were Snapped by the Cut. Call them with a Frayed Totem and re-tension the Strands.",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/deepslate.png"
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

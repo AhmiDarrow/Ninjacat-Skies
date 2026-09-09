@@ -36,8 +36,16 @@ PAL = dict(
 GLOWS = dict(lava=((1.0, 0.40, 0.05), 3.2), honey=((1.0, 0.62, 0.10), 2.2), teal=(TEAL, 1.6), gold=(GOLD, 1.6), seam=(GOLD, 3.0), void=(TEAL, 1.0),
              amber=((1.0, 0.72, 0.28), 1.4), violet=((0.6, 0.35, 0.95), 1.4), white=((0.9, 0.95, 1.0), 1.2), ember=((1.0, 0.55, 0.15), 2.0), soul=((0.3, 0.9, 0.9), 1.6))
 
+CUR = None
+def Vx():
+    """new voxel canvas; also the export target for curves/threads and the pad/totem/gate metadata"""
+    global CUR; CUR = Voxels(); CUR.meta = dict(pads=[], totem=None, gate=None); return CUR
+
+# curve/thread materials that should become blocks in the exported arena data
+MATKEY = {'rootwood': 'log', 'vine': 'leaves', 'totemthread': None, 'gateglow': None, 'warp': 'teal', 'sagthread': 'teal', 'skyseam': 'gold', 'pipe': 'copper'}
+
 def palette(V, *keys):
-    keys = tuple(dict.fromkeys(keys + ('deepslate', 'blackstone', 'gold', 'teal')))   # totem/gate/spawn pads always need these
+    keys = tuple(dict.fromkeys(keys + ('deepslate', 'blackstone', 'gold', 'teal', 'log', 'leaves', 'copper')))   # totem/gate/spawn pads always need these
     for k in keys:
         if k in PAL: rgb, rough = PAL[k]; V.mat(k, blk(k, rgb, rough=rough, sheen=0.3 if k in ('wool', 'hedge', 'leaves') else 0.0))
         else: rgb, s = GLOWS[k]; V.mat(k, glow(k, rgb, s))
@@ -46,6 +54,23 @@ def palette(V, *keys):
 def cube(center, size, mat, rot=(0, 0, 0)):
     o = L.cube(center, (size[0]*2, size[1]*2, size[2]*2), rot=rot); o.data.materials.append(mat); return o
 def curve(pts, radius, mat, kind='NURBS'):
+    if CUR is not None:                                                   # voxelize for the exported block plan
+        key = MATKEY.get(mat.name.split('.')[0], None)
+        if key is None:
+            for k in ('cathedral', 'strandcol'):
+                if mat.name.startswith(k): key = 'gold' if 'gold' in mat.name.lower() else 'teal'
+        if key and key in CUR.mats:
+            P = [Vector(p) for p in pts]
+            if kind == 'NURBS' and len(P) >= 3:                           # sample the smooth curve as a quadratic bezier-ish through the points
+                Q = []
+                for i in range(40):
+                    t = i/39; a = P[0]*(1-t)**2 + P[1]*2*t*(1-t) + P[2]*t*t if len(P) == 3 else P[min(len(P)-1, int(t*(len(P)-1)))]
+                    Q.append(a)
+                P = Q
+            for a, b in zip(P, P[1:]):
+                n = int((b-a).length)+1
+                for i in range(n+1):
+                    q = a + (b-a)*(i/n); CUR.set(q.x, q.y, q.z, key)
     cu = bpy.data.curves.new('c', 'CURVE'); cu.dimensions = '3D'; cu.bevel_depth = radius; cu.bevel_resolution = 4; cu.use_fill_caps = True
     sp = cu.splines.new(kind); sp.points.add(len(pts)-1)
     for i, p in enumerate(pts): sp.points[i].co = (*p, 1)
@@ -54,14 +79,16 @@ def thread(a, b, mat, r=0.08): return curve([a, b], r, mat, 'POLY')
 
 def players(V, spots, z=0):
     for (x, y) in spots:
-        V.disc(x, y, 1.5, z-1, z, 'teal'); BF.player_figure((x+0.5, y+0.5, z))
+        V.disc(x, y, 1.5, z-1, z, 'teal'); BF.player_figure((x+0.5, y+0.5, z)); V.meta['pads'].append((x, y, z))
 
 def totem(V, x, y, z=0):
+    V.meta['totem'] = (x, y, z)
     V.column(x, y, z, z+1, 'deepslate'); V.set(x, y, z+1, 'gold')
     thread((x+0.5, y+0.5, z+2), (x+0.5, y+0.5, z+7), glow("totemthread", TEAL, 2.0), 0.06)
 
 def gate(V, x, y, z=0, axis='x', h=5, w=4):
     """the return gate: two pillars + lintel, a teal sheet between"""
+    V.meta['gate'] = (x, y, z, axis, h, w)
     for s in (-w//2, w//2):
         if axis == 'x': V.column(x+s, y, z, z+h, 'blackstone')
         else: V.column(x, y+s, z, z+h, 'blackstone')
@@ -93,7 +120,7 @@ def rocks(V, key, n, rmin, rmax, seed, z=0, smin=1, smax=3):
 # ---------------------------------------------------------------- the 13 arenas
 def beddown():
     """THE BURROW BOWL — a sunken earthen bowl; the boss buries the pit in soil layers you dig channels through."""
-    V = Voxels(); palette(V, 'dirt', 'rooted', 'mud', 'moss', 'grass', 'log', 'teal', 'gold'); rnd = random.Random(3)
+    V = Vx(); palette(V, 'dirt', 'rooted', 'mud', 'moss', 'grass', 'log', 'teal', 'gold'); rnd = random.Random(3)
     V.disc(0, 0, 11, -2, 0, 'mud', jitter=1.0, rnd=rnd)                                     # pit floor
     for (ri, ro, z, key) in ((10, 16, 2, 'rooted'), (15, 22, 4, 'dirt'), (21, 27, 6, 'moss'), (26, 31, 8, 'grass')):
         V.disc(0, 0, ro, -2, z-1, 'dirt', rin=ri, jitter=1.2, rnd=rnd); V.disc(0, 0, ro, z-1, z, key, rin=ri, jitter=1.2, rnd=random.Random(rnd.random()))   # four stepped tiers
@@ -117,7 +144,7 @@ def beddown():
 
 def grindmaw():
     """THE MILLPIT — a stone quarry: a rotating grindstone ring in the floor, four sieve chutes pouring grit into the pit."""
-    V = Voxels(); palette(V, 'stone', 'cobble', 'deepslate', 'gravel', 'brass', 'iron', 'teal', 'gold', 'tuff'); rnd = random.Random(5)
+    V = Vx(); palette(V, 'stone', 'cobble', 'deepslate', 'gravel', 'brass', 'iron', 'teal', 'gold', 'tuff'); rnd = random.Random(5)
     V.disc(0, 0, 32, -4, 0, 'deepslate', jitter=1.0, rnd=rnd); V.disc(0, 0, 26, -8, -4, 'stone', jitter=2, rnd=rnd)
     V.disc(0, 0, 32, 0, 5, 'stone', rin=29, jitter=0.8, rnd=rnd); V.disc(0, 0, 33, 5, 7, 'cobble', rin=28)      # quarry wall + rim
     V.disc(0, 0, 21, 0, 1, 'stone', rin=14)                                                                       # the grindstone ring (rotates)
@@ -139,7 +166,7 @@ def grindmaw():
 
 def thornmother():
     """THE OVERGROWTH TERRACE — stepped garden terraces; growth spreads each phase, four composter stations must be kept clear."""
-    V = Voxels(); palette(V, 'grass', 'dirt', 'hedge', 'leaves', 'log', 'planks', 'cobble', 'moss', 'teal', 'gold'); rnd = random.Random(7)
+    V = Vx(); palette(V, 'grass', 'dirt', 'hedge', 'leaves', 'log', 'planks', 'cobble', 'moss', 'teal', 'gold'); rnd = random.Random(7)
     for i, (r, z) in enumerate(((36, 0), (28, 3), (20, 6), (12, 9))):
         V.disc(0, 0, r, z-3, z, 'dirt', jitter=1.0, rnd=rnd); V.disc(0, 0, r, z-1, z, 'grass' if i % 2 == 0 else 'moss', jitter=1.0, rnd=rnd)
         if i: V.disc(0, 0, r+1, z-3, z, 'cobble', rin=r, jitter=0)                                               # retaining walls
@@ -167,7 +194,7 @@ def thornmother():
 
 def edgewalker():
     """THE SKY SHARDS — deepslate shards floating over the void, no rails, crumbling bridges; a vertical duel."""
-    V = Voxels(); palette(V, 'deepslate', 'blackstone', 'tuff', 'cobble', 'teal', 'gold'); rnd = random.Random(11)
+    V = Vx(); palette(V, 'deepslate', 'blackstone', 'tuff', 'cobble', 'teal', 'gold'); rnd = random.Random(11)
     plats = [((0, 0), 0, 19), ((27, 7), 6, 8), ((-25, 11), 9, 7), ((9, -29), 4, 8), ((-15, -23), 12, 6), ((31, -17), 14, 5), ((-31, -6), 3, 6), ((3, 31), 11, 7), ((-9, 37), 18, 5), ((25, 29), 16, 5)]
     for (x, y), z, r in plats:
         V.disc(x, y, r, z-2, z, 'deepslate', jitter=1.5, rnd=rnd); V.disc(x, y, r-2, z-5, z-2, 'blackstone', jitter=1.5, rnd=rnd)
@@ -192,7 +219,7 @@ def edgewalker():
 
 def drumheart():
     """THE FORGE DRUM — a brass platform over lava; eight piston hammers pulse on the beat and the lava channels rise with it."""
-    V = Voxels(); palette(V, 'brass', 'copper', 'oxcopper', 'iron', 'basalt', 'blackstone', 'lava', 'amber', 'teal', 'gold'); rnd = random.Random(13)
+    V = Vx(); palette(V, 'brass', 'copper', 'oxcopper', 'iron', 'basalt', 'blackstone', 'lava', 'amber', 'teal', 'gold'); rnd = random.Random(13)
     V.disc(0, 0, 38, -5, -3, 'lava'); V.disc(0, 0, 40, -10, -5, 'basalt', jitter=2, rnd=rnd)                    # the lava pool in its crater
     V.disc(0, 0, 40, -5, 1, 'basalt', rin=37, jitter=1.0, rnd=rnd); V.disc(0, 0, 41, 1, 2, 'blackstone', rin=36)
     V.disc(0, 0, 23, -2, 0, 'brass'); V.disc(0, 0, 23, 0, 1, 'copper', rin=22)                                   # the drum platform + rim
@@ -217,7 +244,7 @@ def drumheart():
 
 def cogwright():
     """THE ESCAPEMENT — a clockwork floor of concentric rotating rings; tiles light in the sequence you must remember."""
-    V = Voxels(); palette(V, 'brass', 'iron', 'copper', 'darkoak', 'blackstone', 'gold', 'teal', 'white'); rnd = random.Random(17)
+    V = Vx(); palette(V, 'brass', 'iron', 'copper', 'darkoak', 'blackstone', 'gold', 'teal', 'white'); rnd = random.Random(17)
     V.disc(0, 0, 35, -4, -1, 'blackstone', jitter=1.0, rnd=rnd)
     for i, (ri, ro) in enumerate(((4, 10), (11, 17), (18, 24), (25, 31))):                                       # four rotating rings
         V.disc(0, 0, ro, -1, 0, 'brass' if i % 2 else 'copper', rin=ri)
@@ -243,7 +270,7 @@ def cogwright():
 
 def hivemind():
     """THE COMB — a honeycomb arena; cells rise and fall, honey pools slow you, six drone cells open in the wall."""
-    V = Voxels(); palette(V, 'wax', 'comb', 'darkwax', 'honey', 'amber', 'teal', 'gold', 'oak'); rnd = random.Random(19)
+    V = Vx(); palette(V, 'wax', 'comb', 'darkwax', 'honey', 'amber', 'teal', 'gold', 'oak'); rnd = random.Random(19)
     V.disc(0, 0, 34, -4, -1, 'darkwax', jitter=1.0, rnd=rnd)
     V.hexagon(0, 0, 36, -1, 4, 'darkwax')                                                                          # hexagonal outer wall...
     for x in range(-40, 41):
@@ -272,7 +299,7 @@ def hivemind():
 
 def sealbreaker():
     """THE WARD CIRCLE — a stone sanctum; nine glyph pillars must be dispelled in the right order, wrong ones punish."""
-    V = Voxels(); palette(V, 'stone', 'deepslate', 'blackstone', 'gold', 'amethyst', 'teal', 'violet', 'soul', 'purpur'); rnd = random.Random(23)
+    V = Vx(); palette(V, 'stone', 'deepslate', 'blackstone', 'gold', 'amethyst', 'teal', 'violet', 'soul', 'purpur'); rnd = random.Random(23)
     V.disc(0, 0, 33, -3, 0, 'stone'); V.disc(0, 0, 28, -7, -3, 'deepslate', jitter=2, rnd=rnd)
     for r in (8, 16, 24): V.disc(0, 0, r+0.6, -1, 0, 'gold', rin=r-0.6)                                          # inlaid circles
     for k in range(9):
@@ -294,7 +321,7 @@ def sealbreaker():
 
 def unwoven():
     """THE COLLAPSING LOOM — the floor is the warp: plank strips strung across a giant loom frame that unravel each phase."""
-    V = Voxels(); palette(V, 'darkoak', 'planks', 'spruce', 'iron', 'teal', 'gold', 'purpur'); rnd = random.Random(29)
+    V = Vx(); palette(V, 'darkoak', 'planks', 'spruce', 'iron', 'teal', 'gold', 'purpur'); rnd = random.Random(29)
     for sx in (-1, 1): V.box(sx*33-2, -2, -4, sx*33+2, 2, 28, 'darkoak'); V.box(sx*33-3, -3, 28, sx*33+3, 3, 30, 'spruce')   # uprights
     V.box(-33, -1, 28, 33, 1, 30, 'darkoak'); V.box(-33, -2, -4, 33, 2, -1, 'darkoak')                                       # beams
     V.box(-36, -24, -4, 36, 24, -3, 'spruce'); V.box(-36, -24, -6, 36, 24, -4, 'darkoak')                                    # the loom bed under the warp
@@ -315,7 +342,7 @@ def unwoven():
 
 def lintgolem():
     """THE DOCK DUSTBIN — a tiny laundry yard right on the Dock: washing lines, baskets, a rug to beat. Zero risk."""
-    V = Voxels(); palette(V, 'planks', 'oak', 'wool', 'rope', 'redwool', 'teal', 'gold', 'darkoak'); rnd = random.Random(31)
+    V = Vx(); palette(V, 'planks', 'oak', 'wool', 'rope', 'redwool', 'teal', 'gold', 'darkoak'); rnd = random.Random(31)
     V.box(-15, -15, -2, 15, 15, 0, 'planks'); V.box(-16, -16, -4, 16, 16, -2, 'darkoak')
     for sx in (-1, 1): V.column(sx*12, 0, 0, 7, 'oak')
     thread((-12.5, 0.5, 6.5), (12.5, 0.5, 6.5), V.mats['rope'], 0.08)
@@ -334,7 +361,7 @@ def lintgolem():
 
 def tangle():
     """THE KNOTGARDEN — a hedge maze of rope and vine knots; the boss strings paths shut behind you."""
-    V = Voxels(); palette(V, 'grass', 'dirt', 'hedge', 'leaves', 'rope', 'cobble', 'teal', 'gold', 'log'); rnd = random.Random(37)
+    V = Vx(); palette(V, 'grass', 'dirt', 'hedge', 'leaves', 'rope', 'cobble', 'teal', 'gold', 'log'); rnd = random.Random(37)
     V.disc(0, 0, 31, -3, 0, 'dirt', jitter=1.0, rnd=rnd); V.disc(0, 0, 31, -1, 0, 'grass', jitter=1.0, rnd=rnd); V.disc(0, 0, 24, -7, -3, 'dirt', jitter=2, rnd=rnd)
     for r in (10, 16, 22, 28):
         n = int(r*1.2); gaps = set(rnd.sample(range(n), 3))
@@ -357,7 +384,7 @@ def tangle():
 
 def firstcut():
     """THE SEVERANCE — reality torn open: shards of islands floating in black void around the golden seam of the Cut; 150 blocks across."""
-    V = Voxels(); palette(V, 'obsidian', 'endstone', 'deepslate', 'blackstone', 'purpur', 'seam', 'void', 'teal', 'gold', 'grass', 'dirt'); rnd = random.Random(41)
+    V = Vx(); palette(V, 'obsidian', 'endstone', 'deepslate', 'blackstone', 'purpur', 'seam', 'void', 'teal', 'gold', 'grass', 'dirt'); rnd = random.Random(41)
     V.disc(0, 0, 42, -3, 0, 'obsidian', jitter=2.0, rnd=rnd); V.disc(0, 0, 36, -10, -3, 'blackstone', jitter=3, rnd=rnd)
     px, py = -75, -14                                                                                                # the Cut: a jagged seam across the floor and up into the sky
     for k in range(16):
@@ -378,7 +405,7 @@ def firstcut():
 
 def overweaver():
     """THE LOOM ABOVE — the restored Loom as a cathedral of thread: nine strand-bridges converge on the central weave where the boss IS the loom."""
-    V = Voxels(); palette(V, 'darkoak', 'planks', 'spruce', 'purpur', 'amethyst', 'gold', 'teal', 'oak'); rnd = random.Random(43)
+    V = Vx(); palette(V, 'darkoak', 'planks', 'spruce', 'purpur', 'amethyst', 'gold', 'teal', 'oak'); rnd = random.Random(43)
     V.disc(0, 0, 36, -3, 0, 'purpur', jitter=0.8, rnd=rnd); V.disc(0, 0, 30, -8, -3, 'darkoak', jitter=2, rnd=rnd); V.disc(0, 0, 31, -1, 0, 'gold', rin=29.5)
     cols = [(0.5, 0.35, 0.2), TEAL, (0.3, 0.7, 0.3), GOLD, (1.0, 0.5, 0.15), (0.9, 0.75, 0.3), (1.0, 0.7, 0.2), (0.6, 0.45, 0.9), TEAL]
     for k in range(9):
@@ -411,8 +438,28 @@ def render(name, samples=48):
     sc = bpy.context.scene; sc.cycles.samples = samples; sc.render.resolution_x = 1280; sc.render.resolution_y = 760; sc.render.resolution_percentage = 100
     sc.render.filepath = f'{OUT}/{name}_arena.png'; bpy.ops.render.render(write_still=True); print("ARENA", name, "DONE")
 
+import struct
+def export(name, outdir):
+    """block plan for the Java arena builder: .ncga = magic, keys, blocks (mc coords: x, y=z_up, z=-y), pads/totem/gate"""
+    L.reset(); ARENAS[name](); V = CUR
+    os.makedirs(outdir, exist_ok=True); keys = sorted(set(V.b.values())); ki = {k: i for i, k in enumerate(keys)}
+    with open(os.path.join(outdir, f'{name}.ncga'), 'wb') as fh:
+        fh.write(b'NCGA'); fh.write(struct.pack('<IH', 1, len(keys)))
+        for k in keys: kb = k.encode(); fh.write(struct.pack('<H', len(kb))); fh.write(kb)
+        fh.write(struct.pack('<I', len(V.b)))
+        for (x, y, z), k in sorted(V.b.items()): fh.write(struct.pack('<3hB', x, z, -y, ki[k]))
+        pads = V.meta['pads']; fh.write(struct.pack('<B', len(pads)))
+        for (x, y, z) in pads: fh.write(struct.pack('<3h', int(x), int(z), int(-y)))
+        tx, ty, tz = V.meta['totem'] or (0, 0, 0); fh.write(struct.pack('<3h', int(tx), int(tz), int(-ty)))
+        gx, gy, gz, axis, h, w = V.meta['gate'] or (0, 0, 0, 'x', 5, 4); fh.write(struct.pack('<3hBBB', int(gx), int(gz), int(-gy), 1 if axis == 'x' else 0, h, w))
+        r = max(max(abs(x), abs(y)) for (x, y, z) in V.b); fh.write(struct.pack('<h', r))
+    print('ARENA DATA', name, len(V.b), 'blocks', len(keys), 'keys', 'r', r)
+
 if __name__ == '__main__':
     argv = sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else ['all']
     which = list(ARENAS) if argv[0] == 'all' else argv[0].split(',')
-    samples = int(argv[1]) if len(argv) > 1 else 48
-    for n in which: render(n, samples)
+    if len(argv) > 1 and argv[1] == 'export':
+        for n in which: export(n, argv[2] if len(argv) > 2 else os.path.join(ART, 'export', 'arenas'))
+    else:
+        samples = int(argv[1]) if len(argv) > 1 else 48
+        for n in which: render(n, samples)

@@ -1,0 +1,41 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.146'
+    id 'idea'
+}
+
+ext {
+    mod_id = 'guardians'
+    mod_name = 'Snapped Guardians'
+    mod_description = 'The thirteen Snapped Guardians of Ninjacat Skies: totem-summoned boss arenas, custom-rendered bosses and the Woven Relics.'
+}
+apply from: rootProject.file('neoforge-mod.gradle')
+
+dependencies {
+    implementation project(':ninjacat-lib')
+    implementation project(':ninjacatskies')
+    implementation project(':clowderhall')
+    localRuntime project(':voidloom')
+    compileOnly fileTree(dir: rootProject.file('../pack/mods'), include: [
+            'curios-neoforge-*.jar', 'ftb-teams-neoforge-*.jar', 'ftb-library-neoforge-*.jar', 'architectury-*.jar',
+    ])
+}
+
+evaluationDependsOn(':ninjacat-lib'); evaluationDependsOn(':ninjacatskies'); evaluationDependsOn(':clowderhall'); evaluationDependsOn(':voidloom')
+neoForge {
+    mods {
+        ninjacatlib { sourceSet(project(':ninjacat-lib').sourceSets.main) }
+        ninjacatskies { sourceSet(project(':ninjacatskies').sourceSets.main) }
+        clowderhall { sourceSet(project(':clowderhall').sourceSets.main) }
+        voidloom { sourceSet(project(':voidloom').sourceSets.main) }
+    }
+    runs {
+        verification {
+            type = 'gameTestServer'
+            gameDirectory = project.file('build/verification')
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'guardians'
+            systemProperty 'guardians.arenaFallbackOverworld', 'true'
+        }
+    }
+}

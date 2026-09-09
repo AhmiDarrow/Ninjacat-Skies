@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "id": "guardians:relic_lintwisp"
+    },
+    "title": "The Lint Golem answers for the Cut",
+    "description": "Defeat the Lint Golem in its arena.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "guardians:defeat/root"
+}

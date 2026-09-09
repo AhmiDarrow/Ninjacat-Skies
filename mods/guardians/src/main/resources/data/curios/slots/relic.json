@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "size": 1,
+  "operation": "SET",
+  "order": 100,
+  "icon": "guardians:item/relic_loomthread",
+  "add_cosmetic": false
+}

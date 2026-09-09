@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FBF",
+    "BYB",
+    "FBF"
+  ],
+  "key": {
+    "F": {
+      "item": "ninjacatskies:frayed_thread"
+    },
+    "Y": {
+      "item": "voidloom:void_yarn"
+    },
+    "B": {
+      "item": "minecraft:rooted_dirt"
+    }
+  },
+  "result": {
+    "id": "guardians:frayed_totem_beddown",
+    "count": 1
+  }
+}

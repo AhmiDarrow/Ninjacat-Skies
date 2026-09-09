@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FBF",
+    "BYB",
+    "FBF"
+  ],
+  "key": {
+    "F": {
+      "item": "ninjacatskies:frayed_thread"
+    },
+    "Y": {
+      "item": "voidloom:void_yarn"
+    },
+    "B": {
+      "item": "minecraft:honeycomb_block"
+    }
+  },
+  "result": {
+    "id": "guardians:frayed_totem_hivemind",
+    "count": 1
+  }
+}

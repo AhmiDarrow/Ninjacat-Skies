@@ -139,6 +139,35 @@ def drumheart():
 
 BOSSES=dict(grindmaw=grindmaw,thornmother=thornmother,edgewalker=edgewalker,drumheart=drumheart)
 
+def animate(b,kind):
+    """key the rig (and any rigid animated props) for one clip; sets scene frame range"""
+    cu=b.get('custom')
+    if cu=='spider': PRO.spider(b['arm'],kind,legs=b.get('legs',8))
+    elif cu=='quad': PRO.quad(b['arm'],kind)
+    elif cu=='tower':
+        PRO.tower(b['arm'],kind)
+        n=bpy.context.scene.frame_end
+        for i,dn in enumerate(b.get('drones',[])):   # continuous orbit + bob; surge outward on attack
+            x0,y0,z0=dn.location; a0=math.atan2(y0,x0); r0=math.hypot(x0,y0)
+            for fr in range(1,n+1):
+                t=(fr-1)/(n-1); surge=(0.9*math.sin(math.pi*min(1,max(0,(t-0.3)/0.4))) if kind=='attack' and 0.3<t<0.7 else 0.0)
+                a=a0+t*math.tau*(1.0 if kind!='idle' else 0.5); rr=r0*(1+surge)
+                dn.location=(math.cos(a)*rr,math.sin(a)*rr,z0+0.35*math.sin(t*math.tau*2+i)); dn.rotation_euler=(0,0,a+math.pi/2); dn.keyframe_insert('location',frame=fr); dn.keyframe_insert('rotation_euler',frame=fr)
+                for w in dn.children:
+                    if 'flap' in w: w.rotation_euler=(w['flap']*0.55*math.sin(fr*2.4), 0, w.rotation_euler.z); w.keyframe_insert('rotation_euler',frame=fr)
+    else: PRO.humanoid(b['arm'],kind,f=b['f'],big=b['big'],heavy=b.get('heavy',1.0))
+    n=bpy.context.scene.frame_end
+    for j,w in enumerate(b.get('wards',[])):     # spin about own normal; flare then shatter (scale to 0) in death
+        rx,ry=w['tilt']; turns={'idle':1,'walk':1,'attack':2,'death':1}[kind]*(1 if j%2 else -1)
+        for fr in range(1,n+1):
+            t=(fr-1)/(n-1)
+            w.rotation_euler=(rx,ry,t*math.tau*turns); w.keyframe_insert('rotation_euler',frame=fr)
+            if kind=='death':
+                sc_=1.0 if t<0.3 else (1.0+0.25*math.sin(math.pi*(t-0.3)/0.15) if t<0.45 else max(0.0,1.0-(t-0.45)/0.3))
+                w.scale=(sc_,sc_,sc_); w.keyframe_insert('scale',frame=fr)
+            elif kind=='attack':
+                sc_=1.0+0.18*math.sin(math.pi*max(0,min(1,(t-0.3)/0.4))); w.scale=(sc_,sc_,sc_); w.keyframe_insert('scale',frame=fr)
+
 def run(name,mode):
     b=BOSSES[name]()
     ls=b.get('light',1.0)
@@ -153,32 +182,7 @@ def run(name,mode):
             d=f'{ART}/renders/{name}_{kind}'
             need={'idle':48,'walk':32,'attack':40,'death':48}[kind]
             if os.path.isdir(d) and len([x for x in os.listdir(d) if x.endswith('.png')])>=need: print('SKIP',name,kind); continue
-            cu=b.get('custom')
-            if cu=='spider': PRO.spider(b['arm'],kind,legs=b.get('legs',8))
-            elif cu=='quad': PRO.quad(b['arm'],kind)
-            elif cu=='tower':
-                PRO.tower(b['arm'],kind)
-                n=bpy.context.scene.frame_end
-                for i,dn in enumerate(b.get('drones',[])):   # continuous orbit + bob; surge outward on attack
-                    x0,y0,z0=dn.location; a0=math.atan2(y0,x0); r0=math.hypot(x0,y0)
-                    for fr in range(1,n+1):
-                        t=(fr-1)/(n-1); surge=(0.9*math.sin(math.pi*min(1,max(0,(t-0.3)/0.4))) if kind=='attack' and 0.3<t<0.7 else 0.0)
-                        a=a0+t*math.tau*(1.0 if kind!='idle' else 0.5); rr=r0*(1+surge)
-                        dn.location=(math.cos(a)*rr,math.sin(a)*rr,z0+0.35*math.sin(t*math.tau*2+i)); dn.rotation_euler=(0,0,a+math.pi/2); dn.keyframe_insert('location',frame=fr); dn.keyframe_insert('rotation_euler',frame=fr)
-                        for w in dn.children:
-                            if 'flap' in w: w.rotation_euler=(w['flap']*0.55*math.sin(fr*2.4), 0, w.rotation_euler.z); w.keyframe_insert('rotation_euler',frame=fr)
-            else: PRO.humanoid(b['arm'],kind,f=b['f'],big=b['big'],heavy=b.get('heavy',1.0))
-            n=bpy.context.scene.frame_end
-            for j,w in enumerate(b.get('wards',[])):     # spin about own normal; flare then shatter (scale to 0) in death
-                rx,ry=w['tilt']; turns={'idle':1,'walk':1,'attack':2,'death':1}[kind]*(1 if j%2 else -1)
-                for fr in range(1,n+1):
-                    t=(fr-1)/(n-1)
-                    w.rotation_euler=(rx,ry,t*math.tau*turns); w.keyframe_insert('rotation_euler',frame=fr)
-                    if kind=='death':
-                        sc_=1.0 if t<0.3 else (1.0+0.25*math.sin(math.pi*(t-0.3)/0.15) if t<0.45 else max(0.0,1.0-(t-0.45)/0.3))
-                        w.scale=(sc_,sc_,sc_); w.keyframe_insert('scale',frame=fr)
-                    elif kind=='attack':
-                        sc_=1.0+0.18*math.sin(math.pi*max(0,min(1,(t-0.3)/0.4))); w.scale=(sc_,sc_,sc_); w.keyframe_insert('scale',frame=fr)
+            animate(b,kind)
             sc.cycles.samples=8; sc.render.resolution_x=360; sc.render.resolution_y=450; cam.data.dof.use_dof=False
             cam.data.lens=b['lens']*(0.78 if kind=='death' else 1.0); tgt.location.z=b['target_z']*(0.72 if kind=='death' else 1.0)
             os.makedirs(d,exist_ok=True); sc.render.filepath=d+'/f_'

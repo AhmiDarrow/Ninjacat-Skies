@@ -68,3 +68,9 @@ JEI recipe/uses keys remain R/U while hovering items in an inventory. Those are 
 - `key.sophisticatedbackpacks.tool_swap`: **Control+Semicolon** (original context).
 - `key.saveToolbarActivator`: **F6** (original context).
 - `key.loadToolbarActivator`: **F7** (original context).
+
+## Snapped Guardians (0.7.0)
+- **Frayed Totem** (one per guardian): right-click anywhere outside an arena to call that guardian. Clowder mates within 32 blocks are pulled in with you. The totem is spent when the fight starts.
+- In the arena: the teal **spawn pads** are where you land; falling off the stage returns you to your pad with damage; the **return gate** (teal arch) opens on a win or a wipe and everyone is sent home after a few seconds.
+- `/guardians leave` — abandon the fight (counts as a wipe). `/guardians status` — running arenas. Operators: `/guardians summon <id>`.
+- **Woven Relics**: worn in the Curios "relic" slot, the off-hand, or any hotbar slot. Right-click to use the active; the cooldown shows on the item.

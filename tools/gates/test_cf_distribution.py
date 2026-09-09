@@ -14,13 +14,13 @@ from test_export_archive import verify
 
 
 class DistributionTests(unittest.TestCase):
-    def test_actual_pack_has_only_four_owned_override_jars(self):
+    def test_actual_pack_has_only_five_owned_override_jars(self):
         jars = sorted((ROOT / 'pack/mods').glob('*.jar'))
         rows = json.loads((ROOT / 'pack/modlist-resolved.json').read_text(encoding='utf-8'))
         entries = manifest_entries(jars, rows)
         self.assertEqual(len(entries), 88)
-        self.assertEqual(len(jars), 92)
-        self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 4)
+        self.assertEqual(len(jars), 93)
+        self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 5)
         expected = {619320: 8687896, 235577: 8163135, 1684851: 8828297}
         actual = {e['projectID']: e['fileID'] for e in entries}
         for pid, fid in expected.items(): self.assertEqual(actual[pid], fid)

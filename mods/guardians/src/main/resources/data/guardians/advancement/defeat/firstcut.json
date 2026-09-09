@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "id": "guardians:relic_firstcut_shard"
+    },
+    "title": "The First Cut answers for the Cut",
+    "description": "Defeat the First Cut in its arena.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "guardians:defeat/root"
+}

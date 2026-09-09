@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BFB",
+    "FLF",
+    "BFB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:obsidian"
+    },
+    "F": {
+      "item": "ninjacatskies:frayed_thread"
+    },
+    "L": {
+      "item": "guardians:relic_loomthread"
+    }
+  },
+  "result": {
+    "id": "guardians:frayed_totem_firstcut",
+    "count": 1
+  }
+}
