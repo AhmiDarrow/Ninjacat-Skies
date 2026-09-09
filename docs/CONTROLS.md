@@ -74,3 +74,13 @@ JEI recipe/uses keys remain R/U while hovering items in an inventory. Those are 
 - In the arena: the teal **spawn pads** are where you land; falling off the stage returns you to your pad with damage; the **return gate** (teal arch) opens on a win or a wipe and everyone is sent home after a few seconds.
 - `/guardians leave` — abandon the fight (counts as a wipe). `/guardians status` — running arenas. Operators: `/guardians summon <id>`.
 - **Woven Relics**: worn in the Curios "relic" slot, the off-hand, or any hotbar slot. Right-click to use the active; the cooldown shows on the item.
+- Totem recipes appear in the recipe book when their Strand is seated (Lint Golem with Soil, Tangle with Claw, the two insane ones after the Reweave), and a totem only answers once that is true.
+
+## Tribal Power 3.0 — the Nine Tribes (0.7.1)
+- **Tribe Hearth** (in the nine March camps): right-click with a favoured item or a charged Pulse Cell to raise standing. Sneak-use the Spirit Codex on any Tribal block for a diagnostic report.
+- **Elder**: right-click to trade (two offers per rank). At Voice standing the Elder hands over the tribe's **Mark**.
+- **Silent Drum**: right-click four times, a breath apart, to wake The Unsung; the same rhythm resyncs it during its Silence.
+- **Rite Tablet**: sneak-right-click a Ritual Brazier that has the matching seal seated.
+- **Bonding Charm**: right-click an adult Lantern Fox, Mossback or Dawn Stag. Sneak-right-click a bonded animal to toggle stay/follow; empty-hand sneak-right-click a Mossback opens its saddlebag; right-click a bonded Dawn Stag to ride.
+- **Camp Charter**: right-click a player to invite; right-click the air to see your camp.
+- `/tribalpower standing [player]` — the nine standings. `/tribalpower camp create|invite|join|leave|kick|info|rename`.

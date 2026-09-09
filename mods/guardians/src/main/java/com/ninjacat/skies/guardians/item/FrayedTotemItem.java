@@ -49,6 +49,7 @@ public class FrayedTotemItem extends Item {
         tip.add(NinjacatText.gold("Calls " + kind.title + " to the arena."));
         tip.add(NinjacatText.teal("Clowder mates within 32 blocks answer with you."));
         if (kind.tier == GuardianKind.Tier.INSANE) tip.add(NinjacatText.teal("Only after the Reweave."));
+        else if (kind.strand != null) tip.add(NinjacatText.teal("Answers once " + kind.unlockName() + " is seated."));
         tip.add(Component.literal("Spent when the fight begins.").withStyle(net.minecraft.ChatFormatting.GRAY));
     }
 }

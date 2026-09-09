@@ -1,0 +1,36 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "The Nine Camps",
+  "description": "Standing, offerings, marks.",
+  "icon": "tribalpower:tribe_hearth",
+  "x": -4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Standing",
+      "text": "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near the hearth and completed trades count. Hurting Kin costs 25 and turns the Hunters on you; breaking camp blocks costs five each, the hearth forty."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "tribalpower:tribe_mark",
+        "count": 1
+      },
+      "title": "Tribe Mark",
+      "text": "Given once, by an Elder, at Voice. With the tribe's Resonance Totem and two Spiritweave it becomes a Kinship Totem: an extra voice for the Pulse Resonator. Nine tribes can carry the song to fifteen voices."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "The camp keeps the beat",
+      "text": "A Drummer plays every few seconds. A Drumheart within eight blocks takes two Pulse from each beat, so a camp is a small, honest source of power. `/tribalpower standing` prints all nine standings."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "tribalpower:tribes/offering"
+  }
+}

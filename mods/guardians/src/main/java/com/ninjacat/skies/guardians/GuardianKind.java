@@ -47,6 +47,26 @@ public enum GuardianKind {
     public ResourceLocation emissive() { return ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "textures/guardian/" + id + "_emit.png"); }
     public ResourceLocation arenaFile() { return ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "arena/" + id + ".ncga"); }
     public String totemId() { return "frayed_totem_" + id; }
+    public ResourceLocation totemRecipeId() { return ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, totemId()); }
+
+    /**
+     * The pack advancement that unlocks this guardian's totem recipe in the recipe book. Gate guardians follow their
+     * Strand being seated; the Lint Golem opens with Soil and the Tangle with Claw (the first fights a new Clowder can
+     * try); the two insane totems wait for the Reweave.
+     */
+    public ResourceLocation unlockAdvancement() {
+        if (strand != null) return strand.advancementId();
+        return switch (this) {
+            case LINTGOLEM -> Strand.SOIL.advancementId();
+            case TANGLE -> Strand.CLAW.advancementId();
+            default -> ResourceLocation.fromNamespaceAndPath("ninjacatskies", "reweave");
+        };
+    }
+    /** Short player-facing name of what unlocks the totem ("the Soil Strand", "the Reweave"). */
+    public String unlockName() {
+        if (strand != null) return "the " + strand.title() + " Strand";
+        return switch (this) { case LINTGOLEM -> "the Soil Strand"; case TANGLE -> "the Claw Strand"; default -> "the Reweave"; };
+    }
     public String relicItemId() { return "relic_" + relicId; }
 
     @Nullable

@@ -70,6 +70,25 @@ public class GuardianGameTests {
         });
     }
 
+    /** A gate guardian will not answer a player whose Clowder has not seated its Strand (and the shades of the Overweaver carry no boss bar). */
+    @GameTest(template = "empty", timeoutTicks = 200)
+    public static void gateRefusesUnseatedStrand(GameTestHelper h) {
+        ServerLevel level = h.getLevel();
+        ServerPlayer fake = FakePlayerFactory.get(level, new GameProfile(UUID.nameUUIDFromBytes("guardians-gate".getBytes()), "GateTester"));
+        BlockPos base = h.absolutePos(new BlockPos(1, 1, 1));
+        fake.teleportTo(base.getX() + 0.5, base.getY(), base.getZ() + 0.5);
+        ArenaManager m = ArenaManager.get(level.getServer());
+        String fail = m.summon(fake, GuardianKind.BEDDOWN);
+        if (fail == null || !fail.contains("Soil")) { h.fail("gate totem answered without the Strand seated: " + fail); return; }
+        if (m.instanceOf(fake) != null) { h.fail("an arena was opened anyway"); return; }
+        GuardianEntity shade = ModEntities.create(GuardianKind.BEDDOWN, level);
+        if (shade == null) { h.fail("no entity"); return; }
+        shade.addTag("guardians_add");
+        if (shade.showsBossBar()) h.fail("an additive spawn shows a boss bar");
+        shade.discard();
+        h.succeed();
+    }
+
     @GameTest(template = "empty", timeoutTicks = 1200)
     public static void totemLoop(GameTestHelper h) {
         ServerLevel level = h.getLevel();

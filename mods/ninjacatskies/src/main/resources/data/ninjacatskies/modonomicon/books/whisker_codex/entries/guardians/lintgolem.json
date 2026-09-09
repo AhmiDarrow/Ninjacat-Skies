@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "The Lint Golem",
+  "description": "A gentle first fight.",
+  "icon": "guardians:frayed_totem_lintgolem",
+  "x": -4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Lint Golem",
+      "text": "The Dock Dustbin: a corner of the Dock itself — a plank yard, a washing line of cloth sheets, baskets of wool, a red rug.\n\nThe one fight with no risk. The golem throws lint balls that only blind for a moment and hides behind the washing; beat the rug and it sneezes and staggers. It teaches totem, arena and gate."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:frayed_totem_lintgolem",
+        "count": 1
+      },
+      "title": "Frayed Totem",
+      "text": "Four Frayed Thread and four white wool around a Void Yarn."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:relic_lintwisp",
+        "count": 1
+      },
+      "title": "Woven Relic",
+      "text": "Lintwisp: immune to cactus, berry and hedge damage and to being pushed. Puff blinds nearby mobs for an escape."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:guardians/the_ritual",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/soil"
+  }
+}

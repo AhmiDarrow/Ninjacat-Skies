@@ -1,5 +1,6 @@
 package com.ninjacat.skies.guardians.relic;
 
+import com.ninjacat.skies.guardians.relic.compat.SieveCompat;
 import com.ninjacat.skies.core.tension.LoomTension;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -64,10 +65,13 @@ final class StrandRelics {
     private static final String SHRED_KEY = "shred_until";
 
     static RelicPower grindcore() {
-        return new BaseRelic("Grindcore", "Grit: Haste I while worn and immune to Mining Fatigue.",
+        return new BaseRelic("Grindcore", "Grit: immune to Mining Fatigue; your hand sieves get one extra fortune roll.",
                 "Shred: your next melee hit within 6 s strips 2 armour from the target for 8 s.", 500) { // 25 s
+            @Override public void onWearerUseBlock(ServerPlayer p, ItemStack s, BlockPos pos) {
+                if (RelicUtil.EXDEORUM) SieveCompat.onRightClick(p, p.serverLevel(), pos);
+            }
             @Override public void tickWorn(ServerPlayer p, ItemStack s) {
-                RelicUtil.passive(p, MobEffects.DIG_SPEED, 0);                  // Haste I
+                if (RelicUtil.EXDEORUM) SieveCompat.tick(p);
                 if (p.hasEffect(MobEffects.DIG_SLOWDOWN)) p.removeEffect(MobEffects.DIG_SLOWDOWN);
                 if (RelicUtil.until(p, SHRED_KEY) && p.tickCount % 4 == 0) RelicUtil.burst(p.serverLevel(), ParticleTypes.CRIT, p.position().add(0, 1.0, 0), 2, 0.4, 0.05);
             }
@@ -246,10 +250,10 @@ final class StrandRelics {
 
     // ================================================================== Hivecall (Swarm)
     static RelicPower hivecall() {
-        return new BaseRelic("Hivecall", "Keeper: bees never hurt you.",
+        return new BaseRelic("Hivecall", "Keeper: bees never hurt you; hives within 16 blocks work 10 % faster.",
                 "Call the Swarm: four relic-bees for 20 s that harass whatever you hit (Poison I on sting) and pop into a honey bottle each.", 900) { // 45 s
             @Override public void onWearerHurt(ServerPlayer p, ItemStack s, LivingIncomingDamageEvent e) { RelicUtil.beeImmune(e); }
-            @Override public void tickWorn(ServerPlayer p, ItemStack s) { RelicUtil.calmBees(p); }
+            @Override public void tickWorn(ServerPlayer p, ItemStack s) { RelicUtil.calmBees(p); if (p.tickCount % 10 == 0) RelicUtil.hurryHives(p, 16); }
             @Override public boolean activate(ServerPlayer p, ItemStack s) {
                 ServerLevel l = p.serverLevel();
                 for (int i = 0; i < 4; i++) {

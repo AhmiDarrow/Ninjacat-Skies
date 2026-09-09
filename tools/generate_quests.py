@@ -72,6 +72,7 @@ CH = {
     "furnish": hid(0xB100000000000024),
     "stewardries": hid(0xB100000000000025),
     "current": hid(0xB100000000000026),
+    "guardians": hid(0xB100000000000027),
 }
 
 lang: dict[str, object] = {
@@ -83,11 +84,24 @@ lang: dict[str, object] = {
 }
 
 _seq = {"q": 0}
+# Quests added to a chapter after it shipped take ids from a per-chapter "late" block (0x8000 + n) instead of the
+# global sequence, so every quest written after them — later chapters, secret quests — keeps the id it already has
+# and nobody's progress is lost. Wrap the appended section in late_ids(True) ... late_ids(False).
+_late = {"on": False, "n": {}}
+
+
+def late_ids(on: bool) -> None:
+    _late["on"] = on
 
 
 def next_ids(strand_i: int):
-    _seq["q"] += 1
-    i = _seq["q"]
+    if _late["on"]:
+        n = _late["n"].get(strand_i, 0) + 1
+        _late["n"][strand_i] = n
+        i = 0x8000 + n
+    else:
+        _seq["q"] += 1
+        i = _seq["q"]
     return (
         hid(0xC200000000000000 + strand_i * 0x10000 + i),
         hid(0xD200000000000000 + strand_i * 0x10000 + i),
@@ -217,7 +231,7 @@ CHAPTER_SHORT = {
     10: "Sieve", 11: "Storage", 12: "Mek", 13: "Powah", 14: "Ars", 15: "Clowder", 16: "Desk", 17: "Aura",
     18: "Kitchen", 19: "Spells", 20: "Solar", 21: "Decor", 22: "Nether", 23: "End", 24: "Fields", 25: "Apiary",
     26: "Pipes", 27: "Otherworld", 28: "Clockworks", 29: "Network", 30: "Voidcraft", 31: "Packaged", 32: "QIO",
-    33: "Hunt", 34: "Tribal",
+    33: "Hunt", 34: "Tribal", 39: "Guardians",
 }
 STRAND_CHAPTERS = {1: "soil", 2: "stone", 3: "sprout", 4: "claw", 5: "spark", 6: "clock", 7: "swarm", 8: "sigil", 9: "spindle"}
 CURRENT = {"strand_i": 0, "title_counts": {}}
@@ -541,6 +555,9 @@ def reward_loot(table):
     return {"type": "command", "command": f"loot give @p loot {table}", "silent": True, "elevate_perms": True}
 
 
+TOKEN_QUESTS: dict[str, str] = {}   # strand id -> the "Seat <Strand>" quest id (cross-chapter dependency for the guardians)
+
+
 def knot_finale(strand_i, token, main, x, y):
     """Checkmark Knot quest (token + cache + levels) and a Seat quest that clears when the Post takes it."""
     title, phase, desc = KNOT_TEXT[token]
@@ -576,6 +593,7 @@ def knot_finale(strand_i, token, main, x, y):
         y=y,
         shape="diamond",
     )
+    TOKEN_QUESTS[token] = seat["id"]
     return [knot, seat]
 
 
@@ -608,6 +626,7 @@ CHAPTER_SUBTITLES = {
     36: ["A pad is a ledge until someone puts a chair on it."],
     37: ["The little machines the stewards left."],
     38: ["The Drumhearts' pulse learns to run in copper."],
+    39: ["Thirteen guardians the Cut snapped. Re-tension each Strand by beating its keeper."],
 }
 
 
@@ -787,6 +806,7 @@ def token_finale(strand_i: int, token: str, prev: str | None, x: float, y: float
         x=x,
         y=y,
     )
+    if q: TOKEN_QUESTS[token] = q["id"]
     return [q] if q else []
 
 
@@ -2448,7 +2468,7 @@ def build_tribal_side() -> list[dict]:
         ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 8 Pulse per successful beat. Use standard inventories from any compatible mod.'),
         ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 8 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.'),
         ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE, up to 2,000 FE per second. Redstone stops conversion and export.'),
-        ('spirit_staff', 'Five voices in one hand', 'resonant_core', 'Sneak-use to cycle Earth, Fire, Water, Air and Spirit. Use to cast. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
+        ('spirit_staff', 'Six voices in one hand', 'resonant_core', 'The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
         ('resonance_maul', 'Stone yields a doorway', 'resonant_core', 'Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.'),
         ('spiritweave_hood', 'Eyes in the quiet', 'spiritweave', 'The hood lends night sight while charged cells sustain it. Each active Spiritweave piece draws 2 Pulse every four seconds.'),
         ('spiritweave_robe', 'A woven shelter', 'spiritweave', 'The robe grants resistance. Wear it into the work and keep your cells charged.'),
@@ -2509,7 +2529,177 @@ def build_tribal_side() -> list[dict]:
         desc=['Complete one successful summoning. Failed or blocked attempts consume no threads or offerings. Each binding lasts 512 successful summons; breaking and replacing the cradle never renews it. The effigy tooltip shows uses left, and a comparator reads the cradle\'s remaining binding strength.'],
         task={'type':'advancement', 'advancement':'tribalpower:first_summon', 'criterion':''},
         rewards=[reward_item('tribalpower:spiritweave', 4)], deps=[binding['id'], existing['summoning_cradle']], x=10.8, y=39.2))
+    expansion += tribal_nine_tribes(s, main + side + expansion, existing)
     return main + side + expansion
+
+
+def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]:
+    """Tribal Power 3.0 — the Nine Tribes. Appended with late ids so every earlier quest keeps its id."""
+    by_item = {}
+    for q in before:
+        t = q['tasks'][0]
+        if t.get('type') == 'item' and 'item' in t:
+            by_item.setdefault(t['item']['id'].split(':', 1)[1], q['id'])
+    by_item.update(existing)
+    def dep(*names):
+        out = []
+        for n in names:
+            if n in by_item: out.append(by_item[n])
+            elif n not in WARNED: WARNED.add(n); print("SKIP missing dep", n)
+        return out
+    late_ids(True)
+    out: list[dict] = []
+    def item(key, title, desc, parents, x, y, count=1, reward=None, reward_count=3, optional=False):
+        q = item_quest(s, title=title, desc=[desc], item='tribalpower:' + key, count=count, deps=dep(*parents), x=x, y=y,
+                       reward_item=reward, reward_count=reward_count, optional=optional)
+        if q: out.append(q); by_item[key] = q['id']
+        return q
+    def adv(key, path, title, desc, parents, x, y, rewards):
+        q = task_quest(s, title=title, desc=[desc], task={'type': 'advancement', 'advancement': 'tribalpower:' + path, 'criterion': ''},
+                       rewards=rewards, deps=dep(*parents), x=x, y=y)
+        out.append(q); by_item[key] = q['id']
+        return q
+    def mark(key, title, desc, parents, x, y, rewards):
+        q = task_quest(s, title=title, desc=[desc], task={'type': 'checkmark'}, rewards=rewards, deps=dep(*parents), x=x, y=y, shape='diamond')
+        out.append(q); by_item[key] = q['id']
+        return q
+
+    # ---- The March remembers: halls, the Drum Circle, The Unsung, and the sixth voice
+    adv('ancestor_hall', 'march/ancestor_hall', 'The halls that kept time',
+        'Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Twelve Lore Tablets line their walls; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.',
+        ['gate_drum'], 0, 42, [reward_item('tribalpower:spiritweave', 2), reward_xp_levels(2)])
+    item('loom_thread', 'A strand of the thread itself',
+         'Loom Thread is the Loom, in hand: Ancestor Hall chests hold two to four, The Unsung tears loose sixteen or more, and a Loom-stitcher Elder trades one at Friend standing. It is the reagent of the sixth voice.',
+         ['ancestor_hall'], 2.7, 42, reward='tribalpower:spiritweave', reward_count=2)
+    item('lore_tablet', 'Carve what you read',
+         'Eight March Stone around an Echo Shard makes two Lore Tablets. Placed, a tablet shows a fragment of the nine tribes; a Creative sneak-use cycles which one. Line your own hall with them.',
+         ['march_stone', 'echo_shard'], 5.4, 42, count=2)
+    item('silent_drum', 'A drum that will not sound',
+         'Leather over March Planks around a Resonant Core. The Drum Circle in the March highlands holds one already; this is yours to seat at home. Strike it four times, a breath apart, and something old rises.',
+         ['resonant_core', 'march_planks'], 8.1, 42)
+    adv('drum_remembers', 'march/drum_remembers', 'The Drum Remembers',
+        'The Unsung is a three-phase drum-spirit. Beat: brace by sneaking against its shockwave. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the Silent Drum with the same four-beat rhythm, which stuns it and doubles your damage. Bring charged cells and a return path.',
+        ['silent_drum'], 10.8, 42, [reward_item('tribalpower:greater_pulse_cell', 1), reward_xp_levels(5)])
+    item('unsung_heart', 'The stilled drum',
+         'One Unsung Heart per kill, beside Loom Thread and Resonant Cores. It crafts the Loom totem and nothing else, so spend it with care.',
+         ['drum_remembers'], 13.5, 42, reward='tribalpower:loom_thread', reward_count=2)
+    item('resonance_totem_loom', 'The sixth voice',
+         'An Unsung Heart between Loom Thread and March Crystal, on March Planks. Loom joins Earth, Fire, Water, Air and Spirit: a distinct voice for the Pulse Resonator and the attunement the Echo Unweave and Ley Binding ask for.',
+         ['unsung_heart', 'march_crystal'], 13.5, 44.2, reward='tribalpower:loom_thread', reward_count=2)
+    item('loom_seal', 'A seal of tension',
+         'Blank Seal, Loom Thread and a Spirit Shard. Seated in a Ritual Brazier the Loom Seal blesses Tension: every two seconds it refills two Pulse into the carried cells of everyone in range, and lends Luck.',
+         ['loom_thread', 'blank_seal'], 2.7, 44.2)
+    item('echo_unweave', 'The lattice, reversed',
+         'Loom Thread and Copper Resonators on March Stone. Under a Loom voice the Echo Unweave runs the lattice backwards: a Manifested Ingot to two Bound Echo, Bound to two Attuned, Attuned to two Shards, Spiritweave to two Wool, a Resonant Core to three Manifested Ingots, and any worn Spiritgear tool to one Manifested Ingot.',
+         ['loom_thread', 'copper_resonator'], 5.4, 44.2)
+    mark('sixfold_staff', 'Tether and Stitch',
+         'Cycle the Sixfold Staff to its Loom voice. Tether pulls a target eight blocks toward you for six Pulse; a sneak-cast with no target is Stitch, a six-block blink through air for ten. Tick this when you have used both.',
+         ['spirit_staff', 'resonance_totem_loom'], 8.1, 44.2, [reward_item('tribalpower:pulse_cell', 2)])
+
+    # ---- The Nine Tribes: camps, hearths, standing, marks, kinship
+    adv('tribe_offering', 'tribes/offering', 'Kept warm',
+        'Nine tribe camps stand in the March, one per Strand: huts, a fire, a Tribe Hearth, a totem, a banner and four Tribal Kin. Right-click a hearth with what that tribe favours, or with a charged Pulse Cell, and your standing with them rises. Hurting Kin or breaking camp blocks costs far more than it gains.',
+        ['gate_drum'], 0, 47, [reward_item('tribalpower:echo_shard', 4), reward_xp_levels(2)])
+    adv('tribe_friend', 'tribes/friend', 'On good terms',
+        'Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near a hearth and completed trades count too. Elders trade two offers per rank: Grit-singers sell Echoes for raw ore, Seal-carvers sell seals and rite tablets, Loom-stitchers sell Loom Thread and, at Kin, a Horizon Compass. `/tribalpower standing` prints all nine.',
+        ['tribe_offering'], 2.7, 47, [reward_item('tribalpower:attuned_echo', 4), reward_xp_levels(3)])
+    adv('tribe_mark', 'tribes/mark', 'Nine agreeing',
+        'At Voice standing an Elder presses a Tribe Mark into your hand, once. It opens that tribe\'s Codex page and is the one ingredient a Kinship Totem cannot do without.',
+        ['tribe_friend'], 5.4, 47, [reward_item('tribalpower:spiritweave', 4), reward_xp_levels(5)])
+    item('tribe_mark', 'Mark of the tribe', 'Hold a Tribe Mark. Each tribe\'s is different; nine are possible.', ['tribe_mark'], 8.1, 47, reward='tribalpower:spiritweave', reward_count=2)
+    item('kinship_totem', 'A voice that is not a voice',
+         'A Tribe Mark, the Resonance Totem of that tribe\'s attunement and two Spiritweave. A Kinship Totem counts as an extra distinct voice for the Pulse Resonator and lends its tribe\'s attunement to stations, so nine tribes can carry the camp\'s song to fifteen voices.',
+         ['tribe_mark', 'spiritweave'], 10.8, 47, reward='tribalpower:greater_pulse_cell', reward_count=1)
+    mark('tribe_drummer', 'The camp keeps the beat',
+         'A camp\'s Drummer plays every few seconds; place a Drumheart within eight blocks of one and each beat feeds it two Pulse. Tick this when a Drummer is feeding your lattice.',
+         ['tribe_offering', 'drumheart'], 13.5, 47, [reward_item('tribalpower:pulse_cell', 2)])
+
+    # ---- World rites: six tablets on a sealed brazier
+    rites = [
+        ('rite_green_blessing', 'Green Blessing', 'Knotted Root beside an Earth Seal; 600 Pulse. For twenty minutes crops, saplings and stems in the nine chunks around the brazier grow faster.', ['ritual_brazier', 'earth_seal', 'knotted_root']),
+        ('rite_rain_calling', 'Rain Calling', 'Reed Fang beside a Water Seal; 400 Pulse. Twenty minutes of rain, for the cisterns and the crops.', ['ritual_brazier', 'water_seal', 'reed_fang']),
+        ('rite_sky_clearing', 'Sky Clearing', 'Storm Wing beside an Air Seal; 400 Pulse. Forty minutes of clear sky.', ['ritual_brazier', 'air_seal', 'storm_wing']),
+        ('rite_dawn_calling', 'Dawn Calling', 'Ember Heart beside a Fire Seal; 800 Pulse. Hurries the night to the next sunrise for the whole world.', ['ritual_brazier', 'fire_seal', 'ember_heart']),
+        ('rite_still_night', 'Still Night', 'Sentinel Sigil beside a Spirit Seal; 600 Pulse. Fifteen minutes without hostile spawns within sixty-four blocks.', ['ritual_brazier', 'spirit_seal', 'sentinel_sigil']),
+        ('rite_ley_binding', 'Ley Binding', 'Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them.', ['ritual_brazier', 'loom_seal', 'loom_thread']),
+    ]
+    for i, (key, name, desc, parents) in enumerate(rites):
+        item(key, 'Rite Tablet: ' + name, 'Two stone and the reagent around the seal; the seal is handed back. ' + desc + ' Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.',
+             parents, (i % 3) * 2.7, 50 + (i // 3) * 1.8, reward='tribalpower:blank_seal', reward_count=1)
+    adv('first_rite', 'first_rite', 'First Rite',
+        'Perform any rite. If the lattice around the brazier holds too little Pulse, nothing is consumed and the brazier says so.',
+        ['rite_green_blessing', 'rite_rain_calling', 'rite_sky_clearing', 'rite_dawn_calling', 'rite_still_night', 'rite_ley_binding'], 8.1, 50.9, [reward_item('tribalpower:blank_seal', 4), reward_xp_levels(3)])
+    out[-1]['dependency_requirement'] = 'one_completed'
+
+    # ---- Bound spirits and shared camps
+    item('bonding_charm', 'A charm for a wild thing',
+         'Two Spiritweave, a Spirit Shard and the reagent of the species. Use it on an adult Lantern Fox, Mossback or Dawn Stag: a sixty-percent chance to bond, and the charm is kept on failure.',
+         ['spiritweave', 'spirit_shard'], 0, 54, reward='tribalpower:spirit_shard', reward_count=2)
+    adv('first_bond', 'first_bond', 'A friend in the dark',
+        'A bonded animal follows, teleports after you, never despawns, cannot be hurt by you and yields double when brushed. The Lantern Fox lights the way and marks ore; the Mossback carries a nine-slot saddlebag; the Dawn Stag is ridden without a saddle. Sneak-use toggles stay.',
+        ['bonding_charm'], 2.7, 54, [reward_item('minecraft:brush', 1), reward_xp_levels(3)])
+    item('camp_charter', 'A camp of many voices',
+         'Paper, Spiritweave and a Spirit Shard. Use the charter on a player to invite them to your camp, or in the air to see it. `/tribalpower camp` creates, invites, joins, leaves, kicks, renames.',
+         ['spiritweave'], 5.4, 54, reward='tribalpower:spiritweave', reward_count=2)
+    adv('first_camp', 'first_camp', 'One vault, one budget',
+        'Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other\'s devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. Your Clowder is the natural camp.',
+        ['camp_charter'], 8.1, 54, [reward_item('tribalpower:greater_pulse_cell', 1), reward_xp_levels(3)])
+
+    # ---- Reading the lattice
+    item('ley_lens', 'See the ley',
+         'A glass pane over a Copper Resonator and a Spirit Shard. Held, the lens shows the ley strength where you stand and paints it on the ground around you; sneak-use it on a Ley Collector for the exact breakdown.',
+         ['ley_collector'], 0, 57, reward='tribalpower:pulse_cell', reward_count=2)
+    item('pulse_gauge', 'A needle for Pulse',
+         'Quartz over redstone and a Copper Resonator on March Stone. Faced at any Pulse holder it puts out redstone 0 to 15 in proportion to what is stored.',
+         ['pulse_cell', 'march_stone'], 2.7, 57)
+    item('pulse_threshold', 'A line in the song',
+         'A redstone torch over redstone and a Copper Resonator on March Stone. It emits when the faced holder is at or above its threshold; right-click cycles 25, 50, 75 and 100 percent. The pieces of a Pulse-driven automation.',
+         ['pulse_gauge'], 5.4, 57)
+    mark('codex_diagnostics', 'Ask the Codex why',
+         'Sneak-use the Spirit Codex on any Tribal block for a plain report: stored Pulse, the generators feeding it, the attunements within eight blocks, what is missing for the current recipe, a full output, a redstone pause, an unloaded relay end. Tick this when it has told you something you did not know.',
+         ['spirit_codex'], 8.1, 57, [reward_item('tribalpower:echo_shard', 4)])
+    late_ids(False)
+    return out
+
+
+def build_guardians() -> list[dict]:
+    """Snapped Guardians — thirteen totems, thirteen arenas, thirteen relics. Totem → defeat → relic, per guardian."""
+    from guardians_lore import GUARDIANS, STRAND_TITLES
+    s = 39
+    out: list[dict] = []
+    relic_ids: dict[str, str] = {}
+    gates = [g for g in GUARDIANS if g[4] == 'gate']; easy = [g for g in GUARDIANS if g[4] == 'easy']; insane = [g for g in GUARDIANS if g[4] == 'insane']
+    intro = task_quest(s, title='Answer for the Cut',
+        desc=['Each Strand has a guardian the Cut snapped: a Loom-construct gone feral. You do not murder a monster; you re-tension the Strand by beating it. Craft its Frayed Totem once the Strand is seated, use it anywhere outside an arena, and you and every Clowder mate within 32 blocks are pulled into its stage. Win, and every one of you carries home that guardian\'s Woven Relic. Lose, and you are spat back out with the totem spent.',
+              'Relics work from the Curios relic slot, the off-hand or the hotbar: a passive while worn and a right-click power on a cooldown. `/guardians leave` abandons a fight; `/guardians status` shows the Clowder\'s record.'],
+        task={'type': 'checkmark'}, rewards=[reward_item('ninjacatskies:frayed_thread', 4)], x=-3.0, y=1.8, shape='hexagon')
+    out.append(intro)
+    def trio(g, x, y, deps_extra):
+        gid, title, strand, relic, tier, arena, fight, power = g
+        totem = item_quest(s, title=f'Totem: {title}', desc=[arena, 'Four Frayed Thread and four of the Strand\'s block around a Void Yarn.' if tier == 'gate' else ('Four Frayed Thread and four wool around a Void Yarn.' if gid == 'lintgolem' else 'Four Frayed Thread and four leaves around a Void Yarn.' if gid == 'tangle' else 'Frayed Thread and obsidian around the Loomthread relic; the relic is handed back.')],
+                           item=f'guardians:frayed_totem_{gid}', deps=[intro['id']] + deps_extra, x=x, y=y, reward_item='ninjacatskies:frayed_thread', reward_count=2)
+        if not totem: return
+        out.append(totem)
+        win = task_quest(s, title=f'Re-tension: {title}', desc=[fight],
+                         task={'type': 'advancement', 'advancement': f'guardians:defeat/{gid}', 'criterion': ''},
+                         rewards=[reward_xp_levels(5 if tier == 'gate' else 2 if tier == 'easy' else 15)], deps=[totem['id']], x=x, y=y + 1.8, shape='diamond')
+        out.append(win)
+        rq = item_quest(s, title=f'Relic: {relic.replace("_", " ").title()}', desc=[power, 'One per Clowder member present at the win, straight to inventory.'],
+                        item=f'guardians:relic_{relic}', deps=[win['id']], x=x, y=y + 3.6, reward_item='minecraft:experience_bottle', reward_count=4)
+        if rq: out.append(rq); relic_ids[gid] = rq['id']
+    for i, g in enumerate(gates):
+        deps = [TOKEN_QUESTS[g[2]]] if g[2] in TOKEN_QUESTS else []
+        trio(g, i * 2.7, 0.0, deps)
+    for i, g in enumerate(easy):
+        deps = [TOKEN_QUESTS[t]] if (t := {'lintgolem': 'soil', 'tangle': 'claw'}[g[0]]) in TOKEN_QUESTS else []
+        trio(g, i * 2.7, 6.5, deps)
+    reweave = task_quest(s, title='The sealed door', desc=['The two insane arenas wait behind a door only the Reweave opens. Their totems need the Loomthread relic on the crafting grid, and answer only a Clowder that has closed its sky. The bosses are ten to twenty times your size. Bring everyone.'],
+                         task={'type': 'advancement', 'advancement': 'ninjacatskies:reweave', 'criterion': ''},
+                         rewards=[reward_item('ninjacatskies:frayed_thread', 8)], deps=[relic_ids['unwoven']] if 'unwoven' in relic_ids else None, x=8.1, y=6.5, shape='hexagon')
+    out.append(reweave)
+    for i, g in enumerate(insane):
+        trio(g, 10.8 + i * 2.7, 6.5, [reweave['id']])
+    return out
 
 
 def build_shop() -> list[dict]:
@@ -2746,6 +2936,7 @@ def main() -> None:
     write_chapter("36_furnish", CH["furnish"], GROUP_SIDE, 35, "handcrafted:oak_chair", build_furnish(), "Furnishings")
     write_chapter("37_stewardries", CH["stewardries"], GROUP_SIDE, 36, "supplementaries:hourglass", build_stewardries(), "Small Stewardries")
     write_chapter("38_current", CH["current"], GROUP_SIDE, 37, "createaddition:electric_motor", build_current(), "The Current")
+    write_chapter("39_guardians", CH["guardians"], GROUP_LATE, 38, "guardians:frayed_totem_unwoven", build_guardians(), "Snapped Guardians")
     write_lang()
     titles = sum(1 for k in lang if k.startswith("quest.") and k.endswith(".title"))
     print(f"Wrote chapters + lang. Quest titles: {titles}. Skipped invalid: {len(WARNED)}")

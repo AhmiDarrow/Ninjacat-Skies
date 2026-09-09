@@ -85,6 +85,10 @@
 		"The Drumhearts' pulse learns to run in copper."
 	]
 	chapter.3100000000000026.title: "The Current"
+	chapter.3100000000000027.subtitle: [
+		"Thirteen guardians the Cut snapped. Re-tension each Strand by beating its keeper."
+	]
+	chapter.3100000000000027.title: "Snapped Guardians"
 	chapter_group.2100000000000001.title: "Skybound"
 	chapter_group.2100000000000002.title: "Craft and Tension"
 	chapter_group.2100000000000003.title: "Reweave"
@@ -5717,9 +5721,9 @@
 	]
 	quest.4200000000220564.title: "The beat becomes current"
 	quest.4200000000220565.quest_desc: [
-		"Sneak-use to cycle Earth, Fire, Water, Air and Spirit. Use to cast. Carry charged cells; the Spirit Codex explains each spell and its cost."
+		"The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost."
 	]
-	quest.4200000000220565.title: "Five voices in one hand"
+	quest.4200000000220565.title: "Six voices in one hand"
 	quest.4200000000220566.quest_desc: [
 		"Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply."
 	]
@@ -5886,6 +5890,130 @@
 		"Complete one successful summoning. Failed or blocked attempts consume no threads or offerings. Each binding lasts 512 successful summons; breaking and replacing the cradle never renews it. The effigy tooltip shows uses left, and a comparator reads the cradle's remaining binding strength."
 	]
 	quest.420000000022058B.title: "An answer from the cradle"
+	quest.4200000000228001.quest_desc: [
+		"Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Twelve Lore Tablets line their walls; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard."
+	]
+	quest.4200000000228001.title: "The halls that kept time"
+	quest.4200000000228002.quest_desc: [
+		"Loom Thread is the Loom, in hand: Ancestor Hall chests hold two to four, The Unsung tears loose sixteen or more, and a Loom-stitcher Elder trades one at Friend standing. It is the reagent of the sixth voice."
+	]
+	quest.4200000000228002.title: "A strand of the thread itself"
+	quest.4200000000228003.quest_desc: [
+		"Eight March Stone around an Echo Shard makes two Lore Tablets. Placed, a tablet shows a fragment of the nine tribes; a Creative sneak-use cycles which one. Line your own hall with them."
+	]
+	quest.4200000000228003.title: "Carve what you read"
+	quest.4200000000228004.quest_desc: [
+		"Leather over March Planks around a Resonant Core. The Drum Circle in the March highlands holds one already; this is yours to seat at home. Strike it four times, a breath apart, and something old rises."
+	]
+	quest.4200000000228004.title: "A drum that will not sound"
+	quest.4200000000228005.quest_desc: [
+		"The Unsung is a three-phase drum-spirit. Beat: brace by sneaking against its shockwave. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the Silent Drum with the same four-beat rhythm, which stuns it and doubles your damage. Bring charged cells and a return path."
+	]
+	quest.4200000000228005.title: "The Drum Remembers"
+	quest.4200000000228006.quest_desc: [
+		"One Unsung Heart per kill, beside Loom Thread and Resonant Cores. It crafts the Loom totem and nothing else, so spend it with care."
+	]
+	quest.4200000000228006.title: "The stilled drum"
+	quest.4200000000228007.quest_desc: [
+		"An Unsung Heart between Loom Thread and March Crystal, on March Planks. Loom joins Earth, Fire, Water, Air and Spirit: a distinct voice for the Pulse Resonator and the attunement the Echo Unweave and Ley Binding ask for."
+	]
+	quest.4200000000228007.title: "The sixth voice"
+	quest.4200000000228008.quest_desc: [
+		"Blank Seal, Loom Thread and a Spirit Shard. Seated in a Ritual Brazier the Loom Seal blesses Tension: every two seconds it refills two Pulse into the carried cells of everyone in range, and lends Luck."
+	]
+	quest.4200000000228008.title: "A seal of tension"
+	quest.4200000000228009.quest_desc: [
+		"Loom Thread and Copper Resonators on March Stone. Under a Loom voice the Echo Unweave runs the lattice backwards: a Manifested Ingot to two Bound Echo, Bound to two Attuned, Attuned to two Shards, Spiritweave to two Wool, a Resonant Core to three Manifested Ingots, and any worn Spiritgear tool to one Manifested Ingot."
+	]
+	quest.4200000000228009.title: "The lattice, reversed"
+	quest.420000000022800A.quest_desc: [
+		"Cycle the Sixfold Staff to its Loom voice. Tether pulls a target eight blocks toward you for six Pulse; a sneak-cast with no target is Stitch, a six-block blink through air for ten. Tick this when you have used both."
+	]
+	quest.420000000022800A.title: "Tether and Stitch"
+	quest.420000000022800B.quest_desc: [
+		"Nine tribe camps stand in the March, one per Strand: huts, a fire, a Tribe Hearth, a totem, a banner and four Tribal Kin. Right-click a hearth with what that tribe favours, or with a charged Pulse Cell, and your standing with them rises. Hurting Kin or breaking camp blocks costs far more than it gains."
+	]
+	quest.420000000022800B.title: "Kept warm"
+	quest.420000000022800C.quest_desc: [
+		"Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near a hearth and completed trades count too. Elders trade two offers per rank: Grit-singers sell Echoes for raw ore, Seal-carvers sell seals and rite tablets, Loom-stitchers sell Loom Thread and, at Kin, a Horizon Compass. `/tribalpower standing` prints all nine."
+	]
+	quest.420000000022800C.title: "On good terms"
+	quest.420000000022800D.quest_desc: [
+		"At Voice standing an Elder presses a Tribe Mark into your hand, once. It opens that tribe's Codex page and is the one ingredient a Kinship Totem cannot do without."
+	]
+	quest.420000000022800D.title: "Nine agreeing"
+	quest.420000000022800E.quest_desc: [
+		"Hold a Tribe Mark. Each tribe's is different; nine are possible."
+	]
+	quest.420000000022800E.title: "Mark of the tribe"
+	quest.420000000022800F.quest_desc: [
+		"A Tribe Mark, the Resonance Totem of that tribe's attunement and two Spiritweave. A Kinship Totem counts as an extra distinct voice for the Pulse Resonator and lends its tribe's attunement to stations, so nine tribes can carry the camp's song to fifteen voices."
+	]
+	quest.420000000022800F.title: "A voice that is not a voice"
+	quest.4200000000228010.quest_desc: [
+		"A camp's Drummer plays every few seconds; place a Drumheart within eight blocks of one and each beat feeds it two Pulse. Tick this when a Drummer is feeding your lattice."
+	]
+	quest.4200000000228010.title: "The camp keeps the beat"
+	quest.4200000000228011.quest_desc: [
+		"Two stone and the reagent around the seal; the seal is handed back. Knotted Root beside an Earth Seal; 600 Pulse. For twenty minutes crops, saplings and stems in the nine chunks around the brazier grow faster. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+	]
+	quest.4200000000228011.title: "Rite Tablet: Green Blessing"
+	quest.4200000000228012.quest_desc: [
+		"Two stone and the reagent around the seal; the seal is handed back. Reed Fang beside a Water Seal; 400 Pulse. Twenty minutes of rain, for the cisterns and the crops. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+	]
+	quest.4200000000228012.title: "Rite Tablet: Rain Calling"
+	quest.4200000000228013.quest_desc: [
+		"Two stone and the reagent around the seal; the seal is handed back. Storm Wing beside an Air Seal; 400 Pulse. Forty minutes of clear sky. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+	]
+	quest.4200000000228013.title: "Rite Tablet: Sky Clearing"
+	quest.4200000000228014.quest_desc: [
+		"Two stone and the reagent around the seal; the seal is handed back. Ember Heart beside a Fire Seal; 800 Pulse. Hurries the night to the next sunrise for the whole world. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+	]
+	quest.4200000000228014.title: "Rite Tablet: Dawn Calling"
+	quest.4200000000228015.quest_desc: [
+		"Two stone and the reagent around the seal; the seal is handed back. Sentinel Sigil beside a Spirit Seal; 600 Pulse. Fifteen minutes without hostile spawns within sixty-four blocks. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+	]
+	quest.4200000000228015.title: "Rite Tablet: Still Night"
+	quest.4200000000228016.quest_desc: [
+		"Two stone and the reagent around the seal; the seal is handed back. Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+	]
+	quest.4200000000228016.title: "Rite Tablet: Ley Binding"
+	quest.4200000000228017.quest_desc: [
+		"Perform any rite. If the lattice around the brazier holds too little Pulse, nothing is consumed and the brazier says so."
+	]
+	quest.4200000000228017.title: "First Rite"
+	quest.4200000000228018.quest_desc: [
+		"Two Spiritweave, a Spirit Shard and the reagent of the species. Use it on an adult Lantern Fox, Mossback or Dawn Stag: a sixty-percent chance to bond, and the charm is kept on failure."
+	]
+	quest.4200000000228018.title: "A charm for a wild thing"
+	quest.4200000000228019.quest_desc: [
+		"A bonded animal follows, teleports after you, never despawns, cannot be hurt by you and yields double when brushed. The Lantern Fox lights the way and marks ore; the Mossback carries a nine-slot saddlebag; the Dawn Stag is ridden without a saddle. Sneak-use toggles stay."
+	]
+	quest.4200000000228019.title: "A friend in the dark"
+	quest.420000000022801A.quest_desc: [
+		"Paper, Spiritweave and a Spirit Shard. Use the charter on a player to invite them to your camp, or in the air to see it. `/tribalpower camp` creates, invites, joins, leaves, kicks, renames."
+	]
+	quest.420000000022801A.title: "A camp of many voices"
+	quest.420000000022801B.quest_desc: [
+		"Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other's devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. Your Clowder is the natural camp."
+	]
+	quest.420000000022801B.title: "One vault, one budget"
+	quest.420000000022801C.quest_desc: [
+		"A glass pane over a Copper Resonator and a Spirit Shard. Held, the lens shows the ley strength where you stand and paints it on the ground around you; sneak-use it on a Ley Collector for the exact breakdown."
+	]
+	quest.420000000022801C.title: "See the ley"
+	quest.420000000022801D.quest_desc: [
+		"Quartz over redstone and a Copper Resonator on March Stone. Faced at any Pulse holder it puts out redstone 0 to 15 in proportion to what is stored."
+	]
+	quest.420000000022801D.title: "A needle for Pulse"
+	quest.420000000022801E.quest_desc: [
+		"A redstone torch over redstone and a Copper Resonator on March Stone. It emits when the faced holder is at or above its threshold; right-click cycles 25, 50, 75 and 100 percent. The pieces of a Pulse-driven automation."
+	]
+	quest.420000000022801E.title: "A line in the song"
+	quest.420000000022801F.quest_desc: [
+		"Sneak-use the Spirit Codex on any Tribal block for a plain report: stored Pulse, the generators feeding it, the attunements within eight blocks, what is missing for the current recipe, a full output, a redstone pause, an unloaded relay end. Tick this when it has told you something you did not know."
+	]
+	quest.420000000022801F.title: "Ask the Codex why"
 	quest.420000000023058C.quest_desc: [
 		"Grit-singers never cut a stone the same way twice. This bench remembers every cut.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
@@ -6194,6 +6322,198 @@
 		"Carry a measure of gas off the network."
 	]
 	quest.42000000002605D7.title: "Portable Chemical Cell"
+	quest.42000000002705D8.quest_desc: [
+		"Each Strand has a guardian the Cut snapped: a Loom-construct gone feral. You do not murder a monster; you re-tension the Strand by beating it. Craft its Frayed Totem once the Strand is seated, use it anywhere outside an arena, and you and every Clowder mate within 32 blocks are pulled into its stage. Win, and every one of you carries home that guardian's Woven Relic. Lose, and you are spat back out with the totem spent.",
+		"Relics work from the Curios relic slot, the off-hand or the hotbar: a passive while worn and a right-click power on a cooldown. `/guardians leave` abandons a fight; `/guardians status` shows the Clowder's record.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
+	]
+	quest.42000000002705D8.title: "Answer for the Cut"
+	quest.42000000002705D9.quest_desc: [
+		"The Burrow Bowl: a sunken bowl of four soil tiers stepping down to a mud pit under six dark-oak root arches, seven teal root-seams glowing across the pit floor.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705D9.title: "Totem: the Beddown"
+	quest.42000000002705DA.quest_desc: [
+		"Every quarter of its health the Beddown slams and floods the pit with a layer of dirt, immune inside it. One of the seven seams lights: dig a channel to it, expose the core and hit it to break the burial. The first gate, and a forgiving one."
+	]
+	quest.42000000002705DA.title: "Re-tension: the Beddown"
+	quest.42000000002705DB.quest_desc: [
+		"Rootheart: knockback taken is cut by sixty percent and nothing can pull you. Root Down plants you for five seconds behind eight hearts of absorption.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705DB.title: "Relic: Rootheart"
+	quest.42000000002705DC.quest_desc: [
+		"The Millpit: a deepslate quarry with a rotating grindstone ring in the floor and four stone sieve chutes pouring gravel into the central grit pit.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705DC.title: "Totem: the Grindmaw"
+	quest.42000000002705DD.quest_desc: [
+		"The Grindmaw is immune while its maw is closed. Each chute drops a grit block every fifteen seconds; carry one onto the ring and let it ride into the pit's mouth to jam the maw open for twelve seconds. The ring reverses every phase and shoves the careless into the pit."
+	]
+	quest.42000000002705DD.title: "Re-tension: the Grindmaw"
+	quest.42000000002705DE.quest_desc: [
+		"Grindcore: immune to Mining Fatigue, and your hand sieves get one extra fortune roll. Shred strips two armour from the next thing you hit.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705DE.title: "Relic: Grindcore"
+	quest.42000000002705DF.quest_desc: [
+		"The Overgrowth Terrace: four garden terraces under a leaf canopy, eight trellis posts, and four pruning stations on the second tier.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705DF.title: "Totem: the Thornmother"
+	quest.42000000002705E0.quest_desc: [
+		"The Thornmother never strikes; she seeds thorn-hedge that spreads and burns to the touch, and heals whenever a pruning station is overgrown. Shears and axes clear it. Compost eight hedge at a station to fire a prune wave that clears the ground and stuns her — the only clean damage window."
+	]
+	quest.42000000002705E0.title: "Re-tension: the Thornmother"
+	quest.42000000002705E1.quest_desc: [
+		"Thornseed: Thorns and no berry or cactus damage. Bloom raises a ring of hedge and gives Regeneration II to you and your Clowder inside it.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705E1.title: "Relic: Thornseed"
+	quest.42000000002705E2.quest_desc: [
+		"The Sky Shards: ten deepslate shards floating over the void, crumbling bridges between them, gold claw-marks on the main shard where the boss lands.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705E2.title: "Totem: the Edgewalker"
+	quest.42000000002705E3.quest_desc: [
+		"A pure duel. The Edgewalker leaps shard to shard and pounces whoever stands furthest from a wall; a gold claw-mark shows where, a breath before it lands — step off it. Bridges crumble behind you and return later. Falling costs six hearts and a trip back to your pad."
+	]
+	quest.42000000002705E3.title: "Re-tension: the Edgewalker"
+	quest.42000000002705E4.quest_desc: [
+		"Edgestep: no fall damage under twelve blocks and no slipping off edges. Edgestep dashes six blocks, twice, with a stronger hit at the end.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705E4.title: "Relic: Edgestep"
+	quest.42000000002705E5.quest_desc: [
+		"The Forge Drum: a brass drum-platform over a lava crater, eight copper piston hammers with beat pads before them, four lava channels through the floor.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705E5.title: "Totem: the Drumheart"
+	quest.42000000002705E6.quest_desc: [
+		"The Drumheart can only be hurt for a moment after every fourth beat. Stand on a beat pad at the downbeat to charge a spark that counts triple; on beat four the lava channels rise, so be on the pads, not in the channels. The tempo climbs every phase."
+	]
+	quest.42000000002705E6.title: "Re-tension: the Drumheart"
+	quest.42000000002705E7.quest_desc: [
+		"Drumpulse: every fourth hit lands two extra hearts. Downbeat stuns and throws back everything within seven blocks.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705E7.title: "Relic: Drumpulse"
+	quest.42000000002705E8.quest_desc: [
+		"The Escapement: four rotating copper rings carrying dark-oak sequence tiles around an iron hub, six gear-towers and a sixteen-block pendulum keeping time.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705E8.title: "Totem: the Cogwright"
+	quest.42000000002705E9.quest_desc: [
+		"Every phase the Cogwright winds: tiles light in sequence across the turning rings and you have twelve seconds to step them in order. Success opens its chassis for eight seconds; failure fires every gear-tower. The pendulum is the metronome; the rings reverse when it swings far."
+	]
+	quest.42000000002705E9.title: "Re-tension: the Cogwright"
+	quest.42000000002705EA.quest_desc: [
+		"Cogloop: Haste I, and tools wear a fifth slower. Rewind resets every other relic you carry and snaps you back three seconds.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705EA.title: "Relic: Cogloop"
+	quest.42000000002705EB.quest_desc: [
+		"The Comb: a hexagonal wax arena of rising and falling comb cells, honey pools, and six drone cells in the wall.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705EB.title: "Totem: the Hivemind"
+	quest.42000000002705EC.quest_desc: [
+		"The Hivemind is fragile but every wave its six cells pour drones. A campfire set on a drone cell seals it for thirty seconds; seal all six and the royal chamber opens for ten. Your own Productive Bees attack the drones on sight."
+	]
+	quest.42000000002705EC.title: "Re-tension: the Hivemind"
+	quest.42000000002705ED.quest_desc: [
+		"Hivecall: bees never turn on you, and hives within sixteen blocks work a tenth faster. Call the Swarm sends four relic-bees after whatever you hit.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705ED.title: "Relic: Hivecall"
+	quest.42000000002705EE.quest_desc: [
+		"The Ward Circle: a stone sanctum of gold circles and nine glyph pillars with amethyst spires, a nine-sided dais of gold pegs at the centre.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705EE.title: "Totem: the Sealbreaker"
+	quest.42000000002705EF.quest_desc: [
+		"The Sealbreaker hides behind three active wards. The dais pegs light the order once per phase — watch first. Dispel the pillars in that order with an Ars dispel or any Sigil-strand item; a wrong one re-arms all three and the ward-glass bites. Three right and it is open for twelve seconds. Later phases shuffle the runes and add a decoy."
+	]
+	quest.42000000002705EF.title: "Re-tension: the Sealbreaker"
+	quest.42000000002705F0.quest_desc: [
+		"Sealmark: magic damage taken is cut by a fifth. Sealmark wards you, or a Clowder mate you look at, against one heavy hit.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705F0.title: "Relic: Sealmark"
+	quest.42000000002705F1.quest_desc: [
+		"The Collapsing Loom: a loom sixty-six blocks wide whose floor is the warp — plank strips that unravel into thread bridges as the heddle bars drop.",
+		"Four Frayed Thread and four of the Strand's block around a Void Yarn."
+	]
+	quest.42000000002705F1.title: "Totem: the Unwoven"
+	quest.42000000002705F2.quest_desc: [
+		"Five phases. Each quotes two of the other eight mechanics for thirty seconds, then a heddle bar drops and three more strips unravel. In its true form the last four strips remain and the warp threads are the only way up to the beam where it stands. Kill it there: the Reweave."
+	]
+	quest.42000000002705F2.title: "Re-tension: the Unwoven"
+	quest.42000000002705F3.quest_desc: [
+		"Loomthread: two more Loom Tension for your Clowder and slower decay. Loomthread tethers your Clowder to your side. It is the keystone for the true Reweave and the key to the two sealed arenas.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705F3.title: "Relic: Loomthread"
+	quest.42000000002705F4.quest_desc: [
+		"The Dock Dustbin: a corner of the Dock itself — a plank yard, a washing line of cloth sheets, baskets of wool, a red rug.",
+		"Four Frayed Thread and four wool around a Void Yarn."
+	]
+	quest.42000000002705F4.title: "Totem: the Lint Golem"
+	quest.42000000002705F5.quest_desc: [
+		"The one fight with no risk. The golem throws lint balls that only blind for a moment and hides behind the washing; beat the rug and it sneezes and staggers. It teaches totem, arena and gate."
+	]
+	quest.42000000002705F5.title: "Re-tension: the Lint Golem"
+	quest.42000000002705F6.quest_desc: [
+		"Lintwisp: immune to cactus, berry and hedge damage and to being pushed. Puff blinds nearby mobs for an escape.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705F6.title: "Relic: Lintwisp"
+	quest.42000000002705F7.quest_desc: [
+		"The Knotgarden: a grass island under four rings of hedge maze with gaps and spurs, cobble paths, rope-knot rings hung over them.",
+		"Four Frayed Thread and four leaves around a Void Yarn."
+	]
+	quest.42000000002705F7.title: "Totem: the Tangle"
+	quest.42000000002705F8.quest_desc: [
+		"The spider strings the paths shut behind you with rope-knots that take three hits to cut, and bites whoever is alone in a dead end. Stay together in the maze. Optional, mid-game, a cosmetic prize."
+	]
+	quest.42000000002705F8.title: "Re-tension: the Tangle"
+	quest.42000000002705F9.quest_desc: [
+		"Knotcharm: no slowdown on cobweb, soul sand, honey or powder snow, and half the slip on ice. Tangle roots the first mob it hits.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705F9.title: "Relic: Knotcharm"
+	quest.42000000002705FA.quest_desc: [
+		"The two insane arenas wait behind a door only the Reweave opens. Their totems need the Loomthread relic on the crafting grid, and answer only a Clowder that has closed its sky. The bosses are ten to twenty times your size. Bring everyone."
+	]
+	quest.42000000002705FA.title: "The sealed door"
+	quest.42000000002705FB.quest_desc: [
+		"The Severance: a great obsidian shard crossed by the glowing Cut, twenty world-shards drifting around it, teal void-tears in the air.",
+		"Frayed Thread and obsidian around the Loomthread relic; the relic is handed back."
+	]
+	quest.42000000002705FB.title: "Totem: the First Cut"
+	quest.42000000002705FC.quest_desc: [
+		"What severed the Loom. Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam. Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut. After the Reweave only."
+	]
+	quest.42000000002705FC.title: "Re-tension: the First Cut"
+	quest.42000000002705FD.quest_desc: [
+		"Shard of the First Cut: cuts through ward phases. Best-in-pack, reserved for those who passed.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.42000000002705FD.title: "Relic: Firstcut Shard"
+	quest.42000000002705FE.quest_desc: [
+		"The Loom Above: a purpur weave, nine strand-bridges to nine pillared platforms, twenty-seven cathedral threads to a keystone sixty-four blocks up.",
+		"Frayed Thread and obsidian around the Loomthread relic; the relic is handed back."
+	]
+	quest.42000000002705FE.title: "Totem: the Overweaver"
+	quest.42000000002705FF.quest_desc: [
+		"Your own restored Loom turned against you. The Overweaver throws shades of the nine guardians onto their strands; kill a shade and its thread pulls taut for twenty-five seconds, and only then can the loom itself be hurt. Later it throws three, then all nine."
+	]
+	quest.42000000002705FF.title: "Re-tension: the Overweaver"
+	quest.4200000000270600.quest_desc: [
+		"The Overweaver's Shuttle: an echo of every Strand relic in one, and it reweaves a fallen Clowder mate.",
+		"One per Clowder member present at the win, straight to inventory."
+	]
+	quest.4200000000270600.title: "Relic: Overweaver Shuttle"
 	reward.5000000000060135.title: "Thread of Return: +1 Clowder life"
 	reward.5000000000080193.title: "Thread of Return: +1 Clowder life"
 	reward.50000000000901CC.title: "Thread of Return: +1 Clowder life"

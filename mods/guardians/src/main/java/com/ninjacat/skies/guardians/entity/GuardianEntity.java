@@ -144,7 +144,7 @@ public abstract class GuardianEntity extends Monster {
         if (deathTimer >= 0) { tickDying(sl); return; }
         ageInFight++;
         bossEvent.setProgress(getHealth() / getMaxHealth());
-        for (ServerPlayer p : party()) bossEvent.addPlayer(p);
+        if (showsBossBar()) { for (ServerPlayer p : party()) bossEvent.addPlayer(p); } else if (!bossEvent.getPlayers().isEmpty()) bossEvent.removeAllPlayers();
         int ph = getHealth() <= getMaxHealth()*0.25F ? 3 : getHealth() <= getMaxHealth()*0.5F ? 2 : getHealth() <= getMaxHealth()*0.75F ? 1 : 0;
         if (ph != lastPhase) { lastPhase = ph; entityData.set(PHASE, ph); onPhase(ph); }
         tickMelee(sl);
@@ -248,7 +248,9 @@ public abstract class GuardianEntity extends Monster {
         if (hasCustomName()) bossEvent.setName(getDisplayName());
     }
     @Override public void setCustomName(@Nullable Component name) { super.setCustomName(name); bossEvent.setName(getDisplayName()); }
-    @Override public void startSeenByPlayer(ServerPlayer p) { super.startSeenByPlayer(p); bossEvent.addPlayer(p); }
+    /** Additive spawns (the Overweaver's shades, tagged {@code guardians_add}) fight without a boss bar of their own. */
+    public boolean showsBossBar() { return !getTags().contains("guardians_add"); }
+    @Override public void startSeenByPlayer(ServerPlayer p) { super.startSeenByPlayer(p); if (showsBossBar()) bossEvent.addPlayer(p); }
     @Override public void stopSeenByPlayer(ServerPlayer p) { super.stopSeenByPlayer(p); bossEvent.removePlayer(p); }
 
     // ------------------------------------------------------------------ helpers for mechanics
