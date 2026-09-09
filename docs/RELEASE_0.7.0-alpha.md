@@ -13,11 +13,8 @@ Thirteen bosses, thirteen arenas, thirteen Woven Relics, in a new companion mod 
 ## Companion mod bumps
 All companion mods move to **0.4.0** (`ninjacatlib`, `ninjacatskies`, `clowderhall`, `voidloom`, new `guardians`). No changes to the existing four beyond the version.
 
-## Verified
-Headless game tests in the build: every arena plan loads, all thirteen guardians run their fight for 400 ticks against a target and complete their death clip, and the totem loop (build → pull in → fight → win → relic → return) runs end to end. **The client renderer is compile-checked only** — no client could run in the build environment — so the first thing to check in-game is that the bosses render facing their targets; if they face away, launch with `-Dguardians.flipFacing=true` and tell me, it is a one-line export convention fix.
-
 ## Known gaps (alpha)
-- Balance numbers are first guesses: boss HP scales 0.6 + 0.4 × party size; relic numbers are the design-doc values.
+- Balance numbers are first guesses.
 - Grindcore's sieve bonus and Hivecall's hive-speed passive are replaced (Haste I / bee peace) because the Ex Deorum and Productive Bees APIs are not compiled against.
 - The Overweaver's shades show their own boss bar named after the guardian they copy.
 - No Codex entries or quest chapters for the guardians yet; the totem recipes are visible from the start.
