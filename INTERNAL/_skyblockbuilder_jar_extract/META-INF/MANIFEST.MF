@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: SkyblockBuilder
-Specification-Title: skyblockbuilder
-Specification-Version: 1
-Implementation-Version: 21.1.31
-Implementation-Timestamp: 2026-06-07T09:40:37+02:00
-Automatic-Module-Name: mcmods.skyblockbuilder
-
