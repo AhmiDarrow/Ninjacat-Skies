@@ -7,7 +7,7 @@
 **/runs/
 *.class
 *.jar
-!gradle/wrapper/gradle-wrapper.jar
+!**/gradle/wrapper/gradle-wrapper.jar
 *.log
 
 # IDE
@@ -31,8 +31,8 @@ tools/secrets/*
 pack/mods/*.jar
 pack/.packwizignore
 
-# Session staging scratch
-INTERNAL/_stage/
+# Local research / agent notes — never commit
+INTERNAL/
 
 # Export output
 dist/
@@ -51,6 +51,4 @@ node_modules/
 **/logs/
 **/saves/
 
-# Note: INTERNAL/ stays in private clones for requirements/research.
-# It must never be included in CurseForge zips (enforced by export + gates).
 tools/gates/rhino/build/
