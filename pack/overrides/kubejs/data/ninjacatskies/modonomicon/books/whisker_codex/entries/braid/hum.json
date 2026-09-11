@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Hum",
+  "description": "Spark Strand — Hum.",
+  "icon": "tribalpower:drumheart",
+  "x": 8,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The work",
+      "text": "**Assignment list:** chapter **Strand: Spark**. A peer path.\n\nStrike a Drumheart before you touch a wire. Spirit Pulse is the power here; Powah and Mekanism are bridges you cross later, if you want.\n\nBone Chime, Spirit Shard, Copper Resonator, Drumheart. Finish the **Spark Knot** and seat Spark. Then listen."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Hum",
+      "text": "The Drumhearts kept the beat under the whole sky. The drum is not loud. The drum is steady. Be the drum."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/edge",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

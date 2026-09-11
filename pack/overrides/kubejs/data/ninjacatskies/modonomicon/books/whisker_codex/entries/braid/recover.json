@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Recover",
+  "description": "Stone Strand — Recover.",
+  "icon": "voidloom:spindle_hammer",
+  "x": 2,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The work",
+      "text": "**Assignment list:** chapter **Strand: Stone**.\n\nUnravel Thread to string, spin yarn, tie a Binding Knot, raise a Loomframe. The Tension Barrel makes clay; clay makes porcelain; porcelain carries lava.\n\nThen the sieve — a tool inside Recover, not the name of it. Iron mesh is the target: Strand Filament starts there. Finish the **Stone Knot** and seat Stone."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Recover",
+      "text": "The Grit-singers named every shard by its echo. Recover is pulling the fallen world back into matter."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/wake",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

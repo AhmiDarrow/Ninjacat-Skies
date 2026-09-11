@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:the_work",
+  "name": "The Loom Braid",
+  "description": "The Ninjacat Skies storyline, in order.",
+  "icon": "minecraft:string",
+  "x": 2,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "This is the storyline",
+      "text": "Nine Strands. Seat each token at a **Tension Post**. That is the campaign. Side chapters (sieve, storage, bees-as-a-board) are optional depth — they are not the story.\n\n1. **Wake — Soil.** Claim a pad. Soil Knot → seat Soil.\n2. **Recover — Stone.** Yarn, knots, meshes. Stone Knot → seat Stone.\n3. **Root — Sprout.** Food and essence. Sprout Knot → seat Sprout.\n4. **Edge — Claw.** Kit up and leave the pad on purpose. Claw Knot → seat Claw. The braid opens."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Peers, then the close",
+      "text": "5–7. **Pattern / Colony / Hum** — Clock, Swarm, Spark. Peers. Any **two** seated unlock Bind. You do not have to finish all three.\n8. **Bind — Sigil.** Spin **Braid Cord** at the Post (a Strand Filament, two peers seated). Sigil Knot → seat Sigil.\n9. **Reweave — Spindle.** Digital loom, Gate Drum, a March stone. All nine seated, stone on the Post → the Fragment. Seat the Fragment. The cut closes above your pad."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:the_work/this_book",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

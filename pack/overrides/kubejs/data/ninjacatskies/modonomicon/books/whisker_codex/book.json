@@ -1,0 +1,8 @@
+{
+  "name": "Whisker Codex",
+  "tooltip": "The campaign — story and what to do.",
+  "description": "The Loom was cut. This book is the campaign: what happened, what you do next, who kept the nine Strands.",
+  "generate_book_item": false,
+  "default_title_color": 13936715,
+  "auto_add_read_conditions": false
+}

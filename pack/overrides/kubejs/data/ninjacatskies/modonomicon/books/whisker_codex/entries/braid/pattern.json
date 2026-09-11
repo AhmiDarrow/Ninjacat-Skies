@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Pattern",
+  "description": "Clock Strand — Pattern.",
+  "icon": "create:cogwheel",
+  "x": 8,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The work",
+      "text": "**Assignment list:** chapter **Strand: Clock**. A peer path — not a gate you must finish first.\n\nCreate. Water wheels, presses, mixers, belts — one cog, then the same cog again. The precision mechanism wants a Binding Knot at its heart.\n\nFinish the **Clock Knot** and seat Clock. One of the two seats Bind needs."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Pattern",
+      "text": "The Pattern-weavers sang factories the way you would sing a round. A factory is a song that has stopped needing the singer."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/edge",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "The Listening Pit and the Gates",
+  "description": "Patterns, ore, voices, travel.",
+  "icon": "tribalpower:resonance_mesh",
+  "x": 8,
+  "y": 7,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Placement is the ritual",
+      "text": "Devices that claim to be rites have to be arranged, not scattered. Seven shapes, all rotation-independent: the Stone Font, the Listening Pit, the Rite Circle, the Voice Ring, the Shatter Array and both gates. A Voice Ring of totems at radius 3 around a Pulse Resonator is opt-in — a scattered heap still works, but counts at most five voices."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "tribalpower:stone_font",
+        "count": 1
+      },
+      "title": "Stone Font",
+      "text": "The starter rite. A font and four chalk marks asks for cobblestone at 4 Pulse a second. Brace it and bring Earth for stone. Add Fire and Water for obsidian at 24 Pulse a second, or feed 250 mB water and 250 mB lava for the same obsidian at 6."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "tribalpower:resonance_mesh",
+        "count": 1
+      },
+      "title": "Listening Pit",
+      "text": "Stone, four Anchor Stones, chalk to the middle, a Resonance Mesh, an Ancestral Cache and Earth in reach. Metals come out raw or as grit; gems skip the fire. A sample on top is a filter, never an ingredient. Mining stays cheaper; the pit buys walking away from it."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "One voice, one source",
+      "text": "Earth is the Drumheart. Fire is the Ember Horn (furnace fuel, up to 20/s). Air is the Wind Harp (altitude, sky, weather). Water is the Wave Drum (adjacent or piped). Spirit is the Wake Bell (nearby deaths). Loom is the Loom Anchor (1/s per distinct voice). Pulse Cairns hold 4,000 each, five to a column."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "tribalpower:gate_keystone",
+        "count": 1
+      },
+      "title": "Way Gate and Far Gate",
+      "text": "The Gate Drum stays the portable way into the March. A Way Gate is a five-by-five frame, 20 Pulse a traveller, linked within 64 blocks. A Far Gate is taller, braced, Loom-voiced, linked with a Gate Sigil, 120 Pulse a traveller. Players, mobs and items all pass. `/tribalpower gate list`."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/living_lattice",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

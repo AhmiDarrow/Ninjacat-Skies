@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:the_cut",
+  "name": "The Cut",
+  "description": "Something severed the Loom.",
+  "icon": "minecraft:shears",
+  "x": 2,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Cut",
+      "text": "Something severed the Loom. The Codex does not know what. Neither did the tribes, by the end.\n\nContinents fell. The tribes scattered. What did not fall is what you are standing on: pads of earth the Strands still remember."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "The Fray",
+      "text": "Above the Dock stands a slow dark column. That is the cut itself — the **Fray** — standing over the place the sky used to knot.\n\nIt thins as Clowders tension Strands. When every Clowder has rewoven, it turns to lit thread. Go look at it now and then. It is the only clock this campaign has."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:the_cut/loom",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

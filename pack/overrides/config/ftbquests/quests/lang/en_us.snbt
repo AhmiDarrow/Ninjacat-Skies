@@ -1,38 +1,38 @@
 {
 	chapter.3100000000000001.chapter_subtitle: [
-		"Wake — survive, claim the pad, let the Codex wake."
+		"The campaign starts here. Wake (Soil): survive, Soil Knot, then seat the token at a Tension Post."
 	]
 	chapter.3100000000000001.title: "Strand: Soil"
 	chapter.3100000000000002.chapter_subtitle: [
-		"Recover — pull the fallen world back into matter."
+		"Recover (Stone): yarn, knots, meshes. Stone Knot, then seat the token."
 	]
 	chapter.3100000000000002.title: "Strand: Stone"
 	chapter.3100000000000003.chapter_subtitle: [
-		"Root — grow anchors so the pad stops fraying."
+		"Root (Sprout): food and essence. Sprout Knot, then seat the token."
 	]
 	chapter.3100000000000003.title: "Strand: Sprout"
 	chapter.3100000000000004.chapter_subtitle: [
-		"Edge — kit up and leave the pad on purpose."
+		"Edge (Claw): kit up and leave the pad. Claw Knot, seat it — the braid opens to three peers."
 	]
 	chapter.3100000000000004.title: "Strand: Claw"
 	chapter.3100000000000005.chapter_subtitle: [
-		"Hum — rhythm and pulse before wires."
+		"Hum (Spark): a peer path. Drumheart before wires. Spark Knot, then seat it. Any two peers unlock Bind."
 	]
 	chapter.3100000000000005.title: "Strand: Spark"
 	chapter.3100000000000006.chapter_subtitle: [
-		"Pattern — a factory as a song that carries itself."
+		"Pattern (Clock): a peer path. Factory as a repeating song. Clock Knot, then seat it."
 	]
 	chapter.3100000000000006.title: "Strand: Clock"
 	chapter.3100000000000007.chapter_subtitle: [
-		"Colony — keep something alive that keeps something else alive."
+		"Colony (Swarm): a peer path. Keep something alive that keeps something else alive. Swarm Knot, then seat it."
 	]
 	chapter.3100000000000007.title: "Strand: Swarm"
 	chapter.3100000000000008.chapter_subtitle: [
-		"Bind — seals, rites, and two braid paths in a cord."
+		"Bind (Sigil): two peers seated, Braid Cord at the Post, then Sigil Knot and seat it."
 	]
 	chapter.3100000000000008.title: "Strand: Sigil"
 	chapter.3100000000000009.chapter_subtitle: [
-		"Reweave — the digital loom, the March, the Fragment."
+		"Reweave (Spindle): digital loom, March stone, Fragment. Seat the Fragment — the storyline ends here."
 	]
 	chapter.3100000000000009.title: "Strand: Spindle"
 	chapter.310000000000000A.title: "Deep Sieve"
@@ -41,7 +41,7 @@
 	chapter.310000000000000D.title: "Powah Grid"
 	chapter.310000000000000E.title: "Arcane Side"
 	chapter.310000000000000F.chapter_subtitle: [
-		"Teams, the Hall, the Post, and the Fray."
+		"Teams, the Hall, the Post, and the Fray. The Post is where the campaign is seated."
 	]
 	chapter.310000000000000F.title: "Clowder Hall"
 	chapter.3100000000000010.chapter_subtitle: [
@@ -96,8 +96,7 @@
 	file.0000000000000001.title: "Ninjacat Skies"
 	quest.4200000000010001.quest_desc: [
 		"You are Skybound. This is what did not fall.",
-		"Eight logs. Start with the tree; it started with you.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
+		"Wake is Soil — the first Strand of the Ninjacat Skies storyline. Eight logs. Start with the tree."
 	]
 	quest.4200000000010001.title: "Wake on a Pad"
 	quest.4200000000010002.quest_desc: [
@@ -159,8 +158,8 @@
 	]
 	quest.420000000001000E.title: "Frayed Currency"
 	quest.420000000001000F.quest_desc: [
-		"Damaged, but it still assigns work.",
-		"Right-click for quests and rewards. Shift + right-click for the lore pages."
+		"This is the campaign book. Right-click it.",
+		"Story, the braid, what to do. Grave (`) is the live list with rewards — same campaign, not a second mode."
 	]
 	quest.420000000001000F.title: "Codex in Hand"
 	quest.4200000000010010.quest_desc: [
@@ -360,14 +359,14 @@
 	]
 	quest.4200000000010040.title: "Leather"
 	quest.4200000000010041.quest_desc: [
-		"Bench, sapling, hearth, water, Codex. The pad holds.",
-		"Tension the Strand: the Pad-keepers answer, and the token is yours to seat."
+		"Bench, sapling, hearth, water, Codex. Wake is done when this ticks.",
+		"Claim the Soil token. Right-click your Tension Post with it. Seating is the storyline — not optional flavour."
 	]
 	quest.4200000000010041.quest_subtitle: "Wake"
 	quest.4200000000010041.title: "Soil Knot"
 	quest.4200000000010042.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done."
 	]
 	quest.4200000000010042.title: "Seat Soil"
 	quest.4200000000010043.quest_desc: [
@@ -375,6 +374,13 @@
 		"Light the edges."
 	]
 	quest.4200000000010043.title: "Something Came Up"
+	quest.4200000000018001.quest_desc: [
+		"This is the Ninjacat Skies storyline. Nine Strands, in order: Soil, Stone, Sprout, Claw — then any two of Clock, Swarm, Spark — then Sigil, then Spindle.",
+		"Each Strand chapter ends in a Knot. The Knot gives a Strand token. Right-click your Tension Post with the token to seat it. Seated tokens are the campaign. Grave (`) is this assignment list; the Whisker Codex is the same campaign as a book.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
+	]
+	quest.4200000000018001.quest_subtitle: "The campaign"
+	quest.4200000000018001.title: "The Loom Braid"
 	quest.4200000000020044.quest_desc: [
 		"Thread that remembers where it came from.",
 		"Unravel Thread to string; four string spin two yarn.",
@@ -582,14 +588,14 @@
 	]
 	quest.4200000000020075.title: "Spider Eye"
 	quest.4200000000020076.quest_desc: [
-		"Yarn, porcelain, a Loomframe working, iron in the chest.",
-		"Tension the Strand: the Grit-singers answer."
+		"Yarn, porcelain, a Loomframe working, iron in the chest. Recover is done when this ticks.",
+		"Claim the Stone token and seat it at the Post. The Grit-singers answer."
 	]
 	quest.4200000000020076.quest_subtitle: "Recover"
 	quest.4200000000020076.title: "Stone Knot"
 	quest.4200000000020077.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done."
 	]
 	quest.4200000000020077.title: "Seat Stone"
 	quest.4200000000020078.quest_desc: [
@@ -778,14 +784,14 @@
 	]
 	quest.42000000000300A5.title: "Nether Wart"
 	quest.42000000000300A6.quest_desc: [
-		"A field, a kitchen, essence rising.",
-		"Tension the Strand: the Rootbinders answer."
+		"A field, a kitchen, essence rising. Root is done when this ticks.",
+		"Claim the Sprout token and seat it. The Rootbinders answer."
 	]
 	quest.42000000000300A6.quest_subtitle: "Root"
 	quest.42000000000300A6.title: "Sprout Knot"
 	quest.42000000000300A7.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done."
 	]
 	quest.42000000000300A7.title: "Seat Sprout"
 	quest.42000000000300A8.quest_desc: [
@@ -932,14 +938,14 @@
 	]
 	quest.42000000000400CA.title: "Spyglass"
 	quest.42000000000400CB.quest_desc: [
-		"Plans, iron on your back, a door out.",
-		"Tension the Strand: the Edge-walkers answer. The braid opens."
+		"Plans, iron on your back, a door out. Edge is done when this ticks.",
+		"Seat Claw. The braid opens: Pattern, Colony, and Hum are peers — any two unlock Bind."
 	]
 	quest.42000000000400CB.quest_subtitle: "Edge"
 	quest.42000000000400CB.title: "Claw Knot"
 	quest.42000000000400CC.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done."
 	]
 	quest.42000000000400CC.title: "Seat Claw"
 	quest.42000000000400CD.quest_desc: [
@@ -990,7 +996,7 @@
 	]
 	quest.42000000000500D7.title: "Hum: Ley Collector"
 	quest.42000000000500D8.quest_desc: [
-		"Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony."
+		"Seat a reusable Echo catalyst; add two different totem voices. A scattered heap counts at most five. A Voice Ring at radius 3 is six-voice resonance. Redstone pauses it."
 	]
 	quest.42000000000500D8.title: "Hum: Pulse Resonator"
 	quest.42000000000500D9.quest_desc: [
@@ -1154,14 +1160,14 @@
 	]
 	quest.4200000000050100.title: "Ritual Chalk"
 	quest.4200000000050101.quest_desc: [
-		"A drum struck, a Pulse held, a resonator burning.",
-		"Tension the Strand: the Drumhearts answer."
+		"A drum struck, a Pulse held, a resonator burning. Hum is done when this ticks.",
+		"Seat Spark. One of the two peer seats Bind needs."
 	]
 	quest.4200000000050101.quest_subtitle: "Hum"
 	quest.4200000000050101.title: "Spark Knot"
 	quest.4200000000050102.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done."
 	]
 	quest.4200000000050102.title: "Seat Spark"
 	quest.4200000000050103.quest_desc: [
@@ -1363,14 +1369,14 @@
 	]
 	quest.4200000000060133.title: "Extendo Grip"
 	quest.4200000000060134.quest_desc: [
-		"A wheel, a press, a mixer, a fan, a clockwork heart.",
-		"Tension the Strand: the Pattern-weavers answer."
+		"A wheel, a press, a mixer, a fan, a clockwork heart. Pattern is done when this ticks.",
+		"Seat Clock. One of the two peer seats Bind needs."
 	]
 	quest.4200000000060134.quest_subtitle: "Pattern"
 	quest.4200000000060134.title: "Clock Knot"
 	quest.4200000000060135.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes.",
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
 		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
 	quest.4200000000060135.title: "Seat Clock"
@@ -1568,14 +1574,14 @@
 	]
 	quest.4200000000070164.title: "Orange Tulip"
 	quest.4200000000070165.quest_desc: [
-		"A nest you built, a hive you moved, a centrifuge, an incubator, essence fields.",
-		"Tension the Strand: the Colony-keepers answer."
+		"A nest you built, a hive you moved, a centrifuge, an incubator, essence fields. Colony is done when this ticks.",
+		"Seat Swarm. One of the two peer seats Bind needs."
 	]
 	quest.4200000000070165.quest_subtitle: "Colony"
 	quest.4200000000070165.title: "Swarm Knot"
 	quest.4200000000070166.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done."
 	]
 	quest.4200000000070166.title: "Seat Swarm"
 	quest.4200000000070167.quest_desc: [
@@ -1756,14 +1762,14 @@
 	]
 	quest.4200000000080191.title: "Echo Shard"
 	quest.4200000000080192.quest_desc: [
-		"A braid spun, potions bottled, spells and spirits called.",
-		"Tension the Strand: the Seal-carvers answer."
+		"A braid spun, potions bottled, spells and spirits called. Bind is done when this ticks.",
+		"Seat Sigil. Then Spindle — the digital loom, the March, the Fragment."
 	]
 	quest.4200000000080192.quest_subtitle: "Bind"
 	quest.4200000000080192.title: "Sigil Knot"
 	quest.4200000000080193.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes.",
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
 		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign."
 	]
 	quest.4200000000080193.title: "Seat Sigil"
@@ -1984,14 +1990,14 @@
 	]
 	quest.42000000000901C8.title: "Spirit Reed"
 	quest.42000000000901C9.quest_desc: [
-		"A braid, a digital loom, a gate, a stone from the March.",
-		"Tension the ninth Strand. Then the Fragment, then the Post."
+		"A braid, a digital loom, a gate, a stone from the March. The ninth Strand.",
+		"Seat Spindle, then right-click the Post with a March stone for the Fragment. Seat the Fragment. The cut closes."
 	]
 	quest.42000000000901C9.quest_subtitle: "Reweave"
 	quest.42000000000901C9.title: "Spindle Knot"
 	quest.42000000000901CA.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token.",
-		"The notch lights, the tribe chimes, the pad changes."
+		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
+		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done."
 	]
 	quest.42000000000901CA.title: "Seat Spindle"
 	quest.42000000000901CB.quest_desc: [
@@ -2509,7 +2515,7 @@
 	]
 	quest.42000000000F0247.title: "Strand Banner"
 	quest.42000000000F0248.quest_desc: [
-		"Open the Codex path."
+		"Grave (`): the assignment list. The Codex is the same campaign as a book."
 	]
 	quest.42000000000F0248.title: "Quest Book"
 	quest.42000000000F0249.quest_desc: [
@@ -5521,7 +5527,7 @@
 	]
 	quest.4200000000220532.title: "Ritual Chalk (Tribal)"
 	quest.4200000000220533.quest_desc: [
-		"Place the heart — Chime + Shard + leather (Desk sells leather)."
+		"Place the heart — Chime + Shard + leather (Desk sells leather). A rising edge 17 to 23 ticks after the last is 24 Pulse; anything else 10; nothing closer than 8 ticks counts. A one-second clock is a buff; a fast spam clock is a nerf."
 	]
 	quest.4200000000220533.title: "Drumheart Beat"
 	quest.4200000000220534.quest_desc: [
@@ -5537,7 +5543,7 @@
 	]
 	quest.4200000000220536.title: "Pulse Cell"
 	quest.4200000000220537.quest_desc: [
-		"Seat a reusable Echo catalyst; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it."
+		"Seat a reusable Echo catalyst; add two different totem voices within eight blocks. A scattered heap counts at most five voices. A Voice Ring of totems at radius 3 is what six-voice resonance now means. Redstone pauses it."
 	]
 	quest.4200000000220537.title: "Pulse Resonator"
 	quest.4200000000220538.quest_desc: [
@@ -5955,31 +5961,31 @@
 	]
 	quest.4200000000228010.title: "The camp keeps the beat"
 	quest.4200000000228011.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Knotted Root beside an Earth Seal; 600 Pulse. For twenty minutes crops, saplings and stems in the nine chunks around the brazier grow faster. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+		"Two stone and the reagent around the seal; the seal is handed back. Knotted Root beside an Earth Seal; 600 Pulse. For twenty minutes crops, saplings and stems in the nine chunks around the brazier grow faster. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks."
 	]
 	quest.4200000000228011.title: "Rite Tablet: Green Blessing"
 	quest.4200000000228012.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Reed Fang beside a Water Seal; 400 Pulse. Twenty minutes of rain, for the cisterns and the crops. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+		"Two stone and the reagent around the seal; the seal is handed back. Reed Fang beside a Water Seal; 400 Pulse. Twenty minutes of rain, for the cisterns and the crops. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks."
 	]
 	quest.4200000000228012.title: "Rite Tablet: Rain Calling"
 	quest.4200000000228013.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Storm Wing beside an Air Seal; 400 Pulse. Forty minutes of clear sky. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+		"Two stone and the reagent around the seal; the seal is handed back. Storm Wing beside an Air Seal; 400 Pulse. Forty minutes of clear sky. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks."
 	]
 	quest.4200000000228013.title: "Rite Tablet: Sky Clearing"
 	quest.4200000000228014.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Ember Heart beside a Fire Seal; 800 Pulse. Hurries the night to the next sunrise for the whole world. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+		"Two stone and the reagent around the seal; the seal is handed back. Ember Heart beside a Fire Seal; 800 Pulse. Hurries the night to the next sunrise for the whole world. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks."
 	]
 	quest.4200000000228014.title: "Rite Tablet: Dawn Calling"
 	quest.4200000000228015.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Sentinel Sigil beside a Spirit Seal; 600 Pulse. Fifteen minutes without hostile spawns within sixty-four blocks. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+		"Two stone and the reagent around the seal; the seal is handed back. Sentinel Sigil beside a Spirit Seal; 600 Pulse. Fifteen minutes without hostile spawns within sixty-four blocks. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks."
 	]
 	quest.4200000000228015.title: "Rite Tablet: Still Night"
 	quest.4200000000228016.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks."
+		"Two stone and the reagent around the seal; the seal is handed back. Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks."
 	]
 	quest.4200000000228016.title: "Rite Tablet: Ley Binding"
 	quest.4200000000228017.quest_desc: [
-		"Perform any rite. If the lattice around the brazier holds too little Pulse, nothing is consumed and the brazier says so."
+		"Perform any rite. Tablet rites need the Rite Circle; a seated blessing does not. If the lattice around the brazier holds too little Pulse, nothing is consumed and the brazier says so."
 	]
 	quest.4200000000228017.title: "First Rite"
 	quest.4200000000228018.quest_desc: [
@@ -6011,9 +6017,109 @@
 	]
 	quest.420000000022801E.title: "A line in the song"
 	quest.420000000022801F.quest_desc: [
-		"Sneak-use the Spirit Codex on any Tribal block for a plain report: stored Pulse, the generators feeding it, the attunements within eight blocks, what is missing for the current recipe, a full output, a redstone pause, an unloaded relay end. Tick this when it has told you something you did not know."
+		"Sneak-use the Spirit Codex on any Tribal block for a plain report: stored Pulse, the generators feeding it, the attunements within eight blocks, what is missing for the current recipe, a full output, a redstone pause, an unloaded relay end. On a pattern anchor it names the tier, the facing, and the first three things missing, with particle ghosts where they should go. Tick this when it has told you something you did not know."
 	]
 	quest.420000000022801F.title: "Ask the Codex why"
+	quest.4200000000228020.quest_desc: [
+		"Echo Shards and cobble around a Drumheart. A font and four chalk marks asks for cobblestone at 4 Pulse a second — slow enough to run on a hand-drummed Drumheart. Brace it with Anchor Stones and bring Earth for stone. Add Fire and Water for obsidian at 24 Pulse a second, or feed 250 mB water and 250 mB lava for the same obsidian at 6. The Pad-keepers keep one working at their camp."
+	]
+	quest.4200000000228020.title: "Ask the stone to stay"
+	quest.4200000000228021.quest_desc: [
+		"Complete any pattern. Placement is the ritual: scattered devices are not a rite. Seven shapes, all rotation-independent. Sneak-use the Spirit Codex on the anchor and it names the tier, the facing, and the first three things missing, with particle ghosts where they should go."
+	]
+	quest.4200000000228021.title: "Draw the Circle"
+	quest.4200000000228022.quest_desc: [
+		"Let the Stone Font finish one craft. Held redstone stills it; a struck pulse calls it once. A comparator reads its progress. Camp members count as owners."
+	]
+	quest.4200000000228022.title: "Stone Stays"
+	quest.4200000000228023.quest_desc: [
+		"Sneak-use the Spirit Codex on a Stone Font, a Resonance Mesh or a gate keystone. The ghosts are the pattern. Tick this when it has shown you a gap."
+	]
+	quest.4200000000228023.title: "See the missing pieces"
+	quest.4200000000228024.quest_desc: [
+		"The Drumheart now pays by the same tempo the hand already used: 24 Pulse on a 17-to-23-tick rising edge, 10 otherwise, nothing closer than 8 ticks. A one-second clock is a large buff. A fast spam clock is a nerf. Tick this when you have retuned a farm, or when a hand strike still feels right."
+	]
+	quest.4200000000228024.title: "Keep the tempo"
+	quest.4200000000228025.quest_desc: [
+		"March Stone, Attuned Echo, Spiritweave and a Copper Resonator. Seat it at the centre of a Listening Pit: stone underfoot, four Anchor Stones at the corners, chalk from each edge to the middle, an Ancestral Cache beside it and the Earth voice in reach. It calls up exactly what a silk-touch mining trip would — the raw item for a metal, the ore block for a gem. The Grit-singers keep a whole pit at their camp."
+	]
+	quest.4200000000228025.title: "The Grit-singers' machine"
+	quest.4200000000228026.quest_desc: [
+		"Four from March Stone and an Echo Shard. They brace a Stone Font, a Listening Pit and a Far Gate. Without them the pattern will not close."
+	]
+	quest.4200000000228026.title: "Brace the corners"
+	quest.4200000000228027.quest_desc: [
+		"Run one Listening Pit cycle. Four bands: common (coal, copper, iron), deep (gold, redstone, lapis), hot (Nether quartz and gold, never debris) and rare (diamond, emerald, and whatever the pack added). Deep Listening is seven-by-seven; the Grit-singers gate those bands by standing — Friend, Kin, then Voice with their Kinship Totem inside the pattern. A sample on top is a filter, never an ingredient. Mining stays cheaper; the pit buys walking away from it."
+	]
+	quest.4200000000228027.title: "Ask the Ground"
+	quest.4200000000228028.quest_desc: [
+		"A metal goes raw or silk-touched ore to grit to ingot in any furnace. A gem skips the fire: silk-touched ore shatters straight into the gem at twice the ore's own drop. The gem itself is never an input. Modded metals ride one Mineral Grit that names its material. Tick this when a furnace has eaten grit, or when a gem came out of the pit without one."
+	]
+	quest.4200000000228028.title: "Grit is the metal; gems skip the fire"
+	quest.4200000000228029.quest_desc: [
+		"Water washes for 250 mB and an extra output every third cycle. Air quickens the cycle so Pulse per item does not move. Fire opens the hot band at twice the Pulse. Spirit listens a band deeper. The Loom halves the substrate. Tick this when a second voice has changed what the pit gave you."
+	]
+	quest.4200000000228029.title: "Every voice trades, none multiply"
+	quest.420000000022802A.quest_desc: [
+		"March Stone, copper and an Echo Shard make four frames. A Way Gate is a five-by-five ring without its corners, keystone at the bottom centre. Players, mobs and dropped items all pass."
+	]
+	quest.420000000022802A.title: "A ring of the way"
+	quest.420000000022802B.quest_desc: [
+		"Frames around a Resonant Core, with a Spirit Shard and a Pulse Cell. 400 Pulse to light a Way Gate out of its own 600; 20 Pulse per traveller. Link with a bound Waystone Compass or with chalk, within 64 blocks. A comparator reads 0 unlinked, 1 to 14 stored Pulse, 15 mid-transit. Break a keystone and its partner is released. `/tribalpower gate list` and `/tribalpower gate unlink`."
+	]
+	quest.420000000022802B.title: "The stone that remembers both ends"
+	quest.420000000022802C.quest_desc: [
+		"Light a Way Gate. It lands you inside the far gate's own interior and never terraforms; if there is nowhere to stand, the trip refuses and the Pulse comes back. The far end is held loaded around your arrival."
+	]
+	quest.420000000022802C.title: "Open the Way"
+	quest.420000000022802D.quest_desc: [
+		"Blank Seal, Loom Thread and a Spirit Shard. The Far Gate is a taller frame braced by four Anchor Stones, with the Loom voice nearby — so crossing dimensions sits behind The Unsung. Linked with a Gate Sigil; 120 Pulse per traveller. The astral relay still needs no frame."
+	]
+	quest.420000000022802D.title: "A name for the long thread"
+	quest.420000000022802E.quest_desc: [
+		"Travel a Far Gate. Crossing dimensions is a built rite, not a compass trick. Camp members count as owners of the keystones."
+	]
+	quest.420000000022802E.title: "The Long Thread"
+	quest.420000000022802F.quest_desc: [
+		"Copper, a Cinder Knot, a Fire Seal and March Planks. Burns furnace fuel for up to 20 Pulse a second while lit. Uncapped on purpose — it spends something. The Drumhearts keep one at their camp."
+	]
+	quest.420000000022802F.title: "Fire keeps a furnace"
+	quest.4200000000228030.quest_desc: [
+		"Spiritweave, a Storm Wing, an Air Seal and March Planks. 2 Pulse a second at y 80 under open sky, up to 6 high in a storm. Harps within 12 blocks divide the wind. The Pattern-weavers keep one at their camp."
+	]
+	quest.4200000000228030.title: "Air sings the altitude"
+	quest.4200000000228031.quest_desc: [
+		"Leather, March Planks, a Knotted Root and a Water Seal. 3 Pulse a second beside water, 10 for 100 mB a second, doubled in rain. Passive drums within 8 blocks divide the water; a piped drum is uncapped. The Rootbinders keep one at their camp."
+	]
+	quest.4200000000228031.title: "Water keeps time"
+	quest.4200000000228032.quest_desc: [
+		"A Bell Fragment, copper, a Spirit Seal and a Spirit Shard. 20 Pulse a hostile death, 5 a passive, tolled out at no more than 8 a second. A 2,000 reservoir, then it idles. The Seal-carvers keep one at their camp."
+	]
+	quest.4200000000228032.title: "Spirit tolls the dead"
+	quest.4200000000228033.quest_desc: [
+		"March Crystal, Loom Thread, Spiritweave and a Resonant Core. 1 Pulse a second per distinct nearby voice, max 6, doubled during a Ley Binding. The Crystal Spire keeps one."
+	]
+	quest.4200000000228033.title: "The Loom counts the choir"
+	quest.4200000000228034.quest_desc: [
+		"March Stone, Bound Echo and a Pulse Cell. 4,000 Pulse each, five to a column. Turns a mob farm's bursty Wake Bell into the steady draw a pit wants. A held signal stills every generator; a comparator reads the buffer."
+	]
+	quest.4200000000228034.title: "Hold the burst"
+	quest.4200000000228035.quest_desc: [
+		"Have all six generators producing within 32 blocks of each other, one per voice: Drumheart, Ember Horn, Wind Harp, Wave Drum, Wake Bell, Loom Anchor. No automatable loop is net positive. Coal through the pit and back costs more than it returns."
+	]
+	quest.4200000000228035.title: "Six Voices Singing"
+	quest.4200000000228036.quest_desc: [
+		"Two stone and Spirit Reed around a Water Seal; the seal is handed back. 300 Pulse marks an adjacent Spirit Cistern a spring, refilling 100 mB a second for ten minutes. It is where the water for a Wave Drum, for Washing, and for anything else that drinks comes from. March-side lava stays a manual haul."
+	]
+	quest.4200000000228036.title: "Rite Tablet: Spring Calling"
+	quest.4200000000228037.quest_desc: [
+		"One Drum Circle record sits in a chest at the circle; The Unsung carries another. Play it in a jukebox. There is no craft — the March kept the song."
+	]
+	quest.4200000000228037.title: "The circle still plays"
+	quest.4200000000228038.quest_desc: [
+		"Rite Pedestals now hold and show one item; a comparator reads occupied. That is an automatic rite loop: a relay restocks a pedestal, a clock strikes the brazier, the tablet fires, the comparator reports empty. No fake players. Tick this when a circle has stood, or when a comparator has told you a pedestal is empty."
+	]
+	quest.4200000000228038.title: "Four pedestals, chalk, a brazier"
 	quest.420000000023058C.quest_desc: [
 		"Grit-singers never cut a stone the same way twice. This bench remembers every cut.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."

@@ -1,0 +1,23 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Wake",
+  "description": "Soil Strand — Wake.",
+  "icon": "minecraft:oak_sapling",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The work",
+      "text": "**Assignment list:** chapter **Strand: Soil**.\n\nClaim the pad. Wood, dirt, a bench, a sapling, a chest, warmth. Melt ice with lava for water on Normal and Hard. Cook something.\n\nFinish the **Soil Knot**. It hands you the Soil token. Raise a Tension Post and **seat** it. The pad starts mending you. Until that token is seated, Wake is not done."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Wake",
+      "text": "The Pad-keepers kept hearths, not fires — the warmth in thin dirt. Wake is that work: make the pad hold you."
+    }
+  ]
+}

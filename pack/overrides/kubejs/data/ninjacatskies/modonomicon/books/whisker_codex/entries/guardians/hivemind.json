@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "The Hivemind",
+  "description": "Keeper of the Swarm Strand.",
+  "icon": "guardians:frayed_totem_hivemind",
+  "x": 2,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Hivemind",
+      "text": "The Comb: a hexagonal wax arena of rising and falling comb cells, honey pools, and six drone cells in the wall.\n\nThe Hivemind is fragile but every wave its six cells pour drones. A campfire set on a drone cell seals it for thirty seconds; seal all six and the royal chamber opens for ten. Your own Productive Bees attack the drones on sight."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:frayed_totem_hivemind",
+        "count": 1
+      },
+      "title": "Frayed Totem",
+      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:relic_hivecall",
+        "count": 1
+      },
+      "title": "Woven Relic",
+      "text": "Hivecall: bees never turn on you, and hives within sixteen blocks work a tenth faster. Call the Swarm sends four relic-bees after whatever you hit."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:guardians/the_ritual",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/swarm"
+  }
+}

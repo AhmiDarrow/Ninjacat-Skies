@@ -1,0 +1,40 @@
+{
+  "category": "ninjacatskies:braid",
+  "name": "Bind",
+  "description": "Sigil Strand — Bind.",
+  "icon": "ninjacatskies:braid_cord",
+  "x": 10,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The work",
+      "text": "**Assignment list:** chapter **Strand: Sigil**.\n\nGate: two of Clock, Swarm, Spark **seated**. Then a Strand Filament in hand, right-click the Post: **Braid Cord**.\n\nSeals and rites — Tribal Power's own, with Nature's Aura, Ars Nouveau, and Occultism as peers. Finish the **Sigil Knot** and seat Sigil."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Bind",
+      "text": "The Seal-carvers pressed spirit into matter and made it stay. Never bind what you would not be willing to unbind."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:braid/pattern",
+      "draw_arrow": true,
+      "line_enabled": true
+    },
+    {
+      "entry": "ninjacatskies:braid/colony",
+      "draw_arrow": true,
+      "line_enabled": true
+    },
+    {
+      "entry": "ninjacatskies:braid/hum",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}
