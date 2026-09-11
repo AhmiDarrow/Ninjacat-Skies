@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:the_work",
+  "name": "The First Hour",
+  "description": "Dock, pad, Soil, Post.",
+  "icon": "minecraft:oak_sapling",
+  "x": 2,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The first hour",
+      "text": "1. You spawn on **Clowder Dock**. Read *How to Start*. Right-click the Island Charter (or press **K**) → Create Team → pick a pad.\n2. Right-click this Codex. Press Grave (`` ` ``) for the assignment list. Start **Strand: Soil**.\n3. Wood, dirt, a bench, a sapling, a chest, a furnace, water, Codex in Hand.\n4. Craft a Tension Post. Place it. Finish the **Soil Knot**. Seat Soil. The pad starts mending you.\n5. Then Recover: unravel Thread to string, spin yarn, tie a Knot, raise a Loomframe."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Water, on purpose",
+      "text": "Easy pads ship water. Normal and Hard ship ice, lava, and an empty bucket. Place lava, melt ice into a source, fill the bucket. That is Catch the Rain — do it before Recover asks for a Tension Barrel."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:the_work/this_book",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

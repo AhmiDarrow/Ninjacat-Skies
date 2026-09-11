@@ -61,12 +61,13 @@ def verify_server(archive):
                 raise ValueError(f"Unexpected executable content: {name}")
             if path.suffix.lower() == ".jar" and (path.parent != PurePosixPath("mods") or not is_owned_jar(path.name)):
                 raise ValueError(f"Unapproved bundled mod: {name}; the installer must fetch it from CurseForge")
-            if path.suffix.lower() in (".md", ".txt", ".json", ".js", ".toml", ".properties", ".snbt", ".sh", ".ps1", ".bat", ".cfg"):
+            if path.suffix.lower() in (".md", ".txt", ".json", ".js", ".toml", ".properties", ".default", ".snbt", ".sh", ".ps1", ".bat", ".cfg"):
                 text = z.read(name).decode("utf-8", errors="ignore")
                 for rx in SECRET_RX:
                     if re.search(rx, text):
                         raise ValueError(f"Secret or personal text in {name}: /{rx}/")
-        for required in ("server-manifest.json", "server-mods.txt", "install.sh", "install.ps1", "start.sh", "start.bat", "server.properties", "README-SERVER.md"):
+        for required in ("server-manifest.json", "server-mods.txt", "install.sh", "install.ps1", "install.bat", "start.sh", "start.bat",
+                         "server.properties.default", "user_jvm_args.default.txt", "README-SERVER.md"):
             if required not in names:
                 raise ValueError(f"Server pack is missing {required}")
         manifest = json.loads(z.read("server-manifest.json"))
@@ -81,6 +82,10 @@ def verify_server(archive):
             raise ValueError("server-mods.txt does not match server-manifest.json")
         if any(n == "eula.txt" for n in names):
             raise ValueError("A server pack must not pre-accept the EULA")
+        # Operators unzip updates over their server folder: files they own must never be in the zip.
+        for owned in ("server.properties", "user_jvm_args.txt", ".installed-mods.txt"):
+            if owned in names:
+                raise ValueError(f"Server pack must not ship {owned}: unzipping an update would overwrite the operator's copy")
     print(f"PASS ServerPackDryRun ({archive.name})")
 
 

@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "The Drumheart",
+  "description": "Keeper of the Spark Strand.",
+  "icon": "guardians:frayed_totem_drumheart",
+  "x": 4,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Drumheart",
+      "text": "The Forge Drum: a brass drum-platform over a lava crater, eight copper piston hammers with beat pads before them, four lava channels through the floor.\n\nThe Drumheart can only be hurt for a moment after every fourth beat. Stand on a beat pad at the downbeat to charge a spark that counts triple; on beat four the lava channels rise, so be on the pads, not in the channels. The tempo climbs every phase."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:frayed_totem_drumheart",
+        "count": 1
+      },
+      "title": "Frayed Totem",
+      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:relic_drumpulse",
+        "count": 1
+      },
+      "title": "Woven Relic",
+      "text": "Drumpulse: every fourth hit lands two extra hearts. Downbeat stuns and throws back everything within seven blocks."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:guardians/the_ritual",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/spark"
+  }
+}

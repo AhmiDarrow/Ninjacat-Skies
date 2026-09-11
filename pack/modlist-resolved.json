@@ -868,5 +868,25 @@
     "filename": "JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar",
     "releaseType": 1,
     "sha1": "439ea1baa5e3065e36e0e57422f22403918bb59f"
+  },
+  {
+    "key": "Ninjacat Skies Core",
+    "name": "Ninjacat Skies Core",
+    "slug": "ninjacat-skies-core",
+    "projectId": 1689718,
+    "fileId": 8857851,
+    "filename": "ninjacatskies-core-0.4.2.jar",
+    "releaseType": 1,
+    "sha1": "86f74ff224e061b1fb8f2767b0660c5506bdd580"
+  },
+  {
+    "key": "Tribal Power",
+    "name": "TribalPower",
+    "slug": "tribalpower",
+    "projectId": 1684851,
+    "fileId": 8858043,
+    "filename": "tribalpower-3.2.1.jar",
+    "releaseType": 1,
+    "sha1": "daf0aa055f18422c08697a5fbcde0f52e847628f"
   }
 ]

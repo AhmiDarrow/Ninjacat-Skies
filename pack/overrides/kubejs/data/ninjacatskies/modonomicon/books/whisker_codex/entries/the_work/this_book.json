@@ -1,0 +1,23 @@
+{
+  "category": "ninjacatskies:the_work",
+  "name": "This Book",
+  "description": "One book. The campaign lives here.",
+  "icon": "ninjacatskies:whisker_codex",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "This book",
+      "text": "This is the **Whisker Codex**. One book. Right-click always opens these pages: what happened, what you do next, who kept the Loom.\n\nThere is no Shift-click mode. There is no second story hidden behind a modifier."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "The assignment list",
+      "text": "The **Grave** key (backtick `` ` ``) opens the live assignment list — FTB Quests, checkmarks and rewards. That list is the **same campaign**, not a second book.\n\nCome here to learn the braid. Open Grave when you want the next task in your hand."
+    }
+  ]
+}

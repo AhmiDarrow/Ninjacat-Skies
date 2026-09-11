@@ -16,6 +16,7 @@ import subprocess
 import sys
 import time
 import zipfile
+from build_core_jar import require_released_core
 from cf_distribution import is_owned_jar, manifest_entries
 from pathlib import Path
 
@@ -46,6 +47,7 @@ def main() -> int:
     if not jars:
         raise SystemExit("No jars in pack/mods")
     manifest_files = manifest_entries(jars, resolved)
+    require_released_core()     # companion sources and pack/mods Core jar must match the Core file on CurseForge
 
 
     if not args.skip_sanitize:
@@ -65,15 +67,11 @@ def main() -> int:
 
     # overrides
     shutil.copytree(ROOT / "pack/overrides", stage / "overrides")
-    ov_mods = stage / "overrides/mods"
-    ov_mods.mkdir(parents=True, exist_ok=True)
-
-    # Only our own unhosted mods (five companions + Tribal Power) may be redistributed as override jars.
-    bundled = []
-    for jar in jars:
-        if is_owned_jar(jar.name):
-            shutil.copy2(jar, ov_mods / jar.name)
-            bundled.append(jar.name)
+    # No jar is bundled: our own mods (Ninjacat Skies Core, Tribal Power) are CurseForge files like every other dependency.
+    bundled = [jar.name for jar in jars if is_owned_jar(jar.name)]
+    if bundled:
+        raise SystemExit(f"Refusing to bundle jars in overrides/mods: {bundled}")
+    shutil.rmtree(stage / "overrides/mods", ignore_errors=True)
 
     manifest = {
         "minecraft": {"version": MC, "modLoaders": [{"id": f"neoforge-{NEO}", "primary": True}], "recommendedRam": 8192},
@@ -97,10 +95,6 @@ def main() -> int:
         shutil.copy2(icon, stage / "profileImage/ninjacat-skies.png")
         shutil.copy2(icon, stage / "icon.png")
         shutil.copy2(icon, stage / "overrides/pack-icon.png")
-    for name in ("store-description.html", "store-description.md"):
-        src = ROOT / "docs/public" / name
-        if src.exists():
-            shutil.copy2(src, stage / "overrides" / name)
     (stage / "overrides/INSTALL.txt").write_text(
         "Ninjacat Skies — install notes\n"
         "==============================\n\n"

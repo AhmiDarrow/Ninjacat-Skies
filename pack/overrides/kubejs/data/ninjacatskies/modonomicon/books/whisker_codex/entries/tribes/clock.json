@@ -1,0 +1,36 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "Pattern-weavers",
+  "description": "Keepers of the Clock Strand.",
+  "icon": "ninjacatskies:strand_token_clock",
+  "x": 4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Pattern-weavers",
+      "text": "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure again, until the work carried itself.\n\nTheir timed lattice songs are the ancestor of every belt and cog you will build. You already know this craft."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "ninjacatskies:strand_token_clock",
+        "count": 1
+      },
+      "title": "Clock Strand",
+      "text": "*A factory is a song that has stopped needing the singer.*\n\nSeated. The Pattern-weavers answer when this Post hums."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Their camp",
+      "text": "The Pattern-weavers keep a camp in the March crystal fields: huts, a fire, a Tribe Hearth, an Air totem, a banner, four Kin — an Elder, a Drummer, a Hunter and a Weaver — and a Wind Harp.\n\nTheir hearth favours redstone, clocks, Storm Moth Dust. Their Elder trades timed songs, automation, and the Wind Harp. At Voice standing they press the tribe's Mark into your hand. Camps already generated in an old world keep the layout they spawned with."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/clock"
+  }
+}

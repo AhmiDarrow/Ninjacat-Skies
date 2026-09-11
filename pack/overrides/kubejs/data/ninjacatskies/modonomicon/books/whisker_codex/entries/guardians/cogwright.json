@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "The Cogwright",
+  "description": "Keeper of the Clock Strand.",
+  "icon": "guardians:frayed_totem_cogwright",
+  "x": 4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Cogwright",
+      "text": "The Escapement: four rotating copper rings carrying dark-oak sequence tiles around an iron hub, six gear-towers and a sixteen-block pendulum keeping time.\n\nEvery phase the Cogwright winds: tiles light in sequence across the turning rings and you have twelve seconds to step them in order. Success opens its chassis for eight seconds; failure fires every gear-tower. The pendulum is the metronome; the rings reverse when it swings far."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:frayed_totem_cogwright",
+        "count": 1
+      },
+      "title": "Frayed Totem",
+      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:relic_cogloop",
+        "count": 1
+      },
+      "title": "Woven Relic",
+      "text": "Cogloop: Haste I, and tools wear a fifth slower. Rewind resets every other relic you carry and snaps you back three seconds."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:guardians/the_ritual",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/clock"
+  }
+}

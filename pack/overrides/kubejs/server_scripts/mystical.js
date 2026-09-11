@@ -7,11 +7,11 @@ ServerEvents.recipes(event => {
   const sieve = (input, mesh, result, p, compressed) => {
     event.custom({
       type: compressed ? 'exdeorum:compressed_sieve' : 'exdeorum:sieve',
-      // Compressed sieves take the compressed block (Ex Deorum tag) and roll 7x — same shape as Ex Deorum's own tables.
+      // Compressed sieves take the compressed block (Ex Deorum tag) and roll 9x — same shape as Ex Deorum's own tables.
       ingredient: compressed ? { tag: 'exdeorum:compressed/' + input.split(':')[1] } : { item: input },
       mesh: { item: mesh },
       result: { id: result, count: 1 },
-      result_amount: { type: 'minecraft:binomial', n: compressed ? 7.0 : 1.0, p: p },
+      result_amount: { type: 'minecraft:binomial', n: compressed ? 9.0 : 1.0, p: p },
     }).id(`ninjacatskies:mystical/${compressed ? 'compressed_' : ''}${input.split(':')[1]}_${mesh.split(':')[1]}_${result.split(':')[1]}`)
   }
   const both = (input, mesh, result, p) => {

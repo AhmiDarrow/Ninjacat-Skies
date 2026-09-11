@@ -1,0 +1,30 @@
+{
+  "category": "ninjacatskies:the_cut",
+  "name": "Skybound",
+  "description": "You, on a pad, with a damaged book.",
+  "icon": "ninjacatskies:frayed_thread",
+  "x": 4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Skybound",
+      "text": "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex assigns work. You do it. That is the arrangement.\n\nThis book is the work and the why. Grave (`` ` ``) is the same campaign as a live list with rewards — not a second story."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Nine Strands",
+      "text": "Nine Strands still answer if pulled correctly: Soil, Stone, Sprout, Claw, Spark, Clock, Swarm, Sigil, Spindle.\n\nEach one ends in a **Strand token**. A token is proof, not fuel — it is never crafted, never consumed by a recipe. Seat it at a Tension Post and it stays seated."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:the_cut/cut",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

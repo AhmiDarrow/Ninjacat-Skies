@@ -1,0 +1,21 @@
+{
+  "name": "The Work",
+  "description": "What you do. Start here.",
+  "icon": "ninjacatskies:whisker_codex",
+  "sort_number": 0,
+  "background": "modonomicon:textures/gui/dark_slate_seamless.png",
+  "background_parallax_layers": [
+    {
+      "background": "modonomicon:textures/gui/parallax/flow/base.png",
+      "speed": 1.0
+    },
+    {
+      "background": "modonomicon:textures/gui/parallax/flow/1.png",
+      "speed": 1.0
+    },
+    {
+      "background": "modonomicon:textures/gui/parallax/flow/2.png",
+      "speed": 1.15
+    }
+  ]
+}

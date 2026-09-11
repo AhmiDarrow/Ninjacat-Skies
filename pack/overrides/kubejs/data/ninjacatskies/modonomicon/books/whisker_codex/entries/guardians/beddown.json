@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:guardians",
+  "name": "The Beddown",
+  "description": "Keeper of the Soil Strand.",
+  "icon": "guardians:frayed_totem_beddown",
+  "x": -4,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Beddown",
+      "text": "The Burrow Bowl: a sunken bowl of four soil tiers stepping down to a mud pit under six dark-oak root arches, seven teal root-seams glowing across the pit floor.\n\nEvery quarter of its health the Beddown slams and floods the pit with a layer of dirt, immune inside it. One of the seven seams lights: dig a channel to it, expose the core and hit it to break the burial. The first gate, and a forgiving one."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:frayed_totem_beddown",
+        "count": 1
+      },
+      "title": "Frayed Totem",
+      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "guardians:relic_rootheart",
+        "count": 1
+      },
+      "title": "Woven Relic",
+      "text": "Rootheart: knockback taken is cut by sixty percent and nothing can pull you. Root Down plants you for five seconds behind eight hearts of absorption."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:guardians/the_ritual",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/soil"
+  }
+}
