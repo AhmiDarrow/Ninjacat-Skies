@@ -2,7 +2,7 @@
   "stall": "spark",
   "cost": {
     "id": "ninjacatskies:frayed_thread",
-    "count": 40
+    "count": 80
   },
   "result": {
     "id": "create:item_vault",

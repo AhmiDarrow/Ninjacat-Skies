@@ -2,7 +2,7 @@
   "stall": "grit",
   "cost": {
     "id": "ninjacatskies:frayed_thread",
-    "count": 20
+    "count": 24
   },
   "result": {
     "id": "minecraft:iron_nugget",
