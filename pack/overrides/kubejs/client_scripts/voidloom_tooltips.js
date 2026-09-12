@@ -17,9 +17,9 @@ ItemEvents.modifyTooltips(event => {
     Text.gray('Right-click: the campaign book — story and what to do.'),
     Text.darkGray('Grave (`): the assignment list and rewards. Same campaign, not a second mode.')
   ])
-  event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. Dock Kin stalls sell things for Thread.'))
+  event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. /clowder hub Kin stalls sell things for Thread.'))
   event.add('minecraft:rotten_flesh', Text.gray('Smelt or campfire it for leather. Zombies on the pad are the cow.'))
-  event.add('minecraft:leather', Text.gray('Smelt rotten flesh, or sieve dirt with flint mesh and up. Pad-keepers at the Dock sell a little.'))
+  event.add('minecraft:leather', Text.gray('Smelt rotten flesh, or sieve dirt with flint mesh and up. Pad-keepers in Clowder Hall sell a little.'))
   event.add('voidloom:void_yarn', [
     Text.gray('Early: 4 string → 2 yarn. Later: string + pearl in the Tension Barrel → 2 yarn.'),
     Text.darkGray('Or four Loom Lint from the Loomframe.')

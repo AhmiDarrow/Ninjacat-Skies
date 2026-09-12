@@ -103,7 +103,7 @@
 	quest.4200000000010002.quest_desc: [
 		"Dirt is a promise the pad makes to your boots.",
 		"Sixteen blocks. Widen the promise.",
-		"How: starter chest, cobble+thread sink, sieve leftovers, or Dock Kin (Pad-keepers stall)."
+		"How: starter chest, cobble+thread sink, sieve leftovers, or /clowder hub (Pad-keepers)."
 	]
 	quest.4200000000010002.title: "Something to Stand On"
 	quest.4200000000010003.quest_desc: [
@@ -119,7 +119,7 @@
 	quest.4200000000010005.quest_desc: [
 		"Green against the drop.",
 		"Plant it before you are hungry.",
-		"How: break oak leaves, or Pad-keepers stall (8 Thread)."
+		"How: break oak leaves, or /clowder hub Pad-keepers (8 Thread)."
 	]
 	quest.4200000000010005.title: "First Sapling"
 	quest.4200000000010006.quest_desc: [
@@ -139,13 +139,13 @@
 	quest.4200000000010008.title: "Chest for the Clowder"
 	quest.4200000000010009.quest_desc: [
 		"See the edge before the edge sees you.",
-		"How: coal or charcoal over a stick. Dock Kin sell a pack."
+		"How: coal or charcoal over a stick. /clowder hub Kin sell a pack."
 	]
 	quest.4200000000010009.title: "Torch Line"
 	quest.420000000001000A.quest_desc: [
 		"Ice and lava make stone where there was none.",
 		"Normal and Hard pads ship both. The Desk sells a bucket.",
-		"How: lava next to water (or ice melt). Hammer stone. Dock Grit stall sells a bundle."
+		"How: lava next to water (or ice melt). Hammer stone. /clowder hub Grit stall sells a bundle."
 	]
 	quest.420000000001000A.title: "Cobble Cache"
 	quest.420000000001000B.quest_desc: [
@@ -156,7 +156,7 @@
 	quest.420000000001000B.title: "Furnace Heat"
 	quest.420000000001000C.quest_desc: [
 		"Hunger is a soft void. Eight loaves closes it for a while.",
-		"How: three wheat in a row, or Pad-keepers stall."
+		"How: three wheat in a row, or /clowder hub Pad-keepers."
 	]
 	quest.420000000001000C.title: "Cook a Meal"
 	quest.420000000001000D.quest_desc: [
@@ -194,12 +194,12 @@
 	quest.4200000000010012.title: "String Cache"
 	quest.4200000000010013.quest_desc: [
 		"Speed the green.",
-		"How: bones in a grid, or Thread + rotten flesh sink, or Pad-keepers stall."
+		"How: bones in a grid, or Thread + rotten flesh sink, or /clowder hub Pad-keepers."
 	]
 	quest.4200000000010013.title: "Bone Meal Stock"
 	quest.4200000000010014.quest_desc: [
 		"Widen the pad.",
-		"How: starter chest, cobble+thread sink, sieve leftovers, or Dock Kin (Pad-keepers stall)."
+		"How: starter chest, cobble+thread sink, sieve leftovers, or /clowder hub (Pad-keepers)."
 	]
 	quest.4200000000010014.title: "Dirt Platform"
 	quest.4200000000010015.quest_desc: [
@@ -419,7 +419,7 @@
 	quest.420000000001003F.title: "Feather"
 	quest.4200000000010040.quest_desc: [
 		"Leather for books and kits.",
-		"How: smelt or campfire rotten flesh. Sieve dirt with flint mesh. Pad-keepers stall sells two for 18 Thread."
+		"How: smelt or campfire rotten flesh. Sieve dirt with flint mesh. /clowder hub Pad-keepers sell two for 18 Thread."
 	]
 	quest.4200000000010040.title: "Leather"
 	quest.4200000000010041.quest_desc: [
@@ -500,7 +500,7 @@
 	quest.420000000002004C.title: "Wooden Hammer"
 	quest.420000000002004D.quest_desc: [
 		"Matter from grit. Sixty-four stones that were dust an hour ago.",
-		"How: lava next to water (or ice melt). Hammer stone. Dock Grit stall sells a bundle."
+		"How: lava next to water (or ice melt). Hammer stone. /clowder hub Grit stall sells a bundle."
 	]
 	quest.420000000002004D.title: "Pebbles"
 	quest.420000000002004E.quest_desc: [
@@ -612,7 +612,7 @@
 	quest.4200000000020062.title: "Glass"
 	quest.4200000000020063.quest_desc: [
 		"Carry the rain in iron now.",
-		"How: three iron ingots, or Pad-keepers stall (8 Thread). Fill from melted ice."
+		"How: three iron ingots, or /clowder hub Pad-keepers (8 Thread). Fill from melted ice."
 	]
 	quest.4200000000020063.title: "Bucket"
 	quest.4200000000020064.quest_desc: [
@@ -692,12 +692,12 @@
 	quest.4200000000020072.title: "String"
 	quest.4200000000020073.quest_desc: [
 		"Knot binder — or pad compost recipe.",
-		"How: two dirt + wheat seeds + bone meal (pad compost), or Pad-keepers stall."
+		"How: two dirt + wheat seeds + bone meal (pad compost), or /clowder hub Pad-keepers."
 	]
 	quest.4200000000020073.title: "Slimeball"
 	quest.4200000000020074.quest_desc: [
 		"Ground down for meal, or kept whole to breed the pack's next wolf.",
-		"How: skeletons at night, or Pad-keepers stall (16 Thread for 8)."
+		"How: skeletons at night, or /clowder hub Pad-keepers (16 Thread for 8)."
 	]
 	quest.4200000000020074.title: "Bone"
 	quest.4200000000020075.quest_desc: [
@@ -741,7 +741,7 @@
 	quest.420000000003007B.title: "Seed Pouch"
 	quest.420000000003007C.quest_desc: [
 		"Speed is kindness. Compost and bones.",
-		"How: bones in a grid, or Thread + rotten flesh sink, or Pad-keepers stall."
+		"How: bones in a grid, or Thread + rotten flesh sink, or /clowder hub Pad-keepers."
 	]
 	quest.420000000003007C.title: "Bone Meal Engine"
 	quest.420000000003007D.quest_desc: [
@@ -1182,7 +1182,7 @@
 	quest.42000000000500D2.quest_desc: [
 		"Bone, string, amethyst. The first beat.",
 		"It yields two — keep one for the Spirit Codex.",
-		"How: one bone, string, amethyst. Pad-keepers stall sells bones. Spark / Hum gate."
+		"How: one bone, string, amethyst. /clowder hub Pad-keepers sell bones. Spark / Hum gate."
 	]
 	quest.42000000000500D2.title: "Hum: Bone Chime"
 	quest.42000000000500D3.quest_desc: [
@@ -1988,7 +1988,7 @@
 	quest.420000000008016E.title: "Golden Apple"
 	quest.420000000008016F.quest_desc: [
 		"Skip the drop.",
-		"How: endermen, or Dock Spark stall."
+		"How: endermen, or /clowder hub Spark stall."
 	]
 	quest.420000000008016F.title: "Ender Pearl"
 	quest.4200000000080170.quest_desc: [
@@ -4289,7 +4289,7 @@
 	quest.4200000000170333.title: "Popped Chorus"
 	quest.4200000000170334.quest_desc: [
 		"Throw it and you arrive where it lands, minus some health.",
-		"How: endermen, or Dock Spark stall."
+		"How: endermen, or /clowder hub Spark stall."
 	]
 	quest.4200000000170334.title: "Ender Pearl Stock"
 	quest.4200000000170335.quest_desc: [
@@ -5395,7 +5395,7 @@
 	quest.42000000001B040F.title: "Obsidian Stock (Otherworld)"
 	quest.42000000001B0410.quest_desc: [
 		"An offering some spirits are drawn toward.",
-		"How: endermen, or Dock Spark stall."
+		"How: endermen, or /clowder hub Spark stall."
 	]
 	quest.42000000001B0410.title: "Ender Pearl Stock (Otherworld)"
 	quest.42000000001B0411.quest_desc: [
@@ -6637,7 +6637,7 @@
 	quest.4200000000210506.title: "Rotten Flesh Stock"
 	quest.4200000000210507.quest_desc: [
 		"Skeletons leave these behind; grind them for meal later.",
-		"How: skeletons at night, or Pad-keepers stall (16 Thread for 8)."
+		"How: skeletons at night, or /clowder hub Pad-keepers (16 Thread for 8)."
 	]
 	quest.4200000000210507.title: "Bone Stock"
 	quest.4200000000210508.quest_desc: [
@@ -6657,7 +6657,7 @@
 	quest.420000000021050A.title: "Spider Eye Stock"
 	quest.420000000021050B.quest_desc: [
 		"Endermen drop these; a farm beats begging the void for them.",
-		"How: endermen, or Dock Spark stall."
+		"How: endermen, or /clowder hub Spark stall."
 	]
 	quest.420000000021050B.title: "Ender Pearl Farm"
 	quest.420000000021050C.quest_desc: [
@@ -6677,7 +6677,7 @@
 	quest.420000000021050E.title: "Magma Cream Farm"
 	quest.420000000021050F.quest_desc: [
 		"Sticky enough for pistons, slime blocks, and leads.",
-		"How: two dirt + wheat seeds + bone meal (pad compost), or Pad-keepers stall."
+		"How: two dirt + wheat seeds + bone meal (pad compost), or /clowder hub Pad-keepers."
 	]
 	quest.420000000021050F.title: "Slimeball Farm"
 	quest.4200000000210510.quest_desc: [
@@ -6773,7 +6773,7 @@
 	quest.4200000000210521.title: "Egg Stock"
 	quest.4200000000210522.quest_desc: [
 		"Leather and beef stock.",
-		"How: smelt or campfire rotten flesh. Sieve dirt with flint mesh. Pad-keepers stall sells two for 18 Thread."
+		"How: smelt or campfire rotten flesh. Sieve dirt with flint mesh. /clowder hub Pad-keepers sell two for 18 Thread."
 	]
 	quest.4200000000210522.title: "Leather Stock"
 	quest.4200000000210523.quest_desc: [
@@ -6839,7 +6839,7 @@
 	quest.420000000022052F.quest_desc: [
 		"First craft yields 2 — keep one for Codex later.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: one bone, string, amethyst. Pad-keepers stall sells bones. Spark / Hum gate."
+		"How: one bone, string, amethyst. /clowder hub Pad-keepers sell bones. Spark / Hum gate."
 	]
 	quest.420000000022052F.title: "Bone Chime"
 	quest.4200000000220530.quest_desc: [
