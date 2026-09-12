@@ -1,6 +1,6 @@
 # Ninjacat Skies Core 0.4.3
 
-- Release build of the Hub/arena/lives behaviour that 0.4.2 documented but the 0.4.2 jar did not ship. Pack 0.7.5 depends on this file beside Tribal Power 3.2.1.
+- Release build of the Hub/arena/lives behaviour that 0.4.2 documented but the 0.4.2 jar did not ship. Pack 0.7.6 depends on this file beside Tribal Power 3.2.2.
 - Whisker Codex ships the Listening Pit and Gates pages in-jar (Stone Font, pit, Voice Ring, Way and Far Gates).
 - Tension Posts follow a pad when FTB promotes the solo team into a party; seated Strands stay seated.
 - Shared lives remember exhausted mates who are offline. The Overweaver relic restores one life, not the whole Clowder.

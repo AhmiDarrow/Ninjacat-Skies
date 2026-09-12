@@ -1,7 +1,8 @@
 # Professional release gates for Ninjacat Skies.
 param(
     [switch]$SkipBuild,
-    [switch]$WithExportDryRun
+    [switch]$WithExportDryRun,
+    [switch]$WithFullPack
 )
 $ErrorActionPreference = "Stop"
 $gateDir = $PSScriptRoot
@@ -64,6 +65,11 @@ try {
             if ($LASTEXITCODE -eq 0) {
                 python (Join-Path $gateDir "test_export_archive.py") (Join-Path $root "dist")
             }
+        }
+    }
+    if ($WithFullPack) {
+        Invoke-Gate "FullPackServer" {
+            pwsh -NoProfile -File (Join-Path $gateDir "Test-FullPackServer.ps1")
         }
     }
 } finally {
