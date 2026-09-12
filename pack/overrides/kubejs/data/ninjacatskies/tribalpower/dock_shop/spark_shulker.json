@@ -1,0 +1,12 @@
+{
+  "stall": "spark",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 90
+  },
+  "result": {
+    "id": "minecraft:shulker_box",
+    "count": 1
+  },
+  "max_uses": 16
+}

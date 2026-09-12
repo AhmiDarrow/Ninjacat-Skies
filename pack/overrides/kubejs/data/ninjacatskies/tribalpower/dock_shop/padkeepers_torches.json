@@ -1,0 +1,12 @@
+{
+  "stall": "padkeepers",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 6
+  },
+  "result": {
+    "id": "minecraft:torch",
+    "count": 32
+  },
+  "max_uses": 16
+}

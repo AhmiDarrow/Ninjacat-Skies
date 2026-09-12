@@ -14,6 +14,9 @@ apply from: rootProject.file('neoforge-mod.gradle')
 
 dependencies {
     implementation project(':ninjacat-lib')
+    compileOnly fileTree(dir: rootProject.file('../pack/mods'), include: [
+            'exdeorum-*.jar',
+    ])
 }
 
 neoForge {

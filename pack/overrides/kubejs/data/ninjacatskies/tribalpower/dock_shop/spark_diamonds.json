@@ -1,0 +1,12 @@
+{
+  "stall": "spark",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 30
+  },
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 2
+  },
+  "max_uses": 16
+}

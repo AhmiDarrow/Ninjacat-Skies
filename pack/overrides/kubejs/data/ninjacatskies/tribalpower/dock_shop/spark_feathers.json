@@ -1,0 +1,12 @@
+{
+  "stall": "spark",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 10
+  },
+  "result": {
+    "id": "minecraft:feather",
+    "count": 8
+  },
+  "max_uses": 16
+}

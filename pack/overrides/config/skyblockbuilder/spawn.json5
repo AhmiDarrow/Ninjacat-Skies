@@ -6,7 +6,9 @@
 
   "interactionEntitiesInSpawnProtection": {
     "allow_list": true,
-    "elements": []
+    "elements": [
+      "tribalpower:tribal_kin"
+    ]
   },
 
   "interactionItemsInSpawnProtection": {

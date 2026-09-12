@@ -161,7 +161,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade \ud83d\udd0d",
+    "name": "Jade 🔍",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -874,19 +874,19 @@
     "name": "Ninjacat Skies Core",
     "slug": "ninjacat-skies-core",
     "projectId": 1689718,
-    "fileId": 8861548,
-    "filename": "ninjacatskies-core-0.4.3.jar",
+    "fileId": 8868110,
+    "filename": "ninjacatskies-core-0.4.5.jar",
     "releaseType": 1,
-    "sha1": "c7ca9bac09d455a607eab0e80e626d68a3222a7b"
+    "sha1": "e443e0709373799f407bba958d97cb6ef9042bbe"
   },
   {
     "key": "Tribal Power",
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8861850,
-    "filename": "tribalpower-3.2.2.jar",
+    "fileId": 8868094,
+    "filename": "tribalpower-3.3.0.jar",
     "releaseType": 1,
-    "sha1": "86c01e3d12df4614213040e3dd8e9475b68c2c28"
+    "sha1": "60e910a270a6544af58c7fdc9e313397ca4422aa"
   }
 ]

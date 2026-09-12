@@ -1,0 +1,12 @@
+{
+  "stall": "grit",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 30
+  },
+  "result": {
+    "id": "minecraft:obsidian",
+    "count": 4
+  },
+  "max_uses": 16
+}

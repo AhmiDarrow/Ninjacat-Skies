@@ -96,7 +96,7 @@ public class LoomframeBlock extends BaseEntityBlock {
             return ItemInteractionResult.FAIL;
         }
 
-        if (LoomframeBlockEntity.isSiftable(stack)) {
+        if (be.canAccept(stack)) {
             if (level.isClientSide) {
                 return ItemInteractionResult.SUCCESS;
             }
