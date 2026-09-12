@@ -23,6 +23,8 @@ dependencies {
             'ftb-library-neoforge-*.jar',
             'architectury-*-neoforge.jar',
             'modonomicon-*-neoforge-*.jar',
+            'JustEnoughResources-*.jar',
+            'jei-*-neoforge-*.jar',
     ])
 }
 

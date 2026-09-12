@@ -43,6 +43,47 @@ def api_get(path: str, token: str):
         return json.loads(r.read().decode("utf-8"))
 
 
+LIVE_FILE = {4, 10}  # Approved, Released
+FILE_STATUS = {1: "Processing", 2: "ChangesRequired", 3: "UnderReview", 4: "Approved", 5: "Rejected",
+               6: "MalwareDetected", 7: "Deleted", 8: "Archived", 9: "Testing", 10: "Released",
+               11: "ReadyForReview", 18: "UnderManualReview"}
+
+
+def hosted_refs(zip_path: Path) -> list[tuple[int, int, str]]:
+    """CurseForge project/file ids the archive tells the app to install."""
+    import zipfile
+    with zipfile.ZipFile(zip_path) as z:
+        name = "server-manifest.json" if "-Server-" in zip_path.name else "manifest.json"
+        manifest = json.loads(z.read(name))
+    out = []
+    for entry in manifest.get("files", []):
+        pid, fid = entry.get("projectID"), entry.get("fileID")
+        if type(pid) is int and type(fid) is int:
+            out.append((pid, fid, str(entry.get("filename") or fid)))
+    return out
+
+
+def require_hosted_files_approved(zip_path: Path, api_key: str) -> None:
+    """Pack zips that name an Under Review Core (or any other) file are rejected by CF moderation."""
+    if zip_path.suffix.lower() != ".zip":
+        return
+    if not api_key:
+        raise SystemExit("CF_API_KEY missing — cannot confirm hosted files are Approved before upload")
+    bad = []
+    for pid, fid, filename in hosted_refs(zip_path):
+        req = urllib.request.Request(
+            f"https://api.curseforge.com/v1/mods/{pid}/files/{fid}",
+            headers={"x-api-key": api_key, "Accept": "application/json", "User-Agent": UA},
+        )
+        with urllib.request.urlopen(req, timeout=60) as r:
+            data = json.loads(r.read().decode())
+        st = (data.get("data") or data).get("fileStatus")
+        if st not in LIVE_FILE:
+            bad.append(f"{filename} (project {pid} file {fid}: {FILE_STATUS.get(st, st)})")
+    if bad:
+        raise SystemExit("Refusing to upload: manifest names files that are not Approved yet:\n  - " + "\n  - ".join(bad))
+
+
 def resolve_version_id(versions, name: str, type_id: int) -> int:
     for v in versions:
         if v.get("name") == name and v.get("gameVersionTypeID") == type_id:
@@ -102,6 +143,7 @@ def main() -> int:
     if zip_path.suffix.lower() == ".zip":
         from gates.test_export_archive import verify, verify_server
         (verify_server if "-Server-" in zip_path.name else verify)(zip_path)
+        require_hosted_files_approved(zip_path, secrets.get("CF_API_KEY", ""))
     display = args.display_name or zip_path.stem
     changelog = Path(args.changelog_file).read_text(encoding="utf-8") if args.changelog_file else f"## {display}\n\nNinjacat Skies alpha.\n"
 
@@ -115,9 +157,10 @@ def main() -> int:
         meta["gameVersions"] = game_versions
     metadata = json.dumps(meta)
     print(f"Uploading {zip_path.name} ({zip_path.stat().st_size // 1024} KiB) -> project {project_id} as {args.release_type}; gameVersions={game_versions}")
+    file_ctype = "application/java-archive" if zip_path.suffix.lower() == ".jar" else "application/zip"
     body, boundary = multipart({
         "metadata": ("", metadata.encode("utf-8"), "application/json"),
-        "file": (zip_path.name, zip_path.read_bytes(), "application/zip"),
+        "file": (zip_path.name, zip_path.read_bytes(), file_ctype),
     })
     req = urllib.request.Request(
         f"{API}/projects/{project_id}/upload-file",

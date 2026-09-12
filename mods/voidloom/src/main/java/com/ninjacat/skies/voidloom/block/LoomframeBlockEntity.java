@@ -1,5 +1,6 @@
 package com.ninjacat.skies.voidloom.block;
 
+import com.ninjacat.skies.voidloom.compat.ExDeorumSieveBridge;
 import com.ninjacat.skies.voidloom.item.ModItems;
 import com.ninjacat.skies.voidloom.sound.ModSounds;
 import net.minecraft.core.BlockPos;
@@ -28,6 +29,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.server.level.ServerLevel;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.items.IItemHandler;
 
 import javax.annotation.Nullable;
@@ -36,8 +38,8 @@ import java.util.List;
 
 /**
  * The Loomframe: a mesh stretched on a frame that sifts on its own, slowly, with a shuttle clack.
- * Feed it dirt or gravel by hand or hopper; take scraps out the same way. It is the pad's first automation,
- * long before Create — and the only place Loom Lint, Frayed Thread, and Strand Filament fall out of grit.
+ * Feed grit by hopper on top; sit it on a hopper to pull scraps. When Ex Deorum is present it uses that
+ * sieve table at {@link com.ninjacat.skies.voidloom.compat.LoomframeYield#AUTOMATED} of a hand sieve.
  */
 public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     public static final int SIFT_TICKS = 50;
@@ -52,7 +54,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     private ItemStack input = ItemStack.EMPTY;
     private final NonNullList<ItemStack> output = NonNullList.withSize(OUTPUT_SLOTS, ItemStack.EMPTY);
     // At most one paid sift waits here when its random results exceed output capacity.
-    private final NonNullList<ItemStack> pending = NonNullList.withSize(9, ItemStack.EMPTY);
+    private final NonNullList<ItemStack> pending = NonNullList.withSize(16, ItemStack.EMPTY);
     private int progress;
     private final IItemHandler handler = new Handler();
 
@@ -121,13 +123,30 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         return stack.is(Items.DIRT) || stack.is(Items.GRAVEL) || stack.is(Items.COARSE_DIRT);
     }
 
+    public boolean canAccept(ItemStack stack) {
+        if (stack.isEmpty()) return false;
+        if (level != null && ModList.get().isLoaded("exdeorum")) {
+            if (!mesh.isEmpty()) return ExDeorumSieveBridge.hasRecipes(level, mesh, stack);
+            return ExDeorumSieveBridge.isSiftable(level, stack);
+        }
+        return isSiftable(stack);
+    }
+
+    private boolean canProcess() {
+        if (!isMeshItem(mesh) || input.isEmpty()) return false;
+        if (level != null && ModList.get().isLoaded("exdeorum")) {
+            return ExDeorumSieveBridge.hasRecipes(level, mesh, input);
+        }
+        return isSiftable(input);
+    }
+
     public ItemStack getInput() {
         return input;
     }
 
     /** Insert as much of the stack as fits; returns how many were taken. */
     public int insertInput(ItemStack stack, boolean simulate) {
-        if (!isSiftable(stack)) {
+        if (!canAccept(stack)) {
             return 0;
         }
         if (!input.isEmpty() && !ItemStack.isSameItemSameComponents(input, stack)) {
@@ -204,7 +223,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     public static void serverTick(Level level, BlockPos pos, BlockState state, LoomframeBlockEntity be) {
         if (level.hasNeighborSignal(pos)) return;
         if (!be.flushPending()) return;
-        if (!isMeshItem(be.mesh) || !isSiftable(be.input)) {
+        if (!be.canProcess()) {
             if (be.progress != 0) {
                 be.progress = 0;
                 be.setChanged();
@@ -215,13 +234,14 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         be.setChanged();
         if (be.progress < SIFT_TICKS) {
             if (be.progress % 10 == 0 && level instanceof ServerLevel sl) {
-                sl.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, be.input.is(Items.GRAVEL) ? Blocks.GRAVEL.defaultBlockState() : Blocks.DIRT.defaultBlockState()),
+                Block grit = Block.byItem(be.input.getItem());
+                sl.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, grit == Blocks.AIR ? Blocks.DIRT.defaultBlockState() : grit.defaultBlockState()),
                         pos.getX() + 0.5, pos.getY() + 0.9, pos.getZ() + 0.5, 3, 0.2, 0.05, 0.2, 0.02);
             }
             return;
         }
         be.progress = 0;
-        List<ItemStack> drops = be.roll(level.random, be.input, be.meshTier());
+        List<ItemStack> drops = be.roll(level, be.input, be.mesh);
         be.input.shrink(1);
         if (be.input.isEmpty()) {
             be.input = ItemStack.EMPTY;
@@ -240,8 +260,16 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         be.sync();
     }
 
-    /** Scrap table. Each line rolls on its own; the mesh tier adds lines, never removes them. */
-    private List<ItemStack> roll(RandomSource rand, ItemStack in, int tier) {
+    /** Ex Deorum sieve table at automated yield when present; otherwise the built-in scrap table. */
+    private List<ItemStack> roll(Level level, ItemStack in, ItemStack meshStack) {
+        if (level instanceof ServerLevel sl && ModList.get().isLoaded("exdeorum")) {
+            return ExDeorumSieveBridge.roll(sl, meshStack, in, sl.random);
+        }
+        return rollFallback(level.random, in, meshTier());
+    }
+
+    /** Scrap table used when Ex Deorum is not loaded (GameTests, bare Voidloom). */
+    private List<ItemStack> rollFallback(RandomSource rand, ItemStack in, int tier) {
         List<ItemStack> out = new ArrayList<>();
         boolean gravel = in.is(Items.GRAVEL);
         if (gravel) {
@@ -336,7 +364,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public boolean isItemValid(int slot, ItemStack stack) {
-            return slot == 0 && isSiftable(stack);
+            return slot == 0 && canAccept(stack);
         }
     }
 

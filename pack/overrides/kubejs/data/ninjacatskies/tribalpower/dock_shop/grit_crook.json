@@ -1,0 +1,12 @@
+{
+  "stall": "grit",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 8
+  },
+  "result": {
+    "id": "voidloom:spindle_crook",
+    "count": 1
+  },
+  "max_uses": 16
+}

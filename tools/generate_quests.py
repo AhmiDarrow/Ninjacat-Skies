@@ -2913,7 +2913,8 @@ def main() -> None:
     write_chapter("13_powah", CH["powah"], GROUP_SIDE, 12, "powah:energy_cell_basic", build_powah_side(), "Powah Grid")
     write_chapter("14_ars", CH["ars"], GROUP_SIDE, 13, "ars_nouveau:source_gem", build_ars_side(), "Arcane Side")
     write_chapter("15_clowder", CH["clowder"], GROUP_SIDE, 14, "clowderhall:island_charter", build_clowder(), "Clowder Hall")
-    write_chapter("16_shop", CH["shop"], GROUP_SIDE, 15, "ninjacatskies:frayed_thread", build_shop(), "Frayed Thread Desk")
+    # Shop moved to Dock Kin stalls (Tribal Power Stall=1 + datapack dock_shop).
+    # write_chapter("16_shop", CH["shop"], GROUP_SIDE, 15, "ninjacatskies:frayed_thread", build_shop(), "Frayed Thread Desk")
     write_chapter("17_aura", CH["aura"], GROUP_SIDE, 16, "naturesaura:eye", build_aura_side(), "Nature's Aura")
     write_chapter("18_food", CH["food"], GROUP_SIDE, 17, "farmersdelight:cooking_pot", build_food_side(), "Kitchen Line")
     write_chapter("19_spells", CH["spells"], GROUP_SIDE, 18, "irons_spellbooks:iron_spell_book", build_spells_side(), "Battle Spells")

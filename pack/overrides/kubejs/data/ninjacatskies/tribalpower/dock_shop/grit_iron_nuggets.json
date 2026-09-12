@@ -1,0 +1,12 @@
+{
+  "stall": "grit",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 20
+  },
+  "result": {
+    "id": "minecraft:iron_nugget",
+    "count": 27
+  },
+  "max_uses": 16
+}

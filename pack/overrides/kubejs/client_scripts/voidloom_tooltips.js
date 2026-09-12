@@ -1,8 +1,8 @@
 // Client tooltips for Loom stations and proof items. Short; the Codex book carries the rest.
 ItemEvents.modifyTooltips(event => {
   event.add('voidloom:loomframe', [
-    Text.gray('Stretch a mesh, load dirt or gravel, let it work. Hoppers feed the top and pull the sides.'),
-    Text.darkGray('Empty hand takes scraps; sneak to pull the mesh. Thread meshes catch Loom Lint, Thread, and Filament.')
+    Text.gray('Stretch a mesh, hopper grit in the top, sit it on a hopper for scraps. Same table as an Ex Deorum sieve, a little less per block because it runs itself.'),
+    Text.darkGray('Empty hand takes scraps; sneak to pull the mesh. Mesh is hand-only. Redstone pauses it.')
   ])
   event.add('voidloom:tension_barrel', [
     Text.gray('Pour water (bucket comes back) and add dirt → clay. String + ender pearl → 2 yarn.'),
@@ -17,7 +17,9 @@ ItemEvents.modifyTooltips(event => {
     Text.gray('Right-click: the campaign book — story and what to do.'),
     Text.darkGray('Grave (`): the assignment list and rewards. Same campaign, not a second mode.')
   ])
-  event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. The Desk chapter sells things for Thread.'))
+  event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. Dock Kin stalls sell things for Thread.'))
+  event.add('minecraft:rotten_flesh', Text.gray('Smelt or campfire it for leather. Zombies on the pad are the cow.'))
+  event.add('minecraft:leather', Text.gray('Smelt rotten flesh, or sieve dirt with flint mesh and up. Pad-keepers at the Dock sell a little.'))
   event.add('voidloom:void_yarn', [
     Text.gray('Early: 4 string → 2 yarn. Later: string + pearl in the Tension Barrel → 2 yarn.'),
     Text.darkGray('Or four Loom Lint from the Loomframe.')

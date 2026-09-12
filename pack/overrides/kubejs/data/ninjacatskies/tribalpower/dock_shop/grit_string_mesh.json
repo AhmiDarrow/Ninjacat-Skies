@@ -1,0 +1,12 @@
+{
+  "stall": "grit",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 12
+  },
+  "result": {
+    "id": "voidloom:thread_mesh_string",
+    "count": 1
+  },
+  "max_uses": 16
+}

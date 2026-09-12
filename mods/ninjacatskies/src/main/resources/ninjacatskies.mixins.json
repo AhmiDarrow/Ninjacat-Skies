@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ninjacat.skies.core.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "com.ninjacat.skies.core.mixin.SkiesMixinPlugin",
+  "client": [
+    "MobTooltipMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

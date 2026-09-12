@@ -1,0 +1,12 @@
+{
+  "stall": "spark",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 26
+  },
+  "result": {
+    "id": "minecraft:chorus_fruit",
+    "count": 8
+  },
+  "max_uses": 16
+}

@@ -1,6 +1,7 @@
 package com.ninjacat.skies.voidloom.verification;
 
 import com.ninjacat.skies.voidloom.block.*;
+import com.ninjacat.skies.voidloom.compat.LoomframeYield;
 import com.ninjacat.skies.voidloom.item.ModItems;
 import net.minecraft.core.*;
 import net.minecraft.gametest.framework.*;
@@ -77,5 +78,27 @@ public class ProcessingGameTests {
         h.assertTrue(be.getInput().getCount()==remaining,"Backpressure must not reroll or burn more input");
         int count=be.drainForDrop().stream().mapToInt(ItemStack::getCount).sum();h.assertTrue(count>257+remaining,"Breaking must recover mesh, input, full outputs and paid pending loot");
         h.assertTrue(be.drainForDrop().isEmpty(),"Repeated drain must not duplicate drops");h.succeed();
+    }
+    @GameTest(template="empty")
+    public static void loomframeYieldIsEightyPercent(GameTestHelper h) {
+        var rand = net.minecraft.util.RandomSource.create(1L);
+        int kept = 0;
+        for (int i = 0; i < 10000; i++) kept += LoomframeYield.scale(1, rand);
+        h.assertTrue(kept > 7700 && kept < 8300, "Automated yield keeps ~80% of a sieve count");
+        h.assertTrue(LoomframeYield.scale(0, rand) == 0, "A miss stays a miss");
+        h.succeed();
+    }
+    @GameTest(template="empty")
+    public static void loomHopperInsertAndExtract(GameTestHelper h) {
+        h.setBlock(2,1,2,ModBlocks.LOOMFRAME.get());
+        var be = (LoomframeBlockEntity) h.getBlockEntity(new BlockPos(2,1,2));
+        var tag = outputs(h, new ItemStack(Items.FLINT, 4));
+        tag.put("Mesh", new ItemStack(ModItems.THREAD_MESH_STRING.get()).save(h.getLevel().registryAccess()));
+        be.loadWithComponents(tag, h.getLevel().registryAccess());
+        h.assertTrue(be.handler().insertItem(0, new ItemStack(Items.DIRT, 8), false).isEmpty() && be.getInput().getCount() == 8, "Hopper above inserts grit");
+        h.assertTrue(be.handler().extractItem(0, 8, false).isEmpty() && be.getInput().getCount() == 8, "Hopper must not steal grit");
+        h.assertTrue(be.handler().extractItem(1, 2, false).getCount() == 2, "Hopper below pulls scraps");
+        h.assertTrue(!be.handler().insertItem(1, new ItemStack(Items.DIRT), false).isEmpty(), "Hopper cannot push into scrap slots");
+        h.succeed();
     }
 }
