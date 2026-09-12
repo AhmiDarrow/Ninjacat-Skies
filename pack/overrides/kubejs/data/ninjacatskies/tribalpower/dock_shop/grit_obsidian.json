@@ -2,7 +2,7 @@
   "stall": "grit",
   "cost": {
     "id": "ninjacatskies:frayed_thread",
-    "count": 30
+    "count": 64
   },
   "result": {
     "id": "minecraft:obsidian",

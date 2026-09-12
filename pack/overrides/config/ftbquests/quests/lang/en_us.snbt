@@ -697,7 +697,7 @@
 	quest.4200000000020073.title: "Slimeball"
 	quest.4200000000020074.quest_desc: [
 		"Ground down for meal, or kept whole to breed the pack's next wolf.",
-		"How: craft, smelt, sieve, or mob-drop this. JEI lists every source on the pad."
+		"How: skeletons at night, or Pad-keepers stall (16 Thread for 8)."
 	]
 	quest.4200000000020074.title: "Bone"
 	quest.4200000000020075.quest_desc: [
@@ -1182,7 +1182,7 @@
 	quest.42000000000500D2.quest_desc: [
 		"Bone, string, amethyst. The first beat.",
 		"It yields two — keep one for the Spirit Codex.",
-		"How: bones, string, amethyst. Spark / Hum gate."
+		"How: one bone, string, amethyst. Pad-keepers stall sells bones. Spark / Hum gate."
 	]
 	quest.42000000000500D2.title: "Hum: Bone Chime"
 	quest.42000000000500D3.quest_desc: [
@@ -6637,7 +6637,7 @@
 	quest.4200000000210506.title: "Rotten Flesh Stock"
 	quest.4200000000210507.quest_desc: [
 		"Skeletons leave these behind; grind them for meal later.",
-		"How: craft, smelt, sieve, or mob-drop this. JEI lists every source on the pad."
+		"How: skeletons at night, or Pad-keepers stall (16 Thread for 8)."
 	]
 	quest.4200000000210507.title: "Bone Stock"
 	quest.4200000000210508.quest_desc: [
@@ -6839,7 +6839,7 @@
 	quest.420000000022052F.quest_desc: [
 		"First craft yields 2 — keep one for Codex later.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: bones, string, amethyst. Spark / Hum gate."
+		"How: one bone, string, amethyst. Pad-keepers stall sells bones. Spark / Hum gate."
 	]
 	quest.420000000022052F.title: "Bone Chime"
 	quest.4200000000220530.quest_desc: [

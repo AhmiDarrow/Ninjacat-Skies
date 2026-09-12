@@ -2,7 +2,7 @@
   "stall": "spark",
   "cost": {
     "id": "ninjacatskies:frayed_thread",
-    "count": 22
+    "count": 32
   },
   "result": {
     "id": "minecraft:amethyst_shard",

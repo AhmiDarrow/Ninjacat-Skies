@@ -2717,7 +2717,7 @@ def build_shop() -> list[dict]:
         ("Buy Spindle Crook", thread, 8, "Leaf work on demand.", "voidloom:spindle_crook", 1, False, True),
         ("Buy Dirt Bundle", thread, 10, "Expand the pad.", "minecraft:dirt", 32, False, True),
         ("Buy Cobble Bundle", thread, 10, "Stone for days.", "minecraft:cobblestone", 64, False, True),
-        ("Buy Iron Starter", thread, 20, "Nuggets toward Edge.", "minecraft:iron_nugget", 27, False, True),
+        ("Buy Iron Starter", thread, 24, "Nuggets toward Edge.", "minecraft:iron_nugget", 27, False, True),
         ("Buy Slime Kit", thread, 16, "Knot binder stock.", "minecraft:slime_ball", 8, False, True),
         ("Buy Pearl Seed", thread, 28, "One pearl — yarn or teleport.", "minecraft:ender_pearl", 1, False, True),
         ("Buy Feather Pack", thread, 10, "Air totem / seal / arrows.", "minecraft:feather", 8, False, True),
@@ -2728,20 +2728,20 @@ def build_shop() -> list[dict]:
     ])
     # Optional side purchases — still consume Thread.
     side = grid_optional(s, [
-        ("Buy XP Bottles", thread, 20, "Bottled practice.", "minecraft:experience_bottle", 8, True),
-        ("Buy Emeralds", thread, 24, "Trade bait.", "minecraft:emerald", 8, True),
-        ("Buy Diamonds", thread, 30, "Hard currency, two at a time.", "minecraft:diamond", 2, True),
-        ("Buy Shulker", thread, 90, "A portable room. The End is cheaper if you can reach it.", "minecraft:shulker_box", 1, True),
-        ("Buy Vault", thread, 40, "Bulk Create storage, two vaults.", "create:item_vault", 2, True),
-        ("Buy Gold", thread, 18, "Gilded bits.", "minecraft:gold_ingot", 4, True),
-        ("Buy Copper", thread, 14, "Wire and bulbs.", "minecraft:copper_ingot", 8, True),
-        ("Buy Amethyst", thread, 22, "Sigil bait.", "minecraft:amethyst_shard", 4, True),
+        ("Buy XP Bottles", thread, 24, "Bottled practice.", "minecraft:experience_bottle", 8, True),
+        ("Buy Emeralds", thread, 48, "Trade bait.", "minecraft:emerald", 8, True),
+        ("Buy Diamonds", thread, 80, "Hard currency, two at a time.", "minecraft:diamond", 2, True),
+        ("Buy Shulker", thread, 200, "A portable room. The End is cheaper if you can reach it.", "minecraft:shulker_box", 1, True),
+        ("Buy Vault", thread, 80, "Bulk Create storage, two vaults.", "create:item_vault", 2, True),
+        ("Buy Gold", thread, 24, "Gilded bits.", "minecraft:gold_ingot", 4, True),
+        ("Buy Copper", thread, 16, "Wire and bulbs.", "minecraft:copper_ingot", 8, True),
+        ("Buy Amethyst", thread, 32, "Sigil bait.", "minecraft:amethyst_shard", 4, True),
         ("Buy Leather", thread, 18, "Drumheart skin — Hum gate.", "minecraft:leather", 2, True),
         ("Buy Honeycomb", thread, 16, "Swarm bait.", "minecraft:honeycomb", 8, True),
-        ("Buy Nether Wart", thread, 20, "Brew stock.", "minecraft:nether_wart", 8, True),
-        ("Buy Chorus", thread, 26, "End grit snack.", "minecraft:chorus_fruit", 8, True),
-        ("Buy Obsidian", thread, 30, "Portal thoughts.", "minecraft:obsidian", 4, True),
-        ("Buy Beacon Frame", thread, 200, "A star for a Clowder monument. Two hundred Thread is a campaign, not a tip.", "minecraft:nether_star", 1, True),
+        ("Buy Nether Wart", thread, 24, "Brew stock.", "minecraft:nether_wart", 8, True),
+        ("Buy Chorus", thread, 40, "End grit snack.", "minecraft:chorus_fruit", 8, True),
+        ("Buy Obsidian", thread, 64, "Portal thoughts.", "minecraft:obsidian", 4, True),
+        ("Buy Beacon Frame", thread, 1000, "A star for a Clowder monument. A thousand Thread — kill the Wither or save a whole campaign.", "minecraft:nether_star", 1, True),
     ], origin=(-3.0, 7.5), cols=6)
     # Desk buys are personal + repeatable Thread sinks (PLAYTHROUGH targets).
     shop = main + side
