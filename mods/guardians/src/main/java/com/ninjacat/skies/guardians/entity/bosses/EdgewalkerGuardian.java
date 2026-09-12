@@ -4,6 +4,7 @@ import com.ninjacat.skies.guardians.GuardianKind;
 import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
@@ -120,4 +121,15 @@ public class EdgewalkerGuardian extends GuardianEntity {
     }
 
     @Override protected void onDefeated() { super.onDefeated(); broken.restoreAll(level()); pending.clear(); reknitAt.clear(); reknitPos.clear(); }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        broken.save(tag, "Broken");
+    }
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        broken.load(tag, "Broken", level());
+    }
 }

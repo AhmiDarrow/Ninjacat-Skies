@@ -30,11 +30,41 @@ final class FtbTeamsBridge {
     /** Party membership changes re-sync the client and hand out any Strand advancements the new Clowder already earned. */
     static void registerPartyEvents() {
         dev.ftb.mods.ftbteams.api.event.TeamEvent.PLAYER_JOINED_PARTY.register(e -> {
+            inheritSoloData(e);
             if (e.getPlayer() != null) LoomTension.onClowderChanged(e.getPlayer());
         });
         dev.ftb.mods.ftbteams.api.event.TeamEvent.PLAYER_LEFT_PARTY.register(e -> {
             if (e.getPlayer() != null) LoomTension.onClowderChanged(e.getPlayer());
         });
+    }
+
+    /**
+     * FTB promoting a solo player-team into a party used to drop Loom Tension: the party extra-data was empty,
+     * so seated Strands vanished and the Tension Post still pointed at the old UUID. Copy missing keys, OR the
+     * strand bits, and retarget the remembered Post.
+     */
+    private static void inheritSoloData(dev.ftb.mods.ftbteams.api.event.PlayerJoinedPartyTeamEvent e) {
+        Team prev = e.getPreviousTeam();
+        Team next = e.getTeam();
+        if (prev == null || next == null || prev.getTeamId().equals(next.getTeamId())) return;
+        CompoundTag from = prev.getExtraData().getCompound(KEY);
+        if (from.isEmpty()) return;
+        CompoundTag extra = next.getExtraData();
+        CompoundTag to = extra.contains(KEY) ? extra.getCompound(KEY) : new CompoundTag();
+        int bits = from.getInt(LoomTension.KEY_STRANDS) | to.getInt(LoomTension.KEY_STRANDS);
+        if (bits != 0) to.putInt(LoomTension.KEY_STRANDS, bits);
+        if (from.getBoolean(LoomTension.KEY_REWOVEN)) to.putBoolean(LoomTension.KEY_REWOVEN, true);
+        if (!to.contains(LoomTension.KEY_POST) && from.contains(LoomTension.KEY_POST)) {
+            to.put(LoomTension.KEY_POST, from.get(LoomTension.KEY_POST).copy());
+        }
+        for (String k : from.getAllKeys()) {
+            if (!to.contains(k)) to.put(k, from.get(k).copy());
+        }
+        extra.put(KEY, to);
+        next.markDirty();
+        if (e.getPlayer() != null) {
+            LoomTension.retargetPost(e.getPlayer().getServer(), new TeamClowder(next));
+        }
     }
 
     static Optional<Clowder> forPlayer(ServerPlayer player) {

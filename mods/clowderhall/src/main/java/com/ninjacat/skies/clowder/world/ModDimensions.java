@@ -55,6 +55,10 @@ public final class ModDimensions {
     private ModDimensions() {}
 
     public static boolean travelToHub(ServerPlayer player) {
+        if (isGuardianArena(player.level().dimension().location())) {
+            player.displayClientMessage(msg("message.clowderhall.hub_in_arena", NinjacatText.TEAL), false);
+            return false;
+        }
         ServerLevel hub = player.server.getLevel(CLOWDER_HALL);
         if (hub == null) {
             player.displayClientMessage(msg("message.clowderhall.hub_missing", NinjacatText.TEAL), false);
@@ -109,9 +113,13 @@ public final class ModDimensions {
             return teleportOverworldSpawn(player);
         }
 
+        if (isGuardianArena(dimId)) {
+            return teleportOverworldSpawn(player);
+        }
+
         ResourceKey<Level> key = ResourceKey.create(Registries.DIMENSION, dimId);
         ServerLevel target = player.server.getLevel(key);
-        if (target == null) {
+        if (target == null || isGuardianArena(target.dimension().location())) {
             return teleportOverworldSpawn(player);
         }
 
@@ -281,10 +289,15 @@ public final class ModDimensions {
         BlockPos chestPos = PAD_CENTER.offset(1, 1, 1);
         if (level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest && chest.isEmpty()) {
             fillCeremonyChest(chest);
-            root.putBoolean(KIT_TAG, true);
-            persisted.put(ROOT, root);
-            arriving.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
         }
+        root.putBoolean(KIT_TAG, true);
+        persisted.put(ROOT, root);
+        arriving.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
+    }
+
+    /** Snapped Guardians arena dimension — never treat it as a Hall return or Hub Key destination. */
+    static boolean isGuardianArena(ResourceLocation id) {
+        return id != null && "guardians".equals(id.getNamespace()) && "arena".equals(id.getPath());
     }
 
     private static void placeBannerPost(ServerLevel level, BlockPos base, BlockState banner) {

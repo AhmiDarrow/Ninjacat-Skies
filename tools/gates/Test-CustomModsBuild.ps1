@@ -14,13 +14,10 @@ $needed = @(
     "guardians-${customModVersion}.jar"
 )
 $packMods = Join-Path $root "pack\mods"
-$allPresent = $true
-foreach ($n in $needed) {
-    if (-not (Test-Path (Join-Path $packMods $n))) { $allPresent = $false }
-}
+$corePresent = @(Get-ChildItem $packMods -Filter "ninjacatskies-core-*.jar" -ErrorAction SilentlyContinue).Count -gt 0
 
-if ($SkipIfJarsPresent -and $allPresent) {
-    Write-Host "PASS Test-CustomModsBuild (skipped compile; jars present in pack/mods)"
+if ($SkipIfJarsPresent -and $corePresent) {
+    Write-Host "PASS Test-CustomModsBuild (skipped compile; ninjacatskies-core present in pack/mods)"
     exit 0
 }
 
@@ -35,16 +32,18 @@ try {
     Pop-Location
 }
 
-# Refresh only this version; build/libs may retain artifacts from older releases.
-Get-ChildItem $modsRoot -Recurse -Filter "*.jar" |
-    Where-Object { $_.FullName -match '\\build\\libs\\' -and $_.Name -in $needed } |
-    ForEach-Object { Copy-Item $_.FullName $packMods -Force }
-
+# Companions ship inside ninjacatskies-core on CurseForge. Never copy loose jars into pack/mods.
 foreach ($n in $needed) {
-    if (-not (Test-Path (Join-Path $packMods $n))) {
-        Write-Host "FAIL Test-CustomModsBuild — missing $n after build"
+    $found = Get-ChildItem $modsRoot -Recurse -Filter $n -ErrorAction SilentlyContinue |
+        Where-Object { $_.FullName -match '\\build\\libs\\' } |
+        Select-Object -First 1
+    if (-not $found) {
+        Write-Host "FAIL Test-CustomModsBuild — missing compiled $n under mods/*/build/libs"
         exit 1
     }
 }
-Write-Host "PASS Test-CustomModsBuild"
+if (-not $corePresent) {
+    Write-Host "WARN Test-CustomModsBuild — pack/mods has no ninjacatskies-core-*.jar; run tools/build_core_jar.py after a Core release"
+}
+Write-Host "PASS Test-CustomModsBuild (compiled $customModVersion; pack still uses Core jar-in-jar)"
 exit 0

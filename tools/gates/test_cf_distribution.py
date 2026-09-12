@@ -14,13 +14,14 @@ from test_export_archive import verify
 
 
 class DistributionTests(unittest.TestCase):
-    def test_actual_pack_has_only_six_owned_override_jars(self):
+    def test_actual_pack_has_only_curseforge_jars(self):
         jars = sorted((ROOT / 'pack/mods').glob('*.jar'))
         rows = json.loads((ROOT / 'pack/modlist-resolved.json').read_text(encoding='utf-8'))
         entries = manifest_entries(jars, rows)
-        self.assertEqual(len(entries), 87)
-        self.assertEqual(len(jars), 93)
-        self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 6)   # five companions + Tribal Power (bundled while in CF review)
+        self.assertEqual(len(jars), 89)
+        self.assertEqual(len(entries), 89)
+        self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 0)
+        self.assertTrue(any(p.name.startswith('ninjacatskies-core-') for p in jars))
         expected = {619320: 8687896, 235577: 8163135}
         actual = {e['projectID']: e['fileID'] for e in entries}
         for pid, fid in expected.items(): self.assertEqual(actual[pid], fid)

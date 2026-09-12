@@ -4,6 +4,7 @@ import com.ninjacat.skies.guardians.GuardianKind;
 import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
@@ -112,4 +113,15 @@ public class HivemindGuardian extends GuardianEntity {
     }
 
     @Override protected void onDefeated() { super.onDefeated(); Mech.discardMinions(this); comb.restoreAll(level()); raised.clear(); }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        comb.save(tag, "Comb");
+    }
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        comb.load(tag, "Comb", level());
+    }
 }

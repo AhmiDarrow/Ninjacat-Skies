@@ -17,8 +17,8 @@ import net.neoforged.fml.ModList;
 import java.util.List;
 
 /**
- * The damaged assigner. Right-click opens quests; sneak-right-click opens the lore book.
- * Without either optional book mod, it still offers a practical next-step hint.
+ * The damaged assigner. Right-click always opens the campaign book (Modonomicon). FTB Quests stays on grave (`).
+ * Without the book mod, it still offers a practical next-step hint.
  */
 public class WhiskerCodexItem extends Item {
     private static final boolean MODONOMICON = ModList.get().isLoaded("modonomicon");
@@ -44,10 +44,6 @@ public class WhiskerCodexItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
-        if (!player.isShiftKeyDown() && QUESTS) {
-            if (level.isClientSide) com.ninjacat.skies.core.client.QuestBookClient.open();
-            return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
-        }
         if (!(player instanceof ServerPlayer sp)) {
             return InteractionResultHolder.sidedSuccess(stack, true);
         }
@@ -84,7 +80,7 @@ public class WhiskerCodexItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(NinjacatText.teal("Damaged, but it still assigns work."));
-        tooltip.add(Component.translatable(QUESTS ? "tooltip.ninjacatskies.codex.quests" : MODONOMICON ? "tooltip.ninjacatskies.codex.book" : "tooltip.ninjacatskies.codex.nudge")
+        tooltip.add(Component.translatable(MODONOMICON ? "tooltip.ninjacatskies.codex.book" : QUESTS ? "tooltip.ninjacatskies.codex.quests" : "tooltip.ninjacatskies.codex.nudge")
                 .withStyle(s -> s.withColor(0x8A8580)));
     }
 }

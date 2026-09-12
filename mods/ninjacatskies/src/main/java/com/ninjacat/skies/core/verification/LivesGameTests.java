@@ -97,4 +97,28 @@ public class LivesGameTests {
         h.assertTrue(ClowderLives.reset(team, 3) == 9, "Operator reset scales to current three members");
         h.succeed();
     }
+
+    @GameTest(template="empty")
+    public static void restoreOneUnexhaustsOnlyTheMate(GameTestHelper h) {
+        var members = new HashSet<UUID>();
+        UUID a = UUID.randomUUID(), b = UUID.randomUUID();
+        members.add(a); members.add(b);
+        Clowder team = new Clowder() {
+            private final UUID id = UUID.randomUUID();
+            private final CompoundTag data = new CompoundTag();
+            public UUID id() { return id; }
+            public CompoundTag data() { return data; }
+            public Component name() { return Component.literal("Party"); }
+            public void markDirty() {}
+            public Collection<ServerPlayer> onlineMembers() { return List.of(); }
+            public Collection<UUID> memberIds() { return members; }
+        };
+        while (ClowderLives.remaining(team, 3) > 0) ClowderLives.spend(team, 3);
+        h.assertTrue(ClowderLives.isExhausted(team, a) && ClowderLives.isExhausted(team, b), "Both mates exhausted at zero");
+        h.assertTrue(ClowderLives.restoreOne(team, a, 3) == 1, "Shuttle restores one life");
+        h.assertTrue(!ClowderLives.isExhausted(team, a), "Rescued mate stands");
+        h.assertTrue(ClowderLives.isExhausted(team, b), "Other mate stays down");
+        h.assertTrue(ClowderLives.remaining(team, 3) == 1, "Pool is one, not a full reset");
+        h.succeed();
+    }
 }

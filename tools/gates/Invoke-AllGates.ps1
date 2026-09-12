@@ -49,6 +49,15 @@ try {
     Invoke-Gate "SmokeHarness" {
         pwsh -NoProfile -File (Join-Path $gateDir "Test-SmokeHarness.ps1")
     }
+    Invoke-Gate "KubeJSRhino" {
+        python -X utf8 (Join-Path $gateDir "test_kubejs_rhino.py")
+    }
+    Invoke-Gate "LifeRewards" {
+        python -X utf8 (Join-Path $gateDir "test_life_rewards.py")
+    }
+    Invoke-Gate "Reachability" {
+        python -X utf8 (Join-Path $root "tools\check_reachability.py")
+    }
     if ($WithExportDryRun) {
         Invoke-Gate "ExportDryRun" {
             pwsh -NoProfile -File (Join-Path $root "tools\export-curseforge.ps1")

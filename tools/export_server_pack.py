@@ -76,6 +76,9 @@ while IFS='|' read -r fid fn sha; do
   mv -f "$dst.part" "$dst"
 done < server-mods.txt
 
+[ -f server.properties ] || cp -n server.properties.default server.properties
+[ -f user_jvm_args.txt ] || cp -n user_jvm_args.default.txt user_jvm_args.txt
+
 if [ ! -f eula.txt ] || ! grep -qi 'eula=true' eula.txt; then
   if [ "${1:-}" = "--accept-eula" ]; then echo "eula=true" > eula.txt
   else
@@ -119,6 +122,9 @@ foreach ($f in $manifest.files) {
   if ($got -ne $f.sha1) { Remove-Item -Force "$dst.part"; throw "checksum mismatch for $($f.filename)" }
   Move-Item -Force "$dst.part" $dst
 }
+
+if (-not (Test-Path server.properties)) { Copy-Item server.properties.default server.properties }
+if (-not (Test-Path user_jvm_args.txt)) { Copy-Item user_jvm_args.default.txt user_jvm_args.txt }
 
 if (-not (Test-Path eula.txt) -or -not (Select-String -Path eula.txt -Pattern 'eula=true' -Quiet)) {
   if ($args -contains "--accept-eula") { Set-Content eula.txt "eula=true" }
@@ -254,8 +260,8 @@ def main() -> int:
     (stage / "install.bat").write_text(INSTALL_BAT, encoding="utf-8", newline="\r\n")
     (stage / "start.sh").write_text(fill(START_SH), encoding="utf-8", newline="\n")
     (stage / "start.bat").write_text(fill(START_BAT), encoding="utf-8", newline="\r\n")
-    (stage / "server.properties").write_text(SERVER_PROPERTIES, encoding="utf-8", newline="\n")
-    (stage / "user_jvm_args.txt").write_text(USER_JVM_ARGS, encoding="utf-8", newline="\n")
+    (stage / "server.properties.default").write_text(SERVER_PROPERTIES, encoding="utf-8", newline="\n")
+    (stage / "user_jvm_args.default.txt").write_text(USER_JVM_ARGS, encoding="utf-8", newline="\n")
     (stage / "README-SERVER.md").write_text(fill(README), encoding="utf-8")
     icon = ROOT / "docs/public/pack-icon-400.png"
     if icon.is_file(): shutil.copy2(icon, stage / "server-icon-source.png")

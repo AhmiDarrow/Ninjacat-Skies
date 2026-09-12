@@ -2,7 +2,13 @@ package com.ninjacat.skies.guardians.entity.bosses;
 
 import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.NbtUtils;
+import net.minecraft.nbt.Tag;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -145,5 +151,25 @@ final class Mech {
         }
         void restoreAll(Level level) { restore(level, Integer.MAX_VALUE); }
         Iterable<BlockPos> positions() { return saved.keySet(); }
+        void save(CompoundTag tag, String key) {
+            ListTag list = new ListTag();
+            for (var e : saved.entrySet()) {
+                CompoundTag t = new CompoundTag();
+                t.putInt("x", e.getKey().getX()); t.putInt("y", e.getKey().getY()); t.putInt("z", e.getKey().getZ());
+                t.put("s", NbtUtils.writeBlockState(e.getValue()));
+                list.add(t);
+            }
+            tag.put(key, list);
+        }
+        void load(CompoundTag tag, String key, Level level) {
+            saved.clear();
+            if (level == null || !tag.contains(key)) return;
+            HolderGetter<net.minecraft.world.level.block.Block> lookup = level.holderLookup(Registries.BLOCK);
+            for (Tag raw : tag.getList(key, Tag.TAG_COMPOUND)) {
+                CompoundTag t = (CompoundTag) raw;
+                BlockPos p = new BlockPos(t.getInt("x"), t.getInt("y"), t.getInt("z"));
+                saved.put(p, NbtUtils.readBlockState(lookup, t.getCompound("s")));
+            }
+        }
     }
 }

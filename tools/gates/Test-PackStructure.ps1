@@ -39,10 +39,14 @@ $jars = @(Get-ChildItem (Join-Path $root "pack\mods") -Filter "*.jar" -ErrorActi
 if ($jars.Count -lt 20) {
     [void]$failures.Add("Expected at least 20 jars in pack/mods (found $($jars.Count))")
 }
-foreach ($name in @("ninjacatskies-${customModVersion}.jar","voidloom-${customModVersion}.jar","clowderhall-${customModVersion}.jar","ninjacatlib-${customModVersion}.jar","guardians-${customModVersion}.jar")) {
-    if (-not (Test-Path (Join-Path $root "pack\mods\$name"))) {
-        [void]$failures.Add("Missing custom jar pack/mods/$name - run mods build + copy")
-    }
+$coreJars = @(Get-ChildItem (Join-Path $root "pack\mods") -Filter "ninjacatskies-core-*.jar" -ErrorAction SilentlyContinue)
+if ($coreJars.Count -lt 1) {
+    [void]$failures.Add("Missing pack/mods/ninjacatskies-core-*.jar (companions ship jar-in-jar; do not copy loose ninjacatskies/voidloom/clowderhall/ninjacatlib/guardians jars)")
+} elseif ($coreJars.Count -gt 1) {
+    [void]$failures.Add("Multiple Core jars in pack/mods: $($coreJars.Name -join ', ')")
+}
+foreach ($loose in @(Get-ChildItem (Join-Path $root "pack\mods") -Filter "*.jar" -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^(ninjacatskies|ninjacatlib|clowderhall|voidloom|guardians)-[0-9]' })) {
+    [void]$failures.Add("Loose companion jar in pack/mods: $($loose.Name) — companions ship inside ninjacatskies-core")
 }
 
 if ($failures.Count -gt 0) {

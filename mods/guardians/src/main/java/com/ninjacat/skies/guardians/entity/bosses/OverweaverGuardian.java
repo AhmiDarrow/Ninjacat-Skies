@@ -6,6 +6,7 @@ import com.ninjacat.skies.guardians.entity.ModEntities;
 import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -164,5 +165,16 @@ public class OverweaverGuardian extends GuardianEntity {
     protected void onDefeated() {
         super.onDefeated();
         Mech.discardMinions(this); for (int k = 0; k < 9; k++) { shade[k] = null; lines[k].restoreAll(level()); }
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        for (int k = 0; k < 9; k++) lines[k].save(tag, "Line" + k);
+    }
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        for (int k = 0; k < 9; k++) lines[k].load(tag, "Line" + k, level());
     }
 }

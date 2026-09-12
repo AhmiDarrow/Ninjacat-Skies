@@ -4,6 +4,7 @@ import com.ninjacat.skies.guardians.GuardianKind;
 import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
@@ -127,4 +128,15 @@ public class CogwrightGuardian extends GuardianEntity {
     }
 
     @Override protected void onDefeated() { super.onDefeated(); unlightAll(); }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        lit.save(tag, "Lit");
+    }
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        lit.load(tag, "Lit", level());
+    }
 }

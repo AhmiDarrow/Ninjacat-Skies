@@ -23,26 +23,18 @@ foreach ($jar in $jars) {
     }
 }
 
-# 2) Custom jars contain expected mod metadata
-foreach ($pair in @(
-    @{ Jar = "ninjacatskies-${customModVersion}.jar"; Needle = "ninjacatskies" },
-    @{ Jar = "voidloom-${customModVersion}.jar"; Needle = "voidloom" },
-    @{ Jar = "clowderhall-${customModVersion}.jar"; Needle = "clowderhall" },
-    @{ Jar = "ninjacatlib-${customModVersion}.jar"; Needle = "ninjacatlib" },
-    @{ Jar = "guardians-${customModVersion}.jar"; Needle = "guardians" }
-)) {
-    $path = Join-Path $root "pack\mods\$($pair.Jar)"
-    if (-not (Test-Path $path)) { Add-Fail "Missing $($pair.Jar)"; continue }
-    Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
-    $z = [System.IO.Compression.ZipFile]::OpenRead($path)
+# 2) Core jar-in-jar contains the five companion mods
+Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
+$core = Get-ChildItem (Join-Path $root "pack\mods") -Filter "ninjacatskies-core-*.jar" | Select-Object -First 1
+if (-not $core) {
+    Add-Fail "Missing ninjacatskies-core-*.jar"
+} else {
+    $z = [System.IO.Compression.ZipFile]::OpenRead($core.FullName)
     try {
-        $entry = $z.Entries | Where-Object { $_.FullName -match 'neoforge.mods.toml|mods.toml' } | Select-Object -First 1
-        if (-not $entry) { Add-Fail "$($pair.Jar) missing mods.toml"; continue }
-        $reader = New-Object System.IO.StreamReader($entry.Open())
-        $toml = $reader.ReadToEnd()
-        $reader.Close()
-        if ($toml -notmatch [regex]::Escape($pair.Needle)) {
-            Add-Fail "$($pair.Jar) metadata missing mod id $($pair.Needle)"
+        $names = @($z.Entries | ForEach-Object { $_.FullName })
+        foreach ($needle in @("ninjacatskies", "voidloom", "clowderhall", "ninjacatlib", "guardians")) {
+            $hit = $names | Where-Object { $_ -match "META-INF/jarjar/$needle-" }
+            if (-not $hit) { Add-Fail "$($core.Name) missing nested $needle jar" }
         }
     } finally { $z.Dispose() }
 }

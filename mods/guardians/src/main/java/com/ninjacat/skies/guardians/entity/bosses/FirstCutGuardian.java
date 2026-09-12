@@ -5,6 +5,7 @@ import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -171,5 +172,16 @@ public class FirstCutGuardian extends GuardianEntity {
     protected void onDefeated() {
         super.onDefeated();
         gap.restoreAll(level()); split.restoreAll(level()); splitQueue.clear(); rubble.clear(); rubbleBorn.clear(); gapTimer = 0;
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        gap.save(tag, "Gap"); split.save(tag, "Split");
+    }
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        gap.load(tag, "Gap", level()); split.load(tag, "Split", level());
     }
 }
