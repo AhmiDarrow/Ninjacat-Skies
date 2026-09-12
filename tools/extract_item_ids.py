@@ -10,19 +10,30 @@ ROOT = Path(__file__).resolve().parents[1]
 MODS = ROOT / "pack/mods"
 OUT = ROOT / "INTERNAL/known_item_ids.txt"
 
+def scan_zip(z: zipfile.ZipFile, ids: set[str], depth: int = 0) -> None:
+    for n in z.namelist():
+        m = re.match(r"assets/([^/]+)/models/item/(.+)\.json$", n)
+        if m:
+            ids.add(f"{m.group(1)}:{m.group(2)}")
+        m = re.match(r"data/([^/]+)/recipe(?:s)?/(.+)\.json$", n)
+        if m:
+            leaf = m.group(2).split("/")[-1]
+            if not leaf.startswith("_"):
+                ids.add(f"{m.group(1)}:{leaf}")
+        if depth == 0 and n.endswith(".jar") and n.startswith("META-INF/jarjar/"):
+            try:
+                import io
+                with zipfile.ZipFile(io.BytesIO(z.read(n))) as nested:
+                    scan_zip(nested, ids, depth + 1)
+            except Exception as exc:
+                print("skip nested", n, exc)
+
+
 ids: set[str] = set()
 for jar in MODS.glob("*.jar"):
     try:
         with zipfile.ZipFile(jar) as z:
-            for n in z.namelist():
-                m = re.match(r"assets/([^/]+)/models/item/(.+)\.json$", n)
-                if m:
-                    ids.add(f"{m.group(1)}:{m.group(2)}")
-                m = re.match(r"data/([^/]+)/recipe(?:s)?/(.+)\.json$", n)
-                if m:
-                    leaf = m.group(2).split("/")[-1]
-                    if not leaf.startswith("_"):
-                        ids.add(f"{m.group(1)}:{leaf}")
+            scan_zip(z, ids)
     except Exception as exc:
         print("skip", jar.name, exc)
 

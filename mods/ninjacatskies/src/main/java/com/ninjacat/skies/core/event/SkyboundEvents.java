@@ -130,14 +130,15 @@ public final class SkyboundEvents {
             return;
         }
         int lives = remainingLives(player);
-        if (lives == 0 && !player.isCreative()) {
+        boolean teamDown = LoomTension.clowderOf(player).map(t -> ClowderLives.isExhausted(t, player.getUUID())).orElse(false);
+        if ((lives == 0 || teamDown) && !player.isCreative()) {
             if (!player.isSpectator()) {
                 player.getPersistentData().putBoolean(EXHAUSTED, true);
                 player.setGameMode(GameType.SPECTATOR);
                 player.sendSystemMessage(NinjacatText.gold(
                         "Your Clowder has spent its last life. A rare life reward or an operator revive can restore the pool."));
             }
-        } else if (lives > 0 && player.getPersistentData().getBoolean(EXHAUSTED)) {
+        } else if (lives > 0 && !teamDown && player.getPersistentData().getBoolean(EXHAUSTED)) {
             player.getPersistentData().remove(EXHAUSTED);
             if (player.isSpectator()) {
                 seatAtRespawnOrDock(player);
@@ -168,11 +169,26 @@ public final class SkyboundEvents {
     public static int revivePlayer(ServerPlayer player) {
         if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return -1;
         int lives = resetLives(player);
+        player.getPersistentData().remove(EXHAUSTED);
         LoomTension.clowderOf(player).ifPresent(team -> {
-            for (ServerPlayer member : team.onlineMembers()) enforceLives(member);
+            for (ServerPlayer member : team.onlineMembers()) {
+                member.getPersistentData().remove(EXHAUSTED);
+                enforceLives(member);
+            }
         });
         player.sendSystemMessage(NinjacatText.gold("Clowder revive — shared lives restored: " + lives));
         return lives;
+    }
+
+    /** Overweaver shuttle: +1 shared life and stand this mate back up. Other exhausted mates stay down. */
+    public static int restoreOneLife(ServerPlayer player) {
+        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return -1;
+        return LoomTension.clowderOf(player).map(team -> {
+            int lives = ClowderLives.restoreOne(team, player.getUUID(), SkiesConfig.STARTING_LIVES.get());
+            player.getPersistentData().remove(EXHAUSTED);
+            enforceLives(player);
+            return lives;
+        }).orElse(-1);
     }
 
     public static void seatAtRespawnOrDock(ServerPlayer player) {

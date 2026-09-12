@@ -1,5 +1,5 @@
-// Whisker Codex is one book. Core 0.4.2 still splits right-click (quests) vs shift-click (lore);
-// cancel that split here and always open the campaign pages.
+// Whisker Codex is one book. Java opens Modonomicon on use; this client hook keeps the same
+// behaviour if an older Core jar is still loaded (right-click must not open FTB Quests).
 let ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
 let BookDataManager = Java.loadClass('com.klikli_dev.modonomicon.data.BookDataManager')
 let BookGuiManager = Java.loadClass('com.klikli_dev.modonomicon.client.gui.BookGuiManager')

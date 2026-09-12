@@ -30,6 +30,7 @@
   "message.clowderhall.hub_return_spawn": "No saved exit — Clowder Dock spawn.",
   "message.clowderhall.hub_return_fail": "Could not leave Clowder Hall.",
   "message.clowderhall.hub_return_not_in_hall": "You are not in Clowder Hall — use /clowder hub first, then /clowder return.",
+  "message.clowderhall.hub_in_arena": "The Hub Key will not pull you out of an arena. Finish the fight or /guardians leave.",
   "message.clowderhall.revive_self": "Rare life rewards restore the shared pool. An operator can use /skybound revive [player].",
   "message.clowderhall.revive_self_not_spectator": "Self-revive only works while you are a soft-hardcore spectator.",
   "message.clowderhall.revive_not_mate": "That player is not on your Skyblock / FTB Clowder team.",

@@ -1,5 +1,6 @@
 package com.ninjacat.skies.guardians.verification;
 
+import com.ninjacat.skies.core.tension.Strand;
 import com.ninjacat.skies.guardians.GuardianKind;
 import com.ninjacat.skies.guardians.arena.ArenaData;
 import com.ninjacat.skies.guardians.arena.ArenaInstance;
@@ -11,6 +12,7 @@ import com.ninjacat.skies.guardians.item.RelicItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -89,12 +91,23 @@ public class GuardianGameTests {
         h.succeed();
     }
 
+    /** Solo persistent data: seat a Strand so Easy-tier totems (Lint Golem / Tangle) will answer. */
+    private static void seat(ServerPlayer p, Strand s) {
+        CompoundTag root = p.getPersistentData();
+        CompoundTag mod = root.getCompound("ninjacatskies");
+        CompoundTag clowder = mod.getCompound("clowder");
+        clowder.putInt("strands", clowder.getInt("strands") | s.bit());
+        mod.put("clowder", clowder);
+        root.put("ninjacatskies", mod);
+    }
+
     @GameTest(template = "empty", timeoutTicks = 1200)
     public static void totemLoop(GameTestHelper h) {
         ServerLevel level = h.getLevel();
         ServerPlayer fake = FakePlayerFactory.get(level, new GameProfile(UUID.nameUUIDFromBytes("guardians-totem".getBytes()), "TotemTester"));
         BlockPos base = h.absolutePos(new BlockPos(1, 1, 1));
         fake.teleportTo(base.getX() + 0.5, base.getY(), base.getZ() + 0.5);
+        seat(fake, Strand.SOIL);
         ArenaManager m = ArenaManager.get(level.getServer());
         String fail = m.summon(fake, GuardianKind.LINTGOLEM);
         if (fail != null) { h.fail("summon refused: " + fail); return; }
@@ -122,5 +135,24 @@ public class GuardianGameTests {
                 });
             });
         });
+    }
+
+    /** A full disconnect (nobody online) must not spend the totem after the FIGHT grace period. */
+    @GameTest(template = "empty", timeoutTicks = 200)
+    public static void disconnectDoesNotSpendTotem(GameTestHelper h) {
+        ServerLevel level = h.getLevel();
+        ServerPlayer fake = FakePlayerFactory.get(level, new GameProfile(UUID.nameUUIDFromBytes("guardians-dc".getBytes()), "DisconnectTester"));
+        BlockPos base = h.absolutePos(new BlockPos(1, 1, 1));
+        fake.teleportTo(base.getX() + 0.5, base.getY(), base.getZ() + 0.5);
+        seat(fake, Strand.SOIL);
+        ArenaManager m = ArenaManager.get(level.getServer());
+        String fail = m.summon(fake, GuardianKind.LINTGOLEM);
+        if (fail != null) { h.fail("summon refused: " + fail); return; }
+        ArenaInstance inst = m.instanceOf(fake);
+        if (inst == null) { h.fail("no instance"); return; }
+        inst.age = 120;
+        m.tick(level.getServer());
+        if (inst.state != ArenaInstance.State.FIGHT) h.fail("disconnect spent the totem: " + inst.state);
+        h.succeed();
     }
 }

@@ -5,11 +5,13 @@ import com.ninjacat.skies.clowder.command.ClowderCommands;
 import com.ninjacat.skies.clowder.item.ModCreativeTabs;
 import com.ninjacat.skies.clowder.item.ModItems;
 import com.ninjacat.skies.clowder.team.ClowderSync;
+import com.ninjacat.skies.clowder.world.ModDimensions;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerSetSpawnEvent;
 import org.slf4j.Logger;
 
 @Mod(ClowderHall.MOD_ID)
@@ -22,7 +24,15 @@ public final class ClowderHall {
         ModCreativeTabs.TABS.register(modBus);
         modBus.addListener(this::onCommonSetup);
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
+        NeoForge.EVENT_BUS.addListener(this::onSetSpawn);
         ClowderSync.register(NeoForge.EVENT_BUS);
+    }
+
+    /** Hall beds are for rest, not a new pad spawn — Charter sneak-use seals the island. */
+    private void onSetSpawn(PlayerSetSpawnEvent event) {
+        if (event.getEntity().level().dimension().equals(ModDimensions.CLOWDER_HALL) && !event.isForced()) {
+            event.setCanceled(true);
+        }
     }
 
     private void onCommonSetup(FMLCommonSetupEvent event) {

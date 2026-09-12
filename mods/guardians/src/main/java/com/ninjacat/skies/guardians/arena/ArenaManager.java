@@ -75,6 +75,13 @@ public final class ArenaManager extends SavedData {
             return "That door only opens after the Reweave.";
         if (kind.strand != null && (clowder.isEmpty() || !LoomTension.isSeated(clowder.get(), kind.strand)))
             return "Seat the " + kind.strand.title() + " Strand at your Tension Post first — " + kind.title + " only answers for a Strand that is held.";
+        if (kind.strand == null && kind.tier == GuardianKind.Tier.EASY) {
+            com.ninjacat.skies.core.tension.Strand need = kind == GuardianKind.LINTGOLEM
+                    ? com.ninjacat.skies.core.tension.Strand.SOIL
+                    : com.ninjacat.skies.core.tension.Strand.CLAW;
+            if (clowder.isEmpty() || !LoomTension.isSeated(clowder.get(), need))
+                return "Seat the " + need.title() + " Strand at your Tension Post first — " + kind.title + " only answers for a Strand that is held.";
+        }
         // the party: Clowder members online and within 32 blocks of the summoner (they hear the totem)
         List<ServerPlayer> party = new ArrayList<>(); party.add(summoner);
         clowder.ifPresent(c -> { for (ServerPlayer m : c.onlineMembers()) if (m != summoner && m.level() == summoner.level() && m.distanceTo(summoner) < 32 && !m.isSpectator() && instanceOf(m) == null) party.add(m); });
@@ -217,7 +224,11 @@ public final class ArenaManager extends SavedData {
             }
             switch (inst.state) {
                 case FIGHT -> {
-                    if (inside.isEmpty() && inst.age > 100) { wipe(server, inst, "Nobody stands. The totem is spent."); }
+                    if (inside.isEmpty() && inst.age > 100 && partyOnlineElsewhere(server, inst)) {
+                        // they walked out without /guardians leave — spend the totem
+                        wipe(server, inst, "Nobody stands. The totem is spent.");
+                    }
+                    // a full disconnect leaves party UUIDs with no online players: keep the stage until they log back in
                     else if (inst.boss != null && inst.age > 100 && arena.isLoaded(inst.originPos) && arena.getEntity(inst.boss) == null && inst.age % 20 == 0) {
                         // boss vanished (killed by /kill or unloaded) — count it as a win only if it actually died via die()
                         wipe(server, inst, "The guardian slipped the weave. The totem is spent.");
@@ -289,9 +300,29 @@ public final class ArenaManager extends SavedData {
         return false;
     }
 
+    /** Online but not inside the arena — they left the stage without disconnecting. */
+    private static boolean partyOnlineElsewhere(MinecraftServer server, ArenaInstance inst) {
+        for (UUID id : inst.party) {
+            ServerPlayer p = server.getPlayerList().getPlayer(id);
+            if (p != null && p.isAlive() && !p.isSpectator() && !inArena(p)) return true;
+        }
+        return false;
+    }
+
     /** A player who logs in inside the arena dimension with no running fight is sent home. */
     public void onLogin(ServerPlayer p) {
-        if (inArena(p) && instanceOf(p) == null) returnHome(p);
+        ArenaInstance inst = instanceOf(p);
+        if (inst != null && inst.state == ArenaInstance.State.FIGHT && !inArena(p)) {
+            ServerLevel arena = arenaLevel(p.server);
+            if (arena != null) {
+                ArenaData data = ArenaData.get(p.server, inst.kind);
+                int idx = Math.max(0, inst.party.indexOf(p.getUUID()));
+                BlockPos pad = data.pads.isEmpty() ? BlockPos.ZERO : data.pads.get(idx % data.pads.size());
+                teleportToPad(p, arena, inst.originPos, pad);
+            }
+            return;
+        }
+        if (inArena(p) && inst == null) returnHome(p);
     }
     /** Dying in the arena takes you out of the fight (respawn happens at home). */
     public void onDeath(ServerPlayer p) {

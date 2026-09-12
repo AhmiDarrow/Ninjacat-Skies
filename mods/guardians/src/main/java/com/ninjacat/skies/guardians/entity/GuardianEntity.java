@@ -8,6 +8,8 @@ import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -252,11 +254,23 @@ public abstract class GuardianEntity extends Monster {
         super.addAdditionalSaveData(tag);
         tag.putInt("ArenaSlot", arenaSlot); if (partyId != null) tag.putUUID("Party", partyId);
         tag.putInt("FightAge", ageInFight);
+        ListTag temps = new ListTag();
+        for (BlockPos p : tempBlocks) {
+            CompoundTag c = new CompoundTag();
+            c.putInt("x", p.getX()); c.putInt("y", p.getY()); c.putInt("z", p.getZ());
+            temps.add(c);
+        }
+        tag.put("TempBlocks", temps);
     }
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         arenaSlot = tag.getInt("ArenaSlot"); partyId = tag.hasUUID("Party") ? tag.getUUID("Party") : null; ageInFight = tag.getInt("FightAge");
+        tempBlocks.clear();
+        for (Tag t : tag.getList("TempBlocks", Tag.TAG_COMPOUND)) {
+            CompoundTag c = (CompoundTag) t;
+            tempBlocks.add(new BlockPos(c.getInt("x"), c.getInt("y"), c.getInt("z")));
+        }
         if (hasCustomName()) bossEvent.setName(getDisplayName());
     }
     @Override public void setCustomName(@Nullable Component name) { super.setCustomName(name); bossEvent.setName(getDisplayName()); }

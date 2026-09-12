@@ -99,6 +99,12 @@ def scan_kubejs(producible: set):
         # event.custom({... result: {id: 'x'} ...})  and sieve result ids
         for m in re.finditer(r"result:\s*\{\s*id:\s*['\"]([a-z0-9_]+:[a-z0-9_/]+)['\"]", t):
             producible.add(m.group(1))
+        # both()/sieve() helpers pass the product as the 3rd argument (id is a JS variable inside event.custom)
+        for m in re.finditer(
+            r"\b(?:both|sieve)\(\s*['\"][^'\"]+['\"]\s*,\s*['\"][^'\"]+['\"]\s*,\s*['\"]([a-z0-9_]+:[a-z0-9_/]+)['\"]",
+            t,
+        ):
+            producible.add(m.group(1))
         # bee_spawning results: results: ['minecraft:bee']
         for m in re.finditer(r"results:\s*\[\s*['\"]([a-z0-9_]+:[a-z0-9_/]+)['\"]", t):
             producible.add(m.group(1))

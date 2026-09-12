@@ -163,6 +163,17 @@ public final class LoomTension {
         }
     }
 
+    /** Point a remembered Tension Post at this Clowder after FTB promotes solo → party. */
+    public static void retargetPost(MinecraftServer server, Clowder c) {
+        GlobalPos post = postOf(c);
+        if (post == null) return;
+        ServerLevel level = server.getLevel(post.dimension());
+        if (level == null) return;
+        if (level.getBlockEntity(post.pos()) instanceof com.ninjacat.skies.core.block.TensionPostBlockEntity be) {
+            be.setClowder(c.id());
+        }
+    }
+
     /** Fraction of every Clowder's Strands that are seated, 0..1 — the server-wide state of the cut. */
     public static float serverProgress(MinecraftServer server) {
         List<Clowder> all = allClowders(server);

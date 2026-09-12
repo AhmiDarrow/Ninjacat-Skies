@@ -160,7 +160,7 @@ final class SpecialRelics {
                 var t = RelicUtil.tag(p);
                 if (t.getInt(REWEAVE_REVIVE) <= 0 || !m.getPersistentData().getBoolean("skybound_exhausted")) return;
                 t.putInt(REWEAVE_REVIVE, 0);
-                if (SkyboundEvents.revivePlayer(m) < 0) return;
+                if (SkyboundEvents.restoreOneLife(m) < 0) return;
                 ServerPlayer wearer = p;
                 RelicTimers.later(p, 2, () -> {
                     if (m.isSpectator()) return;
