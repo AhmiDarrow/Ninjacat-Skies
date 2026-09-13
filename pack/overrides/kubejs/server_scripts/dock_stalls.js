@@ -49,7 +49,7 @@ function playerVisitedMarch(player) {
   } catch (e) {}
   try {
     const DeepCacheManager = Java.loadClass('tk.darrow.tribalpower.storage.DeepCacheManager')
-    const uuid = player.uuid || player.getUuid()
+    const uuid = player.getUuid ? player.getUuid() : player.uuid
     return DeepCacheManager.data(player.server).hasVisitedMarch(uuid)
   } catch (e) {
     return false
@@ -64,10 +64,11 @@ function markMarchVisit(player) {
 
 function esterAlreadyPresent(hub) {
   try {
-    const found = hub.getEntities()
+    const found = hub.getEntities ? hub.getEntities() : null
     if (!found) return false
     for (const entity of found) {
-      if (String(entity.type) === 'chococraft:race_master') return true
+      const t = String(entity.type || '')
+      if (t.indexOf('race_master') >= 0) return true
     }
   } catch (e) {}
   return false
@@ -108,7 +109,8 @@ function ensureHubEster(server) {
   if (!someoneOpenedMarch(server)) return
   const hub = server.getLevel(HUB_DIM)
   if (!hub) return
-  if (hub.persistentData.getBoolean(HUB_ESTER_FLAG) && esterAlreadyPresent(hub)) return
+  // Trust the world flag so a failed entity scan cannot duplicate Ester every 80 ticks.
+  if (hub.persistentData.getBoolean(HUB_ESTER_FLAG)) return
   spawnEster(hub)
 }
 
@@ -120,10 +122,9 @@ PlayerEvents.loggedIn(event => {
 
 PlayerEvents.tick(event => {
   if (event.player.tickCount % 80 !== 0) return
-  if (String(event.player.level.dimension) === MARCH_DIM) {
-    markMarchVisit(event.player)
-    ensureHubEster(event.server)
-  }
+  const dim = String(event.player.level.dimension)
+  if (dim === MARCH_DIM) markMarchVisit(event.player)
+  if (dim === MARCH_DIM || dim === HUB_DIM) ensureHubEster(event.server)
 })
 
 LevelEvents.loaded(event => {

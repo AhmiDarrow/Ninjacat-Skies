@@ -2684,7 +2684,7 @@ def build_chocobo() -> list[dict]:
         ("Carob Nut", "chococraft:carob_nut", 1,
          "Gysahl, cocoa, and wheat. Feed a Carob Nut, then Loverly or Golden Gysahl, to mate opposite-gender birds. Race wins, not ordinary riding, feed the farm line."),
         ("Loverly Gysahl", "chococraft:loverly_gysahl_green", 1,
-         "Rare greens from mature March gysahl. Twenty percent chance of a new color when the grades and wins are right."),
+         "Rare greens from mature March gysahl. Fifteen percent chance of a new color when the grades and wins are right."),
         ("Gold Gysahl", "chococraft:gold_gysahl", 1,
          "Rarer still. Required for Gold chicks, and it crafts the Zeio Nut. Farm the Reed Fen until one turns up."),
         ("Zeio Nut", "chococraft:zeio_nut", 1,

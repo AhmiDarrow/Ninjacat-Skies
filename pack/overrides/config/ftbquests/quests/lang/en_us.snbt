@@ -8220,105 +8220,125 @@
 	reward.50000000002004DD.title: "Thread of Return: +1 Clowder life"
 	reward.5000000000220581.title: "Thread of Return: +1 Clowder life"
 	chapter.3100000000000028.title: "Pad-runners"
-	chapter_group.2100000000000001.title: "Skybound"
-	chapter_group.2100000000000002.title: "Craft and Tension"
-	chapter_group.2100000000000003.title: "Reweave"
-	chapter_group.2100000000000004.title: "Side Paths"
 	quest.42000000002805E3.quest_desc: [
 		"Wild pad-runners do not spawn on a void pad. Strike a Gate Drum and walk the March. Yellows graze the Steppe and Reed Fen. Highlands lean Great. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside."
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"How: craft, strike it, walk the March. Bind a return compass first."
 	]
 	quest.42000000002805E3.title: "Gate to the March"
 	quest.42000000002805E4.quest_desc: [
-		"Gysahl thickets grow in every March biome, heaviest in the Reed Fen. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."
+		"Gysahl thickets grow in every March biome, heaviest in the Reed Fen. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home.",
+		"How: pick March thickets (Reed Fen is densest). Craft extras into seeds; plant on dirt or March soil."
 	]
 	quest.42000000002805E4.title: "Gysahl Green"
 	quest.42000000002805E5.quest_desc: [
-		"A book and a feather. Right-click a bird to read color, grade, gender, class, race wins, and the last nut. Keep it on the belt."
+		"A book and a feather. Right-click a bird to read color, grade, gender, class, race wins, and the last nut. Keep it on the belt.",
+		"How: book + chocobo feather. Right-click a bird to read grade, class, and wins."
 	]
 	quest.42000000002805E5.title: "Chocopedia"
 	quest.42000000002805E6.quest_desc: [
-		"Feed Gysahl to tame a wild yellow. Craft a saddle from leather and feathers, then ride. Sprint dashes; sneak restores stamina once you are on a course."
+		"Feed Gysahl to tame a wild yellow. Craft a saddle from leather and feathers, then ride. Sprint dashes; sneak restores stamina once you are on a course.",
+		"How: leather and feathers. Tame a wild yellow with gysahl, then saddle it."
 	]
 	quest.42000000002805E6.title: "Chocobo Saddle"
 	quest.42000000002805E7.quest_desc: [
-		"Paper, a gold ingot, and a feather. After you have walked the March, Ester the Square Steward stands at Clowder Hall with the shop Kin. Mount a saddled bird and speak to her — or use a spare pass."
+		"Paper, a gold ingot, and a feather. After you have walked the March, Ester the Square Steward stands at Clowder Hall with the shop Kin. Mount a saddled bird and speak to her — or use a spare pass.",
+		"How: paper, gold ingot, feather. After the March, speak to Ester at /clowder hub while mounted."
 	]
 	quest.42000000002805E7.title: "Square Pass"
 	quest.42000000002805E8.quest_desc: [
-		"Call your bird. Follow, stay, wander. The March is wide; a whistle keeps the line from scattering."
+		"Call your bird. Follow, stay, wander. The March is wide; a whistle keeps the line from scattering.",
+		"How: craft from feathers. Use it to follow / stay / wander."
 	]
 	quest.42000000002805E8.title: "Chocobo Whistle"
 	quest.42000000002805E9.quest_desc: [
-		"A pen is straw underfoot and a water-filled cauldron. Hurt birds standing on straw near water mend on their own."
+		"A pen is straw underfoot and a water-filled cauldron. Hurt birds standing on straw near water mend on their own.",
+		"How: craft, then floor a pen next to a water cauldron."
 	]
 	quest.42000000002805E9.title: "Straw Bedding"
 	quest.42000000002805EA.quest_desc: [
-		"Gysahl, cocoa, and wheat. Feed a Carob Nut, then Loverly or Golden Gysahl, to mate opposite-gender birds. Race wins, not ordinary riding, feed the farm line."
+		"Gysahl, cocoa, and wheat. Feed a Carob Nut, then Loverly or Golden Gysahl, to mate opposite-gender birds. Race wins, not ordinary riding, feed the farm line.",
+		"How: gysahl + cocoa + wheat. Feed it, then Loverly or Gold gysahl, to mate."
 	]
 	quest.42000000002805EA.title: "Carob Nut"
 	quest.42000000002805EB.quest_desc: [
-		"Rare greens from mature March gysahl. Twenty percent chance of a new color when the grades and wins are right."
+		"Rare greens from mature March gysahl. Fifteen percent chance of a new color when the grades and wins are right.",
+		"How: 15% when harvesting mature gysahl. Not craftable into seeds."
 	]
 	quest.42000000002805EB.title: "Loverly Gysahl"
 	quest.42000000002805EC.quest_desc: [
-		"Rarer still. Required for Gold chicks, and it crafts the Zeio Nut. Farm the Reed Fen until one turns up."
+		"Rarer still. Required for Gold chicks, and it crafts the Zeio Nut. Farm the Reed Fen until one turns up.",
+		"How: 5% when harvesting mature gysahl. Needed for Zeio and Gold chicks."
 	]
 	quest.42000000002805EC.title: "Gold Gysahl"
 	quest.42000000002805ED.quest_desc: [
-		"Gold Gysahl, an Echo Shard, and a gold block. Gold never hatches without Zeio. Black plus a Wonderful yellow plus twelve combined race wins."
+		"Gold Gysahl, an Echo Shard, and a gold block. Gold never hatches without Zeio. Black plus a Wonderful yellow plus twelve combined race wins.",
+		"How: Gold Gysahl + Echo Shard + gold block. Gold never hatches without it."
 	]
 	quest.42000000002805ED.title: "Zeio Nut"
 	quest.42000000002805EE.quest_desc: [
-		"Eighteen slots on the bird. Sneak-use the saddled chocobo to open them."
+		"Eighteen slots on the bird. Sneak-use the saddled chocobo to open them.",
+		"How: craft after a saddle. Sneak-use the bird to open 18 slots."
 	]
 	quest.42000000002805EE.title: "Saddle Bags"
 	quest.42000000002805EF.quest_desc: [
-		"Forty-five slots. The March run becomes a supply line."
+		"Forty-five slots. The March run becomes a supply line.",
+		"How: craft from bags. Forty-five slots on the bird."
 	]
 	quest.42000000002805EF.title: "Saddle Pack"
 	quest.42000000002805F0.quest_desc: [
-		"Shed and crafted into saddles, passes, and disguises. Do not slaughter the line for feathers; they drop as you keep birds."
+		"Shed and crafted into saddles, passes, and disguises. Do not slaughter the line for feathers; they drop as you keep birds.",
+		"How: kept birds shed them. Do not slaughter the line for feathers."
 	]
 	quest.42000000002805F0.title: "Chocobo Feather"
 	quest.42000000002805F1.quest_desc: [
-		"A feast for the pen. Optional comfort after the farm is running."
+		"A feast for the pen. Optional comfort after the farm is running.",
+		"How: craft from gysahl. Optional pen feast."
 	]
 	quest.42000000002805F1.title: "Gysahl Cake"
 	quest.42000000002805F2.quest_desc: [
-		"Cooked bird. Optional. The farm is for riding and racing, not a meat line."
+		"Cooked bird. Optional. The farm is for riding and racing, not a meat line.",
+		"How: cook a raw drumstick. Optional; the farm is for riding."
 	]
 	quest.42000000002805F2.title: "Chocobo Drumstick"
 	quest.42000000002805F3.quest_desc: [
-		"Gysahl and sugar, then cooked. Optional trail food."
+		"Gysahl and sugar, then cooked. Optional trail food.",
+		"How: gysahl + sugar, then cook. Optional trail food."
 	]
 	quest.42000000002805F3.title: "Pickled Gysahl"
 	quest.42000000002805F4.quest_desc: [
-		"Feather disguise. Optional vanity."
+		"Feather disguise. Optional vanity.",
+		"How: craft from feathers. Optional vanity."
 	]
 	quest.42000000002805F4.title: "Choco Helm"
 	quest.42000000002805F5.quest_desc: [
-		"Feather disguise. Optional vanity."
+		"Feather disguise. Optional vanity.",
+		"How: craft from feathers. Optional vanity."
 	]
 	quest.42000000002805F5.title: "Choco Chest"
 	quest.42000000002805F6.quest_desc: [
-		"Feather disguise. Optional vanity."
+		"Feather disguise. Optional vanity.",
+		"How: craft from feathers. Optional vanity."
 	]
 	quest.42000000002805F6.title: "Choco Legs"
 	quest.42000000002805F7.quest_desc: [
-		"Feather disguise. Optional vanity."
+		"Feather disguise. Optional vanity.",
+		"How: craft from feathers. Optional vanity."
 	]
 	quest.42000000002805F7.title: "Choco Boots"
 	quest.42000000002805F8.quest_desc: [
-		"Dye a Gold bird pink — Swarm echo. Optional."
+		"Dye a Gold bird pink — Swarm echo. Optional.",
+		"How: craft to dye a Gold bird pink. Optional Swarm echo."
 	]
 	quest.42000000002805F8.title: "Pink Gysahl"
 	quest.42000000002805F9.quest_desc: [
-		"Dye a Gold bird red — Claw echo. Optional."
+		"Dye a Gold bird red — Claw echo. Optional.",
+		"How: craft to dye a Gold bird red. Optional Claw echo."
 	]
 	quest.42000000002805F9.title: "Red Gysahl"
 	quest.42000000002805FA.quest_desc: [
-		"The course gates. Ester places the Square; you do not need to craft one. Optional."
+		"The course gates. Ester places the Square; you do not need to craft one. Optional.",
+		"How: Ester places the Square. You do not need to craft a gate."
 	]
 	quest.42000000002805FA.title: "Square Gate"
 }
