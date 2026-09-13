@@ -300,4 +300,11 @@ public class TensionPostBlock extends BaseEntityBlock {
             stack.shrink(1);
         }
     }
+
+    @Override
+    protected java.util.List<ItemStack> getDrops(BlockState state, net.minecraft.world.level.storage.loot.LootParams.Builder builder) {
+        java.util.List<ItemStack> drops = new java.util.ArrayList<>(super.getDrops(state, builder));
+        if (drops.stream().noneMatch(stack -> stack.is(asItem()))) drops.add(new ItemStack(this));
+        return drops;
+    }
 }
