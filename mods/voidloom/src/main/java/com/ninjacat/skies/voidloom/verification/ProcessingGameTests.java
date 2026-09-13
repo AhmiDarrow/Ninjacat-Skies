@@ -101,4 +101,10 @@ public class ProcessingGameTests {
         h.assertTrue(!be.handler().insertItem(1, new ItemStack(Items.DIRT), false).isEmpty(), "Hopper cannot push into scrap slots");
         h.succeed();
     }
+    @GameTest(template="empty")
+    public static void loomframeAndBarrelDropThemselves(GameTestHelper h) {
+        h.assertFalse(ModBlocks.LOOMFRAME.get().defaultBlockState().requiresCorrectToolForDrops(), "Loomframe must drop by hand");
+        h.assertFalse(ModBlocks.TENSION_BARREL.get().defaultBlockState().requiresCorrectToolForDrops(), "Tension Barrel must drop by hand");
+        h.succeed();
+    }
 }
