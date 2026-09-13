@@ -95,6 +95,10 @@ public class ProcessingGameTests {
         var tag = outputs(h, new ItemStack(Items.FLINT, 4));
         tag.put("Mesh", new ItemStack(ModItems.THREAD_MESH_STRING.get()).save(h.getLevel().registryAccess()));
         be.loadWithComponents(tag, h.getLevel().registryAccess());
+        h.assertTrue(LoomframeBlockEntity.isSiftable(new ItemStack(Items.DIRT))
+                && LoomframeBlockEntity.isSiftable(new ItemStack(Items.SAND))
+                && LoomframeBlockEntity.isSiftable(new ItemStack(Items.GRAVEL)),
+                "Loomframe must accept dirt, sand and gravel");
         h.assertTrue(be.handler().insertItem(0, new ItemStack(Items.DIRT, 8), false).isEmpty() && be.getInput().getCount() == 8, "Hopper above inserts grit");
         h.assertTrue(be.handler().extractItem(0, 8, false).isEmpty() && be.getInput().getCount() == 8, "Hopper must not steal grit");
         h.assertTrue(be.handler().extractItem(1, 2, false).getCount() == 2, "Hopper below pulls scraps");

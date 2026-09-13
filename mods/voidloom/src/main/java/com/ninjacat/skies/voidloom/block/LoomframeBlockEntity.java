@@ -119,24 +119,31 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
     // ------------------------------------------------------------ input / output
 
+    private static final ResourceLocation EXDEORUM_DUST = ResourceLocation.parse("exdeorum:dust");
+
     public static boolean isSiftable(ItemStack stack) {
-        return stack.is(Items.DIRT) || stack.is(Items.GRAVEL) || stack.is(Items.COARSE_DIRT);
+        if (stack.isEmpty()) return false;
+        if (stack.is(Items.DIRT) || stack.is(Items.COARSE_DIRT) || stack.is(Items.ROOTED_DIRT)
+                || stack.is(Items.GRAVEL) || stack.is(Items.SAND) || stack.is(Items.RED_SAND)
+                || stack.is(Items.SOUL_SAND) || stack.is(Items.SOUL_SOIL)) return true;
+        var id = BuiltInRegistries.ITEM.getKey(stack.getItem());
+        return id.equals(EXDEORUM_DUST) || "dust".equals(id.getPath());
     }
 
     public boolean canAccept(ItemStack stack) {
         if (stack.isEmpty()) return false;
+        if (isSiftable(stack)) return true;
         if (level != null && ModList.get().isLoaded("exdeorum")) {
             if (!mesh.isEmpty()) return ExDeorumSieveBridge.hasRecipes(level, mesh, stack);
             return ExDeorumSieveBridge.isSiftable(level, stack);
         }
-        return isSiftable(stack);
+        return false;
     }
 
     private boolean canProcess() {
         if (!isMeshItem(mesh) || input.isEmpty()) return false;
-        if (level != null && ModList.get().isLoaded("exdeorum")) {
-            return ExDeorumSieveBridge.hasRecipes(level, mesh, input);
-        }
+        if (level != null && ModList.get().isLoaded("exdeorum") && ExDeorumSieveBridge.hasRecipes(level, mesh, input))
+            return true;
         return isSiftable(input);
     }
 
@@ -262,17 +269,35 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
     /** Ex Deorum sieve table at automated yield when present; otherwise the built-in scrap table. */
     private List<ItemStack> roll(Level level, ItemStack in, ItemStack meshStack) {
-        if (level instanceof ServerLevel sl && ModList.get().isLoaded("exdeorum")) {
+        if (level instanceof ServerLevel sl && ModList.get().isLoaded("exdeorum")
+                && ExDeorumSieveBridge.hasRecipes(sl, meshStack, in)) {
             return ExDeorumSieveBridge.roll(sl, meshStack, in, sl.random);
         }
         return rollFallback(level.random, in, meshTier());
     }
 
-    /** Scrap table used when Ex Deorum is not loaded (GameTests, bare Voidloom). */
+    /** Scrap table used when Ex Deorum is not loaded, or when it has no recipe for this grit. */
     private List<ItemStack> rollFallback(RandomSource rand, ItemStack in, int tier) {
         List<ItemStack> out = new ArrayList<>();
+        var id = BuiltInRegistries.ITEM.getKey(in.getItem());
+        boolean dust = id.equals(EXDEORUM_DUST) || "dust".equals(id.getPath());
+        boolean sand = in.is(Items.SAND) || in.is(Items.RED_SAND) || in.is(Items.SOUL_SAND);
         boolean gravel = in.is(Items.GRAVEL);
-        if (gravel) {
+        if (dust) {
+            chance(out, rand, 0.20F, Items.REDSTONE);
+            chance(out, rand, 0.12F, Items.GUNPOWDER);
+            chance(out, rand, 0.08F, Items.BONE_MEAL);
+            if (tier >= 1) chance(out, rand, 0.06F, Items.GLOWSTONE_DUST);
+            if (tier >= 2) chance(out, rand, 0.04F, Items.BLAZE_POWDER);
+            if (tier >= 3) chance(out, rand, 0.02F, ModItems.STRAND_FILAMENT.get());
+        } else if (sand) {
+            chance(out, rand, 0.20F, Items.GOLD_NUGGET);
+            chance(out, rand, 0.08F, Items.CACTUS);
+            if (in.is(Items.RED_SAND)) chance(out, rand, 0.10F, Items.REDSTONE);
+            if (tier >= 1) chance(out, rand, 0.05F, threadOrLint());
+            if (tier >= 2) chance(out, rand, 0.04F, Items.GOLD_NUGGET);
+            if (tier >= 3) chance(out, rand, 0.02F, ModItems.STRAND_FILAMENT.get());
+        } else if (gravel) {
             chance(out, rand, 0.30F, Items.FLINT);
             chance(out, rand, 0.15F, Items.IRON_NUGGET);
             if (tier >= 1) chance(out, rand, 0.06F, Items.GOLD_NUGGET);
