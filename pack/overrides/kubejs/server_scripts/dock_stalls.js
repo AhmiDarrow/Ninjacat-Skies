@@ -1,12 +1,23 @@
 // Kin stalls in Clowder Hall (/clowder hub). Frayed Thread shop, not a quest chapter.
 // Spawn protection on the Dock still blocks eggs; the Hall is a void pad we raise in Java.
+// Use let inside try/for: Rhino throws "redeclaration of var" if const runs twice.
+
 const HUB_STALLS_FLAG = 'ncs_hub_stalls_v2'
 const HUB_ESTER_FLAG = 'ncs_hub_ester_v1'
 const HUB_DIM = 'clowderhall:clowder_hall'
 const MARCH_DIM = 'tribalpower:the_march'
 
+let HubModDimensions
+let DeepCacheManager
+try {
+  HubModDimensions = Java.loadClass('com.ninjacat.skies.clowder.world.ModDimensions')
+} catch (e) {}
+try {
+  DeepCacheManager = Java.loadClass('tk.darrow.tribalpower.storage.DeepCacheManager')
+} catch (e) {}
+
 function spawnStall(level, x, y, z, yaw, tribeOrdinal, stallId, name) {
-  const entity = level.createEntity('tribalpower:tribal_kin')
+  let entity = level.createEntity('tribalpower:tribal_kin')
   if (!entity) return
   entity.mergeNbt({
     Tribe: tribeOrdinal,
@@ -24,13 +35,14 @@ function spawnStall(level, x, y, z, yaw, tribeOrdinal, stallId, name) {
 }
 
 function ensureHubStalls(server) {
-  const hub = server.getLevel(HUB_DIM)
+  let hub = server.getLevel(HUB_DIM)
   if (!hub) return
   if (hub.persistentData.getBoolean(HUB_STALLS_FLAG)) return
   try {
-    const ModDimensions = Java.loadClass('com.ninjacat.skies.clowder.world.ModDimensions')
-    const raw = hub.minecraftLevel ? hub.minecraftLevel : hub
-    ModDimensions.ensureHubHall(raw)
+    if (HubModDimensions) {
+      let raw = hub.minecraftLevel ? hub.minecraftLevel : hub
+      HubModDimensions.ensureHubHall(raw)
+    }
   } catch (e) {
     // Pad may already exist from a prior visit.
   }
@@ -48,8 +60,8 @@ function playerVisitedMarch(player) {
     if (player.persistentData && player.persistentData.getBoolean('ncs_visited_march')) return true
   } catch (e) {}
   try {
-    const DeepCacheManager = Java.loadClass('tk.darrow.tribalpower.storage.DeepCacheManager')
-    const uuid = player.getUuid ? player.getUuid() : player.uuid
+    if (!DeepCacheManager) return false
+    let uuid = player.getUuid ? player.getUuid() : player.uuid
     return DeepCacheManager.data(player.server).hasVisitedMarch(uuid)
   } catch (e) {
     return false
@@ -64,10 +76,10 @@ function markMarchVisit(player) {
 
 function esterAlreadyPresent(hub) {
   try {
-    const found = hub.getEntities ? hub.getEntities() : null
+    let found = hub.getEntities ? hub.getEntities() : null
     if (!found) return false
-    for (const entity of found) {
-      const t = String(entity.type || '')
+    for (let entity of found) {
+      let t = String(entity.type || '')
       if (t.indexOf('race_master') >= 0) return true
     }
   } catch (e) {}
@@ -79,7 +91,7 @@ function spawnEster(hub) {
     hub.persistentData.putBoolean(HUB_ESTER_FLAG, true)
     return
   }
-  const entity = hub.createEntity('chococraft:race_master')
+  let entity = hub.createEntity('chococraft:race_master')
   if (!entity) return
   entity.mergeNbt({
     PersistenceRequired: true,
@@ -97,9 +109,9 @@ function someoneOpenedMarch(server) {
   try {
     if (server.persistentData.getBoolean('ncs_march_opened')) return true
   } catch (e) {}
-  const players = server.players || server.getPlayers()
+  let players = server.players || server.getPlayers()
   if (!players) return false
-  for (const player of players) {
+  for (let player of players) {
     if (playerVisitedMarch(player)) return true
   }
   return false
@@ -107,7 +119,7 @@ function someoneOpenedMarch(server) {
 
 function ensureHubEster(server) {
   if (!someoneOpenedMarch(server)) return
-  const hub = server.getLevel(HUB_DIM)
+  let hub = server.getLevel(HUB_DIM)
   if (!hub) return
   // Trust the world flag so a failed entity scan cannot duplicate Ester every 80 ticks.
   if (hub.persistentData.getBoolean(HUB_ESTER_FLAG)) return
@@ -122,7 +134,7 @@ PlayerEvents.loggedIn(event => {
 
 PlayerEvents.tick(event => {
   if (event.player.tickCount % 80 !== 0) return
-  const dim = String(event.player.level.dimension)
+  let dim = String(event.player.level.dimension)
   if (dim === MARCH_DIM) markMarchVisit(event.player)
   if (dim === MARCH_DIM || dim === HUB_DIM) ensureHubEster(event.server)
 })
