@@ -14,6 +14,7 @@ public final class SkiesConfig {
     public static final ModConfigSpec.IntValue FRAY_Y;
     public static final ModConfigSpec.IntValue FRAY_Z;
     public static final ModConfigSpec.BooleanValue SKY_TINT;
+    public static final ModConfigSpec.BooleanValue SUNDERED_SKY;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -37,6 +38,9 @@ public final class SkiesConfig {
         SKY_TINT = builder
                 .comment("Client: warm the horizon a little as your Clowder's Loom Tension rises.")
                 .define("skyTint", true);
+        SUNDERED_SKY = builder
+                .comment("Client: replace the Overworld sky with the sundered Loom (gold Cut, void tears). Disable for shader packs that draw their own sky.")
+                .define("sunderedSky", true);
         builder.pop();
 
         builder.push("hardcore");
