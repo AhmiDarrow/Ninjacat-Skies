@@ -170,11 +170,25 @@ public class OverweaverGuardian extends GuardianEntity {
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
-        for (int k = 0; k < 9; k++) lines[k].save(tag, "Line" + k);
+        for (int k = 0; k < 9; k++) {
+            lines[k].save(tag, "Line" + k);
+            if (shade[k] != null) tag.putUUID("Shade" + k, shade[k]);
+            tag.putInt("TautLeft" + k, Math.max(0, tautUntil[k] - tickCount));
+        }
+        tag.putDouble("KeystoneY", keystoneY);
+        tag.putBoolean("Keystone", keystone);
+        tag.putInt("NextThrow", nextThrow);
     }
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
-        for (int k = 0; k < 9; k++) lines[k].load(tag, "Line" + k, level());
+        for (int k = 0; k < 9; k++) {
+            lines[k].load(tag, "Line" + k, level());
+            shade[k] = tag.hasUUID("Shade" + k) ? tag.getUUID("Shade" + k) : null;
+            tautUntil[k] = tickCount + tag.getInt("TautLeft" + k);
+        }
+        keystoneY = tag.contains("KeystoneY") ? tag.getDouble("KeystoneY") : KEYSTONE_Y;
+        keystone = tag.getBoolean("Keystone");
+        if (tag.contains("NextThrow")) nextThrow = tag.getInt("NextThrow");
     }
 }

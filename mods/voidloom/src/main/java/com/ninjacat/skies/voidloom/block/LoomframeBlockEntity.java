@@ -142,8 +142,11 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
     private boolean canProcess() {
         if (!isMeshItem(mesh) || input.isEmpty()) return false;
-        if (level != null && ModList.get().isLoaded("exdeorum") && ExDeorumSieveBridge.hasRecipes(level, mesh, input))
-            return true;
+        if (level != null && ModList.get().isLoaded("exdeorum")) {
+            if (ExDeorumSieveBridge.hasRecipes(level, mesh, input)) return true;
+            return input.is(Items.DIRT) || input.is(Items.COARSE_DIRT) || input.is(Items.ROOTED_DIRT)
+                    || input.is(Items.GRAVEL);
+        }
         return isSiftable(input);
     }
 

@@ -28,7 +28,7 @@ public final class Voidloom {
         modBus.addListener(this::onRegisterCapabilities);
     }
 
-    /** Hoppers and pipes: grit in the top of a Loomframe, scraps out the sides; same for the Barrel. */
+    /** Hoppers and pipes: grit in the top of a Loomframe, scraps out below; same for the Barrel. */
     private void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.LOOMFRAME.get(), (be, side) -> be.handler());
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.TENSION_BARREL.get(), (be, side) -> be.handler());

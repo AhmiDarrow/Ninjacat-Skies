@@ -66,8 +66,8 @@ public final class SieveCompat {
     private static void bonusRoll(Pending pend, AbstractSieveBlockEntity sieve) {
         ServerLevel level = pend.level();
         List<? extends SieveRecipe> recipes = pend.compressed()
-                ? RecipeUtil.getCaches(level).getCompressedSieveRecipes(pend.contents().getItem(), pend.mesh())
-                : RecipeUtil.getCaches(level).getSieveRecipes(pend.contents().getItem(), pend.mesh());
+                ? RecipeUtil.getCaches(level).getCompressedSieveRecipes(pend.mesh().getItem(), pend.contents())
+                : RecipeUtil.getCaches(level).getSieveRecipes(pend.mesh().getItem(), pend.contents());
         if (recipes == null || recipes.isEmpty()) return;
         LootContext ctx = RecipeUtil.emptyLootContext(level);
         boolean any = false;

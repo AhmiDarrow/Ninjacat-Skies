@@ -39,12 +39,14 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import javax.annotation.Nullable;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.WeakHashMap;
 
 /**
  * Server-side timers and the few static hooks the relics need outside the per-wearer {@link RelicPower} callbacks:
@@ -62,10 +64,10 @@ final class RelicTimers {
     private record Snap(ResourceKey<Level> dim, Vec3 pos) {}
 
     private static final List<Task> TASKS = new ArrayList<>();
-    private static final Map<Mob, Long> STUNNED = new HashMap<>();
+    private static final Map<Mob, Long> STUNNED = Collections.synchronizedMap(new WeakHashMap<>());
     private static final Map<Mod, Long> MODS = new HashMap<>();
     private static final Map<Hedge, Long> HEDGES = new LinkedHashMap<>();
-    private static final Map<Bee, BeeInfo> BEES = new HashMap<>();
+    private static final Map<Bee, BeeInfo> BEES = Collections.synchronizedMap(new WeakHashMap<>());
     private static final Map<UUID, ArrayDeque<Snap>> TRAIL = new HashMap<>();
     private static final int TRAIL_TICKS = 60; // Cogloop blinks back 3 s
 
@@ -138,7 +140,12 @@ final class RelicTimers {
 
     static List<Bee> beesOf(ServerPlayer owner) {
         List<Bee> out = new ArrayList<>();
-        for (var e : BEES.entrySet()) if (e.getValue().owner.equals(owner.getUUID()) && e.getKey().isAlive()) out.add(e.getKey());
+        synchronized (BEES) {
+            for (var e : BEES.entrySet()) {
+                Bee b = e.getKey();
+                if (b != null && e.getValue().owner.equals(owner.getUUID()) && b.isAlive()) out.add(b);
+            }
+        }
         return out;
     }
 
@@ -178,12 +185,14 @@ final class RelicTimers {
             TASKS.removeIf(t -> { if (t.at <= now) { due.add(t); return true; } return false; });
             for (Task t : due) { try { t.run.run(); } catch (Exception ignored) {} }
         }
-        STUNNED.entrySet().removeIf(en -> {
-            Mob m = en.getKey();
-            if (!m.isAlive()) return true;
-            if (en.getValue() > now) return false;
-            m.setNoAi(false); m.getPersistentData().remove(STUN_TAG); return true;
-        });
+        synchronized (STUNNED) {
+            STUNNED.entrySet().removeIf(en -> {
+                Mob m = en.getKey();
+                if (m == null || m.isRemoved() || !m.isAlive()) return true;
+                if (en.getValue() > now) return false;
+                m.setNoAi(false); m.getPersistentData().remove(STUN_TAG); return true;
+            });
+        }
         MODS.entrySet().removeIf(en -> {
             if (en.getValue() > now && en.getKey().entity.isAlive()) return false;
             AttributeInstance inst = en.getKey().entity.getAttribute(en.getKey().attr);
@@ -191,12 +200,15 @@ final class RelicTimers {
             return true;
         });
         HEDGES.entrySet().removeIf(en -> { if (en.getValue() > now) return false; unhedge(en.getKey()); return true; });
-        BEES.entrySet().removeIf(en -> {
-            Bee b = en.getKey();
-            if (b.isRemoved() && b.getRemovalReason() != null && !b.getRemovalReason().shouldDestroy()) return true;   // unloaded with its chunk: discarded again on reload (onJoin)
-            if (b.isRemoved() || !b.isAlive() || en.getValue().expiry <= now) { popBee(b); return true; }
-            return false;
-        });
+        synchronized (BEES) {
+            BEES.entrySet().removeIf(en -> {
+                Bee b = en.getKey();
+                if (b == null) return true;
+                if (b.isRemoved() && b.getRemovalReason() != null && !b.getRemovalReason().shouldDestroy()) return true;   // unloaded with its chunk: discarded again on reload (onJoin)
+                if (b.isRemoved() || !b.isAlive() || en.getValue().expiry <= now) { popBee(b); return true; }
+                return false;
+            });
+        }
     }
 
     // ------------------------------------------------------------------ static damage hooks

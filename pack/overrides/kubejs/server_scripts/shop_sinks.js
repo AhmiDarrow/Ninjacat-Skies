@@ -1,5 +1,5 @@
 // Soft skyblock utility sinks — frayed thread / void yarn conversions.
-// Complements Frayed Thread Desk quest shop (quests consume Thread for bigger QoL).
+// Complements Hall Kin stalls (quests consume Thread for bigger QoL).
 ServerEvents.recipes(event => {
   event.shapeless('4x minecraft:dirt', [
     'ninjacatskies:frayed_thread',

@@ -2,7 +2,7 @@
   "parent": "minecraft:block/block",
   "textures": {
     "wood": "ninjacatskies:block/loom_wood",
-    "ribbon": "minecraft:block/cyan_wool",
+    "ribbon": "ninjacatskies:block/loom_copper",
     "seal": "ninjacatskies:block/loom_light",
     "particle": "ninjacatskies:block/loom_wood"
   },

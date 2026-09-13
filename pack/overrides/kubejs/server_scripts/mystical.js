@@ -30,7 +30,9 @@ ServerEvents.recipes(event => {
   both('minecraft:sand', 'exdeorum:iron_mesh', 'mysticalagriculture:prosperity_ore', 0.05)
 
   // Voidloom thread meshes catch them too, so the Loomframe automates the essence floor.
+  both('minecraft:dirt', 'voidloom:thread_mesh_string', 'mysticalagriculture:inferium_ore', 0.06)
   both('minecraft:dirt', 'voidloom:thread_mesh_flint', 'mysticalagriculture:inferium_ore', 0.10)
   both('minecraft:dirt', 'voidloom:thread_mesh_iron', 'mysticalagriculture:inferium_ore', 0.14)
   both('minecraft:gravel', 'voidloom:thread_mesh_iron', 'mysticalagriculture:prosperity_ore', 0.06)
+  both('minecraft:sand', 'voidloom:thread_mesh_iron', 'mysticalagriculture:prosperity_ore', 0.05)
 })
