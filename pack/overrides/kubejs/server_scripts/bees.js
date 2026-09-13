@@ -18,6 +18,8 @@ ServerEvents.recipes(event => {
 
   // Wood — carpenter bees (and plain bees from oak)
   ring('productivebees:oak_wood_nest', '#minecraft:oak_logs', 'oak_wood_nest')
+  // March wood from a pad-runner trip still wakes a colony; there is no March-wood nest type.
+  ring('productivebees:oak_wood_nest', 'tribalpower:march_log', 'march_wood_nest')
   ring('productivebees:birch_wood_nest', '#minecraft:birch_logs', 'birch_wood_nest')
   ring('productivebees:spruce_wood_nest', '#minecraft:spruce_logs', 'spruce_wood_nest')
   ring('productivebees:dark_oak_wood_nest', '#minecraft:dark_oak_logs', 'dark_oak_wood_nest')
