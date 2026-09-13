@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "tribalpower:march_ember_wastes",
+  "spawners": {
+    "type": "chococraft:chocobo",
+    "weight": 12,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

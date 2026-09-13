@@ -73,6 +73,7 @@ CH = {
     "stewardries": hid(0xB100000000000025),
     "current": hid(0xB100000000000026),
     "guardians": hid(0xB100000000000027),
+    "chocobo": hid(0xB100000000000028),
 }
 
 lang: dict[str, object] = {
@@ -231,7 +232,7 @@ CHAPTER_SHORT = {
     10: "Sieve", 11: "Storage", 12: "Mek", 13: "Powah", 14: "Ars", 15: "Clowder", 16: "Desk", 17: "Aura",
     18: "Kitchen", 19: "Spells", 20: "Solar", 21: "Decor", 22: "Nether", 23: "End", 24: "Fields", 25: "Apiary",
     26: "Pipes", 27: "Otherworld", 28: "Clockworks", 29: "Network", 30: "Voidcraft", 31: "Packaged", 32: "QIO",
-    33: "Hunt", 34: "Tribal", 39: "Guardians",
+    33: "Hunt", 34: "Tribal", 39: "Guardians", 40: "Square",
 }
 STRAND_CHAPTERS = {1: "soil", 2: "stone", 3: "sprout", 4: "claw", 5: "spark", 6: "clock", 7: "swarm", 8: "sigil", 9: "spindle"}
 CURRENT = {"strand_i": 0, "title_counts": {}}
@@ -2662,6 +2663,63 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
     return out
 
 
+def build_chocobo() -> list[dict]:
+    """Chococraft Skybound — find birds in the March, race at the hub after the Gate."""
+    s = 40
+    steps = [
+        ("Gate to the March", "tribalpower:gate_drum", 1,
+         "Wild pad-runners do not spawn on a void pad. Strike a Gate Drum and walk the March. Yellows graze the Steppe and Reed Fen. Highlands lean Great. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
+        ("Gysahl Green", "chococraft:gysahl_green", 8,
+         "Gysahl thickets grow in every March biome, heaviest in the Reed Fen. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."),
+        ("Chocopedia", "chococraft:chocopedia", 1,
+         "A book and a feather. Right-click a bird to read color, grade, gender, class, race wins, and the last nut. Keep it on the belt."),
+        ("Chocobo Saddle", "chococraft:chocobo_saddle", 1,
+         "Feed Gysahl to tame a wild yellow. Craft a saddle from leather and feathers, then ride. Sprint dashes; sneak restores stamina once you are on a course."),
+        ("Square Pass", "chococraft:chocobo_square_ticket", 1,
+         "Paper, a gold ingot, and a feather. After you have walked the March, Ester the Square Steward stands at Clowder Hall with the shop Kin. Mount a saddled bird and speak to her — or use a spare pass."),
+        ("Chocobo Whistle", "chococraft:chocobo_whistle", 1,
+         "Call your bird. Follow, stay, wander. The March is wide; a whistle keeps the line from scattering."),
+        ("Straw Bedding", "chococraft:straw", 8,
+         "A pen is straw underfoot and a water-filled cauldron. Hurt birds standing on straw near water mend on their own."),
+        ("Carob Nut", "chococraft:carob_nut", 1,
+         "Gysahl, cocoa, and wheat. Feed a Carob Nut, then Loverly or Golden Gysahl, to mate opposite-gender birds. Race wins, not ordinary riding, feed the farm line."),
+        ("Loverly Gysahl", "chococraft:loverly_gysahl_green", 1,
+         "Rare greens from mature March gysahl. Twenty percent chance of a new color when the grades and wins are right."),
+        ("Gold Gysahl", "chococraft:gold_gysahl", 1,
+         "Rarer still. Required for Gold chicks, and it crafts the Zeio Nut. Farm the Reed Fen until one turns up."),
+        ("Zeio Nut", "chococraft:zeio_nut", 1,
+         "Gold Gysahl, an Echo Shard, and a gold block. Gold never hatches without Zeio. Black plus a Wonderful yellow plus twelve combined race wins."),
+        ("Saddle Bags", "chococraft:chocobo_saddle_bags", 1,
+         "Eighteen slots on the bird. Sneak-use the saddled chocobo to open them."),
+        ("Saddle Pack", "chococraft:chocobo_saddle_pack", 1,
+         "Forty-five slots. The March run becomes a supply line."),
+        ("Chocobo Feather", "chococraft:chocobo_feather", 8,
+         "Shed and crafted into saddles, passes, and disguises. Do not slaughter the line for feathers; they drop as you keep birds."),
+    ]
+    out = chain(s, steps, start_x=0.0, y=0.0)
+    extra = [
+        ("Gysahl Cake", "chococraft:gysahl_cake", 1,
+         "A feast for the pen. Optional comfort after the farm is running."),
+        ("Chocobo Drumstick", "chococraft:chocobo_drumstick_cooked", 1,
+         "Cooked bird. Optional. The farm is for riding and racing, not a meat line."),
+        ("Pickled Gysahl", "chococraft:pickled_gysahl_cooked", 1,
+         "Gysahl and sugar, then cooked. Optional trail food."),
+        ("Choco Helm", "chococraft:choco_disguise_helmet", 1,
+         "Feather disguise. Optional vanity."),
+        ("Choco Chest", "chococraft:choco_disguise_chestplate", 1, "Feather disguise. Optional vanity."),
+        ("Choco Legs", "chococraft:choco_disguise_leggings", 1, "Feather disguise. Optional vanity."),
+        ("Choco Boots", "chococraft:choco_disguise_boots", 1, "Feather disguise. Optional vanity."),
+        ("Pink Gysahl", "chococraft:pink_gysahl", 1,
+         "Dye a Gold bird pink — Swarm echo. Optional."),
+        ("Red Gysahl", "chococraft:red_gysahl", 1,
+         "Dye a Gold bird red — Claw echo. Optional."),
+        ("Square Gate", "chococraft:chocobo_square_gate", 1,
+         "The course gates. Ester places the Square; you do not need to craft one. Optional."),
+    ]
+    out += grid_optional(s, extra, origin=(0.0, 9.0), cols=5)
+    return out
+
+
 def build_guardians() -> list[dict]:
     """Snapped Guardians — thirteen totems, thirteen arenas, thirteen relics. Totem → defeat → relic, per guardian."""
     from guardians_lore import GUARDIANS, STRAND_TITLES
@@ -2938,6 +2996,7 @@ def main() -> None:
     write_chapter("37_stewardries", CH["stewardries"], GROUP_SIDE, 36, "supplementaries:hourglass", build_stewardries(), "Small Stewardries")
     write_chapter("38_current", CH["current"], GROUP_SIDE, 37, "createaddition:electric_motor", build_current(), "The Current")
     write_chapter("39_guardians", CH["guardians"], GROUP_LATE, 38, "guardians:frayed_totem_unwoven", build_guardians(), "Snapped Guardians")
+    write_chapter("40_chocobo", CH["chocobo"], GROUP_SIDE, 39, "chococraft:chocopedia", build_chocobo(), "Pad-runners")
     write_lang()
     titles = sum(1 for k in lang if k.startswith("quest.") and k.endswith(".title"))
     print(f"Wrote chapters + lang. Quest titles: {titles}. Skipped invalid: {len(WARNED)}")
