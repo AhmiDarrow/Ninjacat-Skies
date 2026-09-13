@@ -24,7 +24,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import javax.annotation.Nullable;
 
 /**
- * Loomframe: stretch a mesh, load grit, and let it work. Hoppers feed the top and pull from the sides.
+ * Loomframe: stretch a mesh, load grit, and let it work. Hoppers feed the top and pull from below.
  * Hand: siftables load in, empty hand takes scraps (then grit, then the mesh when sneaking).
  */
 public class LoomframeBlock extends BaseEntityBlock {

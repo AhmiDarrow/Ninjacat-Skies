@@ -254,6 +254,7 @@ public abstract class GuardianEntity extends Monster {
         super.addAdditionalSaveData(tag);
         tag.putInt("ArenaSlot", arenaSlot); if (partyId != null) tag.putUUID("Party", partyId);
         tag.putInt("FightAge", ageInFight);
+        tag.putInt("DeathTimer", deathTimer);
         ListTag temps = new ListTag();
         for (BlockPos p : tempBlocks) {
             CompoundTag c = new CompoundTag();
@@ -266,6 +267,8 @@ public abstract class GuardianEntity extends Monster {
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         arenaSlot = tag.getInt("ArenaSlot"); partyId = tag.hasUUID("Party") ? tag.getUUID("Party") : null; ageInFight = tag.getInt("FightAge");
+        deathTimer = tag.contains("DeathTimer") ? tag.getInt("DeathTimer") : -1;
+        if (deathTimer >= 0) { setHealth(1.0F); setImmune(true); playClip(CLIP_DEATH); }
         tempBlocks.clear();
         for (Tag t : tag.getList("TempBlocks", Tag.TAG_COMPOUND)) {
             CompoundTag c = (CompoundTag) t;
