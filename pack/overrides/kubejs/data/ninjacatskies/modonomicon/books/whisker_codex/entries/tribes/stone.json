@@ -12,7 +12,7 @@
     {
       "type": "modonomicon:text",
       "title": "Grit-singers",
-      "text": "The Grit-singers named every shard by its echo. Iron is low and patient. Gold barely bothers to answer. Diamond does not answer at all; you find it by the silence around it.\n\nThey built the first meshes: not to find ore, but to give it somewhere to land."
+      "text": "The Grit-singers named every shard by its echo. Iron is low and patient. Gold barely bothers to answer. Diamond does not answer at all; you find it by the silence around it.\n\nThey built the first meshes: not to find ore, but to give it somewhere to land.\n\nBefore the Cut they named ore as it arrived, not as it was dug — continents of stone that answered when sung to, meshes hung in the under-lattice like welcome mats. What they lost was a ground that wanted to be found. The shards still fall. They just have nowhere to land unless you build the welcome again."
     },
     {
       "type": "modonomicon:spotlight",
@@ -26,7 +26,7 @@
     {
       "type": "modonomicon:text",
       "title": "Their camp",
-      "text": "The Grit-singers keep a camp in the March highlands: huts, a fire, a Tribe Hearth, an Earth totem, a banner, four Kin — an Elder, a Drummer, a Hunter and a Weaver — and a braced font and a whole Listening Pit.\n\nTheir hearth favours raw ores, grits, Attuned Echo. Their Elder trades Echo Shards for raw ore, Attuned Echo for grit, and the Resonance Mesh. At Voice standing they press the tribe's Mark into your hand. Camps already generated in an old world keep the layout they spawned with."
+      "text": "The Grit-singers keep a camp in the March highlands: huts, a fire, a Tribe Hearth, a Earth totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours raw ores, grits, Attuned Echo. Their Elder trades Echo Shards for raw ore, Attuned Echo for grit, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

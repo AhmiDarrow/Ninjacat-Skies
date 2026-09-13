@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
   "name": "Reweave",
-  "description": "Spindle Strand — Reweave.",
+  "description": "Spindle Strand.",
   "icon": "ae2:controller",
   "x": 12,
   "y": 0,
@@ -11,13 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The work",
-      "text": "**Assignment list:** chapter **Strand: Spindle**.\n\nA digital loom (AE2 — a Knot in the controller, a Braid in the assembler). A Gate Drum. The March, and a March stone from it.\n\nNine seated, one stone, one right-click on the Post: the Fragment. **Seat the Fragment.** The cut closes above your pad. That is the end of the Ninjacat Skies storyline."
-    },
-    {
-      "type": "modonomicon:text",
       "title": "Reweave",
-      "text": "The Loom-stitchers cut the gate-paths and always meant to come back and mend them. They did not get to. You will."
+      "text": "**Spindle.** A digital loom (AE2, with a Knot in the controller and a Braid in the assembler). A Gate Drum. The March, and a March stone from it.\n\nNine seated, one stone, one right-click: the Fragment. Seat it. The cut closes above your pad."
     }
   ],
   "parents": [

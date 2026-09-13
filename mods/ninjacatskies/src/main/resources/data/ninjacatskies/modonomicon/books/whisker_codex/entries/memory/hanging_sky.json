@@ -1,0 +1,43 @@
+{
+  "category": "ninjacatskies:memory",
+  "name": "A sky that was a floor",
+  "description": "Before anything fell.",
+  "icon": "ninjacatskies:spindle_loom_fragment",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Hanging continents",
+      "text": "Ask a Pad-keeper what a continent was and they will tell you: a pad that had forgotten it was a pad. Fields ran to the horizon because the Soil Strand ran with them. Rivers kept to their beds because the Sprout Strand taught water manners. Cities did not float. They hung, and hanging felt like standing, the way a well-tied hammock feels like a floor."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "A maintained floor",
+      "text": "The sky-floor was a job, not a miracle. Pad-keepers walked the hearths. Grit-singers listened for cracks. Rootbinders checked the living anchors. Edge-walkers walked the rim and came back with a list. Drumhearts kept the beat so the rest of the work had a tempo. Pattern-weavers sang the factories that fed the rest. Colony-keepers kept the hives that kept the flowers that kept the roots. Seal-carvers asked, politely, for exceptions. Loom-stitchers mended the roads so nobody had to jump.\n\nA continent that looked like ground was a continent whose last inspection had gone well."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Weather with a road",
+      "text": "Rain did not guess. It followed Clock-sung channels along the lattice and arrived when the Pattern-weavers said it should. Storms were a Drumheart argument that got out of hand, then got walked back. Night was a veil the Seal-carvers asked for, politely, and the Loom kept the appointment.\n\nYou can still see the habit in the aurora. It is the sky trying to remember a schedule."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "A schedule, not a mood",
+      "text": "Weather was a roster. You could set a table by it, because the table had been sung. Wind had a shift. Fog had a route. Harvest rain arrived on the day the Pattern-weavers marked, not when a cloud felt generous.\n\nWhen the Cut came the appointments kept firing into empty air. That is why the aurora still tries. It is not pretty. It is a timetable with nobody on it."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Nine agreeing",
+      "text": "No tribe could hold the sky alone. Soil without Stone is warmth with nowhere to stand. Spark without Clock is a beat with no song. Sigil without Spindle is a promise with no road home.\n\nThe old world was not peace. It was nine pulls kept taut at once. Peace was a side effect, and a thin one."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Maintenance, not peace",
+      "text": "Nine tribes is nine jobs. They argued. They borrowed each other's tools and forgot to bring them back. They wrote rude notes on each other's drums. What they did not do was let a Strand slacken because they were sulking.\n\nThe floor held because the work got done in public. The Cut is what happens when maintenance stops: the hammock remembers it was never ground."
+    }
+  ]
+}

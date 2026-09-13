@@ -12,12 +12,27 @@
     {
       "type": "modonomicon:text",
       "title": "This book",
-      "text": "This is the **Whisker Codex**. One book. Right-click always opens these pages: what happened, what you do next, who kept the Loom.\n\nThere is no Shift-click mode. There is no second story hidden behind a modifier."
+      "text": "This is the **Whisker Codex**. One book. Right-click always opens these pages: what the sky used to be, how it came apart, what you do next, who kept the Loom.\n\nThere is no Shift-click mode. There is no second story hidden behind a modifier. **The Old Sky** chapter fills in as you seat Strands — the tribes only talk once you have kept their promise."
     },
     {
       "type": "modonomicon:text",
       "title": "The assignment list",
-      "text": "The **Grave** key (backtick `` ` ``) opens the live assignment list — FTB Quests, checkmarks and rewards. That list is the **same campaign**, not a second book.\n\nCome here to learn the braid. Open Grave when you want the next task in your hand."
+      "text": "The **Grave** key (backtick `` ` ``) opens the live assignment list — FTB Quests, checkmarks and rewards. That list is the **same campaign**, not a second book.\n\nCome here to learn the braid and the old world. Open Grave when you want the next task in your hand. Both screens now sit on the same atlas: the hanging pads, the wheel, the cut in the teal."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What you are mending",
+      "text": "You are not putting continents back. You are teaching nine Strands to agree again, one pad at a time. A seated token is a promise kept. A thinner Fray is the sky noticing.\n\nWhen every Clowder has rewoven, the column over the Dock turns to lit thread. The world does not snap back. It learns to hold."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "The chapters",
+      "text": "**The Work** is this: what to do with your hands. **The Cut** is how the sky came apart. **The Old Sky** is the world that hung — it unlocks as Strands seat, not all at once. **The Loom Braid** is the campaign in order. **Nine Tribes** is who kept each pull. **Snapped Guardians** is what the Cut left feral.\n\nStart here. Read *The old world* next if you want the story before the checklist."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Keep it in public",
+      "text": "A Clowder shares a pad, shares quests, and shares Loom Tension. When one of you seats a Strand, all of you hear it. The Fray over the Dock thins in public. Mending that stays a secret is just a nicer hammock.\n\nHelp the next Clowder when your Strand of the sky has closed. That is the whole of the method."
     }
   ]
 }

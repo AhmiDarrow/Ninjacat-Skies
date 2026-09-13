@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:the_cut",
   "name": "Frayed Thread",
-  "description": "Currency, string, and the Desk.",
+  "description": "Currency, string, and Hall stalls.",
   "icon": "ninjacatskies:frayed_thread",
   "x": 4,
   "y": 2,
@@ -16,12 +16,12 @@
         "count": 1
       },
       "title": "Frayed Thread",
-      "text": "Every quest returns a little **Frayed Thread** — scraps of the Loom that still hold. Unravel one for three string. Or keep it: the **Frayed Thread Desk** (a quest chapter) sells saplings, buckets, meshes, pearls, and other things a pad runs short of."
+      "text": "Every quest returns a little **Frayed Thread** — scraps of the Loom that still hold. Unravel one for three string. Or keep it: **Kin stalls in Clowder Hall** (`/clowder hub`) sell saplings, buckets, meshes, pearls, and other things a pad runs short of. Right-click an Elder."
     },
     {
       "type": "modonomicon:text",
       "title": "Codex Pages",
-      "text": "Every third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. Right-click to read it. Pages are kept, not spent.\n\nThe Desk sells a few loose ones too. Those pick a tribe on their own."
+      "text": "Every third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. Right-click to read it. Pages are kept, not spent.\n\nHall Kin stalls at `/clowder hub` sell a few loose ones too. Those pick a tribe on their own."
     }
   ],
   "parents": [

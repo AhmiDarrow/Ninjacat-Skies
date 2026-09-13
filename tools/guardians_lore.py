@@ -48,7 +48,7 @@ GUARDIANS = [
      "Knotcharm: no slowdown on cobweb, soul sand, honey or powder snow, and half the slip on ice. Tangle roots the first mob it hits."),
     ("firstcut", "the First Cut", None, "firstcut_shard", "insane",
      "The Severance: a great obsidian shard crossed by the glowing Cut, twenty world-shards drifting around it, teal void-tears in the air.",
-     "What severed the Loom. Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam. Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut. After the Reweave only.",
+     "A shape the Cut left on the shard, not a confession of who swung. Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam. Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut. After the Reweave only.",
      "Shard of the First Cut: cuts through ward phases. Best-in-pack, reserved for those who passed."),
     ("overweaver", "the Overweaver", None, "overweaver_shuttle", "insane",
      "The Loom Above: a purpur weave, nine strand-bridges to nine pillared platforms, twenty-seven cathedral threads to a keystone sixty-four blocks up.",

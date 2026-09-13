@@ -1,0 +1,34 @@
+{
+  "category": "ninjacatskies:memory",
+  "name": "Orphan engines",
+  "description": "The drum is not loud. The drum is steady.",
+  "icon": "tribalpower:drumheart",
+  "x": 8,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Orphan engines",
+      "text": "The Drumhearts kept the beat under the whole sky. Spirit Pulse ran from their drums along the lattice to every tribe. When the Cut came, the drums did not stop. They had nobody left to stop for.\n\nYou will find engines still keeping time in the March and on pads that have not seen a cat in an age. Listen before you feed one. It may still be waiting for a beat you have not struck yet."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What Spark mends",
+      "text": "Seat Spark and you are not inventing power. You are sitting down at a drum that never learned how to quit. Strike empty-handed, about a breath apart. The drum is not loud. The drum is steady. Be the drum."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:memory/hanging_sky",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/spark"
+  }
+}

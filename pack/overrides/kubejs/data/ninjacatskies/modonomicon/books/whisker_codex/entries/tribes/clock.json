@@ -12,7 +12,7 @@
     {
       "type": "modonomicon:text",
       "title": "Pattern-weavers",
-      "text": "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure again, until the work carried itself.\n\nTheir timed lattice songs are the ancestor of every belt and cog you will build. You already know this craft."
+      "text": "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure again, until the work carried itself.\n\nTheir timed lattice songs are the ancestor of every belt and cog you will build. You already know this craft.\n\nBefore the Cut those songs fed hanging cities on a schedule you could set a table by. What they lost was the singer, not the song. Belts in empty halls. Clicks before a hum nobody owned. Seat Clock and you tell those songs they have a singer again."
     },
     {
       "type": "modonomicon:spotlight",
@@ -26,7 +26,7 @@
     {
       "type": "modonomicon:text",
       "title": "Their camp",
-      "text": "The Pattern-weavers keep a camp in the March crystal fields: huts, a fire, a Tribe Hearth, an Air totem, a banner, four Kin — an Elder, a Drummer, a Hunter and a Weaver — and a Wind Harp.\n\nTheir hearth favours redstone, clocks, Storm Moth Dust. Their Elder trades timed songs, automation, and the Wind Harp. At Voice standing they press the tribe's Mark into your hand. Camps already generated in an old world keep the layout they spawned with."
+      "text": "The Pattern-weavers keep a camp in the March crystal fields: huts, a fire, a Tribe Hearth, a Air totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours redstone, clocks, Storm Moth Dust. Their Elder trades timed songs and automation, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Skybound",
-      "text": "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex assigns work. You do it. That is the arrangement.\n\nOpen the **quest book** for the work. This book is for why, and for what the tribes left in the margins."
+      "text": "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex assigns work. You do it. That is the arrangement.\n\nOpen **Grave** (backtick) for the assignment list. This book is for why, and for what the tribes left in the margins. They are the same campaign."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What fixing it means",
+      "text": "You are not rebuilding the old continents. You are teaching nine Strands to agree again, one pad at a time. A seated token is a promise kept. A thinned Fray is the sky noticing.\n\nWhen a Clowder reweaves, that Clowder's Strand of the sky closes. When every Clowder has done the same, the Fray turns to lit thread and stays that way. The world does not snap back. It learns to hold."
     },
     {
       "type": "modonomicon:text",

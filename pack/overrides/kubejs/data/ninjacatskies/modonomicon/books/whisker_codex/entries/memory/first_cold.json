@@ -1,0 +1,34 @@
+{
+  "category": "ninjacatskies:memory",
+  "name": "The first cold",
+  "description": "The hearths went out while the sky still looked whole.",
+  "icon": "minecraft:campfire",
+  "x": 2,
+  "y": -1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The first cold",
+      "text": "The Pad-keepers kept the warmth, not the fires — banked heat in thin dirt that let a family sleep through a long dark. They felt the Cut before anyone named it. Pads got cold. Bread took longer to rise. Moss would not take.\n\nThey carried dirt in baskets, a pad at a time, and set a hearth on every scrap they saved. That is why you have a pad at all."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What Soil remembers",
+      "text": "Seat Soil and the pad starts mending you. That is not a blessing invented for Skybound. It is the old hearth-trick, scaled down to whatever dirt is left. The Strand still knows how to keep a body warm if you ask it in the old way: a token, a Post, a promise kept."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:memory/hanging_sky",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/soil"
+  }
+}
