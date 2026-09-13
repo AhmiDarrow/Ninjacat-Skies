@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Whisker Codex — Modonomicon book data for the ninjacatskies mod.
 
-Three categories: The Cut (what happened, how the Loom works now), The Braid (the campaign, phase by phase,
-pointing at quest chapters and key blocks — no recipe walls), and Nine Tribes (steward entries that unlock
-as a Clowder seats each Strand). Every page is one screen, one thought. Codex voice: wry, tactile, practical.
+Categories: The Cut, The Old Sky (lore that unlocks as Strands seat), The Braid, Nine Tribes, Snapped Guardians.
+The Work lives only in the pack kubejs copy. Category maps share the questline atlas. Codex voice: wry, tactile, practical.
 """
 from __future__ import annotations
 
@@ -12,7 +11,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / "mods/ninjacatskies/src/main/resources/data/ninjacatskies/modonomicon/books/whisker_codex"
+PACK_BOOK = ROOT / "pack/overrides/kubejs/data/ninjacatskies/modonomicon/books/whisker_codex"
 NS = "ninjacatskies"
+ATLAS = f"{NS}:textures/gui/quest_atlas.png"
 
 
 def w(path: Path, obj) -> None:
@@ -56,12 +57,9 @@ def category(cid: str, name: str, icon: str, sort: int, desc: str = "") -> None:
         "description": desc,
         "icon": icon,
         "sort_number": sort,
-        "background": "modonomicon:textures/gui/dark_slate_seamless.png",
-        "background_parallax_layers": [
-            {"background": "modonomicon:textures/gui/parallax/flow/base.png", "speed": 1.0},
-            {"background": "modonomicon:textures/gui/parallax/flow/1.png", "speed": 1.0},
-            {"background": "modonomicon:textures/gui/parallax/flow/2.png", "speed": 1.15},
-        ],
+        "background": ATLAS,
+        "background_width": 1536,
+        "background_height": 1024,
     })
 
 
@@ -75,31 +73,45 @@ w(BOOK / "book.json", {
     "name": "Whisker Field Notes",
     "tooltip": "Damaged, but it still assigns work.",
     "description": "The Loom was cut. This is what is left of the manual.",
-    "generate_book_item": True,
+    "generate_book_item": False,
+    "custom_book_item": f"{NS}:whisker_codex",
     "default_title_color": 0xD4A84B,
     "auto_add_read_conditions": False,
 })
 
 # ------------------------------------------------------------------------------------ The Cut
 
-category("the_cut", "The Cut", f"{NS}:whisker_codex", 0, "What happened, and what still works.")
+category("the_cut", "The Cut", f"{NS}:whisker_codex", 1, "What happened, and what still works.")
 
 entry("the_cut", "loom", "The Loom of Worlds", "What held the sky up.", f"{NS}:spindle_loom_fragment", 0, 0, [
     text("The Loom of Worlds",
-         "The skies were held by a lattice of living thread. Nine Strands, tended by nine tribes of Ninjacats, "
-         "pulled taut across the whole sky.\n\nContinents hung from it. Weather ran along it. Nothing fell "
-         "that was not meant to."),
+         "Before the void had a name, the sky was a floor. Nine Strands of living thread — Soil, Stone, Sprout, "
+         "Claw, Spark, Clock, Swarm, Sigil, Spindle — were pulled taut by nine tribes of Ninjacats. Continents "
+         "hung from that lattice the way fruit hangs from a well-kept vine. Weather ran along it. Rain knew "
+         "where to fall. Nothing dropped that was not meant to."),
+    text("A sky that worked",
+         "Roads were not cut into dirt. They were sung into the thread and walked. Crops rooted into Strand as "
+         "much as soil. Drums under one pad were heard as Pulse under another. The Loom was not a god and it "
+         "was not a machine. It was nine agreements kept at once.\n\nWhen the tribes pulled together, the "
+         "horizon stayed put. That is the whole of the old physics."),
     text("What the tribes made",
-         "From their shared pull on the Loom came **Tribal Power**: shamanic technomancy of pulse, lattice, "
-         "seal, and the road into the March-lands.\n\nThe engines are still out there. Orphaned, humming, "
-         "sacred. Treat them like an inheritance, not a scrap pile."),
+         "From their shared pull came **Tribal Power**: shamanic technomancy of Pulse, lattice, seal, and the "
+         "road into the March-lands. Workshops that listen. Totems that speak in six voices. A drum that is "
+         "not loud, only steady.\n\nThe engines are still out there. Orphaned, humming, sacred. Treat them "
+         "like an inheritance, not a scrap pile."),
 ])
 
 entry("the_cut", "cut", "The Cut", "Something severed the Loom.", "minecraft:shears", 2, 0, [
     text("The Cut",
-         "Something severed the Loom. The Codex does not know what. Neither did the tribes, by the end.\n\n"
-         "Continents fell. The tribes scattered. What did not fall is what you are standing on: pads of earth "
-         "the Strands still remember."),
+         "Something severed the Loom. The Codex does not know what. Neither did the tribes, by the end. One "
+         "moment the sky was a floor. The next, the agreements failed in the same breath.\n\nContinents fell. "
+         "Weather forgot its roads. The tribes scattered with whatever dirt they could carry. What did not "
+         "fall is what you are standing on: pads of earth the Strands still remember."),
+    text("How it came apart",
+         "The Pad-keepers felt it first — hearths went cold while the sky still looked whole. Then the "
+         "Rootbinders' living anchors held for a season, and that season is why anything is still up here. "
+         "Guardians snapped in their arenas. Songs kept playing with nobody to hear them. Gate-paths stayed "
+         "open into nowhere.\n\nThe Cut was not a war. It was a knot coming undone."),
     text("The Fray",
          "Above the Dock stands a slow dark column. That is the cut itself — the **Fray** — standing over "
          "the place the sky used to knot.\n\nIt thins as Clowders tension Strands. When every Clowder has "
@@ -109,8 +121,13 @@ entry("the_cut", "cut", "The Cut", "Something severed the Loom.", "minecraft:she
 entry("the_cut", "skybound", "Skybound", "You, on a pad, with a damaged book.", f"{NS}:frayed_thread", 4, 0, [
     text("Skybound",
          "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex assigns work. "
-         "You do it. That is the arrangement.\n\nOpen the **quest book** for the work. This book is for "
-         "why, and for what the tribes left in the margins."),
+         "You do it. That is the arrangement.\n\nOpen **Grave** (backtick) for the assignment list. This book "
+         "is for why, and for what the tribes left in the margins. They are the same campaign."),
+    text("What fixing it means",
+         "You are not rebuilding the old continents. You are teaching nine Strands to agree again, one pad "
+         "at a time. A seated token is a promise kept. A thinned Fray is the sky noticing.\n\nWhen a Clowder "
+         "reweaves, that Clowder's Strand of the sky closes. When every Clowder has done the same, the Fray "
+         "turns to lit thread and stays that way. The world does not snap back. It learns to hold."),
     text("Nine Strands",
          "Nine Strands still answer if pulled correctly: Soil, Stone, Sprout, Claw, Spark, Clock, Swarm, "
          "Sigil, Spindle.\n\nEach one ends in a **Strand token**. A token is proof, not fuel — it is never "
@@ -144,15 +161,15 @@ entry("the_cut", "tension", "Loom Tension", "The Post, the seat, the hum.", f"{N
          "with a March stone once all nine are seated. Seat the Fragment to Reweave."),
 ], parents=["clowder"])
 
-entry("the_cut", "thread", "Frayed Thread", "Currency, string, and the Desk.", f"{NS}:frayed_thread", 4, 2, [
+entry("the_cut", "thread", "Frayed Thread", "Currency, string, and Hall stalls.", f"{NS}:frayed_thread", 4, 2, [
     spotlight(f"{NS}:frayed_thread", "Frayed Thread",
               "Every quest returns a little **Frayed Thread** — scraps of the Loom that still hold. Unravel one "
-              "for three string. Or keep it: the **Frayed Thread Desk** (a quest chapter) sells saplings, "
-              "buckets, meshes, pearls, and other things a pad runs short of."),
+              "for three string. Or keep it: **Kin stalls in Clowder Hall** (`/clowder hub`) sell saplings, "
+              "buckets, meshes, pearls, and other things a pad runs short of. Right-click an Elder."),
     text("Codex Pages",
          "Every third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. "
-         "Right-click to read it. Pages are kept, not spent.\n\nThe Desk sells a few loose ones too. "
-         "Those pick a tribe on their own."),
+         "Right-click to read it. Pages are kept, not spent.\n\nHall Kin stalls at `/clowder hub` sell a few "
+         "loose ones too. Those pick a tribe on their own."),
 ], parents=["skybound"])
 
 entry("the_cut", "voidloom", "Voidloom", "Yarn, knots, meshes, and two stations.", "voidloom:void_yarn", 6, 2, [
@@ -165,19 +182,304 @@ entry("the_cut", "voidloom", "Voidloom", "Yarn, knots, meshes, and two stations.
               "The Knot is the Loom's soft gate: Loomframes, Tension Posts, the first precision mechanism, "
               "and the AE2 controller all want one."),
     spotlight("voidloom:loomframe", "Loomframe",
-              "Stretch a mesh, load it with dirt or gravel, and let it work — one piece every few seconds "
-              "with a shuttle clack. Hoppers feed the top and pull the sides.\n\nThread meshes catch what "
-              "Ex Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand "
-              "Filament** on iron."),
+              "Stretch a mesh, load it with dirt, gravel, sand or dust, and let it work — one piece every few "
+              "seconds with a shuttle clack. Hoppers feed the top and pull from below. The mesh is hand-only. "
+              "An oak sieve is still click; this machine is the hopper one.\n\nThread meshes catch what Ex "
+              "Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand "
+              "Filament** on iron (gravel, sand or dust)."),
     spotlight("voidloom:tension_barrel", "Tension Barrel",
               "Pour water (the bucket comes straight back), add up to eight dirt, come back for clay. String "
               "and pearls in the same barrel make yarn.\n\nClay to porcelain clay to a porcelain bucket: that "
               "is how a pad first carries lava."),
 ], parents=["thread"])
 
+# ------------------------------------------------------------------------------------ The Old Sky (unlocks with the campaign)
+
+category("memory", "The Old Sky", f"{NS}:codex_page", 2, "What the world was, and what mending it costs. Unlocks as you seat Strands.")
+
+entry("memory", "hanging_sky", "A sky that was a floor", "Before anything fell.", f"{NS}:spindle_loom_fragment", 0, 0, [
+    text("Hanging continents",
+         "Ask a Pad-keeper what a continent was and they will tell you: a pad that had forgotten it was a pad. "
+         "Fields ran to the horizon because the Soil Strand ran with them. Rivers kept to their beds because "
+         "the Sprout Strand taught water manners. Cities did not float. They hung, and hanging felt like "
+         "standing, the way a well-tied hammock feels like a floor."),
+    text("A maintained floor",
+         "The sky-floor was a job, not a miracle. Pad-keepers walked the hearths. Grit-singers listened for "
+         "cracks. Rootbinders checked the living anchors. Edge-walkers walked the rim and came back with a "
+         "list. Drumhearts kept the beat so the rest of the work had a tempo. Pattern-weavers sang the "
+         "factories that fed the rest. Colony-keepers kept the hives that kept the flowers that kept the "
+         "roots. Seal-carvers asked, politely, for exceptions. Loom-stitchers mended the roads so nobody "
+         "had to jump.\n\nA continent that looked like ground was a continent whose last inspection had gone well."),
+    text("Weather with a road",
+         "Rain did not guess. It followed Clock-sung channels along the lattice and arrived when the Pattern-"
+         "weavers said it should. Storms were a Drumheart argument that got out of hand, then got walked back. "
+         "Night was a veil the Seal-carvers asked for, politely, and the Loom kept the appointment.\n\n"
+         "You can still see the habit in the aurora. It is the sky trying to remember a schedule."),
+    text("A schedule, not a mood",
+         "Weather was a roster. You could set a table by it, because the table had been sung. Wind had a "
+         "shift. Fog had a route. Harvest rain arrived on the day the Pattern-weavers marked, not when a "
+         "cloud felt generous.\n\nWhen the Cut came the appointments kept firing into empty air. That is "
+         "why the aurora still tries. It is not pretty. It is a timetable with nobody on it."),
+    text("Nine agreeing",
+         "No tribe could hold the sky alone. Soil without Stone is warmth with nowhere to stand. Spark without "
+         "Clock is a beat with no song. Sigil without Spindle is a promise with no road home.\n\n"
+         "The old world was not peace. It was nine pulls kept taut at once. Peace was a side effect, and a thin one."),
+    text("Maintenance, not peace",
+         "Nine tribes is nine jobs. They argued. They borrowed each other's tools and forgot to bring them "
+         "back. They wrote rude notes on each other's drums. What they did not do was let a Strand slacken "
+         "because they were sulking.\n\nThe floor held because the work got done in public. The Cut is what "
+         "happens when maintenance stops: the hammock remembers it was never ground."),
+], parents=None)
+
+MEMORY = [
+    ("first_cold", "The first cold", "soil", "minecraft:campfire", 2, -1,
+     "The hearths went out while the sky still looked whole.",
+     [
+         text("The first cold",
+              "The Pad-keepers kept the warmth, not the fires — banked heat in thin dirt that let a family "
+              "sleep through a long dark. They felt the Cut before anyone named it. Pads got cold. Bread "
+              "took longer to rise. Moss would not take.\n\nThey carried dirt in baskets, a pad at a time, "
+              "and set a hearth on every scrap they saved. That is why you have a pad at all."),
+         text("What Soil remembers",
+              "Seat Soil and the pad starts mending you. That is not a blessing invented for Skybound. It is "
+              "the old hearth-trick, scaled down to whatever dirt is left. The Strand still knows how to "
+              "keep a body warm if you ask it in the old way: a token, a Post, a promise kept."),
+     ]),
+    ("named_shards", "Named by echo", "stone", "minecraft:iron_ore", 4, -2,
+     "Iron is low and patient. Diamond does not answer at all.",
+     [
+         text("Named by echo",
+              "The Grit-singers named every shard by its voice. Iron is low and patient. Gold barely bothers "
+              "to answer. Diamond does not answer at all; you find it by the silence around it.\n\nWhen the "
+              "Cut came, the meshes kept humming to nothing. Ore had nowhere to land. Continents that were "
+              "mostly stone fell as gravel and still fall, somewhere below the void, if below still means "
+              "anything."),
+         text("What Stone mends",
+              "A mesh is not a finder. It is a welcome. Seat Stone and you are telling the ground it may "
+              "arrive again. The Listening Pit, the Loomframe, the hammer chain — they are all the same "
+              "courtesy: give the shard a place to sit."),
+     ]),
+    ("living_rope", "The season the roots held", "sprout", "minecraft:oak_sapling", 6, -2,
+     "Roots are the only rope the void respects.",
+     [
+         text("The season the roots held",
+              "The Rootbinders grew living anchors: March flora whose roots ran along the Strands and held "
+              "pads that would otherwise have drifted. When the Loom was cut, those roots held for a season. "
+              "Half of them. That season is why anything is still up here.\n\nAfter that, the anchors went "
+              "feral, or quiet, or into the March. You will meet what they became."),
+         text("What Sprout mends",
+              "Food is infrastructure. A Clowder that eats well leaves the pad sooner because the Strand "
+              "remembers being a continent's pantry. Seat Sprout and the Post feeds you a little. Plant "
+              "something. The void respects a root more than a rope."),
+     ]),
+    ("last_foothold", "Boots first", "claw", "minecraft:iron_boots", 8, -1,
+     "Then the bridge. Then the courage; it arrives on its own.",
+     [
+         text("Boots first",
+              "The Edge-walkers kept footholds past the last fence post — cuts in the Loom that led somewhere "
+              "on purpose. When the sky came apart they were already standing on the thin bits. Some of them "
+              "walked people home. Some of them walked off the edge because that was the job.\n\nSpiritgear "
+              "was theirs: tools that spend Pulse instead of edge, so a foothold could be cut without "
+              "wearing the mountain out."),
+         text("What Claw mends",
+              "Seat Claw and fall damage stops within sight of the Post. That is a foothold, scaled to a pad. "
+              "Edge is also when the braid opens: Pattern, Colony, Hum. The Edge-walkers never asked anyone "
+              "to be brave in the same place twice. Pick a way and walk it."),
+     ]),
+    ("orphan_beat", "Orphan engines", "spark", "tribalpower:drumheart", 8, 1,
+     "The drum is not loud. The drum is steady.",
+     [
+         text("Orphan engines",
+              "The Drumhearts kept the beat under the whole sky. Spirit Pulse ran from their drums along the "
+              "lattice to every tribe. When the Cut came, the drums did not stop. They had nobody left to "
+              "stop for.\n\nYou will find engines still keeping time in the March and on pads that have not "
+              "seen a cat in an age. Listen before you feed one. It may still be waiting for a beat you have "
+              "not struck yet."),
+         text("What Spark mends",
+              "Seat Spark and you are not inventing power. You are sitting down at a drum that never learned "
+              "how to quit. Strike empty-handed, about a breath apart. The drum is not loud. The drum is "
+              "steady. Be the drum."),
+     ]),
+    ("songs_playing", "Songs still playing", "clock", "minecraft:clock", 6, 2,
+     "A factory is a song that has stopped needing the singer.",
+     [
+         text("Songs still playing",
+              "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same "
+              "figure again, until the work carried itself. When the Cut came the songs kept playing. Belts "
+              "in empty halls. Clicks before a hum nobody owned.\n\nSome are playing still. That is not "
+              "haunting. That is good engineering with no audience."),
+         text("What Clock mends",
+              "Seat Clock and you tell those songs they have a singer again. Create, timed plates, Song "
+              "Thread — they are the same craft in different decades. A factory is a song that has stopped "
+              "needing the singer. You are allowed to start it needing one."),
+     ]),
+    ("good_terms", "On good terms", "swarm", "minecraft:honeycomb", 4, 2,
+     "You do not own a hive. You are on good terms with it.",
+     [
+         text("On good terms",
+              "The Colony-keepers tended hives that hummed in the Loom's own key, and March flowers that "
+              "hummed back. They did not own their colonies. They were on good terms with them. When the sky "
+              "fell, a great many hives went quiet rather than angry. Quiet is a kind of loyalty.\n\n"
+              "There are no bees to find in the void. You make somewhere a bee wants to be, and you wait."),
+         text("What Swarm mends",
+              "Seat Swarm and you are resuming a conversation, not founding a livestock industry. Keep "
+              "something alive that keeps something else alive. Take without asking and the comb goes quiet. "
+              "It is very patient about this."),
+     ]),
+    ("polite_ask", "Asked politely", "sigil", f"{NS}:braid_cord", 2, 1,
+     "Spirit goes where it is asked politely and stays where it is fed.",
+     [
+         text("Asked politely",
+              "The Seal-carvers pressed spirit into matter and made it stay. A seal is a promise carved so "
+              "the world has to keep it. A rite is asking the Loom, politely, for an exception. They cut "
+              "blank seals by the thousand before the Cut, and asked for far too much.\n\nBind is their "
+              "chapter. Braid Cord is spun at the Post once two peers are seated. That is not a recipe. "
+              "That is three Strands agreeing in public."),
+         text("What Sigil mends",
+              "Seat Sigil and you are allowed to ask again — smaller this time. Never bind what you would "
+              "not be willing to unbind. Feed what you ask to stay. The old world broke on appetite. The "
+              "new one will hold on manners."),
+     ]),
+    ("unmended_gates", "Roads into nowhere", "spindle", "minecraft:ender_pearl", 0, 2,
+     "They always meant to come back and mend them.",
+     [
+         text("Roads into nowhere",
+              "The Loom-stitchers cut the gate-paths — into the March, into the Nether and End, into places "
+              "the map does not have words for — and always meant to come back and mend them. They did not "
+              "get to. Open gates dumped weather into the void. Closed ones trapped whole roads in the "
+              "March, still walking."),
+         text("What Spindle mends",
+              "Seat Spindle and you pick up a needle they dropped. The digital loom, the Gate Drum, a March "
+              "stone, the Fragment. Nine seated, one stone, one right-click: the cut closes above your pad. "
+              "They will not be there to thank you. Do it anyway."),
+     ]),
+    ("continents_named", "Named continents", "soil", "minecraft:grass_block", -2, -1,
+     "Pads that forgot they were pads. Cities that hung. Hearths first.",
+     [
+         text("Named continents",
+              "The old maps did not say *island*. They named continents the way you name a house: by who "
+              "kept the hearth, by which river had manners, by which city hung over which Strand-knot. A "
+              "pad that had forgotten it was a pad got a name. A name was a promise that the inspection "
+              "had gone well for long enough to stop calling it a pad."),
+         text("Cities that hung",
+              "Markets sat on lattice, not bedrock. Stairs went down to the under-thread and up to the "
+              "weather-road. You could walk a street and never think about the drop because the Soil Strand "
+              "ran under the cobbles the way warmth runs under a well-kept floor.\n\nHanging felt like "
+              "standing. That was the trick, and it was work."),
+         text("Hearths as first physics",
+              "Before Stone named shards, before Clock sang a factory, a Pad-keeper banked heat in thin "
+              "dirt and called it a world. The hearth is the first physics. A continent is a hearth that "
+              "got out of hand in the useful direction.\n\nSeat Soil and you are not founding a nation. "
+              "You are reminding a scrap of dirt that it used to be allowed to stay warm."),
+     ]),
+    ("the_argument", "Nine pulls, nine arguments", "clock", "minecraft:compass", 8, 3,
+     "Maintenance stopped. Eight pulls became eight arguments. The Spindle seam tore.",
+     [
+         text("Nine pulls, nine arguments",
+              "The Cut was not a war. It was the moment the work stopped being done. Nine tribes had nine "
+              "pulls. When the schedule failed, eight of those pulls turned into eight arguments about whose "
+              "fault the slack was. Blame is a kind of tension. It does not hold a sky."),
+         text("The Spindle seam",
+              "The Loom-stitchers were the ones who mended the joins. While the others argued, the Spindle "
+              "seam — the road between pads, the stitch that let nine pulls act as one floor — tore. Gates "
+              "that should have led home led into weather. Weather that should have had a road had a hole.\n\n"
+              "A clock with no stitch is just nine ticking things, each sure it is on time."),
+         text("What Clock still knows",
+              "The Pattern-weavers kept trying to sing the factories through it. Songs do not stop because "
+              "the choir is fighting. Seat Clock and you are not picking a side in the old argument. You "
+              "are putting a tempo back under work that has been improvising since the Cut."),
+     ]),
+    ("silence_after", "Songs with no singer", "sigil", "minecraft:note_block", -2, 0,
+     "Factories running. Drums beating. Gates open into nowhere.",
+     [
+         text("Songs with no singer",
+              "After the Cut the world did not go quiet. It went unattended. Factories kept the round the "
+              "Pattern-weavers had taught them. Drums kept the beat the Drumhearts had left in them. Gates "
+              "stood open into nowhere because a Loom-stitcher had always meant to come back and close them "
+              "after lunch.\n\nLunch did not come. The work did."),
+         text("Asking politely",
+              "The Seal-carvers had a rule: spirit goes where it is asked politely and stays where it is "
+              "fed. After the Cut, a lot of asking kept happening with nobody to feed the answer. Seals "
+              "held promises to empty rooms. Rites fired into the Fray.\n\nPolite is still the method. The "
+              "budget is smaller. Ask for a pad, not a continent."),
+         text("Asking too much",
+              "The old world broke on appetite as much as on slack. Exceptions stacked until the Loom had "
+              "more appointments than thread. You will find blank seals by the thousand in the March. That "
+              "is not treasure. That is a warning written in inventory.\n\nNever bind what you would not "
+              "unbind. Feed what you ask to stay. The new sky will hold on manners."),
+     ]),
+    ("march_as_rest", "Where the fallen came to rest", "spindle", "minecraft:amethyst_cluster", -2, 2,
+     "A frayed-thread grave. A harbour. Halls sunk to the lintel.",
+     [
+         text("Where the fallen came to rest",
+              "The March was always a road. After the Cut it became a harbour for whatever could still "
+              "walk. Frayed thread washed up there the way wreckage finds a quiet bay. Camps. Halls. "
+              "Drums that never learned how to quit. The March is a grave and a harbour at once. Treat "
+              "it like both."),
+         text("Halls to the lintel",
+              "Ancestor Halls stand in the steppe and highlands with their doors at the lintel — sunk, "
+              "not fallen. Twelve tablets between three rooms. Hollow Sentinels on a job nobody cancelled. "
+              "Read every tablet. The dead are not asking for worship. They are asking for the record to "
+              "be finished."),
+         text("Where tension pools",
+              "In the crystal fields the remaining pull gathers: March Crystal, the Spire, the Loom-"
+              "stitchers' waystation. Tension that had nowhere to seat ran downhill into stone that would "
+              "hold it. That is why Reweave wants a March stone. You are not fetching a trophy. You are "
+              "bringing pooled tension home to a Post that can keep it."),
+     ]),
+]
+for eid, name, strand, icon, x, y, desc, pages in MEMORY:
+    entry("memory", eid, name, desc, icon, x, y, pages,
+          parents=["hanging_sky"], condition=advancement(f"strand/{strand}"), hide=True)
+
+entry("memory", "what_mending_means", "What mending means", "Nine agreeing, again.", f"{NS}:spindle_loom_fragment", 4, 0, [
+    text("Not the old world",
+         "Reweave does not put the continents back. It does not un-kill the guardians or un-scatter the "
+         "tribes. It teaches nine Strands to hold a pad, then a Dock, then a sky that is honest about being "
+         "made of thread.\n\nThe old world was a floor that pretended it was ground. The mended world is a "
+         "floor that knows it is a promise."),
+    text("A Clowder's share",
+         "When your Clowder seats the Fragment, your Strand of the Fray closes. Other Clowders still have "
+         "theirs to do. You do not own the sky you just taught to hold. You own a share of the work, and "
+         "the share is public.\n\nA seated Fragment is a Clowder saying, in front of the Dock: we kept nine "
+         "promises. The next Clowder still has nine to keep."),
+    text("The Fray is the clock",
+         "The column over the Dock is not scenery. It is the only honest clock this campaign has. It thins "
+         "when a Clowder reweaves. It turns to lit thread when every Clowder has done the same. Go look at "
+         "it. If it is still dark, the work is not finished — not because you failed, but because someone "
+         "else has not had their hour yet."),
+    text("Tablets and drums",
+         "The March kept the record. Ancestor Halls: twelve tablets, three rooms, sentinels on a job "
+         "nobody cancelled. Read every tablet before you call the work done. The Silent Drum in the "
+         "highlands still takes four beats, a breath apart. Strike it when you are ready. The Unsung is "
+         "not a boss to loot. It is the March asking whether you learned the tempo."),
+    text("Help them",
+         "If the Fray has gone to lit thread, the sky has learned to hold. If it has not, someone else "
+         "still has work. Help them. Share a mesh. Walk their pad. Sit at their drum. Mending that stays "
+         "on one Clowder's island is just a nicer hammock.\n\nTell the camps we are sorry it took so long. "
+         "Then make sure it does not take that long for the next team."),
+], parents=["unmended_gates"], condition=advancement("reweave"), hide=True)
+
+entry("memory", "how_the_sky_holds", "How the sky learns to hold", "Nine agreements, kept in public.", f"{NS}:spindle_loom_fragment", 6, 0, [
+    text("How the sky learns to hold",
+         "The sky does not snap back. It learns. A seated token is a lesson. Nine seated tokens are a "
+         "pad that remembers how to be a floor. A Fragment seated is that pad telling the Dock it can "
+         "stop holding its breath.\n\nYou are not restoring continents. You are teaching nine agreements "
+         "to stay taut where everyone can see them."),
+    text("Public, or it does not count",
+         "A private mend is a secret. Secrets do not hold weather. The Tension Post hums for the whole "
+         "Clowder. The Fray thins for the whole Dock. The lit thread, when it comes, is a server-wide "
+         "fact.\n\nKeep the work in the open. That is how the old sky held, and it is the only method "
+         "the new one will accept."),
+    text("What you are not doing",
+         "You will not get the hanging cities back. You will not get the schedule that let you set a "
+         "table by the rain. You will get a sky that knows it is thread, and holds anyway.\n\nThat is "
+         "the better physics. Honest hammocks last longer than floors that lie."),
+], parents=["hanging_sky"], condition=advancement("reweave"), hide=True)
+
 # ------------------------------------------------------------------------------------ The Braid
 
-category("braid", "The Loom Braid", "minecraft:string", 1, "The campaign, phase by phase.")
+category("braid", "The Loom Braid", "minecraft:string", 3, "The campaign, phase by phase.")
 
 BRAID = [
     ("wake", "Wake", "Soil", "minecraft:oak_sapling", 0, 0, None,
@@ -223,64 +525,105 @@ for eid, name, strand, icon, x, y, parent, body in BRAID:
     entry("braid", eid, name, f"{strand} Strand.", icon, x, y, [text(name, body)], parents=parents)
 
 entry("braid", "living_lattice", "The Living Lattice", "Workshops, rites and paths.", "tribalpower:resonant_core", 8, 5, [
-    text("The camp answers", "Tribal Weave is the workshop beside the nine Strands. Rhythm, a living landscape and reusable Echo catalysts make its Pulse. Distinct totem voices strengthen the Resonator. No fuel fire is needed."),
-    text("Hands become a workshop", "Four Echo stations refine batches and accept shared ingredients. Bind can weave Loom Lint into string and Void Yarn into Spiritweave. The Pulse Adapter sends the camp's harmony into standard FE machines."),
-    text("Three distances", "Cargo rituals grow from Local to Longreach to Astral. Player paths grow from Waystone to Horizon to Astral. March Crystal opens the final tier for both: across dimensions. Leave both cargo endpoints loaded and a safe floor for travellers."),
-    text("Conduct the camp", "Redstone pauses stations, storage, relays and sustained rituals. Comparators report supplies and activity. The Drumheart listens for rising edges instead: a clock is a drum pattern. Find the full builds in Tribal Weave."),
-    text("The sixth voice", "Loom joins the five attunements. Loom Thread comes from Ancestor Hall chests, from The Unsung, and from a Loom-stitcher Elder at Friend standing; an Unsung Heart crafts the Loom totem. The Loom Seal blesses Tension in a brazier, the Echo Unweave runs the lattice backwards and salvages worn Spiritgear, and the Sixfold Staff gains Tether and Stitch."),
-    text("Rites", "Six Rite Tablets, each two stone and a reagent around its seal (the seal is handed back). Sneak-use one on a Ritual Brazier with that seal seated and it draws its Pulse from the lattice within eight blocks: Rain Calling, Sky Clearing, Dawn Calling, Green Blessing, Still Night, and Ley Binding, which joins two totems with a thirty-minute ley line."),
-    text("Bound spirits and camps", "A Bonding Charm bonds an adult Lantern Fox, Mossback or Dawn Stag: it follows, never despawns, and yields double when brushed. A Camp Charter, or `/tribalpower camp`, gathers players into a camp that shares a vault, its devices, twelve Wayanchors and a quarter of each member's standing."),
-    text("Reading the lattice", "The Ley Lens shows the ley where you stand. A Pulse Gauge reads any Pulse holder as redstone; a Pulse Threshold emits at a quarter, half, three-quarters or full. Sneak-use the Spirit Codex on any Tribal block and it says, plainly, why it is or is not working."),
+    text("The camp answers",
+         "Tribal Weave is the workshop beside the nine Strands. Rhythm, landscape and reusable Echo catalysts "
+         "make Pulse. Distinct totem voices strengthen the Resonator. No fuel fire is needed.\n\nHow:\n"
+         "1. Strike a Drumheart empty-handed, about a breath apart.\n"
+         "2. Place the matching Resonance Totem within 8 of each Echo station.\n"
+         "3. Seat a catalyst in the Pulse Resonator (shard first). Two voices are enough to start.\n"
+         "4. Sneak-use the Spirit Codex on anything silent. It will say why."),
+    text("Hands become a workshop",
+         "Four Echo stations refine batches. Bind weaves Loom Lint into string and Void Yarn into Spiritweave. "
+         "The Pulse Adapter sends harmony into standard FE machines.\n\nHow:\n"
+         "1. Feed slot 0; take from 1-8. Stations default Input on five faces, Output below.\n"
+         "2. Sit Shatter on a Kiln: grit walks down with no hopper.\n"
+         "3. Beside two machines, set the touching faces to Output into Input.\n"
+         "4. Relays are for distance. A lever pauses work."),
+    text("Three distances",
+         "Cargo grows Local to Longreach to Astral. Paths grow Waystone to Horizon to Astral. March Crystal "
+         "opens the last tier: across dimensions.\n\nHow:\n"
+         "1. Snap a relay plate onto a machine face. Seat the same Bond item in both plates.\n"
+         "2. Leave both ends loaded. Unloaded destinations pause; they do not void.\n"
+         "3. Bind a compass to a dry floor; keep two clear blocks above it."),
+    text("The sixth voice",
+         "Loom joins the five attunements. Loom Thread comes from Ancestor Halls, The Unsung, and a Loom-"
+         "stitcher Elder at Friend. An Unsung Heart crafts the Loom totem.\n\nHow:\n"
+         "1. Read every tablet in an Ancestor Hall.\n"
+         "2. Strike the Silent Drum four beats, a breath apart, to wake The Unsung.\n"
+         "3. Craft the Loom totem. Seat it near the Resonator for the sixth voice."),
 ], parents=["hum"])
 
 # ------------------------------------------------------------------------------------ Nine Tribes
 
-category("tribes", "Nine Tribes", f"{NS}:strand_token_spindle", 2, "Who kept the Loom. Unlocks as you seat Strands.")
+category("tribes", "Nine Tribes", f"{NS}:strand_token_spindle", 4, "Who kept the Loom. Unlocks as you seat Strands.")
 
 TRIBES = [
     ("soil", "Pad-keepers", -4, -2,
      "The Pad-keepers kept the hearths. Not the fires — the *warmth*: the banked heat in thin dirt that let a "
      "pad hold a family through a long dark.\n\nThey were the first to notice the Loom was fraying, because "
-     "the pads got cold before anything fell.",
+     "the pads got cold before anything fell.\n\nBefore the Cut they banked heat under whole continents: "
+     "hearths under markets, under fields, under the first stair of every hanging city. What they lost was "
+     "the long dark they had already solved — warmth as a public fact. Now they keep scraps, and they keep them anyway.",
      "We never called it dirt. We called it what was left, and we kept it warm."),
     ("stone", "Grit-singers", -2, -3,
      "The Grit-singers named every shard by its echo. Iron is low and patient. Gold barely bothers to "
      "answer. Diamond does not answer at all; you find it by the silence around it.\n\nThey built the first "
-     "meshes: not to find ore, but to give it somewhere to land.",
+     "meshes: not to find ore, but to give it somewhere to land.\n\nBefore the Cut they named ore as it "
+     "arrived, not as it was dug — continents of stone that answered when sung to, meshes hung in the "
+     "under-lattice like welcome mats. What they lost was a ground that wanted to be found. The shards still "
+     "fall. They just have nowhere to land unless you build the welcome again.",
      "The mesh does not find the ore. The mesh gives the ore somewhere to land."),
     ("sprout", "Rootbinders", 0, -4,
      "The Rootbinders grew living anchors: March flora whose roots ran along the Strands and held pads that "
      "would otherwise have drifted.\n\nWhen the Loom was cut, the roots held for a season. That season is why "
-     "anything is still up here.",
+     "anything is still up here.\n\nBefore the Cut those anchors were a public rope, thick as roads, holding "
+     "pads that had grown into continents. What they lost was a season that did not have to end. Half the "
+     "anchors held. The rest went feral, or quiet, or into the March, and you will meet what they became.",
      "Roots are the only rope the void respects."),
     ("claw", "Edge-walkers", 2, -3,
      "The Edge-walkers kept footholds past the last fence post — cuts in the Loom that led somewhere on "
      "purpose. Spiritgear was theirs: tools that spend Pulse instead of edge.\n\nThey left the footholds so "
-     "nobody would have to be brave in the same place twice.",
+     "nobody would have to be brave in the same place twice.\n\nBefore the Cut the rim was a job, not a dare: "
+     "a list of places you could stand, a bridge already cut, courage allowed to arrive late. What they lost "
+     "was a horizon that led somewhere on purpose. Some walked people home. Some walked off because that was "
+     "the job. The thin bits are still thin.",
      "Boots first. Then the bridge. Then the courage; it arrives on its own."),
     ("spark", "Drumhearts", 4, -2,
      "The Drumhearts kept the beat under the whole sky. Spirit Pulse — power as rhythm before it was a "
      "number — ran from their drums along the lattice to every tribe.\n\nThe orphan engines you find still "
-     "keep their time. Listen before you feed one.",
+     "keep their time. Listen before you feed one.\n\nBefore the Cut the beat was civic: Pulse as a utility, "
+     "drums as the sky's metronome, every pad on the same downbeat. What they lost was an audience. The "
+     "engines did not stop. They had nobody left to stop for. You will find them still keeping time, waiting "
+     "for a beat you have not struck yet.",
      "The drum is not loud. The drum is steady. Be the drum."),
     ("clock", "Pattern-weavers", 4, 0,
      "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure "
      "again, until the work carried itself.\n\nTheir timed lattice songs are the ancestor of every belt and "
-     "cog you will build. You already know this craft.",
+     "cog you will build. You already know this craft.\n\nBefore the Cut those songs fed hanging cities on a "
+     "schedule you could set a table by. What they lost was the singer, not the song. Belts in empty halls. "
+     "Clicks before a hum nobody owned. Seat Clock and you tell those songs they have a singer again.",
      "A factory is a song that has stopped needing the singer."),
     ("swarm", "Colony-keepers", 2, 2,
      "The Colony-keepers tended hives that hummed in the Loom's own key, and March flowers that hummed back.\n\n"
-     "They did not own their colonies. They were on good terms with them. That is the whole of the method.",
+     "They did not own their colonies. They were on good terms with them. That is the whole of the method.\n\n"
+     "Before the Cut that conversation ran at continent scale: hives in the Loom's key, flowers humming back "
+     "across hanging fields. What they lost was the large talk. A great many hives went quiet rather than "
+     "angry. Quiet is a kind of loyalty. There are no bees in the void until you make somewhere a bee wants to be.",
      "You do not own a hive. You are on good terms with it."),
     ("sigil", "Seal-carvers", 0, 3,
      "The Seal-carvers pressed spirit into matter and made it stay. A seal is a promise carved so the world "
      "has to keep it; a rite is asking the Loom, politely, for an exception.\n\nNever bind what you would "
-     "not be willing to unbind.",
+     "not be willing to unbind.\n\nBefore the Cut they carved promises by the thousand — exceptions asked "
+     "politely, then asked again, then asked too much. What they lost was manners with a budget. Bind is "
+     "their chapter. The old world broke on appetite. The new one will hold on asking smaller.",
      "Spirit goes where it is asked politely and stays where it is fed."),
     ("spindle", "Loom-stitchers", -2, 2,
      "The Loom-stitchers cut the gate-paths — into the March, into the Nether and End, into places the map "
      "does not have words for — and always meant to come back and mend them.\n\nThey did not get to. You "
-     "will.",
+     "will.\n\nBefore the Cut they kept the roads between pads, between worlds, between the March and home. "
+     "What they lost was the appointment. Open gates dumped weather into the void. Closed ones trapped whole "
+     "roads still walking. The Spindle seam tore while the other eight pulls turned into arguments. You pick "
+     "up the needle they dropped.",
      "The Loom was never one thread. It was nine agreeing."),
 ]
 # 3.0: every tribe keeps a camp in the March — where it stands, what its hearth favours, what its Elder trades.
@@ -328,7 +671,7 @@ import sys
 sys.path.insert(0, str(ROOT / "tools"))
 from guardians_lore import GUARDIANS, STRAND_TITLES, unlock
 
-category("guardians", "Snapped Guardians", "guardians:frayed_totem_unwoven", 3, "The keepers the Cut snapped. Unlocks as you seat Strands.")
+category("guardians", "Snapped Guardians", "guardians:frayed_totem_unwoven", 5, "The keepers the Cut snapped. Unlocks as you seat Strands.")
 
 entry("guardians", "the_ritual", "Answer for the Cut", "Totems, arenas, relics.", "guardians:frayed_totem_beddown", 0, 0, [
     text("Answer for the Cut",
@@ -350,7 +693,9 @@ POS = {"beddown": (-4, -2), "grindmaw": (-2, -3), "thornmother": (0, -4), "edgew
        "lintgolem": (-4, 0), "tangle": (-4, 2), "firstcut": (4, 3), "overweaver": (4, -4)}
 for gid, title, strand, relic, tier, arena, fight, power in GUARDIANS:
     x, y = POS[gid]
-    where = f"Keeper of the {STRAND_TITLES[strand]} Strand." if strand else ("A gentle first fight." if tier == "easy" else "After the Reweave.")
+    where = (f"Keeper of the {STRAND_TITLES[strand]} Strand." if strand else
+             "An optional fight after Claw." if gid == "tangle" else
+             "A gentle first fight." if tier == "easy" else "After the Reweave.")
     entry("guardians", gid, title[0].upper() + title[1:], where, f"guardians:frayed_totem_{gid}", x, y, [
         text(title[0].upper() + title[1:], arena + "\n\n" + fight),
         spotlight(f"guardians:frayed_totem_{gid}", "Frayed Totem",
@@ -362,3 +707,73 @@ for gid, title, strand, relic, tier, arena, fight, power in GUARDIANS:
     ], parents=["the_ritual"], condition={"type": "modonomicon:advancement", "advancement_id": unlock(gid, strand)}, hide=False)
 
 print("Whisker Codex book written to", BOOK.relative_to(ROOT))
+
+# Pack kubejs copy wins at runtime. Keep The Work (pack-only) and overlay generated cats/entries.
+import shutil
+PACK_BOOK.mkdir(parents=True, exist_ok=True)
+pack_book = json.loads((BOOK / "book.json").read_text(encoding="utf-8"))
+pack_book["name"] = "Whisker Codex"
+pack_book["tooltip"] = "The campaign — story and what to do."
+pack_book["description"] = (
+    "The Loom was cut. This book is the campaign: what the sky used to be, how it came apart, "
+    "what you do next, who kept the nine Strands."
+)
+w(PACK_BOOK / "book.json", pack_book)
+for cat_file in (BOOK / "categories").glob("*.json"):
+    shutil.copy2(cat_file, PACK_BOOK / "categories" / cat_file.name)
+work = PACK_BOOK / "categories" / "the_work.json"
+if work.exists():
+    obj = json.loads(work.read_text(encoding="utf-8"))
+    obj["background"] = ATLAS
+    obj["background_width"] = 1536
+    obj["background_height"] = 1024
+    obj.pop("background_parallax_layers", None)
+    w(work, obj)
+for src_dir in (BOOK / "entries").iterdir():
+    if not src_dir.is_dir():
+        continue
+    dest_dir = PACK_BOOK / "entries" / src_dir.name
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    for src in src_dir.glob("*.json"):
+        shutil.copy2(src, dest_dir / src.name)
+
+# Pack-only primer: always-open page in The Work that points at The Old Sky.
+w(PACK_BOOK / "entries" / "the_work" / "old_world.json", {
+    "category": f"{NS}:the_work",
+    "name": "The old world",
+    "description": "What hung, what fell, what fixing means.",
+    "icon": f"{NS}:codex_page",
+    "x": 0,
+    "y": 2,
+    "background_u_index": 0,
+    "background_v_index": 0,
+    "hide_while_locked": False,
+    "pages": [
+        text("What the world was",
+             "Before the void had a name, the sky was a floor. Nine Strands of living thread — Soil, Stone, Sprout, "
+             "Claw, Spark, Clock, Swarm, Sigil, Spindle — were pulled taut by nine tribes of Ninjacats. Continents "
+             "hung from that lattice the way fruit hangs from a well-kept vine.\n\nCities did not float. They hung, "
+             "and hanging felt like standing. Weather ran on a schedule, not a mood. Rain knew where to fall. "
+             "Nothing dropped that was not meant to. The old world was not peace. It was maintenance."),
+        text("How it fell",
+             "Something severed the Loom. The Codex does not know what. Maintenance stopped. Eight pulls became "
+             "eight arguments about whose fault the slack was. The Spindle seam tore. Continents fell. Weather "
+             "forgot its roads. The tribes scattered with whatever dirt they could carry.\n\nWhat did not fall is "
+             "what you are standing on: pads of earth the Strands still remember. Factories kept running. Drums "
+             "kept beating. Gates stood open into nowhere. The March caught the wreckage — a grave and a harbour "
+             "at once."),
+        text("What fixing means",
+             "You are not rebuilding the hanging continents. You are teaching nine Strands to agree again, one pad "
+             "at a time. A seated token is a promise kept. A Clowder that seats the Fragment closes its Strand of "
+             "the Fray. When every Clowder has done the same, the column over the Dock turns to lit thread.\n\n"
+             "The world does not snap back. It learns to hold. Honest hammocks last longer than floors that lie."),
+        text("The Old Sky chapter",
+             "**The Old Sky** is the rest of this story, written as the tribes would tell it. It does not open all "
+             "at once. As each Strand seats, that tribe's memory unlocks: hearths, meshes, roots, footholds, drums, "
+             "songs, hives, seals, gates.\n\nCome back to that chapter when a token is seated. They only talk once "
+             "you have kept their promise. This page is the always-open version — enough to start the work without "
+             "waiting for the record."),
+    ],
+    "parents": [{"entry": f"{NS}:the_work/this_book", "draw_arrow": True, "line_enabled": True}],
+})
+print("Pack kubejs book synced to", PACK_BOOK.relative_to(ROOT))

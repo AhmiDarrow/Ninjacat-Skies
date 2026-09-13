@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
   "name": "Root",
-  "description": "Sprout Strand — Root.",
+  "description": "Sprout Strand.",
   "icon": "mysticalagriculture:inferium_essence",
   "x": 4,
   "y": 0,
@@ -11,13 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The work",
-      "text": "**Assignment list:** chapter **Strand: Sprout**.\n\nA wheat field, a kitchen, then Mystical Agriculture. Sieve dirt for Inferium Ore and gravel for Prosperity Ore — smelt them, and the essence-seed tiers open. Botany pots if you like compact.\n\nFinish the **Sprout Knot** and seat Sprout. Food is infrastructure. A Clowder that eats well leaves the pad sooner."
-    },
-    {
-      "type": "modonomicon:text",
       "title": "Root",
-      "text": "The Rootbinders grew living anchors. When the Loom was cut, the roots held for a season. That season is why anything is still up here."
+      "text": "**Sprout.** A wheat field, a kitchen, then Mystical Agriculture. Sieve dirt for Inferium Ore and gravel for Prosperity Ore — smelt them, and the essence-seed tiers open up. Botany pots if you like compact.\n\nFood is infrastructure here. A Clowder that eats well leaves the pad sooner."
     }
   ],
   "parents": [

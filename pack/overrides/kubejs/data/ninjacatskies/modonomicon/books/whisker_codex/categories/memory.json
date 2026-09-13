@@ -1,0 +1,9 @@
+{
+  "name": "The Old Sky",
+  "description": "What the world was, and what mending it costs. Unlocks as you seat Strands.",
+  "icon": "ninjacatskies:codex_page",
+  "sort_number": 2,
+  "background": "ninjacatskies:textures/gui/quest_atlas.png",
+  "background_width": 1536,
+  "background_height": 1024
+}

@@ -12,7 +12,7 @@
     {
       "type": "modonomicon:text",
       "title": "Drumhearts",
-      "text": "The Drumhearts kept the beat under the whole sky. Spirit Pulse — power as rhythm before it was a number — ran from their drums along the lattice to every tribe.\n\nThe orphan engines you find still keep their time. Listen before you feed one."
+      "text": "The Drumhearts kept the beat under the whole sky. Spirit Pulse — power as rhythm before it was a number — ran from their drums along the lattice to every tribe.\n\nThe orphan engines you find still keep their time. Listen before you feed one.\n\nBefore the Cut the beat was civic: Pulse as a utility, drums as the sky's metronome, every pad on the same downbeat. What they lost was an audience. The engines did not stop. They had nobody left to stop for. You will find them still keeping time, waiting for a beat you have not struck yet."
     },
     {
       "type": "modonomicon:spotlight",
@@ -26,7 +26,7 @@
     {
       "type": "modonomicon:text",
       "title": "Their camp",
-      "text": "The Drumhearts keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Fire totem, a banner, four Kin — an Elder, a Drummer, a Hunter and a Weaver — and an Ember Horn.\n\nTheir hearth favours copper, charged Pulse Cells, Bone Chimes. Their Elder trades Bone Chimes, Pulse Cells, and the Ember Horn. At Voice standing they press the tribe's Mark into your hand. Camps already generated in an old world keep the layout they spawned with."
+      "text": "The Drumhearts keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Fire totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours copper, charged Pulse Cells, Bone Chimes. Their Elder trades Bone Chimes and Pulse Cells, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

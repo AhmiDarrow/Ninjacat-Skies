@@ -1,0 +1,39 @@
+{
+  "category": "ninjacatskies:memory",
+  "name": "Where the fallen came to rest",
+  "description": "A frayed-thread grave. A harbour. Halls sunk to the lintel.",
+  "icon": "minecraft:amethyst_cluster",
+  "x": -2,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Where the fallen came to rest",
+      "text": "The March was always a road. After the Cut it became a harbour for whatever could still walk. Frayed thread washed up there the way wreckage finds a quiet bay. Camps. Halls. Drums that never learned how to quit. The March is a grave and a harbour at once. Treat it like both."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Halls to the lintel",
+      "text": "Ancestor Halls stand in the steppe and highlands with their doors at the lintel — sunk, not fallen. Twelve tablets between three rooms. Hollow Sentinels on a job nobody cancelled. Read every tablet. The dead are not asking for worship. They are asking for the record to be finished."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Where tension pools",
+      "text": "In the crystal fields the remaining pull gathers: March Crystal, the Spire, the Loom-stitchers' waystation. Tension that had nowhere to seat ran downhill into stone that would hold it. That is why Reweave wants a March stone. You are not fetching a trophy. You are bringing pooled tension home to a Post that can keep it."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:memory/hanging_sky",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "ninjacatskies:strand/spindle"
+  }
+}

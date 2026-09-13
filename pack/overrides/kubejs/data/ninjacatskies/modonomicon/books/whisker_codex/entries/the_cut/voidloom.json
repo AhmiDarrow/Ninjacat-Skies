@@ -34,7 +34,7 @@
         "count": 1
       },
       "title": "Loomframe",
-      "text": "Stretch a mesh, load it with dirt or gravel, and let it work — one piece every few seconds with a shuttle clack. Hoppers feed the top and pull the sides.\n\nThread meshes catch what Ex Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand Filament** on iron."
+      "text": "Stretch a mesh, load it with dirt, gravel, sand or dust, and let it work — one piece every few seconds with a shuttle clack. Hoppers feed the top and pull from below. The mesh is hand-only. An oak sieve is still click; this machine is the hopper one.\n\nThread meshes catch what Ex Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand Filament** on iron (gravel, sand or dust)."
     },
     {
       "type": "modonomicon:spotlight",

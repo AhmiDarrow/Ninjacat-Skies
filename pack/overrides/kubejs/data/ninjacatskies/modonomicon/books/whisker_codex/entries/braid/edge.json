@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
   "name": "Edge",
-  "description": "Claw Strand — Edge.",
+  "description": "Claw Strand.",
   "icon": "silentgear:blueprint_paper",
   "x": 6,
   "y": 0,
@@ -11,13 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The work",
-      "text": "**Assignment list:** chapter **Strand: Claw**.\n\nSilent Gear blueprints, iron on your back, a bow, a portal frame. Leave the pad on purpose.\n\nFinish the **Claw Knot** and seat Claw. Edge opens the braid: Pattern, Colony, and Hum are all yours to choose from. You need any **two** before Bind."
-    },
-    {
-      "type": "modonomicon:text",
       "title": "Edge",
-      "text": "The Edge-walkers kept footholds past the last fence post. Boots first. Then the bridge. Then the courage."
+      "text": "**Claw.** Silent Gear blueprints, iron on your back, a bow, a portal frame. Leave the pad on purpose.\n\nEdge opens the braid: after Claw, Pattern, Colony, and Hum are all yours to choose from."
     }
   ],
   "parents": [
