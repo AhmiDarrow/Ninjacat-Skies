@@ -628,6 +628,7 @@ CHAPTER_SUBTITLES = {
     37: ["The little machines the stewards left."],
     38: ["The Drumhearts' pulse learns to run in copper."],
     39: ["Thirteen guardians the Cut snapped. Re-tension each Strand by beating its keeper."],
+    40: ["Walk the March. Tame a yellow. Ester waits at the Hall after you have been there."],
 }
 
 
