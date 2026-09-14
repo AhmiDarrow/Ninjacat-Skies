@@ -6929,17 +6929,17 @@
 	]
 	quest.420000000022055E.title: "Rain held in copper"
 	quest.420000000022055F.quest_desc: [
-		"Touch the destination face with the tuner, then touch a relay. Sneak-use to replace your marked destination.",
+		"Mark a machine face with the tuner, then use it on a relay plate. Use it on another machine to replace the mark. Do not mark the plate.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.420000000022055F.title: "Name the far end"
 	quest.4200000000220560.quest_desc: [
-		"Place above a source inventory. Local cargo reaches 32 blocks, moving up to 16 items each second for 4 Pulse. Redstone pauses the relay.",
+		"Snap the plate onto a chest or machine face. Pair two plates with the same Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220560.title: "A path for supplies"
 	quest.4200000000220561.quest_desc: [
-		"Place above a source tank and bind a receiving face. Local fluid reaches 32 blocks: 250 mB per second for 4 Pulse. Both ends must be loaded.",
+		"Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 4 Pulse. Both ends must be loaded.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220561.title: "A path for rain"
