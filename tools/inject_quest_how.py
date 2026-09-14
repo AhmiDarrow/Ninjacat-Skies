@@ -78,8 +78,54 @@ HOW_ITEM = {
     "pamhc2crops:tropicalgarden": "How: sieve dirt with a string mesh or better.",
     "pamhc2crops:windygarden": "How: sieve dirt with a string mesh or better.",
     "agricraft:wooden_crop_sticks": "How: four sticks in a square. Place on farmland, then plant a seed.",
-    "agricraft:seed_analyzer": "How: glass, wood, and a journal. Put a seed in to read stats.",
-    "agricraft:journal": "How: book and crop sticks. It records every plant you analyze.",
+    "agricraft:seed_analyzer": "How: glass panes, stone slab, planks, and sticks. Seat the journal, then a seed.",
+    "agricraft:journal": "How: writable book (book, ink sac, feather) plus wheat seeds. Ink is the Soil chapter.",
+    "agricraft:magnifying_glass": "How: glass pane between sticks, then a stick handle. Look at a planted crop.",
+    "agricraft:wooden_rake": "How: wooden fence over a stick. Weeds are off; it still clears a stick.",
+    "agricraft:trowel": "How: two iron ingots and a stick. Pick a plant up with its stats intact.",
+    "agricraft:clipper": "How: shears, iron, and a stick. Clip a mature plant and reset it.",
+    "agricraft:seed_bag": "How: leather and string. Fill from the analyzer.",
+    "agricraft:iron_crop_sticks": "How: iron rods in the same square as wood. JEI names the craft.",
+    "agricraft:iron_rake": "How: iron bars over a stick.",
+    "agricraft:irrigation_tank": "How: planks. Hold water for the channels.",
+    "agricraft:irrigation_channel": "How: shapeless from a tank — one tank becomes eight channels.",
+    "agricraft:channel_valve": "How: craft onto a channel. Stop and start a line without breaking the tank.",
+    "agricraft:sprinkler": "How: sit it on a channel over the sticks. JEI names the craft.",
+    "agricraft:grate": "How: cover a channel so you can walk the row.",
+    "agricraft:greenhouse_monitor": "How: craft, then place in the room to read light and humidity.",
+    "agricraft:obsidian_crop_sticks": "How: obsidian in the stick square. Two neighbouring mature crops can cross-breed.",
+    "agricraft:irrigation_channel_hollow": "How: a channel you can walk. Optional.",
+    "pamhc2foodcore:cuttingboarditem": "How: copper, a stick, and a plank. Not the Farmer's Delight board.",
+    "pamhc2foodcore:potitem": "How: copper and a stick. The pot comes back after every shapeless cook.",
+    "pamhc2foodcore:skilletitem": "How: copper and sticks. Different from the Delight skillet.",
+    "pamhc2foodcore:saucepanitem": "How: copper and a stick.",
+    "pamhc2foodcore:bakewareitem": "How: eight terracotta around an empty centre.",
+    "pamhc2foodcore:mixingbowlitem": "How: planks and a stick.",
+    "pamhc2foodcore:juiceritem": "How: terracotta. Four in a T.",
+    "pamhc2foodcore:rolleritem": "How: sticks either side of a log.",
+    "pamhc2foodcore:grinderitem": "How: andesite (flint-sieve dirt or gravel pebbles) and a stick.",
+    "pamhc2foodcore:freshwateritem": "How: one water bucket → eight freshwater.",
+    "pamhc2foodcore:freshmilkitem": "How: coconut (iron-mesh dirt) plus freshwater, or split a milk bucket.",
+    "pamhc2foodcore:saltitem": "How: pot plus water or freshwater. The pot comes back.",
+    "pamhc2foodcore:flouritem": "How: grinder plus wheat (or another flour plant). The grinder comes back.",
+    "pamhc2foodcore:doughitem": "How: mixing bowl, flour, water, salt.",
+    "pamhc2foodcore:stockitem": "How: pot plus a bone (Pad-keepers sell bones) or leftover veg.",
+    "pamhc2foodcore:applepieitem": "How: bakeware, dough, sugar, Pam's apples from the apple tree.",
+    "pamhc2foodcore:fruitpunchitem": "How: juicer plus mixed fruit.",
+    "pamhc2foodcore:grilledcheeseitem": "How: skillet, bread, butter, and cheese — all from freshwater, coconut milk, and flour.",
+    "pamhc2foodextended:chiliitem": "How: pot, arid chili, tomato, onion, bean, spiceleaf, and meat or silken tofu.",
+    "pamhc2foodextended:curryitem": "How: saucepan, rice, coconut, chili, black pepper, curry powder (spiceleaf + mustard + cinnamon).",
+    "pamhc2foodextended:pepperonipizzaitem": "How: bakeware, dough, tomato, cheese, pepperoni (pork or tofu bacon from maple + soy).",
+    "pamhc2foodextended:friedriceitem": "How: skillet, soggy-garden rice, carrot, onion, peas, and an egg — silken tofu counts as egg.",
+    "pamhc2foodextended:greenteaitem": "How: pot, tea leaf, and spiceleaf. Shaded garden drops both tea and spice.",
+    "pamhc2foodextended:avocadotoastitem": "How: iron-mesh avocado sapling, then skillet with toast, salt, garlic, spiceleaf.",
+    "pamhc2foodcore:cookingoilitem": "How: press seeds or olives in JEI. Optional staple.",
+    "pamhc2foodcore:butteritem": "How: pot plus milk (coconut freshwater milk works).",
+    "pamhc2foodcore:mayonaiseitem": "How: eggs (or silken tofu) and oil. Optional.",
+    "pamhc2foodcore:fruitsaladitem": "How: mixing bowl and mixed fruit. Optional.",
+    "pamhc2foodcore:applejuiceitem": "How: juicer and Pam's apples. Optional.",
+    "pamhc2foodcore:toastitem": "How: bakeware leftover bread. Optional.",
+    "pamhc2trees:avocado_sapling": "How: sieve dirt with an iron mesh, then grow the fruit.",
 
     "chococraft:chocobo_saddle": "How: leather and feathers. Tame a wild yellow with gysahl, then saddle it.",
     "chococraft:chocobo_square_ticket": "How: paper, gold ingot, feather. After the March, speak to Ester at /clowder hub while mounted.",
@@ -126,9 +172,9 @@ HOW_NS = {
     "chococraft": "How: find it in the March or craft it from gysahl and feathers. Pad-runners names the step.",
     "pamhc2crops": "How: sieve dirt for a garden (string mesh and up), then break the bush for seeds.",
     "pamhc2trees": "How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit.",
-    "pamhc2foodcore": "How: craft the station from planks and iron, then cook HarvestCraft staples in JEI.",
-    "pamhc2foodextended": "How: gardens and fruit trees supply the ingredients. JEI names the station.",
-    "agricraft": "How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland.",
+    "pamhc2foodcore": "How: copper, andesite, or terracotta stations; coconut milk; tools come back after cooking. JEI names the craft.",
+    "pamhc2foodextended": "How: gardens and fruit trees supply the ingredients. Soy tofu stands in for meat and egg. JEI names the station.",
+    "agricraft": "How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland.",
 }
 
 
@@ -187,16 +233,22 @@ def main() -> None:
 
     added = 0
     already = 0
+    replaced = [0]
 
     def repl(m: re.Match[str]) -> str:
         nonlocal added, already
         qid = m.group(2)
         body = m.group(3)
+        title = titles.get(qid, "this")
+        item = items.get(qid)
+        line = how_line(item, title).replace("\\", "\\\\").replace('"', '\\"')
         if "How:" in body:
+            if item and item in HOW_ITEM:
+                replaced[0] += 1
+                body = re.sub(r'\n\t\t"How:.*?"\s*$', f'\n\t\t"{line}"', body.rstrip(), count=1)
+                return f'{m.group(1)}{body}{m.group(4)}'
             already += 1
             return m.group(0)
-        title = titles.get(qid, "this")
-        line = how_line(items.get(qid), title).replace("\\", "\\\\").replace('"', '\\"')
         added += 1
         body = body.rstrip()
         if not body.endswith(','):
@@ -206,7 +258,7 @@ def main() -> None:
     new = desc_re.sub(repl, text)
     LANG.write_text(new, encoding="utf-8")
     missing = [qid for qid in titles if f"quest.{qid}.quest_desc" not in new]
-    print(f"How lines added: {added}; already had How: {already}; titles without desc: {len(missing)}")
+    print(f"How lines added: {added}; replaced: {replaced[0]}; already had How: {already}; titles without desc: {len(missing)}")
 
 
 if __name__ == "__main__":

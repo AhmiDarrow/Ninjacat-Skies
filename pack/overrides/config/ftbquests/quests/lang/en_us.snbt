@@ -8092,78 +8092,78 @@
 	]
 	quest.4200000000290600.title: "Windy Garden"
 	quest.4200000000290601.quest_desc: [
-		"Not the Farmer's Delight board. Planks and a stick. Prep fruit and veg before they hit a pot.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Not the Farmer's Delight board. Copper, a stick, and a plank. Prep fruit and veg before they hit a pot.",
+		"How: copper, a stick, and a plank. Not the Farmer's Delight board."
 	]
 	quest.4200000000290601.title: "Harvest Board"
 	quest.4200000000290602.quest_desc: [
-		"Soups, stews, and stock. Iron and a stick. Sit it on heat.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Soups, stews, and stock. Copper and a stick. The pot comes back after every craft.",
+		"How: copper and a stick. The pot comes back after every shapeless cook."
 	]
 	quest.4200000000290602.title: "Harvest Pot"
 	quest.4200000000290603.quest_desc: [
-		"Pan meals. Different craft from the Delight skillet; JEI tells them apart.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Pan meals. Copper and sticks. Different craft from the Delight skillet; JEI tells them apart.",
+		"How: copper and sticks. Different from the Delight skillet."
 	]
 	quest.4200000000290603.title: "Harvest Skillet"
 	quest.4200000000290604.quest_desc: [
-		"Sauces and reductions. Keep it next to the pot.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Sauces and reductions. Copper and a stick. Keep it next to the pot.",
+		"How: copper and a stick."
 	]
 	quest.4200000000290604.title: "Saucepan"
 	quest.4200000000290605.quest_desc: [
-		"Pies, breads, and anything that wants an oven shape.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Terracotta ring. Pies, breads, and anything that wants an oven shape.",
+		"How: eight terracotta around an empty centre."
 	]
 	quest.4200000000290605.title: "Bakeware"
 	quest.4200000000290606.quest_desc: [
-		"Batters, doughs, salads. The quiet station.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Planks and a stick. Batters, doughs, salads. The quiet station.",
+		"How: planks and a stick."
 	]
 	quest.4200000000290606.title: "Mixing Bowl"
 	quest.4200000000290607.quest_desc: [
-		"Fruit in, punch out. Pair it with a tree, not a garden.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Terracotta. Fruit in, punch out. Pair it with a tree, not a garden.",
+		"How: terracotta. Four in a T."
 	]
 	quest.4200000000290607.title: "Juicer"
 	quest.4200000000290608.quest_desc: [
-		"Flatten dough. Bakeware is waiting.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Sticks and a log. Flatten dough. Bakeware is waiting.",
+		"How: sticks either side of a log."
 	]
 	quest.4200000000290608.title: "Rolling Pin"
 	quest.4200000000290609.quest_desc: [
-		"Flour, spices, pastes. Wheat becomes a kitchen staple here.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"Andesite pebbles from a flint sieve, then a stick. Flour, spices, pastes.",
+		"How: andesite (flint-sieve dirt or gravel pebbles) and a stick."
 	]
 	quest.4200000000290609.title: "Grinder"
 	quest.420000000029060A.quest_desc: [
-		"A bucket of water and the pot line. Most recipes want this, not a vanilla bucket.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"A water bucket split into eight. Most recipes want this, not a vanilla bucket.",
+		"How: one water bucket → eight freshwater."
 	]
 	quest.420000000029060A.title: "Fresh Water"
 	quest.420000000029060B.quest_desc: [
-		"Milk in a HarvestCraft bottle. Cows, or a bucket split into portions.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"No cows on the pad. Coconut (iron-mesh dirt) plus freshwater, or split a milk bucket later.",
+		"How: coconut (iron-mesh dirt) plus freshwater, or split a milk bucket."
 	]
 	quest.420000000029060B.title: "Fresh Milk"
 	quest.420000000029060C.quest_desc: [
 		"Water in a pot, or a grind. Almost every savoury recipe asks.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: pot plus water or freshwater. The pot comes back."
 	]
 	quest.420000000029060C.title: "Salt"
 	quest.420000000029060D.quest_desc: [
 		"Wheat through the grinder. Dough starts here.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: grinder plus wheat (or another flour plant). The grinder comes back."
 	]
 	quest.420000000029060D.title: "Flour"
 	quest.420000000029060E.quest_desc: [
 		"Flour, salt, and fresh water. Pies and breads share this lump.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: mixing bowl, flour, water, salt."
 	]
 	quest.420000000029060E.title: "Dough"
 	quest.420000000029060F.quest_desc: [
 		"Bones or veg in the pot. Soups want a bottle of this, not a vague broth.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: pot plus a bone (Pad-keepers sell bones) or leftover veg."
 	]
 	quest.420000000029060F.title: "Stock"
 	quest.4200000000290610.quest_desc: [
@@ -8198,42 +8198,42 @@
 	quest.4200000000290615.title: "Pam's Apple"
 	quest.4200000000290616.quest_desc: [
 		"Bakeware, dough, sugar, apples. The first finished HarvestCraft bake.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: bakeware, dough, sugar, Pam's apples from the apple tree."
 	]
 	quest.4200000000290616.title: "Apple Pie (Harvest)"
 	quest.4200000000290617.quest_desc: [
 		"Juicer plus mixed fruit. A pad drink that is not melon juice.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: juicer plus mixed fruit."
 	]
 	quest.4200000000290617.title: "Fruit Punch"
 	quest.4200000000290618.quest_desc: [
 		"Skillet, bread, cheese. Fast lunch while the trees grow.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: skillet, bread, butter, and cheese — all from freshwater, coconut milk, and flour."
 	]
 	quest.4200000000290618.title: "Grilled Cheese"
 	quest.4200000000290619.quest_desc: [
-		"Arid garden peppers, meat, pot. Food Extended starts earning its keep.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"Arid peppers, tomato, onion, bean, spiceleaf, and meat or silken-tofu. Food Extended starts earning its keep.",
+		"How: pot, arid chili, tomato, onion, bean, spiceleaf, and meat or silken tofu."
 	]
 	quest.4200000000290619.title: "Chili Bowl"
 	quest.420000000029061A.quest_desc: [
 		"Spices from the grinder, veg from the gardens, pot work.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"How: saucepan, rice, coconut, chili, black pepper, curry powder (spiceleaf + mustard + cinnamon)."
 	]
 	quest.420000000029061A.title: "Curry Plate"
 	quest.420000000029061B.quest_desc: [
 		"Dough, sauce, meat. Bakeware. A full HarvestCraft meal.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"How: bakeware, dough, tomato, cheese, pepperoni (pork or tofu bacon from maple + soy)."
 	]
 	quest.420000000029061B.title: "Pepperoni Pizza"
 	quest.420000000029061C.quest_desc: [
-		"Soggy-garden rice and a skillet. Different dish from the Delight fried rice.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"Soggy-garden rice, carrot, onion, peas, and an egg — silken tofu stands in until chickens exist.",
+		"How: skillet, soggy-garden rice, carrot, onion, peas, and an egg — silken tofu counts as egg."
 	]
 	quest.420000000029061C.title: "Garden Fried Rice"
 	quest.420000000029061D.quest_desc: [
-		"Leaves and freshwater. The quiet end of the kitchen line.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"Tea leaf and spiceleaf in the pot. Shaded and soggy gardens cover both.",
+		"How: pot, tea leaf, and spiceleaf. Shaded garden drops both tea and spice."
 	]
 	quest.420000000029061D.title: "Green Tea"
 	quest.420000000029061E.quest_desc: [
@@ -8258,22 +8258,22 @@
 	quest.4200000000290621.title: "Peppercorn Tree"
 	quest.4200000000290622.quest_desc: [
 		"Fryer fat. Optional staple.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: press seeds or olives in JEI. Optional staple."
 	]
 	quest.4200000000290622.title: "Cooking Oil"
 	quest.4200000000290623.quest_desc: [
 		"Milk and salt. Optional staple.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: pot plus milk (coconut freshwater milk works)."
 	]
 	quest.4200000000290623.title: "Butter"
 	quest.4200000000290624.quest_desc: [
 		"Eggs and oil. Optional.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: eggs (or silken tofu) and oil. Optional."
 	]
 	quest.4200000000290624.title: "Mayonnaise"
 	quest.4200000000290625.quest_desc: [
 		"Mixing bowl, mixed fruit. Optional.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: mixing bowl and mixed fruit. Optional."
 	]
 	quest.4200000000290625.title: "Fruit Salad"
 	quest.4200000000290626.quest_desc: [
@@ -8287,8 +8287,8 @@
 	]
 	quest.4200000000290627.title: "Bacon Pancakes"
 	quest.4200000000290628.quest_desc: [
-		"Needs an avocado tree. Optional.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"Iron-mesh dirt for an avocado sapling, then skillet, toast, salt, garlic, spiceleaf.",
+		"How: iron-mesh avocado sapling, then skillet with toast, salt, garlic, spiceleaf."
 	]
 	quest.4200000000290628.title: "Avocado Toast"
 	quest.4200000000290629.quest_desc: [
@@ -8298,12 +8298,12 @@
 	quest.4200000000290629.title: "Onion Burger"
 	quest.420000000029062A.quest_desc: [
 		"Juicer, apples. Optional.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: juicer and Pam's apples. Optional."
 	]
 	quest.420000000029062A.title: "Apple Juice"
 	quest.420000000029062B.quest_desc: [
 		"Bakeware leftover bread. Optional.",
-		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+		"How: bakeware leftover bread. Optional."
 	]
 	quest.420000000029062B.title: "Toast Slice"
 	quest.42000000002A062C.quest_desc: [
@@ -8313,88 +8313,88 @@
 	]
 	quest.42000000002A062C.title: "Wooden Crop Sticks"
 	quest.42000000002A062D.quest_desc: [
-		"A book that remembers every plant you analyze. Keep it in the analyzer.",
-		"How: book and crop sticks. It records every plant you analyze."
+		"A writable book (book, ink sac, feather) plus wheat seeds. Keep it in the analyzer.",
+		"How: writable book (book, ink sac, feather) plus wheat seeds. Ink is the Soil chapter."
 	]
 	quest.42000000002A062D.title: "Crop Journal"
 	quest.42000000002A062E.quest_desc: [
-		"Look at a crop to read growth, gain, strength, and the rest of the genome without picking it.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"Glass pane and sticks. Look at a crop to read growth, gain, and strength without picking it.",
+		"How: glass pane between sticks, then a stick handle. Look at a planted crop."
 	]
 	quest.42000000002A062E.title: "Magnifying Glass"
 	quest.42000000002A062F.quest_desc: [
-		"Put a seed in. Stats, species, and a page in the journal. This is how breeding becomes visible.",
-		"How: glass, wood, and a journal. Put a seed in to read stats."
+		"Glass, stone slab, planks, sticks. Put a seed in with the journal. Breeding becomes visible.",
+		"How: glass panes, stone slab, planks, and sticks. Seat the journal, then a seed."
 	]
 	quest.42000000002A062F.title: "Seed Analyzer"
 	quest.42000000002A0630.quest_desc: [
 		"Weeds are off on this pack, but the rake still clears a stick. Carry one anyway.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden fence over a stick. Weeds are off; it still clears a stick."
 	]
 	quest.42000000002A0630.title: "Wooden Rake"
 	quest.42000000002A0631.quest_desc: [
 		"Pick a plant up and put it down with its stats intact. Move a 10-10 without breaking it.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: two iron ingots and a stick. Pick a plant up with its stats intact."
 	]
 	quest.42000000002A0631.title: "Trowel"
 	quest.42000000002A0632.quest_desc: [
 		"Clip a mature plant for its clipping product and reset it. Flowers and some HarvestCraft crops.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: shears, iron, and a stick. Clip a mature plant and reset it."
 	]
 	quest.42000000002A0632.title: "Clipper"
 	quest.42000000002A0633.quest_desc: [
 		"Carry a breeding line. Fill it from the analyzer, empty it onto sticks.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: leather and string. Fill from the analyzer."
 	]
 	quest.42000000002A0633.title: "Seed Bag"
 	quest.42000000002A0634.quest_desc: [
 		"Sturdier sticks. Same planting rules, less fuss when you bump them.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: iron rods in the same square as wood. JEI names the craft."
 	]
 	quest.42000000002A0634.title: "Iron Crop Sticks"
 	quest.42000000002A0635.quest_desc: [
 		"The better rake. Still a habit, even with weeds gone.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: iron bars over a stick."
 	]
 	quest.42000000002A0635.title: "Iron Rake"
 	quest.42000000002A0636.quest_desc: [
 		"Hold water for the channels. A pad farm that does not carry buckets every morning.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: planks. Hold water for the channels."
 	]
 	quest.42000000002A0636.title: "Irrigation Tank"
 	quest.42000000002A0637.quest_desc: [
 		"Run water from the tank along the row. Crops drink from the channel, not from you.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: shapeless from a tank — one tank becomes eight channels."
 	]
 	quest.42000000002A0637.title: "Irrigation Channel"
 	quest.42000000002A0638.quest_desc: [
 		"Stop and start a line without breaking the tank.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: craft onto a channel. Stop and start a line without breaking the tank."
 	]
 	quest.42000000002A0638.title: "Channel Valve"
 	quest.42000000002A0639.quest_desc: [
 		"Rain in a square. Sit it on a channel over the sticks.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: sit it on a channel over the sticks. JEI names the craft."
 	]
 	quest.42000000002A0639.title: "Sprinkler"
 	quest.42000000002A063A.quest_desc: [
 		"Cover a channel so you can walk the row.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: cover a channel so you can walk the row."
 	]
 	quest.42000000002A063A.title: "Channel Grate"
 	quest.42000000002A063B.quest_desc: [
 		"Read the room. Light, humidity, the reason a crop stalled.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: craft, then place in the room to read light and humidity."
 	]
 	quest.42000000002A063B.title: "Greenhouse Monitor"
 	quest.42000000002A063C.quest_desc: [
 		"Late sticks. Fireproof, stubborn, for the plants that ask too much of wood. Two neighbouring mature crops can cross-breed.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: obsidian in the stick square. Two neighbouring mature crops can cross-breed."
 	]
 	quest.42000000002A063C.title: "Obsidian Crop Sticks"
 	quest.42000000002A063D.quest_desc: [
 		"A channel you can walk. Optional.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: a channel you can walk. Optional."
 	]
 	quest.42000000002A063D.title: "Hollow Channel"
 	quest.42000000002A063E.quest_desc: [

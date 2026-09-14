@@ -39,6 +39,7 @@ ServerEvents.recipes(event => {
 
   const saplings = [
     'pamhc2trees:apple_sapling',
+    'pamhc2trees:avocado_sapling',
     'pamhc2trees:cinnamon_sapling',
     'pamhc2trees:coconut_sapling',
     'pamhc2trees:lemon_sapling',
@@ -57,4 +58,28 @@ ServerEvents.recipes(event => {
       both('minecraft:dirt', row[0], sapling, row[1])
     })
   })
+
+  // No cows on the pad. Coconut (iron-mesh dirt) plus freshwater is kitchen milk.
+  // Tools already return themselves (ItemPamTool remainder); do not add a second remainder here.
+  event.shapeless('4x pamhc2foodcore:freshmilkitem', [
+    'pamhc2trees:coconutitem',
+    'pamhc2foodcore:freshwateritem',
+  ]).id('ninjacatskies:harvestcraft/coconut_freshmilk')
+  event.shapeless('minecraft:milk_bucket', [
+    'minecraft:bucket',
+    'pamhc2foodcore:freshmilkitem',
+    'pamhc2foodcore:freshmilkitem',
+    'pamhc2foodcore:freshmilkitem',
+    'pamhc2foodcore:freshmilkitem',
+    'pamhc2foodcore:freshmilkitem',
+    'pamhc2foodcore:freshmilkitem',
+    'pamhc2foodcore:freshmilkitem',
+    'pamhc2foodcore:freshmilkitem',
+  ]).id('ninjacatskies:harvestcraft/freshmilk_bucket')
+})
+
+ServerEvents.tags('item', event => {
+  // Fried rice and mayo ask for eggs. Silken tofu is the pad stand-in until chickens exist.
+  event.add('c:egg', 'pamhc2foodextended:silkentofuitem')
+  event.add('c:egg/egg', 'pamhc2foodextended:silkentofuitem')
 })
