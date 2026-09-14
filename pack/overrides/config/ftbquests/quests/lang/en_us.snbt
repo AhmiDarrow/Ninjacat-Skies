@@ -7283,12 +7283,12 @@
 	]
 	quest.4200000000228017.title: "First Rite"
 	quest.4200000000228018.quest_desc: [
-		"Two Spiritweave, a Spirit Shard and the reagent of the species. Use it on an adult Lantern Fox, Mossback or Dawn Stag: a sixty-percent chance to bond, and the charm is kept on failure.",
+		"Two Spiritweave, a Spirit Shard and the reagent of the species. Use it on an adult familiar. Animals: sixty percent, charm kept on failure. Remnants want Voice with their tribe, forty percent, charm spent on failure.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228018.title: "A charm for a wild thing"
 	quest.4200000000228019.quest_desc: [
-		"A bonded animal follows, teleports after you, never despawns, cannot be hurt by you and yields double when brushed. The Lantern Fox lights the way and marks ore; the Mossback carries a nine-slot saddlebag; the Dawn Stag is ridden without a saddle. Sneak-use toggles stay.",
+		"A bonded familiar follows, teleports after you, never despawns, cannot be hurt by you and yields double when brushed. Fox, Mossback and Stag start you off. Remnants need Voice. One fighter and two helpers may follow; sitters do not count.",
 		"How: make or find A friend in the dark. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.4200000000228019.title: "A friend in the dark"
