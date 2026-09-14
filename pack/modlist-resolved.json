@@ -888,5 +888,65 @@
     "filename": "tribalpower-3.4.1.jar",
     "releaseType": 1,
     "sha1": "11806d4c589e40028135fe6a33027954fa193c76"
+  },
+  {
+    "key": "Resourceful Config",
+    "name": "Resourceful Config",
+    "slug": "resourceful-config",
+    "projectId": 714059,
+    "fileId": 6467772,
+    "filename": "resourcefulconfig-neoforge-1.21-3.0.11.jar",
+    "releaseType": 1,
+    "sha1": "6bf2b6ea9c071c00a2abcdc552667fb6f7d21031"
+  },
+  {
+    "key": "Pam's HarvestCraft 2 - Food Core",
+    "name": "Pam's HarvestCraft 2 - Food Core",
+    "slug": "pams-harvestcraft-2-food-core",
+    "projectId": 372534,
+    "fileId": 6919485,
+    "filename": "pamhc2foodcore-NEOFORGE-1.21.1-1.0.4.jar",
+    "releaseType": 1,
+    "sha1": "dc2b5671914879d4731034668028f4d8cbcd775c"
+  },
+  {
+    "key": "Pam's HarvestCraft 2 - Crops",
+    "name": "Pam's HarvestCraft 2 - Crops",
+    "slug": "pams-harvestcraft-2-crops",
+    "projectId": 361385,
+    "fileId": 8064883,
+    "filename": "pamhc2crops-NEOFORGE-1.21.1-1.0.9.jar",
+    "releaseType": 1,
+    "sha1": "2a735b24c61a0007fe98de6cc2dc5d5fff4915a2"
+  },
+  {
+    "key": "Pam's HarvestCraft 2 - Trees",
+    "name": "Pam's HarvestCraft 2 - Trees",
+    "slug": "pams-harvestcraft-2-trees",
+    "projectId": 365460,
+    "fileId": 7847533,
+    "filename": "pamhc2trees-NEOFORGE-1.21.1-1.0.9.jar",
+    "releaseType": 1,
+    "sha1": "85d54e1d4d32f669d3f183945dc813360263ca91"
+  },
+  {
+    "key": "Pam's HarvestCraft 2 - Food Extended",
+    "name": "Pam's HarvestCraft 2 - Food Extended",
+    "slug": "pams-harvestcraft-2-food-extended",
+    "projectId": 402231,
+    "fileId": 6221521,
+    "filename": "pamhc2foodextended-NEOFORGE-1.21.1-1.0.0.jar",
+    "releaseType": 1,
+    "sha1": "0cf7f668fdedef93446f33215484913991185102"
+  },
+  {
+    "key": "AgriCraft ReReloaded",
+    "name": "AgriCraft ReReloaded",
+    "slug": "agricraft-rereloaded",
+    "projectId": 1616052,
+    "fileId": 8612424,
+    "filename": "AgriCraft-neoforge-1.21.1-4.0.17.jar",
+    "releaseType": 1,
+    "sha1": "9a1aea2262ff6f13af19f9540af621e689e0b99f"
   }
 ]
