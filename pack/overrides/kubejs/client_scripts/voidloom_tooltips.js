@@ -19,6 +19,11 @@ ItemEvents.modifyTooltips(event => {
   ])
   event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. /clowder hub Kin stalls sell things for Thread.'))
   event.add('minecraft:rotten_flesh', Text.gray('Smelt or campfire it for leather. Zombies on the pad are the cow.'))
+  if (Item.exists('pamhc2foodcore:freshmilkitem')) {
+    event.add('pamhc2foodcore:freshmilkitem', Text.gray('Coconut plus freshwater, or split a milk bucket. There are no cows on the pad.'))
+    event.add('pamhc2trees:coconutitem', Text.gray('Iron-mesh dirt grows the palm. Craft with freshwater for kitchen milk.'))
+    event.add('pamhc2foodextended:silkentofuitem', Text.gray('Soybean in a saucepan. Stands in for egg and, as firm tofu, for meat.'))
+  }
   event.add('minecraft:leather', Text.gray('Smelt rotten flesh, or sieve dirt with flint mesh and up. Pad-keepers in Clowder Hall sell a little.'))
   event.add('voidloom:void_yarn', [
     Text.gray('Early: 4 string → 2 yarn. Later: string + pearl in the Tension Barrel → 2 yarn.'),
