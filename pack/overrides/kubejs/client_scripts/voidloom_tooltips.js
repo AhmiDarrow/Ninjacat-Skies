@@ -63,9 +63,9 @@ ItemEvents.modifyTooltips(event => {
     event.add('tribalpower:loom_thread', Text.gray('Ancestor Halls, The Unsung, or a Loom-stitcher at Friend. The sixth voice starts here.'))
     event.add('tribalpower:silent_drum', Text.gray('Four strikes, a breath apart. Sneak against the Beat; answer the Silence with the same rhythm.'))
     event.add(/tribalpower:rite_(green|rain|sky|dawn|still|ley|spring).*/, Text.gray('Sneak-use on a Ritual Brazier with the matching seal seated. A tablet wants a Rite Circle. Pulse comes from the lattice around it.'))
-    event.add('tribalpower:bonding_charm', Text.gray('Adult Lantern Fox, Mossback or Dawn Stag. Kept when the bond fails.'))
+    event.add('tribalpower:bonding_charm', Text.gray('Adult familiar. Animals keep a failed charm; remnants spend it and want Voice with their tribe. One fighter and two helpers may follow.'))
     event.add('tribalpower:camp_charter', Text.gray('Use on a Clowder mate to share one vault, one anchor budget, one standing.'))
-    event.add('tribalpower:ley_lens', Text.gray('Hold to see the ley. Sneak-use a Ley Collector for its numbers.'))
+    event.add('tribalpower:ley_lens', Text.gray('Hold to see the ley. Sneak-use a Ley Collector, or a familiar, for its numbers.'))
   }
   // Tribal Power 3.2 — Listening Pit, gates, six voices. Quests are the rest of Tribal Weave.
   if (Item.exists('tribalpower:stone_font')) {

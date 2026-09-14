@@ -81,6 +81,6 @@ JEI recipe/uses keys remain R/U while hovering items in an inventory. Those are 
 - **Elder**: right-click to trade (two offers per rank). At Voice standing the Elder hands over the tribe's **Mark**.
 - **Silent Drum**: right-click four times, a breath apart, to wake The Unsung; the same rhythm resyncs it during its Silence.
 - **Rite Tablet**: sneak-right-click a Ritual Brazier that has the matching seal seated.
-- **Bonding Charm**: right-click an adult Lantern Fox, Mossback or Dawn Stag. Sneak-right-click a bonded animal to toggle stay/follow; empty-hand sneak-right-click a Mossback opens its saddlebag; right-click a bonded Dawn Stag to ride.
+- **Bonding Charm**: right-click an adult familiar. Animals keep a failed charm; remnants spend it and need Voice with their tribe. Sneak-right-click toggles stay/follow (one fighter and two helpers may follow). Empty-hand sneak-right-click a Mossback opens its saddlebag, or an Echo Weaver dumps its pouch. Right-click a bonded Dawn Stag to ride.
 - **Camp Charter**: right-click a player to invite; right-click the air to see your camp.
 - `/tribalpower standing [player]` — the nine standings. `/tribalpower camp create|invite|join|leave|kick|info|rename`.
