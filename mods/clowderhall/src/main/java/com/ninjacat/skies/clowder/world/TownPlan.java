@@ -10,6 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.entity.SignText;
 import net.minecraft.world.level.block.state.BlockState;
@@ -57,15 +58,23 @@ public final class TownPlan {
                 be.setText(text,true); be.setText(text,false); be.setWaxed(true); be.setChanged();
             }
         }
+        var seated = new ArrayList<String>();
+        for (Mob mob : level.getEntitiesOfClass(Mob.class, new AABB(-100, 40, -110, 100, 100, 110))) {
+            if (mob.hasCustomName()) seated.add(mob.getCustomName().getString());
+        }
         for (var entry : plan.getAsJsonArray("residents")) {
             var resident=entry.getAsJsonObject(); var xyz=resident.getAsJsonArray("pos");
             var type=resident.get("type").getAsString().equals("cat")?EntityType.CAT:EntityType.VILLAGER;
+            String name = resident.get("name").getAsString();
+            if (seated.contains(name)) continue;
             var entity=type.create(level);
             if (entity != null) {
                 Mob mob = entity;
-                mob.moveTo(xyz.get(0).getAsDouble(),xyz.get(1).getAsDouble(),xyz.get(2).getAsDouble(),180,0);
-                mob.setCustomName(Component.literal(resident.get("name").getAsString()));
-                mob.setPersistenceRequired(); level.addFreshEntity(mob);
+                mob.moveTo(xyz.get(0).getAsDouble(), xyz.get(1).getAsDouble(), xyz.get(2).getAsDouble(), 180, 0);
+                mob.setCustomName(Component.literal(name));
+                mob.setCustomNameVisible(true);
+                mob.setNoAi(true);
+                mob.setPersistenceRequired(); seated.add(name); level.addFreshEntity(mob);
             }
         }
     }
