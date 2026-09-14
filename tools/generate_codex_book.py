@@ -714,13 +714,8 @@ print("Whisker Codex book written to", BOOK.relative_to(ROOT))
 # Pack kubejs copy wins at runtime. Keep The Work (pack-only) and overlay generated cats/entries.
 import shutil
 PACK_BOOK.mkdir(parents=True, exist_ok=True)
+# Pack overlay wins at runtime. Keep Core name/tooltip/description so Start here stays first.
 pack_book = json.loads((BOOK / "book.json").read_text(encoding="utf-8"))
-pack_book["name"] = "Whisker Codex"
-pack_book["tooltip"] = "The campaign — story and what to do."
-pack_book["description"] = (
-    "The Loom was cut. This book is the campaign: what the sky used to be, how it came apart, "
-    "what you do next, who kept the nine Strands."
-)
 w(PACK_BOOK / "book.json", pack_book)
 for cat_file in (BOOK / "categories").glob("*.json"):
     shutil.copy2(cat_file, PACK_BOOK / "categories" / cat_file.name)
@@ -730,6 +725,8 @@ if work.exists():
     obj["background"] = ATLAS
     obj["background_width"] = 1536
     obj["background_height"] = 1024
+    obj["sort_number"] = 6
+    obj["description"] = "The campaign story: what the sky used to be, and what you do next."
     obj.pop("background_parallax_layers", None)
     w(work, obj)
 for src_dir in (BOOK / "entries").iterdir():

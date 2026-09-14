@@ -26,6 +26,19 @@ class CodexBookTests(unittest.TestCase):
         empty={'type':'modonomicon:text','text':'','anchor':'empty'}
         self.assertEqual([empty],paginate_pages([empty]))
 
+    def test_pack_categories_have_unique_sort_and_start_here_leads(self):
+        sorts = {}
+        for path in (PACK / 'categories').glob('*.json'):
+            sorts[path.stem] = json.loads(path.read_text(encoding='utf-8'))['sort_number']
+        self.assertEqual(sorts.get('first_steps'), 0)
+        self.assertEqual(sorts.get('the_work'), 6)
+        self.assertEqual(len(sorts), len(set(sorts.values())), sorts)
+        overlay = json.loads((PACK / 'book.json').read_text(encoding='utf-8'))
+        core = json.loads((BOOK / 'book.json').read_text(encoding='utf-8'))
+        self.assertEqual(overlay['name'], core['name'])
+        self.assertEqual(overlay['tooltip'], core['tooltip'])
+        self.assertEqual(overlay['description'], core['description'])
+
     def test_beginner_lessons_and_navigation(self):
         entries={f'ninjacatskies:{p.parent.name}/{p.stem}' for p in (BOOK/'entries').glob('*/*.json')}
         paths=list((BOOK/'entries/first_steps').glob('*.json'))
