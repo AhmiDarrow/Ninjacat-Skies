@@ -51,6 +51,9 @@ class CodexBookTests(unittest.TestCase):
         self.assertNotIn('story and what to do', tips)
         self.assertNotIn('story and what to do', controls)
         self.assertIn('Start here', controls)
+        welcome = (ROOT/'pack/overrides/config/fancymenu/customization/ninjacat_skies_welcome_layout.txt').read_text(encoding='utf-8')
+        self.assertNotIn('Open FTB Quests', welcome)
+        self.assertIn('Start here', welcome)
 
     def test_beginner_lessons_and_navigation(self):
         entries={f'ninjacatskies:{p.parent.name}/{p.stem}' for p in (BOOK/'entries').glob('*/*.json')}

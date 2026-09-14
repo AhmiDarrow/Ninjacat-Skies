@@ -71,9 +71,9 @@ public class WhiskerCodexItem extends Item {
         player.sendSystemMessage(NinjacatText.teal("The Codex thins to a point."));
         player.sendSystemMessage(NinjacatText.gold(NUDGES[next.ordinal()]));
         if (seated > 0) {
-            player.sendSystemMessage(NinjacatText.teal(seated + " of nine tensioned. Quests in the book; tokens to the Post."));
+            player.sendSystemMessage(NinjacatText.teal(seated + " of nine tensioned. Grave (`): remaining quests. Tokens to the Post."));
         } else {
-            player.sendSystemMessage(NinjacatText.teal("Open the quest book for the work. Raise a Tension Post when the first token comes."));
+            player.sendSystemMessage(NinjacatText.teal("Open Start here. Grave (`): quests. Raise a Tension Post when the first token comes."));
         }
     }
 
