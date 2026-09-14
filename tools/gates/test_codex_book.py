@@ -54,6 +54,13 @@ class CodexBookTests(unittest.TestCase):
         welcome = (ROOT/'pack/overrides/config/fancymenu/customization/ninjacat_skies_welcome_layout.txt').read_text(encoding='utf-8')
         self.assertNotIn('Open FTB Quests', welcome)
         self.assertIn('Start here', welcome)
+        import gzip
+        islands = ROOT/'pack/overrides/config/skyblockbuilder/templates/islands'
+        for path in islands.glob('*.nbt'):
+            text = gzip.decompress(path.read_bytes()).decode('latin1')
+            self.assertNotIn('Open FTB Quests', text, path.name)
+            self.assertNotIn('press C', text, path.name)
+            self.assertIn('Start here', text, path.name)
 
     def test_beginner_lessons_and_navigation(self):
         entries={f'ninjacatskies:{p.parent.name}/{p.stem}' for p in (BOOK/'entries').glob('*/*.json')}

@@ -410,7 +410,7 @@ public final class ModDimensions {
                 Filterable.passThrough(Component.literal(
                         "PLAY TOGETHER\n\n" +
                                 "One Clowder shares one pad, one\n" +
-                                "quest book and one life pool.\n\n" +
+                                "quest list and one life pool.\n\n" +
                                 "Invite: hold the Charter and\n" +
                                 "right-click a friend, or\n" +
                                 "/clowder invite <name>.\n\n" +
