@@ -13,10 +13,6 @@ ItemEvents.modifyTooltips(event => {
     Text.gray('Rare iron-mesh catch. Right-click a Tension Post with it to spin a Braid Cord.'),
     Text.darkGray('Needs two of Clock, Swarm, or Spark seated.')
   ])
-  event.add('ninjacatskies:whisker_codex', [
-    Text.gray('Right-click: the campaign book — story and what to do.'),
-    Text.darkGray('Grave (`): the assignment list and rewards. Same campaign, not a second mode.')
-  ])
   event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. /clowder hub Kin stalls sell things for Thread.'))
   event.add('minecraft:rotten_flesh', Text.gray('Smelt or campfire it for leather. Zombies on the pad are the cow.'))
   if (Item.exists('pamhc2foodcore:freshmilkitem')) {

@@ -162,7 +162,7 @@ public class TensionPostBlock extends BaseEntityBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (level.hasNeighborSignal(pos)) {
-            if (!level.isClientSide) player.displayClientMessage(net.minecraft.network.chat.Component.literal("The Post is locked by redstone."), true);
+            if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.ninjacatskies.post_locked"), true);
             return ItemInteractionResult.CONSUME;
         }
         if (stack.isEmpty()) {
@@ -234,7 +234,10 @@ public class TensionPostBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-        if (level.hasNeighborSignal(pos)) return InteractionResult.CONSUME;
+        if (level.hasNeighborSignal(pos)) {
+            if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.ninjacatskies.post_locked"), true);
+            return InteractionResult.CONSUME;
+        }
         if (level.isClientSide || !(player instanceof ServerPlayer sp)) {
             return InteractionResult.SUCCESS;
         }
