@@ -11,7 +11,7 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Where the fallen came to rest",
+      "title": "Where the fallen ...",
       "text": "The March was always a road. After the Cut it became a harbour for whatever could still walk. Frayed thread washed up there the way wreckage finds a quiet bay. Camps. Halls. Drums that never learned how to quit. The March is a grave and a harbour at once. Treat it like both."
     },
     {
@@ -22,7 +22,12 @@
     {
       "type": "modonomicon:text",
       "title": "Where tension pools",
-      "text": "In the crystal fields the remaining pull gathers: March Crystal, the Spire, the Loom-stitchers' waystation. Tension that had nowhere to seat ran downhill into stone that would hold it. That is why Reweave wants a March stone. You are not fetching a trophy. You are bringing pooled tension home to a Post that can keep it."
+      "text": "In the crystal fields the remaining pull gathers: March Crystal, the Spire, the Loom-stitchers' waystation.\\\nTension that had nowhere to seat ran downhill into stone that would hold it.\\\nThat is why Reweave wants a March stone.\\\nYou are not fetching a trophy."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "You are bringing pooled tension home to a Post that can keep it."
     }
   ],
   "parents": [

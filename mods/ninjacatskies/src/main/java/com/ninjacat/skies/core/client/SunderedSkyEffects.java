@@ -11,7 +11,7 @@ import org.joml.Matrix4f;
 
 public final class SunderedSkyEffects extends DimensionSpecialEffects {
     public SunderedSkyEffects() {
-        super(192, true, SkyType.NORMAL, false, false);
+        super(Float.NaN, true, SkyType.NORMAL, false, false);
     }
 
     public static void register(RegisterDimensionSpecialEffectsEvent event) {

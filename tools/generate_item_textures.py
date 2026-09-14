@@ -6,6 +6,7 @@ Palette from docs/STYLEGUIDE.md. Patterns are explicit pixel maps — not genera
 from __future__ import annotations
 
 from pathlib import Path
+import json
 
 try:
     from PIL import Image
@@ -35,6 +36,8 @@ P = {
 }
 
 ROOT = Path(__file__).resolve().parents[1]
+REVIEWED_SOURCE = ROOT / "art/reviewed-pixel-items.json"
+REVIEWED = json.loads(REVIEWED_SOURCE.read_text()) if REVIEWED_SOURCE.exists() else None
 
 
 def save(path: Path, rows: list[str]) -> None:
@@ -91,6 +94,9 @@ def mod_folder(modid: str) -> str:
 
 def tex_item(modid: str, name: str, rows: list[str]) -> None:
     path = ROOT / "mods" / mod_folder(modid) / "src/main/resources/assets" / modid / "textures/item" / f"{name}.png"
+    # The reviewed maps are authoritative; do not restore superseded artwork.
+    if REVIEWED and path.parent == ROOT / REVIEWED['destination'] and name in REVIEWED['sprites']:
+        return
     save(path, rows)
     item_model(modid, name)
 

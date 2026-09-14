@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Build a material supply",
+  "description": "Practical steps and checks.",
+  "icon": "voidloom:loomframe",
+  "x": 8,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Goal and sequence",
+      "text": "**Goal:** turn basic resources into materials for the next chapter.\\\n1\\. Unravel Frayed Thread into string when you need it. Keep some Thread for trading.\\\n2\\. Follow recipes for Void Yarn, a Binding Knot and a Loomframe.\\\n3\\. Make a Tension Barrel and keep water nearby."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "4\\. Follow Recover for clay, porcelain and the route to handling lava."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Test small batches",
+      "text": "Read the Loomframe and barrel recipes before adding items. Start with one batch and check the output. Keep the input and result in separate storage until you know the process."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Then work towards sieving and better meshes. An iron mesh opens the route to Strand Filament. Follow the active quests and recipes for the exact substrate and mesh combination.\\\nThe next model is a workspace example; adjacent placement alone does not automate these stations."
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "ninjacatskies:codex/material_workshop",
+      "multiblock_name": "Placement example",
+      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "show_visualize_button": true
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/first_token",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

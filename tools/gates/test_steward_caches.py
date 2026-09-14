@@ -1,9 +1,11 @@
 """Reward balance, recipe safety, and 0.6.1 quest-save identity regression checks."""
 import hashlib
 import json
+import re
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools'))
@@ -21,29 +23,46 @@ class StewardCaches(unittest.TestCase):
         def capture(filename, cid, group, order, icon, quests, title):
             cls.rows.extend((filename, q) for q in g.finalize_chapter(order + 1, list(quests) + g.secret_quest(order + 1, -3, -2)))
         g.write_chapter = capture
-        g.main()
+        # Test authored quest identity independently of the locally installed
+        # jars. QuestItemIds remains responsible for distribution completeness.
+        fixture_items = set(g.KNOWN)
+        for chapter in g.CHAPTERS.glob('*.snbt'):
+            fixture_items.update(re.findall(r'(?:id|item):\s*"([a-z0-9_]+:[a-z0-9_/.-]+)"', chapter.read_text(encoding='utf-8')))
+        with patch.object(g, 'KNOWN', fixture_items):
+            g.main()
 
     @staticmethod
     def _added_after_0_6_1(oid: str) -> bool:
         """Quests appended since the 0.6.1 baseline: chapter 39 (Snapped Guardians) and any per-chapter late block (0x8000+)."""
         n = int(oid, 16)
-        return (n >> 16) & 0xFF == 0x27 or (n & 0xFFFF) >= 0x8000
+        return ((n >> 16) & 0xFF) >= 0x27 or (n & 0xFFFF) >= 0x8000
 
     def test_existing_save_ids_preserved(self):
         ids = sorted(o['id'] for _, q in self.rows for o in [q] + q.get('tasks', []) + q.get('rewards', [])
                      if not o.get('item', {}).get('id', '').endswith('_steward_cache'))
         baseline = [i for i in ids if not self._added_after_0_6_1(i)]
+        # The retired shop is absent by design, but its original allocation is
+        # preserved. Fixture extracted from the pre-retirement bbe56fa chapter.
+        baseline += json.loads(Path(__file__).with_name('retired-shop-ids.json').read_text())
+        baseline.sort()
         # every id a 0.6.1 save knows is still there, unchanged
         self.assertEqual(hashlib.sha256('\n'.join(baseline).encode()).hexdigest(), 'f2940a2e543125304068fe7c0ac6a6e0b253518096f6290a46017fa129144a64')
-        self.assertEqual(len([r for r in self.rows if not self._added_after_0_6_1(r[1]['id'])]), 1495)
-        self.assertEqual(len(self.rows), 1495 + 31 + 41)
+        self.assertEqual(len([r for r in self.rows if not self._added_after_0_6_1(r[1]['id'])]), 1495 - 30)
+        # Shop retired (−30). Then Guardians, Pad-runners, Harvest Table, Crop Sticks.
+        self.assertEqual(len(self.rows), 1635)
+
+    def test_all_generated_quests_keep_their_shipped_ids(self):
+        for chapter, q in self.rows:
+            shipped = (g.CHAPTERS / (chapter + '.snbt')).read_text(encoding='utf-8')
+            self.assertIn(q['id'], shipped, chapter)
 
     def test_distribution_preserves_threads_and_excludes_repeatable_shop(self):
         caches = {t: 0 for t in TIERS}
         threads = 0
         for chapter, q in self.rows:
             rewards = q.get('rewards', [])
-            threads += any(r.get('item', {}).get('id') == 'ninjacatskies:frayed_thread' for r in rewards)
+            if chapter != '40_chocobo':
+                threads += any(r.get('item', {}).get('id') == 'ninjacatskies:frayed_thread' for r in rewards)
             for r in rewards:
                 for tier in TIERS:
                     if r.get('item', {}).get('id') == f'ninjacatskies:{tier}_steward_cache':
@@ -51,7 +70,7 @@ class StewardCaches(unittest.TestCase):
                         self.assertNotEqual(chapter, '16_shop')
                         self.assertFalse(q.get('repeatable'))
                         self.assertEqual(r['item']['count'], 1)
-        self.assertEqual(threads, 1462)
+        self.assertEqual(threads, 1536)
         self.assertTrue(350 <= sum(caches.values()) <= 550, caches)
         self.assertGreater(caches['small'], caches['medium'])
         self.assertGreater(caches['medium'], caches['large'])

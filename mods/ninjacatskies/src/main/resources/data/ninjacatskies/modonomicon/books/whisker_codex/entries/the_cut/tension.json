@@ -21,12 +21,17 @@
     {
       "type": "modonomicon:text",
       "title": "What Tension does",
-      "text": "Seated Strands are **Loom Tension**. It is not a bar and it does not nag. It changes the pad.\n\nNear the Post: the pad mends you (Soil). It feeds you a little (Sprout). Fall damage stops within sight of it (Claw). Hands quicken (five Strands). Luck (Sigil). And the horizon warms, one Strand at a time."
+      "text": "Seated Strands are **Loom Tension**. It is not a bar and it does not nag. It changes the pad."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Near the Post: the pad mends you (Soil). It feeds you a little (Sprout). Fall damage stops within sight of it (Claw). Hands quicken (five Strands). Luck (Sigil). And the horizon warms, one Strand at a time."
     },
     {
       "type": "modonomicon:text",
       "title": "Spun at the Post",
-      "text": "Two things are made at the Post, not the bench.\n\n**Braid Cord**: right-click with a Strand Filament once two of Clock, Swarm, or Spark are seated.\n\n**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave."
+      "text": "Two things are made at the Post, not the bench.\\\n**Braid Cord**: right-click with a Strand Filament once two of Clock, Swarm, or Spark are seated.\\\n**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave."
     }
   ],
   "parents": [

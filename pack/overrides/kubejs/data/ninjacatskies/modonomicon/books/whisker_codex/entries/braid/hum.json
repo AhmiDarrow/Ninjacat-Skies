@@ -12,7 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Hum",
-      "text": "**Spark.** Strike a Drumheart before you touch a wire. Spirit Pulse is the power fantasy here; Powah and Mekanism are bridges you cross later, if you want.\n\nBone Chime, Spirit Shard, Copper Resonator, Drumheart. Then listen."
+      "text": "**Spark.** Strike a Drumheart before you touch a wire. Spirit Pulse is the power fantasy here; Powah and Mekanism are bridges you cross later, if you want.\\\nBone Chime, Spirit Shard, Copper Resonator, Drumheart. Then listen."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Before you move on",
+      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
     }
   ],
   "parents": [

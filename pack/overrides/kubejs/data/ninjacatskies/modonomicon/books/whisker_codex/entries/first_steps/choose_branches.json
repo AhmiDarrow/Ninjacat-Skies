@@ -1,0 +1,40 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Choose two middle branches",
+  "description": "Practical steps and checks.",
+  "icon": "ninjacatskies:braid_cord",
+  "x": 4,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Three routes afte...",
+      "text": "After the Claw stage, you can work on three branches:\\\n**Pattern / Clock:** mechanical processing.\\\n**Colony / Swarm:** bees and their production chains.\\\n**Hum / Spark:** living power and workshops."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Complete and seat **any two** of these three Strands to unlock Braid Cord. A team can divide the work. You will still need all nine Strands for the final reweave."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Make Braid Cord",
+      "text": "1\\. Check that two of Clock, Swarm and Spark are seated at your Post. Merely holding their tokens is not enough.\\\n2\\. Hold a **Strand Filament**.\\\n3\\. Right-click the Post to receive **Braid Cord**."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Do not put tokens in a crafting grid. They record progress. If the Post refuses, read its message and check which Strands are seated.\\\nNext: follow Bind and the Sigil quests."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/automatic_power",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

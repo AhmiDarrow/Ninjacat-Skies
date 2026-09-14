@@ -12,17 +12,32 @@
     {
       "type": "modonomicon:text",
       "title": "Named continents",
-      "text": "The old maps did not say *island*. They named continents the way you name a house: by who kept the hearth, by which river had manners, by which city hung over which Strand-knot. A pad that had forgotten it was a pad got a name. A name was a promise that the inspection had gone well for long enough to stop calling it a pad."
+      "text": "The old maps did not say *island*.\\\nThey named continents the way you name a house: by who kept the hearth, by which river had manners, by which city hung over which Strand-knot.\\\nA pad that had forgotten it was a pad got a name."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "A name was a promise that the inspection had gone well for long enough to stop calling it a pad."
     },
     {
       "type": "modonomicon:text",
       "title": "Cities that hung",
-      "text": "Markets sat on lattice, not bedrock. Stairs went down to the under-thread and up to the weather-road. You could walk a street and never think about the drop because the Soil Strand ran under the cobbles the way warmth runs under a well-kept floor.\n\nHanging felt like standing. That was the trick, and it was work."
+      "text": "Markets sat on lattice, not bedrock. Stairs went down to the under-thread and up to the weather-road. You could walk a street and never think about the drop because the Soil Strand ran under the cobbles the way warmth runs under a well-kept floor."
     },
     {
       "type": "modonomicon:text",
-      "title": "Hearths as first physics",
-      "text": "Before Stone named shards, before Clock sang a factory, a Pad-keeper banked heat in thin dirt and called it a world. The hearth is the first physics. A continent is a hearth that got out of hand in the useful direction.\n\nSeat Soil and you are not founding a nation. You are reminding a scrap of dirt that it used to be allowed to stay warm."
+      "title": "Continue",
+      "text": "Hanging felt like standing. That was the trick, and it was work."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Hearths as first ...",
+      "text": "Before Stone named shards, before Clock sang a factory, a Pad-keeper banked heat in thin dirt and called it a world. The hearth is the first physics. A continent is a hearth that got out of hand in the useful direction."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Seat Soil and you are not founding a nation. You are reminding a scrap of dirt that it used to be allowed to stay warm."
     }
   ],
   "parents": [

@@ -1,0 +1,45 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "When progress stops",
+  "description": "Practical steps and checks.",
+  "icon": "minecraft:book",
+  "x": 8,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Quest checks",
+      "text": "Read the exact task and its prerequisites. Check item counts, variants and whether the task wants possession, crafting or another action. Try the task's detect button when one is available.\\\nCheck rewards too: an unclaimed token cannot be seated. If playing together, confirm you are in the intended Clowder before repeating a long crafting chain."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Machine checks",
+      "text": "Check these separately:\\\n1\\. Correct input and recipe.\\\n2\\. Available power and range.\\\n3\\. Required totem or other structure."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "4\\. Space for the result.\\\n5\\. Pausing redstone and side settings.\\\nFor Tribal Power, crouch and right-click the machine with the Spirit Codex. Test one machine before connecting a whole production line."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Shared lives and ...",
+      "text": "When shared lives are enabled, survival deaths spend the Clowder's pool. At exhaustion, affected players become spectators. Ordinary food or healing does not restore a spent life."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Rare campaign rewards can add lives; a recovery item or operator revive may be needed. Check the quest screen and the recovery item's instructions. Plan dangerous trips together and store spare supplies before leaving."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/finish",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

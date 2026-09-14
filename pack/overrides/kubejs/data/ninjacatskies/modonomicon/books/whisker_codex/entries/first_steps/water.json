@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Keep a water supply",
+  "description": "Practical steps and checks.",
+  "icon": "minecraft:water_bucket",
+  "x": 4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Make the first so...",
+      "text": "Easy pads include water. Normal and Hard pads supply ice, lava and an empty bucket.\\\n1\\. Make a contained area from nonflammable blocks.\\\n2\\. Put the ice where the water should remain. Use nearby lava as the heat source, with blocks containing its flow."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "3\\. Let the ice melt. Collect the resulting water source with the bucket.\\\nKeep lava away from wood and stored items. Do not let the two liquids flow together."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "A refillable pool",
+      "text": "**Once you have two water source buckets**, build the four-block pool shown next. Fill opposite corners. On ordinary water-source rules, all four spaces become sources.\\\nCollect a bucket and check that the pool refills before relying on it. One source alone is not enough for this layout."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Keep water available for the Tension Barrel and farming."
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "ninjacatskies:codex/water_pool",
+      "multiblock_name": "Placement example",
+      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "show_visualize_button": true
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/safe_start",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

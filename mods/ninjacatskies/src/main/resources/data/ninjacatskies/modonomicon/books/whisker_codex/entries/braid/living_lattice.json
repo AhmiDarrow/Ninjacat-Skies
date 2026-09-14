@@ -12,22 +12,42 @@
     {
       "type": "modonomicon:text",
       "title": "The camp answers",
-      "text": "Tribal Weave is the workshop beside the nine Strands. Rhythm, landscape and reusable Echo catalysts make Pulse. Distinct totem voices strengthen the Resonator. No fuel fire is needed.\n\nHow:\n1. Strike a Drumheart empty-handed, about a breath apart.\n2. Place the matching Resonance Totem within 8 of each Echo station.\n3. Seat a catalyst in the Pulse Resonator (shard first). Two voices are enough to start.\n4. Sneak-use the Spirit Codex on anything silent. It will say why."
+      "text": "Tribal Weave is the workshop beside the nine Strands. Rhythm, landscape and reusable Echo catalysts make Pulse. Distinct totem voices strengthen the Resonator. No fuel fire is needed.\\\nHow:\\\n1\\. Strike a Drumheart empty-handed, about a breath apart.\\\n2\\. Place the matching Resonance Totem within 8 of each Echo station."
     },
     {
       "type": "modonomicon:text",
-      "title": "Hands become a workshop",
-      "text": "Four Echo stations refine batches. Bind weaves Loom Lint into string and Void Yarn into Spiritweave. The Pulse Adapter sends harmony into standard FE machines.\n\nHow:\n1. Feed slot 0; take from 1-8. Stations default Input on five faces, Output below.\n2. Sit Shatter on a Kiln: grit walks down with no hopper.\n3. Beside two machines, set the touching faces to Output into Input.\n4. Relays are for distance. A lever pauses work."
+      "title": "Continue",
+      "text": "3\\. Seat a catalyst in the Pulse Resonator (shard first). Two voices are enough to start.\\\n4\\. Sneak-use the Spirit Codex on anything silent. It will say why."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Hands become a wo...",
+      "text": "Four Echo stations refine batches. Bind weaves Loom Lint into string and Void Yarn into Spiritweave. The Pulse Adapter sends harmony into standard FE machines.\\\nHow:\\\n1\\. Feed slot 0; take from 1-8. Stations default Input on five faces, Output below.\\\n2\\. Sit Shatter on a Kiln: grit walks down with no hopper."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "3\\. Beside two machines, set the touching faces to Output into Input.\\\n4\\. Relays are for distance. A lever pauses work."
     },
     {
       "type": "modonomicon:text",
       "title": "Three distances",
-      "text": "Cargo grows Local to Longreach to Astral. Paths grow Waystone to Horizon to Astral. March Crystal opens the last tier: across dimensions.\n\nHow:\n1. Snap a relay plate onto a machine face. Seat the same Bond item in both plates.\n2. Leave both ends loaded. Unloaded destinations pause; they do not void.\n3. Bind a compass to a dry floor; keep two clear blocks above it."
+      "text": "Cargo grows Local to Longreach to Astral. Paths grow Waystone to Horizon to Astral. March Crystal opens the last tier: across dimensions.\\\nHow:\\\n1\\. Snap a relay plate onto a machine face. Seat the same Bond item in both plates.\\\n2\\. Leave both ends loaded. Unloaded destinations pause; they do not void."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "3\\. Bind a compass to a dry floor; keep two clear blocks above it."
     },
     {
       "type": "modonomicon:text",
       "title": "The sixth voice",
-      "text": "Loom joins the five attunements. Loom Thread comes from Ancestor Halls, The Unsung, and a Loom-stitcher Elder at Friend. An Unsung Heart crafts the Loom totem.\n\nHow:\n1. Read every tablet in an Ancestor Hall.\n2. Strike the Silent Drum four beats, a breath apart, to wake The Unsung.\n3. Craft the Loom totem. Seat it near the Resonator for the sixth voice."
+      "text": "Loom joins the five attunements. Loom Thread comes from Ancestor Halls, The Unsung, and a Loom-stitcher Elder at Friend. An Unsung Heart crafts the Loom totem.\\\nHow:\\\n1\\. Read every tablet in an Ancestor Hall.\\\n2\\. Strike the Silent Drum four beats, a breath apart, to wake The Unsung."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "3\\. Craft the Loom totem. Seat it near the Resonator for the sixth voice."
     }
   ],
   "parents": [

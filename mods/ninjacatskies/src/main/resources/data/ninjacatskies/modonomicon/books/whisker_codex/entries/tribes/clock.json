@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Pattern-weavers",
-      "text": "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure again, until the work carried itself.\n\nTheir timed lattice songs are the ancestor of every belt and cog you will build. You already know this craft.\n\nBefore the Cut those songs fed hanging cities on a schedule you could set a table by. What they lost was the singer, not the song. Belts in empty halls. Clicks before a hum nobody owned. Seat Clock and you tell those songs they have a singer again."
+      "text": "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure again, until the work carried itself.\\\nTheir timed lattice songs are the ancestor of every belt and cog you will build. You already know this craft."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Before the Cut those songs fed hanging cities on a schedule you could set a table by. What they lost was the singer, not the song. Belts in empty halls. Clicks before a hum nobody owned. Seat Clock and you tell those songs they have a singer again."
     },
     {
       "type": "modonomicon:spotlight",
@@ -21,12 +26,17 @@
         "count": 1
       },
       "title": "Clock Strand",
-      "text": "*A factory is a song that has stopped needing the singer.*\n\nSeated. The Pattern-weavers answer when this Post hums."
+      "text": "*A factory is a song that has stopped needing the singer.*\\\nSeated. The Pattern-weavers answer when this Post hums."
     },
     {
       "type": "modonomicon:text",
       "title": "Their camp",
-      "text": "The Pattern-weavers keep a camp in the March crystal fields: huts, a fire, a Tribe Hearth, a Air totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours redstone, clocks, Storm Moth Dust. Their Elder trades timed songs and automation, and at Voice standing presses the tribe's Mark into your hand."
+      "text": "The Pattern-weavers keep a camp in the March crystal fields: huts, a fire, a Tribe Hearth, a Air totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Their hearth favours redstone, clocks, Storm Moth Dust. Their Elder trades timed songs and automation, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

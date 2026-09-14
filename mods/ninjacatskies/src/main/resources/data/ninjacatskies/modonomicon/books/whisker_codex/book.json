@@ -1,7 +1,7 @@
 {
-  "name": "Whisker Field Notes",
-  "tooltip": "Damaged, but it still assigns work.",
-  "description": "The Loom was cut. This is what is left of the manual.",
+  "name": "Whisker Codex",
+  "tooltip": "Build, check, and explore the campaign.",
+  "description": "Start here for practical lessons, placement diagrams and the story of the broken sky.",
   "generate_book_item": false,
   "custom_book_item": "ninjacatskies:whisker_codex",
   "default_title_color": 13936715,

@@ -146,13 +146,27 @@ public class GuardianGameTests {
         fake.teleportTo(base.getX() + 0.5, base.getY(), base.getZ() + 0.5);
         seat(fake, Strand.SOIL);
         ArenaManager m = ArenaManager.get(level.getServer());
+        // Verification worlds are reused. The previous version of this test left
+        // its disconnected party in SavedData, making every later run fail setup.
+        ArenaInstance previous = m.instanceOf(fake);
+        if (previous != null) clearTestArena(level, m, previous);
         String fail = m.summon(fake, GuardianKind.LINTGOLEM);
         if (fail != null) { h.fail("summon refused: " + fail); return; }
         ArenaInstance inst = m.instanceOf(fake);
         if (inst == null) { h.fail("no instance"); return; }
-        inst.age = 120;
-        m.tick(level.getServer());
-        if (inst.state != ArenaInstance.State.FIGHT) h.fail("disconnect spent the totem: " + inst.state);
+        try {
+            inst.age = 120;
+            m.tick(level.getServer());
+            if (inst.state != ArenaInstance.State.FIGHT) h.fail("disconnect spent the totem: " + inst.state);
+        } finally {
+            clearTestArena(level, m, inst);
+        }
         h.succeed();
+    }
+
+    private static void clearTestArena(ServerLevel level, ArenaManager manager, ArenaInstance instance) {
+        manager.wipe(level.getServer(), instance, "Verification fixture cleanup");
+        instance.stateTicks = 181;
+        manager.tick(level.getServer());
     }
 }

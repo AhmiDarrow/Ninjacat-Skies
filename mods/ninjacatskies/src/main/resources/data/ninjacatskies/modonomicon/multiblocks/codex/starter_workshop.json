@@ -1,0 +1,37 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "C F",
+      " 0 ",
+      "B  "
+    ],
+    [
+      "PPP",
+      "PPP",
+      "PPP"
+    ]
+  ],
+  "mapping": {
+    "C": {
+      "type": "modonomicon:block",
+      "block": "minecraft:crafting_table"
+    },
+    "F": {
+      "type": "modonomicon:block",
+      "block": "minecraft:furnace"
+    },
+    "0": {
+      "type": "modonomicon:block",
+      "block": "ninjacatskies:tension_post"
+    },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "minecraft:chest"
+    },
+    "P": {
+      "type": "modonomicon:block",
+      "block": "minecraft:oak_planks"
+    }
+  }
+}

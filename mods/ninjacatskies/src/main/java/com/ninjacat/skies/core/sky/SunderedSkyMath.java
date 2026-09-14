@@ -7,7 +7,8 @@ public final class SunderedSkyMath {
     /** 1 at noon, 0 at midnight. */
     public static float dayness(long dayTime, float partial) {
         double time = (Math.floorMod(dayTime, 24000) + Math.clamp(partial, 0F, 1F)) / 24000.0;
-        return (float) Math.clamp((Math.sin(time * Math.PI * 2) + 0.2) / 1.15, 0, 1);
+        float light = (float) Math.clamp((Math.sin(time * Math.PI * 2) + 0.2) / 1.15, 0, 1);
+        return light * light * (3F - 2F * light);
     }
 
     /** 0 = fully sundered, 1 = rewoven. */

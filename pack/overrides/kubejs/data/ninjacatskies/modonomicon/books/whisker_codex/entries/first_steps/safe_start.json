@@ -1,0 +1,42 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Your first safe workshop",
+  "description": "Practical steps and checks.",
+  "icon": "minecraft:crafting_table",
+  "x": 2,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Goal and supplies",
+      "text": "**Goal:** a safe place to grow a tree, craft, store items and cook food.\\\nAt the Dock, use your Island Charter to open the island/team screen. Join your existing team or create one, then choose your pad.\\\nKeep a sapling, some dirt and the starter supplies. Open the Soil quests before spending rare starter items."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Build in this order",
+      "text": "1\\. Widen your platform. Add edges and light.\\\n2\\. Harvest wood. Keep a replacement sapling and replant it on dirt.\\\n3\\. Make a crafting table and chest. Store spare saplings and valuables.\\\n4\\. Make a furnace. Cook food as the Soil quests request. Keep walkways clear."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Workshop check",
+      "text": "You should have a replanted tree, spare materials in storage, food and a workspace you can walk around safely.\\\nThe model on the next page is one compact arrangement. Build a larger platform around it. The exact arrangement is optional; the diagram is not a quest requirement. Keep fire and lava away from wooden floors."
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "ninjacatskies:codex/starter_workshop",
+      "multiblock_name": "Placement example",
+      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "show_visualize_button": true
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/using_the_book",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

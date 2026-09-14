@@ -70,9 +70,9 @@ def advancement(path: str) -> dict:
 # ------------------------------------------------------------------------------------ book
 
 w(BOOK / "book.json", {
-    "name": "Whisker Field Notes",
-    "tooltip": "Damaged, but it still assigns work.",
-    "description": "The Loom was cut. This is what is left of the manual.",
+    "name": "Whisker Codex",
+    "tooltip": "Build, check, and explore the campaign.",
+    "description": "Start here for practical lessons, placement diagrams and the story of the broken sky.",
     "generate_book_item": False,
     "custom_book_item": f"{NS}:whisker_codex",
     "default_title_color": 0xD4A84B,
@@ -706,6 +706,9 @@ for gid, title, strand, relic, tier, arena, fight, power in GUARDIANS:
         spotlight(f"guardians:relic_{relic}", "Woven Relic", power),
     ], parents=["the_ritual"], condition={"type": "modonomicon:advancement", "advancement_id": unlock(gid, strand)}, hide=False)
 
+from whisker_lessons import build_lessons, sync_pack_primers, polish_book
+build_lessons(BOOK, w, text, entry, category)
+polish_book(BOOK, w)
 print("Whisker Codex book written to", BOOK.relative_to(ROOT))
 
 # Pack kubejs copy wins at runtime. Keep The Work (pack-only) and overlay generated cats/entries.
@@ -777,3 +780,5 @@ w(PACK_BOOK / "entries" / "the_work" / "old_world.json", {
     "parents": [{"entry": f"{NS}:the_work/this_book", "draw_arrow": True, "line_enabled": True}],
 })
 print("Pack kubejs book synced to", PACK_BOOK.relative_to(ROOT))
+sync_pack_primers(BOOK, PACK_BOOK, w)
+polish_book(PACK_BOOK, w)

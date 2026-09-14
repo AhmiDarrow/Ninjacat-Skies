@@ -12,7 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Edge-walkers",
-      "text": "The Edge-walkers kept footholds past the last fence post — cuts in the Loom that led somewhere on purpose. Spiritgear was theirs: tools that spend Pulse instead of edge.\n\nThey left the footholds so nobody would have to be brave in the same place twice.\n\nBefore the Cut the rim was a job, not a dare: a list of places you could stand, a bridge already cut, courage allowed to arrive late. What they lost was a horizon that led somewhere on purpose. Some walked people home. Some walked off because that was the job. The thin bits are still thin."
+      "text": "The Edge-walkers kept footholds past the last fence post — cuts in the Loom that led somewhere on purpose. Spiritgear was theirs: tools that spend Pulse instead of edge.\\\nThey left the footholds so nobody would have to be brave in the same place twice."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Before the Cut the rim was a job, not a dare: a list of places you could stand, a bridge already cut, courage allowed to arrive late.\\\nWhat they lost was a horizon that led somewhere on purpose.\\\nSome walked people home.\\\nSome walked off because that was the job."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "The thin bits are still thin."
     },
     {
       "type": "modonomicon:spotlight",
@@ -21,12 +31,17 @@
         "count": 1
       },
       "title": "Claw Strand",
-      "text": "*Boots first. Then the bridge. Then the courage; it arrives on its own.*\n\nSeated. The Edge-walkers answer when this Post hums."
+      "text": "*Boots first. Then the bridge. Then the courage; it arrives on its own.*\\\nSeated. The Edge-walkers answer when this Post hums."
     },
     {
       "type": "modonomicon:text",
       "title": "Their camp",
-      "text": "The Edge-walkers keep a camp in the March highlands: huts, a fire, a Tribe Hearth, a Fire totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours leather, iron, Rift Fang. Their Elder trades Spiritgear and footholds, and at Voice standing presses the tribe's Mark into your hand."
+      "text": "The Edge-walkers keep a camp in the March highlands: huts, a fire, a Tribe Hearth, a Fire totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Their hearth favours leather, iron, Rift Fang. Their Elder trades Spiritgear and footholds, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

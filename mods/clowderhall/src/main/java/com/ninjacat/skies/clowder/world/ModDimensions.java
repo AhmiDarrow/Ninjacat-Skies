@@ -155,6 +155,7 @@ public final class ModDimensions {
             return;
         }
         if (level.getBlockState(MARKER_POS).is(Blocks.REINFORCED_DEEPSLATE)) {
+            ensureVillage(level);
             return;
         }
 
@@ -265,7 +266,15 @@ public final class ModDimensions {
                 "Reweave."
         }, DyeColor.WHITE);
 
+        ensureVillage(level);
         ClowderHall.LOGGER.info("Clowder Hall ceremony pad raised at {}", PAD_CENTER);
+    }
+
+    private static void ensureVillage(ServerLevel level) {
+        BlockPos revision = new BlockPos(0, 60, 0);
+        if (level.getBlockState(revision).is(Blocks.WAXED_OXIDIZED_COPPER)) return;
+        TownPlan.build(level, "/data/clowderhall/towns/clowder_town.json", true);
+        level.setBlock(revision, Blocks.WAXED_OXIDIZED_COPPER.defaultBlockState(), 2);
     }
 
     private static void fillCeremonyChest(ChestBlockEntity chest) {

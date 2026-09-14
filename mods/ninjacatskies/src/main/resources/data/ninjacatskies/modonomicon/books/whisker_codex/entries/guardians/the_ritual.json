@@ -12,12 +12,22 @@
     {
       "type": "modonomicon:text",
       "title": "Answer for the Cut",
-      "text": "Each Strand had a guardian: a Loom-construct that kept its thread taut. The Cut snapped them. They are not monsters to be killed but Strands to be re-tensioned, and the only way to re-tension one is to beat its keeper on its own ground.\n\nCraft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena."
+      "text": "Each Strand had a guardian: a Loom-construct that kept its thread taut. The Cut snapped them. They are not monsters to be killed but Strands to be re-tensioned, and the only way to re-tension one is to beat its keeper on its own ground."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Craft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena."
     },
     {
       "type": "modonomicon:text",
       "title": "The arena",
-      "text": "You and every Clowder mate within 32 blocks are pulled to a stage built for that guardian alone: four spawn pads, the totem stone, and a sealed gate that opens on a win or a wipe. A fence returns anyone who falls, at a cost in hearts. Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**. Wipe and you are spat back out with the totem spent; craft another."
+      "text": "You and every Clowder mate within 32 blocks are pulled to a stage built for that guardian alone: four spawn pads, the totem stone, and a sealed gate that opens on a win or a wipe.\\\nA fence returns anyone who falls, at a cost in hearts."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**.\\\nWipe and you are spat back out with the totem spent; craft another."
     },
     {
       "type": "modonomicon:text",

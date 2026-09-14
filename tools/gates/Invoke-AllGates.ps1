@@ -39,6 +39,12 @@ try {
     Invoke-Gate "StewardCaches" {
         python -X utf8 (Join-Path $gateDir "test_steward_caches.py")
     }
+    Invoke-Gate "QuestGenerationPreflight" {
+        python -X utf8 (Join-Path $gateDir "test_quest_preflight.py")
+    }
+    Invoke-Gate "CodexBook" {
+        python -X utf8 (Join-Path $gateDir "test_codex_book.py")
+    }
     Invoke-Gate "PackKeybindings" {
         python (Join-Path $gateDir "test_pack_keybindings.py")
     }

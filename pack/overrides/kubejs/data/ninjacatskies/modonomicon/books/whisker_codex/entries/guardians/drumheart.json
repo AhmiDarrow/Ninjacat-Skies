@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Drumheart",
-      "text": "The Forge Drum: a brass drum-platform over a lava crater, eight copper piston hammers with beat pads before them, four lava channels through the floor.\n\nThe Drumheart can only be hurt for a moment after every fourth beat. Stand on a beat pad at the downbeat to charge a spark that counts triple; on beat four the lava channels rise, so be on the pads, not in the channels. The tempo climbs every phase."
+      "text": "The Forge Drum: a brass drum-platform over a lava crater, eight copper piston hammers with beat pads before them, four lava channels through the floor."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "The Drumheart can only be hurt for a moment after every fourth beat. Stand on a beat pad at the downbeat to charge a spark that counts triple; on beat four the lava channels rise, so be on the pads, not in the channels. The tempo climbs every phase."
     },
     {
       "type": "modonomicon:spotlight",

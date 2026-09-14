@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Unwoven",
-      "text": "The Collapsing Loom: a loom sixty-six blocks wide whose floor is the warp — plank strips that unravel into thread bridges as the heddle bars drop.\n\nFive phases. Each quotes two of the other eight mechanics for thirty seconds, then a heddle bar drops and three more strips unravel. In its true form the last four strips remain and the warp threads are the only way up to the beam where it stands. Kill it there: the Reweave."
+      "text": "The Collapsing Loom: a loom sixty-six blocks wide whose floor is the warp — plank strips that unravel into thread bridges as the heddle bars drop."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Five phases. Each quotes two of the other eight mechanics for thirty seconds, then a heddle bar drops and three more strips unravel. In its true form the last four strips remain and the warp threads are the only way up to the beam where it stands. Kill it there: the Reweave."
     },
     {
       "type": "modonomicon:spotlight",

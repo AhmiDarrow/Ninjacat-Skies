@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Songs still playing",
-      "text": "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure again, until the work carried itself. When the Cut came the songs kept playing. Belts in empty halls. Clicks before a hum nobody owned.\n\nSome are playing still. That is not haunting. That is good engineering with no audience."
+      "text": "The Pattern-weavers sang factories the way you would sing a round: one figure, then the same figure again, until the work carried itself. When the Cut came the songs kept playing. Belts in empty halls. Clicks before a hum nobody owned."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Some are playing still. That is not haunting. That is good engineering with no audience."
     },
     {
       "type": "modonomicon:text",

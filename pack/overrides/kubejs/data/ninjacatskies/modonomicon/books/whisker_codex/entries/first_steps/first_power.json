@@ -1,0 +1,42 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Make the first Echo Shard",
+  "description": "Practical steps and checks.",
+  "icon": "tribalpower:echo_shatter",
+  "x": 0,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Goal and supplies",
+      "text": "**Goal:** make an Echo Shard for an automatic generator.\\\nYou need Echo Shatter, an Earth Resonance Totem, a Drumheart and **stone**, not cobblestone. Smelt cobblestone if necessary.\\\nUse the Spirit Codex for detailed Tribal Power recipes, diagrams and troubleshooting."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Build and run it",
+      "text": "1\\. Place the drum and Earth totem beside Echo Shatter, within 8 blocks.\\\n2\\. Right-click the drum with an empty hand about once a second. Build a reserve of Pulse.\\\n3\\. Put stone into Shatter and leave output space."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "4\\. Wait for an Echo Shard. If it stops, charge the drum again and inspect the station with the Spirit Codex.\\\nCobblestone becomes gravel instead. A slow generator can finish a batch using stored energy."
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "ninjacatskies:codex/shatter_workshop",
+      "multiblock_name": "Placement example",
+      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "show_visualize_button": true
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/materials",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

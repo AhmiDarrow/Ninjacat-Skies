@@ -11,23 +11,25 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The first hour",
-      "text": "1. You spawn on **Clowder Dock**. Read *How to Start*. Right-click the Island Charter (or press **K**) → Create Team → pick a pad.\n2. Right-click this Codex. Press Grave (`` ` ``) for the assignment list. Start **Strand: Soil**.\n3. Wood, dirt, a bench, a sapling, a chest, a furnace, water, Codex in Hand.\n4. Craft a Tension Post. Place it. Finish the **Soil Knot**. Seat Soil. The pad starts mending you.\n5. Then Recover: unravel Thread to string, spin yarn, tie a Knot, raise a Loomframe."
+      "title": "Goal and supplies",
+      "text": "**Goal:** a safe place to grow a tree, craft, store items and cook food.\\\nAt the Dock, use your Island Charter to open the island/team screen. Join your existing team or create one, then choose your pad.\\\nKeep a sapling, some dirt and the starter supplies. Open the Soil quests before spending rare starter items."
     },
     {
       "type": "modonomicon:text",
-      "title": "Water, on purpose",
-      "text": "Easy pads ship water. Normal and Hard ship ice, lava, and an empty bucket. Place lava, melt ice into a source, fill the bucket. That is Catch the Rain — do it before Recover asks for a Tension Barrel."
+      "title": "Build in this order",
+      "text": "1\\. Widen your platform. Add edges and light.\\\n2\\. Harvest wood. Keep a replacement sapling and replant it on dirt.\\\n3\\. Make a crafting table and chest. Store spare saplings and valuables.\\\n4\\. Make a furnace. Cook food as the Soil quests request. Keep walkways clear."
     },
     {
       "type": "modonomicon:text",
-      "title": "Why Soil first",
-      "text": "The Pad-keepers felt the Cut first: hearths went cold while the sky still looked whole. A pad that cannot stay warm cannot hold a mesh, a root, or a drum. Soil is not the easy chapter. It is the first physics.\n\nSeat Soil and the Post starts mending you. That is the old hearth-trick, scaled down to whatever dirt you claimed."
+      "title": "Workshop check",
+      "text": "You should have a replanted tree, spare materials in storage, food and a workspace you can walk around safely.\\\nThe model on the next page is one compact arrangement. Build a larger platform around it. The exact arrangement is optional; the diagram is not a quest requirement. Keep fire and lava away from wooden floors."
     },
     {
-      "type": "modonomicon:text",
-      "title": "A pad is a Clowder",
-      "text": "Claim the pad as a team. Share the Post. Share the Knots. When one of you seats Soil, the whole Clowder hears it. Do not split into nine private islands and call it progress.\n\nThe Dock is watching the Fray, not your personal furnace. Get warm. Then get the others warm."
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "ninjacatskies:codex/starter_workshop",
+      "multiblock_name": "Placement example",
+      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "show_visualize_button": true
     }
   ],
   "parents": [

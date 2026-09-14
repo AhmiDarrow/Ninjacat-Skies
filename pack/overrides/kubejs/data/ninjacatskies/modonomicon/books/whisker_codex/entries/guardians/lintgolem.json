@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Lint Golem",
-      "text": "The Dock Dustbin: a corner of the Dock itself — a plank yard, a washing line of cloth sheets, baskets of wool, a red rug.\n\nThe one fight with no risk. The golem throws lint balls that only blind for a moment and hides behind the washing; beat the rug and it sneezes and staggers. It teaches totem, arena and gate."
+      "text": "The Dock Dustbin: a corner of the Dock itself — a plank yard, a washing line of cloth sheets, baskets of wool, a red rug."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "The one fight with no risk. The golem throws lint balls that only blind for a moment and hides behind the washing; beat the rug and it sneezes and staggers. It teaches totem, arena and gate."
     },
     {
       "type": "modonomicon:spotlight",
