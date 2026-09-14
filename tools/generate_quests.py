@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from pathlib import Path
 
 import sys
@@ -74,6 +75,8 @@ CH = {
     "current": hid(0xB100000000000026),
     "guardians": hid(0xB100000000000027),
     "chocobo": hid(0xB100000000000028),
+    "harvestcraft": hid(0xB100000000000029),
+    "agricraft": hid(0xB10000000000002A),
 }
 
 lang: dict[str, object] = {
@@ -233,6 +236,7 @@ CHAPTER_SHORT = {
     18: "Kitchen", 19: "Spells", 20: "Solar", 21: "Decor", 22: "Nether", 23: "End", 24: "Fields", 25: "Apiary",
     26: "Pipes", 27: "Otherworld", 28: "Clockworks", 29: "Network", 30: "Voidcraft", 31: "Packaged", 32: "QIO",
     33: "Hunt", 34: "Tribal", 39: "Guardians", 40: "Square",
+    41: "Harvest", 42: "Sticks",
 }
 STRAND_CHAPTERS = {1: "soil", 2: "stone", 3: "sprout", 4: "claw", 5: "spark", 6: "clock", 7: "swarm", 8: "sigil", 9: "spindle"}
 CURRENT = {"strand_i": 0, "title_counts": {}}
@@ -629,6 +633,8 @@ CHAPTER_SUBTITLES = {
     38: ["The Drumhearts' pulse learns to run in copper."],
     39: ["Thirteen guardians the Cut snapped. Re-tension each Strand by beating its keeper."],
     40: ["Walk the March. Tame a yellow. Ester waits at the Hall after you have been there."],
+    41: ["Gardens from the sieve. Cook what a void pad never grew."],
+    42: ["Crop sticks, stats, irrigation. Weeds stay off on a ledge."],
 }
 
 
@@ -2721,6 +2727,152 @@ def build_chocobo() -> list[dict]:
     return out
 
 
+def build_harvestcraft() -> list[dict]:
+    """Pam's HarvestCraft 2 — gardens from the sieve, stations, fruit, then the cooking dump."""
+    s = 41
+    main = chain(s, [
+        ("Arid Garden", "pamhc2crops:aridgarden", 1,
+         "The void never grew Pam's bushes. Sieve dirt with a string mesh. Break the garden for arid seeds — chili, corn, cactus fruit."),
+        ("Frost Garden", "pamhc2crops:frostgarden", 1,
+         "Cold crops from the same dirt. Break the bush; plant what you need."),
+        ("Shaded Garden", "pamhc2crops:shadedgarden", 1,
+         "Under-leaf crops. Same sieve, different bush."),
+        ("Soggy Garden", "pamhc2crops:soggygarden", 1,
+         "Wet crops. Rice and the rest of the fen-minded seeds live here."),
+        ("Tropical Garden", "pamhc2crops:tropicalgarden", 1,
+         "Warm crops. Keep a bush in a chest; they still spread if you plant them."),
+        ("Windy Garden", "pamhc2crops:windygarden", 1,
+         "The last of the six. Every HarvestCraft seed on the pad starts as one of these bushes."),
+        ("Harvest Board", "pamhc2foodcore:cuttingboarditem", 1,
+         "Not the Farmer's Delight board. Planks and a stick. Prep fruit and veg before they hit a pot."),
+        ("Harvest Pot", "pamhc2foodcore:potitem", 1,
+         "Soups, stews, and stock. Iron and a stick. Sit it on heat."),
+        ("Harvest Skillet", "pamhc2foodcore:skilletitem", 1,
+         "Pan meals. Different craft from the Delight skillet; JEI tells them apart."),
+        ("Saucepan", "pamhc2foodcore:saucepanitem", 1,
+         "Sauces and reductions. Keep it next to the pot."),
+        ("Bakeware", "pamhc2foodcore:bakewareitem", 1,
+         "Pies, breads, and anything that wants an oven shape."),
+        ("Mixing Bowl", "pamhc2foodcore:mixingbowlitem", 1,
+         "Batters, doughs, salads. The quiet station."),
+        ("Juicer", "pamhc2foodcore:juiceritem", 1,
+         "Fruit in, punch out. Pair it with a tree, not a garden."),
+        ("Rolling Pin", "pamhc2foodcore:rolleritem", 1,
+         "Flatten dough. Bakeware is waiting."),
+        ("Grinder", "pamhc2foodcore:grinderitem", 1,
+         "Flour, spices, pastes. Wheat becomes a kitchen staple here."),
+        ("Fresh Water", "pamhc2foodcore:freshwateritem", 8,
+         "A bucket of water and the pot line. Most recipes want this, not a vanilla bucket."),
+        ("Fresh Milk", "pamhc2foodcore:freshmilkitem", 8,
+         "Milk in a HarvestCraft bottle. Cows, or a bucket split into portions."),
+        ("Salt", "pamhc2foodcore:saltitem", 8,
+         "Water in a pot, or a grind. Almost every savoury recipe asks."),
+        ("Flour", "pamhc2foodcore:flouritem", 16,
+         "Wheat through the grinder. Dough starts here."),
+        ("Dough", "pamhc2foodcore:doughitem", 8,
+         "Flour, salt, and fresh water. Pies and breads share this lump."),
+        ("Stock", "pamhc2foodcore:stockitem", 8,
+         "Bones or veg in the pot. Soups want a bottle of this, not a vague broth."),
+        ("Apple Tree", "pamhc2trees:apple_sapling", 1,
+         "Iron-mesh dirt. Grow it on the pad; vanilla oak will not drop Pam's apples."),
+        ("Lemon Tree", "pamhc2trees:lemon_sapling", 1,
+         "Acid for dressings and fish. Same iron sieve."),
+        ("Cinnamon Tree", "pamhc2trees:cinnamon_sapling", 1,
+         "Bark spice. Bakes and teas."),
+        ("Coconut Palm", "pamhc2trees:coconut_sapling", 1,
+         "Milk, oil, and tropical cooking."),
+        ("Vanilla Vine", "pamhc2trees:vanillabean_sapling", 1,
+         "Beans for sweets. Plant it like the others."),
+        ("Pam's Apple", "pamhc2trees:appleitem", 8,
+         "Harvest the tree, not the vanilla oak. Juicer and bakeware both want these."),
+        ("Apple Pie", "pamhc2foodcore:applepieitem", 1,
+         "Bakeware, dough, sugar, apples. The first finished HarvestCraft bake."),
+        ("Fruit Punch", "pamhc2foodcore:fruitpunchitem", 4,
+         "Juicer plus mixed fruit. A pad drink that is not melon juice."),
+        ("Grilled Cheese", "pamhc2foodcore:grilledcheeseitem", 4,
+         "Skillet, bread, cheese. Fast lunch while the trees grow."),
+        ("Chili Bowl", "pamhc2foodextended:chiliitem", 2,
+         "Arid garden peppers, meat, pot. Food Extended starts earning its keep."),
+        ("Curry Plate", "pamhc2foodextended:curryitem", 2,
+         "Spices from the grinder, veg from the gardens, pot work."),
+        ("Pepperoni Pizza", "pamhc2foodextended:pepperonipizzaitem", 1,
+         "Dough, sauce, meat. Bakeware. A full HarvestCraft meal."),
+        ("Garden Fried Rice", "pamhc2foodextended:friedriceitem", 2,
+         "Soggy-garden rice and a skillet. Different dish from the Delight fried rice."),
+        ("Green Tea", "pamhc2foodextended:greenteaitem", 4,
+         "Leaves and freshwater. The quiet end of the kitchen line."),
+    ])
+    extra = [
+        ("Olive Tree", "pamhc2trees:olive_sapling", 1, "Oil and savoury fruit. Optional iron-mesh catch."),
+        ("Orange Tree", "pamhc2trees:orange_sapling", 1, "Juice and zest. Optional."),
+        ("Peach Tree", "pamhc2trees:peach_sapling", 1, "Summer fruit. Optional."),
+        ("Peppercorn Tree", "pamhc2trees:peppercorn_sapling", 1, "Pepper for the grinder. Optional."),
+        ("Cooking Oil", "pamhc2foodcore:cookingoilitem", 8, "Fryer fat. Optional staple."),
+        ("Butter", "pamhc2foodcore:butteritem", 8, "Milk and salt. Optional staple."),
+        ("Mayonnaise", "pamhc2foodcore:mayonaiseitem", 4, "Eggs and oil. Optional."),
+        ("Fruit Salad", "pamhc2foodcore:fruitsaladitem", 4, "Mixing bowl, mixed fruit. Optional."),
+        ("Spaghetti Dinner", "pamhc2foodextended:spaghettidinneritem", 1, "Pasta night. Optional."),
+        ("Bacon Pancakes", "pamhc2foodextended:baconpancakesitem", 2, "Breakfast flex. Optional."),
+        ("Avocado Toast", "pamhc2foodextended:avocadotoastitem", 2, "Needs an avocado tree. Optional."),
+        ("Onion Burger", "pamhc2foodextended:onionhamburgeritem", 2, "Not the Delight hamburger. Optional."),
+        ("Apple Juice", "pamhc2foodcore:applejuiceitem", 4, "Juicer, apples. Optional."),
+        ("Toast Slice", "pamhc2foodcore:toastitem", 8, "Bakeware leftover bread. Optional."),
+    ]
+    return main + grid_optional(s, extra, origin=(0.0, 9.0), cols=7)
+
+
+def build_agricraft() -> list[dict]:
+    """AgriCraft ReReloaded — crop sticks and irrigation on a ledge. Weeds are off."""
+    s = 42
+    main = chain(s, [
+        ("Wooden Crop Sticks", "agricraft:wooden_crop_sticks", 8,
+         "Four sticks in a square. Place them on farmland. Vanilla seeds convert when you plant — Mystical Agriculture seeds do not."),
+        ("Crop Journal", "agricraft:journal", 1,
+         "A book that remembers every plant you analyze. Keep it in the analyzer."),
+        ("Magnifying Glass", "agricraft:magnifying_glass", 1,
+         "Look at a crop to read growth, gain, strength, and the rest of the genome without picking it."),
+        ("Seed Analyzer", "agricraft:seed_analyzer", 1,
+         "Put a seed in. Stats, species, and a page in the journal. This is how breeding becomes visible."),
+        ("Wooden Rake", "agricraft:wooden_rake", 1,
+         "Weeds are off on this pack, but the rake still clears a stick. Carry one anyway."),
+        ("Trowel", "agricraft:trowel", 1,
+         "Pick a plant up and put it down with its stats intact. Move a 10-10 without breaking it."),
+        ("Clipper", "agricraft:clipper", 1,
+         "Clip a mature plant for its clipping product and reset it. Flowers and some HarvestCraft crops."),
+        ("Seed Bag", "agricraft:seed_bag", 1,
+         "Carry a breeding line. Fill it from the analyzer, empty it onto sticks."),
+        ("Iron Crop Sticks", "agricraft:iron_crop_sticks", 4,
+         "Sturdier sticks. Same planting rules, less fuss when you bump them."),
+        ("Iron Rake", "agricraft:iron_rake", 1,
+         "The better rake. Still a habit, even with weeds gone."),
+        ("Irrigation Tank", "agricraft:irrigation_tank", 1,
+         "Hold water for the channels. A pad farm that does not carry buckets every morning."),
+        ("Irrigation Channel", "agricraft:irrigation_channel", 8,
+         "Run water from the tank along the row. Crops drink from the channel, not from you."),
+        ("Channel Valve", "agricraft:channel_valve", 1,
+         "Stop and start a line without breaking the tank."),
+        ("Sprinkler", "agricraft:sprinkler", 1,
+         "Rain in a square. Sit it on a channel over the sticks."),
+        ("Channel Grate", "agricraft:grate", 1,
+         "Cover a channel so you can walk the row."),
+        ("Greenhouse Monitor", "agricraft:greenhouse_monitor", 1,
+         "Read the room. Light, humidity, the reason a crop stalled."),
+        ("Obsidian Crop Sticks", "agricraft:obsidian_crop_sticks", 4,
+         "Late sticks. Fireproof, stubborn, for the plants that ask too much of wood. Two neighbouring mature crops can cross-breed."),
+    ])
+    extra = [
+        ("Hollow Channel", "agricraft:irrigation_channel_hollow", 4, "A channel you can walk. Optional."),
+        ("Copper Nugget Crop", "agricraft:copper_nugget", 8, "Ore crops drop these. Optional breeding line."),
+        ("Quartz Shard Crop", "agricraft:quartz_shard", 8, "Quartz from a stick. Optional."),
+        ("Coal Pebble", "agricraft:coal_pebble", 8, "Fuel from a crop. Optional."),
+        ("Emerald Shard Crop", "agricraft:emerald_shard", 4, "Late ore crop. Optional."),
+        ("Diamond Shard Crop", "agricraft:diamond_shard", 4, "Late ore crop. Optional."),
+        ("Netherite Sliver", "agricraft:netherite_sliver", 1, "Peak ore crop. Optional and slow."),
+        ("Amathyllis Petal", "agricraft:amathyllis_petal", 4, "AgriCraft's own flower. Optional."),
+    ]
+    return main + grid_optional(s, extra, origin=(0.0, 8.0), cols=4)
+
+
 def build_guardians() -> list[dict]:
     """Snapped Guardians — thirteen totems, thirteen arenas, thirteen relics. Totem → defeat → relic, per guardian."""
     from guardians_lore import GUARDIANS, STRAND_TITLES
@@ -2954,7 +3106,27 @@ def write_groups():
     (QUESTS / "chapter_groups.snbt").write_text(to_snbt(body) + "\n", encoding="utf-8")
 
 
+def validate_shipped_items() -> None:
+    """Never erase shipped quests because the local item index is incomplete."""
+    if not KNOWN:
+        raise RuntimeError("Quest generation requires INTERNAL/known_item_ids.txt; rebuild the item index first.")
+    shipped = set()
+    for chapter in CHAPTERS.glob("*.snbt"):
+        shipped.update(re.findall(r'(?:id|item):\s*"([a-z0-9_]+:[a-z0-9_/.-]+)"', chapter.read_text(encoding="utf-8")))
+    namespaces = {item.split(":", 1)[0] for item in KNOWN if ":" in item}
+    missing = sorted(
+        item for item in shipped
+        if not item.startswith("minecraft:")
+        and item not in KNOWN
+        and item.split(":", 1)[0] in namespaces
+    )
+    if missing:
+        raise RuntimeError("Quest generation refused before writing: shipped items are absent from the local index: "
+                           + ", ".join(missing))
+
+
 def main() -> None:
+    validate_shipped_items()
     write_groups()
     write_reward_tables()
     write_chapter("01_soil", CH["soil"], GROUP_SURVIVAL, 0, "minecraft:dirt", build_soil(), "Strand: Soil")
@@ -2973,7 +3145,9 @@ def main() -> None:
     write_chapter("14_ars", CH["ars"], GROUP_SIDE, 13, "ars_nouveau:source_gem", build_ars_side(), "Arcane Side")
     write_chapter("15_clowder", CH["clowder"], GROUP_SIDE, 14, "clowderhall:island_charter", build_clowder(), "Clowder Hall")
     # Shop moved to Dock Kin stalls (Tribal Power Stall=1 + datapack dock_shop).
-    # write_chapter("16_shop", CH["shop"], GROUP_SIDE, 15, "ninjacatskies:frayed_thread", build_shop(), "Frayed Thread Desk")
+    # Its 30 IDs (29 purchases and one secret) remain reserved forever. Removing
+    # the chapter must not renumber Aura and every subsequent released chapter.
+    _seq["q"] += 30
     write_chapter("17_aura", CH["aura"], GROUP_SIDE, 16, "naturesaura:eye", build_aura_side(), "Nature's Aura")
     write_chapter("18_food", CH["food"], GROUP_SIDE, 17, "farmersdelight:cooking_pot", build_food_side(), "Kitchen Line")
     write_chapter("19_spells", CH["spells"], GROUP_SIDE, 18, "irons_spellbooks:iron_spell_book", build_spells_side(), "Battle Spells")
@@ -2997,7 +3171,12 @@ def main() -> None:
     write_chapter("37_stewardries", CH["stewardries"], GROUP_SIDE, 36, "supplementaries:hourglass", build_stewardries(), "Small Stewardries")
     write_chapter("38_current", CH["current"], GROUP_SIDE, 37, "createaddition:electric_motor", build_current(), "The Current")
     write_chapter("39_guardians", CH["guardians"], GROUP_LATE, 38, "guardians:frayed_totem_unwoven", build_guardians(), "Snapped Guardians")
+    # Chapter 40 first shipped after the shop was removed from generation. Keep
+    # its published start independent of the restored reservation above.
+    _seq["q"] = 0x05E2
     write_chapter("40_chocobo", CH["chocobo"], GROUP_SIDE, 39, "chococraft:chocopedia", build_chocobo(), "Pad-runners")
+    write_chapter("41_harvestcraft", CH["harvestcraft"], GROUP_SIDE, 40, "pamhc2foodcore:potitem", build_harvestcraft(), "Harvest Table")
+    write_chapter("42_agricraft", CH["agricraft"], GROUP_SIDE, 41, "agricraft:wooden_crop_sticks", build_agricraft(), "Crop Sticks")
     write_lang()
     titles = sum(1 for k in lang if k.startswith("quest.") and k.endswith(".title"))
     print(f"Wrote chapters + lang. Quest titles: {titles}. Skipped invalid: {len(WARNED)}")

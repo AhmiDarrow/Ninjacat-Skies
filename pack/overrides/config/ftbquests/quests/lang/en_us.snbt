@@ -1,38 +1,38 @@
 {
 	chapter.3100000000000001.chapter_subtitle: [
-		"The campaign starts here. Wake (Soil): survive, Soil Knot, then seat the token at a Tension Post."
+		"Wake — survive, claim the pad, let the Codex wake."
 	]
 	chapter.3100000000000001.title: "Strand: Soil"
 	chapter.3100000000000002.chapter_subtitle: [
-		"Recover (Stone): yarn, knots, meshes. Stone Knot, then seat the token."
+		"Recover — pull the fallen world back into matter."
 	]
 	chapter.3100000000000002.title: "Strand: Stone"
 	chapter.3100000000000003.chapter_subtitle: [
-		"Root (Sprout): food and essence. Sprout Knot, then seat the token."
+		"Root — grow anchors so the pad stops fraying."
 	]
 	chapter.3100000000000003.title: "Strand: Sprout"
 	chapter.3100000000000004.chapter_subtitle: [
-		"Edge (Claw): kit up and leave the pad. Claw Knot, seat it — the braid opens to three peers."
+		"Edge — kit up and leave the pad on purpose."
 	]
 	chapter.3100000000000004.title: "Strand: Claw"
 	chapter.3100000000000005.chapter_subtitle: [
-		"Hum (Spark): a peer path. Drumheart before wires. Spark Knot, then seat it. Any two peers unlock Bind."
+		"Hum — rhythm and pulse before wires."
 	]
 	chapter.3100000000000005.title: "Strand: Spark"
 	chapter.3100000000000006.chapter_subtitle: [
-		"Pattern (Clock): a peer path. Factory as a repeating song. Clock Knot, then seat it."
+		"Pattern — a factory as a song that carries itself."
 	]
 	chapter.3100000000000006.title: "Strand: Clock"
 	chapter.3100000000000007.chapter_subtitle: [
-		"Colony (Swarm): a peer path. Keep something alive that keeps something else alive. Swarm Knot, then seat it."
+		"Colony — keep something alive that keeps something else alive."
 	]
 	chapter.3100000000000007.title: "Strand: Swarm"
 	chapter.3100000000000008.chapter_subtitle: [
-		"Bind (Sigil): two peers seated, Braid Cord at the Post, then Sigil Knot and seat it."
+		"Bind — seals, rites, and two braid paths in a cord."
 	]
 	chapter.3100000000000008.title: "Strand: Sigil"
 	chapter.3100000000000009.chapter_subtitle: [
-		"Reweave (Spindle): digital loom, March stone, Fragment. Seat the Fragment — the storyline ends here."
+		"Reweave — the digital loom, the March, the Fragment."
 	]
 	chapter.3100000000000009.title: "Strand: Spindle"
 	chapter.310000000000000A.title: "Deep Sieve"
@@ -41,13 +41,9 @@
 	chapter.310000000000000D.title: "Powah Grid"
 	chapter.310000000000000E.title: "Arcane Side"
 	chapter.310000000000000F.chapter_subtitle: [
-		"Teams, the Hall, the Post, and the Fray. The Post is where the campaign is seated."
+		"Teams, the Hall, the Post, and the Fray."
 	]
 	chapter.310000000000000F.title: "Clowder Hall"
-	chapter.3100000000000010.chapter_subtitle: [
-		"Spend Thread. No dependencies, no order."
-	]
-	chapter.3100000000000010.title: "Frayed Thread Desk"
 	chapter.3100000000000011.title: "Nature's Aura"
 	chapter.3100000000000012.title: "Kitchen Line"
 	chapter.3100000000000013.title: "Battle Spells"
@@ -89,6 +85,18 @@
 		"Thirteen guardians the Cut snapped. Re-tension each Strand by beating its keeper."
 	]
 	chapter.3100000000000027.title: "Snapped Guardians"
+	chapter.3100000000000028.chapter_subtitle: [
+		"Walk the March. Tame a yellow. Ester waits at the Hall after you have been there."
+	]
+	chapter.3100000000000028.title: "Pad-runners"
+	chapter.3100000000000029.chapter_subtitle: [
+		"Gardens from the sieve. Cook what a void pad never grew."
+	]
+	chapter.3100000000000029.title: "Harvest Table"
+	chapter.310000000000002A.chapter_subtitle: [
+		"Crop sticks, stats, irrigation. Weeds stay off on a ledge."
+	]
+	chapter.310000000000002A.title: "Crop Sticks"
 	chapter_group.2100000000000001.title: "Skybound"
 	chapter_group.2100000000000002.title: "Craft and Tension"
 	chapter_group.2100000000000003.title: "Reweave"
@@ -96,7 +104,8 @@
 	file.0000000000000001.title: "Ninjacat Skies"
 	quest.4200000000010001.quest_desc: [
 		"You are Skybound. This is what did not fall.",
-		"Wake is Soil — the first Strand of the Ninjacat Skies storyline. Eight logs. Start with the tree.",
+		"Eight logs. Start with the tree; it started with you.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
 		"How: punch the oak on your pad. Eight logs start Wake."
 	]
 	quest.4200000000010001.title: "Wake on a Pad"
@@ -172,8 +181,8 @@
 	]
 	quest.420000000001000E.title: "Frayed Currency"
 	quest.420000000001000F.quest_desc: [
-		"This is the campaign book. Right-click it.",
-		"Story, the braid, what to do. Grave (`) is the live list with rewards — same campaign, not a second mode.",
+		"Damaged, but it still assigns work.",
+		"Right-click for quests and rewards. Shift + right-click for the lore pages.",
 		"How: starter kit / dock chest. Right-click the book; Grave (`) is the assignment list."
 	]
 	quest.420000000001000F.title: "Codex in Hand"
@@ -423,15 +432,15 @@
 	]
 	quest.4200000000010040.title: "Leather"
 	quest.4200000000010041.quest_desc: [
-		"Bench, sapling, hearth, water, Codex. Wake is done when this ticks.",
-		"Claim the Soil token. Right-click your Tension Post with it. Seating is the storyline — not optional flavour.",
+		"Bench, sapling, hearth, water, Codex. The pad holds.",
+		"Tension the Strand: the Pad-keepers answer, and the token is yours to seat.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.4200000000010041.quest_subtitle: "Wake"
 	quest.4200000000010041.title: "Soil Knot"
 	quest.4200000000010042.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
 	quest.4200000000010042.title: "Seat Soil"
@@ -441,14 +450,6 @@
 		"How: make or find Something Came Up. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.4200000000010043.title: "Something Came Up"
-	quest.4200000000018001.quest_desc: [
-		"This is the Ninjacat Skies storyline. Nine Strands, in order: Soil, Stone, Sprout, Claw — then any two of Clock, Swarm, Spark — then Sigil, then Spindle.",
-		"Each Strand chapter ends in a Knot. The Knot gives a Strand token. Right-click your Tension Post with the token to seat it. Seated tokens are the campaign. Grave (`) is this assignment list; the Whisker Codex is the same campaign as a book.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: make or find The Loom Braid. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000018001.quest_subtitle: "The campaign"
-	quest.4200000000018001.title: "The Loom Braid"
 	quest.4200000000020044.quest_desc: [
 		"Thread that remembers where it came from.",
 		"Unravel Thread to string; four string spin two yarn.",
@@ -706,15 +707,15 @@
 	]
 	quest.4200000000020075.title: "Spider Eye"
 	quest.4200000000020076.quest_desc: [
-		"Yarn, porcelain, a Loomframe working, iron in the chest. Recover is done when this ticks.",
-		"Claim the Stone token and seat it at the Post. The Grit-singers answer.",
+		"Yarn, porcelain, a Loomframe working, iron in the chest.",
+		"Tension the Strand: the Grit-singers answer.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.4200000000020076.quest_subtitle: "Recover"
 	quest.4200000000020076.title: "Stone Knot"
 	quest.4200000000020077.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
 	quest.4200000000020077.title: "Seat Stone"
@@ -950,15 +951,15 @@
 	]
 	quest.42000000000300A5.title: "Nether Wart"
 	quest.42000000000300A6.quest_desc: [
-		"A field, a kitchen, essence rising. Root is done when this ticks.",
-		"Claim the Sprout token and seat it. The Rootbinders answer.",
+		"A field, a kitchen, essence rising.",
+		"Tension the Strand: the Rootbinders answer.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.42000000000300A6.quest_subtitle: "Root"
 	quest.42000000000300A6.title: "Sprout Knot"
 	quest.42000000000300A7.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
 	quest.42000000000300A7.title: "Seat Sprout"
@@ -1141,15 +1142,15 @@
 	]
 	quest.42000000000400CA.title: "Spyglass"
 	quest.42000000000400CB.quest_desc: [
-		"Plans, iron on your back, a door out. Edge is done when this ticks.",
-		"Seat Claw. The braid opens: Pattern, Colony, and Hum are peers — any two unlock Bind.",
+		"Plans, iron on your back, a door out.",
+		"Tension the Strand: the Edge-walkers answer. The braid opens.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.42000000000400CB.quest_subtitle: "Edge"
 	quest.42000000000400CB.title: "Claw Knot"
 	quest.42000000000400CC.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
 	quest.42000000000400CC.title: "Seat Claw"
@@ -1212,7 +1213,7 @@
 	]
 	quest.42000000000500D7.title: "Hum: Ley Collector"
 	quest.42000000000500D8.quest_desc: [
-		"Seat a reusable Echo catalyst; add two different totem voices. A scattered heap counts at most five. A Voice Ring at radius 3 is six-voice resonance. Redstone pauses it.",
+		"Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony.",
 		"How: seat an Echo catalyst, two different totems within 8. Redstone pauses it."
 	]
 	quest.42000000000500D8.title: "Hum: Pulse Resonator"
@@ -1417,15 +1418,15 @@
 	]
 	quest.4200000000050100.title: "Ritual Chalk"
 	quest.4200000000050101.quest_desc: [
-		"A drum struck, a Pulse held, a resonator burning. Hum is done when this ticks.",
-		"Seat Spark. One of the two peer seats Bind needs.",
+		"A drum struck, a Pulse held, a resonator burning.",
+		"Tension the Strand: the Drumhearts answer.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.4200000000050101.quest_subtitle: "Hum"
 	quest.4200000000050101.title: "Spark Knot"
 	quest.4200000000050102.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
 	quest.4200000000050102.title: "Seat Spark"
@@ -1677,15 +1678,15 @@
 	]
 	quest.4200000000060133.title: "Extendo Grip"
 	quest.4200000000060134.quest_desc: [
-		"A wheel, a press, a mixer, a fan, a clockwork heart. Pattern is done when this ticks.",
-		"Seat Clock. One of the two peer seats Bind needs.",
+		"A wheel, a press, a mixer, a fan, a clockwork heart.",
+		"Tension the Strand: the Pattern-weavers answer.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.4200000000060134.quest_subtitle: "Pattern"
 	quest.4200000000060134.title: "Clock Knot"
 	quest.4200000000060135.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
@@ -1931,15 +1932,15 @@
 	]
 	quest.4200000000070164.title: "Orange Tulip"
 	quest.4200000000070165.quest_desc: [
-		"A nest you built, a hive you moved, a centrifuge, an incubator, essence fields. Colony is done when this ticks.",
-		"Seat Swarm. One of the two peer seats Bind needs.",
+		"A nest you built, a hive you moved, a centrifuge, an incubator, essence fields.",
+		"Tension the Strand: the Colony-keepers answer.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.4200000000070165.quest_subtitle: "Colony"
 	quest.4200000000070165.title: "Swarm Knot"
 	quest.4200000000070166.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
 	quest.4200000000070166.title: "Seat Swarm"
@@ -2164,15 +2165,15 @@
 	]
 	quest.4200000000080191.title: "Echo Shard"
 	quest.4200000000080192.quest_desc: [
-		"A braid spun, potions bottled, spells and spirits called. Bind is done when this ticks.",
-		"Seat Sigil. Then Spindle — the digital loom, the March, the Fragment.",
+		"A braid spun, potions bottled, spells and spirits called.",
+		"Tension the Strand: the Seal-carvers answer.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.4200000000080192.quest_subtitle: "Bind"
 	quest.4200000000080192.title: "Sigil Knot"
 	quest.4200000000080193.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"Rare reward: one shared Clowder life, once for the entire team. Only six such rewards exist in the campaign.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
@@ -2298,7 +2299,7 @@
 	quest.42000000000901AA.title: "Digital Loom"
 	quest.42000000000901AB.quest_desc: [
 		"Strike it open. The March is on the other side.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: craft, strike it, walk the March. Bind a return compass first."
 	]
 	quest.42000000000901AB.title: "Gate Drum"
 	quest.42000000000901AC.quest_desc: [
@@ -2447,15 +2448,15 @@
 	]
 	quest.42000000000901C8.title: "Spirit Reed"
 	quest.42000000000901C9.quest_desc: [
-		"A braid, a digital loom, a gate, a stone from the March. The ninth Strand.",
-		"Seat Spindle, then right-click the Post with a March stone for the Fragment. Seat the Fragment. The cut closes.",
+		"A braid, a digital loom, a gate, a stone from the March.",
+		"Tension the ninth Strand. Then the Fragment, then the Post.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
 	quest.42000000000901C9.quest_subtitle: "Reweave"
 	quest.42000000000901C9.title: "Spindle Knot"
 	quest.42000000000901CA.quest_desc: [
-		"Right-click your Clowder's Tension Post with the token. This is how the campaign counts.",
-		"The notch lights, the tribe chimes, the pad changes. Until it is seated, this Strand is not done.",
+		"Right-click your Clowder's Tension Post with the token.",
+		"The notch lights, the tribe chimes, the pad changes.",
 		"How: right-click your Tension Post with the Strand token in hand."
 	]
 	quest.42000000000901CA.title: "Seat Spindle"
@@ -3099,7 +3100,7 @@
 	]
 	quest.42000000000F0247.title: "Strand Banner"
 	quest.42000000000F0248.quest_desc: [
-		"Grave (`): the assignment list. The Codex is the same campaign as a book.",
+		"Open the Codex path.",
 		"How: make or find Quest Book. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.42000000000F0248.title: "Quest Book"
@@ -3190,156 +3191,6 @@
 		"How: craft, smelt, sieve, or mob-drop this. JEI lists every source on the pad."
 	]
 	quest.42000000000F0259.title: "Boat"
-	quest.420000000010025A.quest_desc: [
-		"The Desk opens. Saplings for the pad.",
-		"How: make or find Desk Deposit I. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010025A.title: "Desk Deposit I"
-	quest.420000000010025B.quest_desc: [
-		"Fill from melted ice — Tension Barrel clay.",
-		"How: make or find Buy Empty Bucket. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010025B.title: "Buy Empty Bucket"
-	quest.420000000010025C.quest_desc: [
-		"Bone meal softens Root.",
-		"How: make or find Desk Deposit II. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010025C.title: "Desk Deposit II"
-	quest.420000000010025D.quest_desc: [
-		"Spare yarn for Recover.",
-		"How: make or find Desk Deposit III. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010025D.title: "Desk Deposit III"
-	quest.420000000010025E.quest_desc: [
-		"Catch grit without crafting the mesh.",
-		"How: make or find Buy String Mesh. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010025E.title: "Buy String Mesh"
-	quest.420000000010025F.quest_desc: [
-		"Leaf work on demand.",
-		"How: make or find Buy Spindle Crook. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010025F.title: "Buy Spindle Crook"
-	quest.4200000000100260.quest_desc: [
-		"Expand the pad.",
-		"How: make or find Buy Dirt Bundle. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100260.title: "Buy Dirt Bundle"
-	quest.4200000000100261.quest_desc: [
-		"Stone for days.",
-		"How: make or find Buy Cobble Bundle. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100261.title: "Buy Cobble Bundle"
-	quest.4200000000100262.quest_desc: [
-		"Nuggets toward Edge.",
-		"How: make or find Buy Iron Starter. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100262.title: "Buy Iron Starter"
-	quest.4200000000100263.quest_desc: [
-		"Knot binder stock.",
-		"How: make or find Buy Slime Kit. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100263.title: "Buy Slime Kit"
-	quest.4200000000100264.quest_desc: [
-		"One pearl — yarn or teleport.",
-		"How: make or find Buy Pearl Seed. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100264.title: "Buy Pearl Seed"
-	quest.4200000000100265.quest_desc: [
-		"Air totem / seal / arrows.",
-		"How: make or find Buy Feather Pack. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100265.title: "Buy Feather Pack"
-	quest.4200000000100266.quest_desc: [
-		"Ritual chalk fuel.",
-		"How: make or find Buy Lapis Pack. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100266.title: "Buy Lapis Pack"
-	quest.4200000000100267.quest_desc: [
-		"Margin note from the Desk.",
-		"How: make or find Buy Codex Page. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100267.title: "Buy Codex Page"
-	quest.4200000000100268.quest_desc: [
-		"Hunger is a soft void.",
-		"How: make or find Buy Bread Line. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100268.title: "Buy Bread Line"
-	quest.4200000000100269.quest_desc: [
-		"See the edge.",
-		"How: make or find Buy Torch Line. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100269.title: "Buy Torch Line"
-	quest.420000000010026A.quest_desc: [
-		"Spends thread on bottled experience, ready to smash for levels.",
-		"How: make or find Buy XP Bottles. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010026A.title: "Buy XP Bottles"
-	quest.420000000010026B.quest_desc: [
-		"Villagers like these. So does the Desk.",
-		"How: make or find Buy Emeralds. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010026B.title: "Buy Emeralds"
-	quest.420000000010026C.quest_desc: [
-		"Hard currency, two at a time.",
-		"How: make or find Buy Diamonds. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010026C.title: "Buy Diamonds"
-	quest.420000000010026D.quest_desc: [
-		"A portable room. The End is cheaper if you can reach it.",
-		"How: make or find Buy Shulker. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010026D.title: "Buy Shulker"
-	quest.420000000010026E.quest_desc: [
-		"Bulk Create storage, two vaults.",
-		"How: make or find Buy Vault. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010026E.title: "Buy Vault"
-	quest.420000000010026F.quest_desc: [
-		"Trades thread for gold nuggets, no mining required.",
-		"How: make or find Buy Gold. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000010026F.title: "Buy Gold"
-	quest.4200000000100270.quest_desc: [
-		"Wire and bulbs.",
-		"How: make or find Buy Copper. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100270.title: "Buy Copper"
-	quest.4200000000100271.quest_desc: [
-		"Sigil will want these.",
-		"How: make or find Buy Amethyst. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100271.title: "Buy Amethyst"
-	quest.4200000000100272.quest_desc: [
-		"Drumheart skin — Hum gate.",
-		"How: make or find Buy Leather. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100272.title: "Buy Leather"
-	quest.4200000000100273.quest_desc: [
-		"Swarm will want this.",
-		"How: make or find Buy Honeycomb. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100273.title: "Buy Honeycomb"
-	quest.4200000000100274.quest_desc: [
-		"Turns thread into nether wart, enough to start a potion farm.",
-		"How: make or find Buy Nether Wart. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100274.title: "Buy Nether Wart"
-	quest.4200000000100275.quest_desc: [
-		"End grit snack.",
-		"How: make or find Buy Chorus. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100275.title: "Buy Chorus"
-	quest.4200000000100276.quest_desc: [
-		"Spends thread on obsidian, useful before you've found any of your own.",
-		"How: make or find Buy Obsidian. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100276.title: "Buy Obsidian"
-	quest.4200000000100277.quest_desc: [
-		"A star for a Clowder monument. Two hundred Thread is a campaign, not a tip.",
-		"How: make or find Buy Beacon Frame. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000100277.title: "Buy Beacon Frame"
 	quest.4200000000110278.quest_desc: [
 		"Shows where aura pools thick or thin across the land.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
@@ -6858,7 +6709,7 @@
 	]
 	quest.4200000000220532.title: "Ritual Chalk (Tribal)"
 	quest.4200000000220533.quest_desc: [
-		"Place the heart — Chime + Shard + leather (Desk sells leather). A rising edge 17 to 23 ticks after the last is 24 Pulse; anything else 10; nothing closer than 8 ticks counts. A one-second clock is a buff; a fast spam clock is a nerf.",
+		"Place the heart — Chime + Shard + leather (Desk sells leather).",
 		"How: Chime + Shard + leather. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse."
 	]
 	quest.4200000000220533.title: "Drumheart Beat"
@@ -6878,7 +6729,7 @@
 	]
 	quest.4200000000220536.title: "Pulse Cell"
 	quest.4200000000220537.quest_desc: [
-		"Seat a reusable Echo catalyst; add two different totem voices within eight blocks. A scattered heap counts at most five voices. A Voice Ring of totems at radius 3 is what six-voice resonance now means. Redstone pauses it.",
+		"Seat a reusable Echo catalyst; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it.",
 		"How: seat an Echo catalyst, two different totems within 8. Redstone pauses it."
 	]
 	quest.4200000000220537.title: "Pulse Resonator"
@@ -7004,7 +6855,7 @@
 	quest.420000000022054F.title: "Rite Pedestal"
 	quest.4200000000220550.quest_desc: [
 		"Strike open The March.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: craft, strike it, walk the March. Bind a return compass first."
 	]
 	quest.4200000000220550.title: "Gate Drum (Tribal)"
 	quest.4200000000220551.quest_desc: [
@@ -7397,37 +7248,37 @@
 	]
 	quest.4200000000228010.title: "The camp keeps the beat"
 	quest.4200000000228011.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Knotted Root beside an Earth Seal; 600 Pulse. For twenty minutes crops, saplings and stems in the nine chunks around the brazier grow faster. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks.",
+		"Two stone and the reagent around the seal; the seal is handed back. Knotted Root beside an Earth Seal; 600 Pulse. For twenty minutes crops, saplings and stems in the nine chunks around the brazier grow faster. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228011.title: "Rite Tablet: Green Blessing"
 	quest.4200000000228012.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Reed Fang beside a Water Seal; 400 Pulse. Twenty minutes of rain, for the cisterns and the crops. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks.",
+		"Two stone and the reagent around the seal; the seal is handed back. Reed Fang beside a Water Seal; 400 Pulse. Twenty minutes of rain, for the cisterns and the crops. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228012.title: "Rite Tablet: Rain Calling"
 	quest.4200000000228013.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Storm Wing beside an Air Seal; 400 Pulse. Forty minutes of clear sky. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks.",
+		"Two stone and the reagent around the seal; the seal is handed back. Storm Wing beside an Air Seal; 400 Pulse. Forty minutes of clear sky. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228013.title: "Rite Tablet: Sky Clearing"
 	quest.4200000000228014.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Ember Heart beside a Fire Seal; 800 Pulse. Hurries the night to the next sunrise for the whole world. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks.",
+		"Two stone and the reagent around the seal; the seal is handed back. Ember Heart beside a Fire Seal; 800 Pulse. Hurries the night to the next sunrise for the whole world. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228014.title: "Rite Tablet: Dawn Calling"
 	quest.4200000000228015.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Sentinel Sigil beside a Spirit Seal; 600 Pulse. Fifteen minutes without hostile spawns within sixty-four blocks. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks.",
+		"Two stone and the reagent around the seal; the seal is handed back. Sentinel Sigil beside a Spirit Seal; 600 Pulse. Fifteen minutes without hostile spawns within sixty-four blocks. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228015.title: "Rite Tablet: Still Night"
 	quest.4200000000228016.quest_desc: [
-		"Two stone and the reagent around the seal; the seal is handed back. Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them. Sneak-use the tablet on a Ritual Brazier with that seal seated. A tablet rite wants a Rite Circle: brazier in the middle, four Rite Pedestals on the diagonals, chalk joining them. Seat four matching totems on the cardinals and the rite costs a quarter less and lasts twice as long. Brazier blessings still need only the seal. Pulse comes from the lattice within eight blocks.",
+		"Two stone and the reagent around the seal; the seal is handed back. Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them. Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228016.title: "Rite Tablet: Ley Binding"
 	quest.4200000000228017.quest_desc: [
-		"Perform any rite. Tablet rites need the Rite Circle; a seated blessing does not. If the lattice around the brazier holds too little Pulse, nothing is consumed and the brazier says so.",
+		"Perform any rite. If the lattice around the brazier holds too little Pulse, nothing is consumed and the brazier says so.",
 		"How: make or find First Rite. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.4200000000228017.title: "First Rite"
@@ -7467,135 +7318,10 @@
 	]
 	quest.420000000022801E.title: "A line in the song"
 	quest.420000000022801F.quest_desc: [
-		"Sneak-use the Spirit Codex on any Tribal block for a plain report: stored Pulse, the generators feeding it, the attunements within eight blocks, what is missing for the current recipe, a full output, a redstone pause, an unloaded relay end. On a pattern anchor it names the tier, the facing, and the first three things missing, with particle ghosts where they should go. Tick this when it has told you something you did not know.",
+		"Sneak-use the Spirit Codex on any Tribal block for a plain report: stored Pulse, the generators feeding it, the attunements within eight blocks, what is missing for the current recipe, a full output, a redstone pause, an unloaded relay end. Tick this when it has told you something you did not know.",
 		"How: make or find Ask the Codex why. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.420000000022801F.title: "Ask the Codex why"
-	quest.4200000000228020.quest_desc: [
-		"Echo Shards and cobble around a Drumheart. A font and four chalk marks asks for cobblestone at 4 Pulse a second — slow enough to run on a hand-drummed Drumheart. Brace it with Anchor Stones and bring Earth for stone. Add Fire and Water for obsidian at 24 Pulse a second, or feed 250 mB water and 250 mB lava for the same obsidian at 6. The Pad-keepers keep one working at their camp.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228020.title: "Ask the stone to stay"
-	quest.4200000000228021.quest_desc: [
-		"Complete any pattern. Placement is the ritual: scattered devices are not a rite. Seven shapes, all rotation-independent. Sneak-use the Spirit Codex on the anchor and it names the tier, the facing, and the first three things missing, with particle ghosts where they should go.",
-		"How: make or find Draw the Circle. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228021.title: "Draw the Circle"
-	quest.4200000000228022.quest_desc: [
-		"Let the Stone Font finish one craft. Held redstone stills it; a struck pulse calls it once. A comparator reads its progress. Camp members count as owners.",
-		"How: make or find Stone Stays. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228022.title: "Stone Stays"
-	quest.4200000000228023.quest_desc: [
-		"Sneak-use the Spirit Codex on a Stone Font, a Resonance Mesh or a gate keystone. The ghosts are the pattern. Tick this when it has shown you a gap.",
-		"How: make or find See the missing pieces. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228023.title: "See the missing pieces"
-	quest.4200000000228024.quest_desc: [
-		"The Drumheart now pays by the same tempo the hand already used: 24 Pulse on a 17-to-23-tick rising edge, 10 otherwise, nothing closer than 8 ticks. A one-second clock is a large buff. A fast spam clock is a nerf. Tick this when you have retuned a farm, or when a hand strike still feels right.",
-		"How: make or find Keep the tempo. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228024.title: "Keep the tempo"
-	quest.4200000000228025.quest_desc: [
-		"March Stone, Attuned Echo, Spiritweave and a Copper Resonator. Seat it at the centre of a Listening Pit: stone underfoot, four Anchor Stones at the corners, chalk from each edge to the middle, an Ancestral Cache beside it and the Earth voice in reach. It calls up exactly what a silk-touch mining trip would — the raw item for a metal, the ore block for a gem. The Grit-singers keep a whole pit at their camp.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228025.title: "The Grit-singers' machine"
-	quest.4200000000228026.quest_desc: [
-		"Four from March Stone and an Echo Shard. They brace a Stone Font, a Listening Pit and a Far Gate. Without them the pattern will not close.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228026.title: "Brace the corners"
-	quest.4200000000228027.quest_desc: [
-		"Run one Listening Pit cycle. Four bands: common (coal, copper, iron), deep (gold, redstone, lapis), hot (Nether quartz and gold, never debris) and rare (diamond, emerald, and whatever the pack added). Deep Listening is seven-by-seven; the Grit-singers gate those bands by standing — Friend, Kin, then Voice with their Kinship Totem inside the pattern. A sample on top is a filter, never an ingredient. Mining stays cheaper; the pit buys walking away from it.",
-		"How: make or find Ask the Ground. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228027.title: "Ask the Ground"
-	quest.4200000000228028.quest_desc: [
-		"A metal goes raw or silk-touched ore to grit to ingot in any furnace. A gem skips the fire: silk-touched ore shatters straight into the gem at twice the ore's own drop. The gem itself is never an input. Modded metals ride one Mineral Grit that names its material. Tick this when a furnace has eaten grit, or when a gem came out of the pit without one.",
-		"How: make or find Grit is the metal; gems skip the fire. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228028.title: "Grit is the metal; gems skip the fire"
-	quest.4200000000228029.quest_desc: [
-		"Water washes for 250 mB and an extra output every third cycle. Air quickens the cycle so Pulse per item does not move. Fire opens the hot band at twice the Pulse. Spirit listens a band deeper. The Loom halves the substrate. Tick this when a second voice has changed what the pit gave you.",
-		"How: make or find Every voice trades, none multiply. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228029.title: "Every voice trades, none multiply"
-	quest.420000000022802A.quest_desc: [
-		"March Stone, copper and an Echo Shard make four frames. A Way Gate is a five-by-five ring without its corners, keystone at the bottom centre. Players, mobs and dropped items all pass.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.420000000022802A.title: "A ring of the way"
-	quest.420000000022802B.quest_desc: [
-		"Frames around a Resonant Core, with a Spirit Shard and a Pulse Cell. 400 Pulse to light a Way Gate out of its own 600; 20 Pulse per traveller. Link with a bound Waystone Compass or with chalk, within 64 blocks. A comparator reads 0 unlinked, 1 to 14 stored Pulse, 15 mid-transit. Break a keystone and its partner is released. `/tribalpower gate list` and `/tribalpower gate unlink`.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.420000000022802B.title: "The stone that remembers both ends"
-	quest.420000000022802C.quest_desc: [
-		"Light a Way Gate. It lands you inside the far gate's own interior and never terraforms; if there is nowhere to stand, the trip refuses and the Pulse comes back. The far end is held loaded around your arrival.",
-		"How: make or find Open the Way. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000022802C.title: "Open the Way"
-	quest.420000000022802D.quest_desc: [
-		"Blank Seal, Loom Thread and a Spirit Shard. The Far Gate is a taller frame braced by four Anchor Stones, with the Loom voice nearby — so crossing dimensions sits behind The Unsung. Linked with a Gate Sigil; 120 Pulse per traveller. The astral relay still needs no frame.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.420000000022802D.title: "A name for the long thread"
-	quest.420000000022802E.quest_desc: [
-		"Travel a Far Gate. Crossing dimensions is a built rite, not a compass trick. Camp members count as owners of the keystones.",
-		"How: make or find The Long Thread. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.420000000022802E.title: "The Long Thread"
-	quest.420000000022802F.quest_desc: [
-		"Copper, a Cinder Knot, a Fire Seal and March Planks. Burns furnace fuel for up to 20 Pulse a second while lit. Uncapped on purpose — it spends something. The Drumhearts keep one at their camp.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.420000000022802F.title: "Fire keeps a furnace"
-	quest.4200000000228030.quest_desc: [
-		"Spiritweave, a Storm Wing, an Air Seal and March Planks. 2 Pulse a second at y 80 under open sky, up to 6 high in a storm. Harps within 12 blocks divide the wind. The Pattern-weavers keep one at their camp.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228030.title: "Air sings the altitude"
-	quest.4200000000228031.quest_desc: [
-		"Leather, March Planks, a Knotted Root and a Water Seal. 3 Pulse a second beside water, 10 for 100 mB a second, doubled in rain. Passive drums within 8 blocks divide the water; a piped drum is uncapped. The Rootbinders keep one at their camp.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228031.title: "Water keeps time"
-	quest.4200000000228032.quest_desc: [
-		"A Bell Fragment, copper, a Spirit Seal and a Spirit Shard. 20 Pulse a hostile death, 5 a passive, tolled out at no more than 8 a second. A 2,000 reservoir, then it idles. The Seal-carvers keep one at their camp.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228032.title: "Spirit tolls the dead"
-	quest.4200000000228033.quest_desc: [
-		"March Crystal, Loom Thread, Spiritweave and a Resonant Core. 1 Pulse a second per distinct nearby voice, max 6, doubled during a Ley Binding. The Crystal Spire keeps one.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228033.title: "The Loom counts the choir"
-	quest.4200000000228034.quest_desc: [
-		"March Stone, Bound Echo and a Pulse Cell. 4,000 Pulse each, five to a column. Turns a mob farm's bursty Wake Bell into the steady draw a pit wants. A held signal stills every generator; a comparator reads the buffer.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228034.title: "Hold the burst"
-	quest.4200000000228035.quest_desc: [
-		"Have all six generators producing within 32 blocks of each other, one per voice: Drumheart, Ember Horn, Wind Harp, Wave Drum, Wake Bell, Loom Anchor. No automatable loop is net positive. Coal through the pit and back costs more than it returns.",
-		"How: make or find Six Voices Singing. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228035.title: "Six Voices Singing"
-	quest.4200000000228036.quest_desc: [
-		"Two stone and Spirit Reed around a Water Seal; the seal is handed back. 300 Pulse marks an adjacent Spirit Cistern a spring, refilling 100 mB a second for ten minutes. It is where the water for a Wave Drum, for Washing, and for anything else that drinks comes from. March-side lava stays a manual haul.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228036.title: "Rite Tablet: Spring Calling"
-	quest.4200000000228037.quest_desc: [
-		"One Drum Circle record sits in a chest at the circle; The Unsung carries another. Play it in a jukebox. There is no craft — the March kept the song.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
-	]
-	quest.4200000000228037.title: "The circle still plays"
-	quest.4200000000228038.quest_desc: [
-		"Rite Pedestals now hold and show one item; a comparator reads occupied. That is an automatic rite loop: a relay restocks a pedestal, a clock strikes the brazier, the tablet fires, the comparator reports empty. No fake players. Tick this when a circle has stood, or when a comparator has told you a pedestal is empty.",
-		"How: make or find Four pedestals, chalk, a brazier. JEI names the recipe; earlier quests in this chapter name the station and inputs."
-	]
-	quest.4200000000228038.title: "Four pedestals, chalk, a brazier"
 	quest.420000000023058C.quest_desc: [
 		"Grit-singers never cut a stone the same way twice. This bench remembers every cut.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
@@ -8186,7 +7912,7 @@
 	]
 	quest.42000000002705FB.title: "Totem: the First Cut"
 	quest.42000000002705FC.quest_desc: [
-		"What severed the Loom. Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam. Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut. After the Reweave only.",
+		"A shape the Cut left on the shard, not a confession of who swung. Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam. Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut. After the Reweave only.",
 		"How: make or find Re-tension: the First Cut. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.42000000002705FC.title: "Re-tension: the First Cut"
@@ -8213,16 +7939,6 @@
 		"How: Whisker Codex Snapped Guardians — totem, arena, relic. Totem answers on the pad."
 	]
 	quest.4200000000270600.title: "Relic: Overweaver Shuttle"
-	reward.5000000000060135.title: "Thread of Return: +1 Clowder life"
-	reward.5000000000080193.title: "Thread of Return: +1 Clowder life"
-	reward.50000000000901CC.title: "Thread of Return: +1 Clowder life"
-	reward.5000000000170337.title: "Thread of Return: +1 Clowder life"
-	reward.50000000002004DD.title: "Thread of Return: +1 Clowder life"
-	reward.5000000000220581.title: "Thread of Return: +1 Clowder life"
-	chapter.3100000000000028.chapter_subtitle: [
-		"Walk the March. Tame a yellow. Ester waits at the Hall after you have been there."
-	]
-	chapter.3100000000000028.title: "Pad-runners"
 	quest.42000000002805E3.quest_desc: [
 		"Wild pad-runners do not spawn on a void pad. Strike a Gate Drum and walk the March. Yellows graze the Steppe and Reed Fen. Highlands lean Great. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
@@ -8344,4 +8060,382 @@
 		"How: Ester places the Square. You do not need to craft a gate."
 	]
 	quest.42000000002805FA.title: "Square Gate"
+	quest.42000000002905FB.quest_desc: [
+		"The void never grew Pam's bushes. Sieve dirt with a string mesh. Break the garden for arid seeds — chili, corn, cactus fruit.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"How: sieve dirt with a string mesh or better (Ex Deorum or Voidloom)."
+	]
+	quest.42000000002905FB.title: "Arid Garden"
+	quest.42000000002905FC.quest_desc: [
+		"Cold crops from the same dirt. Break the bush; plant what you need.",
+		"How: sieve dirt with a string mesh or better."
+	]
+	quest.42000000002905FC.title: "Frost Garden"
+	quest.42000000002905FD.quest_desc: [
+		"Under-leaf crops. Same sieve, different bush.",
+		"How: sieve dirt with a string mesh or better."
+	]
+	quest.42000000002905FD.title: "Shaded Garden"
+	quest.42000000002905FE.quest_desc: [
+		"Wet crops. Rice and the rest of the fen-minded seeds live here.",
+		"How: sieve dirt with a string mesh or better."
+	]
+	quest.42000000002905FE.title: "Soggy Garden"
+	quest.42000000002905FF.quest_desc: [
+		"Warm crops. Keep a bush in a chest; they still spread if you plant them.",
+		"How: sieve dirt with a string mesh or better."
+	]
+	quest.42000000002905FF.title: "Tropical Garden"
+	quest.4200000000290600.quest_desc: [
+		"The last of the six. Every HarvestCraft seed on the pad starts as one of these bushes.",
+		"How: sieve dirt with a string mesh or better."
+	]
+	quest.4200000000290600.title: "Windy Garden"
+	quest.4200000000290601.quest_desc: [
+		"Not the Farmer's Delight board. Planks and a stick. Prep fruit and veg before they hit a pot.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290601.title: "Harvest Board"
+	quest.4200000000290602.quest_desc: [
+		"Soups, stews, and stock. Iron and a stick. Sit it on heat.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290602.title: "Harvest Pot"
+	quest.4200000000290603.quest_desc: [
+		"Pan meals. Different craft from the Delight skillet; JEI tells them apart.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290603.title: "Harvest Skillet"
+	quest.4200000000290604.quest_desc: [
+		"Sauces and reductions. Keep it next to the pot.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290604.title: "Saucepan"
+	quest.4200000000290605.quest_desc: [
+		"Pies, breads, and anything that wants an oven shape.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290605.title: "Bakeware"
+	quest.4200000000290606.quest_desc: [
+		"Batters, doughs, salads. The quiet station.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290606.title: "Mixing Bowl"
+	quest.4200000000290607.quest_desc: [
+		"Fruit in, punch out. Pair it with a tree, not a garden.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290607.title: "Juicer"
+	quest.4200000000290608.quest_desc: [
+		"Flatten dough. Bakeware is waiting.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290608.title: "Rolling Pin"
+	quest.4200000000290609.quest_desc: [
+		"Flour, spices, pastes. Wheat becomes a kitchen staple here.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290609.title: "Grinder"
+	quest.420000000029060A.quest_desc: [
+		"A bucket of water and the pot line. Most recipes want this, not a vanilla bucket.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029060A.title: "Fresh Water"
+	quest.420000000029060B.quest_desc: [
+		"Milk in a HarvestCraft bottle. Cows, or a bucket split into portions.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029060B.title: "Fresh Milk"
+	quest.420000000029060C.quest_desc: [
+		"Water in a pot, or a grind. Almost every savoury recipe asks.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029060C.title: "Salt"
+	quest.420000000029060D.quest_desc: [
+		"Wheat through the grinder. Dough starts here.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029060D.title: "Flour"
+	quest.420000000029060E.quest_desc: [
+		"Flour, salt, and fresh water. Pies and breads share this lump.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029060E.title: "Dough"
+	quest.420000000029060F.quest_desc: [
+		"Bones or veg in the pot. Soups want a bottle of this, not a vague broth.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029060F.title: "Stock"
+	quest.4200000000290610.quest_desc: [
+		"Iron-mesh dirt. Grow it on the pad; vanilla oak will not drop Pam's apples.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290610.title: "Apple Tree"
+	quest.4200000000290611.quest_desc: [
+		"Acid for dressings and fish. Same iron sieve.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290611.title: "Lemon Tree"
+	quest.4200000000290612.quest_desc: [
+		"Bark spice. Bakes and teas.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290612.title: "Cinnamon Tree"
+	quest.4200000000290613.quest_desc: [
+		"Milk, oil, and tropical cooking.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290613.title: "Coconut Palm"
+	quest.4200000000290614.quest_desc: [
+		"Beans for sweets. Plant it like the others.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290614.title: "Vanilla Vine"
+	quest.4200000000290615.quest_desc: [
+		"Harvest the tree, not the vanilla oak. Juicer and bakeware both want these.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290615.title: "Pam's Apple"
+	quest.4200000000290616.quest_desc: [
+		"Bakeware, dough, sugar, apples. The first finished HarvestCraft bake.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290616.title: "Apple Pie (Harvest)"
+	quest.4200000000290617.quest_desc: [
+		"Juicer plus mixed fruit. A pad drink that is not melon juice.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290617.title: "Fruit Punch"
+	quest.4200000000290618.quest_desc: [
+		"Skillet, bread, cheese. Fast lunch while the trees grow.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290618.title: "Grilled Cheese"
+	quest.4200000000290619.quest_desc: [
+		"Arid garden peppers, meat, pot. Food Extended starts earning its keep.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.4200000000290619.title: "Chili Bowl"
+	quest.420000000029061A.quest_desc: [
+		"Spices from the grinder, veg from the gardens, pot work.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.420000000029061A.title: "Curry Plate"
+	quest.420000000029061B.quest_desc: [
+		"Dough, sauce, meat. Bakeware. A full HarvestCraft meal.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.420000000029061B.title: "Pepperoni Pizza"
+	quest.420000000029061C.quest_desc: [
+		"Soggy-garden rice and a skillet. Different dish from the Delight fried rice.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.420000000029061C.title: "Garden Fried Rice"
+	quest.420000000029061D.quest_desc: [
+		"Leaves and freshwater. The quiet end of the kitchen line.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.420000000029061D.title: "Green Tea"
+	quest.420000000029061E.quest_desc: [
+		"Oil and savoury fruit. Optional iron-mesh catch.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.420000000029061E.title: "Olive Tree"
+	quest.420000000029061F.quest_desc: [
+		"Juice and zest. Optional.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.420000000029061F.title: "Orange Tree"
+	quest.4200000000290620.quest_desc: [
+		"Summer fruit. Optional.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290620.title: "Peach Tree"
+	quest.4200000000290621.quest_desc: [
+		"Pepper for the grinder. Optional.",
+		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+	]
+	quest.4200000000290621.title: "Peppercorn Tree"
+	quest.4200000000290622.quest_desc: [
+		"Fryer fat. Optional staple.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290622.title: "Cooking Oil"
+	quest.4200000000290623.quest_desc: [
+		"Milk and salt. Optional staple.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290623.title: "Butter"
+	quest.4200000000290624.quest_desc: [
+		"Eggs and oil. Optional.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290624.title: "Mayonnaise"
+	quest.4200000000290625.quest_desc: [
+		"Mixing bowl, mixed fruit. Optional.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.4200000000290625.title: "Fruit Salad"
+	quest.4200000000290626.quest_desc: [
+		"Pasta night. Optional.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.4200000000290626.title: "Spaghetti Dinner"
+	quest.4200000000290627.quest_desc: [
+		"Breakfast flex. Optional.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.4200000000290627.title: "Bacon Pancakes"
+	quest.4200000000290628.quest_desc: [
+		"Needs an avocado tree. Optional.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.4200000000290628.title: "Avocado Toast"
+	quest.4200000000290629.quest_desc: [
+		"Not the Delight hamburger. Optional.",
+		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+	]
+	quest.4200000000290629.title: "Onion Burger"
+	quest.420000000029062A.quest_desc: [
+		"Juicer, apples. Optional.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029062A.title: "Apple Juice"
+	quest.420000000029062B.quest_desc: [
+		"Bakeware leftover bread. Optional.",
+		"How: craft the station from planks and iron, then cook HarvestCraft staples in JEI."
+	]
+	quest.420000000029062B.title: "Toast Slice"
+	quest.42000000002A062C.quest_desc: [
+		"Four sticks in a square. Place them on farmland. Vanilla seeds convert when you plant — Mystical Agriculture seeds do not.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"How: four sticks in a square. Place on farmland, then plant a seed."
+	]
+	quest.42000000002A062C.title: "Wooden Crop Sticks"
+	quest.42000000002A062D.quest_desc: [
+		"A book that remembers every plant you analyze. Keep it in the analyzer.",
+		"How: book and crop sticks. It records every plant you analyze."
+	]
+	quest.42000000002A062D.title: "Crop Journal"
+	quest.42000000002A062E.quest_desc: [
+		"Look at a crop to read growth, gain, strength, and the rest of the genome without picking it.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A062E.title: "Magnifying Glass"
+	quest.42000000002A062F.quest_desc: [
+		"Put a seed in. Stats, species, and a page in the journal. This is how breeding becomes visible.",
+		"How: glass, wood, and a journal. Put a seed in to read stats."
+	]
+	quest.42000000002A062F.title: "Seed Analyzer"
+	quest.42000000002A0630.quest_desc: [
+		"Weeds are off on this pack, but the rake still clears a stick. Carry one anyway.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0630.title: "Wooden Rake"
+	quest.42000000002A0631.quest_desc: [
+		"Pick a plant up and put it down with its stats intact. Move a 10-10 without breaking it.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0631.title: "Trowel"
+	quest.42000000002A0632.quest_desc: [
+		"Clip a mature plant for its clipping product and reset it. Flowers and some HarvestCraft crops.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0632.title: "Clipper"
+	quest.42000000002A0633.quest_desc: [
+		"Carry a breeding line. Fill it from the analyzer, empty it onto sticks.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0633.title: "Seed Bag"
+	quest.42000000002A0634.quest_desc: [
+		"Sturdier sticks. Same planting rules, less fuss when you bump them.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0634.title: "Iron Crop Sticks"
+	quest.42000000002A0635.quest_desc: [
+		"The better rake. Still a habit, even with weeds gone.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0635.title: "Iron Rake"
+	quest.42000000002A0636.quest_desc: [
+		"Hold water for the channels. A pad farm that does not carry buckets every morning.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0636.title: "Irrigation Tank"
+	quest.42000000002A0637.quest_desc: [
+		"Run water from the tank along the row. Crops drink from the channel, not from you.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0637.title: "Irrigation Channel"
+	quest.42000000002A0638.quest_desc: [
+		"Stop and start a line without breaking the tank.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0638.title: "Channel Valve"
+	quest.42000000002A0639.quest_desc: [
+		"Rain in a square. Sit it on a channel over the sticks.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0639.title: "Sprinkler"
+	quest.42000000002A063A.quest_desc: [
+		"Cover a channel so you can walk the row.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A063A.title: "Channel Grate"
+	quest.42000000002A063B.quest_desc: [
+		"Read the room. Light, humidity, the reason a crop stalled.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A063B.title: "Greenhouse Monitor"
+	quest.42000000002A063C.quest_desc: [
+		"Late sticks. Fireproof, stubborn, for the plants that ask too much of wood. Two neighbouring mature crops can cross-breed.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A063C.title: "Obsidian Crop Sticks"
+	quest.42000000002A063D.quest_desc: [
+		"A channel you can walk. Optional.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A063D.title: "Hollow Channel"
+	quest.42000000002A063E.quest_desc: [
+		"Ore crops drop these. Optional breeding line.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A063E.title: "Copper Nugget Crop"
+	quest.42000000002A063F.quest_desc: [
+		"Quartz from a stick. Optional.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A063F.title: "Quartz Shard Crop"
+	quest.42000000002A0640.quest_desc: [
+		"Fuel from a crop. Optional.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0640.title: "Coal Pebble"
+	quest.42000000002A0641.quest_desc: [
+		"Late ore crop. Optional.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0641.title: "Emerald Shard Crop"
+	quest.42000000002A0642.quest_desc: [
+		"Late ore crop. Optional.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0642.title: "Diamond Shard Crop"
+	quest.42000000002A0643.quest_desc: [
+		"Peak ore crop. Optional and slow.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0643.title: "Netherite Sliver"
+	quest.42000000002A0644.quest_desc: [
+		"AgriCraft's own flower. Optional.",
+		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+	]
+	quest.42000000002A0644.title: "Amathyllis Petal"
+	reward.5000000000060135.title: "Thread of Return: +1 Clowder life"
+	reward.5000000000080193.title: "Thread of Return: +1 Clowder life"
+	reward.50000000000901CC.title: "Thread of Return: +1 Clowder life"
+	reward.5000000000170337.title: "Thread of Return: +1 Clowder life"
+	reward.50000000002004DD.title: "Thread of Return: +1 Clowder life"
+	reward.5000000000220581.title: "Thread of Return: +1 Clowder life"
 }
