@@ -504,7 +504,7 @@ element {
 
 element {
   interactable = false
-  source = Open FTB Quests from your inventory and begin with Soil.
+  source = Right-click the Whisker Codex. Open Start here. Grave (`): quests. Soil is first.
   source_mode = direct
   shadow = true
   case_mode = normal

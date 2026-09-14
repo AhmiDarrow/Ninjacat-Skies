@@ -75,7 +75,7 @@ public final class SkyboundEvents {
         persistent.put(ROOT, data);
         enforceLives(player);
 
-        player.displayClientMessage(NinjacatText.teal("Skybound. The Loom is cut. Start with Soil."), true);
+        player.displayClientMessage(NinjacatText.teal("Skybound. The Loom is cut. Codex: Start here. Soil first."), true);
         player.displayClientMessage(
                 NinjacatText.gold("Island Charter in hand — Dock: Create Team. Pad chests restore kits after claim."),
                 false
