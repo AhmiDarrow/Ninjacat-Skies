@@ -182,7 +182,7 @@
 	quest.420000000001000E.title: "Frayed Currency"
 	quest.420000000001000F.quest_desc: [
 		"Damaged, but it still assigns work.",
-		"Right-click for quests and rewards. Shift + right-click for the lore pages.",
+		"Right-click the book and open Start here. Grave (`): the assignment list.",
 		"How: starter kit / dock chest. Right-click the book; Grave (`) is the assignment list."
 	]
 	quest.420000000001000F.title: "Codex in Hand"

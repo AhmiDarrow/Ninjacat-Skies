@@ -61,6 +61,9 @@ class CodexBookTests(unittest.TestCase):
             self.assertNotIn('Open FTB Quests', text, path.name)
             self.assertNotIn('press C', text, path.name)
             self.assertIn('Start here', text, path.name)
+        quests = (ROOT/'pack/overrides/config/ftbquests/quests/lang/en_us.snbt').read_text(encoding='utf-8')
+        self.assertNotIn('Shift + right-click', quests)
+        self.assertIn('open Start here', quests)
 
     def test_beginner_lessons_and_navigation(self):
         entries={f'ninjacatskies:{p.parent.name}/{p.stem}' for p in (BOOK/'entries').glob('*/*.json')}
