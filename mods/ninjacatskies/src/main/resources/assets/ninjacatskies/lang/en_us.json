@@ -36,5 +36,6 @@
   "tooltip.ninjacatskies.cache_large": "12 random parcels; may include ingots, books and bottled experience.",
   "tooltip.ninjacatskies.cache_open": "Use to unwrap. Supplies can repeat. No machines or extra lives.",
   "tooltip.ninjacatskies.cache_combine": "Craft 4 small → 1 medium; 3 medium → 1 large.",
-  "message.ninjacatskies.cache_empty": "The cache could not open. Its supplies table is empty; the seal is kept."
+  "message.ninjacatskies.cache_empty": "The cache could not open. Its supplies table is empty; the seal is kept.",
+  "message.ninjacatskies.post_locked": "The Post is locked by redstone."
 }

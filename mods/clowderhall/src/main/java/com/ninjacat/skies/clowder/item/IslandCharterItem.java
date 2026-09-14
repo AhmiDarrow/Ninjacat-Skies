@@ -131,7 +131,7 @@ public class IslandCharterItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(NinjacatText.indigo("Names a pad as yours. Ink still wet."));
-        tooltip.add(Component.literal("Use: Clowder panel. Right-click a friend: invite. Sneak-use on your pad: seal spawn."));
+        tooltip.add(Component.translatable("item.clowderhall.island_charter.desc"));
     }
 
     private static boolean playerHasRulesBook(ServerPlayer player) {

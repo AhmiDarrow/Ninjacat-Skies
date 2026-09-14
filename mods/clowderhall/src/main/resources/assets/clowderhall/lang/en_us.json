@@ -1,6 +1,7 @@
 {
   "itemGroup.clowderhall": "Clowder Hall",
   "item.clowderhall.island_charter": "Island Charter",
+  "item.clowderhall.island_charter.desc": "Use: Clowder panel. Right-click a friend: invite. Sneak-use on your pad: seal spawn.",
   "item.clowderhall.hub_key": "Hub Key",
   "item.clowderhall.hub_key.desc": "Brass still cold. Toggle Clowder Hall — enter or return.",
   "item.clowderhall.strand_banner_pattern": "Strand Banner Pattern",

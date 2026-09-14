@@ -46,6 +46,11 @@ class CodexBookTests(unittest.TestCase):
             self.assertIn('Start here', core[key], key)
             self.assertNotIn('story and what to do', core[key].lower())
             self.assertEqual(core[key], pack[key], key)
+        tips = (ROOT/'pack/overrides/kubejs/client_scripts/voidloom_tooltips.js').read_text(encoding='utf-8')
+        controls = (ROOT/'pack/overrides/CONTROLS.md').read_text(encoding='utf-8')
+        self.assertNotIn('story and what to do', tips)
+        self.assertNotIn('story and what to do', controls)
+        self.assertIn('Start here', controls)
 
     def test_beginner_lessons_and_navigation(self):
         entries={f'ninjacatskies:{p.parent.name}/{p.stem}' for p in (BOOK/'entries').glob('*/*.json')}
