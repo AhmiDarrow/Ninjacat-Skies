@@ -2632,7 +2632,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
         ('rite_ley_binding', 'Ley Binding', 'Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them.', ['ritual_brazier', 'loom_seal', 'loom_thread']),
     ]
     for i, (key, name, desc, parents) in enumerate(rites):
-        item(key, 'Rite Tablet: ' + name, 'Two stone and the reagent around the seal; the seal is handed back. ' + desc + ' Sneak-use the tablet on a Ritual Brazier with that seal seated; the Pulse is drawn from the lattice within eight blocks.',
+        item(key, 'Rite Tablet: ' + name, 'Two stone and the reagent around the seal; the seal is handed back. ' + desc + ' Sneak-use the tablet on a Ritual Brazier with that seal seated, inside its Rite Circle (four pedestals on the diagonals, chalk joining them); the Pulse is drawn from the lattice within eight blocks.',
              parents, (i % 3) * 2.7, 50 + (i // 3) * 1.8, reward='tribalpower:blank_seal', reward_count=1)
     adv('first_rite', 'first_rite', 'First Rite',
         'Perform any rite. If the lattice around the brazier holds too little Pulse, nothing is consumed and the brazier says so.',
