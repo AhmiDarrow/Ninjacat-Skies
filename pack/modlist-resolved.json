@@ -874,19 +874,19 @@
     "name": "Ninjacat Skies Core",
     "slug": "ninjacat-skies-core",
     "projectId": 1689718,
-    "fileId": 8869164,
-    "filename": "ninjacatskies-core-0.4.7.jar",
+    "fileId": 8876592,
+    "filename": "ninjacatskies-core-0.4.8.jar",
     "releaseType": 1,
-    "sha1": "e6bc2660dd3f4acf4f679c2b5e49db6072269fed"
+    "sha1": "057a16e129d03d390146bf1aafc4dc4f802fbdcb"
   },
   {
     "key": "Tribal Power",
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8869249,
-    "filename": "tribalpower-3.3.2.jar",
+    "fileId": 8876593,
+    "filename": "tribalpower-3.4.1.jar",
     "releaseType": 1,
-    "sha1": "2d9a41a1b105a4978f4b8e6e003871f38021b311"
+    "sha1": "11806d4c589e40028135fe6a33027954fa193c76"
   }
 ]
