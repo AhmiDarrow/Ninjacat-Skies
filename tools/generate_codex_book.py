@@ -418,7 +418,7 @@ MEMORY = [
               "it like both."),
          text("Halls to the lintel",
               "Ancestor Halls stand in the steppe and highlands with their doors at the lintel — sunk, "
-              "not fallen. Twelve tablets between three rooms. Hollow Sentinels on a job nobody cancelled. "
+              "not fallen. Four tablets in each hall. Hollow Sentinels on a job nobody cancelled. "
               "Read every tablet. The dead are not asking for worship. They are asking for the record to "
               "be finished."),
          text("Where tension pools",
@@ -449,7 +449,7 @@ entry("memory", "what_mending_means", "What mending means", "Nine agreeing, agai
          "it. If it is still dark, the work is not finished — not because you failed, but because someone "
          "else has not had their hour yet."),
     text("Tablets and drums",
-         "The March kept the record. Ancestor Halls: twelve tablets, three rooms, sentinels on a job "
+         "The March kept the record. Ancestor Halls: four tablets each, three rooms, sentinels on a job "
          "nobody cancelled. Read every tablet before you call the work done. The Silent Drum in the "
          "highlands still takes four beats, a breath apart. Strike it when you are ready. The Unsung is "
          "not a boss to loot. It is the March asking whether you learned the tempo."),
@@ -542,7 +542,7 @@ entry("braid", "living_lattice", "The Living Lattice", "Workshops, rites and pat
     text("Three distances",
          "Cargo grows Local to Longreach to Astral. Paths grow Waystone to Horizon to Astral. March Crystal "
          "opens the last tier: across dimensions.\n\nHow:\n"
-         "1. Snap a relay plate onto a machine face. Seat the same Bond item in both plates.\n"
+         "1. Snap a relay plate onto a machine face. Seat the same unique Bond item in both plates.\n"
          "2. Leave both ends loaded. Unloaded destinations pause; they do not void.\n"
          "3. Bind a compass to a dry floor; keep two clear blocks above it."),
     text("The sixth voice",
@@ -630,11 +630,11 @@ TRIBES = [
 CAMPS = {
     "soil": ("the March steppe", "dirt and moss blocks, bread, Echo Shards", "Earth", "hearths and caches"),
     "stone": ("the March highlands", "raw ores, grits, Attuned Echo", "Earth", "Echo Shards for raw ore, Attuned Echo for grit"),
-    "sprout": ("the March steppe", "saplings, seeds, Mossback Moss", "Water", "March saplings and Spirit Reed"),
-    "claw": ("the March highlands", "leather, iron, Rift Fang", "Fire", "Spiritgear and footholds"),
+    "sprout": ("the March steppe", "saplings, seeds, Mossback Scale", "Water", "March saplings and Spirit Reed"),
+    "claw": ("the March highlands", "leather, iron, Rift Tooth", "Fire", "Spiritgear and footholds"),
     "spark": ("the March steppe", "copper, charged Pulse Cells, Bone Chimes", "Fire", "Bone Chimes and Pulse Cells"),
-    "clock": ("the March crystal fields", "redstone, clocks, Storm Moth Dust", "Air", "timed songs and automation"),
-    "swarm": ("the March steppe", "honey, flowers, Lantern Fox Ember", "Air", "hives and March flowers"),
+    "clock": ("the March crystal fields", "redstone, clocks, Storm Wing", "Air", "timed songs and automation"),
+    "swarm": ("the March steppe", "honey, flowers, Lantern Down", "Air", "hives and March flowers"),
     "sigil": ("the March highlands", "blank and element seals, Spirit Shards", "Spirit", "the tribe's Seal, Blank Seals and rite tablets"),
     "spindle": ("the March crystal fields, at the Crystal Spire", "March Crystal, Loom Thread, compasses", "Loom", "Loom Thread at Friend and a Horizon Compass at Kin"),
 }
@@ -653,7 +653,7 @@ entry("tribes", "camps", "The Nine Camps", "Standing, offerings, marks.", "triba
 ], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:tribes/offering"}, hide=False)
 
 entry("tribes", "the_unsung", "The Unsung", "What the March remembers.", "tribalpower:silent_drum", 4, 2, [
-    text("The halls that kept time", "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, twelve Lore Tablets between them, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."),
+    text("The halls that kept time", "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, four Lore Tablets in each hall, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."),
     text("The Drum Circle", "Twelve pillars around a Silent Drum in the March highlands. Strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double."),
     spotlight("tribalpower:unsung_heart", "Unsung Heart", "One per kill, with Loom Thread and Resonant Cores. It crafts the Resonance Totem (Loom), the sixth voice."),
 ], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:march/ancestor_hall"}, hide=False)
