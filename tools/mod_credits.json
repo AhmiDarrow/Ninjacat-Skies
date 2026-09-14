@@ -1,5 +1,23 @@
 [
   {
+    "filename": "ae2wtlib-19.5.1.jar",
+    "projectId": 459929,
+    "name": "Applied Energistics 2 Wireless Terminals",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2-wireless-terminals",
+    "authors": [
+      "Mari_023"
+    ]
+  },
+  {
+    "filename": "AgriCraft-neoforge-1.21.1-4.0.17.jar",
+    "projectId": 1616052,
+    "name": "AgriCraft ReReloaded",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/agricraft-rereloaded",
+    "authors": [
+      "Vivoxtl"
+    ]
+  },
+  {
     "filename": "almostunified-neoforge-1.21.1-1.4.2.jar",
     "projectId": 633823,
     "name": "Almost Unified",
@@ -30,26 +48,6 @@
     ]
   },
   {
-    "filename": "appliedenergistics2-19.2.17.jar",
-    "projectId": 223794,
-    "name": "Applied Energistics 2",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2",
-    "authors": [
-      "thetechnici4n",
-      "shartte",
-      "TeamAppliedEnergistics"
-    ]
-  },
-  {
-    "filename": "ae2wtlib-19.5.1.jar",
-    "projectId": 459929,
-    "name": "Applied Energistics 2 Wireless Terminals",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2-wireless-terminals",
-    "authors": [
-      "Mari_023"
-    ]
-  },
-  {
     "filename": "Applied-Mekanistics-1.6.3.jar",
     "projectId": 574300,
     "name": "Applied Mekanistics",
@@ -58,6 +56,17 @@
       "ramidzkh",
       "shartte",
       "thetechnici4n"
+    ]
+  },
+  {
+    "filename": "appliedenergistics2-19.2.17.jar",
+    "projectId": 223794,
+    "name": "Applied Energistics 2",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2",
+    "authors": [
+      "thetechnici4n",
+      "shartte",
+      "TeamAppliedEnergistics"
     ]
   },
   {
@@ -178,6 +187,17 @@
     ]
   },
   {
+    "filename": "create-enchantment-industry-2.5.3b.jar",
+    "projectId": 688768,
+    "name": "Create: Enchantment Industry",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry",
+    "authors": [
+      "DragonsPlus",
+      "MarbleGate",
+      "RaymondBlaze"
+    ]
+  },
+  {
     "filename": "createaddition-1.7.0.jar",
     "projectId": 439890,
     "name": "Create Crafts & Additions",
@@ -193,17 +213,6 @@
     "url": "https://www.curseforge.com/minecraft/mc-mods/create-dragons-plus",
     "authors": [
       "DragonsPlus",
-      "RaymondBlaze"
-    ]
-  },
-  {
-    "filename": "create-enchantment-industry-2.5.3b.jar",
-    "projectId": 688768,
-    "name": "Create: Enchantment Industry",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry",
-    "authors": [
-      "DragonsPlus",
-      "MarbleGate",
       "RaymondBlaze"
     ]
   },
@@ -408,7 +417,7 @@
   {
     "filename": "Jade-1.21.1-NeoForge-15.10.6.jar",
     "projectId": 324717,
-    "name": "Jade 🔍",
+    "name": "Jade \ud83d\udd0d",
     "url": "https://www.curseforge.com/minecraft/mc-mods/jade",
     "authors": [
       "Snownee"
@@ -616,6 +625,42 @@
     ]
   },
   {
+    "filename": "pamhc2crops-NEOFORGE-1.21.1-1.0.9.jar",
+    "projectId": 361385,
+    "name": "Pam's HarvestCraft 2 - Crops",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-crops",
+    "authors": [
+      "pamharvestcraft"
+    ]
+  },
+  {
+    "filename": "pamhc2foodcore-NEOFORGE-1.21.1-1.0.4.jar",
+    "projectId": 372534,
+    "name": "Pam's HarvestCraft 2 - Food Core",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-food-core",
+    "authors": [
+      "pamharvestcraft"
+    ]
+  },
+  {
+    "filename": "pamhc2foodextended-NEOFORGE-1.21.1-1.0.0.jar",
+    "projectId": 402231,
+    "name": "Pam's HarvestCraft 2 - Food Extended",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-food-extended",
+    "authors": [
+      "pamharvestcraft"
+    ]
+  },
+  {
+    "filename": "pamhc2trees-NEOFORGE-1.21.1-1.0.9.jar",
+    "projectId": 365460,
+    "name": "Pam's HarvestCraft 2 - Trees",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-trees",
+    "authors": [
+      "pamharvestcraft"
+    ]
+  },
+  {
     "filename": "Patchouli-1.21.1-93-NEOFORGE.jar",
     "projectId": 306770,
     "name": "Patchouli",
@@ -670,6 +715,16 @@
     ]
   },
   {
+    "filename": "resourcefulconfig-neoforge-1.21-3.0.11.jar",
+    "projectId": 714059,
+    "name": "Resourceful Config",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/resourceful-config",
+    "authors": [
+      "ThatGravyBoat",
+      "epic_oreo"
+    ]
+  },
+  {
     "filename": "resourcefullib-neoforge-1.21-3.0.12.jar",
     "projectId": 570073,
     "name": "Resourceful Lib",
@@ -716,19 +771,19 @@
     ]
   },
   {
-    "filename": "SkyGUIs-21.1.10.jar",
-    "projectId": 557696,
-    "name": "Sky GUIs",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/sky-guis",
+    "filename": "SkyblockBuilder-21.1.31.jar",
+    "projectId": 446691,
+    "name": "Skyblock Builder",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/skyblock-builder",
     "authors": [
       "MelanX"
     ]
   },
   {
-    "filename": "SkyblockBuilder-21.1.31.jar",
-    "projectId": 446691,
-    "name": "Skyblock Builder",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/skyblock-builder",
+    "filename": "SkyGUIs-21.1.10.jar",
+    "projectId": 557696,
+    "name": "Sky GUIs",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sky-guis",
     "authors": [
       "MelanX"
     ]

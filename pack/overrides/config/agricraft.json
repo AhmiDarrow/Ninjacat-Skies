@@ -1,0 +1,11 @@
+{
+  "core": {
+    "disable_weeds": true,
+    "mature_weeds_kill_plants": false,
+    "weeds_spreading": false,
+    "weeds_destroy_crop_sticks": false
+  },
+  "compat": {
+    "mysticalagriculture": false
+  }
+}

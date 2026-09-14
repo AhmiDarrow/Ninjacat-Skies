@@ -38,6 +38,8 @@ Credits below name the projects players will recognize. Full pinned filenames li
 
 - **Mystical Agriculture** (+ Cucumber Library)
 - **Farmer's Delight**
+- **Pam's HarvestCraft 2** (Food Core, Crops, Trees, Food Extended)
+- **AgriCraft ReReloaded** (+ Resourceful Config)
 - **Productive Bees**
 - **Botany Pots**
 

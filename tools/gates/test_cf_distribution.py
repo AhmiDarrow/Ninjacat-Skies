@@ -18,8 +18,8 @@ class DistributionTests(unittest.TestCase):
         jars = sorted((ROOT / 'pack/mods').glob('*.jar'))
         rows = json.loads((ROOT / 'pack/modlist-resolved.json').read_text(encoding='utf-8'))
         entries = manifest_entries(jars, rows)
-        self.assertEqual(len(jars), 89)
-        self.assertEqual(len(entries), 89)
+        self.assertEqual(len(jars), 95)
+        self.assertEqual(len(entries), 95)
         self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 0)
         self.assertTrue(any(p.name.startswith('ninjacatskies-core-') for p in jars))
         expected = {619320: 8687896, 235577: 8163135}

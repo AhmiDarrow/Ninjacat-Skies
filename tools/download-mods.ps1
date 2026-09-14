@@ -121,6 +121,12 @@ $ModTargets = @(
     @{ Key = "Comforts";               Slugs = @("comforts"); Search = "Comforts" }
     @{ Key = "Resourceful Lib";        Slugs = @("resourceful-lib"); Search = "Resourceful Lib" }
     @{ Key = "Searchables";            Slugs = @("searchables"); Search = "Searchables" }
+    @{ Key = "Resourceful Config";     Slugs = @("resourceful-config"); Search = "Resourceful Config" }
+    @{ Key = "Pam's HarvestCraft 2 - Food Core"; Slugs = @("pams-harvestcraft-2-food-core"); Search = "Pam's HarvestCraft 2 Food Core" }
+    @{ Key = "Pam's HarvestCraft 2 - Crops"; Slugs = @("pams-harvestcraft-2-crops"); Search = "Pam's HarvestCraft 2 Crops" }
+    @{ Key = "Pam's HarvestCraft 2 - Trees"; Slugs = @("pams-harvestcraft-2-trees"); Search = "Pam's HarvestCraft 2 Trees" }
+    @{ Key = "Pam's HarvestCraft 2 - Food Extended"; Slugs = @("pams-harvestcraft-2-food-extended"); Search = "Pam's HarvestCraft 2 Food Extended" }
+    @{ Key = "AgriCraft ReReloaded";   Slugs = @("agricraft-rereloaded"); Search = "AgriCraft ReReloaded" }
 
 )
 

@@ -2,12 +2,13 @@
 
 Ninjacat Skies is possible because of the work of the modding community. Thank you to the authors and contributors of every project below.
 
-This page credits all **87 outside mods** shipped with the current pack, including libraries, performance tools, and other dependencies. Each mod name links to its CurseForge project page; the names beside it are the authors listed there.
+This page credits all **93 outside mods** shipped with the current pack, including libraries, performance tools, and other dependencies. Each mod name links to its CurseForge project page; the names beside it are the authors listed there.
 
 Project pages and author listings were verified against the CurseForge API on September 7, 2026. Projects retain their own licenses and attribution requirements.
 
 ## Outside mods
 
+- [AgriCraft ReReloaded](https://www.curseforge.com/minecraft/mc-mods/agricraft-rereloaded) — Vivoxtl
 - [Almost Unified](https://www.curseforge.com/minecraft/mc-mods/almostunified) — AlmostReliable, Relentless, Lytho
 - [Amendments](https://www.curseforge.com/minecraft/mc-mods/amendments) — plantspookable, MehVahdJukaar
 - [AppleSkin](https://www.curseforge.com/minecraft/mc-mods/appleskin) — squeek502
@@ -72,12 +73,17 @@ Project pages and author listings were verified against the CurseForge API on Se
 - [Nature's Aura](https://www.curseforge.com/minecraft/mc-mods/natures-aura) — Ellpeck
 - [Occultism](https://www.curseforge.com/minecraft/mc-mods/occultism) — kli_kli
 - [PackagedAuto](https://www.curseforge.com/minecraft/mc-mods/packagedauto) — TheLMiffy1111
+- [Pam's HarvestCraft 2 - Crops](https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-crops) — pamharvestcraft
+- [Pam's HarvestCraft 2 - Food Core](https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-food-core) — pamharvestcraft
+- [Pam's HarvestCraft 2 - Food Extended](https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-food-extended) — pamharvestcraft
+- [Pam's HarvestCraft 2 - Trees](https://www.curseforge.com/minecraft/mc-mods/pams-harvestcraft-2-trees) — pamharvestcraft
 - [Patchouli](https://www.curseforge.com/minecraft/mc-mods/patchouli) — Vazkii
 - [Pipez](https://www.curseforge.com/minecraft/mc-mods/pipez) — henkelmax
 - [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) — KosmX
 - [Powah! (Rearchitected)](https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected) — thetechnici4n
 - [Prickle](https://www.curseforge.com/minecraft/mc-mods/prickle) — DarkhaxDev
 - [Productive Bees](https://www.curseforge.com/minecraft/mc-mods/productivebees) — LobsterJonn
+- [Resourceful Config](https://www.curseforge.com/minecraft/mc-mods/resourceful-config) — ThatGravyBoat, epic_oreo
 - [Resourceful Lib](https://www.curseforge.com/minecraft/mc-mods/resourceful-lib) — ThatGravyBoat, epic_oreo
 - [Rhino](https://www.curseforge.com/minecraft/mc-mods/rhino) — Lat
 - [Searchables](https://www.curseforge.com/minecraft/mc-mods/searchables) — Jaredlll08
