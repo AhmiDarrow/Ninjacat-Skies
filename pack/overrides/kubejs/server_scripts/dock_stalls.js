@@ -16,9 +16,50 @@ try {
   DeepCacheManager = Java.loadClass('tk.darrow.tribalpower.storage.DeepCacheManager')
 } catch (e) {}
 
+function entityLabel(entity) {
+  try {
+    if (entity.nbt && entity.nbt.StallId) return String(entity.nbt.StallId)
+  } catch (e) {}
+  try {
+    if (entity.username) return String(entity.username)
+  } catch (e) {}
+  try {
+    if (entity.name) return String(entity.name)
+  } catch (e) {}
+  return ''
+}
+
+function listHubEntities(hub) {
+  try {
+    if (!hub.getEntities) return null
+    let found = hub.getEntities()
+    if (!found) return null
+    let out = []
+    for (let entity of found) out.push(entity)
+    return out
+  } catch (e) {
+    return null
+  }
+}
+
+function hubHasStall(hub, stallId, name) {
+  let found = listHubEntities(hub)
+  if (!found) return null
+  for (let entity of found) {
+    let t = String(entity.type || '')
+    if (t.indexOf('tribal_kin') < 0) continue
+    let label = entityLabel(entity)
+    if (label === stallId || (name && label.indexOf(name) >= 0)) return true
+  }
+  return false
+}
+
 function spawnStall(level, x, y, z, yaw, tribeOrdinal, stallId, name) {
+  let present = hubHasStall(level, stallId, name)
+  if (present === true) return true
+  if (present === null && level.persistentData.getBoolean(HUB_STALLS_FLAG)) return true
   let entity = level.createEntity('tribalpower:tribal_kin')
-  if (!entity) return
+  if (!entity) return false
   entity.mergeNbt({
     Tribe: tribeOrdinal,
     Role: 'ELDER',
@@ -32,12 +73,12 @@ function spawnStall(level, x, y, z, yaw, tribeOrdinal, stallId, name) {
   entity.setPosition(x + 0.5, y, z + 0.5)
   if (entity.setYaw) entity.setYaw(yaw)
   entity.spawn()
+  return true
 }
 
 function ensureHubStalls(server) {
   let hub = server.getLevel(HUB_DIM)
   if (!hub) return
-  if (hub.persistentData.getBoolean(HUB_STALLS_FLAG)) return
   try {
     if (HubModDimensions) {
       let raw = hub.minecraftLevel ? hub.minecraftLevel : hub
@@ -48,10 +89,10 @@ function ensureHubStalls(server) {
   }
   // Ceremony pad center is 0,63,0. Stand on the terracotta at y=64, flanking the south path
   // the player walks (arrive 0.5,65,5.5 facing the beacon).
-  spawnStall(hub, -3, 64, 2, -90, 0, 'padkeepers', 'Pad-keepers') // Soil, look east; off the south banner posts
-  spawnStall(hub, 3, 64, 2, 90, 1, 'grit', 'Grit')               // Stone, look west
-  spawnStall(hub, 3, 64, -1, 90, 4, 'spark', 'Spark')            // Spark, look west; clear of banners
-  hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
+  let a = spawnStall(hub, -3, 64, 2, -90, 0, 'padkeepers', 'Pad-keepers')
+  let b = spawnStall(hub, 3, 64, 2, 90, 1, 'grit', 'Grit')
+  let c = spawnStall(hub, 3, 64, -1, 90, 4, 'spark', 'Spark')
+  if (a && b && c) hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
 }
 
 function playerVisitedMarch(player) {
@@ -75,26 +116,26 @@ function markMarchVisit(player) {
 }
 
 function esterAlreadyPresent(hub) {
-  try {
-    let found = hub.getEntities ? hub.getEntities() : null
-    if (!found) return false
-    for (let entity of found) {
-      let t = String(entity.type || '')
-      if (t.indexOf('race_master') >= 0) return true
-    }
-  } catch (e) {}
+  let found = listHubEntities(hub)
+  if (!found) return null
+  for (let entity of found) {
+    if (String(entity.type || '').indexOf('race_master') >= 0) return true
+  }
   return false
 }
 
 function spawnEster(hub) {
-  if (esterAlreadyPresent(hub)) {
+  let present = esterAlreadyPresent(hub)
+  if (present === true) {
     hub.persistentData.putBoolean(HUB_ESTER_FLAG, true)
     return
   }
+  if (present === null && hub.persistentData.getBoolean(HUB_ESTER_FLAG)) return
   let entity = hub.createEntity('chococraft:race_master')
   if (!entity) return
   entity.mergeNbt({
     PersistenceRequired: true,
+    NoAI: true,
     CustomName: '{"translate":"entity.chococraft.race_master"}',
     CustomNameVisible: true,
   })
@@ -121,8 +162,6 @@ function ensureHubEster(server) {
   if (!someoneOpenedMarch(server)) return
   let hub = server.getLevel(HUB_DIM)
   if (!hub) return
-  // Trust the world flag so a failed entity scan cannot duplicate Ester every 80 ticks.
-  if (hub.persistentData.getBoolean(HUB_ESTER_FLAG)) return
   spawnEster(hub)
 }
 
@@ -136,6 +175,7 @@ PlayerEvents.tick(event => {
   if (event.player.tickCount % 80 !== 0) return
   let dim = String(event.player.level.dimension)
   if (dim === MARCH_DIM) markMarchVisit(event.player)
+  if (dim === HUB_DIM) ensureHubStalls(event.server)
   if (dim === MARCH_DIM || dim === HUB_DIM) ensureHubEster(event.server)
 })
 
