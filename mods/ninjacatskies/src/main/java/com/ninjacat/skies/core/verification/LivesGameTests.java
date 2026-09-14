@@ -11,6 +11,30 @@ import java.util.*;
 @GameTestHolder("ninjacatskies")
 @PrefixGameTestTemplate(false)
 public class LivesGameTests {
+    @GameTest(template="empty")
+    public static void reviveRestoresExhaustedSpectators(GameTestHelper h) {
+        // The vanilla helper hard-codes creative/non-spectator and cannot test recovery.
+        var player = new net.neoforged.neoforge.common.util.FakePlayer(h.getLevel(),
+                new com.mojang.authlib.GameProfile(UUID.randomUUID(), "revival-test"));
+        var team = LoomTension.clowderOf(player).orElseThrow();
+        int starting = com.ninjacat.skies.core.config.SkiesConfig.STARTING_LIVES.get();
+        for (boolean fullRevive : new boolean[] {true, false}) {
+            while (ClowderLives.remaining(team, starting) > 0) ClowderLives.spend(team, starting);
+            player.getPersistentData().putBoolean("skybound_exhausted", true);
+            player.setGameMode(net.minecraft.world.level.GameType.SPECTATOR);
+            int restored = fullRevive
+                    ? com.ninjacat.skies.core.event.SkyboundEvents.revivePlayer(player)
+                    : com.ninjacat.skies.core.event.SkyboundEvents.restoreOneLife(player);
+            h.assertTrue(restored > 0, "Revive restores the pool");
+            h.assertTrue(!player.isSpectator(), "Revive must also restore survival mode");
+            h.assertTrue(!player.getPersistentData().getBoolean("skybound_exhausted"), "Recovery clears exhaustion");
+        }
+        player.setGameMode(net.minecraft.world.level.GameType.SPECTATOR);
+        com.ninjacat.skies.core.event.SkyboundEvents.revivePlayer(player);
+        h.assertTrue(player.isSpectator(), "An operator's unrelated spectator mode stays intact");
+        h.succeed();
+    }
+
     private record TestTeam(UUID id, CompoundTag data) implements Clowder {
         public Component name() { return Component.literal("Test Clowder"); }
         public void markDirty() { data.putBoolean("saved", true); }

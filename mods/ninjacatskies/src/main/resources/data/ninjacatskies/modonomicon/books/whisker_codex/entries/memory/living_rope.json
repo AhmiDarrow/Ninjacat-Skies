@@ -11,8 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The season the roots held",
-      "text": "The Rootbinders grew living anchors: March flora whose roots ran along the Strands and held pads that would otherwise have drifted. When the Loom was cut, those roots held for a season. Half of them. That season is why anything is still up here.\n\nAfter that, the anchors went feral, or quiet, or into the March. You will meet what they became."
+      "title": "The season the ro...",
+      "text": "The Rootbinders grew living anchors: March flora whose roots ran along the Strands and held pads that would otherwise have drifted. When the Loom was cut, those roots held for a season. Half of them. That season is why anything is still up here."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "After that, the anchors went feral, or quiet, or into the March. You will meet what they became."
     },
     {
       "type": "modonomicon:text",

@@ -1,0 +1,33 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "L 0 B",
+      "     ",
+      "     "
+    ],
+    [
+      "PPPPP",
+      "PPPPP",
+      "PPPPP"
+    ]
+  ],
+  "mapping": {
+    "L": {
+      "type": "modonomicon:block",
+      "block": "minecraft:chest"
+    },
+    "0": {
+      "type": "modonomicon:block",
+      "block": "voidloom:loomframe"
+    },
+    "B": {
+      "type": "modonomicon:block",
+      "block": "voidloom:tension_barrel"
+    },
+    "P": {
+      "type": "modonomicon:block",
+      "block": "minecraft:oak_planks"
+    }
+  }
+}

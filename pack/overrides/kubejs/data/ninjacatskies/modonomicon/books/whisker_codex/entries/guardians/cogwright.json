@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Cogwright",
-      "text": "The Escapement: four rotating copper rings carrying dark-oak sequence tiles around an iron hub, six gear-towers and a sixteen-block pendulum keeping time.\n\nEvery phase the Cogwright winds: tiles light in sequence across the turning rings and you have twelve seconds to step them in order. Success opens its chassis for eight seconds; failure fires every gear-tower. The pendulum is the metronome; the rings reverse when it swings far."
+      "text": "The Escapement: four rotating copper rings carrying dark-oak sequence tiles around an iron hub, six gear-towers and a sixteen-block pendulum keeping time."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Every phase the Cogwright winds: tiles light in sequence across the turning rings and you have twelve seconds to step them in order. Success opens its chassis for eight seconds; failure fires every gear-tower. The pendulum is the metronome; the rings reverse when it swings far."
     },
     {
       "type": "modonomicon:spotlight",

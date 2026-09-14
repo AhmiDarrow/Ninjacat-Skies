@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Grindmaw",
-      "text": "The Millpit: a deepslate quarry with a rotating grindstone ring in the floor and four stone sieve chutes pouring gravel into the central grit pit.\n\nThe Grindmaw is immune while its maw is closed. Each chute drops a grit block every fifteen seconds; carry one onto the ring and let it ride into the pit's mouth to jam the maw open for twelve seconds. The ring reverses every phase and shoves the careless into the pit."
+      "text": "The Millpit: a deepslate quarry with a rotating grindstone ring in the floor and four stone sieve chutes pouring gravel into the central grit pit."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "The Grindmaw is immune while its maw is closed. Each chute drops a grit block every fifteen seconds; carry one onto the ring and let it ride into the pit's mouth to jam the maw open for twelve seconds. The ring reverses every phase and shoves the careless into the pit."
     },
     {
       "type": "modonomicon:spotlight",

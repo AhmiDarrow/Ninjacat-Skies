@@ -169,10 +169,8 @@ public final class SkyboundEvents {
     public static int revivePlayer(ServerPlayer player) {
         if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return -1;
         int lives = resetLives(player);
-        player.getPersistentData().remove(EXHAUSTED);
         LoomTension.clowderOf(player).ifPresent(team -> {
             for (ServerPlayer member : team.onlineMembers()) {
-                member.getPersistentData().remove(EXHAUSTED);
                 enforceLives(member);
             }
         });
@@ -185,7 +183,6 @@ public final class SkyboundEvents {
         if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return -1;
         return LoomTension.clowderOf(player).map(team -> {
             int lives = ClowderLives.restoreOne(team, player.getUUID(), SkiesConfig.STARTING_LIVES.get());
-            player.getPersistentData().remove(EXHAUSTED);
             enforceLives(player);
             return lives;
         }).orElse(-1);

@@ -12,22 +12,42 @@
     {
       "type": "modonomicon:text",
       "title": "What the world was",
-      "text": "Before the void had a name, the sky was a floor. Nine Strands of living thread — Soil, Stone, Sprout, Claw, Spark, Clock, Swarm, Sigil, Spindle — were pulled taut by nine tribes of Ninjacats. Continents hung from that lattice the way fruit hangs from a well-kept vine.\n\nCities did not float. They hung, and hanging felt like standing. Weather ran on a schedule, not a mood. Rain knew where to fall. Nothing dropped that was not meant to. The old world was not peace. It was maintenance."
+      "text": "Before the void had a name, the sky was a floor. Nine Strands of living thread — Soil, Stone, Sprout, Claw, Spark, Clock, Swarm, Sigil, Spindle — were pulled taut by nine tribes of Ninjacats. Continents hung from that lattice the way fruit hangs from a well-kept vine."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Cities did not float. They hung, and hanging felt like standing. Weather ran on a schedule, not a mood. Rain knew where to fall. Nothing dropped that was not meant to. The old world was not peace. It was maintenance."
     },
     {
       "type": "modonomicon:text",
       "title": "How it fell",
-      "text": "Something severed the Loom. The Codex does not know what. Maintenance stopped. Eight pulls became eight arguments about whose fault the slack was. The Spindle seam tore. Continents fell. Weather forgot its roads. The tribes scattered with whatever dirt they could carry.\n\nWhat did not fall is what you are standing on: pads of earth the Strands still remember. Factories kept running. Drums kept beating. Gates stood open into nowhere. The March caught the wreckage — a grave and a harbour at once."
+      "text": "Something severed the Loom. The Codex does not know what. Maintenance stopped. Eight pulls became eight arguments about whose fault the slack was. The Spindle seam tore. Continents fell. Weather forgot its roads. The tribes scattered with whatever dirt they could carry."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "What did not fall is what you are standing on: pads of earth the Strands still remember. Factories kept running. Drums kept beating. Gates stood open into nowhere. The March caught the wreckage — a grave and a harbour at once."
     },
     {
       "type": "modonomicon:text",
       "title": "What fixing means",
-      "text": "You are not rebuilding the hanging continents. You are teaching nine Strands to agree again, one pad at a time. A seated token is a promise kept. A Clowder that seats the Fragment closes its Strand of the Fray. When every Clowder has done the same, the column over the Dock turns to lit thread.\n\nThe world does not snap back. It learns to hold. Honest hammocks last longer than floors that lie."
+      "text": "You are not rebuilding the hanging continents. You are teaching nine Strands to agree again, one pad at a time. A seated token is a promise kept. A Clowder that seats the Fragment closes its Strand of the Fray. When every Clowder has done the same, the column over the Dock turns to lit thread."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "The world does not snap back. It learns to hold. Honest hammocks last longer than floors that lie."
     },
     {
       "type": "modonomicon:text",
       "title": "The Old Sky chapter",
-      "text": "**The Old Sky** is the rest of this story, written as the tribes would tell it. It does not open all at once. As each Strand seats, that tribe's memory unlocks: hearths, meshes, roots, footholds, drums, songs, hives, seals, gates.\n\nCome back to that chapter when a token is seated. They only talk once you have kept their promise. This page is the always-open version — enough to start the work without waiting for the record."
+      "text": "**The Old Sky** is the rest of this story, written as the tribes would tell it. It does not open all at once. As each Strand seats, that tribe's memory unlocks: hearths, meshes, roots, footholds, drums, songs, hives, seals, gates."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Come back to that chapter when a token is seated. They only talk once you have kept their promise. This page is the always-open version — enough to start the work without waiting for the record."
     }
   ],
   "parents": [

@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Hivemind",
-      "text": "The Comb: a hexagonal wax arena of rising and falling comb cells, honey pools, and six drone cells in the wall.\n\nThe Hivemind is fragile but every wave its six cells pour drones. A campfire set on a drone cell seals it for thirty seconds; seal all six and the royal chamber opens for ten. Your own Productive Bees attack the drones on sight."
+      "text": "The Comb: a hexagonal wax arena of rising and falling comb cells, honey pools, and six drone cells in the wall."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "The Hivemind is fragile but every wave its six cells pour drones. A campfire set on a drone cell seals it for thirty seconds; seal all six and the royal chamber opens for ten. Your own Productive Bees attack the drones on sight."
     },
     {
       "type": "modonomicon:spotlight",

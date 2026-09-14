@@ -25,7 +25,7 @@
         "count": 1
       },
       "title": "Binding Knot",
-      "text": "A ring of yarn around a slime ball. Early slime is pad compost: dirt, seeds, bone meal.\n\nThe Knot is the Loom's soft gate: Loomframes, Tension Posts, the first precision mechanism, and the AE2 controller all want one."
+      "text": "A ring of yarn around a slime ball. Early slime is pad compost: dirt, seeds, bone meal.\\\nThe Knot is the Loom's soft gate: Loomframes, Tension Posts, the first precision mechanism, and the AE2 controller all want one."
     },
     {
       "type": "modonomicon:spotlight",
@@ -34,7 +34,12 @@
         "count": 1
       },
       "title": "Loomframe",
-      "text": "Stretch a mesh, load it with dirt, gravel, sand or dust, and let it work — one piece every few seconds with a shuttle clack. Hoppers feed the top and pull from below. The mesh is hand-only. An oak sieve is still click; this machine is the hopper one.\n\nThread meshes catch what Ex Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand Filament** on iron (gravel, sand or dust)."
+      "text": "Stretch a mesh, load it with dirt, gravel, sand or dust, and let it work — one piece every few seconds with a shuttle clack.\\\nHoppers feed the top and pull from below.\\\nThe mesh is hand-only."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "An oak sieve is still click; this machine is the hopper one.\\\nThread meshes catch what Ex Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand Filament** on iron (gravel, sand or dust)."
     },
     {
       "type": "modonomicon:spotlight",
@@ -43,7 +48,7 @@
         "count": 1
       },
       "title": "Tension Barrel",
-      "text": "Pour water (the bucket comes straight back), add up to eight dirt, come back for clay. String and pearls in the same barrel make yarn.\n\nClay to porcelain clay to a porcelain bucket: that is how a pad first carries lava."
+      "text": "Pour water (the bucket comes straight back), add up to eight dirt, come back for clay. String and pearls in the same barrel make yarn.\\\nClay to porcelain clay to a porcelain bucket: that is how a pad first carries lava."
     }
   ],
   "parents": [

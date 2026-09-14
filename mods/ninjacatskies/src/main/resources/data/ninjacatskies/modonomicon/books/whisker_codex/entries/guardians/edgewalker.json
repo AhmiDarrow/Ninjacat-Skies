@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Edgewalker",
-      "text": "The Sky Shards: ten deepslate shards floating over the void, crumbling bridges between them, gold claw-marks on the main shard where the boss lands.\n\nA pure duel. The Edgewalker leaps shard to shard and pounces whoever stands furthest from a wall; a gold claw-mark shows where, a breath before it lands — step off it. Bridges crumble behind you and return later. Falling costs six hearts and a trip back to your pad."
+      "text": "The Sky Shards: ten deepslate shards floating over the void, crumbling bridges between them, gold claw-marks on the main shard where the boss lands."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "A pure duel. The Edgewalker leaps shard to shard and pounces whoever stands furthest from a wall; a gold claw-mark shows where, a breath before it lands — step off it. Bridges crumble behind you and return later. Falling costs six hearts and a trip back to your pad."
     },
     {
       "type": "modonomicon:spotlight",

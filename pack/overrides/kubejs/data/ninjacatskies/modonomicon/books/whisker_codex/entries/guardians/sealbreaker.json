@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Sealbreaker",
-      "text": "The Ward Circle: a stone sanctum of gold circles and nine glyph pillars with amethyst spires, a nine-sided dais of gold pegs at the centre.\n\nThe Sealbreaker hides behind three active wards. The dais pegs light the order once per phase — watch first. Dispel the pillars in that order with an Ars dispel or any Sigil-strand item; a wrong one re-arms all three and the ward-glass bites. Three right and it is open for twelve seconds. Later phases shuffle the runes and add a decoy."
+      "text": "The Ward Circle: a stone sanctum of gold circles and nine glyph pillars with amethyst spires, a nine-sided dais of gold pegs at the centre.\\\nThe Sealbreaker hides behind three active wards.\\\nThe dais pegs light the order once per phase — watch first."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Dispel the pillars in that order with an Ars dispel or any Sigil-strand item; a wrong one re-arms all three and the ward-glass bites.\\\nThree right and it is open for twelve seconds.\\\nLater phases shuffle the runes and add a decoy."
     },
     {
       "type": "modonomicon:spotlight",

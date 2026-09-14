@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Overweaver",
-      "text": "The Loom Above: a purpur weave, nine strand-bridges to nine pillared platforms, twenty-seven cathedral threads to a keystone sixty-four blocks up.\n\nYour own restored Loom turned against you. The Overweaver throws shades of the nine guardians onto their strands; kill a shade and its thread pulls taut for twenty-five seconds, and only then can the loom itself be hurt. Later it throws three, then all nine."
+      "text": "The Loom Above: a purpur weave, nine strand-bridges to nine pillared platforms, twenty-seven cathedral threads to a keystone sixty-four blocks up."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Your own restored Loom turned against you. The Overweaver throws shades of the nine guardians onto their strands; kill a shade and its thread pulls taut for twenty-five seconds, and only then can the loom itself be hurt. Later it throws three, then all nine."
     },
     {
       "type": "modonomicon:spotlight",

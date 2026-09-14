@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Start automatic power",
+  "description": "Practical steps and checks.",
+  "icon": "tribalpower:pulse_resonator",
+  "x": 2,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Build the starter...",
+      "text": "You need a **Pulse Resonator**, an **Echo Shard**, and **Earth and Fire Resonance Totems**.\\\n1\\. Place the Resonator.\\\n2\\. Right-click it with the shard to install the reusable catalyst.\\\n3\\. Place the two different totems within 8 blocks. The diagram shows a compact example."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "4\\. Wait a second and inspect the generator. Stored Pulse should rise."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Power budget",
+      "text": "The starter generator makes a small amount of Pulse continuously. It does not mean every machine can run continuously. If a machine spends power faster than you make it, let a reserve build up or improve generation.\\\nTwo identical totems count as one element. If generation stops, check the catalyst, different elements and pausing redstone."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read the Spirit Codex before building larger totem layouts or a Conductor."
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "ninjacatskies:codex/resonator_workshop",
+      "multiblock_name": "Placement example",
+      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "show_visualize_button": true
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/first_power",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "SSSS",
+      "S0WS",
+      "SWWS",
+      "SSSS"
+    ],
+    [
+      "SSSS",
+      "SSSS",
+      "SSSS",
+      "SSSS"
+    ]
+  ],
+  "mapping": {
+    "S": {
+      "type": "modonomicon:block",
+      "block": "minecraft:cobblestone"
+    },
+    "0": {
+      "type": "modonomicon:block",
+      "block": "minecraft:water"
+    },
+    "W": {
+      "type": "modonomicon:block",
+      "block": "minecraft:water"
+    }
+  }
+}

@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Pad-keepers",
-      "text": "The Pad-keepers kept the hearths. Not the fires — the *warmth*: the banked heat in thin dirt that let a pad hold a family through a long dark.\n\nThey were the first to notice the Loom was fraying, because the pads got cold before anything fell.\n\nBefore the Cut they banked heat under whole continents: hearths under markets, under fields, under the first stair of every hanging city. What they lost was the long dark they had already solved — warmth as a public fact. Now they keep scraps, and they keep them anyway."
+      "text": "The Pad-keepers kept the hearths. Not the fires — the *warmth*: the banked heat in thin dirt that let a pad hold a family through a long dark.\\\nThey were the first to notice the Loom was fraying, because the pads got cold before anything fell."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Before the Cut they banked heat under whole continents: hearths under markets, under fields, under the first stair of every hanging city. What they lost was the long dark they had already solved — warmth as a public fact. Now they keep scraps, and they keep them anyway."
     },
     {
       "type": "modonomicon:spotlight",
@@ -21,12 +26,17 @@
         "count": 1
       },
       "title": "Soil Strand",
-      "text": "*We never called it dirt. We called it what was left, and we kept it warm.*\n\nSeated. The Pad-keepers answer when this Post hums."
+      "text": "*We never called it dirt. We called it what was left, and we kept it warm.*\\\nSeated. The Pad-keepers answer when this Post hums."
     },
     {
       "type": "modonomicon:text",
       "title": "Their camp",
-      "text": "The Pad-keepers keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Earth totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours dirt and moss blocks, bread, Echo Shards. Their Elder trades hearths and caches, and at Voice standing presses the tribe's Mark into your hand."
+      "text": "The Pad-keepers keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Earth totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Their hearth favours dirt and moss blocks, bread, Echo Shards. Their Elder trades hearths and caches, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

@@ -11,17 +11,22 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Nine pulls, nine arguments",
+      "title": "Nine pulls, nine ...",
       "text": "The Cut was not a war. It was the moment the work stopped being done. Nine tribes had nine pulls. When the schedule failed, eight of those pulls turned into eight arguments about whose fault the slack was. Blame is a kind of tension. It does not hold a sky."
     },
     {
       "type": "modonomicon:text",
       "title": "The Spindle seam",
-      "text": "The Loom-stitchers were the ones who mended the joins. While the others argued, the Spindle seam — the road between pads, the stitch that let nine pulls act as one floor — tore. Gates that should have led home led into weather. Weather that should have had a road had a hole.\n\nA clock with no stitch is just nine ticking things, each sure it is on time."
+      "text": "The Loom-stitchers were the ones who mended the joins. While the others argued, the Spindle seam — the road between pads, the stitch that let nine pulls act as one floor — tore. Gates that should have led home led into weather. Weather that should have had a road had a hole."
     },
     {
       "type": "modonomicon:text",
-      "title": "What Clock still knows",
+      "title": "Continue",
+      "text": "A clock with no stitch is just nine ticking things, each sure it is on time."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What Clock still ...",
       "text": "The Pattern-weavers kept trying to sing the factories through it. Songs do not stop because the choir is fighting. Seat Clock and you are not picking a side in the old argument. You are putting a tempo back under work that has been improvising since the Cut."
     }
   ],

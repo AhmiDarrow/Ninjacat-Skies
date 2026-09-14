@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Named by echo",
-      "text": "The Grit-singers named every shard by its voice. Iron is low and patient. Gold barely bothers to answer. Diamond does not answer at all; you find it by the silence around it.\n\nWhen the Cut came, the meshes kept humming to nothing. Ore had nowhere to land. Continents that were mostly stone fell as gravel and still fall, somewhere below the void, if below still means anything."
+      "text": "The Grit-singers named every shard by its voice. Iron is low and patient. Gold barely bothers to answer. Diamond does not answer at all; you find it by the silence around it."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "When the Cut came, the meshes kept humming to nothing. Ore had nowhere to land. Continents that were mostly stone fell as gravel and still fall, somewhere below the void, if below still means anything."
     },
     {
       "type": "modonomicon:text",

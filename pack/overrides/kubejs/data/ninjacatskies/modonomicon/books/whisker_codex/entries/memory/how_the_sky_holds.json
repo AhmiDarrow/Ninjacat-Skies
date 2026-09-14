@@ -11,18 +11,28 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "How the sky learns to hold",
-      "text": "The sky does not snap back. It learns. A seated token is a lesson. Nine seated tokens are a pad that remembers how to be a floor. A Fragment seated is that pad telling the Dock it can stop holding its breath.\n\nYou are not restoring continents. You are teaching nine agreements to stay taut where everyone can see them."
+      "title": "How the sky learn...",
+      "text": "The sky does not snap back. It learns. A seated token is a lesson. Nine seated tokens are a pad that remembers how to be a floor. A Fragment seated is that pad telling the Dock it can stop holding its breath."
     },
     {
       "type": "modonomicon:text",
-      "title": "Public, or it does not count",
-      "text": "A private mend is a secret. Secrets do not hold weather. The Tension Post hums for the whole Clowder. The Fray thins for the whole Dock. The lit thread, when it comes, is a server-wide fact.\n\nKeep the work in the open. That is how the old sky held, and it is the only method the new one will accept."
+      "title": "Continue",
+      "text": "You are not restoring continents. You are teaching nine agreements to stay taut where everyone can see them."
     },
     {
       "type": "modonomicon:text",
-      "title": "What you are not doing",
-      "text": "You will not get the hanging cities back. You will not get the schedule that let you set a table by the rain. You will get a sky that knows it is thread, and holds anyway.\n\nThat is the better physics. Honest hammocks last longer than floors that lie."
+      "title": "Public, or it doe...",
+      "text": "A private mend is a secret. Secrets do not hold weather. The Tension Post hums for the whole Clowder. The Fray thins for the whole Dock. The lit thread, when it comes, is a server-wide fact."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Keep the work in the open. That is how the old sky held, and it is the only method the new one will accept."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "What you are not ...",
+      "text": "You will not get the hanging cities back. You will not get the schedule that let you set a table by the rain. You will get a sky that knows it is thread, and holds anyway.\\\nThat is the better physics. Honest hammocks last longer than floors that lie."
     }
   ],
   "parents": [

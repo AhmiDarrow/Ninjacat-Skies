@@ -12,7 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Wake",
-      "text": "**Soil.** Wood, dirt, a bench, a sapling, a chest, warmth. Melt ice with lava for water on Normal and Hard. Cook something.\n\nThe Soil token comes from the **Soil Knot** at the end of the chapter. Raise a Tension Post and seat it. The pad starts mending you."
+      "text": "**Soil.** Wood, dirt, a bench, a sapling, a chest, warmth. Melt ice with lava for water on Normal and Hard. Cook something.\\\nThe Soil token comes from the **Soil Knot** at the end of the chapter. Raise a Tension Post and seat it. The pad starts mending you."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Before you move on",
+      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
     }
   ]
 }

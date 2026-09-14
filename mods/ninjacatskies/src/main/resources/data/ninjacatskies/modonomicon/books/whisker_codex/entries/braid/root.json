@@ -12,7 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Root",
-      "text": "**Sprout.** A wheat field, a kitchen, then Mystical Agriculture. Sieve dirt for Inferium Ore and gravel for Prosperity Ore — smelt them, and the essence-seed tiers open up. Botany pots if you like compact.\n\nFood is infrastructure here. A Clowder that eats well leaves the pad sooner."
+      "text": "**Sprout.** A wheat field, a kitchen, then Mystical Agriculture. Sieve dirt for Inferium Ore and gravel for Prosperity Ore — smelt them, and the essence-seed tiers open up. Botany pots if you like compact.\\\nFood is infrastructure here. A Clowder that eats well leaves the pad sooner."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Before you move on",
+      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
     }
   ],
   "parents": [

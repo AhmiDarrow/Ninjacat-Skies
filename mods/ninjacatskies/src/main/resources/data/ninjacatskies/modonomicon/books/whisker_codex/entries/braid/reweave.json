@@ -12,7 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Reweave",
-      "text": "**Spindle.** A digital loom (AE2, with a Knot in the controller and a Braid in the assembler). A Gate Drum. The March, and a March stone from it.\n\nNine seated, one stone, one right-click: the Fragment. Seat it. The cut closes above your pad."
+      "text": "**Spindle.** A digital loom (AE2, with a Knot in the controller and a Braid in the assembler). A Gate Drum. The March, and a March stone from it.\\\nNine seated, one stone, one right-click: the Fragment. Seat it. The cut closes above your pad."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Before you move on",
+      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
     }
   ],
   "parents": [

@@ -1,0 +1,9 @@
+{
+  "name": "Start here",
+  "description": "A safe start, working examples, and what to do when progress stops.",
+  "icon": "ninjacatskies:whisker_codex",
+  "sort_number": 0,
+  "background": "ninjacatskies:textures/gui/quest_atlas.png",
+  "background_width": 1536,
+  "background_height": 1024
+}

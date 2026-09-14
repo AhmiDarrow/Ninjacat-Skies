@@ -1,0 +1,33 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "D E",
+      " 0 ",
+      "   "
+    ],
+    [
+      "SSS",
+      "SSS",
+      "SSS"
+    ]
+  ],
+  "mapping": {
+    "D": {
+      "type": "modonomicon:block",
+      "block": "tribalpower:drumheart"
+    },
+    "E": {
+      "type": "modonomicon:block",
+      "block": "tribalpower:resonance_totem_earth"
+    },
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tribalpower:echo_shatter"
+    },
+    "S": {
+      "type": "modonomicon:block",
+      "block": "minecraft:stone"
+    }
+  }
+}

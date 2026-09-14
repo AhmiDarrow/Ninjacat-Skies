@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Loom-stitchers",
-      "text": "The Loom-stitchers cut the gate-paths — into the March, into the Nether and End, into places the map does not have words for — and always meant to come back and mend them.\n\nThey did not get to. You will.\n\nBefore the Cut they kept the roads between pads, between worlds, between the March and home. What they lost was the appointment. Open gates dumped weather into the void. Closed ones trapped whole roads still walking. The Spindle seam tore while the other eight pulls turned into arguments. You pick up the needle they dropped."
+      "text": "The Loom-stitchers cut the gate-paths — into the March, into the Nether and End, into places the map does not have words for — and always meant to come back and mend them.\\\nThey did not get to. You will."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Before the Cut they kept the roads between pads, between worlds, between the March and home. What they lost was the appointment. Open gates dumped weather into the void. Closed ones trapped whole roads still walking. The Spindle seam tore while the other eight pulls turned into arguments. You pick up the needle they dropped."
     },
     {
       "type": "modonomicon:spotlight",
@@ -21,12 +26,17 @@
         "count": 1
       },
       "title": "Spindle Strand",
-      "text": "*The Loom was never one thread. It was nine agreeing.*\n\nSeated. The Loom-stitchers answer when this Post hums."
+      "text": "*The Loom was never one thread. It was nine agreeing.*\\\nSeated. The Loom-stitchers answer when this Post hums."
     },
     {
       "type": "modonomicon:text",
       "title": "Their camp",
-      "text": "The Loom-stitchers keep a camp in the March crystal fields, at the Crystal Spire: huts, a fire, a Tribe Hearth, a Loom totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours March Crystal, Loom Thread, compasses. Their Elder trades Loom Thread at Friend and a Horizon Compass at Kin, and at Voice standing presses the tribe's Mark into your hand."
+      "text": "The Loom-stitchers keep a camp in the March crystal fields, at the Crystal Spire: huts, a fire, a Tribe Hearth, a Loom totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Their hearth favours March Crystal, Loom Thread, compasses. Their Elder trades Loom Thread at Friend and a Horizon Compass at Kin, and at Voice standing presses the tribe's Mark into your hand."
     }
   ],
   "condition": {

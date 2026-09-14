@@ -12,7 +12,22 @@
     {
       "type": "modonomicon:text",
       "title": "Colony",
-      "text": "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of oak logs around a small flower, placed on the pad. Wait. Wings.\n\nEvery nest is the same trick with a different ring — gravel, coarse dirt, stone, quartz, end stone. Then hives, a centrifuge, an incubator, and deep essence crops. Keep something alive that keeps something else alive."
+      "text": "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of oak logs around a small flower, placed on the pad. Wait. Wings."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Every nest is the same trick with a different ring — gravel, coarse dirt, stone, quartz, end stone. Then hives, a centrifuge, an incubator, and deep essence crops. Keep something alive that keeps something else alive."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Before you move on",
+      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
     }
   ],
   "parents": [

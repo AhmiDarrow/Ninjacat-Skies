@@ -11,13 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The halls that kept time",
+      "title": "The halls that ke...",
       "text": "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, twelve Lore Tablets between them, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."
     },
     {
       "type": "modonomicon:text",
       "title": "The Drum Circle",
-      "text": "Twelve pillars around a Silent Drum in the March highlands. Strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double."
+      "text": "Twelve pillars around a Silent Drum in the March highlands. Strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Beat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double."
     },
     {
       "type": "modonomicon:spotlight",

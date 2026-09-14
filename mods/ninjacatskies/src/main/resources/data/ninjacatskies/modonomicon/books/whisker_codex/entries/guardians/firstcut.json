@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The First Cut",
-      "text": "The Severance: a great obsidian shard crossed by the glowing Cut, twenty world-shards drifting around it, teal void-tears in the air.\n\nA shape the Cut left on the shard, not a confession of who swung. Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam. Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut. After the Reweave only."
+      "text": "The Severance: a great obsidian shard crossed by the glowing Cut, twenty world-shards drifting around it, teal void-tears in the air.\\\nA shape the Cut left on the shard, not a confession of who swung."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam.\\\nDrifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut.\\\nAfter the Reweave only."
     },
     {
       "type": "modonomicon:spotlight",
