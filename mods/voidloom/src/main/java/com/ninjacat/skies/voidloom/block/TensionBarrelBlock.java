@@ -66,7 +66,7 @@ public class TensionBarrelBlock extends BaseEntityBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (level.hasNeighborSignal(pos)) {
-            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.voidloom.paused"), true);
             return ItemInteractionResult.CONSUME;
         }
         if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be) || stack.isEmpty()) {
@@ -111,7 +111,7 @@ public class TensionBarrelBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.hasNeighborSignal(pos)) {
-            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.voidloom.paused"), true);
             return InteractionResult.CONSUME;
         }
         if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be)) {

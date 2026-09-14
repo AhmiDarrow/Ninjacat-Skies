@@ -39,6 +39,14 @@ class CodexBookTests(unittest.TestCase):
         self.assertEqual(overlay['tooltip'], core['tooltip'])
         self.assertEqual(overlay['description'], core['description'])
 
+    def test_codex_item_tooltip_points_at_start_here(self):
+        core = json.loads((ROOT/'mods/ninjacatskies/src/main/resources/assets/ninjacatskies/lang/en_us.json').read_text(encoding='utf-8'))
+        pack = json.loads((ROOT/'pack/overrides/kubejs/assets/ninjacatskies/lang/en_us.json').read_text(encoding='utf-8'))
+        for key in ('tooltip.ninjacatskies.codex.book', 'tooltip.ninjacatskies.codex.quests'):
+            self.assertIn('Start here', core[key], key)
+            self.assertNotIn('story and what to do', core[key].lower())
+            self.assertEqual(core[key], pack[key], key)
+
     def test_beginner_lessons_and_navigation(self):
         entries={f'ninjacatskies:{p.parent.name}/{p.stem}' for p in (BOOK/'entries').glob('*/*.json')}
         paths=list((BOOK/'entries/first_steps').glob('*.json'))
