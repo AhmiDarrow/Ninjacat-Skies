@@ -71,6 +71,16 @@ HOW_ITEM = {
     "tribalpower:gate_drum": "How: craft, strike it, walk the March. Bind a return compass first.",
     "chococraft:gysahl_green": "How: pick March thickets (Reed Fen is densest). Craft extras into seeds; plant on dirt or March soil.",
     "chococraft:chocopedia": "How: book + chocobo feather. Right-click a bird to read grade, class, and wins.",
+    "pamhc2crops:aridgarden": "How: sieve dirt with a string mesh or better (Ex Deorum or Voidloom).",
+    "pamhc2crops:frostgarden": "How: sieve dirt with a string mesh or better.",
+    "pamhc2crops:shadedgarden": "How: sieve dirt with a string mesh or better.",
+    "pamhc2crops:soggygarden": "How: sieve dirt with a string mesh or better.",
+    "pamhc2crops:tropicalgarden": "How: sieve dirt with a string mesh or better.",
+    "pamhc2crops:windygarden": "How: sieve dirt with a string mesh or better.",
+    "agricraft:wooden_crop_sticks": "How: four sticks in a square. Place on farmland, then plant a seed.",
+    "agricraft:seed_analyzer": "How: glass, wood, and a journal. Put a seed in to read stats.",
+    "agricraft:journal": "How: book and crop sticks. It records every plant you analyze.",
+
     "chococraft:chocobo_saddle": "How: leather and feathers. Tame a wild yellow with gysahl, then saddle it.",
     "chococraft:chocobo_square_ticket": "How: paper, gold ingot, feather. After the March, speak to Ester at /clowder hub while mounted.",
     "chococraft:chocobo_whistle": "How: craft from feathers. Use it to follow / stay / wander.",
@@ -114,6 +124,11 @@ HOW_NS = {
     "ae2": "How: Spindle Network — certus from sand, controller wants a Knot.",
     "guardians": "How: Whisker Codex Snapped Guardians — totem, arena, relic. Totem answers on the pad.",
     "chococraft": "How: find it in the March or craft it from gysahl and feathers. Pad-runners names the step.",
+    "pamhc2crops": "How: sieve dirt for a garden (string mesh and up), then break the bush for seeds.",
+    "pamhc2trees": "How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit.",
+    "pamhc2foodcore": "How: craft the station from planks and iron, then cook HarvestCraft staples in JEI.",
+    "pamhc2foodextended": "How: gardens and fruit trees supply the ingredients. JEI names the station.",
+    "agricraft": "How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland.",
 }
 
 
