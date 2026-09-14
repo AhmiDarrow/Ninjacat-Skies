@@ -46,11 +46,11 @@ ItemEvents.modifyTooltips(event => {
   event.add('minecraft:bee_nest', Text.gray('Planks and flowers. A wild bee will move in; shear it with smoke underneath.'))
   if (Item.exists('tribalpower:pulse_resonator')) {
     event.add('tribalpower:pulse_resonator', Text.gray('Seat a reusable Echo catalyst. Distinct totem voices strengthen the song; a Voice Ring at radius 3 is what six voices now means. Redstone pauses it.'))
-    event.add('tribalpower:ley_collector', Text.gray('Draw ambient ley into Pulse near a Drumheart. Still the voice-less starter passive.'))
+    event.add('tribalpower:ley_collector', Text.gray('Place under open sky. Night, rain, water, plants and totem voices add. A strong pad keeps nearby totems answered. Redstone pauses it.'))
     event.add('tribalpower:pulse_cell', Text.gray('Carry Pulse between Drumheart, Ley, generators and the pit.'))
   }
   if (Item.exists('tribalpower:drumheart')) {
-    event.add('tribalpower:drumheart', Text.gray('Strike it and listen. 24 Pulse on a 17-to-23-tick rising edge, 10 otherwise; nothing closer than 8 ticks counts.'))
+    event.add('tribalpower:drumheart', Text.gray('Strike empty-handed on tempo (17–23 ticks) for 24 Pulse, 10 off-tempo. Redstone pays only a rising edge — a lever left on is not a drum. Nothing closer than 8 ticks counts.'))
   }
   if (Item.exists('tribalpower:march_stone')) {
     event.add('tribalpower:march_stone', Text.gold('Right-click a Tension Post with it once nine Strands are seated.'))
@@ -64,9 +64,9 @@ ItemEvents.modifyTooltips(event => {
     event.add('tribalpower:silent_drum', Text.gray('Four strikes, a breath apart. Sneak against the Beat; answer the Silence with the same rhythm.'))
     event.add(/tribalpower:rite_(green|rain|sky|dawn|still|ley|spring).*/, Text.gray('Sneak-use on a Ritual Brazier with the matching seal seated. A tablet wants a Rite Circle. Pulse comes from the lattice around it.'))
     event.add('tribalpower:bonding_charm', Text.gray('Adult familiar. Animals keep a failed charm; remnants spend it and want Voice with their tribe. One fighter and two helpers may follow.'))
-    event.add('tribalpower:camp_charter', Text.gray('Use on a Clowder mate to share one vault, one anchor budget, one standing.'))
+    event.add('tribalpower:camp_charter', Text.gray('Use on a player to invite them into a Tribal Power camp. /tribalpower camp create, invite, join. Shared vault, twelve anchors, quartered standing.'))
     event.add('tribalpower:ley_lens', Text.gray('Hold to see the ley. Sneak-use a Ley Collector, or a familiar, for its numbers.'))
-    event.add('tribalpower:lattice_tuner', Text.gray('Mark a machine face, then use on a relay. Do not mark the plate. Or seat the same item in two Bond slots.'))
+    event.add('tribalpower:lattice_tuner', Text.gray('Mark a machine face, then use on a relay. Do not mark the plate. Or seat the same unique item in both Bond slots.'))
     event.add('tribalpower:item_relay', Text.gray('Snap onto a machine face. Pair Bond slots or tuner-bind a destination. Hoppers cannot steal the Bond or Rune.'))
     event.add('tribalpower:fluid_relay', Text.gray('Snap onto a tank face. Water Seal moves fluid, Earth Seal moves items; empty uses the plate name.'))
   }

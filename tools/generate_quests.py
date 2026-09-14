@@ -403,7 +403,7 @@ LORE = {
     "Hum: Copper Resonator": ["Copper around a Chime: metal tuned to spirit."],
     "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Chime, Shard, leather — the Desk sells leather."],
     "Hum: Pulse Cell": ["Carry Pulse between drum and lattice."],
-    "Hum: Ley Collector": ["Draw ambient ley into beats near a Drumheart."],
+    "Hum: Ley Collector": ["Draw ambient ley into beats under open sky. Totem voices add; a Drumheart is not required."],
     "Hum: Pulse Resonator": ["Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony."],
     "Powah Starter Cell": ["A buffer for Forge Energy — the bridge from Pulse to wire, if you want one."],
     "Powah Furnator": ["Burn fuel for Forge Energy."],
@@ -474,7 +474,7 @@ KNOT_TEXT = {
     "stone": ("Stone Knot", "Recover", ["Yarn, porcelain, a Loomframe working, iron in the chest.", "Tension the Strand: the Grit-singers answer."]),
     "sprout": ("Sprout Knot", "Root", ["A field, a kitchen, essence rising.", "Tension the Strand: the Rootbinders answer."]),
     "claw": ("Claw Knot", "Edge", ["Plans, iron on your back, a door out.", "Tension the Strand: the Edge-walkers answer. The braid opens."]),
-    "spark": ("Spark Knot", "Hum", ["A drum struck, a Pulse held, a resonator burning.", "Tension the Strand: the Drumhearts answer."]),
+    "spark": ("Spark Knot", "Hum", ["A drum struck, a Pulse held, a Resonator seated.", "Tension the Strand: the Drumhearts answer."]),
     "clock": ("Clock Knot", "Pattern", ["A wheel, a press, a mixer, a fan, a clockwork heart.", "Tension the Strand: the Pattern-weavers answer."]),
     "swarm": ("Swarm Knot", "Colony", ["A nest you built, a hive you moved, a centrifuge, an incubator, essence fields.", "Tension the Strand: the Colony-keepers answer."]),
     "sigil": ("Sigil Knot", "Bind", ["A braid spun, potions bottled, spells and spirits called.", "Tension the Strand: the Seal-carvers answer."]),
@@ -2471,14 +2471,14 @@ def build_tribal_side() -> list[dict]:
         ('greater_pulse_cell', 'A longer song', 'resonant_core', 'Carry 1,200 Pulse in one Greater Cell. Charge it at a Drumheart or Resonator before setting out.'),
         ('spirit_cistern', 'Rain held in copper', 'bound_echo', 'Sixteen buckets in one cistern. Buckets and fluid pipes both work. A comparator reads fullness; redstone locks filling and draining.'),
         ('lattice_tuner', 'Name the far end', 'attuned_echo', 'Mark a machine face with the tuner, then use it on a relay plate. Use it on another machine to replace the mark. Do not mark the plate.'),
-        ('item_relay', 'A path for supplies', 'lattice_tuner', 'Snap the plate onto a chest or machine face. Pair two plates with the same Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.'),
+        ('item_relay', 'A path for supplies', 'lattice_tuner', 'Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.'),
         ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 4 Pulse. Both ends must be loaded.'),
         ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 8 Pulse per successful beat. Use standard inventories from any compatible mod.'),
         ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 8 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.'),
         ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE, up to 2,000 FE per second. Redstone stops conversion and export.'),
         ('spirit_staff', 'Six voices in one hand', 'resonant_core', 'The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
         ('resonance_maul', 'Stone yields a doorway', 'resonant_core', 'Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.'),
-        ('spiritweave_hood', 'Eyes in the quiet', 'spiritweave', 'The hood lends night sight while charged cells sustain it. Each active Spiritweave piece draws 2 Pulse every four seconds.'),
+        ('spiritweave_hood', 'Eyes in the quiet', 'spiritweave', 'The hood lends night sight while charged cells sustain it. Unlinked pieces draw 2 Pulse every four seconds; a bound voice costs 3.'),
         ('spiritweave_robe', 'A woven shelter', 'spiritweave', 'The robe grants resistance. Wear it into the work and keep your cells charged.'),
         ('spiritweave_leggings', 'The camp keeps pace', 'spiritweave', 'Woven leggings lend speed. Their Pulse cost is separate from the other pieces.'),
         ('spiritweave_boots', 'A gentler descent', 'spiritweave', 'Boots can lend slow falling during descent while Pulse remains. A bound return path is still worth carrying.'),
@@ -2574,7 +2574,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
 
     # ---- The March remembers: halls, the Drum Circle, The Unsung, and the sixth voice
     adv('ancestor_hall', 'march/ancestor_hall', 'The halls that kept time',
-        'Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Twelve Lore Tablets line their walls; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.',
+        'Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Four Lore Tablets line each hall; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.',
         ['gate_drum'], 0, 42, [reward_item('tribalpower:spiritweave', 2), reward_xp_levels(2)])
     item('loom_thread', 'A strand of the thread itself',
          'Loom Thread is the Loom, in hand: Ancestor Hall chests hold two to four, The Unsung tears loose sixteen or more, and a Loom-stitcher Elder trades one at Friend standing. It is the reagent of the sixth voice.',
@@ -2650,7 +2650,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
          'Paper, Spiritweave and a Spirit Shard. Use the charter on a player to invite them to your camp, or in the air to see it. `/tribalpower camp` creates, invites, joins, leaves, kicks, renames.',
          ['spiritweave'], 5.4, 54, reward='tribalpower:spiritweave', reward_count=2)
     adv('first_camp', 'first_camp', 'One vault, one budget',
-        'Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other\'s devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. Your Clowder is the natural camp.',
+        'Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other\'s devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. A Clowder is not that camp — /tribalpower camp create is.',
         ['camp_charter'], 8.1, 54, [reward_item('tribalpower:greater_pulse_cell', 1), reward_xp_levels(3)])
 
     # ---- Reading the lattice

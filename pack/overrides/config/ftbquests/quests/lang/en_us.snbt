@@ -1188,12 +1188,12 @@
 	quest.42000000000500D2.title: "Hum: Bone Chime"
 	quest.42000000000500D3.quest_desc: [
 		"A shard of old tribe song. Needs a Chime.",
-		"How: Echo Attune line / Unweave. Spark quest names it."
+		"How: Bone Chime, amethyst and redstone, shapeless. Yields two."
 	]
 	quest.42000000000500D3.title: "Hum: Spirit Shard"
 	quest.42000000000500D4.quest_desc: [
 		"Copper around a Chime: metal tuned to spirit.",
-		"How: copper + echo bits. Spark ladder."
+		"How: copper around a Bone Chime. Yields two."
 	]
 	quest.42000000000500D4.title: "Hum: Copper Resonator"
 	quest.42000000000500D5.quest_desc: [
@@ -1208,7 +1208,7 @@
 	]
 	quest.42000000000500D6.title: "Hum: Pulse Cell"
 	quest.42000000000500D7.quest_desc: [
-		"Draw ambient ley into beats near a Drumheart.",
+		"Draw ambient ley into beats under open sky. Totem voices add; a Drumheart is not required.",
 		"How: place under sky near water/green. Slow Pulse. Spark ladder."
 	]
 	quest.42000000000500D7.title: "Hum: Ley Collector"
@@ -1418,7 +1418,7 @@
 	]
 	quest.4200000000050100.title: "Ritual Chalk"
 	quest.4200000000050101.quest_desc: [
-		"A drum struck, a Pulse held, a resonator burning.",
+		"A drum struck, a Pulse held, a Resonator seated.",
 		"Tension the Strand: the Drumhearts answer.",
 		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
 	]
@@ -6695,12 +6695,12 @@
 	quest.420000000022052F.title: "Bone Chime"
 	quest.4200000000220530.quest_desc: [
 		"Shard of old tribe song — needs a Chime.",
-		"How: Echo Attune line / Unweave. Spark quest names it."
+		"How: Bone Chime, amethyst and redstone, shapeless. Yields two."
 	]
 	quest.4200000000220530.title: "Spirit Shard"
 	quest.4200000000220531.quest_desc: [
 		"Tune metal to spirit — copper around a Chime.",
-		"How: copper + echo bits. Spark ladder."
+		"How: copper around a Bone Chime. Yields two."
 	]
 	quest.4200000000220531.title: "Copper Resonator"
 	quest.4200000000220532.quest_desc: [
@@ -6934,7 +6934,7 @@
 	]
 	quest.420000000022055F.title: "Name the far end"
 	quest.4200000000220560.quest_desc: [
-		"Snap the plate onto a chest or machine face. Pair two plates with the same Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.",
+		"Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220560.title: "A path for supplies"
@@ -6969,7 +6969,7 @@
 	]
 	quest.4200000000220566.title: "Stone yields a doorway"
 	quest.4200000000220567.quest_desc: [
-		"The hood lends night sight while charged cells sustain it. Each active Spiritweave piece draws 2 Pulse every four seconds.",
+		"The hood lends night sight while charged cells sustain it. Unlinked pieces draw 2 Pulse every four seconds; a bound voice costs 3.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220567.title: "Eyes in the quiet"
@@ -7168,7 +7168,7 @@
 	]
 	quest.420000000022058B.title: "An answer from the cradle"
 	quest.4200000000228001.quest_desc: [
-		"Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Twelve Lore Tablets line their walls; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.",
+		"Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Four Lore Tablets line each hall; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.",
 		"How: make or find The halls that kept time. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.4200000000228001.title: "The halls that kept time"
@@ -7298,7 +7298,7 @@
 	]
 	quest.420000000022801A.title: "A camp of many voices"
 	quest.420000000022801B.quest_desc: [
-		"Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other's devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. Your Clowder is the natural camp.",
+		"Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other's devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. A Clowder is not that camp — /tribalpower camp create is.",
 		"How: make or find One vault, one budget. JEI names the recipe; earlier quests in this chapter name the station and inputs."
 	]
 	quest.420000000022801B.title: "One vault, one budget"
