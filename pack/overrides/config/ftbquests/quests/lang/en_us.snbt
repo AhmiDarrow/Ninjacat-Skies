@@ -7303,7 +7303,7 @@
 	]
 	quest.420000000022801B.title: "One vault, one budget"
 	quest.420000000022801C.quest_desc: [
-		"A glass pane over a Copper Resonator and a Spirit Shard. Held, the lens shows the ley strength where you stand and paints it on the ground around you; sneak-use it on a Ley Collector for the exact breakdown.",
+		"A glass pane over a Copper Resonator and a Spirit Shard. Held, the lens shows the ley strength where you stand and paints it on the ground around you; sneak-use it on a Ley Collector, or a familiar, for its numbers.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.420000000022801C.title: "See the ley"
