@@ -2641,10 +2641,10 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
 
     # ---- Bound spirits and shared camps
     item('bonding_charm', 'A charm for a wild thing',
-         'Two Spiritweave, a Spirit Shard and the reagent of the species. Use it on an adult Lantern Fox, Mossback or Dawn Stag: a sixty-percent chance to bond, and the charm is kept on failure.',
+         'Two Spiritweave, a Spirit Shard and the reagent of the species. Use it on an adult familiar. Animals: sixty percent, charm kept on failure. Remnants want Voice with their tribe, forty percent, charm spent on failure.',
          ['spiritweave', 'spirit_shard'], 0, 54, reward='tribalpower:spirit_shard', reward_count=2)
     adv('first_bond', 'first_bond', 'A friend in the dark',
-        'A bonded animal follows, teleports after you, never despawns, cannot be hurt by you and yields double when brushed. The Lantern Fox lights the way and marks ore; the Mossback carries a nine-slot saddlebag; the Dawn Stag is ridden without a saddle. Sneak-use toggles stay.',
+        'A bonded familiar follows, teleports after you, never despawns, cannot be hurt by you and yields double when brushed. Fox, Mossback and Stag start you off. Remnants need Voice. One fighter and two helpers may follow; sitters do not count.',
         ['bonding_charm'], 2.7, 54, [reward_item('minecraft:brush', 1), reward_xp_levels(3)])
     item('camp_charter', 'A camp of many voices',
          'Paper, Spiritweave and a Spirit Shard. Use the charter on a player to invite them to your camp, or in the air to see it. `/tribalpower camp` creates, invites, joins, leaves, kicks, renames.',
@@ -2655,7 +2655,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
 
     # ---- Reading the lattice
     item('ley_lens', 'See the ley',
-         'A glass pane over a Copper Resonator and a Spirit Shard. Held, the lens shows the ley strength where you stand and paints it on the ground around you; sneak-use it on a Ley Collector for the exact breakdown.',
+         'A glass pane over a Copper Resonator and a Spirit Shard. Held, the lens shows the ley strength where you stand and paints it on the ground around you; sneak-use it on a Ley Collector, or a familiar, for its numbers.',
          ['ley_collector'], 0, 57, reward='tribalpower:pulse_cell', reward_count=2)
     item('pulse_gauge', 'A needle for Pulse',
          'Quartz over redstone and a Copper Resonator on March Stone. Faced at any Pulse holder it puts out redstone 0 to 15 in proportion to what is stored.',
