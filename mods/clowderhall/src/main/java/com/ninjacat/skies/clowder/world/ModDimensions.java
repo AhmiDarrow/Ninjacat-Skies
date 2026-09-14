@@ -367,12 +367,12 @@ public final class ModDimensions {
     }
 
     private static ItemStack createHowToStartBook() {
-        // Keep Recover / kit copy aligned with starter_book.js v4 + _gen_islands howto.
+        // Keep Recover / kit copy aligned with starter_book.js v7.
         List<Filterable<Component>> pages = List.of(
                 Filterable.passThrough(Component.literal(
                         "HOW TO START (read me)\n\n" +
                                 "You are in Clowder Hall or on Dock — not your forever island.\n\n" +
-                                "Goal: open Create Team on the Dock, pick a pad, then open quests."
+                                "Goal: open Create Team on the Dock, pick a pad, then open the Whisker Codex."
                 )),
                 Filterable.passThrough(Component.literal(
                         "CLAIM A PAD\n\n" +
@@ -382,7 +382,8 @@ public final class ModDimensions {
                                 "   Ninjacat Pad = Normal\n" +
                                 "   Dojo Cottage = Easy\n" +
                                 "   Frayed Thread = Hard\n" +
-                                "4) Open FTB Quests — start Soil.\n\n" +
+                                "4) Whisker Codex — Start here.\n" +
+                                "   Grave (`): assignment list.\n\n" +
                                 "Playing together? See the last page."
                 )),
                 Filterable.passThrough(Component.literal(

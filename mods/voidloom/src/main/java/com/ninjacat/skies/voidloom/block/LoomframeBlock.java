@@ -1,7 +1,6 @@
 package com.ninjacat.skies.voidloom.block;
 
 import com.mojang.serialization.MapCodec;
-import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -70,7 +69,7 @@ public class LoomframeBlock extends BaseEntityBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (level.hasNeighborSignal(pos)) {
-            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.voidloom.paused"), true);
             return ItemInteractionResult.CONSUME;
         }
         if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be)) {
@@ -90,7 +89,7 @@ public class LoomframeBlock extends BaseEntityBlock {
                     stack.shrink(1);
                 }
                 level.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 0.8F, 1.1F);
-                player.displayClientMessage(NinjacatText.teal("Mesh stretched across the Loomframe. Load it with grit."), true);
+                player.displayClientMessage(Component.translatable("message.voidloom.loomframe.stretched"), true);
                 return ItemInteractionResult.CONSUME;
             }
             return ItemInteractionResult.FAIL;
@@ -113,7 +112,7 @@ public class LoomframeBlock extends BaseEntityBlock {
                 stack.shrink(taken);
             }
             level.playSound(null, pos, SoundEvents.GRAVEL_PLACE, SoundSource.BLOCKS, 0.6F, 1.1F);
-            player.displayClientMessage(NinjacatText.teal("Grit on the mesh: " + be.getInput().getCount() + ". The frame will work it."), true);
+            player.displayClientMessage(Component.translatable("message.voidloom.loomframe.loaded", be.getInput().getCount()), true);
             return ItemInteractionResult.CONSUME;
         }
 
@@ -123,7 +122,7 @@ public class LoomframeBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.hasNeighborSignal(pos)) {
-            if (!level.isClientSide) player.displayClientMessage(Component.literal("Paused by redstone."), true);
+            if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.voidloom.paused"), true);
             return InteractionResult.CONSUME;
         }
         if (!(level.getBlockEntity(pos) instanceof LoomframeBlockEntity be)) {
@@ -138,7 +137,7 @@ public class LoomframeBlock extends BaseEntityBlock {
                 give(level, pos, player, out);
             }
             level.playSound(null, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 0.5F, 1.0F);
-            player.displayClientMessage(NinjacatText.gold("Scraps shaken loose from the weave."), true);
+            player.displayClientMessage(Component.translatable("message.voidloom.loomframe.scraps"), true);
             return InteractionResult.CONSUME;
         }
 
@@ -154,7 +153,7 @@ public class LoomframeBlock extends BaseEntityBlock {
 
         if (!be.getInput().isEmpty()) {
             give(level, pos, player, be.takeInput());
-            player.displayClientMessage(NinjacatText.teal("Grit taken back."), true);
+            player.displayClientMessage(Component.translatable("message.voidloom.loomframe.grit_back"), true);
             return InteractionResult.CONSUME;
         }
 

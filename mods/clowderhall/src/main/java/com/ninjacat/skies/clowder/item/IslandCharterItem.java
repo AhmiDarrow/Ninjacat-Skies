@@ -179,7 +179,8 @@ public class IslandCharterItem extends Item {
                                 "   Ninjacat Pad = Normal\n" +
                                 "   Dojo Cottage = Easy\n" +
                                 "   Frayed Thread = Hard\n" +
-                                "4) Open FTB Quests — start Soil.\n\n" +
+                                "4) Whisker Codex — Start here.\n" +
+                                "   Grave (`): assignment list.\n\n" +
                                 "Invite a friend: hold this Charter and\n" +
                                 "right-click them, or /clowder invite <name>.\n" +
                                 "They accept with /clowder accept.\n\n" +
@@ -192,7 +193,8 @@ public class IslandCharterItem extends Item {
                                 "• On your pad: sneak-use Charter seals spawn here.\n" +
                                 "• /clowder hub is always safe.\n" +
                                 "• /clowder return leaves the Hall.\n" +
-                                "• Whisker Codex = quests, rewards and hints.\n" +
+                                "• Whisker Codex: Start here first.\n" +
+                                "  Grave (`): quests.\n" +
                                 "• How to Start book = plain OOC steps."
                 ))
         );
