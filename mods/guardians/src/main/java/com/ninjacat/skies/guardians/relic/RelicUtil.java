@@ -185,12 +185,19 @@ final class RelicUtil {
 
     // ------------------------------------------------------------------ Clowder
 
-    /** Online Clowder-mates (not the player) in the same level within {@code r} blocks. */
+    /** Online Clowder-mates (not the player) in the same level within {@code r} blocks. Spectators are omitted. */
     static List<ServerPlayer> mates(ServerPlayer p, double r) {
+        return mates(p, r, false);
+    }
+
+    /** {@code includeSpectators} is for Overweaver revive: downed mates sit in spectator with the exhausted flag. */
+    static List<ServerPlayer> mates(ServerPlayer p, double r, boolean includeSpectators) {
         List<ServerPlayer> out = new ArrayList<>();
         LoomTension.clowderOf(p).ifPresent(c -> {
             for (ServerPlayer m : c.onlineMembers()) {
-                if (m != p && m.level() == p.level() && m.isAlive() && m.distanceToSqr(p) <= r * r) out.add(m);
+                if (m == p || m.level() != p.level() || !m.isAlive() || m.distanceToSqr(p) > r * r) continue;
+                if (!includeSpectators && m.isSpectator()) continue;
+                out.add(m);
             }
         });
         return out;
@@ -198,7 +205,7 @@ final class RelicUtil {
 
     static boolean isMate(ServerPlayer p, Entity other) {
         if (other == p) return true;
-        if (!(other instanceof ServerPlayer sp)) return false;
+        if (!(other instanceof ServerPlayer sp) || sp.isSpectator()) return false;
         return LoomTension.clowderOf(p).map(c -> c.onlineMembers().contains(sp)).orElse(false);
     }
 
@@ -208,7 +215,9 @@ final class RelicUtil {
         Vec3 eye = p.getEyePosition(), look = p.getLookAngle();
         ServerPlayer best = null; double bestDot = 0.95;
         for (ServerPlayer m : mates(p, r)) {
-            double dot = look.dot(m.getEyePosition().subtract(eye).normalize());
+            Vec3 to = m.getEyePosition().subtract(eye);
+            if (to.lengthSqr() < 1.0e-6) continue;
+            double dot = look.dot(to.normalize());
             if (dot > bestDot) { bestDot = dot; best = m; }
         }
         return best;
@@ -224,10 +233,12 @@ final class RelicUtil {
     // ------------------------------------------------------------------ presentation
 
     static void sound(ServerPlayer p, SoundEvent s, float volume, float pitch) {
+        if (p.isRemoved()) return;
         p.level().playSound(null, p.getX(), p.getY(), p.getZ(), s, SoundSource.PLAYERS, volume, pitch);
     }
 
     static void sound(Entity at, SoundEvent s, float volume, float pitch) {
+        if (at.isRemoved()) return;
         at.level().playSound(null, at.getX(), at.getY(), at.getZ(), s, SoundSource.PLAYERS, volume, pitch);
     }
 

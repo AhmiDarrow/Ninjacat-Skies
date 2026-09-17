@@ -3,7 +3,7 @@
   "name": "Choose two middle branches",
   "description": "Practical steps and checks.",
   "icon": "ninjacatskies:braid_cord",
-  "x": 4,
+  "x": 8,
   "y": 3,
   "background_u_index": 0,
   "background_v_index": 0,
@@ -11,13 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Three routes afte...",
-      "text": "After the Claw stage, you can work on three branches:\\\n**Pattern / Clock:** mechanical processing.\\\n**Colony / Swarm:** bees and their production chains.\\\n**Hum / Spark:** living power and workshops."
+      "title": "Three routes",
+      "text": "**Goal:** seat any two of Clock, Swarm and Spark, then spin **Braid Cord** at the Post.\\\nYou need two of those tokens seated, a **Strand Filament**, and a **Tension Post**.\\\nAfter Claw, three branches open together:\\\n**Pattern / Clock:** mechanical processing."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Complete and seat **any two** of these three Strands to unlock Braid Cord. A team can divide the work. You will still need all nine Strands for the final reweave."
+      "text": "**Colony / Swarm:** bees and their production chains.\\\n**Hum / Spark:** living power and workshops.\\\nA team can divide the work. You will still need all nine Strands for the final reweave."
     },
     {
       "type": "modonomicon:text",
@@ -27,12 +27,17 @@
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Do not put tokens in a crafting grid. They record progress. If the Post refuses, read its message and check which Strands are seated.\\\nNext: follow Bind and the Sigil quests."
+      "text": "Do not put tokens in a crafting grid. They record progress. If the Post refuses, read its message and check which Strands are seated."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Check",
+      "text": "**Check:** two of those three notches are lit, and Braid Cord is in your hand. Next: Bind and the Sigil quests."
     }
   ],
   "parents": [
     {
-      "entry": "ninjacatskies:first_steps/automatic_power",
+      "entry": "ninjacatskies:first_steps/hold_fluids",
       "draw_arrow": true,
       "line_enabled": true
     }

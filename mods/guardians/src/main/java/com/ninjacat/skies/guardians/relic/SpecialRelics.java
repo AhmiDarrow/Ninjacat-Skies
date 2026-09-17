@@ -92,7 +92,9 @@ final class SpecialRelics {
                     double along = rel.dot(look);
                     if (along < 0 || along > 6.5) continue;
                     if (rel.subtract(look.scale(along)).length() > 1.5 + ent.getBbWidth() * 0.5) continue;
-                    if (ent instanceof LivingEntity le && !le.getTags().contains(RelicUtil.BEE_TAG)) {
+                    if (ent == p.getVehicle()) continue;
+                    if (ent instanceof LivingEntity le && !le.getTags().contains(RelicUtil.BEE_TAG)
+                            && !(le instanceof net.minecraft.world.entity.TamableAnimal t && t.isTame())) {
                         le.hurt(p.damageSources().indirectMagic(p, p), 24.0F);     // 12 hearts, bypasses armour
                         RelicUtil.burst(l, ParticleTypes.SCULK_SOUL, le, 10, 0.4, 0.05);
                         hit++;
@@ -140,7 +142,7 @@ final class SpecialRelics {
                 if (!RelicUtil.until(p, REWEAVE_KEY)) return;
                 ServerLevel l = p.serverLevel();
                 RelicUtil.setUntil(p, RelicTimers.REWEAVE_GUARD_KEY, 25);
-                var mates = RelicUtil.mates(p, 16);
+                var mates = RelicUtil.mates(p, 16, true);
                 boolean pulse = p.tickCount % 20 == 0;
                 int i = 0;
                 for (ServerPlayer m : mates) {
@@ -159,15 +161,22 @@ final class SpecialRelics {
             private void tryRevive(ServerPlayer p, ServerPlayer m) {
                 var t = RelicUtil.tag(p);
                 if (t.getInt(REWEAVE_REVIVE) <= 0 || !m.getPersistentData().getBoolean("skybound_exhausted")) return;
+                int lives = SkyboundEvents.restoreOneLife(m);
+                if (lives < 0) return;
                 t.putInt(REWEAVE_REVIVE, 0);
-                if (SkyboundEvents.restoreOneLife(m) < 0) return;
-                ServerPlayer wearer = p;
+                ServerLevel dest = p.serverLevel();
+                double x = p.getX(), y = p.getY() + 1, z = p.getZ();
+                java.util.UUID mateId = m.getUUID();
                 RelicTimers.later(p, 2, () -> {
-                    if (m.isSpectator()) return;
-                    m.teleportTo(wearer.serverLevel(), wearer.getX(), wearer.getY(), wearer.getZ(), m.getYRot(), m.getXRot());
-                    m.setHealth(m.getMaxHealth() * 0.5F);
-                    RelicUtil.burst(wearer.serverLevel(), ParticleTypes.TOTEM_OF_UNDYING, m, 40, 0.8, 0.3);
-                    RelicUtil.sound(m, SoundEvents.TOTEM_USE, 1.0F, 1.2F);
+                    if (dest.getServer() == null || dest.getServer().isStopped()) return;
+                    ServerPlayer live = dest.getServer().getPlayerList().getPlayer(mateId);
+                    if (live == null || live.isRemoved() || live.isSpectator()) return;
+                    if (live.isPassenger()) live.stopRiding();
+                    if (live.isVehicle()) live.ejectPassengers();
+                    live.teleportTo(dest, x, y, z, live.getYRot(), live.getXRot());
+                    live.setHealth(live.getMaxHealth() * 0.5F);
+                    RelicUtil.burst(dest, ParticleTypes.TOTEM_OF_UNDYING, live, 40, 0.8, 0.3);
+                    RelicUtil.sound(live, SoundEvents.TOTEM_USE, 1.0F, 1.2F);
                 });
             }
             @Override public boolean activate(ServerPlayer p, ItemStack s) {
@@ -175,7 +184,7 @@ final class SpecialRelics {
                 RelicUtil.tag(p).putInt(REWEAVE_REVIVE, 1);
                 ServerLevel l = p.serverLevel();
                 int i = 0;
-                for (ServerPlayer m : RelicUtil.mates(p, 16)) RelicUtil.line(l, (i++ % 2 == 0) ? RelicUtil.TEAL : RelicUtil.GOLD, p.position().add(0, 1.2, 0), m.position().add(0, 1.2, 0), 20);
+                for (ServerPlayer m : RelicUtil.mates(p, 16, true)) RelicUtil.line(l, (i++ % 2 == 0) ? RelicUtil.TEAL : RelicUtil.GOLD, p.position().add(0, 1.2, 0), m.position().add(0, 1.2, 0), 20);
                 RelicUtil.ring(l, RelicUtil.GOLD, p.position().add(0, 0.2, 0), 1.5, 18);
                 RelicUtil.sound(p, SoundEvents.UI_LOOM_TAKE_RESULT, 1.2F, 0.8F);
                 RelicTimers.later(p, 6, () -> RelicUtil.sound(p, SoundEvents.BELL_RESONATE, 0.8F, 1.3F));

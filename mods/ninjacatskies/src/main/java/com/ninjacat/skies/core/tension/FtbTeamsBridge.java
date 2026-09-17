@@ -1,5 +1,6 @@
 package com.ninjacat.skies.core.tension;
 
+import com.ninjacat.skies.core.config.SkiesConfig;
 import dev.ftb.mods.ftbteams.api.FTBTeamsAPI;
 import dev.ftb.mods.ftbteams.api.Team;
 import dev.ftb.mods.ftbteams.api.TeamManager;
@@ -34,6 +35,7 @@ final class FtbTeamsBridge {
             if (e.getPlayer() != null) LoomTension.onClowderChanged(e.getPlayer());
         });
         dev.ftb.mods.ftbteams.api.event.TeamEvent.PLAYER_LEFT_PARTY.register(e -> {
+            copyPartyToPlayerTeam(e);
             if (e.getPlayer() != null) LoomTension.onClowderChanged(e.getPlayer());
         });
     }
@@ -57,14 +59,68 @@ final class FtbTeamsBridge {
         if (!to.contains(LoomTension.KEY_POST) && from.contains(LoomTension.KEY_POST)) {
             to.put(LoomTension.KEY_POST, from.get(LoomTension.KEY_POST).copy());
         }
+        boolean joiningExisting = next.getMembers().size() > 1;
         for (String k : from.getAllKeys()) {
+            if (joiningExisting && k.startsWith("life_reward_")) continue;
             if (!to.contains(k)) to.put(k, from.get(k).copy());
         }
+        boolean joiningExhausted = e.getPlayer() != null
+                && e.getPlayer().getPersistentData().getBoolean(ClowderLives.EXHAUSTED_FLAG);
+        UUID joiningId = e.getPlayer() != null ? e.getPlayer().getUUID() : null;
+        ClowderLives.inheritExhaustion(to, from, joiningId, joiningExhausted);
         extra.put(KEY, to);
         next.markDirty();
         if (e.getPlayer() != null) {
             LoomTension.retargetPost(e.getPlayer().getServer(), new TeamClowder(next));
         }
+    }
+
+    /**
+     * Leaving a party used to restore the solo player-team snapshot: lives spent while grouped came back,
+     * and Strands seated after joining vanished. Copy strand bits and receipts. Do not copy the party
+     * life pool (that duplicated remaining lives). The party's Tension Post stays with the party.
+     */
+    private static void copyPartyToPlayerTeam(dev.ftb.mods.ftbteams.api.event.PlayerLeftPartyTeamEvent e) {
+        Team party = e.getTeam();
+        Team solo = e.getPlayerTeam();
+        if (party == null || solo == null || party.getTeamId().equals(solo.getTeamId())) return;
+        CompoundTag from = party.getExtraData().getCompound(KEY);
+        if (from.isEmpty()) return;
+        CompoundTag extra = solo.getExtraData();
+        CompoundTag to = extra.contains(KEY) ? extra.getCompound(KEY) : new CompoundTag();
+        int bits = from.getInt(LoomTension.KEY_STRANDS) | to.getInt(LoomTension.KEY_STRANDS);
+        if (bits != 0) to.putInt(LoomTension.KEY_STRANDS, bits);
+        if (from.getBoolean(LoomTension.KEY_REWOVEN)) to.putBoolean(LoomTension.KEY_REWOVEN, true);
+        for (String k : from.getAllKeys()) {
+            if (k.equals(LoomTension.KEY_POST) || k.equals("shared_lives")
+                    || k.equals("life_contributors") || k.equals("exhausted_members")) continue;
+            if (!to.contains(k)) to.put(k, from.get(k).copy());
+        }
+        to.remove(LoomTension.KEY_POST);
+        // Strands stay. Lives do not: copying the party pool onto the solo team duplicated it.
+        // A living leaver starts a solo pool of startingLives. A spent pool cannot be escaped by leaving.
+        // Do not call remaining() here: that getter records contributors and can add starting lives
+        // onto the party if the leaver is still listed as a member when this event fires.
+        int starting = Math.max(1, Math.min(99, SkiesConfig.STARTING_LIVES.get()));
+        UUID leaver = e.getPlayerId();
+        int saved = ClowderLives.saved(from);
+        boolean dead = (e.getPlayer() != null && e.getPlayer().getPersistentData().getBoolean(ClowderLives.EXHAUSTED_FLAG))
+                || ClowderLives.isExhausted(new TeamClowder(party), leaver)
+                || saved == 0;
+        CompoundTag contrib = new CompoundTag();
+        if (leaver != null) contrib.putBoolean(leaver.toString(), true);
+        to.put("life_contributors", contrib);
+        if (dead) {
+            to.putInt("shared_lives", 0);
+            CompoundTag ex = new CompoundTag();
+            if (leaver != null) ex.putBoolean(leaver.toString(), true);
+            to.put("exhausted_members", ex);
+        } else {
+            to.putInt("shared_lives", starting);
+            to.remove("exhausted_members");
+        }
+        extra.put(KEY, to);
+        solo.markDirty();
     }
 
     static Optional<Clowder> forPlayer(ServerPlayer player) {

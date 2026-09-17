@@ -11,23 +11,28 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Make the first so...",
-      "text": "Easy pads include water. Normal and Hard pads supply ice, lava and an empty bucket.\\\n1\\. Make a contained area from nonflammable blocks.\\\n2\\. Put the ice where the water should remain. Use nearby lava as the heat source, with blocks containing its flow."
+      "title": "Goal and supplies",
+      "text": "**Goal:** a refillable water source that will not burn the pad.\\\nYou need ice, lava and an empty bucket on Normal/Hard. Easy pads already have water.\\\nEasy pads include water. Normal and Hard pads supply ice, lava and an empty bucket."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "First water source",
+      "text": "1\\. Make a contained area from nonflammable blocks.\\\n2\\. Put the ice where the water should remain. Use nearby lava as the heat source, with blocks containing its flow.\\\n3\\. Let the ice melt. Collect the resulting water source with the bucket."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "3\\. Let the ice melt. Collect the resulting water source with the bucket.\\\nKeep lava away from wood and stored items. Do not let the two liquids flow together."
+      "text": "Keep lava away from wood and stored items. Do not let the two liquids flow together."
     },
     {
       "type": "modonomicon:text",
       "title": "A refillable pool",
-      "text": "**Once you have two water source buckets**, build the four-block pool shown next. Fill opposite corners. On ordinary water-source rules, all four spaces become sources.\\\nCollect a bucket and check that the pool refills before relying on it. One source alone is not enough for this layout."
+      "text": "**Once you have two water source buckets**, build the four-block pool shown next. Fill opposite corners. On ordinary water-source rules, all four spaces become sources."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Keep water available for the Tension Barrel and farming."
+      "text": "**Check:** collect a bucket and watch the pool refill before you rely on it. One source alone is not enough for this layout. Keep water available for the Tension Barrel and farming."
     },
     {
       "type": "modonomicon:multiblock",

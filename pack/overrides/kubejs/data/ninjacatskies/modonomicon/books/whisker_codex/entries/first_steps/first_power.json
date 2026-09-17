@@ -3,7 +3,7 @@
   "name": "Make the first Echo Shard",
   "description": "Practical steps and checks.",
   "icon": "tribalpower:echo_shatter",
-  "x": 0,
+  "x": 2,
   "y": 3,
   "background_u_index": 0,
   "background_v_index": 0,
@@ -12,7 +12,7 @@
     {
       "type": "modonomicon:text",
       "title": "Goal and supplies",
-      "text": "**Goal:** make an Echo Shard for an automatic generator.\\\nYou need Echo Shatter, an Earth Resonance Totem, a Drumheart and **stone**, not cobblestone. Smelt cobblestone if necessary.\\\nUse the Spirit Codex for detailed Tribal Power recipes, diagrams and troubleshooting."
+      "text": "**Goal:** make an Echo Shard for an automatic generator.\\\nYou need Echo Shatter, an Earth Resonance Totem, a Drumheart and **stone**, not cobblestone. Smelt cobblestone if necessary.\\\nUse the **Spirit Codex** for Tribal Power recipes, diagrams and troubleshooting. Sneak-use it on the station if it stays silent."
     },
     {
       "type": "modonomicon:text",
@@ -25,6 +25,11 @@
       "text": "4\\. Wait for an Echo Shard. If it stops, charge the drum again and inspect the station with the Spirit Codex.\\\nCobblestone becomes gravel instead. A slow generator can finish a batch using stored energy."
     },
     {
+      "type": "modonomicon:text",
+      "title": "Check",
+      "text": "**Check:** an Echo Shard is in the output. The diagram is a compact example, not a quest shape."
+    },
+    {
       "type": "modonomicon:multiblock",
       "multiblock_id": "ninjacatskies:codex/shatter_workshop",
       "multiblock_name": "Placement example",
@@ -34,7 +39,7 @@
   ],
   "parents": [
     {
-      "entry": "ninjacatskies:first_steps/materials",
+      "entry": "ninjacatskies:first_steps/claw_blueprints",
       "draw_arrow": true,
       "line_enabled": true
     }

@@ -64,10 +64,15 @@ public final class SkyTeams {
 
     private static void onOpRemove(SkyblockOpManageEvent.RemoveFromTeam event) {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
-        if (server == null || event.getPlayers() == null) return;
-        Set<UUID> removed = new HashSet<>();
-        for (ServerPlayer p : event.getPlayers()) removed.add(p.getUUID());
-        later(server, () -> leaveIfGone(server, removed));
+        if (server == null || event.getTeam() == null) return;
+        UUID teamId = event.getTeam().getId();
+        Set<UUID> before = new HashSet<>(event.getTeam().getPlayers());
+        later(server, () -> {
+            Set<UUID> gone = new HashSet<>(before);
+            Team team = data(server).getTeam(teamId);
+            if (team != null) gone.removeAll(team.getPlayers());
+            leaveIfGone(server, gone);
+        });
     }
 
     private static void onOpDelete(SkyblockOpManageEvent.DeleteTeam event) {
@@ -131,7 +136,13 @@ public final class SkyTeams {
     /** Team id for a player, or null when they are on no (non-spawn) team. */
     public static UUID teamId(MinecraftServer server, UUID player) {
         Team team = data(server).getTeamFromPlayer(player);
-        return team == null ? null : team.getId();
+        return team == null || team.isSpawn() ? null : team.getId();
+    }
+
+    public static boolean isSpawn(MinecraftServer server, UUID teamId) {
+        if (teamId == null) return true;
+        Team team = data(server).getTeam(teamId);
+        return team == null || team.isSpawn();
     }
 
     public static Set<UUID> members(MinecraftServer server, UUID teamId) {
@@ -168,7 +179,7 @@ public final class SkyTeams {
         if (inviter.getUUID().equals(target.getUUID())) return BAD;
         SkyblockSavedData d = data(server);
         Team team = d.getTeamFromPlayer(inviter.getUUID());
-        if (team == null) return NO_TEAM;
+        if (team == null || team.isSpawn()) return NO_TEAM;
         if (d.hasPlayerTeam(target)) return TARGET_TEAM;
         if (d.hasInviteFrom(team, target)) return ALREADY;                      // one prompt per team, not one per right-click
         d.addInvite(team, inviter, target);
@@ -182,7 +193,10 @@ public final class SkyTeams {
         var invites = d.getInvites(player);
         if (invites == null || invites.isEmpty()) return NO_TEAM;
         Team team = null;
-        for (int i = invites.size() - 1; i >= 0 && team == null; i--) team = d.getTeam(invites.get(i));   // newest invite whose team still exists
+        for (int i = invites.size() - 1; i >= 0 && team == null; i--) {
+            Team candidate = d.getTeam(invites.get(i));   // newest invite whose team still exists and is not the Dock
+            if (candidate != null && !candidate.isSpawn()) team = candidate;
+        }
         if (team == null) return NO_TEAM;
         boolean ok = d.acceptInvite(team, player);
         if (ok) d.setDirty();

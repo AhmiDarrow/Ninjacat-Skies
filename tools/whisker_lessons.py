@@ -5,43 +5,229 @@ from pathlib import Path
 NS = 'ninjacatskies'
 
 
+STRAND_BRAID_CHECKS = {
+    'wake': 'Finish Soil in the quest screen. Claim the **Soil Knot**, then seat the Soil token. The Soil notch lights.',
+    'recover': 'Finish Recover. Claim the Stone token and seat it. The Stone notch lights. A working Loomframe and Tension Barrel are the practical check.',
+    'root': 'Finish Sprout. Claim the token and seat it. The Sprout notch lights. Keep a food source running before you leave the pad.',
+    'edge': 'Finish Claw. If the Blueprint Package is missing, craft it from four Blueprint Paper, then seat the Claw token. The Claw notch lights.',
+    'pattern': 'Finish Clock. Claim the token and seat it. The Clock notch lights.',
+    'colony': 'Finish Swarm. Claim the token and seat it. The Swarm notch lights.',
+    'hum': 'Finish Spark. Claim the token and seat it. The Spark notch lights.',
+    'bind': 'Seat any two of Clock, Swarm and Spark. Right-click the Post with a Strand Filament for **Braid Cord**. Finish Sigil, then seat the Sigil token.',
+    'reweave': 'Seat all nine tokens. Right-click the Post with March Stone for a **Spindle Loom Fragment**, then right-click again holding the Fragment. Your Clowder\'s Strand of the Fray closes.',
+}
+
+BRAID_TAIL = (
+    'Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. '
+    'If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine.'
+)
+
+
 def build_lessons(book, write, text, entry, category):
     category('first_steps', 'Start here', f'{NS}:whisker_codex', 0,
              'A safe start, working examples, and what to do when progress stops.')
     lessons = [
         ('using_the_book', 'Using the Codex', 'ninjacatskies:whisker_codex', [
-            text('Your two useful screens', 'Use the **Whisker Codex** to learn a system before building it. Open the quest screen with the **Grave / backtick** key to see tasks, requirements and rewards. If you changed your controls, search Controls for Quests.\n\nStart with **Start here**. **The Loom Braid** explains the campaign stages. The story chapters are there when you want to learn about the world.'),
-            text('Read, build, check', 'Each practical lesson gives you a goal, a short sequence and a way to check the result. Follow the arrows between entries.\n\nFor exact crafting ingredients, hover an item in your inventory or the item list and open its recipe. Recipes can change with the pack; a build diagram shows placement, not a crafting recipe.'),
-            text('Words used in this book', '**Pad:** your floating island.\n**Clowder:** your player team.\n**Strand:** one part of the campaign.\n**Token:** the reward proving you completed a Strand.\n**Seat:** right-click a Tension Post with a token.\n**Pulse:** the energy used by Tribal Power.\n\nYou do not need to remember the lore to follow the instructions.')]),
+            text('Book and quests',
+                 '**Goal:** know which screen does which job before you build anything.\n\n'
+                 'You need the **Whisker Codex** from the starter kit or dock chest.\n\n'
+                 'Use the **Whisker Codex** to learn a system, then build it. Open the quest screen with the **Grave / backtick** key for tasks, requirements and rewards. If you changed controls, search Controls for Quests.\n\n'
+                 'Click a quest item to open its recipe in JEI. Start with **Start here**. **The Loom Braid** is the campaign map. Story chapters wait until you want the why.'),
+            text('Read, build, check',
+                 'Each practical lesson gives a goal, numbered steps and a way to check the result. Follow the arrows.\n\n'
+                 'Exact ingredients live in JEI, not in this book. Recipes can change with the pack. A diagram is a placement example, not a quest requirement.\n\n'
+                 '**Tribal Power** is its own mod. Open its **Spirit Codex** for every generator, workshop, rite and camp hand. This book is the pack campaign: pad, quests, Loom, Clowder. Sneak-use the Spirit Codex on a silent Tribal station.'),
+            text('Words in this book',
+                 '**Pad:** your floating island.\n**Clowder:** your player team.\n**Strand:** one part of the campaign.\n**Token:** the reward proving you completed a Strand.\n**Seat:** right-click a Tension Post with a token.\n**Pulse:** the energy used by Tribal Power.\n**March:** the otherworld beyond the Gate Drum.\n\n'
+                 '**Check:** Grave opens quests. A quest item opens JEI. **Start here** is the first category in this book.')]),
         ('safe_start', 'Your first safe workshop', 'minecraft:crafting_table', [
-            text('Goal and supplies', '**Goal:** a safe place to grow a tree, craft, store items and cook food.\n\nAt the Dock, use your Island Charter to open the island/team screen. Join your existing team or create one, then choose your pad.\n\nKeep a sapling, some dirt and the starter supplies. Open the Soil quests before spending rare starter items.'),
-            text('Build in this order', '1. Widen your platform. Add edges and light.\n2. Harvest wood. Keep a replacement sapling and replant it on dirt.\n3. Make a crafting table and chest. Store spare saplings and valuables.\n4. Make a furnace. Cook food as the Soil quests request. Keep walkways clear.'),
-            text('Check before moving on', 'You should have a replanted tree, spare materials in storage, food and a workspace you can walk around safely.\n\nThe model on the next page is one compact arrangement. Build a larger platform around it. The exact arrangement is optional; the diagram is not a quest requirement. Keep fire and lava away from wooden floors.')], 'starter_workshop'),
+            text('Goal and supplies',
+                 '**Goal:** a safe place to grow a tree, craft, store items and cook food.\n\n'
+                 'You need a sapling, dirt, and the starter supplies.\n\n'
+                 'Keep a sapling, some dirt and the starter supplies. Open the Soil quests before spending rare starter items.'),
+            text('Clowder and Hall',
+                 '**Goal:** one Clowder, one pad, a way back to the Hall.\n\n'
+                 'You need the **Island Charter** and a **Hub Key**.\n\n'
+                 '1. **K** opens the island/team panel. The **Island Charter** opens the same panel. Join or create a team, then pick a pad.\n'
+                 '2. Hold the Charter and right-click a friend to invite, or `/clowder invite <name>` / `/clowder accept`.\n'
+                 '3. Sneak-use the Charter on solid Overworld pad ground to seal spawn.\n'
+                 '4. **Hub Key** or `/clowder hub` reaches Clowder Hall. `/clowder return` sends you home. Right-click a Hall Elder to trade Frayed Thread.\n\n'
+                 '**Check:** you are on your pad, in the intended Clowder, and `/clowder hub` works.'),
+            text('Build in this order',
+                 '1. Widen your platform. Add edges and light.\n'
+                 '2. Harvest wood. Keep a replacement sapling and replant it on dirt.\n'
+                 '3. Make a crafting table and chest. Store spare saplings and valuables.\n'
+                 '4. Make a furnace. Cook food as the Soil quests request. Keep walkways clear.'),
+            text('Workshop check',
+                 '**Check:** a replanted tree, spare materials in storage, cooked food, and a workspace you can walk around without falling.\n\n'
+                 'The model on the next page is one compact arrangement. Build a larger platform around it. The exact arrangement is optional. Keep fire and lava away from wooden floors.')], 'starter_workshop'),
         ('water', 'Keep a water supply', 'minecraft:water_bucket', [
-            text('Make the first source', 'Easy pads include water. Normal and Hard pads supply ice, lava and an empty bucket.\n\n1. Make a contained area from nonflammable blocks.\n2. Put the ice where the water should remain. Use nearby lava as the heat source, with blocks containing its flow.\n3. Let the ice melt. Collect the resulting water source with the bucket.\n\nKeep lava away from wood and stored items. Do not let the two liquids flow together.'),
-            text('A refillable pool', '**Once you have two water source buckets**, build the four-block pool shown next. Fill opposite corners. On ordinary water-source rules, all four spaces become sources.\n\nCollect a bucket and check that the pool refills before relying on it. One source alone is not enough for this layout.\n\nKeep water available for the Tension Barrel and farming.')], 'water_pool'),
+            text('Goal and supplies',
+                 '**Goal:** a refillable water source that will not burn the pad.\n\n'
+                 'You need ice, lava and an empty bucket on Normal/Hard. Easy pads already have water.\n\n'
+                 'Easy pads include water. Normal and Hard pads supply ice, lava and an empty bucket.'),
+            text('First water source',
+                 '1. Make a contained area from nonflammable blocks.\n'
+                 '2. Put the ice where the water should remain. Use nearby lava as the heat source, with blocks containing its flow.\n'
+                 '3. Let the ice melt. Collect the resulting water source with the bucket.\n\n'
+                 'Keep lava away from wood and stored items. Do not let the two liquids flow together.'),
+            text('A refillable pool',
+                 '**Once you have two water source buckets**, build the four-block pool shown next. Fill opposite corners. On ordinary water-source rules, all four spaces become sources.\n\n'
+                 '**Check:** collect a bucket and watch the pool refill before you rely on it. One source alone is not enough for this layout. Keep water available for the Tension Barrel and farming.')], 'water_pool'),
         ('first_token', 'Finish and seat Soil', 'ninjacatskies:strand_token_soil', [
-            text('Complete the chapter', '1. Open the quest screen and work through Soil. Read each task: some need you to hold an item; others ask you to craft or perform an action.\n2. Claim the **Soil Knot** reward when its tasks are complete.\n3. Craft and place a **Tension Post** using its current recipe.\n4. Right-click the Post with the Soil Strand token.'),
-            text('Check the Post', 'The Soil notch should light and your team gains the seated Strand. Completing a quest and seating its token are separate steps.\n\nIf the notch stays dark, check that you claimed the token and are holding the right item. Team progress is shared; you do not need a separate Post for every player.\n\nNext: Recover introduces the Loomframe, barrel and material processing.')]),
+            text('Goal',
+                 '**Goal:** finish Soil and seat its token so the pad starts mending you.\n\n'
+                 'You need the Soil Knot claimed and a **Tension Post** placed.\n\n'
+                 'Completing a quest and seating its token are separate steps.'),
+            text('Complete the chapter',
+                 '1. Open the quest screen and work through Soil. Read each task: some need you to hold an item; others ask you to craft or perform an action. Click the item to open JEI if the recipe is unclear.\n'
+                 '2. Claim the **Soil Knot** reward when its tasks are complete.\n'
+                 '3. Craft and place a **Tension Post** using its current recipe.\n'
+                 '4. Right-click the Post with the Soil Strand token.'),
+            text('Check the Post',
+                 '**Check:** the Soil notch lights and your team gains the seated Strand.\n\n'
+                 'If the notch stays dark, check that you claimed the token and are holding the right item. Team progress is shared; you do not need a separate Post for every player.\n\n'
+                 'Next: Recover introduces the Loomframe, barrel and material processing.')]),
         ('materials', 'Build a material supply', 'voidloom:loomframe', [
-            text('Goal and sequence', '**Goal:** turn basic resources into materials for the next chapter.\n\n1. Unravel Frayed Thread into string when you need it. Keep some Thread for trading.\n2. Follow recipes for Void Yarn, a Binding Knot and a Loomframe.\n3. Make a Tension Barrel and keep water nearby.\n4. Follow Recover for clay, porcelain and the route to handling lava.'),
-            text('Test small batches', 'Read the Loomframe and barrel recipes before adding items. Start with one batch and check the output. Keep the input and result in separate storage until you know the process.\n\nThen work towards sieving and better meshes. An iron mesh opens the route to Strand Filament. Follow the active quests and recipes for the exact substrate and mesh combination.\n\nThe next model is a workspace example; adjacent placement alone does not automate these stations.')], 'material_workshop'),
+            text('Goal and sequence',
+                 '**Goal:** turn pad scraps into materials for Recover and the chapters after it.\n\n'
+                 'You need Frayed Thread, Recover open, and a mesh.\n\n'
+                 '1. Unravel Frayed Thread into string when you need it. Keep some Thread for trading.\n'
+                 '2. Follow JEI for Void Yarn, a Binding Knot and a Loomframe.\n'
+                 '3. Make a Tension Barrel and keep water nearby.\n'
+                 '4. Follow Recover for clay, porcelain and the route to handling lava.'),
+            text('Test small batches',
+                 'Read the Loomframe and barrel in JEI before adding items. Start with one batch and check the output. Keep the input and result in separate storage until you know the process.\n\n'
+                 '**Check:** the Loomframe produces scraps from a loaded mesh, and the barrel returns clay or yarn. Adjacent placement alone does not automate these stations. The next model is a workspace example.'),
+            text('Sieves',
+                 '**Goal:** a click sieve for early grit, then a hopper Loomframe.\n\n'
+                 'You need an oak sieve, a string mesh, and cobble to hammer.\n\n'
+                 '1. Craft an **oak sieve**. Hold a mesh and right-click the sieve; this one is hand-only.\n'
+                 '2. Hammer cobble toward gravel, sand or dust as Recover asks. String mesh first; iron mesh is when **Strand Filament** starts.\n'
+                 '3. The **Loomframe** is the hopper machine: mesh by hand, dirt/gravel/sand/dust in the top, output below.\n\n'
+                 '**Check:** the oak sieve yields a click of grit, and the Loomframe ticks with a loaded mesh. Follow Recover and JEI for the current mesh and substrate. Adjacent placement does not automate either station.')], 'material_workshop'),
+        ('claw_blueprints', 'Claw Blueprint Package', 'silentgear:blueprint_package', [
+            text('Goal',
+                 '**Goal:** get Silent Gear starter plans when Claw opens, even if the join gift is gone.\n\n'
+                 'You need four **Blueprint Paper**.\n\n'
+                 'Claiming a pad wipes Silent Gear\'s first-join **Blueprint Package**. That is Skyblock Builder clearing the inventory, not a missing recipe.'),
+            text('Craft the package',
+                 '1. Reach the Claw / Edge quests. Open a Blueprint Paper in JEI if you need the current paper recipe.\n'
+                 '2. Craft a **Blueprint Package** from four **Blueprint Paper**, shapeless.\n'
+                 '3. Right-click the package to unwrap starter plans.\n'
+                 '4. Follow Claw for rods, tools, iron on your back, a bow, and a portal frame. Leave the pad on purpose.'),
+            text('Check',
+                 '**Check:** you are holding the package or the unwrapped plans, and the Claw quest can see them.\n\n'
+                 'Do not wait for another join gift. Tokens still are not crafted in a grid. After Claw, Pattern, Colony and Hum open together.')]),
         ('first_power', 'Make the first Echo Shard', 'tribalpower:echo_shatter', [
-            text('Goal and supplies', '**Goal:** make an Echo Shard for an automatic generator.\n\nYou need Echo Shatter, an Earth Resonance Totem, a Drumheart and **stone**, not cobblestone. Smelt cobblestone if necessary.\n\nUse the Spirit Codex for detailed Tribal Power recipes, diagrams and troubleshooting.'),
-            text('Build and run it', '1. Place the drum and Earth totem beside Echo Shatter, within 8 blocks.\n2. Right-click the drum with an empty hand about once a second. Build a reserve of Pulse.\n3. Put stone into Shatter and leave output space.\n4. Wait for an Echo Shard. If it stops, charge the drum again and inspect the station with the Spirit Codex.\n\nCobblestone becomes gravel instead. A slow generator can finish a batch using stored energy.')], 'shatter_workshop'),
+            text('Goal and supplies',
+                 '**Goal:** make an Echo Shard for an automatic generator.\n\n'
+                 'You need Echo Shatter, an Earth Resonance Totem, a Drumheart and **stone**, not cobblestone. Smelt cobblestone if necessary.\n\n'
+                 'Use the **Spirit Codex** for Tribal Power recipes, diagrams and troubleshooting. Sneak-use it on the station if it stays silent.'),
+            text('Build and run it',
+                 '1. Place the drum and Earth totem beside Echo Shatter, within 8 blocks.\n'
+                 '2. Right-click the drum with an empty hand about once a second. Build a reserve of Pulse.\n'
+                 '3. Put stone into Shatter and leave output space.\n'
+                 '4. Wait for an Echo Shard. If it stops, charge the drum again and inspect the station with the Spirit Codex.\n\n'
+                 'Cobblestone becomes gravel instead. A slow generator can finish a batch using stored energy.'),
+            text('Check',
+                 '**Check:** an Echo Shard is in the output. The diagram is a compact example, not a quest shape.')], 'shatter_workshop'),
         ('automatic_power', 'Start automatic power', 'tribalpower:pulse_resonator', [
-            text('Build the starter generator', 'You need a **Pulse Resonator**, an **Echo Shard**, and **Earth and Fire Resonance Totems**.\n\n1. Place the Resonator.\n2. Right-click it with the shard to install the reusable catalyst.\n3. Place the two different totems within 8 blocks. The diagram shows a compact example.\n4. Wait a second and inspect the generator. Stored Pulse should rise.'),
-            text('Check the power budget', 'The starter generator makes a small amount of Pulse continuously. It does not mean every machine can run continuously. If a machine spends power faster than you make it, let a reserve build up or improve generation.\n\nTwo identical totems count as one element. If generation stops, check the catalyst, different elements and pausing redstone.\n\nRead the Spirit Codex before building larger totem layouts or a Conductor.')], 'resonator_workshop'),
+            text('Goal',
+                 '**Goal:** a Pulse Resonator that makes a small, steady trickle of Pulse without you standing at the drum.\n\n'
+                 'You need a **Pulse Resonator**, an **Echo Shard**, and **Earth and Fire Resonance Totems**.'),
+            text('Starter generator',
+                 '1. Place the Resonator.\n'
+                 '2. Right-click it with the shard to install the reusable catalyst.\n'
+                 '3. Place the two different totems within 8 blocks. The diagram shows a compact example.\n'
+                 '4. Wait a second and inspect the generator. Stored Pulse should rise.'),
+            text('Power budget',
+                 '**Check:** stored Pulse climbs while you stand still.\n\n'
+                 'The starter generator does not mean every machine can run continuously. If a machine spends power faster than you make it, let a reserve build up or improve generation.\n\n'
+                 'Two identical totems count as one element. If generation stops, check the catalyst, different elements and pausing redstone. Read the Spirit Codex before larger totem layouts or a Conductor.')], 'resonator_workshop'),
+        ('hold_fluids', 'Hold liquids safely', 'tribalpower:spirit_cistern', [
+            text('Goal',
+                 '**Goal:** store and move liquids without dumping them on the floor.\n\n'
+                 'You need a **Spirit Cistern** (JEI / Tribal Weave). AE2 Sky Stone Tanks empty when broken.\n\n'
+                 'AE2 **Sky Stone Tanks** empty when broken. That is AE2\'s design, not a pack bug. Bucket them out before you pick the tank up.'),
+            text('Use a Cistern',
+                 '1. Craft a **Spirit Cistern**. It holds 16 buckets of one fluid.\n'
+                 '2. Fill it with a bucket or a standard fluid pipe. A comparator reads fullness; redstone can lock filling and draining.\n'
+                 '3. Break the Cistern when you need to move it. The fluid stays on the dropped block.\n'
+                 '4. Relays move fluid between loaded ends. They are paths, not tanks.\n\n'
+                 'The **Spirit Codex** has the current piping and Wave Drum details. The diagram is one compact corner, not a quest shape.'),
+            text('Check',
+                 '**Check:** put a bucket into the Cistern, pick the block up, and place it again. The fluid is still there. If you used a Sky Stone Tank, the liquid is gone unless you bucketed first.')], 'cistern_corner'),
         ('choose_branches', 'Choose two middle branches', 'ninjacatskies:braid_cord', [
-            text('Three routes after Claw', 'After the Claw stage, you can work on three branches:\n\n**Pattern / Clock:** mechanical processing.\n**Colony / Swarm:** bees and their production chains.\n**Hum / Spark:** living power and workshops.\n\nComplete and seat **any two** of these three Strands to unlock Braid Cord. A team can divide the work. You will still need all nine Strands for the final reweave.'),
-            text('Make Braid Cord', '1. Check that two of Clock, Swarm and Spark are seated at your Post. Merely holding their tokens is not enough.\n2. Hold a **Strand Filament**.\n3. Right-click the Post to receive **Braid Cord**.\n\nDo not put tokens in a crafting grid. They record progress. If the Post refuses, read its message and check which Strands are seated.\n\nNext: follow Bind and the Sigil quests.')]),
+            text('Three routes',
+                 '**Goal:** seat any two of Clock, Swarm and Spark, then spin **Braid Cord** at the Post.\n\n'
+                 'You need two of those tokens seated, a **Strand Filament**, and a **Tension Post**.\n\n'
+                 'After Claw, three branches open together:\n\n'
+                 '**Pattern / Clock:** mechanical processing.\n'
+                 '**Colony / Swarm:** bees and their production chains.\n'
+                 '**Hum / Spark:** living power and workshops.\n\n'
+                 'A team can divide the work. You will still need all nine Strands for the final reweave.'),
+            text('Make Braid Cord',
+                 '1. Check that two of Clock, Swarm and Spark are seated at your Post. Merely holding their tokens is not enough.\n'
+                 '2. Hold a **Strand Filament**.\n'
+                 '3. Right-click the Post to receive **Braid Cord**.\n\n'
+                 'Do not put tokens in a crafting grid. They record progress. If the Post refuses, read its message and check which Strands are seated.'),
+            text('Check',
+                 '**Check:** two of those three notches are lit, and Braid Cord is in your hand. Next: Bind and the Sigil quests.')]),
+        ('pad_runners', 'Pad-runners', 'chocobosreborn:sage_notes', [
+            text('Goal',
+                 '**Goal:** find a wild pad-runner in the March, not on your void pad.\n\n'
+                 'You need a charged **Gate Drum**, **Gysahl**, and **Sage Notes**.\n\n'
+                 'Birds do not spawn on a skyblock island. There is no spawn-egg shortcut and no join gift. Walk the March.'),
+            text('Find, tame, ride',
+                 '1. Charge a **Gate Drum** with Pulse, then empty-handed use it and walk through. Do not strike it like a Drumheart. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.\n'
+                 '2. Pick **Gysahl** in the March (Reed Fen is densest). Craft extras into seeds and plant them on dirt or March soil at home.\n'
+                 '3. Craft **Sage Notes** (book and a gysahl leaf) and right-click a bird to read it.\n'
+                 '4. Tame a wild yellow with gysahl, then saddle it. Sprint dashes; ease off to recover stamina.'),
+            text('Esther at the hub',
+                 'After you have walked the March, **Esther** stands at Clowder Hall (`/clowder hub`). Mount a saddled bird and speak to her, or place a **Square Gate**.\n\n'
+                 '**Check:** you are on a saddled bird, or Esther is waiting at the hub.'),
+            text('Farm and colour',
+                 '**Goal:** train, mate, and paint colours without chasing dyes that do not exist.\n\n'
+                 'You need greens to train, nuts to mate, and **Sage Notes** to read the bird.\n\n'
+                 '1. Train an adult on greens until it is sated on each kind. Krakka is two gysahl and bone meal.\n'
+                 '2. Mate with nuts. Talent follows the nut. Colour follows the parents unless Carob or Zeio is involved.\n'
+                 '3. **Carob** (ravagers): two Good-or-better Yellows hatch Green or Blue. Each parent needs 1 first-place race; 4 combined firsts make the colour certain.\n'
+                 '4. Green plus Blue hatch Black (a miss is White) — 2 firsts each, 9 combined for a sure roll. **Zeio** (piglin brutes): Black plus a Wonderful Yellow hatch Gold — 3 firsts each, 12 combined.\n'
+                 '5. There are no Pink or Red birds. The Fair stall does not sell those dyes. Purple is End; Flame is Ember Wastes; Gold flies.\n\n'
+                 '**Check:** Sage Notes shows colour, grade, class, race wins and the last nut. Recipes stay in JEI.')]),
         ('finish', 'Prepare the final reweave', 'ninjacatskies:spindle_loom_fragment', [
-            text('Readiness checklist', 'Finish the remaining quest branches and seat all **nine** Strand tokens. Count the Post notches before leaving for the final materials.\n\nPrepare food, equipment and a return route before entering the March. Bring back **March Stone**. Read the Spirit Codex for the Gate Drum and March travel details.'),
-            text('Use the Post twice', '1. With all nine Strands seated, right-click the Tension Post with March Stone. This makes a **Spindle Loom Fragment**.\n2. Right-click the Post again, this time holding the Fragment, to reweave your team\'s sky.\n\nThese are world interactions, not crafting-table recipes. If nothing happens, check the Post message and the nine seated Strands. Other teams have their own progress.')]),
+            text('Readiness checklist',
+                 '**Goal:** seat all nine Strands, bring March Stone home, and close your Clowder\'s cut.\n\n'
+                 'You need nine seated tokens, **March Stone**, and a way home.\n\n'
+                 'Count the Post notches before you leave. Prepare food, equipment and a return route. The **Spirit Codex** covers the Gate Drum and March travel.'),
+            text('Use the Post twice',
+                 '1. With all nine Strands seated, right-click the Tension Post with March Stone. This makes a **Spindle Loom Fragment**.\n'
+                 '2. Right-click the Post again, this time holding the Fragment, to reweave your team\'s sky.\n\n'
+                 'These are world interactions, not crafting-table recipes.'),
+            text('Check',
+                 '**Check:** nine notches are lit, then the Fragment seats and the Fray over the Dock is thinner for your Clowder. If nothing happens, read the Post message. Other teams have their own progress.')]),
         ('stuck', 'When progress stops', 'minecraft:book', [
-            text('A quest will not complete', 'Read the exact task and its prerequisites. Check item counts, variants and whether the task wants possession, crafting or another action. Try the task\'s detect button when one is available.\n\nCheck rewards too: an unclaimed token cannot be seated. If playing together, confirm you are in the intended Clowder before repeating a long crafting chain.'),
-            text('A machine will not work', 'Check these separately:\n1. Correct input and recipe.\n2. Available power and range.\n3. Required totem or other structure.\n4. Space for the result.\n5. Pausing redstone and side settings.\n\nFor Tribal Power, crouch and right-click the machine with the Spirit Codex. Test one machine before connecting a whole production line.'),
-            text('Shared lives and recovery', 'When shared lives are enabled, survival deaths spend the Clowder\'s pool. At exhaustion, affected players become spectators. Ordinary food or healing does not restore a spent life.\n\nRare campaign rewards can add lives; a recovery item or operator revive may be needed. Check the quest screen and the recovery item\'s instructions. Plan dangerous trips together and store spare supplies before leaving.')]),
+            text('Quest checks',
+                 '**Goal:** unstick one blocked task without rebuilding the pad.\n\n'
+                 'You need the quest screen, JEI, and (for Tribal) the **Spirit Codex**.\n\n'
+                 'Read the exact task and its prerequisites. Check item counts, variants and whether the task wants possession, crafting or another action. Click the quest item to open JEI. Try the task\'s detect button when one is available.\n\n'
+                 'Check rewards too: an unclaimed token cannot be seated. If Claw is stuck on plans, craft the Blueprint Package from four Blueprint Paper. If playing together, confirm you are in the intended Clowder before repeating a long crafting chain.'),
+            text('Machine checks',
+                 'Check these separately:\n'
+                 '1. Correct input and recipe.\n'
+                 '2. Available power and range.\n'
+                 '3. Required totem or other structure.\n'
+                 '4. Space for the result.\n'
+                 '5. Pausing redstone and side settings.\n\n'
+                 'For Tribal Power, crouch and right-click the machine with the Spirit Codex. Test one machine before connecting a whole production line.'),
+            text('Shared lives',
+                 'When shared lives are on (default), each Clowder mate adds **three** lives to one team pool. A survival death spends one. Food and potions do not put it back. At zero, affected players become spectators.\n\n'
+                 '`/skybound lives` prints the pool. Six quest rewards named **Thread of Return** each add one life when claimed. There is no item to use. Operators run `/skybound revive`. Plan trips together.'),
+            text('Common traps',
+                 'A Sky Stone Tank that you just moved is empty unless you bucketed first. Use a Spirit Cistern to carry liquids.\n\n'
+                 'Pad-runners are in the March, not on the pad. After the Gate, Esther waits at `/clowder hub`.\n\n'
+                 '**Check:** you have isolated one cause from this page, not rebuilt the whole workshop on a guess.')]),
     ]
     for i, lesson in enumerate(lessons):
         eid, title, icon, pages, *diagram = lesson
@@ -54,32 +240,47 @@ def build_lessons(book, write, text, entry, category):
 
     # Rendered block models use the same native book loader as other multiblocks.
     shapes = {
-      'starter_workshop': ([['C F',' 0 ','B  '],['PPP','PPP','PPP']], {'C':'minecraft:crafting_table','F':'minecraft:furnace','0':'ninjacatskies:tension_post','B':'minecraft:chest','P':'minecraft:oak_planks'}),
+      'starter_workshop': ([['0 F','   ','B  '],['PPP','PPP','PPP']], {'0':'minecraft:crafting_table','F':'minecraft:furnace','B':'minecraft:chest','P':'minecraft:oak_planks'}),
       'water_pool': ([['SSSS','S0WS','SWWS','SSSS'],['SSSS','SSSS','SSSS','SSSS']], {'S':'minecraft:cobblestone','0':'minecraft:water','W':'minecraft:water'}),
-      'material_workshop': ([['L 0 B','     ','     '],['PPPPP','PPPPP','PPPPP']], {'L':'minecraft:chest','0':'voidloom:loomframe','B':'voidloom:tension_barrel','P':'minecraft:oak_planks'}),
+      'material_workshop': ([['L 0 B','  S  ','     '],['PPPPP','PPPPP','PPPPP']], {'L':'minecraft:chest','0':'voidloom:loomframe','B':'voidloom:tension_barrel','S':'exdeorum:oak_sieve','P':'minecraft:oak_planks'}),
       'shatter_workshop': ([['D E',' 0 ','   '],['SSS','SSS','SSS']], {'D':'tribalpower:drumheart','E':'tribalpower:resonance_totem_earth','0':'tribalpower:echo_shatter','S':'minecraft:stone'}),
       'resonator_workshop': ([[' E ',' 0 ',' F '],['SSS','SSS','SSS']], {'E':'tribalpower:resonance_totem_earth','F':'tribalpower:resonance_totem_fire','0':'tribalpower:pulse_resonator','S':'minecraft:stone'}),
+      'cistern_corner': ([['L0C','   '],['SSS','SSS']], {'L':'minecraft:lever','0':'tribalpower:spirit_cistern','C':'minecraft:comparator','S':'minecraft:stone'}),
     }
     data_root = book.parents[1]
     for key,(pattern,mapping) in shapes.items():
         write(data_root/'multiblocks'/'codex'/f'{key}.json', {'type':'modonomicon:dense','pattern':pattern,
               'mapping':{k:{'type':'modonomicon:block','block':v} for k,v in mapping.items()}})
 
-    # Every campaign stage gets a clear completion check alongside its narrative.
+    # Strand stages get a completion check. Workshop entries write their own.
     for path in (book/'entries'/'braid').glob('*.json'):
         obj=json.loads(path.read_text(encoding='utf-8'))
-        if path.stem=='living_lattice':continue
-        obj['pages'].append(text('Before you move on', 'Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights.\n\nRead **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine\'s diagnostic message.'))
+        check = STRAND_BRAID_CHECKS.get(path.stem)
+        if not check:
+            continue
+        if any(p.get('title') == 'Before you move on' for p in obj.get('pages', [])):
+            continue
+        obj['pages'].append(text('Before you move on', check + '\n\n' + BRAID_TAIL))
         write(path,obj)
 
 
 def sync_pack_primers(book, pack, write):
+    names={'first_hour':('Dock, pad, first workshop.','Your first hour'),
+           'the_campaign':('Two middle branches after Claw.','Two middle branches')}
+    parents={'this_book':None,'first_hour':'this_book','tokens':'first_hour','the_campaign':'tokens'}
     for target,source in [('this_book','using_the_book'),('first_hour','safe_start'),('tokens','first_token'),('the_campaign','choose_branches')]:
         path=pack/'entries'/'the_work'/f'{target}.json'
         if not path.exists():continue
         obj=json.loads(path.read_text(encoding='utf-8'))
         teaching=json.loads((book/'entries'/'first_steps'/f'{source}.json').read_text(encoding='utf-8'))
         obj['pages']=teaching['pages']
+        if target in names:
+            obj['description'], obj['name'] = names[target]
+        parent=parents.get(target)
+        if parent:
+            obj['parents']=[{'entry':f'{NS}:the_work/{parent}','draw_arrow':True,'line_enabled':True}]
+        else:
+            obj.pop('parents',None)
         write(path,obj)
     source=book.parents[1]/'multiblocks'/'codex'
     target=pack.parents[1]/'multiblocks'/'codex'
@@ -115,7 +316,33 @@ def paginate_pages(pages):
             # Paragraph nodes do not insert spacing in the bundled renderer. Hard breaks do.
             new['text']='\\\n'.join(re.sub(r'^(\d+)\.',r'\1\\.',s) for s in group)
             if len(new.get('title',''))>20:
-                new['title']={'Check before moving on':'Workshop check','Your two useful screens':'Book and quests','Check the power budget':'Power budget','A quest will not complete':'Quest checks','A machine will not work':'Machine checks'}.get(new['title'],new['title'][:17]+'...')
+                mapped={
+                    'Check before moving on':'Workshop check',
+                    'Your two useful screens':'Book and quests',
+                    'Check the power budget':'Power budget',
+                    'A quest will not complete':'Quest checks',
+                    'A machine will not work':'Machine checks',
+                    'Words used in this book':'Words in this book',
+                    'Three routes after Claw':'Three routes',
+                    'Build the starter generator':'Starter generator',
+                    'Shared lives and recovery':'Shared lives',
+                    'Hands become a workshop':'Hands to workshop',
+                    'Claw Blueprint Package':'Blueprint Package',
+                    'The camp keeps the beat':'Camp drum',
+                    'The halls that kept time':'Ancestor Halls',
+                    'How the sky learns to hold':'How the sky holds',
+                    'Public, or it does not count':'Keep it public',
+                    'What you are not doing':'What you are not',
+                    'Where the fallen came to rest':'March harbour',
+                    'A schedule, not a mood':'A schedule',
+                    'Maintenance, not peace':'Maintenance',
+                    'Hearths as first physics':'Hearths first',
+                    'The season the roots held':'Roots held',
+                    'The Fray is the clock':'The Fray clock',
+                    'Nine pulls, nine arguments':'Nine arguments',
+                    'What Clock still knows':'What Clock knows',
+                }
+                new['title']=mapped.get(new['title'], new['title'][:20])
             result.append(new)
     return result
 

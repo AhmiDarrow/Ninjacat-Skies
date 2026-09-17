@@ -19,7 +19,7 @@ function starterPages() {
 
 function makeStarterBook() {
   // 1.21 written_book_content: title/pages use Filterable {raw:...} form.
-  const pages = starterPages().map((text) => ({ raw: JSON.stringify({ text: text }) }))
+  let pages = starterPages().map((text) => ({ raw: JSON.stringify({ text: text }) }))
   return Item.of('minecraft:written_book', {
     'minecraft:written_book_content': {
       pages: pages,
@@ -32,7 +32,7 @@ function makeStarterBook() {
 }
 
 PlayerEvents.loggedIn((event) => {
-  const player = event.player
+  let player = event.player
   if (player.persistentData.getBoolean(STARTER_BOOK_FLAG)) return
   player.persistentData.putBoolean(STARTER_BOOK_FLAG, true)
 

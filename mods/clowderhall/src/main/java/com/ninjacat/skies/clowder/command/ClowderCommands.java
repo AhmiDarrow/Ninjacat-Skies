@@ -94,6 +94,10 @@ public final class ClowderCommands {
             actor.sendSystemMessage(gold("message.clowderhall.invite_no_skyblock"));
             return false;
         }
+        if (actor.isSpectator() || target.isSpectator()) {
+            actor.sendSystemMessage(gold("message.clowderhall.invite_spectator"));
+            return false;
+        }
         int result = SkyTeams.invite(actor.server, actor, target);
         switch (result) {
             case SkyTeams.OK -> {

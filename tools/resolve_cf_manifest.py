@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import struct
 import urllib.request
+from cf_distribution import is_local_owned
 from upload_curseforge import load_secrets
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,7 +53,7 @@ def main():
     rows = json.loads(path.read_text(encoding='utf-8'))
     indexed = {r['filename']: r for r in rows}
     jars = [p for p in sorted((ROOT / 'pack/mods').glob('*.jar'))
-            if not indexed.get(p.name, {}).get('fileId')]
+            if not is_local_owned(p.name) and not indexed.get(p.name, {}).get('fileId')]
     local = {}
     for p in jars:
         data = p.read_bytes()

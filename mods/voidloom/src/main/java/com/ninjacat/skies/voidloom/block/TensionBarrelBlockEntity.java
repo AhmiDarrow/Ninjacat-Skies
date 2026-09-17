@@ -268,6 +268,34 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         return handler;
     }
 
+    public IItemHandler insertHandler() {
+        return insertOnly;
+    }
+
+    public IItemHandler extractHandler() {
+        return extractOnly;
+    }
+
+    private final IItemHandler insertOnly = new FaceHandler(true);
+    private final IItemHandler extractOnly = new FaceHandler(false);
+
+    private final class FaceHandler implements IItemHandler {
+        private final boolean insert;
+        FaceHandler(boolean insert) { this.insert = insert; }
+        @Override public int getSlots() { return handler.getSlots(); }
+        @Override public ItemStack getStackInSlot(int slot) { return handler.getStackInSlot(slot); }
+        @Override public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            return insert ? handler.insertItem(slot, stack, simulate) : stack;
+        }
+        @Override public ItemStack extractItem(int slot, int amount, boolean simulate) {
+            return insert ? ItemStack.EMPTY : handler.extractItem(slot, amount, simulate);
+        }
+        @Override public int getSlotLimit(int slot) { return handler.getSlotLimit(slot); }
+        @Override public boolean isItemValid(int slot, ItemStack stack) {
+            return insert && handler.isItemValid(slot, stack);
+        }
+    }
+
     private final class Handler implements IItemHandler {
         @Override
         public int getSlots() {
@@ -286,12 +314,15 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
                 return stack;
             }
             if (isWaterCarrier(stack)) {
-                if (water + WATER_PER_BUCKET > WATER_MAX || !canStore(emptyWaterCarrier(stack))) {
-                    return stack;
-                }
+                if (water + WATER_PER_BUCKET > WATER_MAX) return stack;
                 if (!simulate) {
                     ItemStack empty = pourWater(stack);
-                    store(empty);
+                    if (!empty.isEmpty()) {
+                        int leftover = OutputStorage.insert(output, empty, false);
+                        if (leftover > 0 && level != null && !level.isClientSide) {
+                            Containers.dropItemStack(level, worldPosition.getX() + 0.5, worldPosition.getY() + 1, worldPosition.getZ() + 0.5, empty.copyWithCount(leftover));
+                        }
+                    }
                     sync();
                 }
                 return stack.getCount() > 1 ? stack.copyWithCount(stack.getCount() - 1) : ItemStack.EMPTY;
@@ -362,7 +393,11 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         for (ItemStack s : takeAllOutput()) {
             Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, s);
         }
+        int buckets = water / WATER_PER_BUCKET;
         water = 0;
+        for (int i = 0; i < buckets; i++) {
+            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(Items.WATER_BUCKET));
+        }
     }
 
     @Override

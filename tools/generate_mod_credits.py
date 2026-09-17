@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OWN_MODS = ("ninjacatlib-", "ninjacatskies-", "clowderhall-", "voidloom-", "guardians-", "tribalpower-")
+OWN_MODS = ("ninjacatlib-", "ninjacatskies-", "clowderhall-", "voidloom-", "guardians-", "tribalpower-", "chocobosreborn-")
 
 
 def main():
@@ -25,7 +25,7 @@ def main():
         name = row["name"].replace("[", r"\[").replace("]", r"\]")
         lines.append(f"- [{name}]({row['url']}) — {', '.join(row['authors'])}")
     lines += ["", "## Pack projects", "",
-              "Ninjacat Skies, Ninjacat Lib, Clowder Hall, and Voidloom are the pack's own companion projects. [TribalPower](https://www.curseforge.com/minecraft/mc-mods/tribalpower) is our separately maintained shamanic technomancy mod, also available standalone.", "",
+              "Ninjacat Skies, Ninjacat Lib, Clowder Hall, and Voidloom are the pack's own companion projects. [TribalPower](https://www.curseforge.com/minecraft/mc-mods/tribalpower) is our separately maintained shamanic technomancy mod, also available standalone. [Chocobos Reborn](https://www.curseforge.com/minecraft/mc-mods/chocobos-reborn) is our chocobo mod, also available standalone.", "",
               "[Back to Ninjacat Skies](../README.md)", ""]
     (ROOT / "docs/CREDITS.md").write_text("\n".join(lines), encoding="utf-8")
     print(f"Generated credits: {len(rows)} outside mods; complete installed-pack coverage")

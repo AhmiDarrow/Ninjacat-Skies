@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "voidloom:spindle_crook"
+    "voidloom:spindle_crook",
+    "voidloom:spindle_hammer"
   ]
 }

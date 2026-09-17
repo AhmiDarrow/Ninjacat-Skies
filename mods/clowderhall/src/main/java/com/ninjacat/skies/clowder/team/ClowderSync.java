@@ -32,6 +32,7 @@ public final class ClowderSync {
 
     public static void reconcileTeam(MinecraftServer server, UUID skyTeamId, boolean allowCreate) {
         if (!SKY || skyTeamId == null) return;
+        if (SkyTeams.isSpawn(server, skyTeamId)) return;
         Set<UUID> members = SkyTeams.members(server, skyTeamId);
         if (members == null || members.size() < 2) return;
         if (FTB && FtbParties.loaded()) {

@@ -369,6 +369,7 @@
 			id: "4200000000210511"
 			x: 4.4d
 			y: 1.4d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210511"
@@ -396,6 +397,7 @@
 			id: "4200000000210512"
 			x: 4.4d
 			y: 2.8d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210512"
@@ -431,6 +433,7 @@
 			id: "4200000000210513"
 			x: 4.4d
 			y: 4.2d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210513"
@@ -458,6 +461,7 @@
 			id: "4200000000210514"
 			x: 4.4d
 			y: 5.6d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210514"
@@ -485,6 +489,7 @@
 			id: "4200000000210515"
 			x: 6.6d
 			y: 0.0d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210515"
@@ -525,6 +530,7 @@
 			id: "4200000000210516"
 			x: 6.6d
 			y: 1.4d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210516"
@@ -545,13 +551,14 @@
 					}
 				}
 			]
-			dependencies: ["4200000000210515"]
+			dependencies: ["4200000000210510"]
 			shape: "loom"
 		}
 		{
 			id: "4200000000210517"
 			x: 6.6d
 			y: 2.8d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210517"
@@ -572,13 +579,14 @@
 					}
 				}
 			]
-			dependencies: ["4200000000210515"]
+			dependencies: ["4200000000210510"]
 			shape: "loom"
 		}
 		{
 			id: "4200000000210518"
 			x: 6.6d
 			y: 4.2d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210518"
@@ -607,7 +615,7 @@
 					}
 				}
 			]
-			dependencies: ["4200000000210515"]
+			dependencies: ["4200000000210510"]
 			shape: "loom"
 		}
 		{
@@ -634,7 +642,7 @@
 					}
 				}
 			]
-			dependencies: ["4200000000210515"]
+			dependencies: ["4200000000210510"]
 			optional: true
 			shape: "loom"
 			size: 0.85d
@@ -668,7 +676,7 @@
 					xp_levels: 1
 				}
 			]
-			dependencies: ["4200000000210515"]
+			dependencies: ["4200000000210510"]
 			shape: "loom"
 		}
 		{
@@ -801,6 +809,7 @@
 			id: "420000000021051F"
 			x: 11.0d
 			y: 0.0d
+			optional: true
 			tasks: [
 				{
 					id: "520000000021051F"
@@ -853,7 +862,7 @@
 					}
 				}
 			]
-			dependencies: ["420000000021051F"]
+			dependencies: ["420000000021051A"]
 			shape: "loom"
 		}
 		{
@@ -888,7 +897,7 @@
 					}
 				}
 			]
-			dependencies: ["420000000021051F"]
+			dependencies: ["420000000021051A"]
 			shape: "loom"
 		}
 		{
@@ -915,7 +924,7 @@
 					}
 				}
 			]
-			dependencies: ["420000000021051F"]
+			dependencies: ["420000000021051A"]
 			shape: "loom"
 		}
 		{
@@ -942,7 +951,7 @@
 					}
 				}
 			]
-			dependencies: ["420000000021051F"]
+			dependencies: ["420000000021051A"]
 			shape: "loom"
 		}
 		{
@@ -982,7 +991,7 @@
 					}
 				}
 			]
-			dependencies: ["420000000021051F"]
+			dependencies: ["420000000021051A"]
 			shape: "loom"
 		}
 		{
@@ -1078,6 +1087,7 @@
 			id: "4200000000210528"
 			x: 13.2d
 			y: 5.6d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000210528"

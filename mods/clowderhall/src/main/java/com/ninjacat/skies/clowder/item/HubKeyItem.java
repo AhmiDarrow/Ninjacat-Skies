@@ -23,6 +23,7 @@ public class HubKeyItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
+        if (player.isSpectator()) return InteractionResultHolder.fail(stack);
         if (!level.isClientSide && player instanceof ServerPlayer serverPlayer) {
             if (serverPlayer.level().dimension().equals(ModDimensions.CLOWDER_HALL)) {
                 ModDimensions.returnFromHub(serverPlayer);

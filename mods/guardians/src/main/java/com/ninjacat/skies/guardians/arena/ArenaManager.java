@@ -48,6 +48,7 @@ public final class ArenaManager extends SavedData {
 
     private final Map<Integer, ArenaInstance> active = new TreeMap<>();
     private final Map<Integer, String> lastKind = new HashMap<>();      // slot -> plan to clear before reuse
+    private boolean ticketsRestored;
 
     public static ArenaManager get(MinecraftServer server) {
         return server.overworld().getDataStorage().computeIfAbsent(new Factory<>(ArenaManager::new, ArenaManager::load), "guardians_arenas");
@@ -66,6 +67,7 @@ public final class ArenaManager extends SavedData {
     @Nullable
     public String summon(ServerPlayer summoner, GuardianKind kind) {
         MinecraftServer server = summoner.server;
+        if (summoner.isSpectator()) return "A spent life cannot call a guardian.";
         if (inArena(summoner)) return "You are already answering for the Cut.";
         if (instanceOf(summoner) != null) return "Your Clowder is already in an arena.";
         ServerLevel arena = arenaLevel(server);
@@ -168,9 +170,17 @@ public final class ArenaManager extends SavedData {
     }
 
     // ------------------------------------------------------------------ teleports
+    private static void dismount(ServerPlayer p) {
+        if (p.isPassenger()) p.stopRiding();
+        if (p.isVehicle()) p.ejectPassengers();
+    }
+
     private static void teleportToPad(ServerPlayer p, ServerLevel arena, BlockPos origin, BlockPos pad) {
         double x = origin.getX() + pad.getX() + 0.5, y = origin.getY() + pad.getY() + 0.1, z = origin.getZ() + pad.getZ() + 0.5;
+        Vec3 stand = snapToStand(arena, x, y, z);
+        if (stand != null) { x = stand.x; y = stand.y; z = stand.z; }
         float yaw = (float) Math.toDegrees(Math.atan2(-(origin.getX() + 0.5 - x), origin.getZ() + 0.5 - z));
+        dismount(p);
         if (p instanceof net.neoforged.neoforge.common.util.FakePlayer) p.moveTo(x, y, z, yaw, 0);   // fake players have no connection to teleport through
         else p.teleportTo(arena, x, y, z, yaw, 0);
         p.setDeltaMovement(Vec3.ZERO); p.fallDistance = 0;
@@ -194,15 +204,59 @@ public final class ArenaManager extends SavedData {
             at = new Vec3(r.getDouble("x"), r.getDouble("y"), r.getDouble("z")); yaw = r.getFloat("yaw"); pitch = r.getFloat("pitch");
         }
         if (target == null || target.dimension().equals(ARENA_LEVEL) || (TEST_FALLBACK && at != null && at.x > TEST_OFFSET - 4096)) { target = p.server.overworld(); BlockPos s = target.getSharedSpawnPos(); at = Vec3.atBottomCenterOf(s.above()); }
+        Vec3 stand = snapToStand(target, at.x, at.y, at.z);
+        if (stand == null) {
+            BlockPos respawn = p.getRespawnPosition();
+            ServerLevel pad = respawn == null ? null : p.server.getLevel(p.getRespawnDimension());
+            if (pad != null && !pad.dimension().equals(ARENA_LEVEL)) {
+                stand = snapToStand(pad, respawn.getX() + 0.5, respawn.getY() + 1, respawn.getZ() + 0.5);
+                if (stand != null) target = pad;
+            }
+        }
+        if (stand == null) {
+            target = p.server.overworld();
+            BlockPos s = target.getSharedSpawnPos();
+            stand = snapToStand(target, s.getX() + 0.5, s.getY() + 1, s.getZ() + 0.5);
+            if (stand == null) stand = Vec3.atBottomCenterOf(s.above());
+        }
+        at = stand;
+        dismount(p);
         if (p instanceof net.neoforged.neoforge.common.util.FakePlayer) p.moveTo(at.x, at.y, at.z, yaw, pitch);
         else p.teleportTo(target, at.x, at.y, at.z, yaw, pitch);
         p.setDeltaMovement(Vec3.ZERO); p.fallDistance = 0;
+    }
+
+    private static Vec3 snapToStand(ServerLevel level, double x, double y, double z) {
+        for (int dy = 0; dy <= 24; dy++) {
+            if (safeToStand(level, x, y - dy, z)) return new Vec3(x, y - dy, z);
+            if (dy > 0 && safeToStand(level, x, y + dy, z)) return new Vec3(x, y + dy, z);
+        }
+        return null;
+    }
+
+    private static boolean safeToStand(ServerLevel level, double x, double y, double z) {
+        BlockPos feet = BlockPos.containing(x, y, z);
+        var atFeet = level.getBlockState(feet);
+        if (!atFeet.getCollisionShape(level, feet).isEmpty() && atFeet.isCollisionShapeFullBlock(level, feet)) return false;
+        boolean footing = !atFeet.getCollisionShape(level, feet).isEmpty()
+                || level.getBlockState(feet.below()).blocksMotion()
+                || !level.getBlockState(feet.below()).getCollisionShape(level, feet.below()).isEmpty();
+        if (!footing) return false;
+        BlockPos head = feet.above();
+        return !level.getBlockState(head).isSuffocating(level, head)
+                && !level.getBlockState(head.above()).isSuffocating(level, head.above());
     }
 
     // ------------------------------------------------------------------ ticking
     public void tick(MinecraftServer server) {
         if (active.isEmpty()) return;
         ServerLevel arena = arenaLevel(server); if (arena == null) return;
+        if (!ticketsRestored) {
+            ticketsRestored = true;
+            for (ArenaInstance inst : active.values())
+                if (inst.state == ArenaInstance.State.FIGHT)
+                    forceChunks(arena, inst.originPos, inst.radius + 16, true);
+        }
         List<Integer> done = new ArrayList<>();
         for (ArenaInstance inst : active.values()) {
             inst.age++; inst.stateTicks++;
@@ -215,16 +269,20 @@ public final class ArenaManager extends SavedData {
                 if (out) {
                     int idx = Math.max(0, inst.party.indexOf(p.getUUID()));
                     BlockPos pad = data.pads.isEmpty() ? BlockPos.ZERO : data.pads.get(idx % data.pads.size());
-                    p.teleportTo(arena, inst.originPos.getX() + pad.getX() + 0.5, inst.originPos.getY() + pad.getY() + 0.1, inst.originPos.getZ() + pad.getZ() + 0.5, p.getYRot(), p.getXRot());
+                    double x = inst.originPos.getX() + pad.getX() + 0.5, y = inst.originPos.getY() + pad.getY() + 0.1, z = inst.originPos.getZ() + pad.getZ() + 0.5;
+                    Vec3 stand = snapToStand(arena, x, y, z);
+                    if (stand != null) { x = stand.x; y = stand.y; z = stand.z; }
+                    dismount(p);
+                    p.teleportTo(arena, x, y, z, p.getYRot(), p.getXRot());
                     p.setDeltaMovement(Vec3.ZERO); p.fallDistance = 0;
                     float dmg = inst.kind == GuardianKind.EDGEWALKER || inst.kind.tier == GuardianKind.Tier.INSANE ? 12 : 6;
-                    p.hurt(p.damageSources().fellOutOfWorld(), dmg);
+                    p.hurt(p.damageSources().fellOutOfWorld(), Math.min(dmg, Math.max(0, p.getHealth() - 1)));
                     p.displayClientMessage(NinjacatText.teal("The Loom pulls you back onto the stage."), true);
                 }
             }
             switch (inst.state) {
                 case FIGHT -> {
-                    if (inside.isEmpty() && inst.age > 100 && partyOnlineElsewhere(server, inst)) {
+                    if (inside.isEmpty() && inst.age > 100 && partyWithdrawn(server, inst)) {
                         // they walked out without /guardians leave — spend the totem
                         wipe(server, inst, "Nobody stands. The totem is spent.");
                     }
@@ -266,7 +324,12 @@ public final class ArenaManager extends SavedData {
         inst.state = ArenaInstance.State.WON; inst.stateTicks = 0; setDirty();
         ServerLevel arena = arenaLevel(server);
         if (arena != null) setGate(arena, ArenaData.get(server, inst.kind), inst.originPos, false);
-        List<ServerPlayer> present = inst.onlinePlayers();
+        // onlinePlayers() skips spectators. A last-life killing blow spectates before this 8-tick win.
+        List<ServerPlayer> present = new ArrayList<>();
+        for (UUID id : inst.party) {
+            ServerPlayer p = server.getPlayerList().getPlayer(id);
+            if (p != null) present.add(p);
+        }
         for (ServerPlayer p : present) {
             ItemStack relic = ModItems.relic(inst.kind);
             if (!relic.isEmpty()) LoomTension.giveOrDrop(p, relic);
@@ -300,19 +363,23 @@ public final class ArenaManager extends SavedData {
         return false;
     }
 
-    /** Online but not inside the arena — they left the stage without disconnecting. */
-    private static boolean partyOnlineElsewhere(MinecraftServer server, ArenaInstance inst) {
+    /** Disconnected members keep the stage. Spectators and pad-side survivors do not. */
+    private static boolean partyWithdrawn(MinecraftServer server, ArenaInstance inst) {
+        boolean anyOnline = false;
         for (UUID id : inst.party) {
             ServerPlayer p = server.getPlayerList().getPlayer(id);
-            if (p != null && p.isAlive() && !p.isSpectator() && !inArena(p)) return true;
+            if (p == null) return false;
+            anyOnline = true;
+            if (p.isAlive() && !p.isSpectator() && inArena(p)) return false;
         }
-        return false;
+        return anyOnline;
     }
 
     /** A player who logs in inside the arena dimension with no running fight is sent home. */
     public void onLogin(ServerPlayer p) {
         ArenaInstance inst = instanceOf(p);
         if (inst != null && inst.state == ArenaInstance.State.FIGHT && !inArena(p)) {
+            if (p.isSpectator()) { returnHome(p); return; }
             ServerLevel arena = arenaLevel(p.server);
             if (arena != null) {
                 ArenaData data = ArenaData.get(p.server, inst.kind);
@@ -328,6 +395,7 @@ public final class ArenaManager extends SavedData {
     public void onDeath(ServerPlayer p) {
         ArenaInstance a = instanceOf(p); if (a == null) return;
         for (ServerPlayer o : a.onlinePlayers()) if (o != p) o.sendSystemMessage(NinjacatText.teal(p.getName().getString() + " has fallen."));
+        if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "Nobody stands. The totem is spent.");
     }
     public void leave(ServerPlayer p) {
         ArenaInstance a = instanceOf(p); if (a == null) return;

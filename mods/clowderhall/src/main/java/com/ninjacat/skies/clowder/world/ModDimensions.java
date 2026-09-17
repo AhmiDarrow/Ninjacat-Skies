@@ -55,6 +55,10 @@ public final class ModDimensions {
     private ModDimensions() {}
 
     public static boolean travelToHub(ServerPlayer player) {
+        if (player.isSpectator()) {
+            player.displayClientMessage(msg("message.clowderhall.hub_spectator", NinjacatText.GOLD), false);
+            return false;
+        }
         if (isGuardianArena(player.level().dimension().location())) {
             player.displayClientMessage(msg("message.clowderhall.hub_in_arena", NinjacatText.TEAL), false);
             return false;
@@ -96,6 +100,10 @@ public final class ModDimensions {
     }
 
     public static boolean returnFromHub(ServerPlayer player) {
+        if (player.isSpectator()) {
+            player.displayClientMessage(msg("message.clowderhall.hub_spectator", NinjacatText.GOLD), false);
+            return false;
+        }
         if (!player.level().dimension().equals(CLOWDER_HALL)) {
             player.displayClientMessage(msg("message.clowderhall.hub_return_not_in_hall", NinjacatText.GOLD), false);
             return false;
@@ -129,10 +137,23 @@ public final class ModDimensions {
         float yaw = ret.getFloat("yaw");
         float pitch = ret.getFloat("pitch");
 
-        // Never edit the player's world on return: if the spot is no longer safe, fall back to spawn instead.
-        if (!safeToStand(target, x, y, z)) {
+        // Flyers (Gold/Flame chocobo, elytra) store a mid-air return. Snap down, then sealed pad, then Dock.
+        Vec3 stand = snapToStand(target, x, y, z);
+        if (stand == null) {
+            BlockPos respawn = player.getRespawnPosition();
+            ServerLevel pad = respawn == null ? null : player.server.getLevel(player.getRespawnDimension());
+            if (pad != null && !isGuardianArena(pad.dimension().location())) {
+                stand = snapToStand(pad, respawn.getX() + 0.5, respawn.getY() + 1, respawn.getZ() + 0.5);
+                if (stand == null) stand = snapToStand(pad, respawn.getX() + 0.5, respawn.getY(), respawn.getZ() + 0.5);
+                if (stand != null) target = pad;
+            }
+        }
+        if (stand == null) {
             return teleportOverworldSpawn(player);
         }
+        x = stand.x;
+        y = stand.y;
+        z = stand.z;
 
         dismount(player);
         player.changeDimension(new DimensionTransition(
@@ -272,9 +293,13 @@ public final class ModDimensions {
 
     private static void ensureVillage(ServerLevel level) {
         BlockPos revision = new BlockPos(0, 60, 0);
-        if (level.getBlockState(revision).is(Blocks.WAXED_OXIDIZED_COPPER)) return;
+        if (level.getBlockState(revision).is(Blocks.REINFORCED_DEEPSLATE)) return;
+        if (level.getBlockState(revision).is(Blocks.WAXED_OXIDIZED_COPPER)) {
+            level.setBlock(revision, Blocks.REINFORCED_DEEPSLATE.defaultBlockState(), 2);
+            return;
+        }
         TownPlan.build(level, "/data/clowderhall/towns/clowder_town.json", true);
-        level.setBlock(revision, Blocks.WAXED_OXIDIZED_COPPER.defaultBlockState(), 2);
+        level.setBlock(revision, Blocks.REINFORCED_DEEPSLATE.defaultBlockState(), 2);
     }
 
     private static void fillCeremonyChest(ChestBlockEntity chest) {
@@ -296,9 +321,8 @@ public final class ModDimensions {
         CompoundTag root = persisted.getCompound(ROOT);
         if (root.getBoolean(KIT_TAG)) return;
         BlockPos chestPos = PAD_CENTER.offset(1, 1, 1);
-        if (level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest && chest.isEmpty()) {
-            fillCeremonyChest(chest);
-        }
+        if (!(level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest) || !chest.isEmpty()) return;
+        fillCeremonyChest(chest);
         root.putBoolean(KIT_TAG, true);
         persisted.put(ROOT, root);
         arriving.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
@@ -441,9 +465,18 @@ public final class ModDimensions {
     }
 
     /** Something to stand on (the block at the feet, e.g. a slab/farmland, or the one below) and head room. */
+    private static Vec3 snapToStand(ServerLevel level, double x, double y, double z) {
+        for (int dy = 0; dy <= 24; dy++) {
+            if (safeToStand(level, x, y - dy, z)) return new Vec3(x, y - dy, z);
+            if (dy > 0 && safeToStand(level, x, y + dy, z)) return new Vec3(x, y + dy, z);
+        }
+        return null;
+    }
+
     private static boolean safeToStand(ServerLevel level, double x, double y, double z) {
         BlockPos feet = BlockPos.containing(x, y, z);
         BlockState atFeet = level.getBlockState(feet);
+        if (!atFeet.getCollisionShape(level, feet).isEmpty() && atFeet.isCollisionShapeFullBlock(level, feet)) return false;
         boolean footing = !atFeet.getCollisionShape(level, feet).isEmpty()
                 || level.getBlockState(feet.below()).blocksMotion()
                 || !level.getBlockState(feet.below()).getCollisionShape(level, feet.below()).isEmpty();
@@ -465,13 +498,15 @@ public final class ModDimensions {
      * not standable, look for a standable spot nearby; the caller falls back to the exact spawn if none is found.
      */
     private static BlockPos landingNear(ServerLevel level, BlockPos feet) {
+        if (safeToStand(level, feet.getX() + 0.5, feet.getY() + 1, feet.getZ() + 0.5)) return feet.above();
         if (safeToStand(level, feet.getX() + 0.5, feet.getY(), feet.getZ() + 0.5)) return feet;
         for (int r = 1; r <= 4; r++) for (int dx = -r; dx <= r; dx++) for (int dz = -r; dz <= r; dz++) for (int dy = 2; dy >= -2; dy--) {
             if (Math.max(Math.abs(dx), Math.abs(dz)) != r) continue;
             BlockPos c = feet.offset(dx, dy, dz);
+            if (safeToStand(level, c.getX() + 0.5, c.getY() + 1, c.getZ() + 0.5)) return c.above();
             if (safeToStand(level, c.getX() + 0.5, c.getY(), c.getZ() + 0.5)) return c;
         }
-        return feet;
+        return feet.above();
     }
 
     private static void storeReturnPoint(ServerPlayer player) {

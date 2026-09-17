@@ -37,6 +37,7 @@ $ModTargets = @(
     @{ Key = "FTB Teams";              Slugs = @("ftb-teams-forge", "ftb-teams"); Search = "FTB Teams" }
     @{ Key = "FTB Chunks";             Slugs = @("ftb-chunks-forge", "ftb-chunks"); Search = "FTB Chunks" }
     @{ Key = "FTB Quests";             Slugs = @("ftb-quests-forge", "ftb-quests"); Search = "FTB Quests" }
+    @{ Key = "FTB XMod Compat";        Slugs = @("ftb-xmod-compat"); Search = "FTB XMod Compat" }
     @{ Key = "JEI";                    Slugs = @("jei"); Search = "Just Enough Items" }
     @{ Key = "Architectury API";       Slugs = @("architectury-api"); Search = "Architectury API" }
     @{ Key = "Cloth Config API";       Slugs = @("cloth-config"); Search = "Cloth Config API" }
@@ -300,6 +301,8 @@ function Save-ModFile {
 }
 
 $resolved = @()
+# Owned mods (Ninjacat Skies Core, Tribal Power, Chocobos Reborn) are pinned in
+# pack/modlist-resolved.json, not downloaded here.
 $skips = @()
 $downloaded = @()
 $skippedNames = @()

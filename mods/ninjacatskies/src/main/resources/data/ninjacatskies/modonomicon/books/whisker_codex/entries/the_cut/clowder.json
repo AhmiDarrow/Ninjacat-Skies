@@ -12,7 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Clowders",
-      "text": "A team is a **Clowder**. Clowders share a pad, share quests, and share Loom Tension: when one of you seats a Strand, all of you hear it.\\\nThe **Island Charter** claims a pad from the Dock. The **Hub Key** opens the Clowder Hall, where every Clowder on the server meets."
+      "text": "A team is a **Clowder**. Clowders share a pad, share quests, and share Loom Tension: when one of you seats a Strand, all of you hear it."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Hall and Charter",
+      "text": "**Goal:** claim a pad and reach the Hall.\\\nYou need the **Island Charter** and a **Hub Key** (starter kit / Hall).\\\n1\\. **K** or the **Island Charter** opens the island/team panel. Join or create a team, then pick a pad.\\\n2\\. Right-click a friend with the Charter to invite, or `/clowder invite` / `/clowder accept`."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "3\\. Sneak-use the Charter on solid pad ground to seal spawn.\\\n4\\. **Hub Key** or `/clowder hub` reaches Clowder Hall. `/clowder return` sends you home. Right-click a Hall Elder to trade Thread.\\\n**Check:** you are on the intended pad, and `/clowder hub` works."
     },
     {
       "type": "modonomicon:text",

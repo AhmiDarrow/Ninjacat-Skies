@@ -31,6 +31,7 @@ public final class StewardCacheItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack held = player.getItemInHand(hand);
+        if (player.isSpectator()) return InteractionResultHolder.fail(held);
         if (!(level instanceof ServerLevel server)) return InteractionResultHolder.success(held);
         if (player.getCooldowns().isOnCooldown(this)) return InteractionResultHolder.fail(held);
         var table = server.getServer().reloadableRegistries().getLootTable(ResourceKey.create(

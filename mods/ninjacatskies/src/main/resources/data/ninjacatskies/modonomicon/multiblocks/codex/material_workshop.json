@@ -3,7 +3,7 @@
   "pattern": [
     [
       "L 0 B",
-      "     ",
+      "  S  ",
       "     "
     ],
     [
@@ -24,6 +24,10 @@
     "B": {
       "type": "modonomicon:block",
       "block": "voidloom:tension_barrel"
+    },
+    "S": {
+      "type": "modonomicon:block",
+      "block": "exdeorum:oak_sieve"
     },
     "P": {
       "type": "modonomicon:block",

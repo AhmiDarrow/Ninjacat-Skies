@@ -120,9 +120,10 @@ entry("the_cut", "cut", "The Cut", "Something severed the Loom.", "minecraft:she
 
 entry("the_cut", "skybound", "Skybound", "You, on a pad, with a damaged book.", f"{NS}:frayed_thread", 4, 0, [
     text("Skybound",
-         "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex assigns work. "
-         "You do it. That is the arrangement.\n\nOpen **Grave** (backtick) for the assignment list. This book "
-         "is for why, and for what the tribes left in the margins. They are the same campaign."),
+         "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex teaches. "
+         "Grave assigns the work. That is the arrangement.\n\nOpen **Grave** (backtick) for the assignment list. Click a "
+         "quest item to open its recipe in JEI. This book is for why, and for how to place the work. They are "
+         "the same campaign."),
     text("What fixing it means",
          "You are not rebuilding the old continents. You are teaching nine Strands to agree again, one pad "
          "at a time. A seated token is a promise kept. A thinned Fray is the sky noticing.\n\nWhen a Clowder "
@@ -137,8 +138,15 @@ entry("the_cut", "skybound", "Skybound", "You, on a pad, with a damaged book.", 
 entry("the_cut", "clowder", "Clowders", "Teams, pads, and the Hall.", "clowderhall:island_charter", 6, 0, [
     text("Clowders",
          "A team is a **Clowder**. Clowders share a pad, share quests, and share Loom Tension: when one of "
-         "you seats a Strand, all of you hear it.\n\nThe **Island Charter** claims a pad from the Dock. The "
-         "**Hub Key** opens the Clowder Hall, where every Clowder on the server meets."),
+         "you seats a Strand, all of you hear it."),
+    text("Hall and Charter",
+         "**Goal:** claim a pad and reach the Hall.\n\n"
+         "You need the **Island Charter** and a **Hub Key** (starter kit / Hall).\n\n"
+         "1. **K** or the **Island Charter** opens the island/team panel. Join or create a team, then pick a pad.\n"
+         "2. Right-click a friend with the Charter to invite, or `/clowder invite` / `/clowder accept`.\n"
+         "3. Sneak-use the Charter on solid pad ground to seal spawn.\n"
+         "4. **Hub Key** or `/clowder hub` reaches Clowder Hall. `/clowder return` sends you home. Right-click a Hall Elder to trade Thread.\n\n"
+         "**Check:** you are on the intended pad, and `/clowder hub` works."),
     text("Specialise",
          "A Clowder does not have to climb everything in lockstep. Mid-campaign the braid opens three ways — "
          "Pattern, Colony, Hum — and any two carry the whole team into Bind.\n\nOne of you can farm. One "
@@ -495,7 +503,9 @@ BRAID = [
      "gravel for Prosperity Ore — smelt them, and the essence-seed tiers open up. Botany pots if you like compact.\n\n"
      "Food is infrastructure here. A Clowder that eats well leaves the pad sooner."),
     ("edge", "Edge", "Claw", "silentgear:blueprint_paper", 6, 0, "root",
-     "**Claw.** Silent Gear blueprints, iron on your back, a bow, a portal frame. Leave the pad on purpose.\n\n"
+     "**Claw.** Silent Gear plans, iron on your back, a bow, a portal frame. Leave the pad on purpose.\n\n"
+     "Claiming a pad wipes Silent Gear's join gift. Four **Blueprint Paper**, shapeless, make a **Blueprint "
+     "Package**. Right-click to unwrap starter plans.\n\n"
      "Edge opens the braid: after Claw, Pattern, Colony, and Hum are all yours to choose from."),
     ("pattern", "Pattern", "Clock", "create:cogwheel", 8, -2, "edge",
      "**Clock.** Create. Water wheels, presses, mixers, belts — one cog, then the same cog again.\n\nThe "
@@ -527,31 +537,34 @@ for eid, name, strand, icon, x, y, parent, body in BRAID:
 entry("braid", "living_lattice", "The Living Lattice", "Workshops, rites and paths.", "tribalpower:resonant_core", 8, 5, [
     text("The camp answers",
          "Tribal Weave is the workshop beside the nine Strands. Rhythm, landscape and reusable Echo catalysts "
-         "make Pulse. Distinct totem voices strengthen the Resonator. No fuel fire is needed.\n\nHow:\n"
-         "1. Strike a Drumheart empty-handed, about a breath apart.\n"
-         "2. Place the matching Resonance Totem within 8 of each Echo station.\n"
-         "3. Seat a catalyst in the Pulse Resonator (shard first). Two voices are enough to start.\n"
-         "4. Sneak-use the Spirit Codex on anything silent. It will say why."),
-    text("Hands become a workshop",
-         "Four Echo stations refine batches. Bind weaves Loom Lint into string and Void Yarn into Spiritweave. "
-         "The Pulse Adapter sends harmony into standard FE machines.\n\nHow:\n"
-         "1. Feed slot 0; take from 1-8. Stations default Input on five faces, Output below.\n"
-         "2. Sit Shatter on a Kiln: grit walks down with no hopper.\n"
-         "3. Beside two machines, set the touching faces to Output into Input.\n"
-         "4. Relays are for distance. A lever pauses work."),
-    text("Three distances",
-         "Cargo grows Local to Longreach to Astral. Paths grow Waystone to Horizon to Astral. March Crystal "
-         "opens the last tier: across dimensions.\n\nHow:\n"
-         "1. Snap a relay plate onto a machine face. Seat the same unique Bond item in both plates.\n"
-         "2. Leave both ends loaded. Unloaded destinations pause; they do not void.\n"
-         "3. Bind a compass to a dry floor; keep two clear blocks above it."),
-    text("The sixth voice",
-         "Loom joins the five attunements. Loom Thread comes from Ancestor Halls, The Unsung, and a Loom-"
-         "stitcher Elder at Friend. An Unsung Heart crafts the Loom totem.\n\nHow:\n"
-         "1. Read every tablet in an Ancestor Hall.\n"
-         "2. Strike the Silent Drum four beats, a breath apart, to wake The Unsung.\n"
-         "3. Craft the Loom totem. Seat it near the Resonator for the sixth voice."),
+         "make Pulse.\n\n"
+         "Open the **Spirit Codex** for every generator, station, relay, Kiln, Voice Ring and rite. Sneak-use "
+         "it on a silent machine. This book does not copy those manuals."),
+    text("What the pack needs",
+         "**Goal:** a Resonator that can feed Spark, then the later workshops the Spirit Codex diagrams.\n\n"
+         "You need the **Spirit Codex** and a working Pulse Resonator from Start here.\n\n"
+         "1. Finish **Make the first Echo Shard** and **Start automatic power** in Start here.\n"
+         "2. Keep the Spirit Codex on your hotbar while you run Tribal Weave.\n"
+         "3. Slot faces, Shatter-on-Kiln, relays, compass landings and the sixth Loom voice live in that book, not here."),
+    text("Check",
+         "**Check:** sneak-use the Spirit Codex on the Resonator. Stored Pulse should rise with two different "
+         "voices and a catalyst seated."),
 ], parents=["hum"])
+
+entry("braid", "listening_pit", "Listening Pit and Gates", "Patterns, ore, voices, travel.", "tribalpower:resonance_mesh", 8, 7, [
+    text("Goal",
+         "**Goal:** run one rite and one travel tool the Spirit Codex already diagrams.\n\n"
+         "You need the **Spirit Codex**; those shapes live there, not here.\n\n"
+         "Stone Font, Listening Pit, Rite Circle, Voice Ring, Shatter Array, Way Gate and Far Gate are Spirit "
+         "Codex shapes. Whisker does not reprint them."),
+    text("March travel",
+         "The Gate Drum is the portable way into the March. Charge it with Pulse, then empty-handed use it. "
+         "Do not strike it like a Drumheart.\n\n"
+         "Bind a return compass before you go. `/tribalpower gate list` names later gates."),
+    text("Check",
+         "**Check:** one Font or Pit from the Spirit Codex diagram produces an output. If it stays silent, "
+         "crouch and right-click with the Spirit Codex."),
+], parents=["living_lattice"])
 
 # ------------------------------------------------------------------------------------ Nine Tribes
 
@@ -700,6 +713,7 @@ for gid, title, strand, relic, tier, arena, fight, power in GUARDIANS:
         text(title[0].upper() + title[1:], arena + "\n\n" + fight),
         spotlight(f"guardians:frayed_totem_{gid}", "Frayed Totem",
                   "Four Frayed Thread and four of the Strand's block around a Void Yarn." if tier == "gate" else
+                  "Frayed Thread and purpur around the Loomthread relic; the relic is handed back." if gid == "overweaver" else
                   "Frayed Thread and obsidian around the Loomthread relic; the relic is handed back." if tier == "insane" else
                   "Four Frayed Thread and four white wool around a Void Yarn." if gid == "lintgolem" else
                   "Four Frayed Thread and four leaves around a Void Yarn."),
@@ -714,21 +728,21 @@ print("Whisker Codex book written to", BOOK.relative_to(ROOT))
 # Pack kubejs copy wins at runtime. Keep The Work (pack-only) and overlay generated cats/entries.
 import shutil
 PACK_BOOK.mkdir(parents=True, exist_ok=True)
+(PACK_BOOK / "categories").mkdir(parents=True, exist_ok=True)
 # Pack overlay wins at runtime. Keep Core name/tooltip/description so Start here stays first.
 pack_book = json.loads((BOOK / "book.json").read_text(encoding="utf-8"))
 w(PACK_BOOK / "book.json", pack_book)
 for cat_file in (BOOK / "categories").glob("*.json"):
     shutil.copy2(cat_file, PACK_BOOK / "categories" / cat_file.name)
-work = PACK_BOOK / "categories" / "the_work.json"
-if work.exists():
-    obj = json.loads(work.read_text(encoding="utf-8"))
-    obj["background"] = ATLAS
-    obj["background_width"] = 1536
-    obj["background_height"] = 1024
-    obj["sort_number"] = 6
-    obj["description"] = "The campaign story: what the sky used to be, and what you do next."
-    obj.pop("background_parallax_layers", None)
-    w(work, obj)
+w(PACK_BOOK / "categories" / "the_work.json", {
+    "name": "The Work",
+    "description": "Pack primers that copy Start here, plus the always-open old-world page.",
+    "icon": f"{NS}:whisker_codex",
+    "sort_number": 6,
+    "background": ATLAS,
+    "background_width": 1536,
+    "background_height": 1024,
+})
 for src_dir in (BOOK / "entries").iterdir():
     if not src_dir.is_dir():
         continue

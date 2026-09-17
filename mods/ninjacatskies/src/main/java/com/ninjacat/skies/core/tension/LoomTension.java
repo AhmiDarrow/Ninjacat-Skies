@@ -169,6 +169,7 @@ public final class LoomTension {
         if (post == null) return;
         ServerLevel level = server.getLevel(post.dimension());
         if (level == null) return;
+        level.getChunkAt(post.pos());
         if (level.getBlockEntity(post.pos()) instanceof com.ninjacat.skies.core.block.TensionPostBlockEntity be) {
             be.setClowder(c.id());
         }
@@ -177,12 +178,10 @@ public final class LoomTension {
     /** Fraction of every Clowder's Strands that are seated, 0..1 — the server-wide state of the cut. */
     public static float serverProgress(MinecraftServer server) {
         List<Clowder> all = allClowders(server);
-        if (all.isEmpty()) {
-            return 0.0F;
-        }
         int seated = 0;
         int possible = 0;
         for (Clowder c : all) {
+            if (c.onlineMembers().isEmpty()) continue;
             seated += Integer.bitCount(strandBits(c));
             possible += Strand.ALL.length;
         }

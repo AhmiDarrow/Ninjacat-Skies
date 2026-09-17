@@ -18,6 +18,7 @@ public final class RelicSlots {
 
     /** The relics in effect: one stack per relic kind (a second copy of the same relic adds nothing), Curios slot first, then off-hand, then hotbar. */
     public static List<ItemStack> worn(ServerPlayer p) {
+        if (p.isSpectator()) return List.of();
         List<ItemStack> found = new ArrayList<>();
         if (CURIOS) { try { CuriosBridge.collect(p, found); } catch (Throwable ignored) {} }
         ItemStack off = p.getOffhandItem(); if (off.getItem() instanceof RelicItem) found.add(off);

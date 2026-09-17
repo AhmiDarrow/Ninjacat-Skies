@@ -34,6 +34,7 @@ public class FrayedTotemItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!(player instanceof ServerPlayer sp)) return InteractionResultHolder.sidedSuccess(stack, true);
+        if (sp.isSpectator()) return InteractionResultHolder.fail(stack);
         String fail = ArenaManager.get(sp.server).summon(sp, kind);
         if (fail != null) {
             sp.displayClientMessage(NinjacatText.teal(fail), true);

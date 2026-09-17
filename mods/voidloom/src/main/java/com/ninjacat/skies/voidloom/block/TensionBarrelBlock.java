@@ -65,6 +65,7 @@ public class TensionBarrelBlock extends BaseEntityBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (player.isSpectator()) return ItemInteractionResult.FAIL;
         if (level.hasNeighborSignal(pos)) {
             if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.voidloom.paused"), true);
             return ItemInteractionResult.CONSUME;
@@ -110,6 +111,7 @@ public class TensionBarrelBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (player.isSpectator()) return InteractionResult.FAIL;
         if (level.hasNeighborSignal(pos)) {
             if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.voidloom.paused"), true);
             return InteractionResult.CONSUME;
@@ -155,12 +157,5 @@ public class TensionBarrelBlock extends BaseEntityBlock {
             be.dropAll(level, pos);
         }
         super.onRemove(state, level, pos, newState, movedByPiston);
-    }
-
-    @Override
-    protected java.util.List<ItemStack> getDrops(BlockState state, net.minecraft.world.level.storage.loot.LootParams.Builder builder) {
-        java.util.List<ItemStack> drops = new java.util.ArrayList<>(super.getDrops(state, builder));
-        if (drops.stream().noneMatch(stack -> stack.is(asItem()))) drops.add(new ItemStack(this));
-        return drops;
     }
 }

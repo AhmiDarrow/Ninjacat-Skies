@@ -244,7 +244,14 @@ CURRENT = {"strand_i": 0, "title_counts": {}}
 # Items the void world cannot produce on the main line. REMOVE drops the quest; OPTIONAL keeps it as a side note.
 REMOVE_ITEMS = {"minecraft:heart_of_the_sea", "minecraft:rabbit_hide", "minecraft:turtle_helmet", "minecraft:wolf_armor"}
 FORCE_OPTIONAL = {"minecraft:recovery_compass", "minecraft:elytra", "minecraft:totem_of_undying", "minecraft:trident",
-                  "minecraft:echo_shard", "minecraft:music_disc_cat", "minecraft:sponge", "minecraft:saddle"}
+                  "minecraft:echo_shard", "minecraft:music_disc_cat", "minecraft:sponge", "minecraft:saddle",
+                  "minecraft:nautilus_shell", "minecraft:conduit", "minecraft:rabbit_foot", "minecraft:name_tag",
+                  "minecraft:shulker_shell", "minecraft:shulker_box", "minecraft:glow_ink_sac",
+                  "minecraft:end_portal_frame", "minecraft:chorus_flower", "minecraft:phantom_membrane",
+                  "minecraft:prismarine_shard", "minecraft:prismarine_crystals", "minecraft:prismarine",
+                  "minecraft:dark_prismarine", "minecraft:ender_eye", "minecraft:dragon_breath",
+                  "minecraft:dragon_egg", "minecraft:enchanted_golden_apple",
+                  "minecraft:nether_star", "minecraft:beacon"}
 
 # Phrases that were design-doc voice. Exact-string swaps applied to every description line.
 VOICE_FIX = {
@@ -311,7 +318,7 @@ LORE = {
     "Cook a Meal": ["Hunger is a soft void. Eight loaves closes it for a while."],
     "Catch the Rain": ["Place lava, melt ice into a source, fill the bucket.", "Easy ships water; Normal and Hard ship the pieces."],
     "Frayed Currency": ["Scraps of the Loom that still hold. Every quest returns some.", "Unravel one for string, or spend them at the Desk."],
-    "Codex in Hand": ["Damaged, but it still assigns work.", "Right-click the book and open Start here. Grave (`): the assignment list."],
+    "Codex in Hand": ["Damaged, but it still teaches. Open Start here.", "Right-click the book and open Start here. Grave (`): the assignment list."],
     # Stone
     "Pull Void Yarn": ["Thread that remembers where it came from.", "Unravel Thread to string; four string spin two yarn."],
     "Spindle Hammer": ["Cobble and sticks. Break fallen grit into gravel, sand, dust."],
@@ -375,7 +382,10 @@ LORE = {
     "Organic Compost": ["Feed the soil that feeds you."],
     # Claw
     "Blueprint Paper": ["Cut the void on your terms. Eight sheets of plans."],
-    "Blueprint Package": ["Plans in a box."],
+    "Blueprint Package": [
+        "Plans in a box.",
+        "Four Blueprint Paper, shapeless — claiming a pad wipes Silent Gear's join gift. Right-click to unwrap starter plans.",
+    ],
     "Rod Blueprint": ["Tool bones."],
     "Pick Blueprint": ["Shape a pick that outlives its metal."],
     "Sword Blueprint": ["Shape a blade."],
@@ -451,7 +461,7 @@ LORE = {
     "Charged Warp": ["Fluix — certus, quartz, and redstone charged in water."],
     "Press the Pattern": ["The inscriber presses circuits the way a loom presses cloth."],
     "Digital Loom": ["The controller. Wants a Binding Knot at its centre.", "Spindle core."],
-    "Gate Drum": ["Strike it open. The March is on the other side."],
+    "Gate Drum": ["Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart."],
     "March Stone": ["Footing from beyond the gate. Bring one home."],
     "Loom Fragment": ["Nine seated, one March stone, one right-click on the Post: the Fragment.", "Seat it. The cut closes above your pad."],
     "Molecular Assembler": ["Builds from patterns. Wants a Braid Cord at its heart."],
@@ -632,7 +642,7 @@ CHAPTER_SUBTITLES = {
     37: ["The little machines the stewards left."],
     38: ["The Drumhearts' pulse learns to run in copper."],
     39: ["Thirteen guardians the Cut snapped. Re-tension each Strand by beating its keeper."],
-    40: ["Walk the March. Tame a yellow. Ester waits at the Hall after you have been there."],
+    40: ["Walk the March. Tame a yellow. Esther waits at the Hall after you have been there."],
     41: ["Gardens from the sieve. Cook what a void pad never grew."],
     42: ["Crop sticks, stats, irrigation. Weeds stay off on a ledge."],
 }
@@ -645,6 +655,7 @@ def secret_quest(strand_i, x, y):
     q = task_quest(strand_i, title=title, desc=desc, task=task, rewards=rewards, x=x, y=y, shape="octagon")
     q["invisible"] = True
     q["invisible_until_tasks"] = 1
+    q["optional"] = True
     return [q]
 
 
@@ -839,7 +850,7 @@ def build_soil() -> list[dict]:
         ("Cook a Meal", "minecraft:bread", 8, "Hunger is a soft void."),
         ("Catch the Rain", "minecraft:water_bucket", 1, "Place lava, melt ice into a source, fill empty bucket. Easy ships water; Normal/Hard ship ice+lava+empty bucket."),
         ("Frayed Currency", "ninjacatskies:frayed_thread", 8, "Hub shop seed money."),
-        ("Codex in Hand", "ninjacatskies:whisker_codex", 1, "It still assigns work."),
+        ("Codex in Hand", "ninjacatskies:whisker_codex", 1, "It still teaches. Open Start here."),
     ])
     side = grid_optional(s, [
         ("Bed Claim", "minecraft:white_bed", 1, "Set a spawn."),
@@ -1333,7 +1344,7 @@ def build_spindle() -> list[dict]:
         ("Digital Loom", "ae2:controller", 1, "The controller. Wants a Binding Knot at its centre."),
         # Reweave braid + March after controller — not behind late AE2 autocraft.
         # Spindle token before Loom Fragment (fragment recipe consumes all nine tokens).
-        ("Gate Drum", "tribalpower:gate_drum", 1, "Strike it open. The March is on the other side."),
+        ("Gate Drum", "tribalpower:gate_drum", 1, "Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart."),
         ("March Stone", "tribalpower:march_stone", 1, "Footing from beyond the gate. Bring one home."),
         ("Fluix Cable", "ae2:fluix_glass_cable", 32, "Link machines."),
         ("Import Bus", "ae2:import_bus", 2, "Pull items into storage."),
@@ -1565,8 +1576,8 @@ def build_clowder() -> list[dict]:
         ("Island Charter", "clowderhall:island_charter", 1, "Name a pad as yours."),
         ("Hub Key", "clowderhall:hub_key", 1, "Find the Hall."),
         ("Strand Banner", "clowderhall:strand_banner_pattern", 1, "Mark progress."),
-        ("Quest Book", "ftbquests:book", 1, "Open the Codex path."),
-        ("Chunk Claim Snack", "minecraft:golden_carrot", 8, "Stay fed on claim runs."),
+        ("Assignment List", "ftbquests:book", 1, "Grave (`) opens the assignment list. Right-click the Whisker Codex for Start here."),
+        ("Chunk Claim Snack", "minecraft:golden_carrot", 8, "Stay fed on claim runs.", None, 2, True),
         ("Map", "minecraft:map", 1, "See neighbors."),
         ("Compass", "minecraft:compass", 1, "Find home."),
         ("Lodestone", "minecraft:lodestone", 1, "Lodestone compass anchor."),
@@ -2449,7 +2460,7 @@ def build_tribal_side() -> list[dict]:
         ("Air Seal", "tribalpower:air_seal", 1, "Seal of the wind tribe."),
         ("Spirit Seal", "tribalpower:spirit_seal", 1, "Seal of the steward tribe."),
         ("Rite Pedestal", "tribalpower:rite_pedestal", 1, "Offer seals. Ask the Loom."),
-        ("Gate Drum", "tribalpower:gate_drum", 1, "Strike open The March."),
+        ("Gate Drum", "tribalpower:gate_drum", 1, "Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart."),
         ("Spirit Door", "tribalpower:spirit_door", 1, "Dress your camp's threshold with a carved spirit frame. Compasses and the Gate Drum perform travel."),
         ("Spiritgear Pick", "tribalpower:spiritgear_pickaxe", 1, "Tool that spends Pulse."),
         ("Spiritgear Blade", "tribalpower:spiritgear_blade", 1, "Edge that spends Pulse."),
@@ -2469,7 +2480,7 @@ def build_tribal_side() -> list[dict]:
         ('spiritweave', 'Cloth with a voice', 'echo_bind', 'Water binds wool into Spiritweave. Feed the station above or from its sides and draw finished work out below.'),
         ('resonant_core', 'The living heart', 'manifested_ingot', 'Manifest a Manifested Ingot again under Spirit. The Resonant Core opens stronger equipment and distant paths.'),
         ('greater_pulse_cell', 'A longer song', 'resonant_core', 'Carry 1,200 Pulse in one Greater Cell. Charge it at a Drumheart or Resonator before setting out.'),
-        ('spirit_cistern', 'Rain held in copper', 'bound_echo', 'Sixteen buckets in one cistern. Buckets and fluid pipes both work. A comparator reads fullness; redstone locks filling and draining.'),
+        ('spirit_cistern', 'Rain held in copper', 'bound_echo', 'Sixteen buckets in one cistern. Buckets and fluid pipes both work. A comparator reads fullness; redstone locks filling and draining. Break it and the fluid stays on the dropped block. Sky Stone Tanks dump.'),
         ('lattice_tuner', 'Name the far end', 'attuned_echo', 'Mark a machine face with the tuner, then use it on a relay plate. Use it on another machine to replace the mark. Do not mark the plate.'),
         ('item_relay', 'A path for supplies', 'lattice_tuner', 'Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.'),
         ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 4 Pulse. Both ends must be loaded.'),
@@ -2671,57 +2682,50 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
 
 
 def build_chocobo() -> list[dict]:
-    """Chococraft Skybound — find birds in the March, race at the hub after the Gate."""
+    """Chocobos Reborn — find birds in the March, race at the Square after the Gate."""
     s = 40
     steps = [
         ("Gate to the March", "tribalpower:gate_drum", 1,
-         "Wild pad-runners do not spawn on a void pad. Strike a Gate Drum and walk the March. Yellows graze the Steppe and Reed Fen. Highlands lean Great. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
-        ("Gysahl Green", "chococraft:gysahl_green", 8,
+         "Wild pad-runners do not spawn on a void pad. Charge a Gate Drum with Pulse, then empty-handed use it and walk the March. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
+        ("Gysahl Green", "chocobosreborn:gysahl_green", 8,
          "Gysahl thickets grow in every March biome, heaviest in the Reed Fen. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."),
-        ("Chocopedia", "chococraft:chocopedia", 1,
-         "A book and a feather. Right-click a bird to read color, grade, gender, class, race wins, and the last nut. Keep it on the belt."),
-        ("Chocobo Saddle", "chococraft:chocobo_saddle", 1,
-         "Feed Gysahl to tame a wild yellow. Craft a saddle from leather and feathers, then ride. Sprint dashes; sneak restores stamina once you are on a course."),
-        ("Square Pass", "chococraft:chocobo_square_ticket", 1,
-         "Paper, a gold ingot, and a feather. After you have walked the March, Ester the Square Steward stands at Clowder Hall with the shop Kin. Mount a saddled bird and speak to her — or use a spare pass."),
-        ("Chocobo Whistle", "chococraft:chocobo_whistle", 1,
-         "Call your bird. Follow, stay, wander. The March is wide; a whistle keeps the line from scattering."),
-        ("Straw Bedding", "chococraft:straw", 8,
-         "A pen is straw underfoot and a water-filled cauldron. Hurt birds standing on straw near water mend on their own."),
-        ("Carob Nut", "chococraft:carob_nut", 1,
-         "Gysahl, cocoa, and wheat. Feed a Carob Nut, then Loverly or Golden Gysahl, to mate opposite-gender birds. Race wins, not ordinary riding, feed the farm line."),
-        ("Loverly Gysahl", "chococraft:loverly_gysahl_green", 1,
-         "Rare greens from mature March gysahl. Fifteen percent chance of a new color when the grades and wins are right."),
-        ("Gold Gysahl", "chococraft:gold_gysahl", 1,
-         "Rarer still. Required for Gold chicks, and it crafts the Zeio Nut. Farm the Reed Fen until one turns up."),
-        ("Zeio Nut", "chococraft:zeio_nut", 1,
-         "Gold Gysahl, an Echo Shard, and a gold block. Gold never hatches without Zeio. Black plus a Wonderful yellow plus twelve combined race wins."),
-        ("Saddle Bags", "chococraft:chocobo_saddle_bags", 1,
-         "Eighteen slots on the bird. Sneak-use the saddled chocobo to open them."),
-        ("Saddle Pack", "chococraft:chocobo_saddle_pack", 1,
-         "Forty-five slots. The March run becomes a supply line."),
-        ("Chocobo Feather", "chococraft:chocobo_feather", 8,
-         "Shed and crafted into saddles, passes, and disguises. Do not slaughter the line for feathers; they drop as you keep birds."),
+        ("Sage Notes", "chocobosreborn:sage_notes", 1,
+         "A book and a gysahl leaf. Right-click a bird to read colour, grade, class, race wins, and the last nut."),
+        ("Chocobo Saddle", "chocobosreborn:chocobo_saddle", 1,
+         "Feed Gysahl to tame a wild yellow. Craft a saddle from leather, string and iron, then ride. Sprint dashes; ease off to recover stamina."),
+        ("Square Gate", "chocobosreborn:square_gate", 1,
+         "Gold, emeralds and gysahl. After you have walked the March, Esther stands at Clowder Hall. Mount a saddled bird and speak to her, or place a Square Gate."),
+        ("Chocobo Lure", "chocobosreborn:chocobo_lure", 1,
+         "A lure in hand draws wild birds and outlines them across a field."),
+        ("Gysahl Seeds", "chocobosreborn:gysahl_green_seeds", 8,
+         "Plant gysahl on dirt or March soil. A home patch is how the farm line starts."),
+        ("Carob Nut", "chocobosreborn:carob_nut", 1,
+         "Feed a Carob Nut to two adults of opposite sex. Two Good-or-better Yellows plus Carob can hatch Green or Blue. Each parent needs at least one first-place finish; four combined firsts make the colour certain."),
+        ("Curiel Green", "chocobosreborn:curiel_green", 1,
+         "A mid-ladder green. Train speed, stamina, intelligence or cooperation; a bird gets sated on each kind."),
+        ("Sylkis Green", "chocobosreborn:sylkis_green", 1,
+         "The top training green. Move up the ladder once the bird is sated on the cheaper leaves."),
+        ("Zeio Nut", "chocobosreborn:zeio_nut", 1,
+         "Gold never hatches without Zeio. Black plus a Wonderful yellow plus three firsts each (twelve combined for a sure roll)."),
+        ("GP", "chocobosreborn:gp", 8,
+         "GP won on the course. Stalls at the Square price everything in it."),
+        ("Pepio Nut", "chocobosreborn:pepio_nut", 1,
+         "The first mating nut. Talent follows the nut; colour follows the parents unless Carob or Zeio is involved."),
+        ("Krakka Green", "chocobosreborn:krakka_green", 1,
+         "Two gysahl and bone meal. The first step up from plain greens."),
     ]
     out = chain(s, steps, start_x=0.0, y=0.0)
     extra = [
-        ("Gysahl Cake", "chococraft:gysahl_cake", 1,
-         "A feast for the pen. Optional comfort after the farm is running."),
-        ("Chocobo Drumstick", "chococraft:chocobo_drumstick_cooked", 1,
-         "Cooked bird. Optional. The farm is for riding and racing, not a meat line."),
-        ("Pickled Gysahl", "chococraft:pickled_gysahl_cooked", 1,
-         "Gysahl and sugar, then cooked. Optional trail food."),
-        ("Choco Helm", "chococraft:choco_disguise_helmet", 1,
-         "Feather disguise. Optional vanity."),
-        ("Choco Chest", "chococraft:choco_disguise_chestplate", 1, "Feather disguise. Optional vanity."),
-        ("Choco Legs", "chococraft:choco_disguise_leggings", 1, "Feather disguise. Optional vanity."),
-        ("Choco Boots", "chococraft:choco_disguise_boots", 1, "Feather disguise. Optional vanity."),
-        ("Pink Gysahl", "chococraft:pink_gysahl", 1,
-         "Dye a Gold bird pink — Swarm echo. Optional."),
-        ("Red Gysahl", "chococraft:red_gysahl", 1,
-         "Dye a Gold bird red — Claw echo. Optional."),
-        ("Square Gate", "chococraft:chocobo_square_gate", 1,
-         "The course gates. Ester places the Square; you do not need to craft one. Optional."),
+        ("Tantal Green", "chocobosreborn:tantal_green", 1, "The next training green. Optional once the farm is running."),
+        ("Pahsana Green", "chocobosreborn:pahsana_green", 1, "Another training green. Optional."),
+        ("Mimett Green", "chocobosreborn:mimett_green", 1, "Another training green. Optional."),
+        ("Reagan Green", "chocobosreborn:reagan_green", 1, "Another training green. Optional."),
+        ("Luchile Nut", "chocobosreborn:luchile_nut", 1, "A mid nut. Optional."),
+        ("Saraha Nut", "chocobosreborn:saraha_nut", 1, "A mid nut. Optional."),
+        ("Lasan Nut", "chocobosreborn:lasan_nut", 1, "A mid nut. Optional."),
+        ("Pram Nut", "chocobosreborn:pram_nut", 1, "A mid-late mating nut. Optional. Bilo the Nutkeeper sells it."),
+        ("Fair Fireworks", "minecraft:firework_rocket", 1, "The Fair stall no longer sells Pink or Red dyes. Those colours are gone. Buy fireworks, a lead, or Sage Notes for GP."),
+        ("Porov Nut", "chocobosreborn:porov_nut", 1, "A late mating nut. Optional."),
     ]
     out += grid_optional(s, extra, origin=(0.0, 9.0), cols=5)
     return out
@@ -2887,7 +2891,7 @@ def build_guardians() -> list[dict]:
     out.append(intro)
     def trio(g, x, y, deps_extra):
         gid, title, strand, relic, tier, arena, fight, power = g
-        totem = item_quest(s, title=f'Totem: {title}', desc=[arena, 'Four Frayed Thread and four of the Strand\'s block around a Void Yarn.' if tier == 'gate' else ('Four Frayed Thread and four wool around a Void Yarn.' if gid == 'lintgolem' else 'Four Frayed Thread and four leaves around a Void Yarn.' if gid == 'tangle' else 'Frayed Thread and obsidian around the Loomthread relic; the relic is handed back.')],
+        totem = item_quest(s, title=f'Totem: {title}', desc=[arena, 'Four Frayed Thread and four of the Strand\'s block around a Void Yarn.' if tier == 'gate' else ('Four Frayed Thread and four wool around a Void Yarn.' if gid == 'lintgolem' else 'Four Frayed Thread and four leaves around a Void Yarn.' if gid == 'tangle' else 'Frayed Thread and purpur around the Loomthread relic; the relic is handed back.' if gid == 'overweaver' else 'Frayed Thread and obsidian around the Loomthread relic; the relic is handed back.')],
                            item=f'guardians:frayed_totem_{gid}', deps=[intro['id']] + deps_extra, x=x, y=y, reward_item='ninjacatskies:frayed_thread', reward_count=2)
         if not totem: return
         out.append(totem)
@@ -3174,7 +3178,7 @@ def main() -> None:
     # Chapter 40 first shipped after the shop was removed from generation. Keep
     # its published start independent of the restored reservation above.
     _seq["q"] = 0x05E2
-    write_chapter("40_chocobo", CH["chocobo"], GROUP_SIDE, 39, "chococraft:chocopedia", build_chocobo(), "Pad-runners")
+    write_chapter("40_chocobo", CH["chocobo"], GROUP_SIDE, 39, "chocobosreborn:sage_notes", build_chocobo(), "Pad-runners")
     write_chapter("41_harvestcraft", CH["harvestcraft"], GROUP_SIDE, 40, "pamhc2foodcore:potitem", build_harvestcraft(), "Harvest Table")
     write_chapter("42_agricraft", CH["agricraft"], GROUP_SIDE, 41, "agricraft:wooden_crop_sticks", build_agricraft(), "Crop Sticks")
     write_lang()

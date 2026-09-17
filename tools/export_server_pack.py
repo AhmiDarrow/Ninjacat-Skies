@@ -25,7 +25,7 @@ import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from cf_distribution import is_owned_jar, manifest_entries  # noqa: E402
+from cf_distribution import is_owned_jar, is_local_owned, manifest_entries  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 MC = "1.21.1"
@@ -236,7 +236,7 @@ def main() -> int:
     (stage / "mods").mkdir()
     bundled = []
     for jar in jars:
-        if is_owned_jar(jar.name):
+        if is_owned_jar(jar.name) or is_local_owned(jar.name):
             shutil.copy2(jar, stage / "mods" / jar.name); bundled.append(jar.name)
     for d in OVERRIDE_DIRS:
         src = ROOT / "pack/overrides" / d

@@ -2,19 +2,32 @@
 import hashlib
 import re
 
-# CurseForge rejected 0.7.0-alpha (file 8843687) because our own companion jars rode in overrides/mods. Nothing is
-# bundled any more: every jar in pack/mods, ours included, is a CurseForge file referenced from pack/modlist-resolved.json.
+# CurseForge rejected 0.7.0-alpha (file 8843687) because our own companion jars rode in overrides/mods. Hosted mods
+# in pack/mods, Core, Tribal and Chocobos Reborn included, are CurseForge files referenced from pack/modlist-resolved.json.
 #   Ninjacat Skies Core (project 1689718) - the five companion mods nested in one jar (tools/build_core_jar.py)
 #   Tribal Power        (project 1684851)
+#   Chocobos Reborn     (project 1699008)
+# Local-owned jars (none remaining) stay in pack/mods for play and ride in the server zip;
+# they are omitted from the CurseForge client manifest.
 CORE_PROJECT = 1689718
 TRIBAL_PROJECT = 1684851
-CANONICAL_PROJECT = {'ninjacatskies-core-': CORE_PROJECT, 'tribalpower-': TRIBAL_PROJECT}
+CHOCOBOS_PROJECT = 1699008
+CANONICAL_PROJECT = {
+    'ninjacatskies-core-': CORE_PROJECT,
+    'tribalpower-': TRIBAL_PROJECT,
+    'chocobosreborn-': CHOCOBOS_PROJECT,
+}
 # The companions only ever ship inside the Core jar; a loose copy in pack/mods would load twice.
 LOOSE_COMPANION = re.compile(r"(?:ninjacatskies|ninjacatlib|clowderhall|voidloom|guardians)-[0-9][A-Za-z0-9.+_-]*\.jar")
 
 
+def is_local_owned(name):
+    """Own jars with no CurseForge listing yet. None remain; Chocobos Reborn is project 1699008."""
+    return False
+
+
 def is_owned_jar(name):
-    """Jars allowed inside an exported archive. None: CurseForge only accepts manifest references."""
+    """Jars allowed inside an exported archive. CF client zips still bundle none; server zips copy local-owned."""
     return False
 
 
@@ -28,6 +41,8 @@ def manifest_entries(jars, resolved):
     entries = []
     projects = set()
     for jar in jars:
+        if is_local_owned(jar.name):
+            continue
         if LOOSE_COMPANION.fullmatch(jar.name):
             raise ValueError(f'Loose companion jar in pack/mods: {jar.name}; run tools/build_core_jar.py '
                              '(the companions ship inside Ninjacat Skies Core)')

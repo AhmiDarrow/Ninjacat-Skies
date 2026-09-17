@@ -51,4 +51,26 @@ ServerEvents.recipes(event => {
     'ninjacatskies:frayed_thread',
     'minecraft:cyan_dye'
   ]).id('ninjacatskies:strand_banner_pattern')
+
+  // Squid never spawn on the pad. Charcoal + bottle is the journal / book-and-quill ink.
+  event.shapeless('minecraft:ink_sac', [
+    'minecraft:charcoal',
+    'minecraft:glass_bottle'
+  ]).id('ninjacatskies:ink_from_charcoal')
+
+  // End island is gone. Chorus (Spark stall) and pearls around a Binding Knot make End Stone.
+  event.shaped('8x minecraft:end_stone', [
+    'CPC',
+    'PBP',
+    'CPC'
+  ], {
+    C: 'minecraft:chorus_fruit',
+    P: 'minecraft:ender_pearl',
+    B: 'voidloom:binding_knot'
+  }).id('ninjacatskies:end_stone_from_chorus')
+
+  // Ice in the kit does not vanilla-craft snowballs.
+  event.shapeless('4x minecraft:snowball', [
+    'minecraft:ice'
+  ]).id('ninjacatskies:snowball_from_ice')
 })

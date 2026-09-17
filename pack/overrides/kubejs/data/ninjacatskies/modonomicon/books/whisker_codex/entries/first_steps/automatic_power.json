@@ -3,7 +3,7 @@
   "name": "Start automatic power",
   "description": "Practical steps and checks.",
   "icon": "tribalpower:pulse_resonator",
-  "x": 2,
+  "x": 4,
   "y": 3,
   "background_u_index": 0,
   "background_v_index": 0,
@@ -11,23 +11,23 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Build the starter...",
-      "text": "You need a **Pulse Resonator**, an **Echo Shard**, and **Earth and Fire Resonance Totems**.\\\n1\\. Place the Resonator.\\\n2\\. Right-click it with the shard to install the reusable catalyst.\\\n3\\. Place the two different totems within 8 blocks. The diagram shows a compact example."
+      "title": "Goal",
+      "text": "**Goal:** a Pulse Resonator that makes a small, steady trickle of Pulse without you standing at the drum.\\\nYou need a **Pulse Resonator**, an **Echo Shard**, and **Earth and Fire Resonance Totems**."
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "4\\. Wait a second and inspect the generator. Stored Pulse should rise."
+      "title": "Starter generator",
+      "text": "1\\. Place the Resonator.\\\n2\\. Right-click it with the shard to install the reusable catalyst.\\\n3\\. Place the two different totems within 8 blocks. The diagram shows a compact example.\\\n4\\. Wait a second and inspect the generator. Stored Pulse should rise."
     },
     {
       "type": "modonomicon:text",
       "title": "Power budget",
-      "text": "The starter generator makes a small amount of Pulse continuously. It does not mean every machine can run continuously. If a machine spends power faster than you make it, let a reserve build up or improve generation.\\\nTwo identical totems count as one element. If generation stops, check the catalyst, different elements and pausing redstone."
+      "text": "**Check:** stored Pulse climbs while you stand still.\\\nThe starter generator does not mean every machine can run continuously. If a machine spends power faster than you make it, let a reserve build up or improve generation."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Read the Spirit Codex before building larger totem layouts or a Conductor."
+      "text": "Two identical totems count as one element. If generation stops, check the catalyst, different elements and pausing redstone. Read the Spirit Codex before larger totem layouts or a Conductor."
     },
     {
       "type": "modonomicon:multiblock",

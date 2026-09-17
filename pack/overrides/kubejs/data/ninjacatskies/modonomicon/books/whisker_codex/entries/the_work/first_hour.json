@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:the_work",
-  "name": "The First Hour",
-  "description": "Dock, pad, Soil, Post.",
+  "name": "Your first hour",
+  "description": "Dock, pad, first workshop.",
   "icon": "minecraft:oak_sapling",
   "x": 2,
   "y": 2,
@@ -12,7 +12,22 @@
     {
       "type": "modonomicon:text",
       "title": "Goal and supplies",
-      "text": "**Goal:** a safe place to grow a tree, craft, store items and cook food.\\\nAt the Dock, use your Island Charter to open the island/team screen. Join your existing team or create one, then choose your pad.\\\nKeep a sapling, some dirt and the starter supplies. Open the Soil quests before spending rare starter items."
+      "text": "**Goal:** a safe place to grow a tree, craft, store items and cook food.\\\nYou need a sapling, dirt, and the starter supplies.\\\nKeep a sapling, some dirt and the starter supplies. Open the Soil quests before spending rare starter items."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Clowder and Hall",
+      "text": "**Goal:** one Clowder, one pad, a way back to the Hall.\\\nYou need the **Island Charter** and a **Hub Key**.\\\n1\\. **K** opens the island/team panel. The **Island Charter** opens the same panel. Join or create a team, then pick a pad."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "2\\. Hold the Charter and right-click a friend to invite, or `/clowder invite <name>` / `/clowder accept`.\\\n3\\. Sneak-use the Charter on solid Overworld pad ground to seal spawn.\\\n4\\. **Hub Key** or `/clowder hub` reaches Clowder Hall. `/clowder return` sends you home. Right-click a Hall Elder to trade Frayed Thread."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** you are on your pad, in the intended Clowder, and `/clowder hub` works."
     },
     {
       "type": "modonomicon:text",
@@ -22,7 +37,7 @@
     {
       "type": "modonomicon:text",
       "title": "Workshop check",
-      "text": "You should have a replanted tree, spare materials in storage, food and a workspace you can walk around safely.\\\nThe model on the next page is one compact arrangement. Build a larger platform around it. The exact arrangement is optional; the diagram is not a quest requirement. Keep fire and lava away from wooden floors."
+      "text": "**Check:** a replanted tree, spare materials in storage, cooked food, and a workspace you can walk around without falling.\\\nThe model on the next page is one compact arrangement. Build a larger platform around it. The exact arrangement is optional. Keep fire and lava away from wooden floors."
     },
     {
       "type": "modonomicon:multiblock",

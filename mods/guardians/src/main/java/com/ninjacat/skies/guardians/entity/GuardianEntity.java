@@ -229,7 +229,7 @@ public abstract class GuardianEntity extends Monster {
     private void tickDying(ServerLevel sl) {
         deathTimer++;
         bossEvent.setProgress(0);
-        if (deathTimer == 8 && arena() != null && getUUID().equals(arena().boss)) ArenaManager.get(sl.getServer()).onWin(arena(), this);   // shades never end the fight
+        if (deathTimer >= 8 && arena() != null && getUUID().equals(arena().boss)) ArenaManager.get(sl.getServer()).onWin(arena(), this);   // shades never end the fight; onWin is a no-op after WON
         if (deathTimer >= DEATH_TICKS + 20) { bossEvent.removeAllPlayers(); remove(RemovalReason.KILLED); }
     }
     @Override protected void tickDeath() {}

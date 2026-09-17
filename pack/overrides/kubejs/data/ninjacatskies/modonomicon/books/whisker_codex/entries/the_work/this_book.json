@@ -12,27 +12,37 @@
     {
       "type": "modonomicon:text",
       "title": "Book and quests",
-      "text": "Use the **Whisker Codex** to learn a system before building it. Open the quest screen with the **Grave / backtick** key to see tasks, requirements and rewards. If you changed your controls, search Controls for Quests."
+      "text": "**Goal:** know which screen does which job before you build anything.\\\nYou need the **Whisker Codex** from the starter kit or dock chest."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Start with **Start here**. **The Loom Braid** explains the campaign stages. The story chapters are there when you want to learn about the world."
+      "text": "Use the **Whisker Codex** to learn a system, then build it. Open the quest screen with the **Grave / backtick** key for tasks, requirements and rewards. If you changed controls, search Controls for Quests."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Click a quest item to open its recipe in JEI. Start with **Start here**. **The Loom Braid** is the campaign map. Story chapters wait until you want the why."
     },
     {
       "type": "modonomicon:text",
       "title": "Read, build, check",
-      "text": "Each practical lesson gives you a goal, a short sequence and a way to check the result. Follow the arrows between entries.\\\nFor exact crafting ingredients, hover an item in your inventory or the item list and open its recipe. Recipes can change with the pack; a build diagram shows placement, not a crafting recipe."
+      "text": "Each practical lesson gives a goal, numbered steps and a way to check the result. Follow the arrows.\\\nExact ingredients live in JEI, not in this book. Recipes can change with the pack. A diagram is a placement example, not a quest requirement."
     },
     {
       "type": "modonomicon:text",
-      "title": "Words used in thi...",
+      "title": "Continue",
+      "text": "**Tribal Power** is its own mod. Open its **Spirit Codex** for every generator, workshop, rite and camp hand. This book is the pack campaign: pad, quests, Loom, Clowder. Sneak-use the Spirit Codex on a silent Tribal station."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Words in this book",
       "text": "**Pad:** your floating island.\\\n**Clowder:** your player team.\\\n**Strand:** one part of the campaign.\\\n**Token:** the reward proving you completed a Strand."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "**Seat:** right-click a Tension Post with a token.\\\n**Pulse:** the energy used by Tribal Power.\\\nYou do not need to remember the lore to follow the instructions."
+      "text": "**Seat:** right-click a Tension Post with a token.\\\n**Pulse:** the energy used by Tribal Power.\\\n**March:** the otherworld beyond the Gate Drum.\\\n**Check:** Grave opens quests. A quest item opens JEI. **Start here** is the first category in this book."
     }
   ]
 }

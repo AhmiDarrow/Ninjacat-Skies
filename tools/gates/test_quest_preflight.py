@@ -13,18 +13,18 @@ class QuestPreflight(unittest.TestCase):
     def test_missing_shipped_mod_aborts_before_any_writes(self):
         with tempfile.TemporaryDirectory() as folder:
             chapter = Path(folder) / "40_chocobo.snbt"
-            original = '{ quests: [{ item: "chococraft:chocopedia" }] }'
+            original = '{ quests: [{ item: "example:missing_item" }] }'
             chapter.write_text(original)
-            with patch.object(g, "CHAPTERS", Path(folder)), patch.object(g, "KNOWN", {"chococraft:gysahl_green"}), patch.object(g, "write_groups") as writer:
-                with self.assertRaisesRegex(RuntimeError, "chococraft:chocopedia"):
+            with patch.object(g, "CHAPTERS", Path(folder)), patch.object(g, "KNOWN", {"example:known_item"}), patch.object(g, "write_groups") as writer:
+                with self.assertRaisesRegex(RuntimeError, "example:missing_item"):
                     g.main()
                 writer.assert_not_called()
                 self.assertEqual(chapter.read_text(), original)
 
     def test_complete_index_accepts_vanilla_and_mod_items(self):
         with tempfile.TemporaryDirectory() as folder:
-            (Path(folder) / "chapter.snbt").write_text('{ item: "chococraft:chocopedia", icon: "minecraft:book" }')
-            with patch.object(g, "CHAPTERS", Path(folder)), patch.object(g, "KNOWN", {"chococraft:chocopedia"}):
+            (Path(folder) / "chapter.snbt").write_text('{ item: "example:known_item", icon: "minecraft:book" }')
+            with patch.object(g, "CHAPTERS", Path(folder)), patch.object(g, "KNOWN", {"example:known_item"}):
                 g.validate_shipped_items()
 
     def test_absent_index_fails_closed(self):

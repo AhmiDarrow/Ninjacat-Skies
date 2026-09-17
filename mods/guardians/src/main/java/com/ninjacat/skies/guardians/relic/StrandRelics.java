@@ -236,6 +236,8 @@ final class StrandRelics {
                 Vec3 back = RelicTimers.trailBack(p);
                 if (back != null && back.distanceToSqr(from) > 0.25) {
                     RelicUtil.burst(l, ParticleTypes.ENCHANT, from.add(0, 1, 0), 20, 0.5, 0.5);
+                    if (p.isPassenger()) p.stopRiding();
+                    if (p.isVehicle()) p.ejectPassengers();
                     p.teleportTo(l, back.x, back.y, back.z, p.getYRot(), p.getXRot());
                     p.setDeltaMovement(Vec3.ZERO); p.fallDistance = 0;
                     RelicUtil.line(l, RelicUtil.TEAL, from.add(0, 1, 0), back.add(0, 1, 0), 16);
@@ -262,8 +264,8 @@ final class StrandRelics {
                     double a = Math.PI * 2 * i / 4;
                     b.moveTo(p.getX() + Math.cos(a) * 1.5, p.getY() + 1.5, p.getZ() + Math.sin(a) * 1.5, l.random.nextFloat() * 360F, 0F);
                     b.addTag(RelicUtil.BEE_TAG); b.setPersistenceRequired();
+                    RelicTimers.bee(b, p.getUUID(), 400);                          // 20 s — register before addFreshEntity so onJoin does not discard a live summon
                     l.addFreshEntity(b);
-                    RelicTimers.bee(b, p.getUUID(), 400);                          // 20 s
                 }
                 RelicUtil.burst(l, ParticleTypes.FALLING_HONEY, p.position().add(0, 1.5, 0), 20, 0.8, 0.0);
                 RelicUtil.burst(l, ParticleTypes.WAX_ON, p.position().add(0, 1.2, 0), 16, 0.7, 0.1);
@@ -326,6 +328,8 @@ final class StrandRelics {
                     double a = Math.PI * 2 * i++ / Math.max(1, mates.size());
                     Vec3 dest = p.position().add(Math.cos(a) * 1.2, 0, Math.sin(a) * 1.2);
                     RelicUtil.line(l, ParticleTypes.END_ROD, m.position().add(0, 1, 0), p.position().add(0, 1, 0), 24);
+                    if (m.isPassenger()) m.stopRiding();
+                    if (m.isVehicle()) m.ejectPassengers();
                     m.teleportTo(l, dest.x, dest.y, dest.z, m.getYRot(), m.getXRot());
                     m.setDeltaMovement(Vec3.ZERO); m.fallDistance = 0;
                     RelicUtil.effect(m, MobEffects.DAMAGE_RESISTANCE, 100, 0);

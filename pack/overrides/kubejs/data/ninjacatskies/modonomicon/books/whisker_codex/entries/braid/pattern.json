@@ -17,12 +17,7 @@
     {
       "type": "modonomicon:text",
       "title": "Before you move on",
-      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
+      "text": "Finish Clock. Claim the token and seat it. The Clock notch lights.\\\nRead **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
     }
   ],
   "parents": [

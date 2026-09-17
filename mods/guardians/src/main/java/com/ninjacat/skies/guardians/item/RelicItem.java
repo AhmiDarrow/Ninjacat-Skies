@@ -35,6 +35,7 @@ public class RelicItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!(player instanceof ServerPlayer sp)) return InteractionResultHolder.sidedSuccess(stack, true);
+        if (sp.isSpectator()) return InteractionResultHolder.fail(stack);
         if (sp.getCooldowns().isOnCooldown(this)) return InteractionResultHolder.fail(stack);
         if (power.activate(sp, stack)) {
             sp.getCooldowns().addCooldown(this, power.cooldownTicks());

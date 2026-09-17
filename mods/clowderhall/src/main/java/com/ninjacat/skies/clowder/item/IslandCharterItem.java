@@ -39,6 +39,7 @@ public class IslandCharterItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
+        if (player.isSpectator()) return InteractionResultHolder.fail(stack);
         boolean onDock = isOnDock(level, player);
         if (level.isClientSide) {
             if (!player.isShiftKeyDown()) {
@@ -102,6 +103,7 @@ public class IslandCharterItem extends Item {
     /** Right-click another player while holding the Charter: invite them to your Clowder. */
     @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity target, InteractionHand hand) {
+        if (player.isSpectator()) return InteractionResult.FAIL;
         if (player.level().isClientSide) {
             return target instanceof Player ? InteractionResult.SUCCESS : InteractionResult.PASS;
         }
@@ -121,11 +123,16 @@ public class IslandCharterItem extends Item {
         return player.blockPosition().closerThan(level.getSharedSpawnPos(), 24.0);
     }
 
-    /** Reject mid-air / void seals so soft-hardcore respawn does not drop the player. */
+    /** Reject mid-air / void seals so soft-hardcore respawn does not drop the player.
+     *  Same footing rule as hub/arena snap: a slab/farmland at the feet counts, not only the block below. */
     private static boolean hasSolidFooting(Level level, BlockPos feet) {
+        BlockState atFeet = level.getBlockState(feet);
+        if (!atFeet.getCollisionShape(level, feet).isEmpty()) {
+            return !atFeet.isCollisionShapeFullBlock(level, feet);
+        }
         BlockPos below = feet.below();
-        BlockState state = level.getBlockState(below);
-        return !state.isAir() && !state.getCollisionShape(level, below).isEmpty();
+        BlockState under = level.getBlockState(below);
+        return under.blocksMotion() || !under.getCollisionShape(level, below).isEmpty();
     }
 
     @Override

@@ -93,7 +93,7 @@ public class UnwovenGuardian extends GuardianEntity {
                 double a = random.nextDouble() * Math.PI * 2; BlockPos core = BlockPos.containing(Mech.polar(o, 6, a, o.y));
                 placeTemp(core, Blocks.SHROOMLIGHT.defaultBlockState()); marks.add(core);
                 for (int x = -8; x <= 8; x++) for (int z = -8; z <= 8; z++) { int r2 = x * x + z * z; if (r2 < 16 || r2 > 64) continue; for (int y = 0; y < 3; y++) placeTemp(BlockPos.containing(o.x + x, o.y + y, o.z + z), Blocks.DIRT.defaultBlockState()); }
-                for (ServerPlayer p : party()) { double r = Mech.horiz(p.position(), o); if (r >= 3.5 && r <= 8.9 && p.getY() < o.y + 3) p.teleportTo(serverLevel(), p.getX(), o.y + 3.1, p.getZ(), p.getYRot(), p.getXRot()); }   // the heave lifts, never traps
+                for (ServerPlayer p : party()) { double r = Mech.horiz(p.position(), o); if (r >= 3.5 && r <= 8.9 && p.getY() < o.y + 3) { if (p.isPassenger()) p.stopRiding(); if (p.isVehicle()) p.ejectPassengers(); p.teleportTo(serverLevel(), p.getX(), o.y + 3.1, p.getZ(), p.getYRot(), p.getXRot()); } }   // the heave lifts, never traps
                 say("Soil heaves around the Unwoven — dig to the glowing core.");
             }
             case GRIT -> { for (int k = 0; k < 4; k++) { Vec3 at = Mech.polar(o, 10, Math.PI / 2 * k, o.y + 3); serverLevel().addFreshEntity(new net.minecraft.world.entity.item.ItemEntity(level(), at.x, at.y, at.z, new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.GRAVEL))); } say("Grit rattles down — place gravel at its feet to jam the maw."); }

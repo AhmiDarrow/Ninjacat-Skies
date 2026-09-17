@@ -1,0 +1,31 @@
+{
+  "type": "modonomicon:dense",
+  "pattern": [
+    [
+      "L0C",
+      "   "
+    ],
+    [
+      "SSS",
+      "SSS"
+    ]
+  ],
+  "mapping": {
+    "L": {
+      "type": "modonomicon:block",
+      "block": "minecraft:lever"
+    },
+    "0": {
+      "type": "modonomicon:block",
+      "block": "tribalpower:spirit_cistern"
+    },
+    "C": {
+      "type": "modonomicon:block",
+      "block": "minecraft:comparator"
+    },
+    "S": {
+      "type": "modonomicon:block",
+      "block": "minecraft:stone"
+    }
+  }
+}

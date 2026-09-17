@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "#tribalpower:the_march",
-  "features": "chococraft:patch_gysahl_green",
+  "features": "ninjacatskies:march_gysahl_patch",
   "step": "vegetal_decoration"
 }

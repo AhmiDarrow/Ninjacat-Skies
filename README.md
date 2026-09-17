@@ -27,7 +27,7 @@ Collect lore-themed [Steward caches](docs/STEWARD_CACHES.md) along the questline
 
 ## Credits
 
-See the [mod credits](docs/CREDITS.md) for all 87 outside mods, their authors, and links to their CurseForge pages. Thank you to the creators whose work makes this pack possible.
+See the [mod credits](docs/CREDITS.md) for all 94 outside mods, their authors, and links to their CurseForge pages. Thank you to the creators whose work makes this pack possible.
 
 ## License
 

@@ -1832,6 +1832,7 @@
 				}
 			]
 			shape: "octagon"
+			optional: true
 			invisible: true
 			invisible_until_tasks: 1
 		}
