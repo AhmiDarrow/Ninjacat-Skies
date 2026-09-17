@@ -1,6 +1,6 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "The Listening Pit and the Gates",
+  "name": "Listening Pit and Gates",
   "description": "Patterns, ore, voices, travel.",
   "icon": "tribalpower:resonance_mesh",
   "x": 8,
@@ -11,100 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Placement is the ...",
-      "text": "Devices that claim to be rites have to be arranged, not scattered.\\\nSeven shapes, all rotation-independent: the Stone Font, the Listening Pit, the Rite Circle, the Voice Ring, the Shatter Array and both gates."
+      "title": "Goal",
+      "text": "**Goal:** run one rite and one travel tool the Spirit Codex already diagrams.\\\nYou need the **Spirit Codex**; those shapes live there, not here.\\\nStone Font, Listening Pit, Rite Circle, Voice Ring, Shatter Array, Way Gate and Far Gate are Spirit Codex shapes. Whisker does not reprint them."
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "A Voice Ring of totems at radius 3 around a Pulse Resonator is opt-in — a scattered heap still works, but counts at most five voices."
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "item": {
-        "id": "tribalpower:stone_font",
-        "count": 1
-      },
-      "title": "Stone Font",
-      "text": "The starter rite.\\\nA font and four chalk marks asks for cobblestone at 4 Pulse a second.\\\nBrace it and bring Earth for stone."
+      "title": "March travel",
+      "text": "The Gate Drum is the portable way into the March. Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart.\\\nBind a return compass before you go. `/tribalpower gate list` names later gates."
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Add Fire and Water for obsidian at 24 Pulse a second, or feed 250 mB water and 250 mB lava for the same obsidian at 6."
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "item": {
-        "id": "tribalpower:resonance_mesh",
-        "count": 1
-      },
-      "title": "Listening Pit",
-      "text": "Stone, four Anchor Stones, chalk to the middle, a Resonance Mesh, an Ancestral Cache and Earth in reach.\\\nMetals come out raw or as grit; gems skip the fire.\\\nA sample on top is a filter, never an ingredient."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Mining stays cheaper; the pit buys walking away from it."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "One voice, one so...",
-      "text": "Earth is the Drumheart. Fire is the Ember Horn (furnace fuel, up to 20/s). Air is the Wind Harp (altitude, sky, weather). Water is the Wave Drum (adjacent or piped). Spirit is the Wake Bell (nearby deaths). Loom is the Loom Anchor (1/s per distinct voice). Pulse Cairns hold 4,000 each, five to a column."
-    },
-    {
-      "type": "modonomicon:spotlight",
-      "item": {
-        "id": "tribalpower:gate_keystone",
-        "count": 1
-      },
-      "title": "Way Gate and Far ...",
-      "text": "The Gate Drum stays the portable way into the March.\\\nA Way Gate is a five-by-five frame, 20 Pulse a traveller, linked within 64 blocks.\\\nA Far Gate is taller, braced, Loom-voiced, linked with a Gate Sigil, 120 Pulse a traveller."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Players, mobs and items all pass. `/tribalpower gate list`."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
-    },
-    {
-      "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
+      "title": "Check",
+      "text": "**Check:** one Font or Pit from the Spirit Codex diagram produces an output. If it stays silent, crouch and right-click with the Spirit Codex."
     }
   ],
   "parents": [

@@ -2,7 +2,7 @@
 
 CurseForge rejected file 8834868 because hosted dependencies were bundled as override jars, including two jars whose licenses forbid redistribution. Missing IDs used to fall back to copying a jar into the ZIP. That fallback has been removed.
 
-Every external dependency must have a positive project ID, file ID and verified SHA-1 in `pack/modlist-resolved.json`. An unresolved file or changed local artifact now stops export. Duplicate project references are rejected. Tribal Power must use project 1684851 and is installed through the manifest like the other hosted mods.
+Every external dependency must have a positive project ID, file ID and verified SHA-1 in `pack/modlist-resolved.json`. An unresolved file or changed local artifact now stops export. Duplicate project references are rejected. Tribal Power must use project 1684851 and Chocobos Reborn must use project 1699008; both are installed through the manifest like the other hosted mods.
 
 Only the four original companion mods in this repository may be bundled: Ninjacat Skies, Ninjacat Lib, Clowder Hall and Voidloom. Third-party jars cannot be placed in `pack/overrides` or included through self-contained mode. Python and PowerShell exports use one implementation; both upload tools validate the actual archive.
 

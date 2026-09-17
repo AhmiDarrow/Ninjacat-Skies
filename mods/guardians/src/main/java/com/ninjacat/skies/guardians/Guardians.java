@@ -34,6 +34,7 @@ public final class Guardians {
         NeoForge.EVENT_BUS.register(new RelicEvents());
         NeoForge.EVENT_BUS.addListener(this::onServerTick);
         NeoForge.EVENT_BUS.addListener(this::onLogin);
+        NeoForge.EVENT_BUS.addListener(this::onRespawn);
         NeoForge.EVENT_BUS.addListener(TotemUnlocks::onAdvancement);
         NeoForge.EVENT_BUS.addListener(TotemUnlocks::onLogin);
         NeoForge.EVENT_BUS.addListener(this::onDeath);
@@ -44,6 +45,7 @@ public final class Guardians {
 
     private void onServerTick(ServerTickEvent.Post e) { ArenaManager.get(e.getServer()).tick(e.getServer()); }
     private void onLogin(PlayerEvent.PlayerLoggedInEvent e) { if (e.getEntity() instanceof ServerPlayer p) ArenaManager.get(p.server).onLogin(p); }
+    private void onRespawn(PlayerEvent.PlayerRespawnEvent e) { if (e.getEntity() instanceof ServerPlayer p) ArenaManager.get(p.server).onLogin(p); }
     private void onDeath(LivingDeathEvent e) { if (e.getEntity() instanceof ServerPlayer p) ArenaManager.get(p.server).onDeath(p); }
 
     private void onCommands(RegisterCommandsEvent e) {

@@ -12,22 +12,37 @@
     {
       "type": "modonomicon:text",
       "title": "Goal and sequence",
-      "text": "**Goal:** turn basic resources into materials for the next chapter.\\\n1\\. Unravel Frayed Thread into string when you need it. Keep some Thread for trading.\\\n2\\. Follow recipes for Void Yarn, a Binding Knot and a Loomframe.\\\n3\\. Make a Tension Barrel and keep water nearby."
+      "text": "**Goal:** turn pad scraps into materials for Recover and the chapters after it.\\\nYou need Frayed Thread, Recover open, and a mesh.\\\n1\\. Unravel Frayed Thread into string when you need it. Keep some Thread for trading.\\\n2\\. Follow JEI for Void Yarn, a Binding Knot and a Loomframe."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "4\\. Follow Recover for clay, porcelain and the route to handling lava."
+      "text": "3\\. Make a Tension Barrel and keep water nearby.\\\n4\\. Follow Recover for clay, porcelain and the route to handling lava."
     },
     {
       "type": "modonomicon:text",
       "title": "Test small batches",
-      "text": "Read the Loomframe and barrel recipes before adding items. Start with one batch and check the output. Keep the input and result in separate storage until you know the process."
+      "text": "Read the Loomframe and barrel in JEI before adding items. Start with one batch and check the output. Keep the input and result in separate storage until you know the process."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Then work towards sieving and better meshes. An iron mesh opens the route to Strand Filament. Follow the active quests and recipes for the exact substrate and mesh combination.\\\nThe next model is a workspace example; adjacent placement alone does not automate these stations."
+      "text": "**Check:** the Loomframe produces scraps from a loaded mesh, and the barrel returns clay or yarn. Adjacent placement alone does not automate these stations. The next model is a workspace example."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Sieves",
+      "text": "**Goal:** a click sieve for early grit, then a hopper Loomframe.\\\nYou need an oak sieve, a string mesh, and cobble to hammer.\\\n1\\. Craft an **oak sieve**. Hold a mesh and right-click the sieve; this one is hand-only."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "2\\. Hammer cobble toward gravel, sand or dust as Recover asks. String mesh first; iron mesh is when **Strand Filament** starts.\\\n3\\. The **Loomframe** is the hopper machine: mesh by hand, dirt/gravel/sand/dust in the top, output below."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** the oak sieve yields a click of grit, and the Loomframe ticks with a loaded mesh. Follow Recover and JEI for the current mesh and substrate. Adjacent placement does not automate either station."
     },
     {
       "type": "modonomicon:multiblock",

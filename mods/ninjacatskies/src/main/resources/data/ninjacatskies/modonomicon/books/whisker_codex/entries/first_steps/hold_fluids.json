@@ -1,0 +1,47 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Hold liquids safely",
+  "description": "Practical steps and checks.",
+  "icon": "tribalpower:spirit_cistern",
+  "x": 6,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Goal",
+      "text": "**Goal:** store and move liquids without dumping them on the floor.\\\nYou need a **Spirit Cistern** (JEI / Tribal Weave). AE2 Sky Stone Tanks empty when broken.\\\nAE2 **Sky Stone Tanks** empty when broken. That is AE2's design, not a pack bug. Bucket them out before you pick the tank up."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Use a Cistern",
+      "text": "1\\. Craft a **Spirit Cistern**. It holds 16 buckets of one fluid.\\\n2\\. Fill it with a bucket or a standard fluid pipe. A comparator reads fullness; redstone can lock filling and draining.\\\n3\\. Break the Cistern when you need to move it. The fluid stays on the dropped block."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "4\\. Relays move fluid between loaded ends. They are paths, not tanks.\\\nThe **Spirit Codex** has the current piping and Wave Drum details. The diagram is one compact corner, not a quest shape."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Check",
+      "text": "**Check:** put a bucket into the Cistern, pick the block up, and place it again. The fluid is still there. If you used a Sky Stone Tank, the liquid is gone unless you bucketed first."
+    },
+    {
+      "type": "modonomicon:multiblock",
+      "multiblock_id": "ninjacatskies:codex/cistern_corner",
+      "multiblock_name": "Placement example",
+      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "show_visualize_button": true
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/automatic_power",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

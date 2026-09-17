@@ -431,6 +431,7 @@
 			id: "4200000000080175"
 			x: 4.4d
 			y: 4.2d
+			optional: true
 			tasks: [
 				{
 					id: "5200000000080175"
@@ -520,7 +521,7 @@
 					}
 				}
 			]
-			dependencies: ["4200000000080172"]
+			dependencies: ["420000000008016D"]
 			shape: "loom"
 		}
 		{
@@ -1463,6 +1464,7 @@
 				}
 			]
 			shape: "octagon"
+			optional: true
 			invisible: true
 			invisible_until_tasks: 1
 		}

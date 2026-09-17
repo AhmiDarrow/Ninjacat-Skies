@@ -150,7 +150,7 @@ ServerEvents.recipes(event => {
     'exdeorum:iron_mesh': 'ninjacatskies:meshes/iron',
   }
   let changed = 0
-  for (const type of ['exdeorum:sieve', 'exdeorum:compressed_sieve']) {
+  for (let type of ['exdeorum:sieve', 'exdeorum:compressed_sieve']) {
     event.forEachRecipe({ type: type }, r => {   // Rhino has no ES6 shorthand properties: `{ type }` is a syntax error that kills this whole script
       try {
         let mesh = r.json.get('mesh')   // let, not const: Rhino re-runs a try block's const as a redeclaration on the second recipe

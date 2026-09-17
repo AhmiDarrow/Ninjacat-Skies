@@ -44,7 +44,7 @@ function listHubEntities(hub) {
 
 function hubHasStall(hub, stallId, name) {
   let found = listHubEntities(hub)
-  if (!found) return null
+  if (!found || found.length === 0) return null
   for (let entity of found) {
     let t = String(entity.type || '')
     if (t.indexOf('tribal_kin') < 0) continue
@@ -117,9 +117,10 @@ function markMarchVisit(player) {
 
 function esterAlreadyPresent(hub) {
   let found = listHubEntities(hub)
-  if (!found) return null
+  if (!found || found.length === 0) return null
   for (let entity of found) {
-    if (String(entity.type || '').indexOf('race_master') >= 0) return true
+    let t = String(entity.type || '')
+    if (t.indexOf('kin_steward') >= 0 || t.indexOf('race_master') >= 0) return true
   }
   return false
 }
@@ -130,13 +131,15 @@ function spawnEster(hub) {
     hub.persistentData.putBoolean(HUB_ESTER_FLAG, true)
     return
   }
+  // Listing failed: trust the flag so a later tick does not double-spawn.
   if (present === null && hub.persistentData.getBoolean(HUB_ESTER_FLAG)) return
-  let entity = hub.createEntity('chococraft:race_master')
+  let entity = hub.createEntity('chocobosreborn:kin_steward')
   if (!entity) return
   entity.mergeNbt({
     PersistenceRequired: true,
     NoAI: true,
-    CustomName: '{"translate":"entity.chococraft.race_master"}',
+    Role: 0,
+    CustomName: '{"translate":"chocobosreborn.kin.steward"}',
     CustomNameVisible: true,
   })
   // West of the pad, opposite Spark, looking east toward the shop line.

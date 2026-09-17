@@ -4,7 +4,7 @@
 	filename: "40_chocobo"
 	group: "2100000000000004"
 	icon: {
-		id: "chococraft:chocopedia"
+		id: "chocobosreborn:sage_notes"
 	}
 	id: "3100000000000028"
 	images: [
@@ -70,7 +70,7 @@
 					id: "52000000002805E4"
 					type: "item"
 					item: {
-						id: "chococraft:gysahl_green"
+						id: "chocobosreborn:gysahl_green"
 						count: 8
 					}
 				}
@@ -97,7 +97,7 @@
 					id: "52000000002805E5"
 					type: "item"
 					item: {
-						id: "chococraft:chocopedia"
+						id: "chocobosreborn:sage_notes"
 						count: 1
 					}
 				}
@@ -124,7 +124,7 @@
 					id: "52000000002805E6"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_saddle"
+						id: "chocobosreborn:chocobo_saddle"
 						count: 1
 					}
 				}
@@ -159,7 +159,7 @@
 					id: "52000000002805E7"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_square_ticket"
+						id: "chocobosreborn:square_gate"
 						count: 1
 					}
 				}
@@ -186,7 +186,7 @@
 					id: "52000000002805E8"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_whistle"
+						id: "chocobosreborn:chocobo_lure"
 						count: 1
 					}
 				}
@@ -218,7 +218,7 @@
 					id: "52000000002805E9"
 					type: "item"
 					item: {
-						id: "chococraft:straw"
+						id: "chocobosreborn:gysahl_green_seeds"
 						count: 8
 					}
 				}
@@ -253,7 +253,7 @@
 					id: "52000000002805EA"
 					type: "item"
 					item: {
-						id: "chococraft:carob_nut"
+						id: "chocobosreborn:carob_nut"
 						count: 1
 					}
 				}
@@ -280,7 +280,7 @@
 					id: "52000000002805EB"
 					type: "item"
 					item: {
-						id: "chococraft:loverly_gysahl_green"
+						id: "chocobosreborn:curiel_green"
 						count: 1
 					}
 				}
@@ -307,7 +307,7 @@
 					id: "52000000002805EC"
 					type: "item"
 					item: {
-						id: "chococraft:gold_gysahl"
+						id: "chocobosreborn:sylkis_green"
 						count: 1
 					}
 				}
@@ -342,7 +342,7 @@
 					id: "52000000002805ED"
 					type: "item"
 					item: {
-						id: "chococraft:zeio_nut"
+						id: "chocobosreborn:zeio_nut"
 						count: 1
 					}
 				}
@@ -374,7 +374,7 @@
 					id: "52000000002805EE"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_saddle_bags"
+						id: "chocobosreborn:gp"
 						count: 1
 					}
 				}
@@ -401,7 +401,7 @@
 					id: "52000000002805EF"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_saddle_pack"
+						id: "chocobosreborn:pepio_nut"
 						count: 1
 					}
 				}
@@ -436,7 +436,7 @@
 					id: "52000000002805F0"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_feather"
+						id: "chocobosreborn:krakka_green"
 						count: 8
 					}
 				}
@@ -463,7 +463,7 @@
 					id: "52000000002805F1"
 					type: "item"
 					item: {
-						id: "chococraft:gysahl_cake"
+						id: "chocobosreborn:tantal_green"
 						count: 1
 					}
 				}
@@ -493,7 +493,7 @@
 					id: "52000000002805F2"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_drumstick_cooked"
+						id: "chocobosreborn:pahsana_green"
 						count: 1
 					}
 				}
@@ -531,7 +531,7 @@
 					id: "52000000002805F3"
 					type: "item"
 					item: {
-						id: "chococraft:pickled_gysahl_cooked"
+						id: "chocobosreborn:mimett_green"
 						count: 1
 					}
 				}
@@ -561,7 +561,7 @@
 					id: "52000000002805F4"
 					type: "item"
 					item: {
-						id: "chococraft:choco_disguise_helmet"
+						id: "chocobosreborn:reagan_green"
 						count: 1
 					}
 				}
@@ -591,7 +591,7 @@
 					id: "52000000002805F5"
 					type: "item"
 					item: {
-						id: "chococraft:choco_disguise_chestplate"
+						id: "chocobosreborn:luchile_nut"
 						count: 1
 					}
 				}
@@ -629,7 +629,7 @@
 					id: "52000000002805F6"
 					type: "item"
 					item: {
-						id: "chococraft:choco_disguise_leggings"
+						id: "chocobosreborn:saraha_nut"
 						count: 1
 					}
 				}
@@ -659,7 +659,7 @@
 					id: "52000000002805F7"
 					type: "item"
 					item: {
-						id: "chococraft:choco_disguise_boots"
+						id: "chocobosreborn:lasan_nut"
 						count: 1
 					}
 				}
@@ -689,7 +689,7 @@
 					id: "52000000002805F8"
 					type: "item"
 					item: {
-						id: "chococraft:pink_gysahl"
+						id: "chocobosreborn:pram_nut"
 						count: 1
 					}
 				}
@@ -727,7 +727,7 @@
 					id: "52000000002805F9"
 					type: "item"
 					item: {
-						id: "chococraft:red_gysahl"
+						id: "minecraft:firework_rocket"
 						count: 1
 					}
 				}
@@ -757,7 +757,7 @@
 					id: "52000000002805FA"
 					type: "item"
 					item: {
-						id: "chococraft:chocobo_square_gate"
+						id: "chocobosreborn:porov_nut"
 						count: 1
 					}
 				}

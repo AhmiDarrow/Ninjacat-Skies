@@ -12,17 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Edge",
-      "text": "**Claw.** Silent Gear blueprints, iron on your back, a bow, a portal frame. Leave the pad on purpose.\\\nEdge opens the braid: after Claw, Pattern, Colony, and Hum are all yours to choose from."
+      "text": "**Claw.** Silent Gear plans, iron on your back, a bow, a portal frame. Leave the pad on purpose.\\\nClaiming a pad wipes Silent Gear's join gift. Four **Blueprint Paper**, shapeless, make a **Blueprint Package**. Right-click to unwrap starter plans.\\\nEdge opens the braid: after Claw, Pattern, Colony, and Hum are all yours to choose from."
     },
     {
       "type": "modonomicon:text",
       "title": "Before you move on",
-      "text": "Open this stage in the quest screen. Complete its required tasks, claim the reward and seat its Strand token at the Tension Post. Check that the matching notch lights."
+      "text": "Finish Claw. If the Blueprint Package is missing, craft it from four Blueprint Paper, then seat the Claw token. The Claw notch lights."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes show the current ingredients; the Spirit Codex covers Tribal Power machinery. If you get stuck, test one recipe at a time and read the machine's diagnostic message."
+      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
     }
   ],
   "parents": [

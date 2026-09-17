@@ -68,7 +68,29 @@ class CodexBookTests(unittest.TestCase):
     def test_beginner_lessons_and_navigation(self):
         entries={f'ninjacatskies:{p.parent.name}/{p.stem}' for p in (BOOK/'entries').glob('*/*.json')}
         paths=list((BOOK/'entries/first_steps').glob('*.json'))
-        self.assertEqual(len(paths),10)
+        stems={p.stem for p in paths}
+        self.assertEqual(stems, {
+            'using_the_book','safe_start','water','first_token','materials','claw_blueprints',
+            'first_power','automatic_power','hold_fluids','choose_branches','pad_runners','finish','stuck',
+        })
+        blob=' '.join(p.read_text(encoding='utf-8') for p in paths).lower()
+        self.assertIn('silentgear:blueprint_package', blob)
+        self.assertIn('tribalpower:spirit_cistern', blob)
+        self.assertIn('chocobosreborn:sage_notes', blob)
+        self.assertIn('esther', blob)
+        self.assertIn('sky stone', blob)
+        self.assertIn('no spawn-egg shortcut', blob)
+        self.assertIn('/clowder hub', blob)
+        self.assertIn('thread of return', blob)
+        self.assertIn('oak sieve', blob)
+        self.assertIn('empty-handed use', blob)
+        self.assertIn('do not strike it like a drumheart', blob)
+        self.assertIn('carob', blob)
+        self.assertIn('no pink or red', blob)
+        self.assertNotIn('strike a **gate drum**', blob)
+        self.assertNotIn('chococraft', blob)
+        self.assertNotIn('chocopedia', blob)
+        self.assertNotIn('recovery item', blob)
         for p in paths:
             d=json.loads(p.read_text(encoding='utf-8'))
             self.assertFalse(d['hide_while_locked'])
@@ -81,7 +103,9 @@ class CodexBookTests(unittest.TestCase):
 
     def test_models_have_one_origin_and_valid_layers(self):
         paths=list((BOOK.parents[1]/'multiblocks/codex').glob('*.json'))
-        self.assertEqual(len(paths),5)
+        self.assertEqual({p.stem for p in paths}, {
+            'starter_workshop','water_pool','material_workshop','shatter_workshop','resonator_workshop','cistern_corner',
+        })
         for p in paths:
             shape=json.loads(p.read_text()); pattern=shape['pattern']
             flat=''.join(''.join(layer) for layer in pattern)
@@ -96,5 +120,53 @@ class CodexBookTests(unittest.TestCase):
             for page in json.loads(p.read_text(encoding='utf-8'))['pages']:
                 if page['type']=='modonomicon:multiblock':
                     self.assertTrue((BOOK.parents[1]/'multiblocks'/ (page['multiblock_id'].split(':')[1]+'.json')).exists())
+
+    def test_pack_primers_match_first_steps(self):
+        mapping=[('this_book','using_the_book'),('first_hour','safe_start'),
+                 ('tokens','first_token'),('the_campaign','choose_branches')]
+        expected_parent={'this_book':None,'first_hour':'ninjacatskies:the_work/this_book',
+                         'tokens':'ninjacatskies:the_work/first_hour',
+                         'the_campaign':'ninjacatskies:the_work/tokens'}
+        for target,source in mapping:
+            pack=json.loads((PACK/'entries/the_work'/f'{target}.json').read_text(encoding='utf-8'))
+            core=json.loads((BOOK/'entries/first_steps'/f'{source}.json').read_text(encoding='utf-8'))
+            self.assertEqual(pack['pages'], core['pages'], target)
+            parents=[p['entry'] for p in pack.get('parents',[])]
+            want=expected_parent[target]
+            if want is None:
+                self.assertEqual(parents, [])
+            else:
+                self.assertEqual(parents, [want], target)
+        self.assertFalse((BOOK/'categories'/'the_work.json').exists())
+        titles=[]
+        for p in (BOOK/'entries').glob('*/*.json'):
+            titles += [page.get('title','') for page in json.loads(p.read_text(encoding='utf-8'))['pages']]
+        self.assertFalse(any('...' in t for t in titles), [t for t in titles if '...' in t])
+
+    def test_braid_stage_checks_are_single_and_specific(self):
+        strand={'wake','recover','root','edge','pattern','colony','hum','bind','reweave'}
+        for path in (BOOK/'entries/braid').glob('*.json'):
+            titles=[p.get('title') for p in json.loads(path.read_text(encoding='utf-8'))['pages']]
+            count=titles.count('Before you move on')
+            if path.stem in strand:
+                self.assertEqual(count, 1, path.name)
+            else:
+                self.assertEqual(count, 0, path.name)
+        pit=json.loads((BOOK/'entries/braid/listening_pit.json').read_text(encoding='utf-8'))
+        blob=' '.join(p.get('text','') for p in pit['pages'])
+        self.assertIn('Spirit Codex', blob)
+        self.assertIn('empty-handed use', blob.lower())
+        self.assertNotIn('seat its Strand token', blob)
+        self.assertNotIn('Earth is the Drumheart', blob)
+        lattice=json.loads((BOOK/'entries/braid/living_lattice.json').read_text(encoding='utf-8'))
+        lattice_blob=' '.join(p.get('text','') for p in lattice['pages'])
+        self.assertIn('Spirit Codex', lattice_blob)
+        self.assertNotIn('Feed slot 0', lattice_blob)
+        edge=json.loads((BOOK/'entries/braid/edge.json').read_text(encoding='utf-8'))
+        self.assertIn('Blueprint Package', ' '.join(p.get('text','') for p in edge['pages']))
+        workshop=json.loads((BOOK.parents[1]/'multiblocks/codex/starter_workshop.json').read_text(encoding='utf-8'))
+        self.assertEqual(workshop['mapping']['0']['block'], 'minecraft:crafting_table')
+        materials=json.loads((BOOK.parents[1]/'multiblocks/codex/material_workshop.json').read_text(encoding='utf-8'))
+        self.assertIn('exdeorum:oak_sieve', {v['block'] for v in materials['mapping'].values()})
 
 if __name__=='__main__':unittest.main()

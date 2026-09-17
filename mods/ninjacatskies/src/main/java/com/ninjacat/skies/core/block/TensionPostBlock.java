@@ -161,6 +161,7 @@ public class TensionPostBlock extends BaseEntityBlock {
 
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (player.isSpectator()) return ItemInteractionResult.FAIL;
         if (level.hasNeighborSignal(pos)) {
             if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.ninjacatskies.post_locked"), true);
             return ItemInteractionResult.CONSUME;
@@ -234,6 +235,7 @@ public class TensionPostBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        if (player.isSpectator()) return InteractionResult.FAIL;
         if (level.hasNeighborSignal(pos)) {
             if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.ninjacatskies.post_locked"), true);
             return InteractionResult.CONSUME;
@@ -277,6 +279,11 @@ public class TensionPostBlock extends BaseEntityBlock {
         var mine = LoomTension.clowderOf(player);
         if (mine.isEmpty()) return true;
         if (be.getClowder().equals(mine.get().id())) return true;
+        // Solo player-team UUID stored on the Post; FTB still keeps that team after a party forms.
+        if (mine.get().memberIds().contains(be.getClowder())) {
+            be.setClowder(mine.get().id());
+            return true;
+        }
         if (LoomTension.clowderById(level.getServer(), be.getClowder()).isPresent()) return false;
         // Unknown id: a disbanded party (reclaimable) — but never a solo player who is merely offline. A solo Clowder's id is the
         // player's own UUID, so a saved player file settles it (the profile cache alone forgets players after a month away).
@@ -305,9 +312,18 @@ public class TensionPostBlock extends BaseEntityBlock {
     }
 
     @Override
-    protected java.util.List<ItemStack> getDrops(BlockState state, net.minecraft.world.level.storage.loot.LootParams.Builder builder) {
-        java.util.List<ItemStack> drops = new java.util.ArrayList<>(super.getDrops(state, builder));
-        if (drops.stream().noneMatch(stack -> stack.is(asItem()))) drops.add(new ItemStack(this));
-        return drops;
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+        if (!state.is(newState.getBlock()) && level instanceof ServerLevel sl
+                && sl.getBlockEntity(pos) instanceof TensionPostBlockEntity be
+                && be.getClowder() != null) {
+            LoomTension.clowderById(sl.getServer(), be.getClowder()).ifPresent(c -> {
+                var remembered = LoomTension.postOf(c);
+                if (remembered != null && remembered.dimension().equals(sl.dimension()) && remembered.pos().equals(pos)) {
+                    c.data().remove(LoomTension.KEY_POST);
+                    c.markDirty();
+                }
+            });
+        }
+        super.onRemove(state, level, pos, newState, movedByPiston);
     }
 }

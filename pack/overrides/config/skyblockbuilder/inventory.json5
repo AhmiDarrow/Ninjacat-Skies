@@ -1,5 +1,6 @@
 {
   // Wipe other mods' free guide books on first join so kits stay intentional.
+  // Silent Gear's Blueprint Package is one of those gifts; kubejs silentgear.js crafts it from four Blueprint Paper.
   "clearInitialInventory": true,
 
   "dropItems": true,

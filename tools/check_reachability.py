@@ -33,6 +33,7 @@ KUBEJS = ROOT / "pack/overrides/kubejs"
 # assumed reachable; each was reviewed by hand (see INTERNAL/REVIEW notes).
 CODEGEN_NAMESPACES = {
     "create", "mekanism", "mekanismtools", "ae2", "solarflux", "botanypots", "productivebees",
+    "chocobosreborn",
     "naturesaura", "occultism", "ars_nouveau", "irons_spellbooks", "silentgear", "powah", "tribalpower",
     "sophisticatedbackpacks", "sophisticatedcore", "functionalstorage", "pipez", "packagedauto",
     "mysticalagriculture", "mysticalagradditions",

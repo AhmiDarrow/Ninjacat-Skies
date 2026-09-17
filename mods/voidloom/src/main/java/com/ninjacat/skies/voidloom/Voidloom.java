@@ -30,8 +30,10 @@ public final class Voidloom {
 
     /** Hoppers and pipes: grit in the top of a Loomframe, scraps out below; same for the Barrel. */
     private void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
-        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.LOOMFRAME.get(), (be, side) -> be.handler());
-        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.TENSION_BARREL.get(), (be, side) -> be.handler());
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.LOOMFRAME.get(),
+                (be, side) -> side == net.minecraft.core.Direction.DOWN ? be.extractHandler() : be.insertHandler());
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.TENSION_BARREL.get(),
+                (be, side) -> side == net.minecraft.core.Direction.DOWN ? be.extractHandler() : be.insertHandler());
     }
 
     private void onCommonSetup(FMLCommonSetupEvent event) {

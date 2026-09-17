@@ -80,6 +80,16 @@
     "sha1": "9c6a9adc77601cc8c07a3e058bd8cc42df0afe84"
   },
   {
+    "key": "FTB XMod Compat",
+    "name": "FTB XMod Compat",
+    "slug": "ftb-xmod-compat",
+    "projectId": 889915,
+    "fileId": 8653466,
+    "filename": "ftb-xmod-compat-neoforge-21.1.11.jar",
+    "releaseType": 1,
+    "sha1": "06061863f24e1c0d9b2bb2646e96e07cbf0029f5"
+  },
+  {
     "key": "JEI",
     "name": "Just Enough Items (JEI)",
     "slug": "jei",
@@ -888,6 +898,16 @@
     "filename": "tribalpower-3.4.1.jar",
     "releaseType": 1,
     "sha1": "11806d4c589e40028135fe6a33027954fa193c76"
+  },
+  {
+    "key": "Chocobos Reborn",
+    "name": "Chocobos Reborn",
+    "slug": "chocobos-reborn",
+    "projectId": 1699008,
+    "fileId": 8903892,
+    "filename": "chocobosreborn-1.0.0.jar",
+    "releaseType": 1,
+    "sha1": "3335079c79860954ec25a5c4d2b7d0ba414a901f"
   },
   {
     "key": "Resourceful Config",

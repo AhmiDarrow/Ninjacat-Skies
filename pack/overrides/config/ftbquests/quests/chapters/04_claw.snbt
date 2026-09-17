@@ -641,6 +641,7 @@
 			id: "42000000000400BD"
 			x: 8.8d
 			y: 0.0d
+			optional: true
 			tasks: [
 				{
 					id: "52000000000400BD"
@@ -701,7 +702,7 @@
 					}
 				}
 			]
-			dependencies: ["42000000000400BD"]
+			dependencies: ["42000000000400B8"]
 			shape: "loom"
 		}
 		{
@@ -728,13 +729,14 @@
 					}
 				}
 			]
-			dependencies: ["42000000000400BD"]
+			dependencies: ["42000000000400B8"]
 			shape: "loom"
 		}
 		{
 			id: "42000000000400C0"
 			x: 8.8d
 			y: 4.2d
+			optional: true
 			tasks: [
 				{
 					id: "52000000000400C0"
@@ -755,7 +757,7 @@
 					}
 				}
 			]
-			dependencies: ["42000000000400BD"]
+			dependencies: ["42000000000400B8"]
 			shape: "loom"
 		}
 		{
@@ -1185,6 +1187,7 @@
 				}
 			]
 			shape: "octagon"
+			optional: true
 			invisible: true
 			invisible_until_tasks: 1
 		}

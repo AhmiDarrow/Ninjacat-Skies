@@ -12,7 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Skybound",
-      "text": "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex assigns work. You do it. That is the arrangement.\\\nOpen **Grave** (backtick) for the assignment list. This book is for why, and for what the tribes left in the margins. They are the same campaign."
+      "text": "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex teaches. Grave assigns the work. That is the arrangement."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Open **Grave** (backtick) for the assignment list. Click a quest item to open its recipe in JEI. This book is for why, and for how to place the work. They are the same campaign."
     },
     {
       "type": "modonomicon:text",

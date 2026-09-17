@@ -37,34 +37,6 @@ for jar in MODS.glob("*.jar"):
     except Exception as exc:
         print("skip", jar.name, exc)
 
-# Skybound is not in pack/mods until CurseForge approves the listing. Seed the
-# Pad-runners quest ids so extract does not wipe them and abort the item gate.
-ids.update([
-    "chococraft:carob_nut",
-    "chococraft:choco_disguise_boots",
-    "chococraft:choco_disguise_chestplate",
-    "chococraft:choco_disguise_helmet",
-    "chococraft:choco_disguise_leggings",
-    "chococraft:chocobo_drumstick_cooked",
-    "chococraft:chocobo_feather",
-    "chococraft:chocobo_saddle",
-    "chococraft:chocobo_saddle_bags",
-    "chococraft:chocobo_saddle_pack",
-    "chococraft:chocobo_square_gate",
-    "chococraft:chocobo_square_ticket",
-    "chococraft:chocobo_whistle",
-    "chococraft:chocopedia",
-    "chococraft:gold_gysahl",
-    "chococraft:gysahl_cake",
-    "chococraft:gysahl_green",
-    "chococraft:loverly_gysahl_green",
-    "chococraft:pickled_gysahl_cooked",
-    "chococraft:pink_gysahl",
-    "chococraft:red_gysahl",
-    "chococraft:straw",
-    "chococraft:zeio_nut",
-])
-
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text("\n".join(sorted(ids)) + "\n", encoding="utf-8")
 print(f"ids={len(ids)} -> {OUT}")
@@ -86,7 +58,7 @@ probes = [
     "mekanism:ingot_steel",
     "functionalstorage:oak_1",
     "productivebees:honey_treat",
-    "chococraft:chocopedia",
+    "chocobosreborn:sage_notes",
     "pamhc2trees:avocado_sapling",
     "pamhc2foodcore:freshmilkitem",
     "agricraft:journal",

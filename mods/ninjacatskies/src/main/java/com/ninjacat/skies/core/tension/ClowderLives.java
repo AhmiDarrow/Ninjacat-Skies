@@ -1,5 +1,7 @@
 package com.ninjacat.skies.core.tension;
 
+import net.minecraft.nbt.CompoundTag;
+
 import java.util.UUID;
 
 /** One persistent life pool per Clowder, including members who are offline. */
@@ -18,15 +20,25 @@ public final class ClowderLives {
         if (team.data().getBoolean(receipt)) return false;
         int lives = remaining(team, startingLives);
         if (lives >= MAX_LIVES) return false;
+        boolean wasEmpty = lives == 0;
         team.data().putInt(KEY, lives + 1);
         team.data().putBoolean(receipt, true);
-        team.data().remove(EXHAUSTED_MEMBERS);
+        if (wasEmpty) team.data().remove(EXHAUSTED_MEMBERS);
         team.markDirty();
         return true;
     }
 
     /** Player persistent-data flag set by SkyboundEvents when a Clowder's pool hits zero. */
     public static final String EXHAUSTED_FLAG = "skybound_exhausted";
+
+    /**
+     * Saved pool without recording new contributors. {@code -1} means the pool was never written
+     * (treat a leaver as living unless they carry the exhausted flag).
+     */
+    public static int saved(CompoundTag data) {
+        if (data == null || !data.contains(KEY)) return -1;
+        return Math.max(0, Math.min(MAX_LIVES, data.getInt(KEY)));
+    }
 
     public static int remaining(Clowder team, int startingLives) {
         var data = team.data();
@@ -96,5 +108,22 @@ public final class ClowderLives {
 
     public static boolean isExhausted(Clowder team, UUID member) {
         return team.data().getCompound(EXHAUSTED_MEMBERS).getBoolean(member.toString());
+    }
+
+    /**
+     * Party join is not a revive. OR exhausted flags from the previous team onto the destination,
+     * and keep a joining player who still carries the spectator flag marked down.
+     */
+    public static void inheritExhaustion(CompoundTag dest, CompoundTag from, UUID joining, boolean joiningExhausted) {
+        CompoundTag toEx = dest.contains(EXHAUSTED_MEMBERS) ? dest.getCompound(EXHAUSTED_MEMBERS) : new CompoundTag();
+        if (joining != null) {
+            if (joiningExhausted) toEx.putBoolean(joining.toString(), true);
+        } else if (from.contains(EXHAUSTED_MEMBERS)) {
+            CompoundTag fromEx = from.getCompound(EXHAUSTED_MEMBERS);
+            for (String k : fromEx.getAllKeys()) {
+                if (fromEx.getBoolean(k)) toEx.putBoolean(k, true);
+            }
+        }
+        dest.put(EXHAUSTED_MEMBERS, toEx);
     }
 }

@@ -2,8 +2,8 @@
   "type": "modonomicon:dense",
   "pattern": [
     [
-      "C F",
-      " 0 ",
+      "0 F",
+      "   ",
       "B  "
     ],
     [
@@ -13,17 +13,13 @@
     ]
   ],
   "mapping": {
-    "C": {
+    "0": {
       "type": "modonomicon:block",
       "block": "minecraft:crafting_table"
     },
     "F": {
       "type": "modonomicon:block",
       "block": "minecraft:furnace"
-    },
-    "0": {
-      "type": "modonomicon:block",
-      "block": "ninjacatskies:tension_post"
     },
     "B": {
       "type": "modonomicon:block",

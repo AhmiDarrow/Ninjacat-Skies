@@ -6,6 +6,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
@@ -22,6 +23,10 @@ public final class RelicEvents {
     @SubscribeEvent
     public void onTick(PlayerTickEvent.Post e) {
         if (!(e.getEntity() instanceof ServerPlayer p)) return;
+        if (p.isSpectator()) {
+            stripWorn(p);
+            return;
+        }
         Set<RelicItem> now = new HashSet<>();
         for (ItemStack s : RelicSlots.worn(p)) {
             RelicItem r = (RelicItem) s.getItem(); now.add(r);
@@ -34,27 +39,52 @@ public final class RelicEvents {
     }
 
     @SubscribeEvent
+    public void onLogout(PlayerEvent.PlayerLoggedOutEvent e) {
+        if (!(e.getEntity() instanceof ServerPlayer p)) return;
+        stripWorn(p);
+    }
+
+    /**
+     * Clone copies persisted relic flags onto a new entity but keeps {@link #lastWorn} for the UUID,
+     * so {@code onWorn(true)} never re-fires. Strip both copies: Root Down must not follow a respawn,
+     * and Cogloop's trail must not Rewind a player back to their death.
+     */
+    @SubscribeEvent
+    public void onClone(PlayerEvent.Clone e) {
+        UUID id = e.getOriginal().getUUID();
+        Set<RelicItem> before = lastWorn.remove(id);
+        if (before == null || before.isEmpty()) return;
+        if (e.getOriginal() instanceof ServerPlayer orig) for (RelicItem r : before) r.power.onWorn(orig, false);
+        if (e.getEntity() instanceof ServerPlayer next) for (RelicItem r : before) r.power.onWorn(next, false);
+    }
+
+    private void stripWorn(ServerPlayer p) {
+        Set<RelicItem> before = lastWorn.remove(p.getUUID());
+        if (before != null) for (RelicItem r : before) r.power.onWorn(p, false);
+    }
+
+    @SubscribeEvent
     public void onServerStopped(net.neoforged.neoforge.event.server.ServerStoppedEvent e) { lastWorn.clear(); }
 
     @SubscribeEvent
     public void onIncoming(LivingIncomingDamageEvent e) {
         // Shard of the First Cut, "Severed": a wearer's melee blow ignores 30 % of the target's armour. Registered here, before armour is applied.
-        if (e.getSource().getDirectEntity() instanceof ServerPlayer striker && e.getSource().getEntity() == striker && !(e.getEntity() instanceof ServerPlayer)) {
+        if (e.getSource().getDirectEntity() instanceof ServerPlayer striker && !striker.isSpectator() && e.getSource().getEntity() == striker && !(e.getEntity() instanceof ServerPlayer)) {
             for (ItemStack s : RelicSlots.worn(striker)) if (((RelicItem) s.getItem()).kind == com.ninjacat.skies.guardians.GuardianKind.FIRSTCUT) { e.addReductionModifier(net.neoforged.neoforge.common.damagesource.DamageContainer.Reduction.ARMOR, (c, reduction) -> reduction * 0.7F); break; }
         }
-        if (!(e.getEntity() instanceof ServerPlayer p)) return;
+        if (!(e.getEntity() instanceof ServerPlayer p) || p.isSpectator()) return;
         for (ItemStack s : RelicSlots.worn(p)) { ((RelicItem) s.getItem()).power.onWearerHurt(p, s, e); if (e.isCanceled()) return; }
     }
 
     @SubscribeEvent
     public void onUseBlock(PlayerInteractEvent.RightClickBlock e) {
-        if (!(e.getEntity() instanceof ServerPlayer p)) return;
+        if (!(e.getEntity() instanceof ServerPlayer p) || p.isSpectator()) return;
         for (ItemStack s : RelicSlots.worn(p)) ((RelicItem) s.getItem()).power.onWearerUseBlock(p, s, e.getPos());
     }
 
     @SubscribeEvent
     public void onDamage(LivingDamageEvent.Pre e) {
-        if (!(e.getSource().getEntity() instanceof ServerPlayer p) || e.getSource().getDirectEntity() != p) return;   // melee only: arrows, thorns and relic lines are not "hits you land"
+        if (!(e.getSource().getEntity() instanceof ServerPlayer p) || e.getSource().getDirectEntity() != p || p.isSpectator()) return;   // melee only: arrows, thorns and relic lines are not "hits you land"
         for (ItemStack s : RelicSlots.worn(p)) ((RelicItem) s.getItem()).power.onWearerHit(p, s, e.getEntity(), e);
     }
 }

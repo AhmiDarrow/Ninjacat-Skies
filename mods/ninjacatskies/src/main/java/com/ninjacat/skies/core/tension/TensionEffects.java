@@ -14,12 +14,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.FireworkExplosion;
-import net.minecraft.world.item.component.Fireworks;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
@@ -126,16 +120,9 @@ public final class TensionEffects {
     }
 
     private static void launchFirework(ServerLevel level, double x, double y, double z) {
-        ItemStack rocket = new ItemStack(Items.FIREWORK_ROCKET);
-        FireworkExplosion burst = new FireworkExplosion(
-                FireworkExplosion.Shape.LARGE_BALL,
-                it.unimi.dsi.fastutil.ints.IntList.of(0x3D7A7A, 0xD4A84B),
-                it.unimi.dsi.fastutil.ints.IntList.of(0xE8E0D5),
-                true,
-                false
-        );
-        rocket.set(DataComponents.FIREWORKS, new Fireworks(2, List.of(burst)));
-        level.addFreshEntity(new FireworkRocketEntity(level, x, y, z, rocket));
+        // Particles only: a vanilla LARGE_BALL rocket deals blast damage and can spend Clowder lives.
+        level.sendParticles(ParticleTypes.FIREWORK, x, y + 2.5, z, 25, 0.4, 1.2, 0.4, 0.08);
+        level.sendParticles(FRAY_LIT, x, y + 2.0, z, 12, 0.3, 0.8, 0.3, 0.02);
     }
 
     private static Vector3f rgb(int color) {
@@ -222,6 +209,9 @@ public final class TensionEffects {
                 return;
             }
             BlockPos pos = post.pos();
+            if (!player.level().getBlockState(pos).is(com.ninjacat.skies.core.block.ModBlocks.TENSION_POST.get())) {
+                return;
+            }
             if (player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) > AURA_RADIUS * AURA_RADIUS) {
                 return;
             }
@@ -263,6 +253,9 @@ public final class TensionEffects {
                 return;
             }
             BlockPos pos = post.pos();
+            if (!player.level().getBlockState(pos).is(com.ninjacat.skies.core.block.ModBlocks.TENSION_POST.get())) {
+                return;
+            }
             if (player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= FOOTING_RADIUS * FOOTING_RADIUS) {
                 event.setCanceled(true);
                 player.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.teal("Edge-walker footing. The pad caught you."), true);

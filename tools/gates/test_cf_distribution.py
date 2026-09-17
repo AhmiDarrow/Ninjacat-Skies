@@ -9,7 +9,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools'))
-from cf_distribution import manifest_entries, is_owned_jar
+from cf_distribution import manifest_entries, is_owned_jar, is_local_owned
 from test_export_archive import verify
 
 
@@ -18,11 +18,15 @@ class DistributionTests(unittest.TestCase):
         jars = sorted((ROOT / 'pack/mods').glob('*.jar'))
         rows = json.loads((ROOT / 'pack/modlist-resolved.json').read_text(encoding='utf-8'))
         entries = manifest_entries(jars, rows)
-        self.assertEqual(len(jars), 95)
-        self.assertEqual(len(entries), 95)
+        local = [p for p in jars if is_local_owned(p.name)]
+        self.assertEqual(len(local), 0)
+        self.assertEqual(len(jars), 97)
+        self.assertEqual(len(entries), 97)
+        self.assertEqual(len(entries), len(jars) - len(local))
         self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 0)
         self.assertTrue(any(p.name.startswith('ninjacatskies-core-') for p in jars))
-        expected = {619320: 8687896, 235577: 8163135}
+        self.assertTrue(any(p.name.startswith('chocobosreborn-') for p in jars))
+        expected = {619320: 8687896, 235577: 8163135, 1699008: 8903892}
         actual = {e['projectID']: e['fileID'] for e in entries}
         for pid, fid in expected.items(): self.assertEqual(actual[pid], fid)
 
@@ -35,6 +39,12 @@ class DistributionTests(unittest.TestCase):
                 with self.assertRaises(ValueError): manifest_entries([p], rows)
             p.write_bytes(b'changed jar')
             with self.assertRaises(ValueError): manifest_entries([p], [row])
+            hosted = Path(tmp) / 'chocobosreborn-1.0.0.jar'
+            hosted.write_bytes(b'unresolved owned')
+            p.write_bytes(b'official contents')
+            with self.assertRaises(ValueError): manifest_entries([p, hosted], [row])
+            self.assertFalse(is_local_owned(hosted.name))
+            self.assertFalse(is_owned_jar(hosted.name))
 
     def test_rejected_third_party_jars_cannot_hide_in_overrides(self):
         with tempfile.TemporaryDirectory() as tmp:

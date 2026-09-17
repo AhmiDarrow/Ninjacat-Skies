@@ -143,6 +143,50 @@ public class LivesGameTests {
         h.assertTrue(!ClowderLives.isExhausted(team, a), "Rescued mate stands");
         h.assertTrue(ClowderLives.isExhausted(team, b), "Other mate stays down");
         h.assertTrue(ClowderLives.remaining(team, 3) == 1, "Pool is one, not a full reset");
+        h.assertTrue(ClowderLives.award(team, 3, "clock"), "Thread of Return while another mate is still down");
+        h.assertTrue(ClowderLives.isExhausted(team, b), "A later reward must not stand the unrestored mate");
+        h.succeed();
+    }
+
+    @GameTest(template="empty")
+    public static void joiningExhaustedPlayerDoesNotRevive(GameTestHelper h) {
+        var members = new HashSet<UUID>();
+        UUID host = UUID.randomUUID(), joiner = UUID.randomUUID();
+        members.add(host);
+        Clowder party = new Clowder() {
+            private final UUID id = UUID.randomUUID();
+            private final CompoundTag data = new CompoundTag();
+            public UUID id() { return id; }
+            public CompoundTag data() { return data; }
+            public Component name() { return Component.literal("Party"); }
+            public void markDirty() {}
+            public Collection<ServerPlayer> onlineMembers() { return List.of(); }
+            public Collection<UUID> memberIds() { return members; }
+        };
+        h.assertTrue(ClowderLives.remaining(party, 3) == 3, "Host still has lives");
+        CompoundTag solo = new CompoundTag();
+        CompoundTag soloEx = new CompoundTag();
+        UUID stranger = UUID.randomUUID();
+        soloEx.putBoolean(joiner.toString(), true);
+        soloEx.putBoolean(stranger.toString(), true);
+        solo.put("exhausted_members", soloEx);
+        ClowderLives.inheritExhaustion(party.data(), solo, joiner, true);
+        members.add(joiner);
+        h.assertTrue(ClowderLives.isExhausted(party, joiner), "Join does not clear exhaustion");
+        h.assertTrue(!ClowderLives.isExhausted(party, stranger), "A mate who never joined does not arrive pre-exhausted");
+        h.assertTrue(ClowderLives.remaining(party, 3) == 3, "Exhausted joiner does not add three lives");
+        h.succeed();
+    }
+
+    @GameTest(template="empty")
+    public static void savedPoolDoesNotRecordContributors(GameTestHelper h) {
+        CompoundTag data = new CompoundTag();
+        h.assertTrue(ClowderLives.saved(data) == -1, "Unwritten pool is unknown, not zero");
+        data.putInt("shared_lives", 0);
+        h.assertTrue(ClowderLives.saved(data) == 0, "Spent pool stays spent");
+        data.putInt("shared_lives", 5);
+        h.assertTrue(ClowderLives.saved(data) == 5, "Written pool is returned as-is");
+        h.assertTrue(!data.contains("life_contributors"), "Peek must not mint contributors");
         h.succeed();
     }
 }

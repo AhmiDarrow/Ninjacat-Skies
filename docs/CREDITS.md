@@ -2,7 +2,7 @@
 
 Ninjacat Skies is possible because of the work of the modding community. Thank you to the authors and contributors of every project below.
 
-This page credits all **93 outside mods** shipped with the current pack, including libraries, performance tools, and other dependencies. Each mod name links to its CurseForge project page; the names beside it are the authors listed there.
+This page credits all **94 outside mods** shipped with the current pack, including libraries, performance tools, and other dependencies. Each mod name links to its CurseForge project page; the names beside it are the authors listed there.
 
 Project pages and author listings were verified against the CurseForge API on September 7, 2026. Projects retain their own licenses and attribution requirements.
 
@@ -43,6 +43,7 @@ Project pages and author listings were verified against the CurseForge API on Se
 - [FTB Library (NeoForge)](https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge) — FTB, FTBTeam
 - [FTB Quests (NeoForge)](https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge) — FTB, FTBTeam
 - [FTB Teams (NeoForge)](https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge) — FTB, FTBTeam
+- [FTB XMod Compat](https://www.curseforge.com/minecraft/mc-mods/ftb-xmod-compat) — FTB, FTBTeam
 - [Functional Storage](https://www.curseforge.com/minecraft/mc-mods/functional-storage) — Buuz135
 - [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) — Gecko, EliotL
 - [GuideME](https://www.curseforge.com/minecraft/mc-mods/guideme) — shartte
@@ -104,6 +105,6 @@ Project pages and author listings were verified against the CurseForge API on Se
 
 ## Pack projects
 
-Ninjacat Skies, Ninjacat Lib, Clowder Hall, and Voidloom are the pack's own companion projects. [TribalPower](https://www.curseforge.com/minecraft/mc-mods/tribalpower) is our separately maintained shamanic technomancy mod, also available standalone.
+Ninjacat Skies, Ninjacat Lib, Clowder Hall, and Voidloom are the pack's own companion projects. [TribalPower](https://www.curseforge.com/minecraft/mc-mods/tribalpower) is our separately maintained shamanic technomancy mod, also available standalone. [Chocobos Reborn](https://www.curseforge.com/minecraft/mc-mods/chocobos-reborn) is our chocobo mod, also available standalone.
 
 [Back to Ninjacat Skies](../README.md)

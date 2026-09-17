@@ -3,8 +3,8 @@
   "name": "Prepare the final reweave",
   "description": "Practical steps and checks.",
   "icon": "ninjacatskies:spindle_loom_fragment",
-  "x": 6,
-  "y": 3,
+  "x": 2,
+  "y": 6,
   "background_u_index": 0,
   "background_v_index": 0,
   "hide_while_locked": false,
@@ -12,22 +12,22 @@
     {
       "type": "modonomicon:text",
       "title": "Readiness checklist",
-      "text": "Finish the remaining quest branches and seat all **nine** Strand tokens. Count the Post notches before leaving for the final materials.\\\nPrepare food, equipment and a return route before entering the March. Bring back **March Stone**. Read the Spirit Codex for the Gate Drum and March travel details."
+      "text": "**Goal:** seat all nine Strands, bring March Stone home, and close your Clowder's cut.\\\nYou need nine seated tokens, **March Stone**, and a way home.\\\nCount the Post notches before you leave. Prepare food, equipment and a return route. The **Spirit Codex** covers the Gate Drum and March travel."
     },
     {
       "type": "modonomicon:text",
       "title": "Use the Post twice",
-      "text": "1\\. With all nine Strands seated, right-click the Tension Post with March Stone. This makes a **Spindle Loom Fragment**.\\\n2\\. Right-click the Post again, this time holding the Fragment, to reweave your team's sky."
+      "text": "1\\. With all nine Strands seated, right-click the Tension Post with March Stone. This makes a **Spindle Loom Fragment**.\\\n2\\. Right-click the Post again, this time holding the Fragment, to reweave your team's sky.\\\nThese are world interactions, not crafting-table recipes."
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "These are world interactions, not crafting-table recipes. If nothing happens, check the Post message and the nine seated Strands. Other teams have their own progress."
+      "title": "Check",
+      "text": "**Check:** nine notches are lit, then the Fragment seats and the Fray over the Dock is thinner for your Clowder. If nothing happens, read the Post message. Other teams have their own progress."
     }
   ],
   "parents": [
     {
-      "entry": "ninjacatskies:first_steps/choose_branches",
+      "entry": "ninjacatskies:first_steps/pad_runners",
       "draw_arrow": true,
       "line_enabled": true
     }

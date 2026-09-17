@@ -79,7 +79,11 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags('item', event => {
-  // Fried rice and mayo ask for eggs. Silken tofu is the pad stand-in until chickens exist.
+  // Fried rice and mayo ask for eggs. Chili asks for c:rawmeats. Soy tofu is the pad stand-in.
   event.add('c:egg', 'pamhc2foodextended:silkentofuitem')
   event.add('c:egg/egg', 'pamhc2foodextended:silkentofuitem')
+  event.add('c:eggs', 'pamhc2foodextended:silkentofuitem')
+  event.add('c:foods/egg', 'pamhc2foodextended:silkentofuitem')
+  event.add('c:rawmeats', 'pamhc2foodextended:silkentofuitem')
+  event.add('c:rawmeats', 'pamhc2foodextended:firmtofuitem')
 })

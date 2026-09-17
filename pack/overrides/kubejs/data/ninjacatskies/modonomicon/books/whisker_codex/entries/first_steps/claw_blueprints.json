@@ -1,0 +1,40 @@
+{
+  "category": "ninjacatskies:first_steps",
+  "name": "Claw Blueprint Package",
+  "description": "Practical steps and checks.",
+  "icon": "silentgear:blueprint_package",
+  "x": 0,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "Goal",
+      "text": "**Goal:** get Silent Gear starter plans when Claw opens, even if the join gift is gone.\\\nYou need four **Blueprint Paper**.\\\nClaiming a pad wipes Silent Gear's first-join **Blueprint Package**. That is Skyblock Builder clearing the inventory, not a missing recipe."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Craft the package",
+      "text": "1\\. Reach the Claw / Edge quests. Open a Blueprint Paper in JEI if you need the current paper recipe.\\\n2\\. Craft a **Blueprint Package** from four **Blueprint Paper**, shapeless.\\\n3\\. Right-click the package to unwrap starter plans."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "4\\. Follow Claw for rods, tools, iron on your back, a bow, and a portal frame. Leave the pad on purpose."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Check",
+      "text": "**Check:** you are holding the package or the unwrapped plans, and the Claw quest can see them.\\\nDo not wait for another join gift. Tokens still are not crafted in a grid. After Claw, Pattern, Colony and Hum open together."
+    }
+  ],
+  "parents": [
+    {
+      "entry": "ninjacatskies:first_steps/materials",
+      "draw_arrow": true,
+      "line_enabled": true
+    }
+  ]
+}

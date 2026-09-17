@@ -46,7 +46,13 @@ if ($coreJars.Count -lt 1) {
     [void]$failures.Add("Multiple Core jars in pack/mods: $($coreJars.Name -join ', ')")
 }
 foreach ($loose in @(Get-ChildItem (Join-Path $root "pack\mods") -Filter "*.jar" -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '^(ninjacatskies|ninjacatlib|clowderhall|voidloom|guardians)-[0-9]' })) {
-    [void]$failures.Add("Loose companion jar in pack/mods: $($loose.Name) — companions ship inside ninjacatskies-core")
+    [void]$failures.Add("Loose companion jar in pack/mods: $($loose.Name) - companions ship inside ninjacatskies-core")
+}
+$reborn = @(Get-ChildItem (Join-Path $root "pack\mods") -Filter "chocobosreborn-*.jar" -ErrorAction SilentlyContinue)
+if ($reborn.Count -lt 1) {
+    [void]$failures.Add("Missing pack/mods/chocobosreborn-*.jar (CurseForge project 1699008)")
+} elseif ($reborn.Count -gt 1) {
+    [void]$failures.Add("Multiple Chocobos Reborn jars in pack/mods: $($reborn.Name -join ', ')")
 }
 
 if ($failures.Count -gt 0) {

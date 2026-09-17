@@ -100,8 +100,8 @@ public final class FtbParties {
                     // an offline owner cannot leave a party that still has members: hand it to someone else, then kick
                     var src = server.createCommandSourceStack();
                     UUID heir = pt.getMembers().stream().filter(m -> !m.equals(player)).findFirst().orElse(null);
-                    if (heir != null) pt.transferOwnership(src, new com.mojang.authlib.GameProfile(heir, ""));
-                    pt.kick(src, java.util.List.of(new com.mojang.authlib.GameProfile(player, "")));
+                    if (heir != null) pt.transferOwnership(src, profile(server, heir));
+                    pt.kick(src, java.util.List.of(profile(server, player)));
                 }
             }
         } catch (Throwable t) {
@@ -148,6 +148,17 @@ public final class FtbParties {
         c.putUUID(SKY, skyTeamId);
         extra.put(TAG, c);
         team.markDirty();
+    }
+
+    private static com.mojang.authlib.GameProfile profile(MinecraftServer server, UUID id) {
+        var cache = server.getProfileCache();
+        if (cache != null) {
+            var known = cache.get(id);
+            if (known.isPresent()) return known.get();
+        }
+        ServerPlayer online = server.getPlayerList().getPlayer(id);
+        if (online != null) return online.getGameProfile();
+        return new com.mojang.authlib.GameProfile(id, id.toString());
     }
 
     private static ServerPlayer firstOnline(MinecraftServer server, Set<UUID> ids) {

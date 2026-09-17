@@ -189,32 +189,46 @@ public final class SkyboundEvents {
     }
 
     public static void seatAtRespawnOrDock(ServerPlayer player) {
+        ServerLevel level = player.server.getLevel(player.getRespawnDimension());
         BlockPos respawn = player.getRespawnPosition();
-        ServerLevel level = null;
-        double x = 0;
-        double y = 0;
-        double z = 0;
-        if (respawn != null) {
-            level = player.server.getLevel(player.getRespawnDimension());
-            x = respawn.getX() + 0.5;
-            y = respawn.getY();
-            z = respawn.getZ() + 0.5;
+        Vec3 pos = null;
+        if (level != null && respawn != null) {
+            pos = snapToStand(level, respawn.getX() + 0.5, respawn.getY() + 1, respawn.getZ() + 0.5);
+            if (pos == null) pos = snapToStand(level, respawn.getX() + 0.5, respawn.getY(), respawn.getZ() + 0.5);
         }
-        if (level == null) {
+        if (pos == null) {
             level = player.server.overworld();
             BlockPos spawn = level.getSharedSpawnPos();
-            x = spawn.getX() + 0.5;
-            y = spawn.getY();
-            z = spawn.getZ() + 0.5;
+            int y = level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.MOTION_BLOCKING, spawn.getX(), spawn.getZ());
+            pos = snapToStand(level, spawn.getX() + 0.5, y, spawn.getZ() + 0.5);
+            if (pos == null) pos = Vec3.atBottomCenterOf(new BlockPos(spawn.getX(), Math.max(y, spawn.getY() + 1), spawn.getZ()));
         }
+        if (player.isPassenger()) player.stopRiding();
+        if (player.isVehicle()) player.ejectPassengers();
         player.changeDimension(new DimensionTransition(
-                level,
-                new Vec3(x, y, z),
-                Vec3.ZERO,
-                player.getYRot(),
-                player.getXRot(),
-                DimensionTransition.DO_NOTHING
-        ));
+                level, pos, Vec3.ZERO, player.getYRot(), player.getXRot(), DimensionTransition.DO_NOTHING));
+    }
+
+    private static Vec3 snapToStand(ServerLevel level, double x, double y, double z) {
+        for (int dy = 0; dy <= 24; dy++) {
+            if (safeToStand(level, x, y - dy, z)) return new Vec3(x, y - dy, z);
+            if (dy > 0 && safeToStand(level, x, y + dy, z)) return new Vec3(x, y + dy, z);
+        }
+        return null;
+    }
+
+    private static boolean safeToStand(ServerLevel level, double x, double y, double z) {
+        BlockPos feet = BlockPos.containing(x, y, z);
+        var atFeet = level.getBlockState(feet);
+        // A full cube at the feet is standing inside dirt/bed, not on it. Slabs and farmland still count.
+        if (!atFeet.getCollisionShape(level, feet).isEmpty() && atFeet.isCollisionShapeFullBlock(level, feet)) return false;
+        boolean footing = !atFeet.getCollisionShape(level, feet).isEmpty()
+                || level.getBlockState(feet.below()).blocksMotion()
+                || !level.getBlockState(feet.below()).getCollisionShape(level, feet.below()).isEmpty();
+        if (!footing) return false;
+        BlockPos head = feet.above();
+        return !level.getBlockState(head).isSuffocating(level, head)
+                && !level.getBlockState(head.above()).isSuffocating(level, head.above());
     }
 
     private static void giveOptional(ServerPlayer player, String id, int count) {

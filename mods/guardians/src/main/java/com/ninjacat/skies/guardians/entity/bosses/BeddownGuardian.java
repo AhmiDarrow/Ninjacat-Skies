@@ -91,6 +91,8 @@ public class BeddownGuardian extends GuardianEntity {
             BlockPos feet = p.blockPosition();
             if (!level().getBlockState(feet).isAir() || !level().getBlockState(feet.above()).isAir()) {
                 int y = feet.getY(); while (y < feet.getY() + 6 && !level().getBlockState(new BlockPos(feet.getX(), y, feet.getZ())).isAir()) y++;
+                if (p.isPassenger()) p.stopRiding();
+                if (p.isVehicle()) p.ejectPassengers();
                 p.teleportTo(serverLevel(), p.getX(), y + 0.1, p.getZ(), p.getYRot(), p.getXRot());
             }
         }

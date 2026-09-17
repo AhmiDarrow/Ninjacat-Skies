@@ -77,6 +77,17 @@ final class RelicTimers {
 
     private static long now;
 
+    /** Player ticks run before {@link ServerTickEvent.Post}, so {@link #now} can still be 0 on the first login tick. */
+    private static long clock(LivingEntity e) {
+        MinecraftServer server = e.getServer();
+        return server != null ? RelicUtil.now(server) : now;
+    }
+
+    private static long clock(ServerLevel level) {
+        MinecraftServer server = level.getServer();
+        return server != null ? RelicUtil.now(server) : now;
+    }
+
     // ------------------------------------------------------------------ scheduling
 
     static void later(ServerPlayer p, int delay, Runnable r) { TASKS.add(new Task(RelicUtil.now(p) + delay, r)); }
@@ -84,7 +95,7 @@ final class RelicTimers {
     /** Mobs lose AI for {@code ticks}; Guardians are never stunned (their fight logic is not goal-based). */
     static void stun(LivingEntity e, int ticks) {
         if (!(e instanceof Mob m) || e instanceof GuardianEntity) return;
-        long until = now + ticks;
+        long until = clock(e) + ticks;
         if (!m.isNoAi()) m.setNoAi(true);
         else if (!STUNNED.containsKey(m)) return; // was NoAI before us: leave it alone
         STUNNED.merge(m, until, Math::max);
@@ -95,7 +106,7 @@ final class RelicTimers {
         AttributeInstance inst = e.getAttribute(attr);
         if (inst == null) return;
         inst.addOrUpdateTransientModifier(new AttributeModifier(id, amount, op));
-        MODS.merge(new Mod(e, attr, id), now + ticks, Math::max);
+        MODS.merge(new Mod(e, attr, id), clock(e) + ticks, Math::max);
     }
 
     static void endModifier(LivingEntity e, Holder<Attribute> attr, ResourceLocation id) {
@@ -107,10 +118,11 @@ final class RelicTimers {
     /** Places a thorn hedge (sweet berry bush, age 1) that is removed after {@code ticks}. */
     static void hedge(ServerLevel level, BlockPos pos, int ticks) {
         level.setBlock(pos, Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 1), 3);   // age 1: thorns, no berries to pick
-        HEDGES.put(new Hedge(level, pos.immutable()), now + ticks);
+        HEDGES.put(new Hedge(level, pos.immutable()), clock(level) + ticks);
     }
 
     private static void unhedge(Hedge h) {
+        if (h.level.getServer() == null || h.level.getServer().isStopped()) return;
         if (h.level.getBlockState(h.pos).is(Blocks.SWEET_BERRY_BUSH)) h.level.removeBlock(h.pos, false);
     }
 
@@ -124,19 +136,27 @@ final class RelicTimers {
         }
     }
 
-    static void bee(Bee b, UUID owner, int ticks) { BEES.put(b, new BeeInfo(owner, now + ticks)); b.getPersistentData().putLong(BEE_EXPIRY_TAG, now + ticks); }
+    static void bee(Bee b, UUID owner, int ticks) {
+        long until = clock(b) + ticks;
+        BEES.put(b, new BeeInfo(owner, until));
+        b.getPersistentData().putLong(BEE_EXPIRY_TAG, until);
+    }
 
     /** A relic bee or a stunned mob that comes back from disk (chunk reload, restart) is settled here rather than left as it was saved. */
     @SubscribeEvent
     static void onJoin(EntityJoinLevelEvent e) {
         if (e.getLevel().isClientSide) return;
-        if (e.getEntity() instanceof Bee b && b.getTags().contains(RelicUtil.BEE_TAG) && !BEES.containsKey(b)) { b.discard(); e.setCanceled(true); return; }
+        if (e.loadedFromDisk() && e.getEntity() instanceof Bee b && b.getTags().contains(RelicUtil.BEE_TAG) && !BEES.containsKey(b)) { b.discard(); e.setCanceled(true); return; }
         if (e.getEntity() instanceof Mob m && m.getPersistentData().contains(STUN_TAG) && !STUNNED.containsKey(m)) { m.setNoAi(false); m.getPersistentData().remove(STUN_TAG); }
     }
 
     /** A closed world takes its relic state with it (single-player exits, /stop): nothing from it may fire into the next one. */
     @SubscribeEvent
-    static void onServerStopped(ServerStoppedEvent e) { TASKS.clear(); STUNNED.clear(); MODS.clear(); HEDGES.clear(); BEES.clear(); TRAIL.clear(); if (RelicUtil.EXDEORUM) com.ninjacat.skies.guardians.relic.compat.SieveCompat.clearAll(); }
+    static void onServerStopped(ServerStoppedEvent e) {
+        for (Hedge h : new ArrayList<>(HEDGES.keySet())) try { unhedge(h); } catch (Exception ignored) {}
+        TASKS.clear(); STUNNED.clear(); MODS.clear(); HEDGES.clear(); BEES.clear(); TRAIL.clear();
+        if (RelicUtil.EXDEORUM) com.ninjacat.skies.guardians.relic.compat.SieveCompat.clearAll();
+    }
 
     static List<Bee> beesOf(ServerPlayer owner) {
         List<Bee> out = new ArrayList<>();
@@ -150,9 +170,15 @@ final class RelicTimers {
     }
 
     private static void popBee(Bee b) {
-        ServerLevel l = (ServerLevel) b.level();
+        ServerLevel l;
+        try {
+            l = b.level() instanceof ServerLevel sl ? sl : null;
+        } catch (IllegalStateException e) {
+            return;
+        }
+        if (l == null || l.getServer() == null || l.getServer().isStopped()) return;
         l.addFreshEntity(new ItemEntity(l, b.getX(), b.getY(), b.getZ(), new ItemStack(Items.HONEY_BOTTLE)));
-        RelicUtil.burst(l, ParticleTypes.FALLING_HONEY, b, 6, 0.3, 0.02);
+        RelicUtil.burst(l, ParticleTypes.FALLING_HONEY, new Vec3(b.getX(), b.getY(), b.getZ()), 6, 0.3, 0.02);
         if (b.isAlive()) b.discard();
     }
 
@@ -199,13 +225,20 @@ final class RelicTimers {
             if (inst != null) inst.removeModifier(en.getKey().id);
             return true;
         });
-        HEDGES.entrySet().removeIf(en -> { if (en.getValue() > now) return false; unhedge(en.getKey()); return true; });
+        HEDGES.entrySet().removeIf(en -> {
+            if (en.getValue() > now) return false;
+            try { unhedge(en.getKey()); } catch (Exception ignored) {}
+            return true;
+        });
         synchronized (BEES) {
             BEES.entrySet().removeIf(en -> {
                 Bee b = en.getKey();
                 if (b == null) return true;
                 if (b.isRemoved() && b.getRemovalReason() != null && !b.getRemovalReason().shouldDestroy()) return true;   // unloaded with its chunk: discarded again on reload (onJoin)
-                if (b.isRemoved() || !b.isAlive() || en.getValue().expiry <= now) { popBee(b); return true; }
+                if (b.isRemoved() || !b.isAlive() || en.getValue().expiry <= now) {
+                    try { popBee(b); } catch (Exception ignored) {}
+                    return true;
+                }
                 return false;
             });
         }
@@ -220,7 +253,7 @@ final class RelicTimers {
             if (e.getEntity() instanceof Player) { e.setCanceled(true); return; }               // relic bees never sting people
             RelicUtil.effect(e.getEntity(), MobEffects.POISON, 40, 0);
         }
-        if (!(e.getEntity() instanceof ServerPlayer p)) return;
+        if (!(e.getEntity() instanceof ServerPlayer p) || p.isSpectator()) return;
         if (e.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) return;
         // Sealmark ward: the next hit of >= 3 hearts (6.0) is negated, once. May sit on a non-wearer (cast on a mate).
         if (RelicUtil.until(p, WARD_KEY) && e.getAmount() >= 6.0F) {
@@ -242,7 +275,7 @@ final class RelicTimers {
      */
     @SubscribeEvent
     static void onAttack(AttackEntityEvent e) {
-        if (!(e.getEntity() instanceof ServerPlayer p) || !(e.getTarget() instanceof GuardianEntity g)) return;
+        if (!(e.getEntity() instanceof ServerPlayer p) || p.isSpectator() || !(e.getTarget() instanceof GuardianEntity g)) return;
         if (!g.isImmune() || !g.isAlive() || g.getHealth() <= 1.0F) return;
         if (p.getAttackStrengthScale(0.5F) < 0.9F) return;
         boolean severed = false;

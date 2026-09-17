@@ -250,17 +250,32 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
             }
             return;
         }
-        be.progress = 0;
         List<ItemStack> drops = be.roll(level, be.input, be.mesh);
+        NonNullList<ItemStack> hold = NonNullList.withSize(be.pending.size(), ItemStack.EMPTY);
+        for (ItemStack s : be.pending) {
+            if (!s.isEmpty() && OutputStorage.insert(hold, s, false) > 0) {
+                be.setChanged();
+                return;
+            }
+        }
+        boolean fits = true;
+        for (ItemStack drop : drops) {
+            if (!drop.isEmpty() && OutputStorage.insert(hold, drop, false) > 0) {
+                fits = false;
+                break;
+            }
+        }
+        if (!fits) {
+            be.setChanged();
+            return;
+        }
+        be.progress = 0;
         be.input.shrink(1);
         if (be.input.isEmpty()) {
             be.input = ItemStack.EMPTY;
         }
-        for (int i = 0; i < drops.size(); i++) {
-            int slot = i % be.pending.size();
-            if (i > 0 && slot == 0) be.flushPending();   // more rolls than pending slots: push the earlier batch out first
-            if (be.pending.get(slot).isEmpty()) be.pending.set(slot, drops.get(i));
-            else net.minecraft.world.Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, drops.get(i));
+        for (int i = 0; i < be.pending.size(); i++) {
+            be.pending.set(i, hold.get(i));
         }
         be.flushPending();
         level.playSound(null, pos, ModSounds.LOOMFRAME_SIFT.get(), SoundSource.BLOCKS, 0.55F, 0.95F + level.random.nextFloat() * 0.1F);
@@ -337,6 +352,34 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
     public IItemHandler handler() {
         return handler;
+    }
+
+    public IItemHandler insertHandler() {
+        return insertOnly;
+    }
+
+    public IItemHandler extractHandler() {
+        return extractOnly;
+    }
+
+    private final IItemHandler insertOnly = new FaceHandler(true);
+    private final IItemHandler extractOnly = new FaceHandler(false);
+
+    private final class FaceHandler implements IItemHandler {
+        private final boolean insert;
+        FaceHandler(boolean insert) { this.insert = insert; }
+        @Override public int getSlots() { return handler.getSlots(); }
+        @Override public ItemStack getStackInSlot(int slot) { return handler.getStackInSlot(slot); }
+        @Override public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+            return insert ? handler.insertItem(slot, stack, simulate) : stack;
+        }
+        @Override public ItemStack extractItem(int slot, int amount, boolean simulate) {
+            return insert ? ItemStack.EMPTY : handler.extractItem(slot, amount, simulate);
+        }
+        @Override public int getSlotLimit(int slot) { return handler.getSlotLimit(slot); }
+        @Override public boolean isItemValid(int slot, ItemStack stack) {
+            return insert && handler.isItemValid(slot, stack);
+        }
     }
 
     private final class Handler implements IItemHandler {

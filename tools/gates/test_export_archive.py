@@ -4,7 +4,7 @@ import sys
 import zipfile
 from pathlib import Path, PurePosixPath
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from cf_distribution import is_owned_jar
+from cf_distribution import is_owned_jar, is_local_owned
 
 
 def verify(archive):
@@ -59,7 +59,7 @@ def verify_server(archive):
                 raise ValueError(f"Private content: {name}")
             if path.suffix.lower() in (".ps1", ".bat", ".sh", ".py", ".exe", ".cmd") and not (len(path.parts) == 1 and path.name in SERVER_SCRIPTS):
                 raise ValueError(f"Unexpected executable content: {name}")
-            if path.suffix.lower() == ".jar" and (path.parent != PurePosixPath("mods") or not is_owned_jar(path.name)):
+            if path.suffix.lower() == ".jar" and (path.parent != PurePosixPath("mods") or not (is_owned_jar(path.name) or is_local_owned(path.name))):
                 raise ValueError(f"Unapproved bundled mod: {name}; the installer must fetch it from CurseForge")
             if path.suffix.lower() in (".md", ".txt", ".json", ".js", ".toml", ".properties", ".default", ".snbt", ".sh", ".ps1", ".bat", ".cfg"):
                 text = z.read(name).decode("utf-8", errors="ignore")

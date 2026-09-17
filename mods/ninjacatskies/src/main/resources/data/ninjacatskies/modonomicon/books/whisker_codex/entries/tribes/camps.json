@@ -30,7 +30,7 @@
     },
     {
       "type": "modonomicon:text",
-      "title": "The camp keeps th...",
+      "title": "Camp drum",
       "text": "A Drummer plays every few seconds. A Drumheart within eight blocks takes two Pulse from each beat, so a camp is a small, honest source of power. `/tribalpower standing` prints all nine standings."
     }
   ],

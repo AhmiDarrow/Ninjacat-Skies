@@ -338,6 +338,16 @@
     ]
   },
   {
+    "filename": "ftb-xmod-compat-neoforge-21.1.11.jar",
+    "projectId": 889915,
+    "name": "FTB XMod Compat",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-xmod-compat",
+    "authors": [
+      "FTB",
+      "FTBTeam"
+    ]
+  },
+  {
     "filename": "functionalstorage-1.21.1-1.5.8.jar",
     "projectId": 556861,
     "name": "Functional Storage",
