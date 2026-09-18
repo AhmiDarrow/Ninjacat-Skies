@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "The Drumheart",
-      "text": "The Forge Drum: a brass drum-platform over a lava crater, eight copper piston hammers with beat pads before them, four lava channels through the floor."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Forge Drum: a brass drum-platform over a lava crater, eight copper piston hammers with beat pads before them, four lava channels through the floor."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
       "text": "The Drumheart can only be hurt for a moment after every fourth beat. Stand on a beat pad at the downbeat to charge a spark that counts triple; on beat four the lava channels rise, so be on the pads, not in the channels. The tempo climbs every phase."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

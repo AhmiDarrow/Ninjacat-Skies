@@ -23,6 +23,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -152,6 +154,26 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
 
     public int getWater() {
         return water;
+    }
+
+    /**
+     * Comparator: output slots first (hopper pull of clay/empty buckets), else tank fill so a wet
+     * barrel is not silent while it works.
+     */
+    public int analogSignal() {
+        float fullness = 0;
+        boolean occupied = false;
+        for (ItemStack s : output) {
+            if (!s.isEmpty()) {
+                occupied = true;
+                fullness += (float) s.getCount() / s.getMaxStackSize();
+            }
+        }
+        if (occupied) return 1 + (int) (14 * fullness / OUTPUT_SLOTS);
+        int tank = water + dirt + string + pearls;
+        if (tank <= 0) return 0;
+        int tankMax = WATER_MAX + DRY_MAX * 3;
+        return Math.max(1, Math.min(14, (int) Math.ceil(14.0 * tank / tankMax)));
     }
 
     public int getProgress() {
@@ -393,10 +415,14 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         for (ItemStack s : takeAllOutput()) {
             Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, s);
         }
-        int buckets = water / WATER_PER_BUCKET;
+        // Pour already handed the empty bucket back. Remaining charges are tank water, not a
+        // bucket type — refunding WATER_BUCKET minted iron buckets from porcelain pours, and
+        // leftover water % 4 vanished. One water bottle per charge keeps the leftover.
+        int leftover = water;
         water = 0;
-        for (int i = 0; i < buckets; i++) {
-            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, new ItemStack(Items.WATER_BUCKET));
+        for (int i = 0; i < leftover; i++) {
+            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                    PotionContents.createItemStack(Items.POTION, Potions.WATER));
         }
     }
 

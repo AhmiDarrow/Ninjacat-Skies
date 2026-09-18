@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "The Sealbreaker",
-      "text": "The Ward Circle: a stone sanctum of gold circles and nine glyph pillars with amethyst spires, a nine-sided dais of gold pegs at the centre.\\\nThe Sealbreaker hides behind three active wards.\\\nThe dais pegs light the order once per phase — watch first."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Ward Circle: a stone sanctum of gold circles and nine glyph pillars with amethyst spires, a nine-sided dais of gold pegs at the centre."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Dispel the pillars in that order with an Ars dispel or any Sigil-strand item; a wrong one re-arms all three and the ward-glass bites.\\\nThree right and it is open for twelve seconds.\\\nLater phases shuffle the runes and add a decoy."
+      "text": "The Sealbreaker hides behind three active wards.\\\nThe dais pegs light the order once per phase — watch first.\\\nDispel the pillars in that order with an Ars dispel or any Sigil-strand item; a wrong one re-arms all three and the ward-glass bites.\\\nThree right and it is open for twelve seconds."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Later phases shuffle the runes and add a decoy.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

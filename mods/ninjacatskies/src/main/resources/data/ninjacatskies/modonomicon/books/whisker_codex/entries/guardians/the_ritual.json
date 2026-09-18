@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "Answer for the Cut",
+      "text": "**Goal:** re-tension a snapped keeper on its own ground.\\\nYou need that Strand seated, then its **Frayed Totem** from JEI. Gate totems are four **Frayed Thread** and four of the Strand's block around **Void Yarn**. Lint Golem uses white wool. First Cut uses obsidian around the Loomthread relic. Overweaver uses purpur around the Loomthread relic."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
       "text": "Each Strand had a guardian: a Loom-construct that kept its thread taut. The Cut snapped them. They are not monsters to be killed but Strands to be re-tensioned, and the only way to re-tension one is to beat its keeper on its own ground."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Craft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena."
+      "text": "Craft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena. A spent life cannot call a guardian."
     },
     {
       "type": "modonomicon:text",
@@ -27,12 +32,12 @@
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**.\\\nWipe and you are spat back out with the totem spent; craft another."
+      "text": "Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**, including mates who spent a life during the fight.\\\nWipe and you are spat back out with the totem spent; craft another.\\\n`/guardians leave` abandons a fight."
     },
     {
       "type": "modonomicon:text",
       "title": "Relics",
-      "text": "A relic is a trophy with one power: a passive while worn — the Curios relic slot, the off-hand or the hotbar — and a right-click on a cooldown. `/guardians status` shows the Clowder's record; `/guardians leave` abandons a fight."
+      "text": "A relic is a trophy with one power: a passive while worn — the Curios relic slot, the off-hand or the hotbar — and a right-click on a cooldown. `/guardians status` shows the Clowder's record.\\\n**Check:** `/guardians status` lists the win, and each living mate holds the Woven Relic."
     }
   ]
 }

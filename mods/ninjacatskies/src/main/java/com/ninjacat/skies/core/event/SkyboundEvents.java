@@ -14,6 +14,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -110,6 +111,12 @@ public final class SkyboundEvents {
                 event.getOriginal().getPersistentData().getCompound(ROOT).copy());
         event.getEntity().getPersistentData().putBoolean(EXHAUSTED,
                 event.getOriginal().getPersistentData().getBoolean(EXHAUSTED));
+        var oldPersist = event.getOriginal().getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        if (oldPersist.contains(LoomTension.PENDING_ITEMS)) {
+            var nextPersist = event.getEntity().getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+            nextPersist.put(LoomTension.PENDING_ITEMS, oldPersist.getList(LoomTension.PENDING_ITEMS, net.minecraft.nbt.Tag.TAG_COMPOUND).copy());
+            event.getEntity().getPersistentData().put(Player.PERSISTED_NBT_TAG, nextPersist);
+        }
     }
 
     @SubscribeEvent
@@ -144,6 +151,9 @@ public final class SkyboundEvents {
                 seatAtRespawnOrDock(player);
                 player.setGameMode(GameType.SURVIVAL);
             }
+            LoomTension.deliverPending(player);
+        } else if (!player.isSpectator()) {
+            LoomTension.deliverPending(player);
         }
     }
 

@@ -19,9 +19,6 @@ ServerEvents.recipes(event => {
     ['exdeorum:string_mesh', 0.04],
     ['exdeorum:flint_mesh', 0.06],
     ['exdeorum:iron_mesh', 0.08],
-    ['voidloom:thread_mesh_string', 0.04],
-    ['voidloom:thread_mesh_flint', 0.06],
-    ['voidloom:thread_mesh_iron', 0.08],
   ]
   const gardens = [
     'pamhc2crops:aridgarden',
@@ -52,7 +49,6 @@ ServerEvents.recipes(event => {
   ]
   ;[
     ['exdeorum:iron_mesh', 0.03],
-    ['voidloom:thread_mesh_iron', 0.03],
   ].forEach(row => {
     saplings.forEach(sapling => {
       both('minecraft:dirt', row[0], sapling, row[1])

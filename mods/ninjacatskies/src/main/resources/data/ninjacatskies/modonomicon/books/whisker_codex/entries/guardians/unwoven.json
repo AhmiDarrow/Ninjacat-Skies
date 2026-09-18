@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "The Unwoven",
-      "text": "The Collapsing Loom: a loom sixty-six blocks wide whose floor is the warp — plank strips that unravel into thread bridges as the heddle bars drop."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Collapsing Loom: a loom sixty-six blocks wide whose floor is the warp — plank strips that unravel into thread bridges as the heddle bars drop."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
       "text": "Five phases. Each quotes two of the other eight mechanics for thirty seconds, then a heddle bar drops and three more strips unravel. In its true form the last four strips remain and the warp threads are the only way up to the beam where it stands. Kill it there: the Reweave."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

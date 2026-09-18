@@ -16,17 +16,22 @@
         "count": 1
       },
       "title": "Frayed Thread",
-      "text": "Every quest returns a little **Frayed Thread** — scraps of the Loom that still hold.\\\nUnravel one for three string.\\\nOr keep it: **Kin stalls in Clowder Hall** (`/clowder hub`) sell saplings, buckets, meshes, pearls, and other things a pad runs short of."
+      "text": "**Goal:** keep Thread as currency, and unravel it only when you need string.\\\nYou need quest rewards, flint-mesh dirt on a Loomframe, or a steward cache.\\\nEvery quest returns a little **Frayed Thread** — scraps of the Loom that still hold."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Right-click an Elder."
+      "text": "Unravel one for three string.\\\nOr keep it: **Kin stalls in Clowder Hall** (`/clowder hub`) sell saplings, buckets, meshes, pearls, and other things a pad runs short of.\\\nRight-click an Elder.\\\n**Check:** you can buy a sapling or mesh at a Hall Elder without going broke on string."
     },
     {
       "type": "modonomicon:text",
       "title": "Codex Pages",
-      "text": "Every third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. Right-click to read it. Pages are kept, not spent.\\\nHall Kin stalls at `/clowder hub` sell a few loose ones too. Those pick a tribe on their own."
+      "text": "**Goal:** read a margin note without spending the page.\\\nYou need a **Codex Page** from seating (every third Strand) or a Hall Kin stall.\\\nEvery third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. Right-click to read it. Pages are kept, not spent."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Hall Kin stalls at `/clowder hub` sell a few loose ones too. Those pick a tribe on their own.\\\n**Check:** right-click a page; it stays in your hand."
     }
   ],
   "parents": [

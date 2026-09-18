@@ -150,6 +150,10 @@ class CodexBookTests(unittest.TestCase):
             count=titles.count('Before you move on')
             if path.stem in strand:
                 self.assertEqual(count, 1, path.name)
+                blob=' '.join(p.get('text','') for p in json.loads(path.read_text(encoding='utf-8'))['pages'])
+                self.assertIn('**Goal:**', blob, path.name)
+                self.assertIn('You need', blob, path.name)
+                self.assertIn('**Check:**', blob, path.name)
             else:
                 self.assertEqual(count, 0, path.name)
         pit=json.loads((BOOK/'entries/braid/listening_pit.json').read_text(encoding='utf-8'))
@@ -168,5 +172,26 @@ class CodexBookTests(unittest.TestCase):
         self.assertEqual(workshop['mapping']['0']['block'], 'minecraft:crafting_table')
         materials=json.loads((BOOK.parents[1]/'multiblocks/codex/material_workshop.json').read_text(encoding='utf-8'))
         self.assertIn('exdeorum:oak_sieve', {v['block'] for v in materials['mapping'].values()})
+
+    def test_cut_station_pages_have_goal_need_check(self):
+        for stem in ('voidloom', 'tension', 'thread'):
+            pages=json.loads((BOOK/'entries/the_cut'/f'{stem}.json').read_text(encoding='utf-8'))['pages']
+            blob=' '.join(p.get('text','') for p in pages)
+            self.assertIn('**Goal:**', blob, stem)
+            self.assertIn('You need', blob, stem)
+            self.assertIn('**Check:**', blob, stem)
+
+    def test_guardians_walkthroughs_have_goal_need_check(self):
+        ritual=json.loads((BOOK/'entries/guardians/the_ritual.json').read_text(encoding='utf-8'))
+        blob=' '.join(p.get('text','') for p in ritual['pages'])
+        self.assertIn('**Goal:**', blob)
+        self.assertIn('You need', blob)
+        self.assertIn('**Check:**', blob)
+        self.assertIn('purpur', blob.lower())
+        bed=json.loads((BOOK/'entries/guardians/beddown.json').read_text(encoding='utf-8'))
+        bblob=' '.join(p.get('text','') for p in bed['pages'])
+        self.assertIn('**Goal:**', bblob)
+        self.assertIn('You need', bblob)
+        self.assertIn('**Check:**', bblob)
 
 if __name__=='__main__':unittest.main()

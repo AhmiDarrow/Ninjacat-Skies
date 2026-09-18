@@ -10,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
@@ -18,6 +19,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -335,10 +337,36 @@ public final class LoomTension {
         }
     }
 
+    public static final String PENDING_ITEMS = "ninjacatskies_pending_items";
+
     public static void giveOrDrop(ServerPlayer player, ItemStack stack) {
-        if (!player.addItem(stack)) {
+        if (stack.isEmpty()) return;
+        if (player.addItem(stack)) return;
+        if (!player.isSpectator()) {
             player.drop(stack, false);
+            return;
         }
+        CompoundTag persisted = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        ListTag pending = persisted.getList(PENDING_ITEMS, Tag.TAG_COMPOUND);
+        Tag saved = stack.save(player.registryAccess());
+        if (saved instanceof CompoundTag c) pending.add(c);
+        persisted.put(PENDING_ITEMS, pending);
+        player.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
+    }
+
+    /** Spectator leftovers from giveOrDrop. Call once they are survival again. */
+    public static void deliverPending(ServerPlayer player) {
+        if (player.isSpectator()) return;
+        CompoundTag persisted = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        ListTag pending = persisted.getList(PENDING_ITEMS, Tag.TAG_COMPOUND);
+        if (pending.isEmpty()) return;
+        for (int i = 0; i < pending.size(); i++) {
+            ItemStack s = ItemStack.parse(player.registryAccess(), pending.getCompound(i)).orElse(ItemStack.EMPTY);
+            if (s.isEmpty()) continue;
+            if (!player.addItem(s)) player.drop(s, false);
+        }
+        persisted.put(PENDING_ITEMS, new ListTag());
+        player.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
     }
 
     @Nullable

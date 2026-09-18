@@ -27,8 +27,6 @@ ServerEvents.recipes(event => {
   ;[
     ['exdeorum:flint_mesh', 0.03],
     ['exdeorum:iron_mesh', 0.05],
-    ['voidloom:thread_mesh_flint', 0.03],
-    ['voidloom:thread_mesh_iron', 0.05],
   ].forEach(row => {
     both('minecraft:dirt', row[0], 'minecraft:leather', row[1])
   })

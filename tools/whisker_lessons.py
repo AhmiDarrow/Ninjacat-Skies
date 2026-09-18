@@ -6,15 +6,51 @@ NS = 'ninjacatskies'
 
 
 STRAND_BRAID_CHECKS = {
-    'wake': 'Finish Soil in the quest screen. Claim the **Soil Knot**, then seat the Soil token. The Soil notch lights.',
-    'recover': 'Finish Recover. Claim the Stone token and seat it. The Stone notch lights. A working Loomframe and Tension Barrel are the practical check.',
-    'root': 'Finish Sprout. Claim the token and seat it. The Sprout notch lights. Keep a food source running before you leave the pad.',
-    'edge': 'Finish Claw. If the Blueprint Package is missing, craft it from four Blueprint Paper, then seat the Claw token. The Claw notch lights.',
-    'pattern': 'Finish Clock. Claim the token and seat it. The Clock notch lights.',
-    'colony': 'Finish Swarm. Claim the token and seat it. The Swarm notch lights.',
-    'hum': 'Finish Spark. Claim the token and seat it. The Spark notch lights.',
-    'bind': 'Seat any two of Clock, Swarm and Spark. Right-click the Post with a Strand Filament for **Braid Cord**. Finish Sigil, then seat the Sigil token.',
-    'reweave': 'Seat all nine tokens. Right-click the Post with March Stone for a **Spindle Loom Fragment**, then right-click again holding the Fragment. Your Clowder\'s Strand of the Fray closes.',
+    'wake': (
+        '**Goal:** finish Soil and seat the Soil token.\n\n'
+        'You need the **Soil Knot** claimed and a **Tension Post** placed.\n\n'
+        '**Check:** Finish Soil in the quest screen. Claim the **Soil Knot**, then seat the Soil token. The Soil notch lights.'
+    ),
+    'recover': (
+        '**Goal:** finish Recover and seat the Stone token.\n\n'
+        'You need Frayed Thread, a **Loomframe**, a **Tension Barrel**, and a mesh.\n\n'
+        '**Check:** Finish Recover. Claim the Stone token and seat it. The Stone notch lights. A working Loomframe and Tension Barrel are the practical check.'
+    ),
+    'root': (
+        '**Goal:** finish Sprout and keep food running.\n\n'
+        'You need a kitchen source and the Sprout token from the chapter.\n\n'
+        '**Check:** Finish Sprout. Claim the token and seat it. The Sprout notch lights. Keep a food source running before you leave the pad.'
+    ),
+    'edge': (
+        '**Goal:** finish Claw and seat the Claw token.\n\n'
+        'You need four **Blueprint Paper** if the join gift is gone, then iron on your back.\n\n'
+        '**Check:** Finish Claw. If the Blueprint Package is missing, craft it from four Blueprint Paper, then seat the Claw token. The Claw notch lights.'
+    ),
+    'pattern': (
+        '**Goal:** finish Clock and seat the Clock token.\n\n'
+        'You need Create started and a Binding Knot for the precision mechanism.\n\n'
+        '**Check:** Finish Clock. Claim the token and seat it. The Clock notch lights.'
+    ),
+    'colony': (
+        '**Goal:** finish Swarm and seat the Swarm token.\n\n'
+        'You need a nest the pad can actually grow — oak logs around a flower — then hives.\n\n'
+        '**Check:** Finish Swarm. Claim the token and seat it. The Swarm notch lights.'
+    ),
+    'hum': (
+        '**Goal:** finish Spark and seat the Spark token.\n\n'
+        'You need a **Drumheart** and the first Pulse trickle from Start here.\n\n'
+        '**Check:** Finish Spark. Claim the token and seat it. The Spark notch lights.'
+    ),
+    'bind': (
+        '**Goal:** spin **Braid Cord** and seat Sigil.\n\n'
+        'You need any two of Clock, Swarm and Spark seated, a **Strand Filament**, and a **Tension Post**.\n\n'
+        '**Check:** Seat any two of Clock, Swarm and Spark. Right-click the Post with a Strand Filament for **Braid Cord**. Finish Sigil, then seat the Sigil token.'
+    ),
+    'reweave': (
+        '**Goal:** close your Clowder\'s cut with March Stone.\n\n'
+        'You need nine seated tokens and **March Stone** from the March.\n\n'
+        '**Check:** Seat all nine tokens. Right-click the Post with March Stone for a **Spindle Loom Fragment**, then right-click again holding the Fragment. Your Clowder\'s Strand of the Fray closes.'
+    ),
 }
 
 BRAID_TAIL = (

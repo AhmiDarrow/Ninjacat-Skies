@@ -12,12 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Lint Golem",
-      "text": "The Dock Dustbin: a corner of the Dock itself — a plank yard, a washing line of cloth sheets, baskets of wool, a red rug."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Dock Dustbin: a corner of the Dock itself — a plank yard, a washing line of cloth sheets, baskets of wool, a red rug."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "The one fight with no risk. The golem throws lint balls that only blind for a moment and hides behind the washing; beat the rug and it sneezes and staggers. It teaches totem, arena and gate."
+      "text": "The one fight with no risk. The golem throws lint balls that only blind for a moment and hides behind the washing; beat the rug and it sneezes and staggers. It teaches totem, arena and gate.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

@@ -53,6 +53,45 @@ public class ProcessingGameTests {
         h.assertTrue(handler.extractItem(1,1,false).isEmpty() && !handler.insertItem(0,new ItemStack(Items.WATER_BUCKET),false).isEmpty() && be.getWater()==4,"Cached automation must obey a live redstone lock");h.succeed();
     }
     @GameTest(template="empty")
+    public static void barrelAnalogSeesTankFill(GameTestHelper h) {
+        h.setBlock(2,1,2,ModBlocks.TENSION_BARREL.get());var be=(TensionBarrelBlockEntity)h.getBlockEntity(new BlockPos(2,1,2));
+        h.assertTrue(be.analogSignal()==0,"An empty barrel must read 0");
+        var tag=new CompoundTag();tag.putInt("Water",4);
+        be.loadWithComponents(tag,h.getLevel().registryAccess());
+        h.assertTrue(be.analogSignal()>0 && be.analogSignal()<15,"Tank water with no output must still read on a comparator");
+        var full=outputs(h,new ItemStack(Items.CLAY_BALL,64),new ItemStack(Items.CLAY_BALL,64),new ItemStack(Items.CLAY_BALL,64));
+        full.putInt("Water",0);
+        be.loadWithComponents(full,h.getLevel().registryAccess());
+        h.assertTrue(be.analogSignal()>=15,"Full output slots must read 15");
+        h.succeed();
+    }
+    @GameTest(template="empty")
+    public static void barrelBreakRefundsWaterAsBottlesNotIronBuckets(GameTestHelper h) {
+        h.setBlock(2,1,2,ModBlocks.TENSION_BARREL.get());var be=(TensionBarrelBlockEntity)h.getBlockEntity(new BlockPos(2,1,2));
+        var tag=new CompoundTag();tag.putInt("Water",5);tag.putInt("Dirt",2);
+        be.loadWithComponents(tag,h.getLevel().registryAccess());
+        BlockPos pos=new BlockPos(2,1,2);
+        be.dropAll(h.getLevel(), pos);
+        h.assertTrue(be.getWater()==0 && be.takeDryInputs().isEmpty(),"Breaking must empty tank water and dry inputs");
+        h.assertItemEntityNotPresent(Items.WATER_BUCKET, pos, 2);
+        h.assertItemEntityPresent(Items.POTION, pos, 2);
+        h.assertItemEntityPresent(Items.DIRT, pos, 2);
+        h.succeed();
+    }
+    @GameTest(template="empty")
+    public static void loomAnalogSeesGritAndMesh(GameTestHelper h) {
+        h.setBlock(2,1,2,ModBlocks.LOOMFRAME.get());var be=(LoomframeBlockEntity)h.getBlockEntity(new BlockPos(2,1,2));
+        h.assertTrue(be.analogSignal()==0,"An empty Loomframe must read 0");
+        var tag=new CompoundTag();
+        tag.put("Mesh",new ItemStack(ModItems.THREAD_MESH_STRING.get()).save(h.getLevel().registryAccess()));
+        be.loadWithComponents(tag,h.getLevel().registryAccess());
+        h.assertTrue(be.analogSignal()==1,"A stretched mesh with no grit must read 1");
+        tag.put("Input",new ItemStack(Items.DIRT,64).save(h.getLevel().registryAccess()));
+        be.loadWithComponents(tag,h.getLevel().registryAccess());
+        h.assertTrue(be.analogSignal()>=7 && be.analogSignal()<15,"Full grit with no scraps must read in the grit band");
+        h.succeed();
+    }
+    @GameTest(template="empty")
     public static void loomPendingSurvivesReloadAndLock(GameTestHelper h) {
         h.setBlock(2,1,2,ModBlocks.LOOMFRAME.get());var be=(LoomframeBlockEntity)h.getBlockEntity(new BlockPos(2,1,2));
         var tag=outputs(h,new ItemStack(Items.DIAMOND,64),new ItemStack(Items.DIAMOND,64),new ItemStack(Items.DIAMOND,64),new ItemStack(Items.DIAMOND,64));
