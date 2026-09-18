@@ -93,4 +93,17 @@ ItemEvents.modifyTooltips(event => {
     event.add('tribalpower:pulse_cairn', Text.gray('4,000 Pulse. Stack five. Turns a bursty bell into a steady pit.'))
     event.add('tribalpower:music_disc_drum_circle', Text.gray('From a chest at the Drum Circle, or from The Unsung. Play it in a jukebox.'))
   }
+  if (Item.exists('tribalpower:shard_lamp')) {
+    event.add('tribalpower:shard_lamp', Text.gray('1–2 Pulse a second. Redstone dims it.'))
+    event.add('tribalpower:glow_reed', Text.gray('Cheap Pulse lamp. Redstone dims it.'))
+    event.add('tribalpower:echo_sconce', Text.gray('Wall Pulse lamp. Redstone dims it.'))
+    event.add('tribalpower:ember_bowl', Text.gray('Bowl Pulse lamp. Redstone dims it.'))
+    event.add('tribalpower:sky_charm', Text.gray('Wear in a Tribal charm slot. Sneak-use a totem to bind a voice. Sky with Air is creative flight.'))
+    event.add('tribalpower:chorus_charm', Text.gray('Binds every nearby totem voice at a Ritual Brazier.'))
+    event.add('tribalpower:seal_loom', Text.gray('Weaves Recipe Seals. Empty bottles return to the slot that held them.'))
+    event.add('tribalpower:tide_pump', Text.gray('Moves cistern fluid. Rank it at Echo stations; rank survives pickup.'))
+    event.add('tribalpower:ember_kiln', Text.gray('Fire totem. Smelts grit and every furnace recipe for Pulse.'))
+    event.add('tribalpower:pulse_adapter', Text.gray('1 Pulse = 100 FE. Unranked 20 Pulse/s. Rank at Echo stations. Cannot receive FE.'))
+    event.add('tribalpower:wind_charm', Text.gray('Hang from a ceiling. March camp furniture.'))
+  }
 })

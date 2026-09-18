@@ -66,15 +66,25 @@ HOW_ITEM = {
     "tribalpower:spirit_shard": "How: Bone Chime, amethyst and redstone, shapeless. Yields two.",
     "tribalpower:copper_resonator": "How: copper around a Bone Chime. Yields two.",
     "tribalpower:drumheart": "How: Chime + Shard + leather. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse.",
-    "tribalpower:pulse_cell": "How: craft, then fill from a Drumheart (click with the cell).",
+    "tribalpower:pulse_cell": "How: craft, then fill from a Drumheart (click with the cell). Tools, spells and travel draw from the cell.",
     "tribalpower:ley_collector": "How: place under sky near water/green. Slow Pulse. Spark ladder.",
     "tribalpower:pulse_resonator": "How: seat an Echo catalyst, two different totems within 8. Redstone pauses it.",
-    "tribalpower:echo_shatter": "How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel.",
+    "tribalpower:echo_shatter": "How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel; raw metal → grit. Four seconds at 20 Pulse/s.",
     "tribalpower:echo_shard": "How: Echo Shatter stone (not cobble). Font stone tier, or silk-touched stone.",
     "tribalpower:ember_kiln": "How: furnace + resonators + chime. Fire totem. Smelts grit for Pulse — a hand Drumheart cannot run it.",
     "tribalpower:spirit_codex": "How: craft or Spark/Tribal Weave reward. Right-click: how the lattice works.",
     "tribalpower:gate_drum": "How: charge the Gate Drum with Pulse, then empty-handed use it. Do not strike it like a Drumheart. Bind a return compass first.",
     "tribalpower:spirit_cistern": "How: craft, fill with a bucket or pipe, pick it up — fluid stays. AE2 Sky Stone Tanks empty when broken.",
+    "tribalpower:seal_loom": "How: Spirit Codex names the Seal Loom craft. Seat bottles; they come back to that slot.",
+    "tribalpower:shard_lamp": "How: craft a Shard Lamp, place it within eight of Pulse, then dim it with redstone if you want night.",
+    "tribalpower:sky_charm": "How: craft the Sky Charm, then sneak-use it on an Air totem. Spirit Codex: Spirit Charms.",
+    "tribalpower:tide_pump": "How: Spirit Codex Workshop pages. Place the Tide Pump on a cistern face, then sneak-use the Codex if it stays silent.",
+    "tribalpower:glow_reed": "How: craft Glow Reed. Place it near Pulse. Optional.",
+    "tribalpower:echo_sconce": "How: craft Echo Sconce and hang it. Optional.",
+    "tribalpower:ember_bowl": "How: craft Ember Bowl. Optional.",
+    "tribalpower:wind_charm": "How: craft Wind Charm and hang it. Optional souvenir.",
+    "tribalpower:chorus_charm": "How: craft Chorus Charm, then sneak-use it at a Brazier with voices in range. Optional.",
+    "tribalpower:spiritgear_axe": "How: craft Spiritgear Axe. Optional once the pick exists.",
     "minecraft:conduit": "How: needs Heart of the Sea and nautilus. Ocean-only. Optional.",
     "minecraft:nautilus_shell": "How: ocean-only. Optional.",
     "minecraft:rabbit_foot": "How: rabbits do not spawn on the pad. Optional.",
@@ -514,6 +524,10 @@ def how_line(item: str | None, title: str) -> str:
         return "How: Voice (800) with a tribe; the Elder gives a Tribe Mark once."
     if "camp keeps the beat" in low:
         return "How: place a Drumheart within 8 of a camp Drummer; tick when it is feeding Pulse."
+    if "rank the current" in low:
+        return "How: sneak-use a Pulse Adapter on Echo Attune, then Bind, then Manifest. Tick when diagnose names a rate above 20."
+    if "bind a voice" in low:
+        return "How: sneak-use a tool, armor piece, or charm on a totem with 40 Pulse nearby. Tick when the tooltip names the bound voice."
     if "font of stone" in low:
         return "How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
     if low == "draw the circle":
