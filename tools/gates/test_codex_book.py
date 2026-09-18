@@ -77,6 +77,14 @@ class CodexBookTests(unittest.TestCase):
         self.assertIn('silentgear:blueprint_package', blob)
         self.assertIn('tribalpower:spirit_cistern', blob)
         self.assertIn('chocobosreborn:sage_notes', blob)
+        overlay_pad = json.loads((PACK/'entries/first_steps/pad_runners.json').read_text(encoding='utf-8'))
+        self.assertEqual(overlay_pad['icon'], 'chocobosreborn:chocobo_almanac')
+        overlay_blob = json.dumps(overlay_pad).lower()
+        self.assertIn('gysahl is the only green', overlay_blob)
+        self.assertIn('chocobo almanac', overlay_blob)
+        self.assertNotIn('ravagers', overlay_blob)
+        self.assertNotIn('piglin', overlay_blob)
+        self.assertNotIn('sage_notes', overlay_blob)
         self.assertIn('esther', blob)
         self.assertIn('sky stone', blob)
         self.assertIn('no spawn-egg shortcut', blob)
@@ -99,6 +107,8 @@ class CodexBookTests(unittest.TestCase):
             for page in d['pages']:
                 self.assertNotIn('\ufffd',page.get('text',''))
                 self.assertLessEqual(len(page.get('text','').split()),120,p.name)
+            if p.name == 'pad_runners.json':
+                continue
             self.assertEqual(d,json.loads((PACK/'entries/first_steps'/p.name).read_text(encoding='utf-8')))
 
     def test_models_have_one_origin_and_valid_layers(self):

@@ -2,7 +2,7 @@
   "category": "ninjacatskies:first_steps",
   "name": "Pad-runners",
   "description": "Practical steps and checks.",
-  "icon": "chocobosreborn:sage_notes",
+  "icon": "chocobosreborn:chocobo_almanac",
   "x": 0,
   "y": 6,
   "background_u_index": 0,
@@ -12,7 +12,7 @@
     {
       "type": "modonomicon:text",
       "title": "Goal",
-      "text": "**Goal:** find a wild pad-runner in the March, not on your void pad.\\\nYou need a charged **Gate Drum**, **Gysahl**, and **Sage Notes**.\\\nBirds do not spawn on a skyblock island. There is no spawn-egg shortcut and no join gift. Walk the March."
+      "text": "**Goal:** find a wild pad-runner in the March, not on your void pad.\\\nYou need a charged **Gate Drum**, **Gysahl**, and the **Chocobo Almanac**.\\\nBirds do not spawn on a skyblock island. There is no spawn-egg shortcut and no join gift. Walk the March."
     },
     {
       "type": "modonomicon:text",
@@ -22,7 +22,7 @@
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "2\\. Pick **Gysahl** in the March (Reed Fen is densest). Craft extras into seeds and plant them on dirt or March soil at home.\\\n3\\. Craft **Sage Notes** (book and a gysahl leaf) and right-click a bird to read it."
+      "text": "2\\. Pick **Gysahl** in the March (Reed Fen is densest). Craft extras into seeds and plant them on dirt or March soil at home.\\\n3\\. Craft the **Chocobo Almanac** (book and a gysahl leaf) and right-click a bird to read it."
     },
     {
       "type": "modonomicon:text",
@@ -37,22 +37,22 @@
     {
       "type": "modonomicon:text",
       "title": "Farm and colour",
-      "text": "**Goal:** train, mate, and paint colours without chasing dyes that do not exist.\\\nYou need greens to train, nuts to mate, and **Sage Notes** to read the bird.\\\n1\\. Train an adult on greens until it is sated on each kind. Krakka is two gysahl and bone meal."
+      "text": "**Goal:** train, mate, and paint colours without chasing dyes that do not exist.\\\nYou need greens to train, nuts to mate, and the **Chocobo Almanac** to read the bird.\\\n1\\. Train an adult on greens until it is sated on each kind. Gysahl is the only green in the wild; Krakka is two gysahl and bone meal."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "2\\. Mate with nuts. Talent follows the nut. Colour follows the parents unless Carob or Zeio is involved.\\\n3\\. **Carob** (ravagers): two Good-or-better Yellows hatch Green or Blue. Each parent needs 1 first-place race; 4 combined firsts make the colour certain."
+      "text": "2\\. Mate with nuts. Talent follows the nut. Colour follows the parents unless Carob or Zeio is involved.\\\n3\\. **Carob** (Bilo at Whiskerwind, or Class A races): two Good-or-better Yellows hatch Green or Blue. Each parent needs 1 first-place race; 4 combined firsts make the colour certain."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "4\\. Green plus Blue hatch Black (a miss is White) — 2 firsts each, 9 combined for a sure roll. **Zeio** (piglin brutes): Black plus a Wonderful Yellow hatch Gold — 3 firsts each, 12 combined."
+      "text": "4\\. Green plus Blue hatch Black (a miss is White) — 2 firsts each, 9 combined for a sure roll. **Zeio** (Bilo, rare at Class S): Black plus a Wonderful Yellow hatch Gold — 3 firsts each, 12 combined."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "5\\. There are no Pink or Red birds. The Fair stall does not sell those dyes. Purple is End; Flame is Ember Wastes; Gold flies.\\\n**Check:** Sage Notes shows colour, grade, class, race wins and the last nut. Recipes stay in JEI."
+      "text": "5\\. There are no Pink or Red birds. The Fair stall does not sell those dyes. Purple is End; Flame is Ember Wastes; Gold flies.\\\n**Check:** the Almanac shows colour, grade, class, race wins and the last nut. Recipes stay in JEI."
     }
   ],
   "parents": [

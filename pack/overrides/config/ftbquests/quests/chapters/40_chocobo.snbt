@@ -4,7 +4,7 @@
 	filename: "40_chocobo"
 	group: "2100000000000004"
 	icon: {
-		id: "chocobosreborn:sage_notes"
+		id: "chocobosreborn:chocobo_almanac"
 	}
 	id: "3100000000000028"
 	images: [
@@ -97,7 +97,7 @@
 					id: "52000000002805E5"
 					type: "item"
 					item: {
-						id: "chocobosreborn:sage_notes"
+						id: "chocobosreborn:chocobo_almanac"
 						count: 1
 					}
 				}

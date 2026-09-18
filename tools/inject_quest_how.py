@@ -256,7 +256,7 @@ HOW_ITEM = {
     "clowderhall:island_charter": "How: K opens the island panel. Hold the Charter; sneak-use on Overworld pad ground to seal spawn. Start here names the steps.",
     "clowderhall:hub_key": "How: starter kit / Hall. `/clowder hub` and Hub Key go to Clowder Hall; `/clowder return` comes home.",
     "chocobosreborn:gysahl_green": "How: pick March thickets (Reed Fen is densest). Craft extras into seeds; plant on dirt or March soil.",
-    "chocobosreborn:sage_notes": "How: book plus gysahl. Right-click a bird to read it.",
+    "chocobosreborn:chocobo_almanac": "How: book plus gysahl. Right-click a bird to read it.",
     "pamhc2crops:aridgarden": "How: sieve dirt with a string mesh or better (Ex Deorum or Voidloom).",
     "pamhc2crops:frostgarden": "How: sieve dirt with a string mesh or better.",
     "pamhc2crops:shadedgarden": "How: sieve dirt with a string mesh or better.",
@@ -317,22 +317,22 @@ HOW_ITEM = {
     "chocobosreborn:square_gate": "How: gold, emeralds and gysahl. After the March, speak to Esther at /clowder hub while mounted.",
     "chocobosreborn:chocobo_lure": "How: craft the lure. Hold it to find March yellows.",
     "chocobosreborn:gysahl_green_seeds": "How: craft seeds from gysahl, or pick them with the greens.",
-    "chocobosreborn:carob_nut": "How: ravagers drop Carob. Sage Wynn at the Square also sells nuts.",
-    "chocobosreborn:curiel_green": "How: Sage Wynn at the Square, race prizes, or lucky harvests.",
+    "chocobosreborn:carob_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Carob. Class A races also pay it out.",
+    "chocobosreborn:curiel_green": "How: Sage Wynn at Whiskerwind, or a race prize.",
     "chocobosreborn:sylkis_green": "How: Sage Wynn at the Square, or a race prize.",
-    "chocobosreborn:zeio_nut": "How: piglin brutes drop Zeio. Bilo the Nutkeeper at the Square sells the rest of the nuts.",
+    "chocobosreborn:zeio_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Zeio. Class S races rarely pay it out.",
     "chocobosreborn:gp": "How: finish a heat at Chocobo Square. Esther or a Farmhand sends a saddled rider.",
-    "chocobosreborn:pepio_nut": "How: Bilo the Nutkeeper, or a Stablehand at a Chocobo Farm.",
+    "chocobosreborn:pepio_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Pepio. Farmhands sell gysahl only.",
     "chocobosreborn:krakka_green": "How: shapeless — two gysahl and bone meal.",
     "chocobosreborn:tantal_green": "How: Sage Wynn, or craft listed in JEI.",
     "chocobosreborn:pahsana_green": "How: Sage Wynn at the Square.",
     "chocobosreborn:mimett_green": "How: Sage Wynn at the Square.",
     "chocobosreborn:reagan_green": "How: Sage Wynn at the Square.",
-    "chocobosreborn:luchile_nut": "How: Bilo the Nutkeeper, or a Stablehand.",
-    "chocobosreborn:saraha_nut": "How: Bilo the Nutkeeper, or a Stablehand.",
-    "chocobosreborn:lasan_nut": "How: Bilo the Nutkeeper, or a Stablehand.",
-    "chocobosreborn:pram_nut": "How: Bilo the Nutkeeper, or a Stablehand.",
-    "chocobosreborn:porov_nut": "How: Bilo the Nutkeeper, or a Stablehand.",
+    "chocobosreborn:luchile_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Luchile.",
+    "chocobosreborn:saraha_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Saraha.",
+    "chocobosreborn:lasan_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Lasan.",
+    "chocobosreborn:pram_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Pram.",
+    "chocobosreborn:porov_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Porov.",
     "create:andesite_alloy": "How: andesite + iron nugget in a crafting table (or mixer).",
     "create:shaft": "How: andesite alloy in a cutting recipe / craft listed in JEI.",
     "create:cogwheel": "How: shaft + planks.",
@@ -588,10 +588,11 @@ def main() -> None:
         body = m.group(3)
         title = titles.get(qid, "this")
         item = items.get(qid)
-        line = how_line(item, title).replace("\\", "\\\\").replace('"', '\\"')
+        line = how_line(item, title).replace("\\", "\\\\").replace('"', '\\"').replace("&", "\\&")
         if "How:" in body:
             generic = "How: make or find" in body
-            if (item and item in HOW_ITEM) or (generic and not line.startswith("How: make or find")):
+            ns_known = bool(item and ":" in item and item.split(":", 1)[0] in HOW_NS)
+            if (item and item in HOW_ITEM) or ns_known or (generic and not line.startswith("How: make or find")):
                 replaced[0] += 1
                 body = re.sub(r'\n\t\t"How:.*?"\s*$', f'\n\t\t"{line}"', body.rstrip(), count=1)
                 return f'{m.group(1)}{body}{m.group(4)}'

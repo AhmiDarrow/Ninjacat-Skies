@@ -2689,7 +2689,7 @@ def build_chocobo() -> list[dict]:
          "Wild pad-runners do not spawn on a void pad. Charge a Gate Drum with Pulse, then empty-handed use it and walk the March. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
         ("Gysahl Green", "chocobosreborn:gysahl_green", 8,
          "Gysahl thickets grow in every March biome, heaviest in the Reed Fen. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."),
-        ("Sage Notes", "chocobosreborn:sage_notes", 1,
+        ("Chocobo Almanac", "chocobosreborn:chocobo_almanac", 1,
          "A book and a gysahl leaf. Right-click a bird to read colour, grade, class, race wins, and the last nut."),
         ("Chocobo Saddle", "chocobosreborn:chocobo_saddle", 1,
          "Feed Gysahl to tame a wild yellow. Craft a saddle from leather, string and iron, then ride. Sprint dashes; ease off to recover stamina."),
@@ -2724,7 +2724,7 @@ def build_chocobo() -> list[dict]:
         ("Saraha Nut", "chocobosreborn:saraha_nut", 1, "A mid nut. Optional."),
         ("Lasan Nut", "chocobosreborn:lasan_nut", 1, "A mid nut. Optional."),
         ("Pram Nut", "chocobosreborn:pram_nut", 1, "A mid-late mating nut. Optional. Bilo the Nutkeeper sells it."),
-        ("Fair Fireworks", "minecraft:firework_rocket", 1, "The Fair stall no longer sells Pink or Red dyes. Those colours are gone. Buy fireworks, a lead, or Sage Notes for GP."),
+        ("Fair Fireworks", "minecraft:firework_rocket", 1, "The Fair stall no longer sells Pink or Red dyes. Those colours are gone. Buy fireworks, a lead, or a Chocobo Almanac for GP."),
         ("Porov Nut", "chocobosreborn:porov_nut", 1, "A late mating nut. Optional."),
     ]
     out += grid_optional(s, extra, origin=(0.0, 9.0), cols=5)
@@ -3178,7 +3178,7 @@ def main() -> None:
     # Chapter 40 first shipped after the shop was removed from generation. Keep
     # its published start independent of the restored reservation above.
     _seq["q"] = 0x05E2
-    write_chapter("40_chocobo", CH["chocobo"], GROUP_SIDE, 39, "chocobosreborn:sage_notes", build_chocobo(), "Pad-runners")
+    write_chapter("40_chocobo", CH["chocobo"], GROUP_SIDE, 39, "chocobosreborn:chocobo_almanac", build_chocobo(), "Pad-runners")
     write_chapter("41_harvestcraft", CH["harvestcraft"], GROUP_SIDE, 40, "pamhc2foodcore:potitem", build_harvestcraft(), "Harvest Table")
     write_chapter("42_agricraft", CH["agricraft"], GROUP_SIDE, 41, "agricraft:wooden_crop_sticks", build_agricraft(), "Crop Sticks")
     write_lang()
