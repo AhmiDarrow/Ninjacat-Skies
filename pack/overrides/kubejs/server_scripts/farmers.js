@@ -19,14 +19,11 @@ ServerEvents.recipes(event => {
   }
 
   // Seeds from dirt, like the vanilla ones Ex Deorum already sieves. String mesh so Root can start.
-  // Voidloom thread meshes sit on the same tables — FD extras must drop there too, not only on Ex Deorum meshes.
+  // voidloom_recipes.js rewrites these meshes to tier tags, so thread meshes share the same extras.
   ;[
     ['exdeorum:string_mesh', 0.05],
     ['exdeorum:flint_mesh', 0.07],
     ['exdeorum:iron_mesh', 0.09],
-    ['voidloom:thread_mesh_string', 0.05],
-    ['voidloom:thread_mesh_flint', 0.07],
-    ['voidloom:thread_mesh_iron', 0.09],
   ].forEach(row => {
     let m = row[0]
     let p = row[1]
@@ -37,9 +34,7 @@ ServerEvents.recipes(event => {
 
   // A cabbage seed grows cabbage, but the "from leaves" craft also wants leaves — let a leaf come off the sieve too.
   both('minecraft:dirt', 'exdeorum:flint_mesh', 'farmersdelight:cabbage_leaf', 0.05)
-  both('minecraft:dirt', 'voidloom:thread_mesh_flint', 'farmersdelight:cabbage_leaf', 0.05)
 
   // Onion is a zombie drop, but a seed on the sieve keeps a peaceful pad in the kitchen too.
   both('minecraft:dirt', 'exdeorum:flint_mesh', 'farmersdelight:onion', 0.04)
-  both('minecraft:dirt', 'voidloom:thread_mesh_flint', 'farmersdelight:onion', 0.04)
 })

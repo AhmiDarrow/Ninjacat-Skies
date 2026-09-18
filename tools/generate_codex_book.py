@@ -155,50 +155,73 @@ entry("the_cut", "clowder", "Clowders", "Teams, pads, and the Hall.", "clowderha
 
 entry("the_cut", "tension", "Loom Tension", "The Post, the seat, the hum.", f"{NS}:tension_post", 8, 0, [
     spotlight(f"{NS}:tension_post", "Tension Post",
+              "**Goal:** raise a Post and seat the first token.\n\n"
+              "You need logs, a **Binding Knot**, and a scrap of **Frayed Thread**.\n\n"
               "Logs, a Binding Knot, and a scrap of Thread make a **Tension Post**. Raise one on the pad. "
               "Right-click it with a Strand token to seat that Strand; the notch lights, the tribe chimes, "
-              "and the Post starts to hum."),
+              "and the Post starts to hum.\n\n"
+              "**Check:** the Soil notch is lit, and the pad starts mending you near the Post."),
     text("What Tension does",
          "Seated Strands are **Loom Tension**. It is not a bar and it does not nag. It changes the pad.\n\n"
          "Near the Post: the pad mends you (Soil). It feeds you a little (Sprout). Fall damage stops within "
          "sight of it (Claw). Hands quicken (five Strands). Luck (Sigil). And the horizon warms, one Strand "
          "at a time."),
     text("Spun at the Post",
-         "Two things are made at the Post, not the bench.\n\n**Braid Cord**: right-click with a Strand "
-         "Filament once two of Clock, Swarm, or Spark are seated.\n\n**Spindle Loom Fragment**: right-click "
-         "with a March stone once all nine are seated. Seat the Fragment to Reweave."),
+         "**Goal:** spin **Braid Cord**, then a **Spindle Loom Fragment**, at the Post — not the bench.\n\n"
+         "You need a **Strand Filament** once two of Clock, Swarm or Spark are seated; **March Stone** once all nine are seated.\n\n"
+         "**Braid Cord**: right-click with a Strand Filament once two of Clock, Swarm, or Spark are seated.\n\n"
+         "**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave.\n\n"
+         "**Check:** you hold Braid Cord after Bind, and a Fragment after nine seats plus March Stone."),
 ], parents=["clowder"])
 
 entry("the_cut", "thread", "Frayed Thread", "Currency, string, and Hall stalls.", f"{NS}:frayed_thread", 4, 2, [
     spotlight(f"{NS}:frayed_thread", "Frayed Thread",
+              "**Goal:** keep Thread as currency, and unravel it only when you need string.\n\n"
+              "You need quest rewards, flint-mesh dirt on a Loomframe, or a steward cache.\n\n"
               "Every quest returns a little **Frayed Thread** — scraps of the Loom that still hold. Unravel one "
               "for three string. Or keep it: **Kin stalls in Clowder Hall** (`/clowder hub`) sell saplings, "
-              "buckets, meshes, pearls, and other things a pad runs short of. Right-click an Elder."),
+              "buckets, meshes, pearls, and other things a pad runs short of. Right-click an Elder.\n\n"
+              "**Check:** you can buy a sapling or mesh at a Hall Elder without going broke on string."),
     text("Codex Pages",
+         "**Goal:** read a margin note without spending the page.\n\n"
+         "You need a **Codex Page** from seating (every third Strand) or a Hall Kin stall.\n\n"
          "Every third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. "
          "Right-click to read it. Pages are kept, not spent.\n\nHall Kin stalls at `/clowder hub` sell a few "
-         "loose ones too. Those pick a tribe on their own."),
+         "loose ones too. Those pick a tribe on their own.\n\n"
+         "**Check:** right-click a page; it stays in your hand."),
 ], parents=["skybound"])
 
 entry("the_cut", "voidloom", "Voidloom", "Yarn, knots, meshes, and two stations.", "voidloom:void_yarn", 6, 2, [
     spotlight("voidloom:void_yarn", "Void Yarn",
+              "**Goal:** have yarn without eating the whole string stock.\n\n"
+              "You need four string (early) or string plus a pearl in the Tension Barrel.\n\n"
               "Thread that remembers where it came from. Early: four string make two yarn. Later: string and an "
               "ender pearl in the Tension Barrel make two. The Loomframe combs a little out of dirt as **Loom "
-              "Lint** — four lint, one yarn."),
+              "Lint** — four lint, one yarn.\n\n"
+              "**Check:** JEI shows two yarn from four string, and you have yarn in the inventory."),
     spotlight("voidloom:binding_knot", "Binding Knot",
+              "**Goal:** tie the Loom's soft gate so Recover stations can exist.\n\n"
+              "You need Void Yarn and a slime ball (pad compost: dirt, seeds, bone meal).\n\n"
               "A ring of yarn around a slime ball. Early slime is pad compost: dirt, seeds, bone meal.\n\n"
               "The Knot is the Loom's soft gate: Loomframes, Tension Posts, the first precision mechanism, "
-              "and the AE2 controller all want one."),
+              "and the AE2 controller all want one.\n\n"
+              "**Check:** you hold a Binding Knot."),
     spotlight("voidloom:loomframe", "Loomframe",
+              "**Goal:** a hopper sieve that also catches Loom scraps.\n\n"
+              "You need planks around a Binding Knot, a mesh, and grit.\n\n"
               "Stretch a mesh, load it with dirt, gravel, sand or dust, and let it work — one piece every few "
               "seconds with a shuttle clack. Hoppers feed the top and pull from below. The mesh is hand-only. "
               "An oak sieve is still click; this machine is the hopper one.\n\nThread meshes catch what Ex "
               "Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand "
-              "Filament** on iron (gravel, sand or dust)."),
+              "Filament** on iron (gravel, sand or dust).\n\n"
+              "**Check:** a hopper above feeds grit and a hopper below pulls scraps."),
     spotlight("voidloom:tension_barrel", "Tension Barrel",
+              "**Goal:** clay without a clay biome, and yarn from string plus a pearl.\n\n"
+              "You need planks, string, Void Yarn, then water and dirt (or string and pearls).\n\n"
               "Pour water (the bucket comes straight back), add up to eight dirt, come back for clay. String "
               "and pearls in the same barrel make yarn.\n\nClay to porcelain clay to a porcelain bucket: that "
-              "is how a pad first carries lava."),
+              "is how a pad first carries lava.\n\n"
+              "**Check:** empty-hand the barrel and take clay; the empty bucket came back when you poured."),
 ], parents=["thread"])
 
 # ------------------------------------------------------------------------------------ The Old Sky (unlocks with the campaign)
@@ -688,17 +711,24 @@ category("guardians", "Snapped Guardians", "guardians:frayed_totem_unwoven", 5, 
 
 entry("guardians", "the_ritual", "Answer for the Cut", "Totems, arenas, relics.", "guardians:frayed_totem_beddown", 0, 0, [
     text("Answer for the Cut",
+         "**Goal:** re-tension a snapped keeper on its own ground.\n\n"
+         "You need that Strand seated, then its **Frayed Totem** from JEI. Gate totems are four **Frayed Thread** and four of "
+         "the Strand's block around **Void Yarn**. Lint Golem uses white wool. First Cut uses obsidian around the Loomthread "
+         "relic. Overweaver uses purpur around the Loomthread relic.\n\n"
          "Each Strand had a guardian: a Loom-construct that kept its thread taut. The Cut snapped them. They are not monsters "
          "to be killed but Strands to be re-tensioned, and the only way to re-tension one is to beat its keeper on its own ground.\n\n"
-         "Craft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena."),
+         "Craft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena. "
+         "A spent life cannot call a guardian."),
     text("The arena",
          "You and every Clowder mate within 32 blocks are pulled to a stage built for that guardian alone: four spawn pads, "
          "the totem stone, and a sealed gate that opens on a win or a wipe. A fence returns anyone who falls, at a cost in hearts. "
-         "Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**. Wipe and you are spat back "
-         "out with the totem spent; craft another."),
+         "Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**, including mates who spent a "
+         "life during the fight. Wipe and you are spat back out with the totem spent; craft another.\n\n"
+         "`/guardians leave` abandons a fight."),
     text("Relics",
          "A relic is a trophy with one power: a passive while worn — the Curios relic slot, the off-hand or the hotbar — and a "
-         "right-click on a cooldown. `/guardians status` shows the Clowder's record; `/guardians leave` abandons a fight."),
+         "right-click on a cooldown. `/guardians status` shows the Clowder's record.\n\n"
+         "**Check:** `/guardians status` lists the win, and each living mate holds the Woven Relic."),
 ])
 
 POS = {"beddown": (-4, -2), "grindmaw": (-2, -3), "thornmother": (0, -4), "edgewalker": (2, -3), "drumheart": (4, -2),
@@ -710,7 +740,11 @@ for gid, title, strand, relic, tier, arena, fight, power in GUARDIANS:
              "An optional fight after Claw." if gid == "tangle" else
              "A gentle first fight." if tier == "easy" else "After the Reweave.")
     entry("guardians", gid, title[0].upper() + title[1:], where, f"guardians:frayed_totem_{gid}", x, y, [
-        text(title[0].upper() + title[1:], arena + "\n\n" + fight),
+        text(title[0].upper() + title[1:],
+             "**Goal:** beat this keeper and bring its relic home.\n\n"
+             "You need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\n\n"
+             + arena + "\n\n" + fight + "\n\n"
+             "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."),
         spotlight(f"guardians:frayed_totem_{gid}", "Frayed Totem",
                   "Four Frayed Thread and four of the Strand's block around a Void Yarn." if tier == "gate" else
                   "Frayed Thread and purpur around the Loomthread relic; the relic is handed back." if gid == "overweaver" else

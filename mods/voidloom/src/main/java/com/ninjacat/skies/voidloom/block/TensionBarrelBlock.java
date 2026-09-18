@@ -27,13 +27,7 @@ public class TensionBarrelBlock extends BaseEntityBlock {
     @Override protected boolean hasAnalogOutputSignal(BlockState state) { return true; }
     @Override protected int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
         if (!(level.getBlockEntity(pos) instanceof TensionBarrelBlockEntity be)) return 0;
-        var inventory = be.handler();
-        float fullness = 0; boolean occupied = false;
-        for (int i=1; i<inventory.getSlots(); i++) {
-            ItemStack stack = inventory.getStackInSlot(i);
-            if (!stack.isEmpty()) { occupied = true; fullness += (float)stack.getCount()/stack.getMaxStackSize(); }
-        }
-        return occupied ? 1 + (int)(14 * fullness / (inventory.getSlots()-1)) : 0;
+        return be.analogSignal();
     }
     public static final MapCodec<TensionBarrelBlock> CODEC = simpleCodec(TensionBarrelBlock::new);
 

@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "The Cogwright",
-      "text": "The Escapement: four rotating copper rings carrying dark-oak sequence tiles around an iron hub, six gear-towers and a sixteen-block pendulum keeping time."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Escapement: four rotating copper rings carrying dark-oak sequence tiles around an iron hub, six gear-towers and a sixteen-block pendulum keeping time."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
       "text": "Every phase the Cogwright winds: tiles light in sequence across the turning rings and you have twelve seconds to step them in order. Success opens its chassis for eight seconds; failure fires every gear-tower. The pendulum is the metronome; the rings reverse when it swings far."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

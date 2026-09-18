@@ -22,7 +22,12 @@
     {
       "type": "modonomicon:text",
       "title": "Before you move on",
-      "text": "Finish Swarm. Claim the token and seat it. The Swarm notch lights.\\\nRead **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "text": "**Goal:** finish Swarm and seat the Swarm token.\\\nYou need a nest the pad can actually grow — oak logs around a flower — then hives.\\\n**Check:** Finish Swarm. Claim the token and seat it. The Swarm notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
     }
   ],
   "parents": [

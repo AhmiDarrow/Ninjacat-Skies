@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "The First Cut",
-      "text": "The Severance: a great obsidian shard crossed by the glowing Cut, twenty world-shards drifting around it, teal void-tears in the air.\\\nA shape the Cut left on the shard, not a confession of who swung."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Severance: a great obsidian shard crossed by the glowing Cut, twenty world-shards drifting around it, teal void-tears in the air."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Every twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam.\\\nDrifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut.\\\nAfter the Reweave only."
+      "text": "A shape the Cut left on the shard, not a confession of who swung.\\\nEvery twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut.\\\nAfter the Reweave only.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

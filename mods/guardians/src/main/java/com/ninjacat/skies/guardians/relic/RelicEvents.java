@@ -61,6 +61,7 @@ public final class RelicEvents {
     private void stripWorn(ServerPlayer p) {
         Set<RelicItem> before = lastWorn.remove(p.getUUID());
         if (before != null) for (RelicItem r : before) r.power.onWorn(p, false);
+        RelicUtil.stripPassives(p);
     }
 
     @SubscribeEvent

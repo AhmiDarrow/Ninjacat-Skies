@@ -12,12 +12,22 @@
     {
       "type": "modonomicon:text",
       "title": "The Beddown",
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
       "text": "The Burrow Bowl: a sunken bowl of four soil tiers stepping down to a mud pit under six dark-oak root arches, seven teal root-seams glowing across the pit floor."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
       "text": "Every quarter of its health the Beddown slams and floods the pit with a layer of dirt, immune inside it. One of the seven seams lights: dig a channel to it, expose the core and hit it to break the burial. The first gate, and a forgiving one."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

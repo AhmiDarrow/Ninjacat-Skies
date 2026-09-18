@@ -36,4 +36,48 @@ ServerEvents.recipes(event => {
   event.shapeless('voidloom:void_yarn', [
     'voidloom:loom_lint', 'voidloom:loom_lint', 'voidloom:loom_lint', 'voidloom:loom_lint'
   ]).id('ninjacatskies:void_yarn_from_lint')
+
+  // Catch any Ex Deorum item-meshes still sitting after extras registered, then clone dirt onto March soil.
+  const meshTags = {
+    'exdeorum:string_mesh': 'ninjacatskies:meshes/string',
+    'exdeorum:flint_mesh': 'ninjacatskies:meshes/flint',
+    'exdeorum:iron_mesh': 'ninjacatskies:meshes/iron',
+  }
+  let rewritten = 0
+  for (let type of ['exdeorum:sieve', 'exdeorum:compressed_sieve']) {
+    event.forEachRecipe({ type: type }, r => {
+      try {
+        let mesh = r.json.get('mesh')
+        if (!mesh || !mesh.isJsonObject() || !mesh.getAsJsonObject().has('item')) return
+        let tag = meshTags[String(mesh.getAsJsonObject().get('item').getAsString())]
+        if (!tag) return
+        r.merge({ mesh: { tag: tag } })
+        rewritten++
+      } catch (err) {
+        console.warn('[Ninjacat Skies] late mesh alias skipped for ' + r.getId() + ': ' + err)
+      }
+    })
+  }
+  if (rewritten) console.info('[Ninjacat Skies] late mesh alias rewrote ' + rewritten + ' leftover sieve tables')
+
+  if (Platform.isLoaded('tribalpower')) {
+    let cloned = 0
+    event.forEachRecipe({ type: 'exdeorum:sieve' }, r => {
+      try {
+        let rid = String(r.getId())
+        if (rid.indexOf('ninjacatskies:march/') === 0) return
+        let ing = r.json.get('ingredient')
+        if (!ing || !ing.isJsonObject() || !ing.getAsJsonObject().has('item')) return
+        if (String(ing.getAsJsonObject().get('item').getAsString()) !== 'minecraft:dirt') return
+        let copy = JSON.parse(r.json.toString())
+        copy.ingredient = { item: 'tribalpower:march_soil' }
+        let nid = rid.split(':').join('_').split('/').join('_')
+        event.custom(copy).id('ninjacatskies:march/sieve_' + nid)
+        cloned++
+      } catch (err) {
+        console.warn('[Ninjacat Skies] march soil sieve skipped for ' + r.getId() + ': ' + err)
+      }
+    })
+    console.info('[Ninjacat Skies] March soil shares ' + cloned + ' dirt sieve tables')
+  }
 })

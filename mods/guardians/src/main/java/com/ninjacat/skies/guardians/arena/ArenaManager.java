@@ -48,6 +48,7 @@ public final class ArenaManager extends SavedData {
 
     private final Map<Integer, ArenaInstance> active = new TreeMap<>();
     private final Map<Integer, String> lastKind = new HashMap<>();      // slot -> plan to clear before reuse
+    private final Map<UUID, String> pendingRelics = new HashMap<>();    // offline win: kind id delivered on login
     private boolean ticketsRestored;
 
     public static ArenaManager get(MinecraftServer server) {
@@ -301,9 +302,17 @@ public final class ArenaManager extends SavedData {
     }
 
     private void sendEveryoneHome(MinecraftServer server, ArenaInstance inst) {
-        for (UUID id : inst.party) {
+        ItemStack relic = inst.state == ArenaInstance.State.WON ? ModItems.relic(inst.kind) : ItemStack.EMPTY;
+        List<UUID> grant = !inst.winners.isEmpty() ? new ArrayList<>(inst.winners) : new ArrayList<>(inst.party);
+        for (UUID id : grant) {
             ServerPlayer p = server.getPlayerList().getPlayer(id);
             if (p != null && inArena(p)) returnHome(p);
+            // Grant after the pad teleport so a full inventory drops at home, not in the arena
+            // (clearSlot discards leftover item entities). Spectator leftovers stash until revive.
+            if (!relic.isEmpty()) {
+                if (p != null) LoomTension.giveOrDrop(p, relic.copy());
+                else pendingRelics.put(id, inst.kind.id);
+            }
         }
         ServerLevel arena = arenaLevel(server);
         if (arena != null && inst.boss != null) { Entity e = arena.getEntity(inst.boss); if (e instanceof GuardianEntity g) { g.cleanupArena(); g.discard(); } }
@@ -330,9 +339,9 @@ public final class ArenaManager extends SavedData {
             ServerPlayer p = server.getPlayerList().getPlayer(id);
             if (p != null) present.add(p);
         }
+        inst.winners.clear();
+        inst.winners.addAll(inst.party);
         for (ServerPlayer p : present) {
-            ItemStack relic = ModItems.relic(inst.kind);
-            if (!relic.isEmpty()) LoomTension.giveOrDrop(p, relic);
             p.sendSystemMessage(NinjacatText.gold(inst.kind.title + " answers for the Cut. ").append(NinjacatText.teal("The Strand re-tensions.")));
             p.displayClientMessage(NinjacatText.gold("Worthy. The gate opens; you will be returned shortly."), true);
             p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG); // ensure exists
@@ -390,6 +399,15 @@ public final class ArenaManager extends SavedData {
             return;
         }
         if (inArena(p) && inst == null) returnHome(p);
+        String pendingKind = pendingRelics.remove(p.getUUID());
+        if (pendingKind != null) {
+            GuardianKind k = GuardianKind.byId(pendingKind);
+            if (k != null) {
+                ItemStack relic = ModItems.relic(k);
+                if (!relic.isEmpty()) LoomTension.giveOrDrop(p, relic);
+            }
+            setDirty();
+        }
     }
     /** Dying in the arena takes you out of the fight (respawn happens at home). */
     public void onDeath(ServerPlayer p) {
@@ -399,6 +417,15 @@ public final class ArenaManager extends SavedData {
     }
     public void leave(ServerPlayer p) {
         ArenaInstance a = instanceOf(p); if (a == null) return;
+        if (a.state == ArenaInstance.State.WON) {
+            ItemStack relic = ModItems.relic(a.kind);
+            if (!relic.isEmpty()) LoomTension.giveOrDrop(p, relic);
+            a.winners.remove(p.getUUID());
+            a.party.remove(p.getUUID());
+            returnHome(p);
+            setDirty();
+            return;
+        }
         a.party.remove(p.getUUID()); returnHome(p); setDirty();
         if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "The Clowder withdrew. The totem is spent.");
     }
@@ -409,12 +436,17 @@ public final class ArenaManager extends SavedData {
         ArenaManager m = new ArenaManager();
         for (Tag t : tag.getList("Active", Tag.TAG_COMPOUND)) { ArenaInstance a = ArenaInstance.load((CompoundTag) t); if (a != null) m.active.put(a.slot, a); }
         CompoundTag lk = tag.getCompound("LastKind"); for (String k : lk.getAllKeys()) m.lastKind.put(Integer.parseInt(k), lk.getString(k));
+        CompoundTag pr = tag.getCompound("PendingRelics");
+        for (String k : pr.getAllKeys()) {
+            try { m.pendingRelics.put(UUID.fromString(k), pr.getString(k)); } catch (IllegalArgumentException ignored) {}
+        }
         return m;
     }
     @Override
     public CompoundTag save(CompoundTag tag, HolderLookup.Provider regs) {
         ListTag l = new ListTag(); for (ArenaInstance a : active.values()) l.add(a.save()); tag.put("Active", l);
         CompoundTag lk = new CompoundTag(); for (var e : lastKind.entrySet()) lk.putString(String.valueOf(e.getKey()), e.getValue()); tag.put("LastKind", lk);
+        CompoundTag pr = new CompoundTag(); for (var e : pendingRelics.entrySet()) pr.putString(e.getKey().toString(), e.getValue()); tag.put("PendingRelics", pr);
         return tag;
     }
 }

@@ -12,12 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "The Tangle",
-      "text": "The Knotgarden: a grass island under four rings of hedge maze with gaps and spurs, cobble paths, rope-knot rings hung over them."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Knotgarden: a grass island under four rings of hedge maze with gaps and spurs, cobble paths, rope-knot rings hung over them."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "The spider strings the paths shut behind you with rope-knots that take three hits to cut, and bites whoever is alone in a dead end. Stay together in the maze. Optional, mid-game, a cosmetic prize."
+      "text": "The spider strings the paths shut behind you with rope-knots that take three hits to cut, and bites whoever is alone in a dead end. Stay together in the maze. Optional, mid-game, a cosmetic prize.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

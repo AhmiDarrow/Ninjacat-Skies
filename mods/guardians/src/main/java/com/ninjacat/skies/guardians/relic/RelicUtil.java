@@ -116,6 +116,12 @@ final class RelicUtil {
         if (p.tickCount % 10 == 0) effect(p, eff, 50, amp);
     }
 
+    /** Drop the short ambient tail so a spent-life spectator does not keep Haste for 2.5 s. */
+    static void stripPassives(ServerPlayer p) {
+        var haste = p.getEffect(MobEffects.DIG_SPEED);
+        if (haste != null && haste.isAmbient() && haste.getDuration() <= 50) p.removeEffect(MobEffects.DIG_SPEED);
+    }
+
     // ------------------------------------------------------------------ shared passive hooks (used by several relics)
 
     /** Thorns: a direct melee attacker takes {@code dmg} back. Skips thorns-on-thorns loops and projectiles. */

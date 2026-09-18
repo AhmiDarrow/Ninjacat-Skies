@@ -2510,7 +2510,7 @@
 	quest.42000000000A01D1.title: "Flint Mesh (Sieve)"
 	quest.42000000000A01D2.quest_desc: [
 		"Iron threads catch heavier grit and pull rarer scraps from the pile.",
-		"How: iron on a mesh craft. Strand Filament starts here."
+		"How: iron on a mesh craft. Grit stall sells one."
 	]
 	quest.42000000000A01D2.title: "Iron Mesh (Sieve)"
 	quest.42000000000A01D3.quest_desc: [
@@ -5783,7 +5783,7 @@
 	]
 	quest.42000000001D0478.title: "64k Item Cell"
 	quest.42000000001D0479.quest_desc: [
-		"Archive pages and notes.",
+		"Stores an archive's worth of items on one disk.",
 		"How: Spindle Network — certus from sand, controller wants a Knot."
 	]
 	quest.42000000001D0479.title: "256k Item Cell"
@@ -5965,7 +5965,7 @@
 	quest.42000000001E049C.title: "Flint Mesh (Voidcraft)"
 	quest.42000000001E049D.quest_desc: [
 		"A solid middle mesh for steady sieving.",
-		"How: iron on a mesh craft. Strand Filament starts here."
+		"How: iron on a mesh craft. Grit stall sells one."
 	]
 	quest.42000000001E049D.title: "Iron Mesh (Voidcraft)"
 	quest.42000000001E049E.quest_desc: [
@@ -6105,7 +6105,7 @@
 	quest.42000000001E04B8.title: "Frayed Thread Stock"
 	quest.42000000001E04B9.quest_desc: [
 		"Archive pages and notes.",
-		"How: pack item — Codex, Knot, token, or Thread. Earlier Strand nodes name the seat."
+		"How: seating a Strand at the Post, or Desk/Kin. Right-click to read; they are kept, not spent."
 	]
 	quest.42000000001E04B9.title: "Codex Pages"
 	quest.42000000001E04BA.quest_desc: [

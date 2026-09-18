@@ -123,6 +123,10 @@ public final class ClowderCommands {
             ctx.getSource().sendFailure(gold("message.clowderhall.invite_no_skyblock"));
             return 0;
         }
+        if (actor.isSpectator()) {
+            ctx.getSource().sendFailure(gold("message.clowderhall.invite_spectator"));
+            return 0;
+        }
         int result = SkyTeams.accept(actor.server, actor);
         switch (result) {
             case SkyTeams.OK -> {

@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "The Overweaver",
-      "text": "The Loom Above: a purpur weave, nine strand-bridges to nine pillared platforms, twenty-seven cathedral threads to a keystone sixty-four blocks up."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Loom Above: a purpur weave, nine strand-bridges to nine pillared platforms, twenty-seven cathedral threads to a keystone sixty-four blocks up."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
       "text": "Your own restored Loom turned against you. The Overweaver throws shades of the nine guardians onto their strands; kill a shade and its thread pulls taut for twenty-five seconds, and only then can the loom itself be hurt. Later it throws three, then all nine."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",

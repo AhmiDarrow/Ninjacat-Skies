@@ -23,6 +23,8 @@ public final class ArenaInstance {
     public final GuardianKind kind;
     public final BlockPos originPos;
     public final List<UUID> party = new ArrayList<>();
+    /** Snapshot of party at onWin so a leave/disconnect during the gate still gets the relic. */
+    public final List<UUID> winners = new ArrayList<>();
     @Nullable public UUID clowderId;
     @Nullable public UUID boss;
     public State state = State.FIGHT;
@@ -52,6 +54,7 @@ public final class ArenaInstance {
         ListTag l = new ListTag(); for (UUID u : party) l.add(NbtUtils.createUUID(u)); t.put("Party", l);
         if (clowderId != null) t.putUUID("Clowder", clowderId); if (boss != null) t.putUUID("Boss", boss);
         t.putString("State", state.name()); t.putInt("StateTicks", stateTicks); t.putInt("Age", age);
+        ListTag w = new ListTag(); for (UUID u : winners) w.add(NbtUtils.createUUID(u)); t.put("Winners", w);
         return t;
     }
 
@@ -63,6 +66,7 @@ public final class ArenaInstance {
         if (t.hasUUID("Clowder")) a.clowderId = t.getUUID("Clowder"); if (t.hasUUID("Boss")) a.boss = t.getUUID("Boss");
         try { a.state = State.valueOf(t.getString("State")); } catch (IllegalArgumentException e) { a.state = State.WIPED; }
         a.stateTicks = t.getInt("StateTicks");
+        for (Tag u : t.getList("Winners", Tag.TAG_INT_ARRAY)) a.winners.add(NbtUtils.loadUUID(u));
         a.age = 0;                       // a restart mid-fight starts the grace period again: the party and the boss's chunks are not back yet
         return a;
     }

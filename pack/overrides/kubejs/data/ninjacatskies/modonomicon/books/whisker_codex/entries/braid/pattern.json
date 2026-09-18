@@ -17,7 +17,12 @@
     {
       "type": "modonomicon:text",
       "title": "Before you move on",
-      "text": "Finish Clock. Claim the token and seat it. The Clock notch lights.\\\nRead **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "text": "**Goal:** finish Clock and seat the Clock token.\\\nYou need Create started and a Binding Knot for the precision mechanism.\\\n**Check:** Finish Clock. Claim the token and seat it. The Clock notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
     }
   ],
   "parents": [

@@ -16,7 +16,12 @@
         "count": 1
       },
       "title": "Tension Post",
-      "text": "Logs, a Binding Knot, and a scrap of Thread make a **Tension Post**. Raise one on the pad. Right-click it with a Strand token to seat that Strand; the notch lights, the tribe chimes, and the Post starts to hum."
+      "text": "**Goal:** raise a Post and seat the first token.\\\nYou need logs, a **Binding Knot**, and a scrap of **Frayed Thread**."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Logs, a Binding Knot, and a scrap of Thread make a **Tension Post**. Raise one on the pad. Right-click it with a Strand token to seat that Strand; the notch lights, the tribe chimes, and the Post starts to hum.\\\n**Check:** the Soil notch is lit, and the pad starts mending you near the Post."
     },
     {
       "type": "modonomicon:text",
@@ -31,7 +36,12 @@
     {
       "type": "modonomicon:text",
       "title": "Spun at the Post",
-      "text": "Two things are made at the Post, not the bench.\\\n**Braid Cord**: right-click with a Strand Filament once two of Clock, Swarm, or Spark are seated.\\\n**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave."
+      "text": "**Goal:** spin **Braid Cord**, then a **Spindle Loom Fragment**, at the Post — not the bench.\\\nYou need a **Strand Filament** once two of Clock, Swarm or Spark are seated; **March Stone** once all nine are seated.\\\n**Braid Cord**: right-click with a Strand Filament once two of Clock, Swarm, or Spark are seated."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave.\\\n**Check:** you hold Braid Cord after Bind, and a Fragment after nine seats plus March Stone."
     }
   ],
   "parents": [

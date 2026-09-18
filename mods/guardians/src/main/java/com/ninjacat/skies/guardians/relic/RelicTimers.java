@@ -33,6 +33,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.server.ServerStoppedEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
@@ -72,6 +73,7 @@ final class RelicTimers {
     private static final int TRAIL_TICKS = 60; // Cogloop blinks back 3 s
 
     static final String STUN_TAG = "guardians_stun_until", BEE_EXPIRY_TAG = "guardians_bee_expiry";
+    static final String BEE_OWNER_TAG = "guardians_bee_owner";
     static final String WARD_KEY = "ward_until";
     static final String REWEAVE_GUARD_KEY = "reweave_guard_until";
 
@@ -140,14 +142,45 @@ final class RelicTimers {
         long until = clock(b) + ticks;
         BEES.put(b, new BeeInfo(owner, until));
         b.getPersistentData().putLong(BEE_EXPIRY_TAG, until);
+        b.getPersistentData().putUUID(BEE_OWNER_TAG, owner);
     }
 
     /** A relic bee or a stunned mob that comes back from disk (chunk reload, restart) is settled here rather than left as it was saved. */
     @SubscribeEvent
     static void onJoin(EntityJoinLevelEvent e) {
         if (e.getLevel().isClientSide) return;
-        if (e.loadedFromDisk() && e.getEntity() instanceof Bee b && b.getTags().contains(RelicUtil.BEE_TAG) && !BEES.containsKey(b)) { b.discard(); e.setCanceled(true); return; }
-        if (e.getEntity() instanceof Mob m && m.getPersistentData().contains(STUN_TAG) && !STUNNED.containsKey(m)) { m.setNoAi(false); m.getPersistentData().remove(STUN_TAG); }
+        if (e.loadedFromDisk() && e.getEntity() instanceof Bee b && b.getTags().contains(RelicUtil.BEE_TAG) && !BEES.containsKey(b)) {
+            long until = b.getPersistentData().getLong(BEE_EXPIRY_TAG);
+            UUID owner = b.getPersistentData().hasUUID(BEE_OWNER_TAG) ? b.getPersistentData().getUUID(BEE_OWNER_TAG) : null;
+            if (owner != null && until > clock(b)) {
+                BEES.put(b, new BeeInfo(owner, until));
+            } else {
+                try { popBee(b); } catch (Exception ignored) {}
+                e.setCanceled(true);
+            }
+            return;
+        }
+        if (e.getEntity() instanceof Mob m && m.getPersistentData().contains(STUN_TAG) && !STUNNED.containsKey(m)) {
+            long until = m.getPersistentData().getLong(STUN_TAG);
+            if (until > clock(m)) {
+                if (!m.isNoAi()) m.setNoAi(true);
+                STUNNED.put(m, until);
+            } else {
+                m.setNoAi(false);
+                m.getPersistentData().remove(STUN_TAG);
+            }
+        }
+    }
+
+    /** Pop swarm honey while the world can still spawn items. ServerStopped is too late (isStopped, no drops). */
+    @SubscribeEvent
+    static void onServerStopping(ServerStoppingEvent e) {
+        synchronized (BEES) {
+            for (Bee b : new ArrayList<>(BEES.keySet())) {
+                try { popBee(b); } catch (Exception ignored) {}
+            }
+            BEES.clear();
+        }
     }
 
     /** A closed world takes its relic state with it (single-player exits, /stop): nothing from it may fire into the next one. */
@@ -234,7 +267,7 @@ final class RelicTimers {
             BEES.entrySet().removeIf(en -> {
                 Bee b = en.getKey();
                 if (b == null) return true;
-                if (b.isRemoved() && b.getRemovalReason() != null && !b.getRemovalReason().shouldDestroy()) return true;   // unloaded with its chunk: discarded again on reload (onJoin)
+                if (b.isRemoved() && b.getRemovalReason() != null && !b.getRemovalReason().shouldDestroy()) return true;   // chunk unload: NBT keeps owner/expiry, onJoin restores or pops
                 if (b.isRemoved() || !b.isAlive() || en.getValue().expiry <= now) {
                     try { popBee(b); } catch (Exception ignored) {}
                     return true;

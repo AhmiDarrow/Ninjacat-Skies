@@ -2205,7 +2205,7 @@ def build_network_side() -> list[dict]:
         ("4k Item Cell", "ae2:item_storage_cell_4k", 2, "More items."),
         ("16k Item Cell", "ae2:item_storage_cell_16k", 1, "Lots of items."),
         ("64k Item Cell", "ae2:item_storage_cell_64k", 1, "Massive items."),
-        ("256k Item Cell", "ae2:item_storage_cell_256k", 1, "Archive pages and notes."),
+        ("256k Item Cell", "ae2:item_storage_cell_256k", 1, "Stores an archive's worth of items on one disk."),
         ("1k Fluid Cell", "ae2:fluid_storage_cell_1k", 1, "Store fluids."),
         ("Interface", "ae2:interface", 2, "World bridge."),
         ("Import Bus", "ae2:import_bus", 4, "Pull items into storage."),

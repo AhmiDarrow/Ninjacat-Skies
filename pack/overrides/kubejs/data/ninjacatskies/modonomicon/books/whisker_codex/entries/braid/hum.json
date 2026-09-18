@@ -17,7 +17,12 @@
     {
       "type": "modonomicon:text",
       "title": "Before you move on",
-      "text": "Finish Spark. Claim the token and seat it. The Spark notch lights.\\\nRead **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "text": "**Goal:** finish Spark and seat the Spark token.\\\nYou need a **Drumheart** and the first Pulse trickle from Start here.\\\n**Check:** Finish Spark. Claim the token and seat it. The Spark notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
     }
   ],
   "parents": [

@@ -154,6 +154,27 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         return input;
     }
 
+    /**
+     * Comparator: scraps first (hopper pull), then grit fill 1–7, mesh-only 1.
+     * Paid pending loot reads 15 so a blocked machine is not silent.
+     */
+    public int analogSignal() {
+        float fullness = 0;
+        boolean occupied = false;
+        for (ItemStack s : output) {
+            if (!s.isEmpty()) {
+                occupied = true;
+                fullness += (float) s.getCount() / s.getMaxStackSize();
+            }
+        }
+        if (occupied) return 1 + (int) (14 * fullness / OUTPUT_SLOTS);
+        for (ItemStack s : pending) {
+            if (!s.isEmpty()) return 15;
+        }
+        if (!input.isEmpty()) return Math.max(1, Math.min(7, 1 + input.getCount() * 6 / INPUT_MAX));
+        return mesh.isEmpty() ? 0 : 1;
+    }
+
     /** Insert as much of the stack as fits; returns how many were taken. */
     public int insertInput(ItemStack stack, boolean simulate) {
         if (!canAccept(stack)) {

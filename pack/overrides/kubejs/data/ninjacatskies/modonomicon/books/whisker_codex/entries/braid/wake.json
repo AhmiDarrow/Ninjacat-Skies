@@ -17,7 +17,12 @@
     {
       "type": "modonomicon:text",
       "title": "Before you move on",
-      "text": "Finish Soil in the quest screen. Claim the **Soil Knot**, then seat the Soil token. The Soil notch lights.\\\nRead **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "text": "**Goal:** finish Soil and seat the Soil token.\\\nYou need the **Soil Knot** claimed and a **Tension Post** placed.\\\n**Check:** Finish Soil in the quest screen. Claim the **Soil Knot**, then seat the Soil token. The Soil notch lights."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
     }
   ]
 }

@@ -12,12 +12,17 @@
     {
       "type": "modonomicon:text",
       "title": "The Thornmother",
-      "text": "The Overgrowth Terrace: four garden terraces under a leaf canopy, eight trellis posts, and four pruning stations on the second tier."
+      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Overgrowth Terrace: four garden terraces under a leaf canopy, eight trellis posts, and four pruning stations on the second tier."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
       "text": "The Thornmother never strikes; she seeds thorn-hedge that spreads and burns to the touch, and heals whenever a pruning station is overgrown. Shears and axes clear it. Compost eight hedge at a station to fire a prune wave that clears the ground and stuns her — the only clean damage window."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
     },
     {
       "type": "modonomicon:spotlight",
