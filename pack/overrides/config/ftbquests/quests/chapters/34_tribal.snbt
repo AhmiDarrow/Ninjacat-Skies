@@ -4409,6 +4409,361 @@
 			]
 			dependencies: ["420000000022054F", "4200000000220532", "4200000000228017"]
 			shape: "diamond"
+		},
+		{
+			id: "4200000000228039"
+			x: 0d
+			y: 74.5d
+			tasks: [
+				{
+					id: "5200000000228039"
+					type: "item"
+					item: {
+						id: "tribalpower:ember_kiln"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000228039"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022053F", "4200000000220539"]
+			shape: "loom"
+		}
+		{
+			id: "420000000022803A"
+			x: 2.7d
+			y: 74.5d
+			tasks: [
+				{
+					id: "520000000022803A"
+					type: "item"
+					item: {
+						id: "tribalpower:seal_loom"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000022803A"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["4200000000220549"]
+			shape: "loom"
+		}
+		{
+			id: "420000000022803B"
+			x: 5.4d
+			y: 74.5d
+			tasks: [
+				{
+					id: "520000000022803B"
+					type: "item"
+					item: {
+						id: "tribalpower:shard_lamp"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000022803B"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["4200000000220536"]
+			shape: "loom"
+		}
+		{
+			id: "420000000022803C"
+			x: 8.1d
+			y: 74.5d
+			tasks: [
+				{
+					id: "520000000022803C"
+					type: "item"
+					item: {
+						id: "tribalpower:sky_charm"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000022803C"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022055B"]
+			shape: "loom"
+		}
+		{
+			id: "420000000022803D"
+			x: 10.8d
+			y: 74.5d
+			tasks: [
+				{
+					id: "520000000022803D"
+					type: "item"
+					item: {
+						id: "tribalpower:tide_pump"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "620000000022803D"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022055E"]
+			shape: "loom"
+		}
+		{
+			id: "420000000022803E"
+			x: 13.5d
+			y: 74.5d
+			tasks: [
+				{
+					type: "checkmark"
+					id: "520000000022803E"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "tribalpower:pulse_cell"
+						count: 2
+					}
+					id: "620000000022803E"
+				}
+			]
+			dependencies: ["4200000000220564"]
+			shape: "diamond"
+		}
+		{
+			id: "420000000022803F"
+			x: 0d
+			y: 77.0d
+			tasks: [
+				{
+					type: "checkmark"
+					id: "520000000022803F"
+				}
+			]
+			rewards: [
+				{
+					type: "item"
+					item: {
+						id: "tribalpower:pulse_cell"
+						count: 2
+					}
+					id: "620000000022803F"
+				}
+			]
+			dependencies: ["4200000000220538"]
+			shape: "diamond"
+		}
+		{
+			id: "4200000000228040"
+			x: 2.7d
+			y: 77.0d
+			tasks: [
+				{
+					id: "5200000000228040"
+					type: "item"
+					item: {
+						id: "tribalpower:glow_reed"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000228040"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022803B"]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+		}
+		{
+			id: "4200000000228041"
+			x: 5.4d
+			y: 77.0d
+			tasks: [
+				{
+					id: "5200000000228041"
+					type: "item"
+					item: {
+						id: "tribalpower:echo_sconce"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000228041"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022803B"]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+		}
+		{
+			id: "4200000000228042"
+			x: 8.1d
+			y: 77.0d
+			tasks: [
+				{
+					id: "5200000000228042"
+					type: "item"
+					item: {
+						id: "tribalpower:ember_bowl"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000228042"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022803B"]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+		}
+		{
+			id: "4200000000228043"
+			x: 10.8d
+			y: 77.0d
+			tasks: [
+				{
+					id: "5200000000228043"
+					type: "item"
+					item: {
+						id: "tribalpower:wind_charm"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000228043"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022052F"]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+		}
+		{
+			id: "4200000000228044"
+			x: 13.5d
+			y: 77.0d
+			tasks: [
+				{
+					id: "5200000000228044"
+					type: "item"
+					item: {
+						id: "tribalpower:chorus_charm"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000228044"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["420000000022803C"]
+			optional: true
+			shape: "loom"
+			size: 0.85d
+		}
+		{
+			id: "4200000000228045"
+			x: 0d
+			y: 79.5d
+			tasks: [
+				{
+					id: "5200000000228045"
+					type: "item"
+					item: {
+						id: "tribalpower:spiritgear_axe"
+						count: 1
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "6200000000228045"
+					type: "item"
+					item: {
+						id: "ninjacatskies:frayed_thread"
+						count: 3
+					}
+				}
+			]
+			dependencies: ["4200000000220552"]
+			optional: true
+			shape: "loom"
+			size: 0.85d
 		}
 	]
 }

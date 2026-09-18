@@ -1084,7 +1084,7 @@ def build_spark() -> list[dict]:
         ("Hum: Spirit Shard", "tribalpower:spirit_shard", 2, "Shard needs a Chime — keep rattling."),
         ("Hum: Copper Resonator", "tribalpower:copper_resonator", 1, "Copper around a Chime — tunes metal to spirit."),
         ("Hum: Drumheart", "tribalpower:drumheart", 1, "Strike the heart. Store Spirit Pulse — needs Chime + Shard."),
-        ("Hum: Pulse Cell", "tribalpower:pulse_cell", 1, "Carry Pulse — needs Resonator + Shard."),
+        ("Hum: Pulse Cell", "tribalpower:pulse_cell", 1, "Carry Pulse for tools, spells and travel — needs Resonator + Shard."),
         ("Hum: Ley Collector", "tribalpower:ley_collector", 1, "Draw ley into beats — Resonator + Shard + copper."),
         ("Hum: Pulse Resonator", "tribalpower:pulse_resonator", 1, "Reusable echoes and distinct totems turn harmony into Pulse."),
         # FE bridges — secondary to Tribal Pulse identity
@@ -1133,7 +1133,7 @@ def build_spark() -> list[dict]:
     ], origin=(-4.0, 7.5), cols=6)
     finale = knot_finale(s, "spark", main, 12.0, -2.0)
     bridge = item_quest(s, title="Hum becomes current", item="tribalpower:pulse_adapter",
-                        desc=["Follow Tribal Weave through Echo refinement to a Resonant Core. The Pulse Adapter turns the camp's reusable harmony into FE for this chapter's machines. Redstone pauses both conversion and export."],
+                        desc=["Follow Tribal Weave through Echo refinement to a Resonant Core. The Pulse Adapter turns the camp's reusable harmony into FE for this chapter's machines. Unranked conversion is 20 Pulse a second; rank it at Echo stations for more. It cannot receive FE. Redstone pauses both conversion and export."],
                         deps=[main[10]['id']], x=12.0, y=11.0, optional=True, reward_count=4)
     return main + side + finale + ([bridge] if bridge else [])
 
@@ -2434,16 +2434,16 @@ def build_tribal_side() -> list[dict]:
         ("Drumheart Beat", "tribalpower:drumheart", 1, "Place the heart — Chime + Shard + leather (Desk sells leather)."),
         ("Spirit Codex", "tribalpower:spirit_codex", 1, "Nine tribes hummed once — needs a spare Chime + Shard."),
         ("Ley Collector", "tribalpower:ley_collector", 1, "Draw ley into beats."),
-        ("Pulse Cell", "tribalpower:pulse_cell", 4, "Carry a measure of Pulse."),
+        ("Pulse Cell", "tribalpower:pulse_cell", 4, "Carry Pulse for tools, spells and travel. Fill it at a Drumheart."),
         ("Pulse Resonator", "tribalpower:pulse_resonator", 1, "Seat a reusable Echo catalyst; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it."),
         ("Earth Totem", "tribalpower:resonance_totem_earth", 1, "Tribe of stone answers."),
         ("Fire Totem", "tribalpower:resonance_totem_fire", 1, "Tribe of flame answers."),
         ("Water Totem", "tribalpower:resonance_totem_water", 1, "Tribe of tide answers."),
         ("Air Totem", "tribalpower:resonance_totem_air", 1, "Tribe of wind answers."),
         ("Spirit Totem", "tribalpower:resonance_totem_spirit", 1, "Fifth tribe — steward core."),
-        ("Song Bench", "tribalpower:song_bench", 1, "Start the lattice song."),
+        ("Song Bench", "tribalpower:song_bench", 1, "Start the lattice song. It waits for stone or an Echo-stage item; raw metal is grit on Echo Shatter."),
         ("Lattice Conductor", "tribalpower:lattice_conductor", 2, "Route harmonics between totems."),
-        ("Echo Shatter", "tribalpower:echo_shatter", 1, "Hum stage one — break the ore."),
+        ("Echo Shatter", "tribalpower:echo_shatter", 1, "Hum stage one — break the ore. Stone becomes shards; cobble becomes gravel; raw metal becomes grit. Grit shatter is 4 seconds at 20 Pulse/s."),
         ("Echo Shard", "tribalpower:echo_shard", 8, "Shard that heard the shatter."),
         ("Echo Attune", "tribalpower:echo_attune", 1, "Hum stage two — attune."),
         ("Attuned Echo", "tribalpower:attuned_echo", 8, "Echo that found a key."),
@@ -2486,7 +2486,7 @@ def build_tribal_side() -> list[dict]:
         ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 4 Pulse. Both ends must be loaded.'),
         ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 8 Pulse per successful beat. Use standard inventories from any compatible mod.'),
         ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 8 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.'),
-        ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE, up to 2,000 FE per second. Redstone stops conversion and export.'),
+        ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 20 Pulse a second (2,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.'),
         ('spirit_staff', 'Six voices in one hand', 'resonant_core', 'The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
         ('resonance_maul', 'Stone yields a doorway', 'resonant_core', 'Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.'),
         ('spiritweave_hood', 'Eyes in the quiet', 'spiritweave', 'The hood lends night sight while charged cells sustain it. Unlinked pieces draw 2 Pulse every four seconds; a bound voice costs 3.'),
@@ -2617,7 +2617,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
 
     # ---- The Nine Tribes: camps, hearths, standing, marks, kinship
     adv('tribe_offering', 'tribes/offering', 'Kept warm',
-        'Nine tribe camps stand in the March, one per Strand: huts, a fire, a Tribe Hearth, a totem, a banner and four Tribal Kin. Right-click a hearth with what that tribe favours, or with a charged Pulse Cell, and your standing with them rises. Hurting Kin or breaking camp blocks costs far more than it gains.',
+        'Nine tribe camps stand in the March, one per Strand: huts, a fire, a Tribe Hearth, a totem, a banner and four Tribal Kin. Right-click a hearth with what that tribe favours, or with a charged Pulse Cell, and your standing with them rises. Hurting Kin costs 25. Breaking a tribe banner costs 5, the hearth 40. Generic camp blocks do not cost.',
         ['gate_drum'], 0, 47, [reward_item('tribalpower:echo_shard', 4), reward_xp_levels(2)])
     adv('tribe_friend', 'tribes/friend', 'On good terms',
         'Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near a hearth and completed trades count too. Elders trade two offers per rank: Grit-singers sell Echoes for raw ore, Seal-carvers sell seals and rite tablets, Loom-stitchers sell Loom Thread and, at Kin, a Horizon Compass. `/tribalpower standing` prints all nine.',

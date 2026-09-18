@@ -12,12 +12,12 @@
     {
       "type": "modonomicon:text",
       "title": "Standing",
-      "text": "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800.\\\nKills near the hearth and completed trades count."
+      "text": "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800.\\\nKills near the hearth and completed trades count.\\\nHurting Kin costs 25 and turns the Hunters on you."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "Hurting Kin costs 25 and turns the Hunters on you; breaking camp blocks costs five each, the hearth forty."
+      "text": "Breaking a tribe banner costs five, the hearth forty.\\\nGeneric camp blocks do not cost."
     },
     {
       "type": "modonomicon:spotlight",

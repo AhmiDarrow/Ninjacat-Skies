@@ -1210,8 +1210,8 @@
 	]
 	quest.42000000000500D5.title: "Hum: Drumheart"
 	quest.42000000000500D6.quest_desc: [
-		"Carry Pulse between drum and lattice.",
-		"How: craft, then fill from a Drumheart (click with the cell)."
+		"Carry Pulse for tools, spells and travel — needs Resonator + Shard.",
+		"How: craft, then fill from a Drumheart (click with the cell). Tools, spells and travel draw from the cell."
 	]
 	quest.42000000000500D6.title: "Hum: Pulse Cell"
 	quest.42000000000500D7.quest_desc: [
@@ -1438,7 +1438,7 @@
 	]
 	quest.4200000000050102.title: "Seat Spark"
 	quest.4200000000050103.quest_desc: [
-		"Follow Tribal Weave through Echo refinement to a Resonant Core. The Pulse Adapter turns the camp's reusable harmony into FE for this chapter's machines. Redstone pauses both conversion and export.",
+		"Follow Tribal Weave through Echo refinement to a Resonant Core. The Pulse Adapter turns the camp's reusable harmony into FE for this chapter's machines. Unranked conversion is 20 Pulse a second; rank it at Echo stations for more. It cannot receive FE. Redstone pauses both conversion and export.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000050103.title: "Hum becomes current"
@@ -6739,8 +6739,8 @@
 	]
 	quest.4200000000220535.title: "Ley Collector"
 	quest.4200000000220536.quest_desc: [
-		"Carry a measure of Pulse.",
-		"How: craft, then fill from a Drumheart (click with the cell)."
+		"Carry Pulse for tools, spells and travel. Fill it at a Drumheart.",
+		"How: craft, then fill from a Drumheart (click with the cell). Tools, spells and travel draw from the cell."
 	]
 	quest.4200000000220536.title: "Pulse Cell"
 	quest.4200000000220537.quest_desc: [
@@ -6774,8 +6774,8 @@
 	]
 	quest.420000000022053C.title: "Spirit Totem"
 	quest.420000000022053D.quest_desc: [
-		"Start the lattice song.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"Start the lattice song. It waits for stone or an Echo-stage item; raw metal is grit on Echo Shatter.",
+		"How: Spirit Codex + Tribal Weave. Seat stone or an Echo-stage item. Raw metal belongs on Echo Shatter."
 	]
 	quest.420000000022053D.title: "Song Bench"
 	quest.420000000022053E.quest_desc: [
@@ -6784,8 +6784,8 @@
 	]
 	quest.420000000022053E.title: "Lattice Conductor"
 	quest.420000000022053F.quest_desc: [
-		"Hum stage one — break the ore.",
-		"How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel."
+		"Hum stage one — break the ore. Stone becomes shards; cobble becomes gravel; raw metal becomes grit. Grit shatter is 4 seconds at 20 Pulse/s.",
+		"How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel; raw metal → grit. Four seconds at 20 Pulse/s."
 	]
 	quest.420000000022053F.title: "Echo Shatter"
 	quest.4200000000220540.quest_desc: [
@@ -6969,7 +6969,7 @@
 	]
 	quest.4200000000220563.title: "Across the waterworks"
 	quest.4200000000220564.quest_desc: [
-		"Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE, up to 2,000 FE per second. Redstone stops conversion and export.",
+		"Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 20 Pulse a second (2,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220564.title: "The beat becomes current"
@@ -7233,7 +7233,7 @@
 	]
 	quest.420000000022800A.title: "Tether and Stitch"
 	quest.420000000022800B.quest_desc: [
-		"Nine tribe camps stand in the March, one per Strand: huts, a fire, a Tribe Hearth, a totem, a banner and four Tribal Kin. Right-click a hearth with what that tribe favours, or with a charged Pulse Cell, and your standing with them rises. Hurting Kin or breaking camp blocks costs far more than it gains.",
+		"Nine tribe camps stand in the March, one per Strand: huts, a fire, a Tribe Hearth, a totem, a banner and four Tribal Kin. Right-click a hearth with what that tribe favours, or with a charged Pulse Cell, and your standing with them rises. Hurting Kin costs 25. Breaking a tribe banner costs 5, the hearth 40. Generic camp blocks do not cost.",
 		"How: right-click a March Tribe Hearth with that tribe's favour or a charged Pulse Cell."
 	]
 	quest.420000000022800B.title: "Kept warm"
@@ -7463,6 +7463,72 @@
 		"How: First Rite at the brazier; tick when a spare blank seal is in hand."
 	]
 	quest.4200000000228038.title: "A spare seal"
+	quest.4200000000228039.quest_desc: [
+		"The fire workshop. A Fire totem within eight and Pulse run every furnace recipe, including mineral grit. A hand Drumheart cannot keep this kiln.",
+		"How: furnace + resonators + chime. Fire totem. Smelts grit for Pulse — a hand Drumheart cannot run it."
+	]
+	quest.4200000000228039.title: "Grit in the kiln"
+	quest.420000000022803A.quest_desc: [
+		"Weave a Recipe Seal for a workshop. Empty bottles return to the slot that held them. Side-IO refuses spectators and other camps.",
+		"How: Spirit Codex names the Seal Loom craft. Seat bottles; they come back to that slot."
+	]
+	quest.420000000022803A.title: "A loom for seals"
+	quest.420000000022803B.quest_desc: [
+		"Four cheap Pulse lamps (Glow Reed, Shard Lamp, Echo Sconce, Ember Bowl) draw 1–2 Pulse a second from the lattice. Redstone dims them.",
+		"How: craft a Shard Lamp, place it within eight of Pulse, then dim it with redstone if you want night."
+	]
+	quest.420000000022803B.title: "A lamp that drinks Pulse"
+	quest.420000000022803C.quest_desc: [
+		"Ten Spirit Charms wear in three Tribal slots, no Curios. Sky with Air is creative flight. Sneak-use a Resonance Totem to bind a voice; Chorus binds every nearby voice at a Brazier.",
+		"How: craft the Sky Charm, then sneak-use it on an Air totem. Spirit Codex: Spirit Charms."
+	]
+	quest.420000000022803C.title: "A charm with a voice"
+	quest.420000000022803D.quest_desc: [
+		"The water workshop. Rank it at Echo stations the same way as Spiritgear; higher rank spends more Pulse as it speeds up. Rank survives pickup.",
+		"How: Spirit Codex Workshop pages. Place the Tide Pump on a cistern face, then sneak-use the Codex if it stays silent."
+	]
+	quest.420000000022803D.title: "A pump for the cistern"
+	quest.420000000022803E.quest_desc: [
+		"Each Pulse still becomes 100 FE. Unranked conversion is 20 Pulse a second. Rank the adapter at Echo Attune, Bind, then Manifest and empty-hand status names the live rate. It still cannot receive FE.",
+		"How: sneak-use a Pulse Adapter on Echo Attune, then Bind, then Manifest. Tick when diagnose names a rate above 20."
+	]
+	quest.420000000022803E.title: "Rank the current"
+	quest.420000000022803F.quest_desc: [
+		"Sneak-use any Spiritgear piece or charm on a placed Resonance Totem (40 Pulse) to bind that voice. Mixed sets are intended. The totem is not consumed. Loom needs a Loom totem.",
+		"How: sneak-use a tool, armor piece, or charm on a totem with 40 Pulse nearby. Tick when the tooltip names the bound voice."
+	]
+	quest.420000000022803F.title: "Bind a voice"
+	quest.4200000000228040.quest_desc: [
+		"A reed lamp. Cheap Pulse light for a camp path. Optional.",
+		"How: craft Glow Reed. Place it near Pulse. Optional."
+	]
+	quest.4200000000228040.title: "Reed light"
+	quest.4200000000228041.quest_desc: [
+		"A wall sconce that drinks Pulse. Optional.",
+		"How: craft Echo Sconce and hang it. Optional."
+	]
+	quest.4200000000228041.title: "Echo sconce"
+	quest.4200000000228042.quest_desc: [
+		"A bowl of camp firelight on Pulse. Optional.",
+		"How: craft Ember Bowl. Optional."
+	]
+	quest.4200000000228042.title: "Ember bowl"
+	quest.4200000000228043.quest_desc: [
+		"Hang a wind charm from a ceiling. March camp furniture: stool, table, urn, mat, shelf, and this. Optional.",
+		"How: craft Wind Charm and hang it. Optional souvenir."
+	]
+	quest.4200000000228043.title: "A charm on the wind"
+	quest.4200000000228044.quest_desc: [
+		"Chorus binds every nearby totem voice at a Ritual Brazier. Optional once Sky is in hand.",
+		"How: craft Chorus Charm, then sneak-use it at a Brazier with voices in range. Optional."
+	]
+	quest.4200000000228044.title: "Every nearby voice"
+	quest.4200000000228045.quest_desc: [
+		"The axe spends Pulse like the pick. Rank it at Echo stations; sneak-use a totem to bind a voice. Optional.",
+		"How: craft Spiritgear Axe. Optional once the pick exists."
+	]
+	quest.4200000000228045.title: "An edge for timber"
+
 	quest.420000000023058C.quest_desc: [
 		"Grit-singers never cut a stone the same way twice. This bench remembers every cut.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",

@@ -568,7 +568,8 @@ entry("braid", "living_lattice", "The Living Lattice", "Workshops, rites and pat
          "You need the **Spirit Codex** and a working Pulse Resonator from Start here.\n\n"
          "1. Finish **Make the first Echo Shard** and **Start automatic power** in Start here.\n"
          "2. Keep the Spirit Codex on your hotbar while you run Tribal Weave.\n"
-         "3. Slot faces, Shatter-on-Kiln, relays, compass landings and the sixth Loom voice live in that book, not here."),
+         "3. Slot faces, Shatter-on-Kiln, relays, compass landings, ranked machines, Spirit Charms, Pulse lamps and the sixth Loom voice live in that book, not here.\n"
+         "A held redstone signal pauses generators other than the Drumheart."),
     text("Check",
          "**Check:** sneak-use the Spirit Codex on the Resonator. Stored Pulse should rise with two different "
          "voices and a catalyst seated."),
@@ -683,7 +684,7 @@ for sid, tribe, x, y, lore, margin in TRIBES:
     ], condition=advancement(f"strand/{sid}"), hide=False)
 
 entry("tribes", "camps", "The Nine Camps", "Standing, offerings, marks.", "tribalpower:tribe_hearth", -4, 0, [
-    text("Standing", "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near the hearth and completed trades count. Hurting Kin costs 25 and turns the Hunters on you; breaking camp blocks costs five each, the hearth forty."),
+    text("Standing", "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near the hearth and completed trades count. Hurting Kin costs 25 and turns the Hunters on you. Breaking a tribe banner costs five, the hearth forty. Generic camp blocks do not cost."),
     spotlight("tribalpower:tribe_mark", "Tribe Mark", "Given once, by an Elder, at Voice. With the tribe's Resonance Totem and two Spiritweave it becomes a Kinship Totem: an extra voice for the Pulse Resonator. Nine tribes can carry the song to fifteen voices."),
     text("The camp keeps the beat", "A Drummer plays every few seconds. A Drumheart within eight blocks takes two Pulse from each beat, so a camp is a small, honest source of power. `/tribalpower standing` prints all nine standings."),
 ], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:tribes/offering"}, hide=False)

@@ -171,7 +171,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade 🔍",
+    "name": "Jade \ud83d\udd0d",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -894,10 +894,10 @@
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8876593,
-    "filename": "tribalpower-3.4.1.jar",
+    "fileId": 8908289,
+    "filename": "tribalpower-3.4.2.jar",
     "releaseType": 1,
-    "sha1": "11806d4c589e40028135fe6a33027954fa193c76"
+    "sha1": "31202e1a3f7cb4a6f6aec24c14f1c8ca4812c0c1"
   },
   {
     "key": "Chocobos Reborn",
