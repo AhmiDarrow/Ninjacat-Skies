@@ -58,7 +58,7 @@ probes = [
     "mekanism:ingot_steel",
     "functionalstorage:oak_1",
     "productivebees:honey_treat",
-    "chocobosreborn:sage_notes",
+    "chocobosreborn:chocobo_almanac",
     "pamhc2trees:avocado_sapling",
     "pamhc2foodcore:freshmilkitem",
     "agricraft:journal",

@@ -7815,27 +7815,27 @@
 	quest.42000000002605C3.title: "Copper Wire"
 	quest.42000000002605C4.quest_desc: [
 		"Rotation on one side, Forge Energy on the other. Two Strands shaking hands.",
-		"How: Create Crafts & Additions — copper wire from the rolling mill, then connectors and motor."
+		"How: Create Crafts \& Additions — copper wire from the rolling mill, then connectors and motor."
 	]
 	quest.42000000002605C4.title: "Connector"
 	quest.42000000002605C5.quest_desc: [
 		"Energy back into rotation. The Clock Strand runs on the Spark Strand now.",
-		"How: Create Crafts & Additions — copper wire from the rolling mill, then connectors and motor."
+		"How: Create Crafts \& Additions — copper wire from the rolling mill, then connectors and motor."
 	]
 	quest.42000000002605C5.title: "Electric Motor"
 	quest.42000000002605C6.quest_desc: [
 		"Hold a charge between the wire and the work.",
-		"How: Create Crafts & Additions — copper wire from the rolling mill, then connectors and motor."
+		"How: Create Crafts \& Additions — copper wire from the rolling mill, then connectors and motor."
 	]
 	quest.42000000002605C6.title: "Capacitor"
 	quest.42000000002605C7.quest_desc: [
 		"A wall of stored current, built as big as the pad allows.",
-		"How: Create Crafts & Additions — copper wire from the rolling mill, then connectors and motor."
+		"How: Create Crafts \& Additions — copper wire from the rolling mill, then connectors and motor."
 	]
 	quest.42000000002605C7.title: "Modular Accumulator"
 	quest.42000000002605C8.quest_desc: [
 		"Rods and wire from ingots — Create's answer to the press.",
-		"How: Create Crafts & Additions — copper wire from the rolling mill, then connectors and motor."
+		"How: Create Crafts \& Additions — copper wire from the rolling mill, then connectors and motor."
 	]
 	quest.42000000002605C8.title: "Rolling Mill"
 	quest.42000000002605C9.quest_desc: [
@@ -7890,7 +7890,7 @@
 	quest.42000000002605D2.title: "Chemical Cell"
 	quest.42000000002605D3.quest_desc: [
 		"For when the copper wire cannot carry the whole pulse.",
-		"How: Create Crafts & Additions — copper wire from the rolling mill, then connectors and motor."
+		"How: Create Crafts \& Additions — copper wire from the rolling mill, then connectors and motor."
 	]
 	quest.42000000002605D3.title: "Large Connector"
 	quest.42000000002605D4.quest_desc: [
@@ -8161,7 +8161,7 @@
 		"A book and a gysahl leaf. Right-click a bird to read colour, grade, class, race wins, and the last nut.",
 		"How: book plus gysahl. Right-click a bird to read it."
 	]
-	quest.42000000002805E5.title: "Sage Notes"
+	quest.42000000002805E5.title: "Chocobo Almanac"
 	quest.42000000002805E6.quest_desc: [
 		"Feed Gysahl to tame a wild yellow. Craft a saddle from leather, string and iron, then ride. Sprint dashes; ease off to recover stamina.",
 		"How: leather, string and iron. Tame a wild yellow with gysahl, then saddle it."
@@ -8184,12 +8184,12 @@
 	quest.42000000002805E9.title: "Gysahl Seeds"
 	quest.42000000002805EA.quest_desc: [
 		"Feed a Carob Nut to two adults of opposite sex. Two Good-or-better Yellows plus Carob can hatch Green or Blue. Each parent needs at least one first-place finish; four combined firsts make the colour certain.",
-		"How: ravagers drop Carob. Sage Wynn at the Square also sells nuts."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Carob. Class A races also pay it out."
 	]
 	quest.42000000002805EA.title: "Carob Nut"
 	quest.42000000002805EB.quest_desc: [
 		"A mid-ladder green. Train speed, stamina, intelligence or cooperation; a bird gets sated on each kind.",
-		"How: Sage Wynn at the Square, race prizes, or lucky harvests."
+		"How: Sage Wynn at Whiskerwind, or a race prize."
 	]
 	quest.42000000002805EB.title: "Curiel Green"
 	quest.42000000002805EC.quest_desc: [
@@ -8199,7 +8199,7 @@
 	quest.42000000002805EC.title: "Sylkis Green"
 	quest.42000000002805ED.quest_desc: [
 		"Gold never hatches without Zeio. Black plus a Wonderful yellow plus three firsts each (twelve combined for a sure roll).",
-		"How: piglin brutes drop Zeio. Bilo the Nutkeeper at the Square sells the rest of the nuts."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Zeio. Class S races rarely pay it out."
 	]
 	quest.42000000002805ED.title: "Zeio Nut"
 	quest.42000000002805EE.quest_desc: [
@@ -8209,7 +8209,7 @@
 	quest.42000000002805EE.title: "GP"
 	quest.42000000002805EF.quest_desc: [
 		"The first mating nut. Talent follows the nut; colour follows the parents unless Carob or Zeio is involved.",
-		"How: Bilo the Nutkeeper, or a Stablehand at a Chocobo Farm."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Pepio. Farmhands sell gysahl only."
 	]
 	quest.42000000002805EF.title: "Pepio Nut"
 	quest.42000000002805F0.quest_desc: [
@@ -8239,32 +8239,32 @@
 	quest.42000000002805F4.title: "Reagan Green"
 	quest.42000000002805F5.quest_desc: [
 		"A mid nut. Optional.",
-		"How: Bilo the Nutkeeper, or a Stablehand."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Luchile."
 	]
 	quest.42000000002805F5.title: "Luchile Nut"
 	quest.42000000002805F6.quest_desc: [
 		"A mid nut. Optional.",
-		"How: Bilo the Nutkeeper, or a Stablehand."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Saraha."
 	]
 	quest.42000000002805F6.title: "Saraha Nut"
 	quest.42000000002805F7.quest_desc: [
 		"A mid nut. Optional.",
-		"How: Bilo the Nutkeeper, or a Stablehand."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Lasan."
 	]
 	quest.42000000002805F7.title: "Lasan Nut"
 	quest.42000000002805F8.quest_desc: [
 		"A mid-late mating nut. Optional. Bilo the Nutkeeper sells it.",
-		"How: Bilo the Nutkeeper, or a Stablehand."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Pram."
 	]
 	quest.42000000002805F8.title: "Pram Nut"
 	quest.42000000002805F9.quest_desc: [
-		"The Fair stall no longer sells Pink or Red dyes. Those colours are gone. Buy fireworks, a lead, or Sage Notes for GP.",
+		"The Fair stall no longer sells Pink or Red dyes. Those colours are gone. Buy fireworks, a lead, or a Chocobo Almanac for GP.",
 		"How: paper plus gunpowder. Optional burst."
 	]
 	quest.42000000002805F9.title: "Fair Fireworks"
 	quest.42000000002805FA.quest_desc: [
 		"A late mating nut. Optional.",
-		"How: Bilo the Nutkeeper, or a Stablehand."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Porov."
 	]
 	quest.42000000002805FA.title: "Porov Nut"
 	quest.42000000002905FB.quest_desc: [

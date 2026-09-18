@@ -210,28 +210,28 @@ def build_lessons(book, write, text, entry, category):
                  'Do not put tokens in a crafting grid. They record progress. If the Post refuses, read its message and check which Strands are seated.'),
             text('Check',
                  '**Check:** two of those three notches are lit, and Braid Cord is in your hand. Next: Bind and the Sigil quests.')]),
-        ('pad_runners', 'Pad-runners', 'chocobosreborn:sage_notes', [
+        ('pad_runners', 'Pad-runners', 'chocobosreborn:chocobo_almanac', [
             text('Goal',
                  '**Goal:** find a wild pad-runner in the March, not on your void pad.\n\n'
-                 'You need a charged **Gate Drum**, **Gysahl**, and **Sage Notes**.\n\n'
+                 'You need a charged **Gate Drum**, **Gysahl**, and the **Chocobo Almanac**.\n\n'
                  'Birds do not spawn on a skyblock island. There is no spawn-egg shortcut and no join gift. Walk the March.'),
             text('Find, tame, ride',
                  '1. Charge a **Gate Drum** with Pulse, then empty-handed use it and walk through. Do not strike it like a Drumheart. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.\n'
                  '2. Pick **Gysahl** in the March (Reed Fen is densest). Craft extras into seeds and plant them on dirt or March soil at home.\n'
-                 '3. Craft **Sage Notes** (book and a gysahl leaf) and right-click a bird to read it.\n'
+                 '3. Craft the **Chocobo Almanac** (book and a gysahl leaf) and right-click a bird to read it.\n'
                  '4. Tame a wild yellow with gysahl, then saddle it. Sprint dashes; ease off to recover stamina.'),
             text('Esther at the hub',
                  'After you have walked the March, **Esther** stands at Clowder Hall (`/clowder hub`). Mount a saddled bird and speak to her, or place a **Square Gate**.\n\n'
                  '**Check:** you are on a saddled bird, or Esther is waiting at the hub.'),
             text('Farm and colour',
                  '**Goal:** train, mate, and paint colours without chasing dyes that do not exist.\n\n'
-                 'You need greens to train, nuts to mate, and **Sage Notes** to read the bird.\n\n'
-                 '1. Train an adult on greens until it is sated on each kind. Krakka is two gysahl and bone meal.\n'
+                 'You need greens to train, nuts to mate, and the **Chocobo Almanac** to read the bird.\n\n'
+                 '1. Train an adult on greens until it is sated on each kind. Gysahl is the only green in the wild; Krakka is two gysahl and bone meal.\n'
                  '2. Mate with nuts. Talent follows the nut. Colour follows the parents unless Carob or Zeio is involved.\n'
-                 '3. **Carob** (ravagers): two Good-or-better Yellows hatch Green or Blue. Each parent needs 1 first-place race; 4 combined firsts make the colour certain.\n'
-                 '4. Green plus Blue hatch Black (a miss is White) — 2 firsts each, 9 combined for a sure roll. **Zeio** (piglin brutes): Black plus a Wonderful Yellow hatch Gold — 3 firsts each, 12 combined.\n'
+                 '3. **Carob** (Bilo at Whiskerwind, or Class A races): two Good-or-better Yellows hatch Green or Blue. Each parent needs 1 first-place race; 4 combined firsts make the colour certain.\n'
+                 '4. Green plus Blue hatch Black (a miss is White) — 2 firsts each, 9 combined for a sure roll. **Zeio** (Bilo, rare at Class S): Black plus a Wonderful Yellow hatch Gold — 3 firsts each, 12 combined.\n'
                  '5. There are no Pink or Red birds. The Fair stall does not sell those dyes. Purple is End; Flame is Ember Wastes; Gold flies.\n\n'
-                 '**Check:** Sage Notes shows colour, grade, class, race wins and the last nut. Recipes stay in JEI.')]),
+                 '**Check:** the Almanac shows colour, grade, class, race wins and the last nut. Recipes stay in JEI.')]),
         ('finish', 'Prepare the final reweave', 'ninjacatskies:spindle_loom_fragment', [
             text('Readiness checklist',
                  '**Goal:** seat all nine Strands, bring March Stone home, and close your Clowder\'s cut.\n\n'
