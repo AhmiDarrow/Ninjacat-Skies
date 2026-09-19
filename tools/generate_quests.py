@@ -77,6 +77,7 @@ CH = {
     "chocobo": hid(0xB100000000000028),
     "harvestcraft": hid(0xB100000000000029),
     "agricraft": hid(0xB10000000000002A),
+    "driftwrecks": hid(0xB10000000000002B),
 }
 
 lang: dict[str, object] = {
@@ -236,7 +237,7 @@ CHAPTER_SHORT = {
     18: "Kitchen", 19: "Spells", 20: "Solar", 21: "Decor", 22: "Nether", 23: "End", 24: "Fields", 25: "Apiary",
     26: "Pipes", 27: "Otherworld", 28: "Clockworks", 29: "Network", 30: "Voidcraft", 31: "Packaged", 32: "QIO",
     33: "Hunt", 34: "Tribal", 39: "Guardians", 40: "Square",
-    41: "Harvest", 42: "Sticks",
+    41: "Harvest", 42: "Sticks", 43: "Driftwrecks",
 }
 STRAND_CHAPTERS = {1: "soil", 2: "stone", 3: "sprout", 4: "claw", 5: "spark", 6: "clock", 7: "swarm", 8: "sigil", 9: "spindle"}
 CURRENT = {"strand_i": 0, "title_counts": {}}
@@ -645,6 +646,7 @@ CHAPTER_SUBTITLES = {
     40: ["Walk the March. Tame a yellow. Esther waits at the Hall after you have been there."],
     41: ["Gardens from the sieve. Cook what a void pad never grew."],
     42: ["Crop sticks, stats, irrigation. Weeds stay off on a ledge."],
+    43: ["Pieces of the old world drift up to your pad. Reach them before they unravel."],
 }
 
 
@@ -2917,6 +2919,67 @@ def build_guardians() -> list[dict]:
     return out
 
 
+def build_driftwrecks() -> list[dict]:
+    """Driftwrecks — repeatable side content after Soil. Rewards are Weft, lures and decor, never mainline items or Thread."""
+    s = 43
+    weft = "driftwrecks:salvaged_weft"
+    out: list[dict] = []
+    def adv(path):
+        return {"type": "advancement", "advancement": f"driftwrecks:{path}", "criterion": ""}
+    first = task_quest(s, title="Something drifting",
+        desc=["Once Soil is tensioned, pieces of the old world drift up to your pad now and then and catch on your weft. The Steward tells the whole Clowder when one arrives.",
+              "They do not stay: a wreck holds for a while of your Clowder's online time, then unravels back into the void. Nobody falls, and nothing you earned is lost."],
+        task=adv("root"), rewards=[reward_item("driftwrecks:drift_needle"), reward_item("driftwrecks:tether_spool", 2)],
+        deps=[TOKEN_QUESTS["soil"]] if "soil" in TOKEN_QUESTS else None, x=0.0, y=0.0, shape="hexagon")
+    out.append(first)
+    cross = task_quest(s, title="Cross the void",
+        desc=["Stand at your pad's edge, face the wreck and use a Tether Spool: a thread bridge lays itself across, climbing in half steps.",
+              "Fall off and the thread catches you, for three hearts. The void is the scenery, not the punishment."],
+        task=adv("cross"), rewards=[reward_item("driftwrecks:salvage_crate")], deps=[first["id"]], x=1.6, y=0.0)
+    out.append(cross)
+    salvage = task_quest(s, title="Salvage",
+        desc=["Every wreck asks one thing: open its heart chest, break its spawners, re-thread its pillars, walk an echo home, or hold the seam.",
+              "Finish it and everyone who set foot on it gets Salvaged Weft and a Seal. The Salvager's Frame turns Weft into spools, lures, keys and decor."],
+        task=adv("salvage"), rewards=[reward_item("driftwrecks:salvagers_frame"), reward_item("driftwrecks:wreck_atlas")], deps=[cross["id"]], x=3.2, y=0.0, shape="hexagon")
+    out.append(salvage)
+    atlas = task_quest(s, title="The Atlas",
+        desc=["The Wreck Atlas keeps every tribe's places you have finished: nine Strands by six kinds of place. A full column, a full row, every stamp: each pays a small, permanent perk.",
+              "Pages come with lore in the Codex. Hint pages found in chests open hidden rooms."],
+        task=adv("atlas"), rewards=[reward_item(weft, 8)], deps=[salvage["id"]], x=4.8, y=0.0)
+    out.append(atlas)
+    # repeatables: hand in what the wrecks give
+    reps = [("Five seals", "driftwrecks:driftwreck_seal", 5, "Bring five Driftwreck Seals: five wrecks finished, by anyone in your Clowder.", [reward_item(weft, 12), reward_item("driftwrecks:driftlure")]),
+            ("Frayed cores", "driftwrecks:frayed_core", 3, "Break three frayed spawners and hand in their cores.", [reward_item(weft, 8), reward_item("driftwrecks:tether_spool", 2)]),
+            ("Rift shard", "driftwrecks:rift_shard", 1, "A shard from a mended Remnant. Hand it in.", [reward_item(weft, 20), reward_item("driftwrecks:wreck_map_scroll")])]
+    for i, (title, item, n, desc, rewards) in enumerate(reps):
+        q = task_quest(s, title=title, desc=[desc, "Repeatable: hand them in as often as you like."],
+                       task={"type": "item", "item": {"id": item, "count": n}, "consume_items": True}, rewards=rewards,
+                       deps=[salvage["id"]], x=1.6 + i * 1.6, y=1.8)
+        q["repeatable"] = True
+        out.append(q)
+    miles = [("A whole column", "column", "Every core of one Strand. That tribe's lures cost half, its wrecks come a little oftener, and its banner is yours.", [reward_item("driftwrecks:trophy_plinth")]),
+             ("A whole row", "row", "One kind of place in all nine tribes. Its hidden rooms always open now.", [reward_item(weft, 24)]),
+             ("Six stamps", "modifiers", "Finish a wreck of every modifier. Your wrecks hold a quarter longer.", [reward_item(weft, 16)]),
+             ("Half the Atlas", "cells_25", "Twenty-five pages filled.", [reward_xp_levels(10)]),
+             ("Into the rift", "rift", "A Weft Key opens a Hold's sealed rift. Something small and frayed wears a Guardian's shape inside.", [reward_item(weft, 16)]),
+             ("Every Remnant", "remnants", "Mend all nine Remnants. Weft Keys cost half.", [reward_xp_levels(15)]),
+             ("Every page", "cells_54", "All fifty-four pages. Somewhere under the Skies, the heart of the old world starts to drift your way.", [reward_xp_levels(20)]),
+             ("Heart of the weave", "heartwreck", "Stand in the heart of the old world and re-thread it. It does not come twice.", [reward_xp_levels(30)])]
+    for i, (title, path, desc, rewards) in enumerate(miles):
+        deps = [atlas["id"]] if path not in ("rift", "remnants", "cells_54", "heartwreck") else None
+        q = task_quest(s, title=title, desc=[desc], task=adv(path), rewards=rewards, deps=deps, x=i * 1.4 - 0.2, y=3.8,
+                       shape="diamond" if path in ("cells_54", "heartwreck", "remnants") else "")
+        out.append(q)
+    by = {lang[f"quest.{q['id']}.title"]: q["id"] for q in out}
+    for q in out:
+        t = lang[f"quest.{q['id']}.title"]
+        if t == "Every Remnant": q["dependencies"] = [by["Into the rift"]]
+        if t == "Every page": q["dependencies"] = [by["Half the Atlas"]]
+        if t == "Heart of the weave": q["dependencies"] = [by["Every page"]]
+        if t == "Into the rift": q["dependencies"] = [salvage["id"]]
+    return out
+
+
 def build_shop() -> list[dict]:
     """Frayed Thread Desk — spend Thread (consume) for QoL / alternate mats."""
     s = 16
@@ -3181,6 +3244,9 @@ def main() -> None:
     write_chapter("40_chocobo", CH["chocobo"], GROUP_SIDE, 39, "chocobosreborn:chocobo_almanac", build_chocobo(), "Pad-runners")
     write_chapter("41_harvestcraft", CH["harvestcraft"], GROUP_SIDE, 40, "pamhc2foodcore:potitem", build_harvestcraft(), "Harvest Table")
     write_chapter("42_agricraft", CH["agricraft"], GROUP_SIDE, 41, "agricraft:wooden_crop_sticks", build_agricraft(), "Crop Sticks")
+    # Chapter 43 has its own id block; fixed so growth elsewhere never renumbers it.
+    _seq["q"] = 0x0800
+    write_chapter("43_driftwrecks", CH["driftwrecks"], GROUP_SIDE, 42, "driftwrecks:tether_spool", build_driftwrecks(), "Driftwrecks")
     write_lang()
     titles = sum(1 for k in lang if k.startswith("quest.") and k.endswith(".title"))
     print(f"Wrote chapters + lang. Quest titles: {titles}. Skipped invalid: {len(WARNED)}")

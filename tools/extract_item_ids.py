@@ -37,6 +37,13 @@ for jar in MODS.glob("*.jar"):
     except Exception as exc:
         print("skip", jar.name, exc)
 
+# Companion mods built from this repo ship in the next Core: count their item models too, so quests can name them
+# before the Core jar in pack/mods is rebuilt.
+for model in (ROOT / "mods").glob("*/src/main/resources/assets/*/models/item/*.json"):
+    ns = model.parts[-4]
+    if not model.stem.startswith("drift_needle_"):
+        ids.add(f"{ns}:{model.stem}")
+
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text("\n".join(sorted(ids)) + "\n", encoding="utf-8")
 print(f"ids={len(ids)} -> {OUT}")

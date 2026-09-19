@@ -8645,4 +8645,75 @@
 	reward.5000000000170337.title: "Thread of Return: +1 Clowder life"
 	reward.50000000002004DD.title: "Thread of Return: +1 Clowder life"
 	reward.5000000000220581.title: "Thread of Return: +1 Clowder life"
+	chapter.310000000000002B.chapter_subtitle: [
+		"Pieces of the old world drift up to your pad. Reach them before they unravel."
+	]
+	chapter.310000000000002B.title: "Driftwrecks"
+	quest.42000000002B0801.quest_desc: [
+		"Once Soil is tensioned, pieces of the old world drift up to your pad now and then and catch on your weft. The Steward tells the whole Clowder when one arrives.",
+		"They do not stay: a wreck holds for a while of your Clowder's online time, then unravels back into the void. Nobody falls, and nothing you earned is lost."
+	]
+	quest.42000000002B0801.title: "Something drifting"
+	quest.42000000002B0802.quest_desc: [
+		"Stand at your pad's edge, face the wreck and use a Tether Spool: a thread bridge lays itself across, climbing in half steps.",
+		"Fall off and the thread catches you, for three hearts. The void is the scenery, not the punishment."
+	]
+	quest.42000000002B0802.title: "Cross the void"
+	quest.42000000002B0803.quest_desc: [
+		"Every wreck asks one thing: open its heart chest, break its spawners, re-thread its pillars, walk an echo home, or hold the seam.",
+		"Finish it and everyone who set foot on it gets Salvaged Weft and a Seal. The Salvager's Frame turns Weft into spools, lures, keys and decor."
+	]
+	quest.42000000002B0803.title: "Salvage"
+	quest.42000000002B0804.quest_desc: [
+		"The Wreck Atlas keeps every tribe's places you have finished: nine Strands by six kinds of place. A full column, a full row, every stamp: each pays a small, permanent perk.",
+		"Pages come with lore in the Codex. Hint pages found in chests open hidden rooms."
+	]
+	quest.42000000002B0804.title: "The Atlas"
+	quest.42000000002B0805.quest_desc: [
+		"Bring five Driftwreck Seals: five wrecks finished, by anyone in your Clowder.",
+		"Repeatable: hand them in as often as you like."
+	]
+	quest.42000000002B0805.title: "Five seals"
+	quest.42000000002B0806.quest_desc: [
+		"Break three frayed spawners and hand in their cores.",
+		"Repeatable: hand them in as often as you like."
+	]
+	quest.42000000002B0806.title: "Frayed cores"
+	quest.42000000002B0807.quest_desc: [
+		"A shard from a mended Remnant. Hand it in.",
+		"Repeatable: hand them in as often as you like."
+	]
+	quest.42000000002B0807.title: "Rift shard"
+	quest.42000000002B0808.quest_desc: [
+		"Every core of one Strand. That tribe's lures cost half, its wrecks come a little oftener, and its banner is yours."
+	]
+	quest.42000000002B0808.title: "A whole column"
+	quest.42000000002B0809.quest_desc: [
+		"One kind of place in all nine tribes. Its hidden rooms always open now."
+	]
+	quest.42000000002B0809.title: "A whole row"
+	quest.42000000002B080A.quest_desc: [
+		"Finish a wreck of every modifier. Your wrecks hold a quarter longer."
+	]
+	quest.42000000002B080A.title: "Six stamps"
+	quest.42000000002B080B.quest_desc: [
+		"Twenty-five pages filled."
+	]
+	quest.42000000002B080B.title: "Half the Atlas"
+	quest.42000000002B080C.quest_desc: [
+		"A Weft Key opens a Hold's sealed rift. Something small and frayed wears a Guardian's shape inside."
+	]
+	quest.42000000002B080C.title: "Into the rift"
+	quest.42000000002B080D.quest_desc: [
+		"Mend all nine Remnants. Weft Keys cost half."
+	]
+	quest.42000000002B080D.title: "Every Remnant"
+	quest.42000000002B080E.quest_desc: [
+		"All fifty-four pages. Somewhere under the Skies, the heart of the old world starts to drift your way."
+	]
+	quest.42000000002B080E.title: "Every page"
+	quest.42000000002B080F.quest_desc: [
+		"Stand in the heart of the old world and re-thread it. It does not come twice."
+	]
+	quest.42000000002B080F.title: "Heart of the weave"
 }
