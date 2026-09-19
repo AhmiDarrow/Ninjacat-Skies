@@ -7,8 +7,15 @@ const HUB_ESTER_FLAG = 'ncs_hub_ester_v1'
 const HUB_DIM = 'clowderhall:clowder_hall'
 const MARCH_DIM = 'tribalpower:the_march'
 
+// The Whiskerwind guide is a Kin with no stock: a right-click is a ride to the race town.
+const GUIDE_STALL_ID = 'whiskerwind'
+
 let HubModDimensions
 let DeepCacheManager
+let RaceManager
+try {
+  RaceManager = Java.loadClass('tk.darrow.chocobosreborn.race.RaceManager')
+} catch (e) {}
 try {
   HubModDimensions = Java.loadClass('com.ninjacat.skies.clowder.world.ModDimensions')
 } catch (e) {}
@@ -144,8 +151,43 @@ function ensureHubStalls(server) {
   let a = spawnStall(hub, -3, 64, 2, -90, 0, 'padkeepers', 'Pad-keepers')
   let b = spawnStall(hub, 3, 64, 2, 90, 1, 'grit', 'Grit')
   let c = spawnStall(hub, 3, 64, -1, 90, 4, 'spark', 'Spark')
-  if (a && b && c) hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
+  // South-west of the arrival point, so it is the first keeper a newcomer sees.
+  let d = spawnStall(hub, -3, 64, 5, -90, 6, GUIDE_STALL_ID, 'Whiskerwind Guide')
+  if (a && b && c && d) hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
 }
+
+function isWhiskerwindGuide(entity) {
+  try {
+    if (String(entity.type || '').indexOf('tribal_kin') < 0) return false
+    return entityLabel(entity) === GUIDE_STALL_ID
+  } catch (e) {
+    return false
+  }
+}
+
+// On foot or in the saddle: a ridden pad-runner comes along, and the Square remembers
+// the Hall as the way home.
+function sendToWhiskerwind(player) {
+  if (!RaceManager) {
+    player.tell('The road to Whiskerwind is closed.')
+    return
+  }
+  let raw = player.minecraftPlayer ? player.minecraftPlayer : player
+  let bird = null
+  try {
+    let vehicle = raw.getVehicle()
+    if (vehicle && String(vehicle.type) === 'chocobosreborn:chocobo') bird = vehicle
+  } catch (e) {}
+  if (bird) RaceManager.enterSquare(raw, bird)
+  else RaceManager.enterSquareOnFoot(raw)
+}
+
+ItemEvents.entityInteracted(event => {
+  if (!isWhiskerwindGuide(event.target)) return
+  // Cancel both hands so the empty stall screen never opens; travel once.
+  if (String(event.hand) === 'MAIN_HAND') sendToWhiskerwind(event.player)
+  event.cancel()
+})
 
 function playerVisitedMarch(player) {
   if (!player) return false
