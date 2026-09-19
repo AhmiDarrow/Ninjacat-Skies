@@ -834,7 +834,7 @@
 					id: "5200000000290615"
 					type: "item"
 					item: {
-						id: "pamhc2trees:appleitem"
+						id: "minecraft:apple"
 						count: 8
 					}
 				}

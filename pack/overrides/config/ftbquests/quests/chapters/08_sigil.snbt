@@ -805,7 +805,7 @@
 					id: "5200000000080181"
 					type: "item"
 					item: {
-						id: "occultism:spirit_fire"
+						id: "occultism:otherstone"
 						count: 1
 					}
 				}

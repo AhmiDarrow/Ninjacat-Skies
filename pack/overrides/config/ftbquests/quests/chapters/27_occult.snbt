@@ -70,7 +70,7 @@
 					id: "52000000001B03F5"
 					type: "item"
 					item: {
-						id: "occultism:spirit_fire"
+						id: "occultism:otherstone"
 						count: 1
 					}
 				}
