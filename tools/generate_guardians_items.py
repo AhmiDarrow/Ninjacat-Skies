@@ -56,7 +56,7 @@ def done(im, base):
 
 # ------------------------------------------------------------------ relics
 def rootheart():
-    im = blank(); g = (0x8f, 0xc0, 0x5a)
+    im = blank(); g = (0x5c, 0xc8, 0xb0)   # sap-teal heart, as in the style reference
     shape(im, lambda d, c: (d.ellipse((6, 7, 16, 17), fill=c), d.ellipse((15, 7, 25, 17), fill=c),
                             d.polygon(((6, 13), (25, 13), (16, 25)), fill=c)), g)
     gr = ramp(g)
