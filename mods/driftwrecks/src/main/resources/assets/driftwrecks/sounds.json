@@ -2,108 +2,67 @@
   "driftwreck.arrive": {
     "subtitle": "subtitles.driftwrecks.driftwreck.arrive",
     "sounds": [
-      {
-        "name": "minecraft:block.respawn_anchor.charge",
-        "type": "event"
-      },
-      {
-        "name": "minecraft:ambient.cave",
-        "type": "event"
-      }
+      "driftwrecks:driftwreck/arrive"
     ]
   },
   "driftwreck.creak": {
     "subtitle": "subtitles.driftwrecks.driftwreck.creak",
     "sounds": [
-      {
-        "name": "minecraft:block.bamboo_wood.step",
-        "type": "event"
-      }
+      "driftwrecks:driftwreck/creak"
     ]
   },
   "driftwreck.crumble": {
     "subtitle": "subtitles.driftwrecks.driftwreck.crumble",
     "sounds": [
-      {
-        "name": "minecraft:block.gravel.break",
-        "type": "event"
-      }
+      "driftwrecks:driftwreck/crumble"
     ]
   },
   "driftwreck.warn_final": {
     "subtitle": "subtitles.driftwrecks.driftwreck.warn_final",
     "sounds": [
-      {
-        "name": "minecraft:block.beacon.deactivate",
-        "type": "event"
-      }
+      "driftwrecks:driftwreck/warn_final"
     ]
   },
   "driftwreck.unravel": {
     "subtitle": "subtitles.driftwrecks.driftwreck.unravel",
     "sounds": [
-      {
-        "name": "minecraft:block.amethyst_block.resonate",
-        "type": "event"
-      },
-      {
-        "name": "minecraft:entity.illusioner.mirror_move",
-        "type": "event"
-      }
+      "driftwrecks:driftwreck/unravel"
     ]
   },
   "tether.lay": {
     "subtitle": "subtitles.driftwrecks.tether.lay",
     "sounds": [
-      {
-        "name": "minecraft:block.wool.place",
-        "type": "event"
-      }
+      "driftwrecks:tether/lay"
     ]
   },
   "tether.catch": {
     "subtitle": "subtitles.driftwrecks.tether.catch",
     "sounds": [
-      {
-        "name": "minecraft:entity.leash_knot.place",
-        "type": "event"
-      }
+      "driftwrecks:tether/catch"
     ]
   },
   "rift.open": {
     "subtitle": "subtitles.driftwrecks.rift.open",
     "sounds": [
-      {
-        "name": "minecraft:block.end_portal_frame.fill",
-        "type": "event"
-      }
+      "driftwrecks:rift/open"
     ]
   },
   "keepsake.found": {
     "subtitle": "subtitles.driftwrecks.keepsake.found",
     "sounds": [
-      {
-        "name": "minecraft:block.amethyst_block.chime",
-        "type": "event"
-      }
+      "driftwrecks:keepsake/found"
     ]
   },
   "atlas.page": {
     "subtitle": "subtitles.driftwrecks.atlas.page",
     "sounds": [
-      {
-        "name": "minecraft:item.book.page_turn",
-        "type": "event"
-      }
+      "driftwrecks:atlas/page"
     ]
   },
   "driftwreck.whisper": {
     "subtitle": "subtitles.driftwrecks.driftwreck.whisper",
     "sounds": [
-      {
-        "name": "minecraft:ambient.soul_sand_valley.mood",
-        "type": "event"
-      }
+      "driftwrecks:driftwreck/whisper"
     ]
   }
 }
