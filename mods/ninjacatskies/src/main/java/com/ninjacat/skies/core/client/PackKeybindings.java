@@ -21,8 +21,16 @@ import java.util.*;
 
 /** A versioned, one-time default migration; never ship a complete options.txt over player settings. */
 public final class PackKeybindings {
-    private record Binding(String name, String key, KeyModifier modifier, String context) {}
-    private static final Path MARKER = FMLPaths.CONFIGDIR.get().resolve("ninjacat-keybindings-v1.txt");
+    /** previousKey/previousModifier: an earlier preset chord; a key still on it is moved to the new one. */
+    private record Binding(String name, String key, KeyModifier modifier, String context,
+                           String previousKey, KeyModifier previousModifier) {
+        boolean onPrevious(KeyMapping mapping) {
+            return previousKey != null && mapping.getKeyModifier() == previousModifier
+                    && mapping.getKey().equals(InputConstants.getKey(previousKey));
+        }
+    }
+    private static final Path MARKER = FMLPaths.CONFIGDIR.get().resolve("ninjacat-keybindings-v2.txt");
+    private static final Path MARKER_V1 = FMLPaths.CONFIGDIR.get().resolve("ninjacat-keybindings-v1.txt");
     private static final Binding[] PRESET = load();
     private boolean initialized;
 
@@ -50,13 +58,16 @@ public final class PackKeybindings {
     public static void apply(boolean reset) {
         var mc = Minecraft.getInstance();
         boolean migrate = reset || !Files.exists(MARKER);
+        // Upgrading from v1: the full preset was already offered once, so only move chords that changed.
+        boolean onlyMoved = !reset && migrate && Files.exists(MARKER_V1);
         Map<String,KeyMapping> keys = new HashMap<>();
         for (var key : mc.options.keyMappings) keys.put(key.getName(), key);
         int changed = 0;
         for (var binding : PRESET) {
             KeyMapping key = keys.get(binding.name());
             if (key == null) continue; // Optional mods remain optional.
-            if (migrate && (reset || key.isDefault() || key.isUnbound())) {
+            boolean fresh = !onlyMoved && (reset || key.isDefault() || key.isUnbound());
+            if (migrate && (fresh || binding.onPrevious(key))) {
                 key.setKeyModifierAndCode(binding.modifier(), InputConstants.getKey(binding.key()));
                 changed++;
             }
@@ -69,7 +80,7 @@ public final class PackKeybindings {
             mc.options.save();
             try {
                 Files.createDirectories(MARKER.getParent());
-                Files.writeString(MARKER,"Pack bindings v1 applied. Change keys normally in Controls; Pack defaults reapplies this preset.\n",StandardCharsets.UTF_8);
+                Files.writeString(MARKER,"Pack bindings v2 applied. Change keys normally in Controls; Pack defaults reapplies this preset.\n",StandardCharsets.UTF_8);
             } catch (Exception ex) { NinjacatSkies.LOGGER.warn("Could not save keybinding migration marker",ex); }
             NinjacatSkies.LOGGER.info("Applied {} pack keybindings; preserved customized bindings",changed);
         }
