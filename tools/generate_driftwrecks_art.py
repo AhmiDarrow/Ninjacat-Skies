@@ -64,17 +64,11 @@ def blocks():
 
 
 def entity():
-    """Steward echo skin (64x32 entity texture; unchanged by the 32 px item/block pass)."""
+    """Steward echo skin (64x32 vanilla-cat UV) is painted by tools/generate_steward_echo.py."""
     E = TEX / "entity"
-    im = Image.new("RGBA", (64, 32), (0, 0, 0, 0))
-    for y in range(32):
-        for x in range(64):
-            t = ((x // 2) + (y // 2)) % 2
-            im.putpixel((x, y), (*(TEAL_LT if t else TEAL), 255))
-            if (x * 7 + y * 3) % 11 == 0:
-                im.putpixel((x, y), (*GOLD, 255))
     E.mkdir(parents=True, exist_ok=True)
-    im.save(E / "steward_echo.png")
+    from generate_steward_echo import steward_echo
+    steward_echo().save(E / "steward_echo.png")
 
 
 def sheets(out: Path):
