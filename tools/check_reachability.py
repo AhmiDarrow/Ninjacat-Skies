@@ -123,8 +123,10 @@ PACK_PROVIDED = {
      ["soil", "stone", "sprout", "claw", "spark", "clock", "swarm", "sigil", "spindle"]}
 
 
-def scan_quest_rewards(producible: set):
+def scan_quest_rewards(producible: set, skip_prefix: str = ""):
     for chapter in (QUESTS / "chapters").glob("*.snbt"):
+        if skip_prefix and chapter.name.startswith(skip_prefix):
+            continue
         body = chapter.read_text(encoding="utf-8")
         for m in re.finditer(r'rewards: \[(.*?)\n\t\t\t\]', body, re.S):
             for rid in re.findall(r'item: \{\n\t*id: "([a-z0-9_]+:[a-z0-9_/]+)"', m.group(1)):
@@ -146,14 +148,44 @@ def scan_overrides_datapacks(producible: set):
                 producible.add(rid)
 
 
+# Driftwrecks are side content: nothing the main line needs may come only from a wreck (a table under
+# data/driftwrecks/, the Salvager's Frame, or the Driftwrecks quest chapter).
+WRECK_DATA = ROOT / "mods/driftwrecks/src/main/resources/data/driftwrecks"
+WRECK_CHAPTER_PREFIX = "43_"
+
+
+def scan_wreck_sources() -> set[str]:
+    out: set[str] = set()
+    if WRECK_DATA.exists():
+        for p in WRECK_DATA.rglob("*.json"):
+            if "loot_table" in p.parts or "recipe" in p.parts:
+                try:
+                    out.update(result_ids(json.loads(p.read_text(encoding="utf-8"))))
+                except Exception:
+                    continue
+    for chapter in (QUESTS / "chapters").glob(WRECK_CHAPTER_PREFIX + "*.snbt"):
+        body = chapter.read_text(encoding="utf-8")
+        for m in re.finditer(r'rewards: \[(.*?)\n\t\t\t\]', body, re.S):
+            out.update(re.findall(r'item: \{\n\t*id: "([a-z0-9_]+:[a-z0-9_/]+)"', m.group(1)))
+    return out
+
+
+def wreck_only(item: str, producible_elsewhere: set[str], wreck_sources: set[str]) -> bool:
+    """True when a main-line item could only be had from a Driftwreck."""
+    if item.startswith("driftwrecks:"):
+        return True
+    return item in wreck_sources and item not in producible_elsewhere and not item.startswith("minecraft:")
+
+
 def main() -> int:
     producible: set[str] = set()
     for jar in sorted(MODS.glob("*.jar")):
         scan_jar(jar, producible)
     scan_kubejs(producible)
     scan_overrides_datapacks(producible)
-    scan_quest_rewards(producible)
+    scan_quest_rewards(producible, skip_prefix=WRECK_CHAPTER_PREFIX)
     producible |= PACK_PROVIDED
+    wreck_sources = scan_wreck_sources()
 
     lang = (QUESTS / "lang/en_us.snbt").read_text(encoding="utf-8")
     titles = dict(re.findall(r'quest\.([0-9A-F]+)\.title: "(.*?)"', lang))
@@ -173,6 +205,9 @@ def main() -> int:
                 continue
             item = task.group(1)
             ns = item.split(":")[0]
+            if wreck_only(item, producible, wreck_sources):
+                suspects.append((chapter.name, titles.get(qid.group(1) if qid else "", item), item, "only from Driftwrecks (side content)"))
+                continue
             if item in producible:
                 continue
             if ns == "minecraft":

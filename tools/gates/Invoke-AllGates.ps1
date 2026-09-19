@@ -65,6 +65,9 @@ try {
     Invoke-Gate "Reachability" {
         python -X utf8 (Join-Path $root "tools\check_reachability.py")
     }
+    Invoke-Gate "ReachabilityWrecks" {
+        python -X utf8 (Join-Path $gateDir "test_reachability_wrecks.py")
+    }
     if ($WithExportDryRun) {
         Invoke-Gate "ExportDryRun" {
             pwsh -NoProfile -File (Join-Path $root "tools\export-curseforge.ps1")
