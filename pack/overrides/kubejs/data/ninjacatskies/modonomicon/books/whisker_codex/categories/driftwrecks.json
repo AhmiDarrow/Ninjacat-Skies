@@ -2,7 +2,7 @@
   "name": "Driftwrecks",
   "description": "Pieces of the old world, caught on your weft. They do not stay.",
   "icon": "driftwrecks:wreck_atlas",
-  "sort_number": 6,
+  "sort_number": 7,
   "background": "ninjacatskies:textures/gui/quest_atlas.png",
   "background_width": 1536,
   "background_height": 1024

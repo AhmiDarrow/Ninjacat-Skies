@@ -42,6 +42,8 @@ public final class Wreck {
     public int lifetime;            // online ticks it may hold
     public int warned;              // highest warning sent: 0, 50, 80, 95
     public boolean objectiveDone;
+    /** Finished while no owner was online: paid out once one is. */
+    public boolean pendingComplete;
     public boolean announced;
     public int minX, minY, minZ, maxX, maxY, maxZ;
 
@@ -62,6 +64,7 @@ public final class Wreck {
     public int holdWave;            // 0 not started, 1..3 running, 4 held
     public int holdTicks;
     public boolean riftOpened;
+    public long lastPenalty;        // game time of the last mob a wrong pillar cost (transient)
 
     public Wreck(int id, UUID team, String planId, @Nullable WreckCore core, WreckTier tier, Strand skin, WreckModifier modifier,
                  WreckObjective objective, boolean heartwreck, BlockPos origin, boolean hiddenRoom) {
@@ -98,7 +101,7 @@ public final class Wreck {
         t.putString("objective", objective.id); t.putBoolean("heart", heartwreck); t.put("origin", NbtUtils.writeBlockPos(origin));
         t.putBoolean("hidden", hiddenRoom);
         t.putString("phase", phase.name()); t.putInt("age", age); t.putInt("lifetime", lifetime); t.putInt("warned", warned);
-        t.putBoolean("done", objectiveDone); t.putBoolean("announced", announced);
+        t.putBoolean("done", objectiveDone); t.putBoolean("pending", pendingComplete); t.putBoolean("announced", announced);
         t.putIntArray("box", new int[]{minX, minY, minZ, maxX, maxY, maxZ});
         if (placed != null) t.put("placed", placed.save());
         if (removal != null) t.put("removal", removal.save());
@@ -125,7 +128,7 @@ public final class Wreck {
                 t.getBoolean("heart"), origin, t.getBoolean("hidden"));
         try { w.phase = Phase.valueOf(t.getString("phase")); } catch (IllegalArgumentException e) { w.phase = Phase.ACTIVE; }
         w.age = t.getInt("age"); w.lifetime = t.getInt("lifetime"); w.warned = t.getInt("warned");
-        w.objectiveDone = t.getBoolean("done"); w.announced = t.getBoolean("announced");
+        w.objectiveDone = t.getBoolean("done"); w.pendingComplete = t.getBoolean("pending"); w.announced = t.getBoolean("announced");
         int[] b = t.getIntArray("box");
         if (b.length == 6) { w.minX = b[0]; w.minY = b[1]; w.minZ = b[2]; w.maxX = b[3]; w.maxY = b[4]; w.maxZ = b[5]; }
         if (t.contains("placed")) w.placed = BuildQueue.load(t.getCompound("placed"), regs);

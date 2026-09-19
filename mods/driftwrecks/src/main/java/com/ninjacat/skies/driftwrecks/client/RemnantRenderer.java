@@ -46,8 +46,6 @@ public class RemnantRenderer extends EntityRenderer<RemnantEntity> {
                 ps.popPose();
             }
         }
-        if (!e.isOpen() && e.tickCount % 3 == 0)
-            e.level().addParticle(ParticleTypes.GLOW, e.getRandomX(0.8), e.getY() + e.getBbHeight() * e.getRandom().nextFloat(), e.getRandomZ(0.8), 0, 0.02, 0);
         super.render(e, yaw, partial, ps, buf, light);
     }
 }

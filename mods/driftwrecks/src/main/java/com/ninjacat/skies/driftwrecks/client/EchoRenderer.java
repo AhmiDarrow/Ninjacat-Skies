@@ -23,6 +23,7 @@ public class EchoRenderer extends EntityRenderer<StewardEchoEntity> {
     public EchoRenderer(EntityRendererProvider.Context ctx) {
         super(ctx);
         model = new OcelotModel<>(ctx.bakeLayer(ModelLayers.CAT));
+        model.young = false;   // only LivingEntityRenderer resets this; left true it draws a kitten
         shadowRadius = 0.2F;
     }
 

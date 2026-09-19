@@ -51,7 +51,8 @@ public class ThreadPillarBlock extends Block {
 
     /** The plan marker index at this position (pillar data, or the Heartwreck district's Strand ordinal). */
     public static int markerIndex(ServerLevel level, Wreck w, BlockPos pos) {
-        WreckPlan plan = WreckPlan.get(level.getServer(), w.planId);
+        WreckPlan plan;
+        try { plan = WreckPlan.get(level.getServer(), w.planId); } catch (IllegalStateException e) { return -1; }
         BlockPos rel = pos.subtract(w.origin);
         for (WreckPlan.Marker mk : plan.markers(w.heartwreck ? "district" : "pillar")) if (mk.pos().equals(rel)) return mk.data();
         return -1;

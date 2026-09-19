@@ -77,7 +77,11 @@ public final class WreckObjectives {
             m.markDirty();
             level.playSound(null, at, SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.BLOCKS, 1.0F, 0.5F);
             p.displayClientMessage(NinjacatText.teal("Wrong thread. The pillars go dark—watch the idol again."), true);
-            spawnAt(m, level, w, at.above(), m.mobFor(w, level.random.nextInt(4)));
+            long now = level.getGameTime();
+            if (now >= w.lastPenalty + 100 && m.mobsNear(level, at, 24) < 8) {
+                w.lastPenalty = now;
+                spawnAt(m, level, w, at.above(), m.mobFor(w, level.random.nextInt(4)));
+            }
         }
     }
 
@@ -143,11 +147,7 @@ public final class WreckObjectives {
             startWave(m, level, w, c, center, 1);
             return;
         }
-        if (!someone) {
-            w.holdWave = 0; w.holdTicks = 0; m.markDirty();
-            for (ServerPlayer p : c.onlineMembers()) p.displayClientMessage(NinjacatText.teal("Nobody holds the seam. It will wait for you."), true);
-            return;
-        }
+        if (!someone) return;   // the seam waits: the wave clock pauses, it does not start over
         w.holdTicks += 20;
         level.sendParticles(ParticleTypes.GLOW, center.getX() + 0.5, center.getY() + 0.5, center.getZ() + 0.5, 6, 1.5, 0.2, 1.5, 0.01);
         if (w.holdTicks >= HOLD_WAVE_TICKS) {

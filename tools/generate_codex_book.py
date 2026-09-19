@@ -771,8 +771,8 @@ def dw_adv(path: str) -> dict:
     return {"type": "modonomicon:advancement", "advancement_id": f"driftwrecks:{path}"}
 
 
-category("driftwrecks", "Driftwrecks", "driftwrecks:wreck_atlas", 6, "Pieces of the old world, caught on your weft. They do not stay.")
-entry("driftwrecks", "caught", "Something drifting", "How a wreck arrives, and how to reach it.", "driftwrecks:tether_spool", 0, 0, [
+category("driftwrecks", "Driftwrecks", "driftwrecks:wreck_atlas", 7, "Pieces of the old world, caught on your weft. They do not stay.")
+entry("driftwrecks", "caught", "Something drifting", "How a wreck arrives, and how to reach it.", "driftwrecks:tether_spool", -5, 0, [
     text("Something drifting",
          "**Goal:** reach a Driftwreck before it unravels.\n\n"
          "Once your Clowder has tensioned Soil, pieces of the old world drift up to your pad now and then: roughly once "

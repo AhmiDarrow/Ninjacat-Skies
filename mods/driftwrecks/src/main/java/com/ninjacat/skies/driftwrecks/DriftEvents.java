@@ -60,7 +60,16 @@ public final class DriftEvents {
     public void onReload(AddReloadListenerEvent e) { WreckPlan.clearCache(); }
 
     @SubscribeEvent
+    public void onStopping(net.neoforged.neoforge.event.server.ServerStoppingEvent e) { Tether.flush(e.getServer()); }
+
+    @SubscribeEvent
     public void onStopped(ServerStoppedEvent e) { Tether.clear(); }
+
+    @SubscribeEvent
+    public void onDeath(net.neoforged.neoforge.event.entity.living.LivingDeathEvent e) {
+        if (e.getEntity().level() instanceof net.minecraft.server.level.ServerLevel sl && DriftManager.isWreckMob(e.getEntity()))
+            DriftManager.get(sl.getServer()).mobGone(e.getEntity());
+    }
 
     @SubscribeEvent
     public void onCommands(RegisterCommandsEvent e) { DriftCommands.register(e.getDispatcher()); }

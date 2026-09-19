@@ -149,6 +149,14 @@ public class RemnantEntity extends Monster {
     // ------------------------------------------------------------------ tick
 
     @Override
+    public void tick() {
+        super.tick();
+        // while closed (immune) it sheds teal motes
+        if (level().isClientSide && !isOpen() && tickCount % 3 == 0)
+            level().addParticle(ParticleTypes.GLOW, getRandomX(0.8), getY() + getBbHeight() * random.nextFloat(), getRandomZ(0.8), 0, 0.02, 0);
+    }
+
+    @Override
     protected void customServerAiStep() {
         super.customServerAiStep();
         ServerLevel sl = (ServerLevel) level();

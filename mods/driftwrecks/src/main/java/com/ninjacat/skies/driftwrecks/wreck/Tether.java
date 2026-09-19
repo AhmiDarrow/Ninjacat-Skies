@@ -50,6 +50,7 @@ public final class Tether {
         double horiz = Math.hypot(dir.x, dir.z);
         if (horiz > MAX_LENGTH) { p.displayClientMessage(NinjacatText.teal("Too far. A spool holds " + MAX_LENGTH + " blocks of thread."), true); return false; }
         if (!p.onGround()) { p.displayClientMessage(NinjacatText.teal("Plant your feet first."), true); return false; }
+        if (w.contains(p.blockPosition(), 16)) { p.displayClientMessage(NinjacatText.teal("Throw the thread from your own ground, not from the wreck."), true); return false; }
 
         List<BlockPos> path = new ArrayList<>();
         List<BlockState> states = new ArrayList<>();
@@ -168,6 +169,23 @@ public final class Tether {
         p.hurt(p.damageSources().fellOutOfWorld(), Math.min(6F, Math.max(0, p.getHealth() - 1)));
         level.playSound(null, to, DwRegistries.sound("tether.catch"), SoundSource.PLAYERS, 1.0F, 1.0F);
         p.displayClientMessage(NinjacatText.teal("The thread catches you. It will not always be there."), true);
+    }
+
+    /** Server stopping: lay whatever is still queued at once, so a restart never leaves half a bridge. */
+    public static void flush(MinecraftServer server) {
+        ServerLevel level = DriftManager.level(server);
+        DriftManager m = DriftManager.get(server);
+        for (Lay lay : LAYING) {
+            Wreck w = m.byId(lay.wreck);
+            if (w == null) continue;
+            while (!lay.todo.isEmpty()) {
+                BlockPos b = lay.todo.poll();
+                BlockState s = lay.states.poll();
+                if (level.getBlockState(b).isAir()) { level.setBlock(b, s, 3); w.tether.add(b); }
+            }
+        }
+        LAYING.clear();
+        m.markDirty();
     }
 
     public static void clear() { LAYING.clear(); }

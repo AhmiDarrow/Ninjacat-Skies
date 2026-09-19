@@ -108,7 +108,7 @@ public final class WreckRewards {
         }
 
         // a Keepsake roll
-        if (w.core != null) {
+        if (w.core != null && !recipients.isEmpty()) {
             boolean had = team.hasKeepsake(w.skin, w.core);
             if (level.random.nextFloat() < (had ? KEEPSAKE_DUPE : KEEPSAKE_NEW)) giveKeepsake(team, w.skin, w.core, recipients.get(level.random.nextInt(recipients.size())));
         }

@@ -167,7 +167,7 @@ public class DriftwreckGameTests {
             WreckPlan plan = WreckPlan.get(level.getServer(), active.planId);
             for (WreckPlan.Marker m : plan.markers("chest"))
                 if (m.data() == 1 && level.getBlockEntity(active.origin.offset(m.pos())) instanceof WreckChestBlockEntity be) be.open(p);
-            if (!active.objectiveDone) h.fail("opening the heart chest did not finish Salvage");
+            if (!active.objectiveDone && !active.pendingComplete) h.fail("opening the heart chest did not finish Salvage");
             else { DriftManager.get(level.getServer()).forget(active.id); h.succeed(); }
         });
     }
@@ -188,7 +188,7 @@ public class DriftwreckGameTests {
             WreckObjectives.touchPillar(m, level, active, order[2], DriftManager.pillarPos(level.getServer(), active, order[2]), p);   // wrong
             if (active.pillarStep != 0 || level.getBlockState(first).getValue(ThreadPillarBlock.LIT)) { h.fail("a mistake did not reset the pillars"); return; }
             for (int idx : order) WreckObjectives.touchPillar(m, level, active, idx, DriftManager.pillarPos(level.getServer(), active, idx), p);
-            if (!active.objectiveDone) h.fail("lighting every pillar in order did not finish Re-thread");
+            if (!active.objectiveDone && !active.pendingComplete) h.fail("lighting every pillar in order did not finish Re-thread");
             else { m.forget(active.id); h.succeed(); }
             if (second == null) h.fail("second pillar missing");
         });
@@ -206,7 +206,7 @@ public class DriftwreckGameTests {
                 BlockPos sp = active.origin.offset(mk.pos());
                 if (level.getBlockState(sp).is(DwBlocks.FRAYED_SPAWNER.get())) level.destroyBlock(sp, false);
             }
-            if (!active.objectiveDone) h.fail("breaking every spawner did not finish Clear (" + active.spawnersLeft + " left)");
+            if (!active.objectiveDone && !active.pendingComplete) h.fail("breaking every spawner did not finish Clear (" + active.spawnersLeft + " left)");
             else { DriftManager.get(level.getServer()).forget(active.id); h.succeed(); }
         });
     }
@@ -219,7 +219,7 @@ public class DriftwreckGameTests {
         waitPhase(h, w, Wreck.Phase.ACTIVE, 0, active -> {
             if (active.echo == null) { h.fail("Escort spawned no echo"); return; }   // its chunk may unload with nobody near
             WreckObjectives.echoHome(DriftManager.get(level.getServer()), level, active);
-            if (!active.objectiveDone) { h.fail("echo home did not finish Escort"); return; }
+            if (!active.objectiveDone && !active.pendingComplete) { h.fail("echo home did not finish Escort"); return; }
             int before = active.lifetime;
             active.objectiveDone = false;
             WreckObjective hold = WreckObjective.HOLD;

@@ -143,8 +143,8 @@ def box(frm, to, tex, faces="nsewud", uv=None, tint=None):
 
 def models():
     # tether thread: half-height weave, bottom/top
-    w(ASSETS / "models/block/tether_thread.json", {"parent": "minecraft:block/slab", "textures": {"bottom": rl("block/tether_thread"), "top": rl("block/tether_thread"), "side": rl("block/tether_thread_side")}})
-    w(ASSETS / "models/block/tether_thread_top.json", {"parent": "minecraft:block/slab_top", "textures": {"bottom": rl("block/tether_thread"), "top": rl("block/tether_thread"), "side": rl("block/tether_thread_side")}})
+    w(ASSETS / "models/block/tether_thread.json", {"parent": "minecraft:block/slab", "render_type": "minecraft:cutout", "textures": {"bottom": rl("block/tether_thread"), "top": rl("block/tether_thread"), "side": rl("block/tether_thread_side")}})
+    w(ASSETS / "models/block/tether_thread_top.json", {"parent": "minecraft:block/slab_top", "render_type": "minecraft:cutout", "textures": {"bottom": rl("block/tether_thread"), "top": rl("block/tether_thread"), "side": rl("block/tether_thread_side")}})
     w(ASSETS / "blockstates/tether_thread.json", {"variants": {"half=bottom": {"model": rl("block/tether_thread")}, "half=top": {"model": rl("block/tether_thread_top")}}})
     block_item_model("tether_thread")
 
