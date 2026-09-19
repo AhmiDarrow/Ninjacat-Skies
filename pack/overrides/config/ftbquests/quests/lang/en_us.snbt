@@ -159,7 +159,7 @@
 	quest.4200000000010009.title: "Torch Line"
 	quest.420000000001000A.quest_desc: [
 		"Ice and lava make stone where there was none.",
-		"Normal and Hard pads ship both. The Desk sells a bucket.",
+		"Normal and Hard pads ship both. The Pad-keepers at /clowder hub sell a bucket.",
 		"How: lava next to water (or ice melt). Hammer stone. /clowder hub Grit stall sells a bundle."
 	]
 	quest.420000000001000A.title: "Cobble Cache"
@@ -182,7 +182,7 @@
 	quest.420000000001000D.title: "Catch the Rain"
 	quest.420000000001000E.quest_desc: [
 		"Scraps of the Loom that still hold. Every quest returns some.",
-		"Unravel one for string, or spend them at the Desk.",
+		"Unravel one for string, or spend them at the Kin stalls in /clowder hub.",
 		"How: quest rewards, flint-mesh dirt on a Loomframe, steward caches."
 	]
 	quest.420000000001000E.title: "Frayed Currency"
@@ -419,7 +419,7 @@
 	quest.420000000001003C.title: "Book"
 	quest.420000000001003D.quest_desc: [
 		"Paper for books and maps.",
-		"How: three sugar cane in a row. Cane from sieve dirt or Pad-keepers."
+		"How: three sugar cane in a row. Cane comes from sieving dirt with a flint mesh or better."
 	]
 	quest.420000000001003D.title: "Paper"
 	quest.420000000001003E.quest_desc: [
@@ -440,7 +440,7 @@
 	quest.4200000000010041.quest_desc: [
 		"Bench, sapling, hearth, water, Codex. The pad holds.",
 		"Tension the Strand: the Pad-keepers answer, and the token is yours to seat.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000010041.quest_subtitle: "Wake"
 	quest.4200000000010041.title: "Soil Knot"
@@ -486,7 +486,7 @@
 	quest.4200000000020048.title: "Clay Pocket"
 	quest.4200000000020049.quest_desc: [
 		"Clay and bone meal. Shape the unfired bucket.",
-		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
+		"How: clay ball + bone meal, shapeless. Clay comes from the Tension Barrel."
 	]
 	quest.4200000000020049.title: "Porcelain Clay"
 	quest.420000000002004A.quest_desc: [
@@ -715,7 +715,7 @@
 	quest.4200000000020076.quest_desc: [
 		"Yarn, porcelain, a Loomframe working, iron in the chest.",
 		"Tension the Strand: the Grit-singers answer.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000020076.quest_subtitle: "Recover"
 	quest.4200000000020076.title: "Stone Knot"
@@ -743,7 +743,7 @@
 	quest.420000000003007A.title: "Wheat Field"
 	quest.420000000003007B.quest_desc: [
 		"Plant what you eat.",
-		"How: break grass, or Pad-keepers. Plant on farmland; bone meal speeds the first field."
+		"How: break grass, or sieve dirt with a flint mesh. Plant on farmland; bone meal speeds the first field."
 	]
 	quest.420000000003007B.title: "Seed Pouch"
 	quest.420000000003007C.quest_desc: [
@@ -753,92 +753,92 @@
 	quest.420000000003007C.title: "Bone Meal Engine"
 	quest.420000000003007D.quest_desc: [
 		"Prep the harvest.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000003007D.title: "Farmers Knife"
 	quest.420000000003007E.quest_desc: [
 		"A kitchen starts here.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000003007E.title: "Cutting Board"
 	quest.420000000003007F.quest_desc: [
 		"Warm meals feed more than hunger.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000003007F.title: "Cooking Pot"
 	quest.4200000000030080.quest_desc: [
 		"Grows in tidy heads, better cooked into something than eaten raw.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000030080.title: "Cabbage"
 	quest.4200000000030081.quest_desc: [
 		"Climbs its own trellis and ripens red. Sauce starts here.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000030081.title: "Tomato"
 	quest.4200000000030082.quest_desc: [
 		"Tears of joy.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000030082.title: "Onion"
 	quest.4200000000030083.quest_desc: [
 		"Essence farming begins. Sixteen from the first row.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030083.title: "Inferium"
 	quest.4200000000030084.quest_desc: [
 		"The seed backbone. Sieve or grow it.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030084.title: "Prosperity"
 	quest.4200000000030085.quest_desc: [
 		"Raise seeds from essence.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030085.title: "Infusion Altar"
 	quest.4200000000030086.quest_desc: [
 		"Four around the altar.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030086.title: "Infusion Pedestal"
 	quest.4200000000030087.quest_desc: [
 		"Grow more pad.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030087.title: "Dirt Seeds"
 	quest.4200000000030088.quest_desc: [
 		"Grow canopy without the axe.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030088.title: "Wood Seeds"
 	quest.4200000000030089.quest_desc: [
 		"Grown, not mined. Harvest essence instead of swinging a pickaxe.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030089.title: "Stone Seeds"
 	quest.420000000003008A.quest_desc: [
 		"Metal from leaves. Recover's second engine.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000003008A.title: "Iron Seeds"
 	quest.420000000003008B.quest_desc: [
 		"A crop that yields copper essence instead of copper ore.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000003008B.title: "Copper Seeds"
 	quest.420000000003008C.quest_desc: [
 		"Gilded leaves that grow gold essence right on the pad.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000003008C.title: "Gold Seeds"
 	quest.420000000003008D.quest_desc: [
 		"Turns a farm plot into a fuel source, no mining required.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000003008D.title: "Coal Seeds"
 	quest.420000000003008E.quest_desc: [
 		"Bottled rain from a crop.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000003008E.title: "Water Seeds"
 	quest.420000000003008F.quest_desc: [
@@ -853,12 +853,12 @@
 	quest.4200000000030090.title: "Hopper Pot"
 	quest.4200000000030091.quest_desc: [
 		"Tier up. The seeds get greedier and better.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030091.title: "Prudentium"
 	quest.4200000000030092.quest_desc: [
 		"A deeper grade of crop essence, stronger than the seeds you started with.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000030092.title: "Tertium"
 	quest.4200000000030093.quest_desc: [
@@ -873,12 +873,12 @@
 	quest.4200000000030094.title: "Hay Silo"
 	quest.4200000000030095.quest_desc: [
 		"Better farmland. Rootbinders would approve.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000030095.title: "Rich Soil"
 	quest.4200000000030096.quest_desc: [
 		"Feed the soil that feeds you.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000030096.title: "Organic Compost"
 	quest.4200000000030097.quest_desc: [
@@ -959,7 +959,7 @@
 	quest.42000000000300A6.quest_desc: [
 		"A field, a kitchen, essence rising.",
 		"Tension the Strand: the Rootbinders answer.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.42000000000300A6.quest_subtitle: "Root"
 	quest.42000000000300A6.title: "Sprout Knot"
@@ -1151,7 +1151,7 @@
 	quest.42000000000400CB.quest_desc: [
 		"Plans, iron on your back, a door out.",
 		"Tension the Strand: the Edge-walkers answer. The braid opens.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.42000000000400CB.quest_subtitle: "Edge"
 	quest.42000000000400CB.title: "Claw Knot"
@@ -1205,7 +1205,7 @@
 	quest.42000000000500D4.title: "Hum: Copper Resonator"
 	quest.42000000000500D5.quest_desc: [
 		"Strike it. Hold a Pulse. Listen before you wire anything.",
-		"Chime, Shard, leather — the Desk sells leather.",
+		"Chime, Shard, leather — the Pad-keepers at /clowder hub sell leather.",
 		"How: Chime + Shard + leather. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse."
 	]
 	quest.42000000000500D5.title: "Hum: Drumheart"
@@ -1427,7 +1427,7 @@
 	quest.4200000000050101.quest_desc: [
 		"A drum struck, a Pulse held, a Resonator seated.",
 		"Tension the Strand: the Drumhearts answer.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000050101.quest_subtitle: "Hum"
 	quest.4200000000050101.title: "Spark Knot"
@@ -1465,12 +1465,12 @@
 	quest.4200000000060107.title: "Cogwheel"
 	quest.4200000000060108.quest_desc: [
 		"More teeth, slower turn.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060108.title: "Large Cog"
 	quest.4200000000060109.quest_desc: [
 		"Andesite casing frames Create.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060109.title: "Andesite Casing"
 	quest.420000000006010A.quest_desc: [
@@ -1480,214 +1480,214 @@
 	quest.420000000006010A.title: "Water Wheel"
 	quest.420000000006010B.quest_desc: [
 		"Turns rotation by hand when nothing else is spinning yet.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006010B.title: "Hand Crank"
 	quest.420000000006010C.quest_desc: [
 		"Mill grit into dust without a hammer.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006010C.title: "Millstone"
 	quest.420000000006010D.quest_desc: [
 		"Basin holds Create mixing.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006010D.title: "Basin"
 	quest.420000000006010E.quest_desc: [
 		"Plates and paths.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006010E.title: "Mechanical Press"
 	quest.420000000006010F.quest_desc: [
 		"Bulk recipes, fast.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006010F.title: "Mechanical Mixer"
 	quest.4200000000060110.quest_desc: [
 		"A flat surface that holds an item still for the belt or press.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060110.title: "Depot"
 	quest.4200000000060111.quest_desc: [
 		"Belts move items along shafts.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060111.title: "Belt Connector"
 	quest.4200000000060112.quest_desc: [
 		"Drops items straight down between machines, no belt required.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060112.title: "Chute"
 	quest.4200000000060113.quest_desc: [
 		"Washing, drying, and gravel into sand.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060113.title: "Encased Fan"
 	quest.4200000000060114.quest_desc: [
 		"A hand on a shaft.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060114.title: "Deployer"
 	quest.4200000000060115.quest_desc: [
 		"Cuts logs to planks or trees to lumber, given enough rotation.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060115.title: "Mechanical Saw"
 	quest.4200000000060116.quest_desc: [
 		"Drill through grit blocks.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060116.title: "Mechanical Drill"
 	quest.4200000000060117.quest_desc: [
 		"Cut crops in a spinning arc.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060117.title: "Mechanical Harvester"
 	quest.4200000000060118.quest_desc: [
 		"Loads or empties a stopped train's cargo without you lifting a single chest.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060118.title: "Portable Storage Interface"
 	quest.4200000000060119.quest_desc: [
 		"Stacks nine chests worth of storage into one large block.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060119.title: "Item Vault"
 	quest.420000000006011A.quest_desc: [
 		"Holds liquid in bulk and links with its neighbors to hold more.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006011A.title: "Fluid Tank"
 	quest.420000000006011B.quest_desc: [
 		"Spout fluids into basins.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006011B.title: "Spout"
 	quest.420000000006011C.quest_desc: [
 		"Pump fluids from a source.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006011C.title: "Hose Pulley"
 	quest.420000000006011D.quest_desc: [
 		"Marks the fluid-handling side of a build, andesite's fancier cousin.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006011D.title: "Copper Casing"
 	quest.420000000006011E.quest_desc: [
 		"Covers the precise machines, the ones rotation alone can't satisfy.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006011E.title: "Brass Casing"
 	quest.420000000006011F.quest_desc: [
 		"Clockwork heart. Wants a Binding Knot at its centre.",
 		"The Loom, asking to be included.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006011F.title: "Precision Mechanism"
 	quest.4200000000060120.quest_desc: [
 		"Control rotation speed.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060120.title: "Rotation Speed Controller"
 	quest.4200000000060121.quest_desc: [
 		"Turn the corner.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060121.title: "Gearbox"
 	quest.4200000000060122.quest_desc: [
 		"Clutch stops a shaft line.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060122.title: "Clutch"
 	quest.4200000000060123.quest_desc: [
 		"Gearshift flips rotation.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060123.title: "Gearshift"
 	quest.4200000000060124.quest_desc: [
 		"Programmed spin. The pattern-weavers' song, written down.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060124.title: "Sequenced Gearshift"
 	quest.4200000000060125.quest_desc: [
 		"Mixes ingredients in a basin when spun fast enough.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060125.title: "Whisk"
 	quest.4200000000060126.quest_desc: [
 		"Spins on a shaft and pushes air, or a boat, depending where it's mounted.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060126.title: "Propeller"
 	quest.4200000000060127.quest_desc: [
 		"Catches wind on a windmill and dyes easily if you want a pattern.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060127.title: "White Sail"
 	quest.4200000000060128.quest_desc: [
 		"Turns a ring of sails into rotation pulled straight from the sky.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060128.title: "Windmill Bearing"
 	quest.4200000000060129.quest_desc: [
 		"Spins an entire structure around a fixed point, walls and all.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060129.title: "Mechanical Bearing"
 	quest.420000000006012A.quest_desc: [
 		"Gantry slides along a rail.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006012A.title: "Gantry Carriage"
 	quest.420000000006012B.quest_desc: [
 		"Turns a stationary build into one that rides the rails.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006012B.title: "Cart Assembler"
 	quest.420000000006012C.quest_desc: [
 		"Links two carts so they travel as a single train.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006012C.title: "Minecart Coupling"
 	quest.420000000006012D.quest_desc: [
 		"Lays the path a cart or contraption travels along.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006012D.title: "Track"
 	quest.420000000006012E.quest_desc: [
 		"Train door for carriages.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006012E.title: "Train Door"
 	quest.420000000006012F.quest_desc: [
 		"Schedule train routes.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.420000000006012F.title: "Schedule"
 	quest.4200000000060130.quest_desc: [
 		"Shows a number from elsewhere on a block you can actually see.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060130.title: "Display Link"
 	quest.4200000000060131.quest_desc: [
 		"Display board shows data.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060131.title: "Display Board"
 	quest.4200000000060132.quest_desc: [
 		"Fires a potato hard enough to knock something back. Mostly for laughs.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060132.title: "Potato Cannon"
 	quest.4200000000060133.quest_desc: [
 		"Reaches and breaks blocks from further away than your arm allows.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060133.title: "Extendo Grip"
 	quest.4200000000060134.quest_desc: [
 		"A wheel, a press, a mixer, a fan, a clockwork heart.",
 		"Tension the Strand: the Pattern-weavers answer.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000060134.quest_subtitle: "Pattern"
 	quest.4200000000060134.title: "Clock Knot"
@@ -1704,16 +1704,16 @@
 	]
 	quest.4200000000060136.title: "Rattle in the Gears"
 	quest.4200000000070137.quest_desc: [
-		"Place the oak nest on the pad and wait. Something with wings will come out of the wood.",
+		"Place the oak nest on the pad and right-click it with a small flower. Wait. Something with wings will come out of the wood.",
 		"Look at it. That counts.",
-		"How: look at the thing. The quest completes when it is in view."
+		"How: right-click the oak nest with a small flower, then look at the first bee that comes out."
 	]
 	quest.4200000000070137.quest_subtitle: "Colony"
 	quest.4200000000070137.title: "First Wings"
 	quest.4200000000070138.quest_desc: [
-		"Eight oak logs around a small flower. Place it; the wood remembers wings.",
+		"Eight oak logs around a small flower. Place it and wake it with another flower; the wood remembers wings.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000070138.title: "Ring of Oak"
 	quest.4200000000070139.quest_desc: [
@@ -1727,8 +1727,8 @@
 	]
 	quest.420000000007013A.title: "Bee Nest"
 	quest.420000000007013B.quest_desc: [
-		"Colonies in the wind. The Desk sells comb if none drift by.",
-		"How: shear a nest or hive after bees work a flower."
+		"Colonies in the wind. The Spark stall at /clowder hub sells comb if none drift by.",
+		"How: shear a nest or hive after bees work a flower. The Spark stall at /clowder hub sells eight for 16 Thread."
 	]
 	quest.420000000007013B.title: "Honeycomb"
 	quest.420000000007013C.quest_desc: [
@@ -1743,117 +1743,117 @@
 	quest.420000000007013D.title: "Honey Bottle (Swarm)"
 	quest.420000000007013E.quest_desc: [
 		"A snack that calms an agitated bee before you reach into the hive.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: honeycomb plus a honey bottle, shapeless."
 	]
 	quest.420000000007013E.title: "Honey Treat"
 	quest.420000000007013F.quest_desc: [
 		"Gravel around a flower. Mining bees and diggers like the dust.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.420000000007013F.title: "Ring of Grit"
 	quest.4200000000070140.quest_desc: [
 		"Coarse dirt around a flower. Leafcutters and ashy miners.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000070140.title: "Ring of Coarse Dirt"
 	quest.4200000000070141.quest_desc: [
 		"Stone around a flower. Mason bees, and diggers that eat rock.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000070141.title: "Ring of Stone"
 	quest.4200000000070142.quest_desc: [
 		"A productive home.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070142.title: "Advanced Beehive"
 	quest.4200000000070143.quest_desc: [
 		"Gives a hive more room before it swarms looking for a new one.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070143.title: "Expansion Box"
 	quest.4200000000070144.quest_desc: [
 		"Bottles the yield without a hand on it.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070144.title: "Bottler"
 	quest.4200000000070145.quest_desc: [
 		"Spin combs into everything they hide.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070145.title: "Centrifuge"
 	quest.4200000000070146.quest_desc: [
 		"The same, faster, on power.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070146.title: "Powered Centrifuge"
 	quest.4200000000070147.quest_desc: [
 		"Nets a bee out of the air without a single sting.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070147.title: "Catcher"
 	quest.4200000000070148.quest_desc: [
 		"Carry a bee like a lantern.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070148.title: "Bee Cage"
 	quest.4200000000070149.quest_desc: [
 		"Hatch the genes you want.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000070149.title: "Incubator"
 	quest.420000000007014A.quest_desc: [
 		"Pair two colonies on purpose.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.420000000007014A.title: "Breeding Chamber"
 	quest.420000000007014B.quest_desc: [
 		"Sort traits like seed.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.420000000007014B.title: "Gene Indexer"
 	quest.420000000007014C.quest_desc: [
 		"A stack of treats: the colony's payroll.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: honeycomb plus a honey bottle, shapeless."
 	]
 	quest.420000000007014C.title: "Feed Upgrade"
 	quest.420000000007014D.quest_desc: [
 		"One of the deeper essence crops, grown far past the basics.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000007014D.title: "Diamond Seeds"
 	quest.420000000007014E.quest_desc: [
 		"A farm plot that yields dust instead of digging for it.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000007014E.title: "Redstone Seeds"
 	quest.420000000007014F.quest_desc: [
 		"Grows the blue essence enchanting tables are always hungry for.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000007014F.title: "Lapis Seeds"
 	quest.4200000000070150.quest_desc: [
 		"Quartz grown on leaves instead of dug from Nether caves.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000070150.title: "Nether Quartz Seeds"
 	quest.4200000000070151.quest_desc: [
 		"A softer way to farm light than mining the Nether ceiling.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000070151.title: "Glowstone Seeds"
 	quest.4200000000070152.quest_desc: [
 		"Hardened leaves that yield obsidian essence without a lava bucket in sight.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000070152.title: "Obsidian Seeds"
 	quest.4200000000070153.quest_desc: [
 		"High essence. The fields are industry now.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000070153.title: "Imperium"
 	quest.4200000000070154.quest_desc: [
 		"The last essence tier. Whatever you're building, this is the good version.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000070154.title: "Supremium"
 	quest.4200000000070155.quest_desc: [
@@ -1870,37 +1870,37 @@
 	quest.4200000000070156.title: "Something New Hums"
 	quest.4200000000070157.quest_desc: [
 		"Sand around a flower. Ashy and chocolate miners.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000070157.title: "Ring of Sand"
 	quest.4200000000070158.quest_desc: [
 		"Sugar cane around a flower. Reed bees and masons.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000070158.title: "Ring of Reed"
 	quest.4200000000070159.quest_desc: [
 		"Slime blocks around a flower. Guess.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000070159.title: "Ring of Slime"
 	quest.420000000007015A.quest_desc: [
 		"Hay around a flower. Bumble bees, and plain bees too.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.420000000007015A.title: "Ring of Hay"
 	quest.420000000007015B.quest_desc: [
 		"Snow around a flower. Sweat bees, oddly.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.420000000007015B.title: "Ring of Snow"
 	quest.420000000007015C.quest_desc: [
 		"Burns honey for power. A hive doing double duty.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.420000000007015C.title: "Honey Generator"
 	quest.420000000007015D.quest_desc: [
 		"Holds one bee on display, wings and all, without a hive attached.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.420000000007015D.title: "Jar"
 	quest.420000000007015E.quest_desc: [
@@ -1941,7 +1941,7 @@
 	quest.4200000000070165.quest_desc: [
 		"A nest you built, a hive you moved, a centrifuge, an incubator, essence fields.",
 		"Tension the Strand: the Colony-keepers answer.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000070165.quest_subtitle: "Colony"
 	quest.4200000000070165.title: "Swarm Knot"
@@ -2174,7 +2174,7 @@
 	quest.4200000000080192.quest_desc: [
 		"A braid spun, potions bottled, spells and spirits called.",
 		"Tension the Strand: the Seal-carvers answer.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000080192.quest_subtitle: "Bind"
 	quest.4200000000080192.title: "Sigil Knot"
@@ -2457,7 +2457,7 @@
 	quest.42000000000901C9.quest_desc: [
 		"A braid, a digital loom, a gate, a stone from the March.",
 		"Tension the ninth Strand. Then the Fragment, then the Post.",
-		"How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.42000000000901C9.quest_subtitle: "Reweave"
 	quest.42000000000901C9.title: "Spindle Knot"
@@ -2500,17 +2500,17 @@
 	quest.42000000000A01CF.title: "Bone Crook"
 	quest.42000000000A01D0.quest_desc: [
 		"The plainest mesh. Everything you sieve starts by passing through this.",
-		"How: string on a mesh craft, or Grit stall."
+		"How: nine string in a 3x3. The Grit stall sells the Voidloom string thread mesh, which sieves the same."
 	]
 	quest.42000000000A01D0.title: "String Mesh"
 	quest.42000000000A01D1.quest_desc: [
 		"Catches finer shards than string. Fewer scraps slip through the weave.",
-		"How: flint on a mesh craft after Recover starts sieving."
+		"How: four flint and five string in a checker. Flint is gravel, or Thread + gravel."
 	]
 	quest.42000000000A01D1.title: "Flint Mesh (Sieve)"
 	quest.42000000000A01D2.quest_desc: [
 		"Iron threads catch heavier grit and pull rarer scraps from the pile.",
-		"How: iron on a mesh craft. Grit stall sells one."
+		"How: four iron ingots and five string in a checker. No stall sells it."
 	]
 	quest.42000000000A01D2.title: "Iron Mesh (Sieve)"
 	quest.42000000000A01D3.quest_desc: [
@@ -2530,7 +2530,7 @@
 	quest.42000000000A01D5.title: "Netherite Mesh"
 	quest.42000000000A01D6.quest_desc: [
 		"Clay refined smooth, ready to fire into a crucible that holds real heat.",
-		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
+		"How: clay ball + bone meal, shapeless. Clay comes from the Tension Barrel."
 	]
 	quest.42000000000A01D6.title: "Porcelain Clay (Sieve)"
 	quest.42000000000A01D7.quest_desc: [
@@ -3088,7 +3088,7 @@
 	quest.42000000000F0244.quest_desc: [
 		"Above the Dock stands a slow dark column: the cut itself.",
 		"It thins as Clowders seat Strands. Come back and check it now and then.",
-		"How: look at the thing. The quest completes when it is in view."
+		"How: look at it. The quest completes when it is in view."
 	]
 	quest.42000000000F0244.title: "Look at the Fray"
 	quest.42000000000F0245.quest_desc: [
@@ -3332,122 +3332,122 @@
 	quest.4200000000120292.quest_desc: [
 		"Cooks stew-type meals that feed more than one plate at once.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120292.title: "Cooking Pot (Kitchen)"
 	quest.4200000000120293.quest_desc: [
 		"Skillet pan fry meals.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120293.title: "Skillet"
 	quest.4200000000120294.quest_desc: [
 		"Stove for Farmer's Delight.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120294.title: "Stove"
 	quest.4200000000120295.quest_desc: [
 		"Cuts meat and vegetables into ingredients other recipes call for.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120295.title: "Cutting Board (Kitchen)"
 	quest.4200000000120296.quest_desc: [
 		"Basket for farm haul.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120296.title: "Basket"
 	quest.4200000000120297.quest_desc: [
 		"Climbable like a vine, and needed for several kitchen recipes.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120297.title: "Rope"
 	quest.4200000000120298.quest_desc: [
 		"Catches a long fall and bounces you back up unharmed.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120298.title: "Safety Net"
 	quest.4200000000120299.quest_desc: [
 		"Boosts nearby crop growth once it's tilled and planted.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120299.title: "Rich Soil (Kitchen)"
 	quest.420000000012029A.quest_desc: [
 		"Turns food scraps into compost for enriching soil.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000012029A.title: "Organic Compost (Kitchen)"
 	quest.420000000012029B.quest_desc: [
 		"A hearty meal wrapped from cabbage, restores a solid chunk of hunger.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000012029B.title: "Cabbage Rolls"
 	quest.420000000012029C.quest_desc: [
 		"Quick to cook, quick to eat, decent hunger for the effort.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000012029C.title: "Bacon Sandwich"
 	quest.420000000012029D.quest_desc: [
 		"A layered meal that restores more hunger than the parts alone.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000012029D.title: "Hamburger"
 	quest.420000000012029E.quest_desc: [
 		"A warming bowl that restores hunger and saturation together.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000012029E.title: "Chicken Soup"
 	quest.420000000012029F.quest_desc: [
 		"Beef stew fills hard.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.420000000012029F.title: "Beef Stew"
 	quest.42000000001202A0.quest_desc: [
 		"Noodles and broth, filling enough for a full day's work.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A0.title: "Noodle Soup"
 	quest.42000000001202A1.quest_desc: [
 		"A baked dessert worth the wait, restores a generous chunk of hunger.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A1.title: "Apple Pie"
 	quest.42000000001202A2.quest_desc: [
 		"Tart and sweet, one of the richer desserts on the pad.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A2.title: "Sweet Berry Cheesecake"
 	quest.42000000001202A3.quest_desc: [
 		"Rice for kitchen line.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A3.title: "Rice"
 	quest.42000000001202A4.quest_desc: [
 		"Kitchen line comfort food.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A4.title: "Fried Rice"
 	quest.42000000001202A5.quest_desc: [
 		"Small filled parcels, quick to cook in batches.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A5.title: "Dumplings"
 	quest.42000000001202A6.quest_desc: [
 		"A warm drink brewed from cocoa beans and milk.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A6.title: "Hot Cocoa"
 	quest.42000000001202A7.quest_desc: [
 		"A cool drink pressed from melon, restores a little hunger fast.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A7.title: "Melon Juice"
 	quest.42000000001202A8.quest_desc: [
 		"Woven cloth used in several kitchen and decor recipes.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A8.title: "Canvas"
 	quest.42000000001202A9.quest_desc: [
 		"Soft woven flooring, a change of texture from plain wood.",
-		"How: sieve dirt for seeds (flint mesh), then the cutting board / pot."
+		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.42000000001202A9.title: "Tatami"
 	quest.42000000001302AA.quest_desc: [
@@ -4264,528 +4264,528 @@
 	quest.420000000018034A.quest_desc: [
 		"Base essence. Feeds growth accelerators and reprocessors alike.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018034A.title: "Inferium Stock"
 	quest.420000000018034B.quest_desc: [
 		"An unfinished seed. Needs essence before it grows anything.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018034B.title: "Prosperity Base"
 	quest.420000000018034C.quest_desc: [
 		"Consumed once, it upgrades essence to the next tier.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018034C.title: "Infusion Crystal"
 	quest.420000000018034D.quest_desc: [
 		"Second-tier essence, refined from stacks of inferium.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018034D.title: "Prudentium Stock"
 	quest.420000000018034E.quest_desc: [
 		"Third-tier essence, a rung above prudentium.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018034E.title: "Tertium Stock"
 	quest.420000000018034F.quest_desc: [
 		"Fourth-tier essence, close to the top of the chain.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018034F.title: "Imperium Stock"
 	quest.4200000000180350.quest_desc: [
 		"Fifth-tier essence, nearly as refined as it gets.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180350.title: "Supremium Stock"
 	quest.4200000000180351.quest_desc: [
 		"The refined peak. Needed for the strongest gear and seeds.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180351.title: "Awakened Essence"
 	quest.4200000000180352.quest_desc: [
 		"The centerpiece for awakening essence into its final form.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180352.title: "Awakening Altar"
 	quest.4200000000180353.quest_desc: [
 		"Ring the altar with these to complete the awakening.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180353.title: "Awakening Pedestal"
 	quest.4200000000180354.quest_desc: [
 		"An infusion crystal that never runs out of charges.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180354.title: "Master Crystal"
 	quest.4200000000180355.quest_desc: [
 		"Stores essence in bulk so machines never run dry.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180355.title: "Essence Vessel"
 	quest.4200000000180356.quest_desc: [
 		"The base component for every essence-powered machine.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180356.title: "Machine Frame"
 	quest.4200000000180357.quest_desc: [
 		"Watches nearby crops and breaks them the moment they ripen.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180357.title: "Harvester"
 	quest.4200000000180358.quest_desc: [
 		"Turns spare seeds back into essence instead of clutter.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180358.title: "Seed Reprocessor"
 	quest.4200000000180359.quest_desc: [
 		"Speeds up nearby crops using inferium essence.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180359.title: "Inferium Accel"
 	quest.420000000018035A.quest_desc: [
 		"A stronger accelerator, one tier past inferium.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018035A.title: "Prudentium Accel"
 	quest.420000000018035B.quest_desc: [
 		"Mid-tier acceleration for a busier field.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018035B.title: "Tertium Accel"
 	quest.420000000018035C.quest_desc: [
 		"Near the top of the growth-speed range.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018035C.title: "Imperium Accel"
 	quest.420000000018035D.quest_desc: [
 		"The fastest accelerator essence can build.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018035D.title: "Supremium Accel"
 	quest.420000000018035E.quest_desc: [
 		"A basic splash of hydration for thirsty crops.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018035E.title: "Watering Can"
 	quest.420000000018035F.quest_desc: [
 		"A watering can infused with inferium, wider reach.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018035F.title: "Inferium Can"
 	quest.4200000000180360.quest_desc: [
 		"Waters more crops per use than the basic can.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180360.title: "Prudentium Can"
 	quest.4200000000180361.quest_desc: [
 		"A mid-tier can with a noticeably wider splash.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180361.title: "Tertium Can"
 	quest.4200000000180362.quest_desc: [
 		"Waters a broad patch of field in one pass.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180362.title: "Imperium Can"
 	quest.4200000000180363.quest_desc: [
 		"The widest splash a watering can can manage.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180363.title: "Supremium Can"
 	quest.4200000000180364.quest_desc: [
 		"Speeds up growth when tossed onto planted crops.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180364.title: "Fertilized Essence"
 	quest.4200000000180365.quest_desc: [
 		"Ground from soulium ingots. A component for hostile seeds.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180365.title: "Soulium Dust"
 	quest.4200000000180366.quest_desc: [
 		"Smelted from soulium dust, dark and a little cold.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180366.title: "Soulium Ingot"
 	quest.4200000000180367.quest_desc: [
 		"Crafted from soulium. Deals extra damage to hostile mobs.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180367.title: "Soulium Dagger"
 	quest.4200000000180368.quest_desc: [
 		"The unfinished seed for farming hostile mobs.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180368.title: "Soulium Seed Base"
 	quest.4200000000180369.quest_desc: [
 		"Grow redstone dust instead of mining for it.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180369.title: "Redstone Seeds (Fields)"
 	quest.420000000018036A.quest_desc: [
 		"A field of blue instead of a cave full of it.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018036A.title: "Lapis Seeds (Fields)"
 	quest.420000000018036B.quest_desc: [
 		"Grows diamonds on a stem instead of underground.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018036B.title: "Diamond Seeds (Fields)"
 	quest.420000000018036C.quest_desc: [
 		"Farms emeralds without a single villager trade.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018036C.title: "Emerald Seeds"
 	quest.420000000018036D.quest_desc: [
 		"Grows obsidian without a bucket of water in sight.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018036D.title: "Obsidian Seeds (Fields)"
 	quest.420000000018036E.quest_desc: [
 		"Farms quartz without setting foot in the Nether.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018036E.title: "Nether Quartz Seeds (Fields)"
 	quest.420000000018036F.quest_desc: [
 		"Grows light without a trip to the Nether ceiling.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018036F.title: "Glowstone Seeds (Fields)"
 	quest.4200000000180370.quest_desc: [
 		"The rarest crop. Grows scrap toward the hardest metal.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180370.title: "Netherite Seeds"
 	quest.4200000000180371.quest_desc: [
 		"Farms amethyst shards without a single geode.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180371.title: "Amethyst Seeds"
 	quest.4200000000180372.quest_desc: [
 		"Grows honey bottles without a single sting.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180372.title: "Honey Seeds"
 	quest.4200000000180373.quest_desc: [
 		"Farms prismarine without an ocean monument nearby.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180373.title: "Prismarine Seeds"
 	quest.4200000000180374.quest_desc: [
 		"Grows basalt columns without a trip to the Nether.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180374.title: "Basalt Seeds"
 	quest.4200000000180375.quest_desc: [
 		"A general-purpose crop for Nether resources.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180375.title: "Nether Seeds"
 	quest.4200000000180376.quest_desc: [
 		"A general-purpose crop for end resources.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180376.title: "End Seeds"
 	quest.4200000000180377.quest_desc: [
 		"Grows sky stone for a network that needs it.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180377.title: "Sky Stone Seeds"
 	quest.4200000000180378.quest_desc: [
 		"Farms certus quartz for crystal growth and crafting.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180378.title: "Certus Seeds"
 	quest.4200000000180379.quest_desc: [
 		"Grows fluix crystals for network components.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180379.title: "Fluix Seeds"
 	quest.420000000018037A.quest_desc: [
 		"Farms silicon for processors and circuits.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018037A.title: "Silicon Seeds"
 	quest.420000000018037B.quest_desc: [
 		"Grows steel without a single furnace running.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018037B.title: "Steel Seeds"
 	quest.420000000018037C.quest_desc: [
 		"Farms osmium for early alloy work.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018037C.title: "Osmium Seeds"
 	quest.420000000018037D.quest_desc: [
 		"Grows tin for bronze and basic alloys.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018037D.title: "Tin Seeds"
 	quest.420000000018037E.quest_desc: [
 		"Farms aluminum for lightweight alloy components.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018037E.title: "Aluminum Seeds"
 	quest.420000000018037F.quest_desc: [
 		"Grows uranium. Handle the ore with some care.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018037F.title: "Uranium Seeds"
 	quest.4200000000180380.quest_desc: [
 		"Farms uraninite for reactor fuel down the line.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180380.title: "Uraninite Seeds"
 	quest.4200000000180381.quest_desc: [
 		"Grows bottled experience instead of grinding mobs for it.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180381.title: "Experience Seeds"
 	quest.4200000000180382.quest_desc: [
 		"Farms slimeballs without hunting a swamp at night.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180382.title: "Slime Seeds"
 	quest.4200000000180383.quest_desc: [
 		"Grows blaze rods without a trip to a fortress.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180383.title: "Blaze Seeds"
 	quest.4200000000180384.quest_desc: [
 		"Farms ghast tears without floating over lava.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180384.title: "Ghast Seeds"
 	quest.4200000000180385.quest_desc: [
 		"Grows ender pearls without provoking a single enderman.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180385.title: "Enderman Seeds"
 	quest.4200000000180386.quest_desc: [
 		"Farms wither skeleton skulls at a much safer distance.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180386.title: "Wither Skel Seeds"
 	quest.4200000000180387.quest_desc: [
 		"Grows leather without raising a single cow.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180387.title: "Cow Seeds"
 	quest.4200000000180388.quest_desc: [
 		"Farms wool in every dye color at once.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180388.title: "Sheep Seeds"
 	quest.4200000000180389.quest_desc: [
 		"Grows feathers without keeping a coop.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180389.title: "Chicken Seeds"
 	quest.420000000018038A.quest_desc: [
 		"Farms porkchops without raising a single pig.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038A.title: "Pig Seeds"
 	quest.420000000018038B.quest_desc: [
 		"Grows bones without a night spent fighting skeletons.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038B.title: "Skeleton Seeds"
 	quest.420000000018038C.quest_desc: [
 		"Farms rotten flesh, mostly for the compost bin.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038C.title: "Zombie Seeds"
 	quest.420000000018038D.quest_desc: [
 		"Grows gunpowder without the risk of an explosion.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038D.title: "Creeper Seeds"
 	quest.420000000018038E.quest_desc: [
 		"Grows on a mystical tree instead of underground.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038E.title: "Iron Essence"
 	quest.420000000018038F.quest_desc: [
 		"A gilded leaf that drops gold instead of apples.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038F.title: "Gold Essence"
 	quest.4200000000180390.quest_desc: [
 		"The hardest leaf on the tree, quite literally.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180390.title: "Diamond Essence"
 	quest.4200000000180391.quest_desc: [
 		"Grows fuel on a tree instead of in a seam.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180391.title: "Coal Essence"
 	quest.4200000000180392.quest_desc: [
 		"Grows copper on a tree instead of a vein.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180392.title: "Copper Essence"
 	quest.4200000000180393.quest_desc: [
 		"Grows dust on a tree instead of underground.",
-		"How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed."
+		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180393.title: "Redstone Essence"
 	quest.4200000000190394.quest_desc: [
 		"Points at nests you placed and forgot about.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000190394.title: "Nest Locator"
 	quest.4200000000190395.quest_desc: [
 		"Birch logs around a flower: carpenter bees of a different colour.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000190395.title: "Ring of Birch"
 	quest.4200000000190396.quest_desc: [
 		"Spruce around a flower: resin bees.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000190396.title: "Ring of Spruce"
 	quest.4200000000190397.quest_desc: [
 		"Dark oak around a flower: blue-banded bees.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000190397.title: "Ring of Dark Oak"
 	quest.4200000000190398.quest_desc: [
 		"Glowstone around a flower: bees that light up.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000190398.title: "Ring of Glowstone"
 	quest.4200000000190399.quest_desc: [
 		"Quartz around a flower: crystalline bees, the root of the ore lines.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000190399.title: "Ring of Quartz"
 	quest.420000000019039A.quest_desc: [
 		"Nether bricks around a flower: magmatic.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.420000000019039A.title: "Ring of Nether Brick"
 	quest.420000000019039B.quest_desc: [
 		"Soul sand around a flower: ghostly.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.420000000019039B.title: "Ring of Soul Sand"
 	quest.420000000019039C.quest_desc: [
 		"End stone around a flower: ender bees, and the far end of breeding.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.420000000019039C.title: "Ring of End Stone"
 	quest.420000000019039D.quest_desc: [
 		"Obsidian around a flower: draconic. Do not ask what it eats.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.420000000019039D.title: "Ring of Obsidian"
 	quest.420000000019039E.quest_desc: [
 		"A proper hive with more slots than a wild nest.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.420000000019039E.title: "Advanced Oak Hive"
 	quest.420000000019039F.quest_desc: [
 		"Bolts onto a hive to add more bee living space.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.420000000019039F.title: "Expansion Box (Apiary)"
 	quest.42000000001903A0.quest_desc: [
 		"Traps a bee in glass so you can carry it.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A0.title: "Jar Oak"
 	quest.42000000001903A1.quest_desc: [
 		"Cage bees for moving hives.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A1.title: "Bee Cage (Apiary)"
 	quest.42000000001903A2.quest_desc: [
 		"Holds a bee safely for transport between pads.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A2.title: "Sturdy Cage"
 	quest.42000000001903A3.quest_desc: [
 		"Scoops bees into jars automatically, no net required.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A3.title: "Catcher (Apiary)"
 	quest.42000000001903A4.quest_desc: [
 		"Keeps a hive fed so the bees keep working.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A4.title: "Feeder"
 	quest.42000000001903A5.quest_desc: [
 		"Fills bottles from a hive's stored honey.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A5.title: "Bottler (Apiary)"
 	quest.42000000001903A6.quest_desc: [
 		"Spins honeycomb apart into honey, wax, and combs.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A6.title: "Centrifuge (Apiary)"
 	quest.42000000001903A7.quest_desc: [
 		"A centrifuge that spins on its own once powered.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A7.title: "Powered Centrifuge (Apiary)"
 	quest.42000000001903A8.quest_desc: [
 		"Spins faster with a heat source feeding it.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A8.title: "Heated Centrifuge"
 	quest.42000000001903A9.quest_desc: [
 		"Hatches bee larvae into new bees with useful traits.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903A9.title: "Incubator (Apiary)"
 	quest.42000000001903AA.quest_desc: [
 		"Pairs two bees and produces offspring with mixed traits.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903AA.title: "Breeding Chamber (Apiary)"
 	quest.42000000001903AB.quest_desc: [
 		"Reads a bee's traits and records them for breeding.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903AB.title: "Gene Indexer (Apiary)"
 	quest.42000000001903AC.quest_desc: [
 		"Burns honey for a slow, steady trickle of power.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903AC.title: "Honey Generator (Apiary)"
 	quest.42000000001903AD.quest_desc: [
 		"A snack that keeps a caged bee calm and healthy.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: honeycomb plus a honey bottle, shapeless."
 	]
 	quest.42000000001903AD.title: "Honey Treat (Apiary)"
 	quest.42000000001903AE.quest_desc: [
 		"A full bucket of honey, ready to pour or burn.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903AE.title: "Honey Bucket"
 	quest.42000000001903AF.quest_desc: [
 		"Melts down for candles or seals a hive's frame.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903AF.title: "Wax Stock"
 	quest.42000000001903B0.quest_desc: [
 		"A honeycomb that can be tuned to match any bee.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903B0.title: "Configurable Comb"
 	quest.42000000001903B1.quest_desc: [
 		"A bee's traits, extracted and ready to bottle.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903B1.title: "Gene Sample"
 	quest.42000000001903B2.quest_desc: [
 		"One bee's genetics, stored for later breeding.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903B2.title: "Gene Bottle"
 	quest.42000000001903B3.quest_desc: [
@@ -4835,52 +4835,52 @@
 	quest.42000000001903BB.title: "Obsidian Treat"
 	quest.42000000001903BC.quest_desc: [
 		"More rooms for the hive, cut from birch this time.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903BC.title: "Birch Expansion"
 	quest.42000000001903BD.quest_desc: [
 		"Spruce-paneled rooms bolted onto the hive.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903BD.title: "Spruce Expansion"
 	quest.42000000001903BE.quest_desc: [
 		"Dark oak paneling, same purpose: more bee rooms.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903BE.title: "Dark Oak Expansion"
 	quest.42000000001903BF.quest_desc: [
 		"Acacia rooms for a hive that's outgrown itself.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903BF.title: "Acacia Expansion"
 	quest.42000000001903C0.quest_desc: [
 		"Jungle wood rooms, just as roomy as the rest.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903C0.title: "Jungle Expansion"
 	quest.42000000001903C1.quest_desc: [
 		"Cherry-paneled rooms, purely a matter of style.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903C1.title: "Cherry Expansion"
 	quest.42000000001903C2.quest_desc: [
 		"Crimson-paneled rooms for a hive gone Nether.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903C2.title: "Crimson Expansion"
 	quest.42000000001903C3.quest_desc: [
 		"Warped-paneled rooms, the blue half of the pair.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903C3.title: "Warped Expansion"
 	quest.42000000001903C4.quest_desc: [
 		"Bamboo rooms, lighter and just as functional.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903C4.title: "Bamboo Expansion"
 	quest.42000000001903C5.quest_desc: [
 		"Mangrove rooms, the newest wood on the list.",
-		"How: ring of the nest material around a small flower, place, wait for wings."
+		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.42000000001903C5.title: "Mangrove Expansion"
 	quest.42000000001903C6.quest_desc: [
@@ -5056,22 +5056,22 @@
 	quest.42000000001A03E7.title: "Trapped Chest"
 	quest.42000000001A03E8.quest_desc: [
 		"Loads a belt or pulls items off one, depending on facing.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001A03E8.title: "Create Funnel"
 	quest.42000000001A03E9.quest_desc: [
 		"A funnel that can filter what it moves.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001A03E9.title: "Brass Funnel"
 	quest.42000000001A03EA.quest_desc: [
 		"Drops items straight down between floors.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001A03EA.title: "Chute (Pipes)"
 	quest.42000000001A03EB.quest_desc: [
 		"A chute that can filter and hold back items.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001A03EB.title: "Smart Chute"
 	quest.42000000001A03EC.quest_desc: [
@@ -5298,7 +5298,7 @@
 	quest.42000000001C0418.quest_desc: [
 		"Turn it by hand when nothing else is spinning yet.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0418.title: "Hand Crank (Clockworks)"
 	quest.42000000001C0419.quest_desc: [
@@ -5313,32 +5313,32 @@
 	quest.42000000001C041A.title: "Cogwheel Stock"
 	quest.42000000001C041B.quest_desc: [
 		"Meshes at an angle and shifts rotation speed.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C041B.title: "Large Cog (Clockworks)"
 	quest.42000000001C041C.quest_desc: [
 		"Turns rotation around a corner without losing speed.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C041C.title: "Gearbox (Clockworks)"
 	quest.42000000001C041D.quest_desc: [
 		"Engage a machine mode.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C041D.title: "Clutch (Clockworks)"
 	quest.42000000001C041E.quest_desc: [
 		"Flips rotation direction with a redstone pulse.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C041E.title: "Gearshift (Clockworks)"
 	quest.42000000001C041F.quest_desc: [
 		"Sends rotation a long way without a wall of shafts.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C041F.title: "Chain Drive"
 	quest.42000000001C0420.quest_desc: [
 		"A chain drive that can reverse or stop on command.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0420.title: "Adj Chain"
 	quest.42000000001C0421.quest_desc: [
@@ -5348,277 +5348,277 @@
 	quest.42000000001C0421.title: "Water Wheel (Clockworks)"
 	quest.42000000001C0422.quest_desc: [
 		"Bigger wheel, more torque from the same current.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0422.title: "Large Wheel"
 	quest.42000000001C0423.quest_desc: [
 		"Turns sails into rotation, pad wind included.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0423.title: "Windmill Bearing (Clockworks)"
 	quest.42000000001C0424.quest_desc: [
 		"Rotates whole structures built onto it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0424.title: "Mechanical Bearing (Clockworks)"
 	quest.42000000001C0425.quest_desc: [
 		"Rotates a structure on a schedule, like a clock hand.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0425.title: "Clockwork Bearing"
 	quest.42000000001C0426.quest_desc: [
 		"Converts boiler steam into steady rotation.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0426.title: "Steam Engine"
 	quest.42000000001C0427.quest_desc: [
 		"Blows off pressure with a sound you can hear across the pad.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0427.title: "Steam Whistle"
 	quest.42000000001C0428.quest_desc: [
 		"Heats basins hot enough for blasting and brewing.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0428.title: "Blaze Burner"
 	quest.42000000001C0429.quest_desc: [
 		"Catches whatever drops into it for mixing or pressing.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0429.title: "Basin (Clockworks)"
 	quest.42000000001C042A.quest_desc: [
 		"Mix bulk recipes fast.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C042A.title: "Mechanical Mixer (Clockworks)"
 	quest.42000000001C042B.quest_desc: [
 		"Smash blocks for grit.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C042B.title: "Mechanical Press (Clockworks)"
 	quest.42000000001C042C.quest_desc: [
 		"Grindstone or mill work.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C042C.title: "Millstone (Clockworks)"
 	quest.42000000001C042D.quest_desc: [
 		"Two wheels turning against each other, ore fed between them.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C042D.title: "Crushing Wheel"
 	quest.42000000001C042E.quest_desc: [
 		"Fan for washing and drying.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C042E.title: "Encased Fan (Clockworks)"
 	quest.42000000001C042F.quest_desc: [
 		"Stirs a basin from above, no hands required.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C042F.title: "Whisk (Clockworks)"
 	quest.42000000001C0430.quest_desc: [
 		"Blows items and mobs when spun fast enough.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0430.title: "Propeller (Clockworks)"
 	quest.42000000001C0431.quest_desc: [
 		"Holds a single item so machinery can work on it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0431.title: "Depot (Clockworks)"
 	quest.42000000001C0432.quest_desc: [
 		"Moves items along at whatever speed the shaft gives it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0432.title: "Belt"
 	quest.42000000001C0433.quest_desc: [
 		"Loads or unloads a belt, one way at a time.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0433.title: "Andesite Funnel"
 	quest.42000000001C0434.quest_desc: [
 		"Filters what it moves, by item and by count.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0434.title: "Brass Funnel (Clockworks)"
 	quest.42000000001C0435.quest_desc: [
 		"Drops items straight down between floors.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0435.title: "Chute Line"
 	quest.42000000001C0436.quest_desc: [
 		"Filters what falls through it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0436.title: "Smart Chute (Clockworks)"
 	quest.42000000001C0437.quest_desc: [
 		"Carries liquid wherever the pump pushes it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0437.title: "Fluid Pipe (Clockworks)"
 	quest.42000000001C0438.quest_desc: [
 		"Filters which fluid gets through.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0438.title: "Smart Fluid Pipe"
 	quest.42000000001C0439.quest_desc: [
 		"Pushes fluid through pipes in one direction.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0439.title: "Mechanical Pump"
 	quest.42000000001C043A.quest_desc: [
 		"Pump fluids from a source.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C043A.title: "Hose Pulley (Clockworks)"
 	quest.42000000001C043B.quest_desc: [
 		"Fills items and containers from above with fluid.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C043B.title: "Spout (Clockworks)"
 	quest.42000000001C043C.quest_desc: [
 		"Empties fluid out of filled containers.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C043C.title: "Item Drain"
 	quest.42000000001C043D.quest_desc: [
 		"Stores a big volume of liquid in one block.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C043D.title: "Fluid Tank (Clockworks)"
 	quest.42000000001C043E.quest_desc: [
 		"A large chest for a pad that outgrew barrels.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C043E.title: "Item Vault (Clockworks)"
 	quest.42000000001C043F.quest_desc: [
 		"Loads and unloads a train's inventory at a station.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C043F.title: "Portable Storage"
 	quest.42000000001C0440.quest_desc: [
 		"Loads and unloads a train's fluid tank at a station.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0440.title: "Portable Fluid"
 	quest.42000000001C0441.quest_desc: [
 		"The brass heart of most advanced Create machines.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0441.title: "Precision Mech"
 	quest.42000000001C0442.quest_desc: [
 		"Lights up brighter the faster it spins.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0442.title: "Electron Tube"
 	quest.42000000001C0443.quest_desc: [
 		"Placed on a shaft, it becomes a deployer's hand.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0443.title: "Brass Hand"
 	quest.42000000001C0444.quest_desc: [
 		"Picks items from one spot and places them in another.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0444.title: "Mechanical Arm"
 	quest.42000000001C0445.quest_desc: [
 		"Sets an exact rotation speed for whatever follows it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0445.title: "Speed Controller"
 	quest.42000000001C0446.quest_desc: [
 		"Runs a short program of rotation steps.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0446.title: "Sequenced Gearshift (Clockworks)"
 	quest.42000000001C0447.quest_desc: [
 		"Sends a redstone signal without a wire between pads.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0447.title: "Redstone Link"
 	quest.42000000001C0448.quest_desc: [
 		"Signals redstone when an inventory crosses a threshold.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0448.title: "Stockpile Switch"
 	quest.42000000001C0449.quest_desc: [
 		"Watches an inventory and signals when contents match.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0449.title: "Content Observer"
 	quest.42000000001C044A.quest_desc: [
 		"Displays a number for anyone reading the panel.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044A.title: "Nixie Tube"
 	quest.42000000001C044B.quest_desc: [
 		"Shows text pulled from a sign or a stock ticker.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044B.title: "Display Board (Clockworks)"
 	quest.42000000001C044C.quest_desc: [
 		"Shows the count of a tracked resource at a glance.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044C.title: "Factory Gauge"
 	quest.42000000001C044D.quest_desc: [
 		"Box items for shipping.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044D.title: "Packager"
 	quest.42000000001C044E.quest_desc: [
 		"Turns a stack back into a labeled storage drawer.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044E.title: "Repackager"
 	quest.42000000001C044F.quest_desc: [
 		"Requests items from storage with a lever pull.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044F.title: "Stock Ticker"
 	quest.42000000001C0450.quest_desc: [
 		"Lay it down and a cart has somewhere to go.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0450.title: "Track (Clockworks)"
 	quest.42000000001C0451.quest_desc: [
 		"Marks where a train loads, unloads, or waits.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0451.title: "Track Station"
 	quest.42000000001C0452.quest_desc: [
 		"Tells a train which stations to visit and when.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0452.title: "Schedule (Clockworks)"
 	quest.42000000001C0453.quest_desc: [
 		"Builds a train car onto the track beneath it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0453.title: "Cart Assembler (Clockworks)"
 	quest.42000000001C0454.quest_desc: [
 		"A powered rail with finer speed control.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0454.title: "Controller Rail"
 	quest.42000000001C0455.quest_desc: [
 		"Rope pulley for vertical move.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0455.title: "Rope Pulley"
 	quest.42000000001C0456.quest_desc: [
 		"Lifts a whole platform between marked floors.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0456.title: "Elevator Pulley"
 	quest.42000000001C0457.quest_desc: [
 		"Carries a gantry carriage along its length.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0457.title: "Gantry Shaft"
 	quest.42000000001C0458.quest_desc: [
 		"Rides a gantry shaft, dragging structure along with it.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0458.title: "Gantry Carriage (Clockworks)"
 	quest.42000000001D0459.quest_desc: [
@@ -5940,7 +5940,7 @@
 	quest.42000000001E0498.quest_desc: [
 		"Fired clay, a step toward porcelain tools.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
+		"How: clay ball + bone meal, shapeless. Clay comes from the Tension Barrel."
 	]
 	quest.42000000001E0498.title: "Porcelain Clay (Voidcraft)"
 	quest.42000000001E0499.quest_desc: [
@@ -5955,17 +5955,17 @@
 	quest.42000000001E049A.title: "Porcelain Crucible (Voidcraft)"
 	quest.42000000001E049B.quest_desc: [
 		"The first sieve mesh; slow but it works.",
-		"How: string on a mesh craft, or Grit stall."
+		"How: nine string in a 3x3. The Grit stall sells the Voidloom string thread mesh, which sieves the same."
 	]
 	quest.42000000001E049B.title: "String Mesh (Voidcraft)"
 	quest.42000000001E049C.quest_desc: [
 		"Sieves faster than string, worth the upgrade.",
-		"How: flint on a mesh craft after Recover starts sieving."
+		"How: four flint and five string in a checker. Flint is gravel, or Thread + gravel."
 	]
 	quest.42000000001E049C.title: "Flint Mesh (Voidcraft)"
 	quest.42000000001E049D.quest_desc: [
 		"A solid middle mesh for steady sieving.",
-		"How: iron on a mesh craft. Grit stall sells one."
+		"How: four iron ingots and five string in a checker. No stall sells it."
 	]
 	quest.42000000001E049D.title: "Iron Mesh (Voidcraft)"
 	quest.42000000001E049E.quest_desc: [
@@ -6105,7 +6105,7 @@
 	quest.42000000001E04B8.title: "Frayed Thread Stock"
 	quest.42000000001E04B9.quest_desc: [
 		"Archive pages and notes.",
-		"How: seating a Strand at the Post, or Desk/Kin. Right-click to read; they are kept, not spent."
+		"How: seating a Strand at the Post, or the Spark stall at /clowder hub (8 Thread). Right-click to read; they are kept, not spent."
 	]
 	quest.42000000001E04B9.title: "Codex Pages"
 	quest.42000000001E04BA.quest_desc: [
@@ -6226,22 +6226,22 @@
 	quest.42000000001F04D0.title: "Fluix Cable (Packaged)"
 	quest.42000000001F04D1.quest_desc: [
 		"Packs Create-side items the mechanical way.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001F04D1.title: "Create Packager"
 	quest.42000000001F04D2.quest_desc: [
 		"Turns packages back into a labeled drawer.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001F04D2.title: "Create Repackager"
 	quest.42000000001F04D3.quest_desc: [
 		"Requests packaged items with a lever pull.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001F04D3.title: "Stock Ticker (Packaged)"
 	quest.42000000001F04D4.quest_desc: [
 		"A bulk buffer chest for packages waiting their turn.",
-		"How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter."
+		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001F04D4.title: "Item Vault (Packaged)"
 	quest.42000000002004D5.quest_desc: [
@@ -6724,7 +6724,7 @@
 	]
 	quest.4200000000220532.title: "Ritual Chalk (Tribal)"
 	quest.4200000000220533.quest_desc: [
-		"Place the heart — Chime + Shard + leather (Desk sells leather).",
+		"Place the heart — Chime + Shard + leather (the Pad-keepers sell leather).",
 		"How: Chime + Shard + leather. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse."
 	]
 	quest.4200000000220533.title: "Drumheart Beat"
@@ -8485,12 +8485,12 @@
 	quest.4200000000290625.title: "Fruit Salad"
 	quest.4200000000290626.quest_desc: [
 		"Pasta night. Optional.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"How: gardens and fruit trees supply the ingredients. Soy tofu stands in for meat and egg. JEI names the station."
 	]
 	quest.4200000000290626.title: "Spaghetti Dinner"
 	quest.4200000000290627.quest_desc: [
 		"Breakfast flex. Optional.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"How: gardens and fruit trees supply the ingredients. Soy tofu stands in for meat and egg. JEI names the station."
 	]
 	quest.4200000000290627.title: "Bacon Pancakes"
 	quest.4200000000290628.quest_desc: [
@@ -8500,7 +8500,7 @@
 	quest.4200000000290628.title: "Avocado Toast"
 	quest.4200000000290629.quest_desc: [
 		"Not the Delight hamburger. Optional.",
-		"How: gardens and fruit trees supply the ingredients. JEI names the station."
+		"How: gardens and fruit trees supply the ingredients. Soy tofu stands in for meat and egg. JEI names the station."
 	]
 	quest.4200000000290629.title: "Onion Burger"
 	quest.420000000029062A.quest_desc: [
@@ -8606,37 +8606,37 @@
 	quest.42000000002A063D.title: "Hollow Channel"
 	quest.42000000002A063E.quest_desc: [
 		"Ore crops drop these. Optional breeding line.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland."
 	]
 	quest.42000000002A063E.title: "Copper Nugget Crop"
 	quest.42000000002A063F.quest_desc: [
 		"Quartz from a stick. Optional.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland."
 	]
 	quest.42000000002A063F.title: "Quartz Shard Crop"
 	quest.42000000002A0640.quest_desc: [
 		"Fuel from a crop. Optional.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland."
 	]
 	quest.42000000002A0640.title: "Coal Pebble"
 	quest.42000000002A0641.quest_desc: [
 		"Late ore crop. Optional.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland."
 	]
 	quest.42000000002A0641.title: "Emerald Shard Crop"
 	quest.42000000002A0642.quest_desc: [
 		"Late ore crop. Optional.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland."
 	]
 	quest.42000000002A0642.title: "Diamond Shard Crop"
 	quest.42000000002A0643.quest_desc: [
 		"Peak ore crop. Optional and slow.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland."
 	]
 	quest.42000000002A0643.title: "Netherite Sliver"
 	quest.42000000002A0644.quest_desc: [
 		"AgriCraft's own flower. Optional.",
-		"How: wooden crop sticks from sticks; analyzer and journal from glass and books. Plant on farmland."
+		"How: wooden crop sticks from sticks; journal is a writable book plus seeds; analyzer is glass and wood. Plant on farmland."
 	]
 	quest.42000000002A0644.title: "Amathyllis Petal"
 	reward.5000000000060135.title: "Thread of Return: +1 Clowder life"
@@ -8671,17 +8671,20 @@
 	quest.42000000002B0804.title: "The Atlas"
 	quest.42000000002B0805.quest_desc: [
 		"Bring five Driftwreck Seals: five wrecks finished, by anyone in your Clowder.",
-		"Repeatable: hand them in as often as you like."
+		"Repeatable: hand them in as often as you like.",
+		"How: finish a Driftwreck's task. Everyone who set foot on it gets a Seal."
 	]
 	quest.42000000002B0805.title: "Five seals"
 	quest.42000000002B0806.quest_desc: [
 		"Break three frayed spawners and hand in their cores.",
-		"Repeatable: hand them in as often as you like."
+		"Repeatable: hand them in as often as you like.",
+		"How: break a frayed spawner on a Driftwreck; each drops its core."
 	]
 	quest.42000000002B0806.title: "Frayed cores"
 	quest.42000000002B0807.quest_desc: [
 		"A shard from a mended Remnant. Hand it in.",
-		"Repeatable: hand them in as often as you like."
+		"Repeatable: hand them in as often as you like.",
+		"How: open a Hold's sealed rift with a Weft Key and mend the Remnant inside."
 	]
 	quest.42000000002B0807.title: "Rift shard"
 	quest.42000000002B0808.quest_desc: [
