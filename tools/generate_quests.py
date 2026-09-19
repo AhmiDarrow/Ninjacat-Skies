@@ -688,7 +688,9 @@ def finalize_chapter(strand_i, quests):
         # The repeatable Desk is excluded; caches can never be bought back with their contents.
         thread_reward = any(r.get("item", {}).get("id") == "ninjacatskies:frayed_thread"
                             for r in q.get("rewards", []))
-        if strand_i != 16 and not q.get("repeatable") and thread_reward:
+        # Quests appended after a chapter shipped keep out of the cache rotation, or every later
+        # quest in that chapter would trade its cache for its neighbour's.
+        if strand_i != 16 and not q.get("repeatable") and thread_reward and not q.pop("no_cache", False):
             cache_index += 1
             if cache_index % 3 == 1:
                 tier = "large" if cache_index % 60 == 58 else "medium" if cache_index % 12 == 10 else "small"
@@ -1821,7 +1823,7 @@ def build_nether_side() -> list[dict]:
 
 def build_end_side() -> list[dict]:
     s = 23
-    return chain(s, [
+    quests = chain(s, [
         ("End Stone", "minecraft:end_stone", 64, "Pale void."),
         ("End Stone Bricks", "minecraft:end_stone_bricks", 32, "Clean end."),
         ("Purpur Block Stock", "minecraft:purpur_block", 32, "Chorus stone."),
@@ -1853,7 +1855,23 @@ def build_end_side() -> list[dict]:
         ("Nautilus Shell", "minecraft:nautilus_shell", 8, "Conduit ring."),
         ("Trident Show", "minecraft:trident", 1, "Sea claw."),
     ])
-
+    # The way in. Appended with late ids so every shipped quest keeps its id, and with no dependencies,
+    # because nothing in this chapter can be reached until someone eats one.
+    late_ids(True)
+    apple = item_quest(
+        s,
+        title="End Apple",
+        desc=["Twelve portal frames are not a pad craft, so the End is a bite away instead.",
+              "Eat it to stand on the End's obsidian pad; eat the half that is left to come home to the spot you ate from."],
+        item="ninjacatskies:end_apple",
+        count=1,
+        x=-2.2,
+        y=0.0,
+    )
+    if apple:
+        apple["no_cache"] = True
+    late_ids(False)
+    return ([apple] if apple else []) + quests
 
 
 def build_crops_side() -> list[dict]:

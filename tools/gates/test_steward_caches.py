@@ -48,8 +48,8 @@ class StewardCaches(unittest.TestCase):
         # every id a 0.6.1 save knows is still there, unchanged
         self.assertEqual(hashlib.sha256('\n'.join(baseline).encode()).hexdigest(), '2c67f856be36222231dee7c0b46a6a4a4dd7bc4247722aad963aa70e5a4abb43')
         self.assertEqual(len([r for r in self.rows if not self._added_after_0_6_1(r[1]['id'])]), 1495 - 30)
-        # Shop retired (−30). Then Guardians, Pad-runners, Harvest Table, Crop Sticks, Driftwrecks (+15).
-        self.assertEqual(len(self.rows), 1650)
+        # Shop retired (−30). Then Guardians, Pad-runners, Harvest Table, Crop Sticks, Driftwrecks (+15), End Apple (+1).
+        self.assertEqual(len(self.rows), 1651)
 
     def test_all_generated_quests_keep_their_shipped_ids(self):
         for chapter, q in self.rows:
@@ -70,7 +70,7 @@ class StewardCaches(unittest.TestCase):
                         self.assertNotEqual(chapter, '16_shop')
                         self.assertFalse(q.get('repeatable'))
                         self.assertEqual(r['item']['count'], 1)
-        self.assertEqual(threads, 1536)
+        self.assertEqual(threads, 1537)   # +1: the End Apple quest, which takes no cache
         self.assertTrue(350 <= sum(caches.values()) <= 550, caches)
         self.assertGreater(caches['small'], caches['medium'])
         self.assertGreater(caches['medium'], caches['large'])

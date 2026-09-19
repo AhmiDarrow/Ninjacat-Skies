@@ -500,6 +500,60 @@ def loomframe_top():
     return im
 
 
+# ------------------------------------------------------------------ End Apple
+END_SKIN = (0x6d, 0x4a, 0x8f, 255)      # ender violet, the pearl's colour
+END_FLESH = (0xd8, 0xcf, 0xb4, 255)     # pale bone flesh under the skin
+
+
+def apple_body(im, bite):
+    """A round apple lit from a point above-left; bite = a scooped crescent out of the upper right."""
+    r = ramp(END_SKIN)
+    flesh = ramp(END_FLESH)
+    cx, cy, rw, rh = 15.5, 19.0, 9.6, 9.0
+    lx, ly = cx - 4.6, cy - 5.2          # the light sits above-left, as in the style reference
+    bx, by, br = 23.5, 12.5, 6.2         # the bite
+    for py in range(32):
+        for px in range(32):
+            x, y = px + 0.5, py + 0.5
+            dx, dy = (x - cx) / rw, (y - cy) / rh
+            if dx * dx + dy * dy > 1.0:
+                continue
+            if y < cy - rh * 0.62 and abs(x - cx) < 1.6:   # small stem dimple, not a wedge
+                continue
+            if bite and math.hypot(x - bx, y - by) < br:
+                continue
+            d = math.hypot(x - lx, y - ly) / rw           # 0 at the light, ~2 on the far rim
+            tone = 4 if d < 0.24 else 3 if d < 0.68 else 2 if d < 1.16 else 1
+            im.putpixel((px, py), r[tone])
+    if bite:   # pale flesh lip inside the crescent so it reads at 16 px
+        for py in range(32):
+            for px in range(32):
+                if im.getpixel((px, py))[3] == 0:
+                    continue
+                e = math.hypot(px + 0.5 - bx, py + 0.5 - by)
+                if e < br + 1.9:
+                    im.putpixel((px, py), flesh[2] if e < br + 1.0 else flesh[1])
+    return im
+
+
+def end_apple(bite=False):
+    """Ender-violet apple with a bone stem and a loom-teal leaf; the bitten half shows pale flesh."""
+    im = blank()
+    apple_body(im, bite)
+    d = draw(im)
+    st = ramp(WOOD)
+    d.line((15, 9, 16, 5), fill=st[2])
+    d.point((15, 8), fill=st[3])
+    d.point((16, 6), fill=st[1])
+    lf = ramp(LOOM)
+    for px, py, tone in ((17, 6, 2), (18, 6, 3), (19, 6, 2), (18, 5, 3), (19, 5, 2), (20, 6, 1), (19, 7, 1), (17, 7, 1)):
+        im.putpixel((px, py), lf[tone])
+    if not bite:   # a single warm glint, the style's one specular
+        im.putpixel((11, 13), ramp(END_SKIN)[4])
+        im.putpixel((12, 13), ramp(END_SKIN)[4])
+    return finish(im, END_SKIN)
+
+
 # ------------------------------------------------------------------ build
 def build():
     kept()
@@ -509,6 +563,8 @@ def build():
     put("ninjacatskies", "item/frayed_thread", frayed_thread())
     put("ninjacatskies", "item/codex_page", codex_page())
     put("ninjacatskies", "item/spindle_loom_fragment", spindle_loom_fragment())
+    put("ninjacatskies", "item/end_apple", end_apple())
+    put("ninjacatskies", "item/bitten_end_apple", end_apple(bite=True))
     put("ninjacatskies", "block/tension_post", tension_post_side())
     put("ninjacatskies", "block/tension_post_top", tension_post_top())
     put("voidloom", "item/void_yarn", void_yarn())

@@ -37,5 +37,12 @@
   "tooltip.ninjacatskies.cache_open": "Use to unwrap. Supplies can repeat. No machines or extra lives.",
   "tooltip.ninjacatskies.cache_combine": "Craft 4 small → 1 medium; 3 medium → 1 large.",
   "message.ninjacatskies.cache_empty": "The cache could not open. Its supplies table is empty; the seal is kept.",
-  "message.ninjacatskies.post_locked": "The Post is locked by redstone."
+  "message.ninjacatskies.post_locked": "The Post is locked by redstone.",
+  "item.ninjacatskies.end_apple": "End Apple",
+  "item.ninjacatskies.bitten_end_apple": "Bitten End Apple",
+  "message.ninjacatskies.end_apple.away": "The apple pulls you through the Cut.",
+  "message.ninjacatskies.end_apple.home": "The last bite carries you home.",
+  "message.ninjacatskies.end_apple.already_there": "You are already there. Save it for the way back.",
+  "message.ninjacatskies.end_apple.no_end": "Nothing answers: this world has no End.",
+  "message.ninjacatskies.end_apple.no_way_back": "The way back is gone; ask an operator for a lift."
 }
