@@ -15,4 +15,4 @@ Ships **Ninjacat Skies Core 0.5.1**, which adds a sixth companion mod: **Driftwr
 
 **Existing worlds:** any Clowder that has tensioned Soil starts building Drift pressure on first load; its first wreck arrives after roughly 90–120 minutes of play (or at once with a Driftlure). Nothing existing changes ids.
 
-Pins: Ninjacat Skies Core 0.5.1 (project 1689718, file **TBD**), Tribal Power 3.5.0 (project 1684851, file 8918180), Chocobos Reborn 1.0.4 (project 1699008, file 8918139). Minecraft 1.21.1 / NeoForge 21.1.249 / Java 21.
+Pins: Ninjacat Skies Core 0.5.1 (project 1689718, file **8922101**), Tribal Power 3.5.0 (project 1684851, file 8918180), Chocobos Reborn 1.0.4 (project 1699008, file 8918139). Minecraft 1.21.1 / NeoForge 21.1.249 / Java 21.
