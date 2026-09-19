@@ -674,17 +674,17 @@
 	quest.420000000002006D.title: "Granite"
 	quest.420000000002006E.quest_desc: [
 		"Porous rock from the other place. Burns forever once it catches.",
-		"How: Nether after Claw obsidian."
+		"How: the Nether here is void, not terrain. Pour lava into an Ex Deorum barrel of witch water (a water barrel standing on mycelium; mycelium spores sieve from dirt)."
 	]
 	quest.420000000002006E.title: "Netherrack"
 	quest.420000000002006F.quest_desc: [
 		"Slows every step that crosses it and feeds soul fire a colder blue.",
-		"How: Nether after Claw obsidian. Three skulls on soul sand make a Wither."
+		"How: sand into an Ex Deorum barrel of witch water. Fortress wart rooms hold a little. Three skulls on soul sand make a Wither."
 	]
 	quest.420000000002006F.title: "Soul Sand"
 	quest.4200000000020070.quest_desc: [
 		"Ground from Nether glowstone, useful for brewing and for softer light sources.",
-		"How: break Nether glowstone, or witches on the pad."
+		"How: sieve soul sand, or witches on the pad."
 	]
 	quest.4200000000020070.title: "Glowstone Dust"
 	quest.4200000000020071.quest_desc: [
@@ -1184,7 +1184,7 @@
 	quest.42000000000500D0.title: "Hopper Line"
 	quest.42000000000500D1.quest_desc: [
 		"Measure the beat.",
-		"How: nether quartz, redstone torch, stone."
+		"How: nether quartz, redstone torch, stone. Quartz sieves from soul sand; no Nether trip needed."
 	]
 	quest.42000000000500D1.title: "Comparator"
 	quest.42000000000500D2.quest_desc: [
@@ -2021,7 +2021,7 @@
 	quest.4200000000080173.title: "Fermented Eye"
 	quest.4200000000080174.quest_desc: [
 		"Glowstone dust for recipes.",
-		"How: break Nether glowstone, or witches on the pad."
+		"How: sieve soul sand, or witches on the pad."
 	]
 	quest.4200000000080174.title: "Glowstone Dust (Sigil)"
 	quest.4200000000080175.quest_desc: [
@@ -2484,7 +2484,7 @@
 	quest.42000000000901CC.title: "Reweave"
 	quest.42000000000901CD.quest_desc: [
 		"A wither, on a pad, in the sky. The Loom-stitchers would have been impressed and then furious.",
-		"How: Wither after Claw obsidian (three skulls on soul sand). Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 1000 Thread. Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.42000000000901CD.title: "A Star, Somehow"
 	quest.42000000000A01CE.quest_desc: [
@@ -3705,7 +3705,7 @@
 	quest.42000000001502DB.title: "Deepslate Tiles"
 	quest.42000000001502DC.quest_desc: [
 		"Dark nether stone, sturdy and plain.",
-		"How: Nether after Claw obsidian. Basalt deltas and bastions."
+		"How: witch water poured into a lava barrel, or four blackstone pebbles. Bastions are built of it."
 	]
 	quest.42000000001502DC.title: "Blackstone"
 	quest.42000000001502DD.quest_desc: [
@@ -3750,7 +3750,7 @@
 	quest.42000000001502E4.title: "Sea Lantern"
 	quest.42000000001502E5.quest_desc: [
 		"A warm orange light grown from nether fungus.",
-		"How: crimson/warped forests after Claw. Bone-meal nylium helps."
+		"How: grows on huge fungi. Plant a fungus on nylium and bone-meal it."
 	]
 	quest.42000000001502E5.title: "Shroomlight"
 	quest.42000000001502E6.quest_desc: [
@@ -3961,7 +3961,7 @@
 	quest.420000000016030F.quest_desc: [
 		"The floor and walls of anywhere you're building over lava.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: Nether after Claw obsidian."
+		"How: the Nether here is void, not terrain. Pour lava into an Ex Deorum barrel of witch water (a water barrel standing on mycelium; mycelium spores sieve from dirt)."
 	]
 	quest.420000000016030F.title: "Netherrack Stock"
 	quest.4200000000160310.quest_desc: [
@@ -3976,67 +3976,67 @@
 	quest.4200000000160311.title: "Red Nether Bricks"
 	quest.4200000000160312.quest_desc: [
 		"Cooled magma column, cut into blocks for a foothold.",
-		"How: Nether after Claw, or soul soil plus blue ice over lava."
+		"How: lava flowing over soul soil beside blue ice, or four basalt pebbles from sieved crushed blackstone."
 	]
 	quest.4200000000160312.title: "Basalt"
 	quest.4200000000160313.quest_desc: [
 		"Basalt sanded smooth. Reads as stone, not scaffolding.",
-		"How: stonecutter, or four basalt. Nether after Claw."
+		"How: stonecutter, or four basalt."
 	]
 	quest.4200000000160313.title: "Polished Basalt"
 	quest.4200000000160314.quest_desc: [
 		"Basalt without the ridges. Good for flat floors and trim.",
-		"How: smelt basalt. Nether after Claw."
+		"How: smelt basalt."
 	]
 	quest.4200000000160314.title: "Smooth Basalt"
 	quest.4200000000160315.quest_desc: [
 		"The Nether's cobblestone. Craft it toward tools and bricks.",
-		"How: Nether after Claw obsidian. Basalt deltas and bastions."
+		"How: witch water poured into a lava barrel, or four blackstone pebbles. Bastions are built of it."
 	]
 	quest.4200000000160315.title: "Blackstone Stock"
 	quest.4200000000160316.quest_desc: [
 		"Warms nearby water to a boil and hurts bare feet.",
-		"How: four magma cream, or Nether magma. Nether after Claw."
+		"How: four magma cream. A slime ball in a lava barrel makes cream."
 	]
 	quest.4200000000160316.title: "Magma Block"
 	quest.4200000000160317.quest_desc: [
 		"Soul sand foothold stock.",
-		"How: Nether after Claw obsidian. Three skulls on soul sand make a Wither."
+		"How: sand into an Ex Deorum barrel of witch water. Fortress wart rooms hold a little. Three skulls on soul sand make a Wither."
 	]
 	quest.4200000000160317.title: "Soul Sand Stock"
 	quest.4200000000160318.quest_desc: [
 		"Lets soul fire and soul torches burn instead of ordinary flame.",
-		"How: Nether soul-sand valleys after Claw obsidian."
+		"How: soul sand dropped into an Ex Deorum lava barrel."
 	]
 	quest.4200000000160318.title: "Soul Soil"
 	quest.4200000000160319.quest_desc: [
 		"Crushes into four dust, or lights a room without smoke.",
-		"How: four glowstone dust, or break Nether glowstone."
+		"How: four glowstone dust. Dust sieves from soul sand."
 	]
 	quest.4200000000160319.title: "Glowstone"
 	quest.420000000016031A.quest_desc: [
 		"A fungus that glows on its own. No wiring needed.",
-		"How: crimson/warped forests after Claw. Bone-meal nylium helps."
+		"How: grows on huge fungi. Plant a fungus on nylium and bone-meal it."
 	]
 	quest.420000000016031A.title: "Shroomlight Stock"
 	quest.420000000016031B.quest_desc: [
 		"Nine wart bundled into a block. Mostly decoration and dye.",
-		"How: nine nether wart, or crimson forests after Claw."
+		"How: nine nether wart. Wart sieves from soul sand or grows in fortress gardens."
 	]
 	quest.420000000016031B.title: "Nether Wart Block"
 	quest.420000000016031C.quest_desc: [
 		"Blue cousin of the crimson block. Same recipe, cooler color.",
-		"How: warped forests after Claw."
+		"How: grows on huge warped fungi. Bone-meal a warped fungus on warped nylium."
 	]
 	quest.420000000016031C.title: "Warped Wart Block"
 	quest.420000000016031D.quest_desc: [
 		"Wood that isn't wood. Strips and planks like any log.",
-		"How: crimson fungus on nylium after Claw. Bone-meal the fungus."
+		"How: crimson nylium spores (sieve crushed netherrack) on netherrack, bone-meal the nylium for a fungus, then bone-meal the fungus."
 	]
 	quest.420000000016031D.title: "Crimson Stem"
 	quest.420000000016031E.quest_desc: [
 		"The other fungus trunk. Planks come out blue instead of red.",
-		"How: warped fungus on nylium after Claw. Bone-meal the fungus."
+		"How: warped nylium spores (sieve crushed netherrack) on netherrack, bone-meal the nylium for a fungus, then bone-meal the fungus."
 	]
 	quest.420000000016031E.title: "Warped Stem"
 	quest.420000000016031F.quest_desc: [
@@ -4051,12 +4051,12 @@
 	quest.4200000000160320.title: "Twisting Vines"
 	quest.4200000000160321.quest_desc: [
 		"Weeps purple light and anchors a respawn point in the Nether.",
-		"How: Nether ruined portals after Claw, or barter."
+		"How: bastion chests, piglin barter, or Draconic bees working obsidian. Ruined portals do not generate here."
 	]
 	quest.4200000000160321.title: "Crying Obsidian"
 	quest.4200000000160322.quest_desc: [
 		"Buried below the ordinary ores. Smelt it toward netherite.",
-		"How: rare Nether after Claw obsidian. Blast-mine or strip at y=15."
+		"How: hammer blackstone to crushed blackstone and sieve it. Bastion chests hold a little."
 	]
 	quest.4200000000160322.title: "Ancient Debris"
 	quest.4200000000160323.quest_desc: [
@@ -4081,7 +4081,7 @@
 	quest.4200000000160326.title: "Ghast Tear"
 	quest.4200000000160327.quest_desc: [
 		"Brews into fire resistance, or crafts back into a magma block.",
-		"How: Nether magma cubes, or slime plus blaze powder."
+		"How: a slime ball dropped into a lava barrel, slime plus blaze powder, or magma cubes."
 	]
 	quest.4200000000160327.title: "Magma Cream"
 	quest.4200000000160328.quest_desc: [
@@ -4096,12 +4096,12 @@
 	quest.4200000000160329.title: "Gold Nugget Pile"
 	quest.420000000016032A.quest_desc: [
 		"Smelts to gold and mines faster than the ore it's named for.",
-		"How: Nether after Claw obsidian."
+		"How: Mekanism Combiner, eight raw gold plus netherrack. The void Nether has no ore."
 	]
 	quest.420000000016032A.title: "Nether Gold Ore"
 	quest.420000000016032B.quest_desc: [
 		"Bright white stone that builds and channels comparator signals both.",
-		"How: Nether quartz ore after Claw obsidian, or barter."
+		"How: sieve soul sand, or piglin barter."
 	]
 	quest.420000000016032B.title: "Quartz"
 	quest.420000000016032C.quest_desc: [
@@ -4181,7 +4181,7 @@
 	quest.420000000017033A.quest_desc: [
 		"A portable chest that keeps its contents when you break it.",
 		"Optional — the void may never offer one.",
-		"How: needs shulker shells. Optional."
+		"How: the Spark stall at /clowder hub sells one for 200 Thread; shells never drop here. Optional."
 	]
 	quest.420000000017033A.title: "Shulker Box Show"
 	quest.420000000017033B.quest_desc: [
@@ -4221,7 +4221,7 @@
 	quest.4200000000170341.title: "Obsidian Stock"
 	quest.4200000000170342.quest_desc: [
 		"Glows faintly and, charged, launches you from a respawn anchor.",
-		"How: Nether ruined portals after Claw, or barter."
+		"How: bastion chests, piglin barter, or Draconic bees working obsidian. Ruined portals do not generate here."
 	]
 	quest.4200000000170342.title: "Crying Obsidian Stock"
 	quest.4200000000170343.quest_desc: [
@@ -4236,7 +4236,7 @@
 	quest.4200000000170344.title: "Totem Show"
 	quest.4200000000170345.quest_desc: [
 		"The wither's only drop. A beacon needs one to light up.",
-		"How: Wither after Claw obsidian (three skulls on soul sand). Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 1000 Thread. Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.4200000000170345.title: "Nether Star Show"
 	quest.4200000000170346.quest_desc: [
@@ -5016,7 +5016,7 @@
 	quest.42000000001A03DF.title: "Dispenser Line"
 	quest.42000000001A03E0.quest_desc: [
 		"Reads how full a container is and outputs a signal.",
-		"How: nether quartz, redstone torch, stone."
+		"How: nether quartz, redstone torch, stone. Quartz sieves from soul sand; no Nether trip needed."
 	]
 	quest.42000000001A03E0.title: "Comparator (Pipes)"
 	quest.42000000001A03E1.quest_desc: [
@@ -5242,12 +5242,12 @@
 	quest.42000000001B040C.title: "Black Dye"
 	quest.42000000001B040D.quest_desc: [
 		"Ritual ground with a texture rituals seem to like.",
-		"How: Nether after Claw obsidian. Three skulls on soul sand make a Wither."
+		"How: sand into an Ex Deorum barrel of witch water. Fortress wart rooms hold a little. Three skulls on soul sand make a Wither."
 	]
 	quest.42000000001B040D.title: "Soul Sand Stock (Otherworld)"
 	quest.42000000001B040E.quest_desc: [
 		"A base layer for rituals that lean toward fire.",
-		"How: Nether after Claw obsidian."
+		"How: the Nether here is void, not terrain. Pour lava into an Ex Deorum barrel of witch water (a water barrel standing on mycelium; mycelium spores sieve from dirt)."
 	]
 	quest.42000000001B040E.title: "Netherrack Stock (Otherworld)"
 	quest.42000000001B040F.quest_desc: [
@@ -6534,7 +6534,7 @@
 	quest.420000000021050D.title: "Ghast Tear Farm"
 	quest.420000000021050E.quest_desc: [
 		"Brews fire resistance and feeds a few crafts.",
-		"How: Nether magma cubes, or slime plus blaze powder."
+		"How: a slime ball dropped into a lava barrel, slime plus blaze powder, or magma cubes."
 	]
 	quest.420000000021050E.title: "Magma Cream Farm"
 	quest.420000000021050F.quest_desc: [
@@ -6549,7 +6549,7 @@
 	quest.4200000000210510.title: "Wither Skull"
 	quest.4200000000210511.quest_desc: [
 		"The wither's own tax, rare and heavy with power.",
-		"How: Wither after Claw obsidian (three skulls on soul sand). Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 1000 Thread. Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.4200000000210511.title: "Nether Star"
 	quest.4200000000210512.quest_desc: [
