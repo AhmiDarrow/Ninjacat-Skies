@@ -97,10 +97,10 @@ public final class WreckObjectives {
             if (pp == null) continue;
             int delay = i * 25;
             final int step = i;
-            level.getServer().tell(new net.minecraft.server.TickTask(level.getServer().getTickCount() + delay, () -> {
+            com.ninjacat.skies.driftwrecks.Later.run(level.getServer(), delay, () -> {
                 level.sendParticles(new DustParticleOptions(new Vector3f(0.24F, 0.85F, 0.8F), 2.0F), pp.getX() + 0.5, pp.getY() + 1.5, pp.getZ() + 0.5, 30, 0.2, 1.0, 0.2, 0.0);
                 level.playSound(null, pp, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.5F, 0.7F + 0.12F * step);
-            }));
+            });
         }
         p.displayClientMessage(NinjacatText.gold("Watch, then act."), true);
     }

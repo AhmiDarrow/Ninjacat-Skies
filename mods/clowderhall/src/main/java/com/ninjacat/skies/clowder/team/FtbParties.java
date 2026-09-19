@@ -68,7 +68,7 @@ public final class FtbParties {
                     if (current != null && current.getTeamId().equals(partyId)) continue;
                     if (current instanceof PartyTeam other && other.isPartyTeam()) {
                         if (!isMirror(other)) {
-                            ClowderHall.LOGGER.info("Not moving {} out of hand-made party {} for pad team {}", member.getGameProfile().getName(), other.getShortName(), skyTeamId);
+                            ClowderHall.LOGGER.debug("Not moving {} out of hand-made party {} for pad team {}", member.getGameProfile().getName(), other.getShortName(), skyTeamId);
                             continue;
                         }
                         other.kickPlayerForcibly(member);     // stale mirror from a previous pad

@@ -26,6 +26,7 @@ public final class DriftEvents {
         DriftManager.get(e.getServer()).tick(e.getServer());
         RiftManager.get(e.getServer()).tick(e.getServer());
         Tether.tick(e.getServer());
+        Later.tick(e.getServer());
     }
 
     @SubscribeEvent
@@ -63,7 +64,7 @@ public final class DriftEvents {
     public void onStopping(net.neoforged.neoforge.event.server.ServerStoppingEvent e) { Tether.flush(e.getServer()); }
 
     @SubscribeEvent
-    public void onStopped(ServerStoppedEvent e) { Tether.clear(); }
+    public void onStopped(ServerStoppedEvent e) { Tether.clear(); Later.clear(); }
 
     @SubscribeEvent
     public void onDeath(net.neoforged.neoforge.event.entity.living.LivingDeathEvent e) {
