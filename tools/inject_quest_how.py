@@ -381,6 +381,8 @@ HOW_ITEM = {
     "solarflux:mirror": "How: glass and iron in JEI. First Solar Flux part.",
     "occultism:dictionary_of_spirits": "How: book + purple dye (JEI). Read it; Spirit Fire is next.",
     "occultism:spirit_fire": "How: Dictionary rites. Not campfire. Otherworld chapter names the drop.",
+    "occultism:otherstone": "How: light Spirit Fire as the Dictionary of Spirits shows (It burns!), then drop andesite into it.",
+    "minecraft:apple": "How: oak leaves drop a few; a Pam's apple tree (sapling from iron-mesh dirt) bears many.",
     "occultism:golden_sacrificial_bowl": "How: gold around a sacrificial bowl. Dictionary names the ritual.",
     "naturesaura:gold_fiber": "How: seeds + gold nuggets, plant on grass in aura. Aura chapter starts here.",
     "naturesaura:gold_leaf": "How: break golden leaves grown from Gold Fiber.",

@@ -1295,7 +1295,7 @@ def build_sigil() -> list[dict]:
         ("Imbuement Chamber", "ars_nouveau:imbuement_chamber", 1, "Imbue reagents with source."),
         ("Source Jar", "ars_nouveau:source_jar", 2, "Store source."),
         ("Occultism Dictionary", "occultism:dictionary_of_spirits", 1, "Call spirits."),
-        ("Spirit Fire", "occultism:spirit_fire", 1, "Otherworld light."),
+        ("Spirit Fire", "occultism:otherstone", 1, "Otherworld light. Andesite dropped in Spirit Fire comes out as Otherstone."),
     ])
     side = grid_optional(s, [
         ("Golden Sacrificial Bowl", "occultism:golden_sacrificial_bowl", 1, "Summon focus — Bind braid is already on the main path."),
@@ -2059,7 +2059,7 @@ def build_occult_side() -> list[dict]:
     s = 27
     main = chain(s, [
         ("Dictionary of Spirits", "occultism:dictionary_of_spirits", 1, "Read the otherworld."),
-        ("Spirit Fire", "occultism:spirit_fire", 1, "Purple flame."),
+        ("Spirit Fire", "occultism:otherstone", 1, "Purple flame. Andesite dropped in it comes out as Otherstone."),
         ("Divination Rod", "occultism:divination_rod", 1, "Find the other."),
         ("Brush", "occultism:brush", 1, "Clear chalk."),
         ("Otherworld Sapling", "occultism:otherworld_sapling", 1, "Strange wood."),
@@ -2789,8 +2789,8 @@ def build_harvestcraft() -> list[dict]:
          "Milk, oil, and tropical cooking."),
         ("Vanilla Vine", "pamhc2trees:vanillabean_sapling", 1,
          "Beans for sweets. Plant it like the others."),
-        ("Pam's Apple", "pamhc2trees:appleitem", 8,
-         "Harvest the tree, not the vanilla oak. Juicer and bakeware both want these."),
+        ("Pam's Apple", "minecraft:apple", 8,
+         "Pam's apple tree bears plain apples, far more than oak leaves drop. Juicer and bakeware both want these."),
         ("Apple Pie", "pamhc2foodcore:applepieitem", 1,
          "Bakeware, dough, sugar, apples. The first finished HarvestCraft bake."),
         ("Fruit Punch", "pamhc2foodcore:fruitpunchitem", 4,

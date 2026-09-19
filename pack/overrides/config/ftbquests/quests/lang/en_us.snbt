@@ -933,7 +933,7 @@
 	quest.42000000000300A0.title: "Cocoa"
 	quest.42000000000300A1.quest_desc: [
 		"Falls from oak leaves on its own time. Free food, eventually.",
-		"How: craft, smelt, sieve, or mob-drop this. JEI lists every source on the pad."
+		"How: oak leaves drop a few; a Pam's apple tree (sapling from iron-mesh dirt) bears many."
 	]
 	quest.42000000000300A1.title: "Apple"
 	quest.42000000000300A2.quest_desc: [
@@ -2087,7 +2087,7 @@
 	quest.4200000000080180.title: "Occultism Dictionary"
 	quest.4200000000080181.quest_desc: [
 		"A cold flame used in rituals that regular fire won't finish.",
-		"How: Dictionary rites. Not campfire. Otherworld chapter names the drop."
+		"How: light Spirit Fire as the Dictionary of Spirits shows (It burns!), then drop andesite into it."
 	]
 	quest.4200000000080181.title: "Spirit Fire"
 	quest.4200000000080182.quest_desc: [
@@ -5122,7 +5122,7 @@
 	quest.42000000001B03F4.title: "Dictionary of Spirits"
 	quest.42000000001B03F5.quest_desc: [
 		"Burns violet and never spreads. Used to light rituals.",
-		"How: Dictionary rites. Not campfire. Otherworld chapter names the drop."
+		"How: light Spirit Fire as the Dictionary of Spirits shows (It burns!), then drop andesite into it."
 	]
 	quest.42000000001B03F5.title: "Spirit Fire (Otherworld)"
 	quest.42000000001B03F6.quest_desc: [
@@ -8399,8 +8399,8 @@
 	]
 	quest.4200000000290614.title: "Vanilla Vine"
 	quest.4200000000290615.quest_desc: [
-		"Harvest the tree, not the vanilla oak. Juicer and bakeware both want these.",
-		"How: sieve dirt with an iron mesh for kitchen saplings, then grow the fruit."
+		"Pam's apple tree bears plain apples, far more than oak leaves drop. Juicer and bakeware both want these.",
+		"How: oak leaves drop a few; a Pam's apple tree (sapling from iron-mesh dirt) bears many."
 	]
 	quest.4200000000290615.title: "Pam's Apple"
 	quest.4200000000290616.quest_desc: [
