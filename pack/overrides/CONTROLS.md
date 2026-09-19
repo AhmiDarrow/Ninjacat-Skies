@@ -63,8 +63,10 @@ JEI recipe/uses keys remain R/U while hovering items in an inventory. Those are 
 - `key.modularrouters.moduleInfo`: **I** (original context).
 - `key.silentgear.cycle.back`: **Control+Z** (original context).
 - `key.silentgear.cycle.next`: **Control+X** (original context).
-- `key.silentgear.openItem`: **Alt+X** (original context).
+- `key.silentgear.openItem`: **Alt+O** (original context).
 - `key.sophisticatedbackpacks.inventory_interaction`: **Alt+Semicolon** (original context).
 - `key.sophisticatedbackpacks.tool_swap`: **Control+Semicolon** (original context).
+- `key.sophisticatedbackpacks.toggle_upgrade_1`: **Alt+Z** (world context).
+- `key.sophisticatedbackpacks.toggle_upgrade_2`: **Alt+X** (world context).
 - `key.saveToolbarActivator`: **F6** (original context).
 - `key.loadToolbarActivator`: **F7** (original context).

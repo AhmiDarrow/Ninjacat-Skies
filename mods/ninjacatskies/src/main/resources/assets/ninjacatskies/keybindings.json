@@ -271,9 +271,11 @@
   },
   {
     "name": "key.silentgear.openItem",
-    "key": "key.keyboard.x",
+    "key": "key.keyboard.o",
     "modifier": "ALT",
-    "context": "original"
+    "context": "original",
+    "previousKey": "key.keyboard.x",
+    "previousModifier": "ALT"
   },
   {
     "name": "key.sophisticatedbackpacks.inventory_interaction",
@@ -286,6 +288,18 @@
     "key": "key.keyboard.semicolon",
     "modifier": "CONTROL",
     "context": "original"
+  },
+  {
+    "name": "key.sophisticatedbackpacks.toggle_upgrade_1",
+    "key": "key.keyboard.z",
+    "modifier": "ALT",
+    "context": "world"
+  },
+  {
+    "name": "key.sophisticatedbackpacks.toggle_upgrade_2",
+    "key": "key.keyboard.x",
+    "modifier": "ALT",
+    "context": "world"
   },
   {
     "name": "key.saveToolbarActivator",
