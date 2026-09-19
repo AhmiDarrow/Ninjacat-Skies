@@ -18,8 +18,17 @@ public final class SunderedSkyEffects extends DimensionSpecialEffects {
         event.register(ResourceLocation.withDefaultNamespace("overworld"), new SunderedSkyEffects());
     }
 
+    /** The sundered sky has no clouds; with it switched off (shader packs) the overworld gets vanilla clouds back. */
+    @Override
+    public float getCloudHeight() {
+        return SkiesConfig.SUNDERED_SKY.get() ? Float.NaN : 192.0F;
+    }
+
     @Override
     public Vec3 getBrightnessDependentFogColor(Vec3 color, float brightness) {
+        if (!SkiesConfig.SUNDERED_SKY.get()) {   // vanilla OverworldEffects
+            return color.multiply(brightness * 0.94F + 0.06F, brightness * 0.94F + 0.06F, brightness * 0.91F + 0.09F);
+        }
         float heal = com.ninjacat.skies.core.sky.SunderedSkyMath.heal(ClientTension.seated(), ClientTension.rewoven());
         return color.multiply(
                 0.18 + brightness * 0.62 + heal * 0.08,
@@ -35,7 +44,7 @@ public final class SunderedSkyEffects extends DimensionSpecialEffects {
     @Override
     public float[] getSunriseColor(float time, float partial) {
         float[] base = super.getSunriseColor(time, partial);
-        if (base == null) {
+        if (base == null || !SkiesConfig.SUNDERED_SKY.get()) {
             return null;
         }
         return new float[] { 0.72F, 0.42F, 0.28F, base[3] * 0.7F };

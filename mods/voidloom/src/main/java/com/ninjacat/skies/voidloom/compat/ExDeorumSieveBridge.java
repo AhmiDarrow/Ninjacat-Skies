@@ -5,6 +5,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -22,24 +23,30 @@ import java.util.Set;
  * Loaded only after {@code ModList.isLoaded("exdeorum")}.
  */
 public final class ExDeorumSieveBridge {
-    private static Set<Item> siftable;
-    private static Object recipesKey;
+    private record Siftable(RecipeManager key, Set<Item> items) {}
+
+    // Per side: the Loomframe asks from the client (use) and the server (hoppers), each with its own RecipeManager.
+    private static volatile Siftable clientSiftable;
+    private static volatile Siftable serverSiftable;
 
     private ExDeorumSieveBridge() {}
 
     public static boolean isSiftable(Level level, ItemStack stack) {
         if (stack.isEmpty()) return false;
         var manager = level.getRecipeManager();
-        if (siftable == null || recipesKey != manager) {
-            recipesKey = manager;
-            siftable = new HashSet<>();
+        Siftable cache = level.isClientSide ? clientSiftable : serverSiftable;
+        if (cache == null || cache.key() != manager) {
+            Set<Item> items = new HashSet<>();
             for (var holder : manager.getAllRecipesFor(thedarkcolour.exdeorum.registry.ERecipeTypes.SIEVE.get())) {
                 for (ItemStack example : holder.value().ingredient.getItems()) {
-                    siftable.add(example.getItem());
+                    items.add(example.getItem());
                 }
             }
+            cache = new Siftable(manager, Set.copyOf(items));
+            if (level.isClientSide) clientSiftable = cache;
+            else serverSiftable = cache;
         }
-        return siftable.contains(stack.getItem());
+        return cache.items().contains(stack.getItem());
     }
 
     public static boolean hasRecipes(Level level, ItemStack mesh, ItemStack input) {

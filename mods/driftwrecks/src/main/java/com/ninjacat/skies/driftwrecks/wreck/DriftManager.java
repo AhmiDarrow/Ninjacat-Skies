@@ -130,7 +130,13 @@ public final class DriftManager extends SavedData {
             if (p >= target) {
                 long now = level.getGameTime();
                 if (now < retryAt.getOrDefault(c.id(), 0L)) continue;
-                Wreck w = arrive(server, c, null);
+                Wreck w;
+                try {
+                    w = arrive(server, c, null);
+                } catch (RuntimeException e) {                  // a bad plan or placement must not take the server tick down
+                    Driftwrecks.LOGGER.error("Driftwreck arrival failed for {}", c.id(), e);
+                    w = null;
+                }
                 if (w != null) { t.resetCycle(); t.dirty(); retryAt.remove(c.id()); }
                 else retryAt.put(c.id(), now + RETRY_TICKS);   // no clear sky: try again in a few minutes, not every second
             }
@@ -492,7 +498,8 @@ public final class DriftManager extends SavedData {
         MinecraftServer server = level.getServer();
         Optional<Clowder> c = LoomTension.clowderById(server, w.team);
         BlockPos home = homeFor(server, w);
-        if (w.heartwreck && !w.objectiveDone) c.ifPresent(cl -> { TeamDrift t = TeamDrift.of(cl); t.setHeartwreck(1); t.dirty(); });   // it comes back
+        if (w.pendingComplete && !w.objectiveDone) completeObjective(level, w);   // a win held for the Clowder to log in is still a win
+        if (w.heartwreck && !w.objectiveDone && !w.pendingComplete) c.ifPresent(cl -> { TeamDrift t = TeamDrift.of(cl); t.setHeartwreck(1); t.dirty(); });   // it comes back
         // 1. nobody falls
         for (ServerPlayer p : level.players()) {
             if (p.isSpectator()) continue;

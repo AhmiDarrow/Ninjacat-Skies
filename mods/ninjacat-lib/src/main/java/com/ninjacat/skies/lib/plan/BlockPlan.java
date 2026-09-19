@@ -35,6 +35,14 @@ public final class BlockPlan {
     public String keyOf(int i) { return keys[key[i] & 0xFF]; }
 
     public static BlockPlan read(byte[] bytes) throws IOException {
+        try {
+            return parse(bytes);
+        } catch (java.nio.BufferUnderflowException e) {
+            throw new IOException("truncated plan", e);
+        }
+    }
+
+    private static BlockPlan parse(byte[] bytes) throws IOException {
         ByteBuffer b = ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN);
         if (b.remaining() < 10 || b.getInt() != MAGIC) throw new IOException("bad magic");
         int version = b.getInt();
@@ -43,6 +51,7 @@ public final class BlockPlan {
         String[] keys = new String[nk];
         for (int i = 0; i < nk; i++) keys[i] = readString(b);
         int n = b.getInt();
+        if (n < 0 || (long) n * 7 > b.remaining()) throw new IOException("bad block count: " + n);
         short[] xyz = new short[n * 3];
         byte[] key = new byte[n];
         for (int i = 0; i < n; i++) {

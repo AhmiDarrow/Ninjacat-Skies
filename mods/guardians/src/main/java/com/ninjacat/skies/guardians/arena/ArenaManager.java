@@ -43,7 +43,7 @@ import java.util.*;
  */
 public final class ArenaManager extends SavedData {
     public static final ResourceKey<Level> ARENA_LEVEL = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "arena"));
-    private static final int SLOT_SPACING = 4096, FLOOR_Y = 120, FENCE_MARGIN = 6, RETURN_DELAY = 120;
+    private static final int SLOT_SPACING = 4096, FLOOR_Y = 120, FENCE_MARGIN = 6, RETURN_DELAY = 120, EMPTY_STAGE_TICKS = 20 * 60 * 5;
     private static final String PERSIST_ROOT = Guardians.MOD_ID, RETURN_TAG = "arena_return";
 
     private final Map<Integer, ArenaInstance> active = new TreeMap<>();
@@ -117,6 +117,8 @@ public final class ArenaManager extends SavedData {
             boss.finalizeSpawn(arena, arena.getCurrentDifficultyAt(origin), MobSpawnType.EVENT, null);
             arena.addFreshEntity(boss); inst.boss = boss.getUUID();
             arena.playSound(null, origin, SoundEvents.WITHER_SPAWN, SoundSource.HOSTILE, 3.0F, 0.6F);
+        } else {
+            wipe(server, inst, "The guardian did not answer. The totem is spent.");   // no boss would mean a stage that never ends
         }
         setDirty();
         return null;
@@ -132,8 +134,46 @@ public final class ArenaManager extends SavedData {
     private static final boolean TEST_FALLBACK = Boolean.getBoolean("guardians.arenaFallbackOverworld");
     private static final int TEST_OFFSET = 200000;
     public static boolean inArena(ServerPlayer p) {
-        if (p.level().dimension().equals(ARENA_LEVEL)) return true;
+        if (p.level().dimension().equals(ARENA_LEVEL)) return inGuardianSlots(p.getX());   // Driftwreck rifts share the dimension at X < 0
         return TEST_FALLBACK && p.getX() > TEST_OFFSET - 4096;
+    }
+    /** Guardian slots sit at X = slot * 4096 ≥ 0; Driftwreck rift chambers at X = -4096·n. */
+    public static boolean inGuardianSlots(double x) { return x > -SLOT_SPACING / 2.0; }
+    public static boolean inGuardianSlots(Level level, BlockPos pos) {
+        return level.dimension().equals(ARENA_LEVEL) && inGuardianSlots(pos.getX());
+    }
+    private static int slotAt(int x) { return Math.floorDiv(x + SLOT_SPACING / 2, SLOT_SPACING); }
+
+    // ------------------------------------------------------------------ player blocks and drops
+    private final Map<Integer, Set<Long>> placed = new HashMap<>();   // slot -> player-placed positions, cleared before reuse
+    private static final String DEATH_STASH = "death_stash";
+
+    /** A player set a block on a stage: remember it so the next fight in that slot does not inherit it. */
+    public void onPlayerPlaced(BlockPos pos) {
+        if (placed.computeIfAbsent(slotAt(pos.getX()), k -> new HashSet<>()).add(pos.asLong())) setDirty();
+    }
+
+    /** Dying on a stage: the slot is torn down before you can walk back, so the drops wait for you at home. */
+    public static boolean stashDeathDrops(ServerPlayer p, Collection<net.minecraft.world.entity.item.ItemEntity> drops) {
+        if (!inArena(p) || drops.isEmpty()) return false;
+        CompoundTag persisted = p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag root = persisted.getCompound(PERSIST_ROOT);
+        ListTag stash = root.getList(DEATH_STASH, Tag.TAG_COMPOUND);
+        for (var e : drops) if (!e.getItem().isEmpty()) stash.add(e.getItem().save(p.registryAccess()));
+        root.put(DEATH_STASH, stash); persisted.put(PERSIST_ROOT, root); p.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
+        return true;
+    }
+
+    private static void returnDeathDrops(ServerPlayer p) {
+        if (p.isDeadOrDying() || inArena(p)) return;
+        CompoundTag persisted = p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag root = persisted.getCompound(PERSIST_ROOT);
+        ListTag stash = root.getList(DEATH_STASH, Tag.TAG_COMPOUND);
+        if (stash.isEmpty()) return;
+        root.remove(DEATH_STASH); persisted.put(PERSIST_ROOT, root); p.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
+        for (int i = 0; i < stash.size(); i++)
+            ItemStack.parse(p.registryAccess(), stash.getCompound(i)).ifPresent(s -> LoomTension.giveOrDrop(p, s));
+        p.displayClientMessage(NinjacatText.teal("What you dropped on the stage came home with you."), true);
     }
 
     private void build(ServerLevel level, ArenaData data, BlockPos origin) {
@@ -156,6 +196,8 @@ public final class ArenaManager extends SavedData {
     }
 
     private void clearSlot(ServerLevel level, int slot, BlockPos origin) {
+        Set<Long> mine = placed.remove(slot);
+        if (mine != null) { for (long l : mine) level.setBlock(BlockPos.of(l), Blocks.AIR.defaultBlockState(), 2 | 16); setDirty(); }
         String prev = lastKind.get(slot); if (prev == null) return;
         GuardianKind k = GuardianKind.byId(prev); if (k == null) return;
         ArenaData old = ArenaData.get(level.getServer(), k);
@@ -283,9 +325,14 @@ public final class ArenaManager extends SavedData {
             }
             switch (inst.state) {
                 case FIGHT -> {
+                    inst.emptyTicks = inside.isEmpty() ? inst.emptyTicks + 1 : 0;
                     if (inside.isEmpty() && inst.age > 100 && partyWithdrawn(server, inst)) {
                         // they walked out without /guardians leave — spend the totem
                         wipe(server, inst, "Nobody stands. The totem is spent.");
+                    }
+                    // one member staying offline must not hold the stage (and 81 forced chunks) forever
+                    else if (inst.emptyTicks > EMPTY_STAGE_TICKS) {
+                        wipe(server, inst, "The stage stood empty too long. The totem is spent.");
                     }
                     // a full disconnect leaves party UUIDs with no online players: keep the stage until they log back in
                     else if (inst.boss != null && inst.age > 100 && arena.isLoaded(inst.originPos) && arena.getEntity(inst.boss) == null && inst.age % 20 == 0) {
@@ -297,7 +344,15 @@ public final class ArenaManager extends SavedData {
                 case WIPED -> { if (inst.stateTicks > RETURN_DELAY) { sendEveryoneHome(server, inst); done.add(inst.slot); } }
             }
         }
-        for (int slot : done) { ArenaInstance i = active.remove(slot); if (i != null) forceChunks(arena, i.originPos, i.radius + 16, false); }
+        for (int slot : done) {
+            ArenaInstance i = active.remove(slot);
+            if (i == null) continue;
+            // purge while the chunks are still forced: entity sections load asynchronously, so clearSlot on the
+            // next summon would miss drops, minions or a stray boss that then wake up inside someone else's fight
+            AABB box = new AABB(i.originPos).inflate(i.radius + 40, 120, i.radius + 40);
+            for (Entity e : arena.getEntities((Entity) null, box, e -> !(e instanceof Player))) e.discard();
+            forceChunks(arena, i.originPos, i.radius + 16, false);
+        }
         if (!done.isEmpty()) setDirty();
     }
 
@@ -387,7 +442,8 @@ public final class ArenaManager extends SavedData {
     /** A player who logs in inside the arena dimension with no running fight is sent home. */
     public void onLogin(ServerPlayer p) {
         ArenaInstance inst = instanceOf(p);
-        if (inst != null && inst.state == ArenaInstance.State.FIGHT && !inArena(p)) {
+        // a disconnect mid-fight puts you back on your pad; a death does not (respawn routes here too)
+        if (inst != null && inst.state == ArenaInstance.State.FIGHT && !inArena(p) && !inst.fallen.contains(p.getUUID())) {
             if (p.isSpectator()) { returnHome(p); return; }
             ServerLevel arena = arenaLevel(p.server);
             if (arena != null) {
@@ -401,6 +457,7 @@ public final class ArenaManager extends SavedData {
         // a Driftwreck rift shares this dimension; its own manager brings those players home
         boolean inRift = p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG).contains("driftwrecks_rift_return");
         if (inArena(p) && inst == null && !inRift) returnHome(p);
+        returnDeathDrops(p);
         String pendingKind = pendingRelics.remove(p.getUUID());
         if (pendingKind != null) {
             GuardianKind k = GuardianKind.byId(pendingKind);
@@ -414,6 +471,7 @@ public final class ArenaManager extends SavedData {
     /** Dying in the arena takes you out of the fight (respawn happens at home). */
     public void onDeath(ServerPlayer p) {
         ArenaInstance a = instanceOf(p); if (a == null) return;
+        if (a.state == ArenaInstance.State.FIGHT && a.fallen.add(p.getUUID())) setDirty();
         for (ServerPlayer o : a.onlinePlayers()) if (o != p) o.sendSystemMessage(NinjacatText.teal(p.getName().getString() + " has fallen."));
         if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "Nobody stands. The totem is spent.");
     }
@@ -442,6 +500,11 @@ public final class ArenaManager extends SavedData {
         for (String k : pr.getAllKeys()) {
             try { m.pendingRelics.put(UUID.fromString(k), pr.getString(k)); } catch (IllegalArgumentException ignored) {}
         }
+        CompoundTag pl = tag.getCompound("Placed");
+        for (String k : pl.getAllKeys()) {
+            Set<Long> s = new HashSet<>(); for (long l : pl.getLongArray(k)) s.add(l);
+            try { m.placed.put(Integer.parseInt(k), s); } catch (NumberFormatException ignored) {}
+        }
         return m;
     }
     @Override
@@ -449,6 +512,9 @@ public final class ArenaManager extends SavedData {
         ListTag l = new ListTag(); for (ArenaInstance a : active.values()) l.add(a.save()); tag.put("Active", l);
         CompoundTag lk = new CompoundTag(); for (var e : lastKind.entrySet()) lk.putString(String.valueOf(e.getKey()), e.getValue()); tag.put("LastKind", lk);
         CompoundTag pr = new CompoundTag(); for (var e : pendingRelics.entrySet()) pr.putString(e.getKey().toString(), e.getValue()); tag.put("PendingRelics", pr);
+        CompoundTag pl = new CompoundTag();
+        for (var e : placed.entrySet()) pl.putLongArray(String.valueOf(e.getKey()), e.getValue().stream().mapToLong(Long::longValue).toArray());
+        tag.put("Placed", pl);
         return tag;
     }
 }

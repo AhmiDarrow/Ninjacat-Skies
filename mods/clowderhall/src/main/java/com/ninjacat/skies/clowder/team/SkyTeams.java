@@ -3,6 +3,7 @@ package com.ninjacat.skies.clowder.team;
 import de.melanx.skyblockbuilder.data.SkyblockSavedData;
 import de.melanx.skyblockbuilder.data.Team;
 import de.melanx.skyblockbuilder.events.SkyblockCreateTeamEvent;
+import de.melanx.skyblockbuilder.events.SkyblockHooks;
 import de.melanx.skyblockbuilder.events.SkyblockInvitationEvent;
 import de.melanx.skyblockbuilder.events.SkyblockJoinRequestEvent;
 import de.melanx.skyblockbuilder.events.SkyblockManageTeamEvent;
@@ -33,6 +34,7 @@ public final class SkyTeams {
     public static final int TARGET_TEAM = -2;  // invite: target already on a team | accept: you already on a team
     public static final int BAD = -3;          // self-invite / internal failure
     public static final int ALREADY = -4;      // invite: this team already invited that player (no re-send)
+    public static final int DENIED = -5;       // a Skyblock Builder invitation listener denied it
 
     private static SkyblockSavedData data(MinecraftServer server) {
         return SkyblockSavedData.get(server.overworld());
@@ -182,6 +184,7 @@ public final class SkyTeams {
         if (team == null || team.isSpawn()) return NO_TEAM;
         if (d.hasPlayerTeam(target)) return TARGET_TEAM;
         if (d.hasInviteFrom(team, target)) return ALREADY;                      // one prompt per team, not one per right-click
+        if (SkyblockHooks.onInvite(target, team, inviter).getResult() == SkyblockInvitationEvent.Result.DENY) return DENIED;
         d.addInvite(team, inviter, target);
         d.setDirty();
         return OK;
@@ -198,6 +201,7 @@ public final class SkyTeams {
             if (candidate != null && !candidate.isSpawn()) team = candidate;
         }
         if (team == null) return NO_TEAM;
+        if (SkyblockHooks.onAccept(player, team) == SkyblockInvitationEvent.Result.DENY) return DENIED;
         boolean ok = d.acceptInvite(team, player);
         if (ok) d.setDirty();
         return ok ? OK : BAD;

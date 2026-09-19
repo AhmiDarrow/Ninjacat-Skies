@@ -209,10 +209,10 @@ public final class TensionEffects {
                 return;
             }
             BlockPos pos = post.pos();
-            if (!player.level().getBlockState(pos).is(com.ninjacat.skies.core.block.ModBlocks.TENSION_POST.get())) {
-                return;
-            }
-            if (player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) > AURA_RADIUS * AURA_RADIUS) {
+            // Distance first: reading the Post's block would load its chunk from anywhere in the dimension.
+            if (player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) > AURA_RADIUS * AURA_RADIUS
+                    || !player.level().isLoaded(pos)
+                    || !player.level().getBlockState(pos).is(com.ninjacat.skies.core.block.ModBlocks.TENSION_POST.get())) {
                 return;
             }
             int bits = LoomTension.strandBits(c);
@@ -253,10 +253,9 @@ public final class TensionEffects {
                 return;
             }
             BlockPos pos = post.pos();
-            if (!player.level().getBlockState(pos).is(com.ninjacat.skies.core.block.ModBlocks.TENSION_POST.get())) {
-                return;
-            }
-            if (player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= FOOTING_RADIUS * FOOTING_RADIUS) {
+            if (player.distanceToSqr(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= FOOTING_RADIUS * FOOTING_RADIUS
+                    && player.level().isLoaded(pos)
+                    && player.level().getBlockState(pos).is(com.ninjacat.skies.core.block.ModBlocks.TENSION_POST.get())) {
                 event.setCanceled(true);
                 player.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.teal("Edge-walker footing. The pad caught you."), true);
             }

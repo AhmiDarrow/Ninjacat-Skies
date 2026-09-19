@@ -105,6 +105,15 @@ public class DriftwreckGameTests {
                 if (l.markers("pillar").size() < 3) { h.fail(id + " has " + l.markers("pillar").size() + " pillars"); return; }
                 if (l.markers("dock").size() < 2) { h.fail(id + " has " + l.markers("dock").size() + " docks"); return; }
                 if (t == WreckTier.HOLD && l.markers("rift").isEmpty()) { h.fail(id + " has no rift"); return; }
+                // every objective a player must touch can be walked to from the deck
+                for (WreckPlan.Marker m : l.markers) {
+                    boolean mustReach = switch (m.kind()) {
+                        case "pillar", "spawner", "echo", "mob", "rift" -> true;
+                        case "chest" -> m.data() != 2;                     // the hidden-room chest waits behind its h_ wall
+                        default -> false;
+                    };
+                    if (mustReach && !l.reach.contains(m.pos())) { h.fail(id + " " + m.kind() + " at " + m.pos().toShortString() + " cannot be reached"); return; }
+                }
                 distinct.add(l.description + "|" + l.blocks.size());
                 shapes.add(l.description.hashCode() & 7);
                 if (i < 2) writePreview(previews.resolve(c.id + "_" + t.id + "_" + i + ".ncga"), l);

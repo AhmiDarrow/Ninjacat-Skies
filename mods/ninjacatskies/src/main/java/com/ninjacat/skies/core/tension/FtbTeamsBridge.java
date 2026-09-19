@@ -32,6 +32,8 @@ final class FtbTeamsBridge {
     static void registerPartyEvents() {
         dev.ftb.mods.ftbteams.api.event.TeamEvent.PLAYER_JOINED_PARTY.register(e -> {
             inheritSoloData(e);
+            // The joiner's Strands may have been ORed into the party: every online member needs the new state.
+            if (e.getTeam() != null) e.getTeam().getOnlineMembers().forEach(LoomTension::onClowderChanged);
             if (e.getPlayer() != null) LoomTension.onClowderChanged(e.getPlayer());
         });
         dev.ftb.mods.ftbteams.api.event.TeamEvent.PLAYER_LEFT_PARTY.register(e -> {

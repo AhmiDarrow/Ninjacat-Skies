@@ -38,6 +38,10 @@ public final class Guardians {
         NeoForge.EVENT_BUS.addListener(TotemUnlocks::onAdvancement);
         NeoForge.EVENT_BUS.addListener(TotemUnlocks::onLogin);
         NeoForge.EVENT_BUS.addListener(this::onDeath);
+        NeoForge.EVENT_BUS.addListener(net.neoforged.bus.api.EventPriority.LOWEST, this::onPlayerDrops);
+        NeoForge.EVENT_BUS.addListener(this::onPlace);
+        NeoForge.EVENT_BUS.addListener(this::onBlockDrops);
+        NeoForge.EVENT_BUS.addListener(this::onExplode);
         NeoForge.EVENT_BUS.addListener(this::onCommands);
         NeoForge.EVENT_BUS.addListener((AddReloadListenerEvent e) -> ArenaData.clearCache());
         LOGGER.info("Snapped Guardians: thirteen arenas woven");
@@ -47,6 +51,23 @@ public final class Guardians {
     private void onLogin(PlayerEvent.PlayerLoggedInEvent e) { if (e.getEntity() instanceof ServerPlayer p) ArenaManager.get(p.server).onLogin(p); }
     private void onRespawn(PlayerEvent.PlayerRespawnEvent e) { if (e.getEntity() instanceof ServerPlayer p) ArenaManager.get(p.server).onLogin(p); }
     private void onDeath(LivingDeathEvent e) { if (e.getEntity() instanceof ServerPlayer p) ArenaManager.get(p.server).onDeath(p); }
+
+    // Stages are rebuilt from their plan on every summon: breaking one must not pay out, and nothing a player leaves
+    // there may leak into the next fight. Breaking itself stays allowed (webs, grit and the like are part of fights).
+    private void onPlayerDrops(net.neoforged.neoforge.event.entity.living.LivingDropsEvent e) {
+        if (e.getEntity() instanceof ServerPlayer p && ArenaManager.stashDeathDrops(p, e.getDrops())) e.setCanceled(true);
+    }
+    private void onPlace(net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent e) {
+        if (e.getEntity() instanceof ServerPlayer p && e.getLevel() instanceof net.minecraft.world.level.Level l
+                && ArenaManager.inGuardianSlots(l, e.getPos())) ArenaManager.get(p.server).onPlayerPlaced(e.getPos());
+    }
+    private void onBlockDrops(net.neoforged.neoforge.event.level.BlockDropsEvent e) {
+        if (ArenaManager.inGuardianSlots(e.getLevel(), e.getPos()) && !e.getState().is(net.minecraft.world.level.block.Blocks.GRAVEL)) e.setCanceled(true);   // grit stays: the Grindmaw fight moves it by hand
+    }
+    private void onExplode(net.neoforged.neoforge.event.level.ExplosionEvent.Detonate e) {
+        if (e.getLevel() instanceof net.minecraft.world.level.Level l)
+            e.getAffectedBlocks().removeIf(pos -> ArenaManager.inGuardianSlots(l, pos));
+    }
 
     private void onCommands(RegisterCommandsEvent e) {
         e.getDispatcher().register(Commands.literal("guardians")

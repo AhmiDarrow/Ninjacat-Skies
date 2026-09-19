@@ -71,15 +71,16 @@ public final class ModDimensions {
         }
 
         if (player.level().dimension().equals(CLOWDER_HALL)) {
-            ensureHubHall(hub);
+            if (ensureHubHall(hub)) markCeremonyKit(player);
             ReweaveRing.refresh(hub, PAD_CENTER);
             player.displayClientMessage(msg("message.clowderhall.hub_already", NinjacatText.GOLD), true);
             return true;
         }
 
         storeReturnPoint(player);
-        ensureHubHall(hub);
-        restockCeremonyChest(hub, player);
+        // A fresh build fills the chest itself — that is this player's kit.
+        if (ensureHubHall(hub)) markCeremonyKit(player);
+        else restockCeremonyChest(hub, player);
         ReweaveRing.refresh(hub, PAD_CENTER);
 
         // South apron, facing the beacon (north).
@@ -168,16 +169,16 @@ public final class ModDimensions {
         return true;
     }
 
-    /** Builds the ceremony hall once (marker = reinforced deepslate under pad center). */
-    public static void ensureHubHall(ServerLevel level) {
+    /** Builds the ceremony hall once (marker = reinforced deepslate under pad center). True if it was just built. */
+    public static boolean ensureHubHall(ServerLevel level) {
         if (!level.getBlockState(MARKER_POS).is(Blocks.REINFORCED_DEEPSLATE)
                 && !level.getBlockState(PAD_CENTER).isAir()) {
             // Something already occupies the pad without our marker — leave it alone.
-            return;
+            return false;
         }
         if (level.getBlockState(MARKER_POS).is(Blocks.REINFORCED_DEEPSLATE)) {
             ensureVillage(level);
-            return;
+            return false;
         }
 
         // Marker + deepslate underlayer + cyan terracotta / deepslate pad (~15x15).
@@ -289,6 +290,7 @@ public final class ModDimensions {
 
         ensureVillage(level);
         ClowderHall.LOGGER.info("Clowder Hall ceremony pad raised at {}", PAD_CENTER);
+        return true;
     }
 
     private static void ensureVillage(ServerLevel level) {
@@ -318,14 +320,19 @@ public final class ModDimensions {
      */
     public static void restockCeremonyChest(ServerLevel level, ServerPlayer arriving) {
         CompoundTag persisted = arriving.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
-        CompoundTag root = persisted.getCompound(ROOT);
-        if (root.getBoolean(KIT_TAG)) return;
+        if (persisted.getCompound(ROOT).getBoolean(KIT_TAG)) return;
         BlockPos chestPos = PAD_CENTER.offset(1, 1, 1);
         if (!(level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest) || !chest.isEmpty()) return;
         fillCeremonyChest(chest);
+        markCeremonyKit(arriving);
+    }
+
+    private static void markCeremonyKit(ServerPlayer player) {
+        CompoundTag persisted = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        CompoundTag root = persisted.getCompound(ROOT);
         root.putBoolean(KIT_TAG, true);
         persisted.put(ROOT, root);
-        arriving.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
+        player.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
     }
 
     /** Snapped Guardians arena dimension — never treat it as a Hall return or Hub Key destination. */

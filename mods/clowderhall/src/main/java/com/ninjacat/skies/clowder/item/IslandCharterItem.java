@@ -50,15 +50,24 @@ public class IslandCharterItem extends Item {
             // Seal spawn only on an overworld pad — never Dock, Hall, Nether, or End.
             boolean onPad = level.dimension().equals(Level.OVERWORLD) && !onDock;
             if (onPad && player.isShiftKeyDown()) {
-                if (!hasSolidFooting(level, serverPlayer.blockPosition())) {
+                BlockPos feet = serverPlayer.blockPosition();
+                // Forced respawn rejects a pos whose block (or the one above) is solid, so a
+                // slab/farmland/path at the feet stores the air block above it.
+                BlockPos spawn = level.getBlockState(feet).getCollisionShape(level, feet).isEmpty() ? feet : feet.above();
+                if (!hasSolidFooting(level, feet)) {
                     serverPlayer.displayClientMessage(
                             NinjacatText.gold("Stand on solid pad ground before sealing spawn."),
+                            true
+                    );
+                } else if (!canRespawnIn(level, spawn) || !canRespawnIn(level, spawn.above())) {
+                    serverPlayer.displayClientMessage(
+                            NinjacatText.gold("No headroom here — spawn would not hold. Step onto open pad ground."),
                             true
                     );
                 } else {
                     serverPlayer.setRespawnPosition(
                             serverPlayer.level().dimension(),
-                            serverPlayer.blockPosition(),
+                            spawn,
                             serverPlayer.getYRot(),
                             true,
                             true
@@ -133,6 +142,12 @@ public class IslandCharterItem extends Item {
         BlockPos below = feet.below();
         BlockState under = level.getBlockState(below);
         return under.blocksMotion() || !under.getCollisionShape(level, below).isEmpty();
+    }
+
+    /** Same test as ServerPlayer.findRespawnAndUseSpawnBlock for a forced spawn. */
+    private static boolean canRespawnIn(Level level, BlockPos pos) {
+        BlockState state = level.getBlockState(pos);
+        return state.getBlock().isPossibleToRespawnInThis(state);
     }
 
     @Override

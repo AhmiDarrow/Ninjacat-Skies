@@ -53,6 +53,15 @@ public class ProcessingGameTests {
         h.assertTrue(handler.extractItem(1,1,false).isEmpty() && !handler.insertItem(0,new ItemStack(Items.WATER_BUCKET),false).isEmpty() && be.getWater()==4,"Cached automation must obey a live redstone lock");h.succeed();
     }
     @GameTest(template="empty")
+    public static void barrelRefusesBucketWithoutRoomForEmpty(GameTestHelper h) {
+        h.setBlock(2,1,2,ModBlocks.TENSION_BARREL.get());var be=(TensionBarrelBlockEntity)h.getBlockEntity(new BlockPos(2,1,2));var handler=be.handler();
+        be.loadWithComponents(outputs(h,new ItemStack(Items.STONE,64),new ItemStack(Items.STONE,64),new ItemStack(Items.STONE,64)),h.getLevel().registryAccess());
+        h.assertFalse(handler.insertItem(0,new ItemStack(Items.WATER_BUCKET),true).isEmpty(),"Simulated pour must refuse when the empty bucket has nowhere to go");
+        h.assertFalse(handler.insertItem(0,new ItemStack(Items.WATER_BUCKET),false).isEmpty(),"Pour must refuse when the empty bucket has nowhere to go");
+        h.assertTrue(be.getWater()==0,"Refused pour must not add water");
+        h.assertItemEntityNotPresent(Items.BUCKET,new BlockPos(2,1,2),3);h.succeed();
+    }
+    @GameTest(template="empty")
     public static void barrelAnalogSeesTankFill(GameTestHelper h) {
         h.setBlock(2,1,2,ModBlocks.TENSION_BARREL.get());var be=(TensionBarrelBlockEntity)h.getBlockEntity(new BlockPos(2,1,2));
         h.assertTrue(be.analogSignal()==0,"An empty barrel must read 0");
@@ -66,15 +75,15 @@ public class ProcessingGameTests {
         h.succeed();
     }
     @GameTest(template="empty")
-    public static void barrelBreakRefundsWaterAsBottlesNotIronBuckets(GameTestHelper h) {
+    public static void barrelBreakSpillsWaterWithoutContainers(GameTestHelper h) {
         h.setBlock(2,1,2,ModBlocks.TENSION_BARREL.get());var be=(TensionBarrelBlockEntity)h.getBlockEntity(new BlockPos(2,1,2));
         var tag=new CompoundTag();tag.putInt("Water",5);tag.putInt("Dirt",2);
         be.loadWithComponents(tag,h.getLevel().registryAccess());
         BlockPos pos=new BlockPos(2,1,2);
-        be.dropAll(h.getLevel(), pos);
+        be.dropAll(h.getLevel(), h.absolutePos(pos));
         h.assertTrue(be.getWater()==0 && be.takeDryInputs().isEmpty(),"Breaking must empty tank water and dry inputs");
         h.assertItemEntityNotPresent(Items.WATER_BUCKET, pos, 2);
-        h.assertItemEntityPresent(Items.POTION, pos, 2);
+        h.assertItemEntityNotPresent(Items.POTION, pos, 2);
         h.assertItemEntityPresent(Items.DIRT, pos, 2);
         h.succeed();
     }
