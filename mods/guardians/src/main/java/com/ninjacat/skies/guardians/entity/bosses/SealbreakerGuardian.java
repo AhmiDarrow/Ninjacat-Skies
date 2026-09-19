@@ -42,6 +42,7 @@ public class SealbreakerGuardian extends GuardianEntity {
             setImmune(open <= 0); return;
         }
         if (ageInFight == 1) { shout("The Sealbreaker answers for the Cut. Three wards hold it: teal-lit ward-glass at the foot of three pillars. Don't rush them — the dais pegs light the order. Dispel the glass in that order; break the wrong one and the whole circle bites."); arm(true); }
+        else if (open <= 0 && order.isEmpty()) arm(true);                // wards are not saved: a reloaded fight re-arms instead of staying immune
         if (open > 0) { open--; if (open == 0) { say("The wards re-knit."); arm(true); } }
         setImmune(open <= 0);
         if (open <= 0) {

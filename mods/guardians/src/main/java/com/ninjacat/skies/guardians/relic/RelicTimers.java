@@ -181,12 +181,14 @@ final class RelicTimers {
             }
             BEES.clear();
         }
+        // hedges too: by ServerStopped the worlds are saved and isStopped() is set, so they would stay as permanent bushes
+        for (Hedge h : new ArrayList<>(HEDGES.keySet())) try { unhedge(h); } catch (Exception ignored) {}
+        HEDGES.clear();
     }
 
     /** A closed world takes its relic state with it (single-player exits, /stop): nothing from it may fire into the next one. */
     @SubscribeEvent
     static void onServerStopped(ServerStoppedEvent e) {
-        for (Hedge h : new ArrayList<>(HEDGES.keySet())) try { unhedge(h); } catch (Exception ignored) {}
         TASKS.clear(); STUNNED.clear(); MODS.clear(); HEDGES.clear(); BEES.clear(); TRAIL.clear();
         if (RelicUtil.EXDEORUM) com.ninjacat.skies.guardians.relic.compat.SieveCompat.clearAll();
     }

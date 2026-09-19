@@ -80,7 +80,8 @@ final class Mech {
         return level(boss).getEntitiesOfClass(Entity.class, box, e -> e.isAlive() && e.getTags().contains(tag) && filter.test(e));
     }
     static int countMinions(GuardianEntity boss) { return minions(boss).size(); }
-    static void discardMinions(GuardianEntity boss) { for (Entity e : minions(boss)) e.discard(); }
+    /** Guardian minions (the Overweaver's shades) put their own temporary blocks back before they go. */
+    static void discardMinions(GuardianEntity boss) { for (Entity e : minions(boss)) { if (e instanceof GuardianEntity g) g.cleanupArena(); e.discard(); } }
 
     // ------------------------------------------------------------------ geometry
     /** Top solid block with two air blocks above it in the column (x, z), scanning yHi → yLo. Null if none. */

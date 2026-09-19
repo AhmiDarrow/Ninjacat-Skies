@@ -153,6 +153,14 @@ public final class ArenaManager extends SavedData {
         if (placed.computeIfAbsent(slotAt(pos.getX()), k -> new HashSet<>()).add(pos.asLong())) setDirty();
     }
 
+    /** A block is broken on a stage: true (and forgotten) if a player placed it there, so it drops like anywhere else. */
+    public boolean takePlaced(BlockPos pos) {
+        Set<Long> s = placed.get(slotAt(pos.getX()));
+        if (s == null || !s.remove(pos.asLong())) return false;
+        setDirty();
+        return true;
+    }
+
     /** Dying on a stage: the slot is torn down before you can walk back, so the drops wait for you at home. */
     public static boolean stashDeathDrops(ServerPlayer p, Collection<net.minecraft.world.entity.item.ItemEntity> drops) {
         if (!inArena(p) || drops.isEmpty()) return false;
@@ -365,7 +373,7 @@ public final class ArenaManager extends SavedData {
             // Grant after the pad teleport so a full inventory drops at home, not in the arena
             // (clearSlot discards leftover item entities). Spectator leftovers stash until revive.
             if (!relic.isEmpty()) {
-                if (p != null) LoomTension.giveOrDrop(p, relic.copy());
+                if (p != null) { LoomTension.giveOrDrop(p, relic.copy()); recordDefeat(p, inst.kind); }   // idempotent; covers a reconnect after the win
                 else pendingRelics.put(id, inst.kind.id);
             }
         }
@@ -464,6 +472,7 @@ public final class ArenaManager extends SavedData {
             if (k != null) {
                 ItemStack relic = ModItems.relic(k);
                 if (!relic.isEmpty()) LoomTension.giveOrDrop(p, relic);
+                recordDefeat(p, k);   // offline at the win: the defeat and its advancement were never recorded
             }
             setDirty();
         }

@@ -62,7 +62,8 @@ public final class Guardians {
                 && ArenaManager.inGuardianSlots(l, e.getPos())) ArenaManager.get(p.server).onPlayerPlaced(e.getPos());
     }
     private void onBlockDrops(net.neoforged.neoforge.event.level.BlockDropsEvent e) {
-        if (ArenaManager.inGuardianSlots(e.getLevel(), e.getPos()) && !e.getState().is(net.minecraft.world.level.block.Blocks.GRAVEL)) e.setCanceled(true);   // grit stays: the Grindmaw fight moves it by hand
+        if (ArenaManager.inGuardianSlots(e.getLevel(), e.getPos()) && !e.getState().is(net.minecraft.world.level.block.Blocks.GRAVEL)   // grit stays: the Grindmaw fight moves it by hand
+                && !ArenaManager.get(e.getLevel().getServer()).takePlaced(e.getPos())) e.setCanceled(true);                       // your own blocks come back to you
     }
     private void onExplode(net.neoforged.neoforge.event.level.ExplosionEvent.Detonate e) {
         if (e.getLevel() instanceof net.minecraft.world.level.Level l)

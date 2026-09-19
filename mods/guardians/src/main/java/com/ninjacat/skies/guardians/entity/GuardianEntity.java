@@ -155,11 +155,13 @@ public abstract class GuardianEntity extends Monster {
         if (tickCount % 10 == 0) leashToArena();
         bossEvent.setProgress(getHealth() / getMaxHealth());
         if (showsBossBar()) { for (ServerPlayer p : party()) bossEvent.addPlayer(p); } else if (!bossEvent.getPlayers().isEmpty()) bossEvent.removeAllPlayers();
-        int ph = getHealth() <= getMaxHealth()*0.25F ? 3 : getHealth() <= getMaxHealth()*0.5F ? 2 : getHealth() <= getMaxHealth()*0.75F ? 1 : 0;
+        int ph = healthPhase();
         if (ph != lastPhase) { lastPhase = ph; entityData.set(PHASE, ph); onPhase(ph); }
         tickMelee(sl);
         tickMechanic();
     }
+
+    private int healthPhase() { return getHealth() <= getMaxHealth()*0.25F ? 3 : getHealth() <= getMaxHealth()*0.5F ? 2 : getHealth() <= getMaxHealth()*0.75F ? 1 : 0; }
 
     protected void tickMelee(ServerLevel sl) {
         LivingEntity t = getTarget();
@@ -270,6 +272,7 @@ public abstract class GuardianEntity extends Monster {
         super.addAdditionalSaveData(tag);
         tag.putInt("ArenaSlot", arenaSlot); if (partyId != null) tag.putUUID("Party", partyId);
         tag.putInt("FightAge", ageInFight);
+        tag.putInt("Phase", lastPhase);
         tag.putInt("DeathTimer", deathTimer);
         ListTag temps = new ListTag();
         for (BlockPos p : tempBlocks) {
@@ -284,6 +287,8 @@ public abstract class GuardianEntity extends Monster {
         super.readAdditionalSaveData(tag);
         arenaSlot = tag.getInt("ArenaSlot"); partyId = tag.hasUUID("Party") ? tag.getUUID("Party") : null; ageInFight = tag.getInt("FightAge");
         deathTimer = tag.contains("DeathTimer") ? tag.getInt("DeathTimer") : -1;
+        // a reload must not replay phase changes the fight already went through (slams, waves, reshuffles)
+        lastPhase = tag.contains("Phase") ? tag.getInt("Phase") : healthPhase(); entityData.set(PHASE, lastPhase);
         if (deathTimer >= 0) { setHealth(1.0F); setImmune(true); playClip(CLIP_DEATH); }
         tempBlocks.clear();
         for (Tag t : tag.getList("TempBlocks", Tag.TAG_COMPOUND)) {

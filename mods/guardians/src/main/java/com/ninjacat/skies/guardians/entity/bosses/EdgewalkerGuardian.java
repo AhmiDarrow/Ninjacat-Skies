@@ -131,5 +131,8 @@ public class EdgewalkerGuardian extends GuardianEntity {
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         broken.load(tag, "Broken", level());
+        // the re-knit timers are not saved: a reloaded fight knits every crumbled span back on the usual delay
+        reknitPos.clear(); reknitAt.clear();
+        for (BlockPos b : broken.positions()) { reknitPos.add(b); reknitAt.add(REKNIT); }
     }
 }
