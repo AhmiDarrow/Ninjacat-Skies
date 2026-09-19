@@ -73,6 +73,7 @@ public final class ReweaveRing {
                         sign.setText(text, true);
                         sign.setText(text, false);
                     }
+                    if (!sign.isWaxed()) sign.setWaxed(true);   // plaques are read, not rewritten by visitors
                 }
             } else if (hall.getBlockState(signPos).is(Blocks.OAK_WALL_SIGN)) {
                 hall.setBlockAndUpdate(signPos, Blocks.AIR.defaultBlockState());

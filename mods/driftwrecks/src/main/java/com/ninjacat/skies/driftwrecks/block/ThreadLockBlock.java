@@ -56,10 +56,11 @@ public class ThreadLockBlock extends Block {
         Deque<BlockPos> todo = new ArrayDeque<>();
         Set<BlockPos> seen = new HashSet<>();
         todo.add(start);
-        while (!todo.isEmpty() && seen.size() < 32) {
+        int removed = 0;                                   // the cap counts lock blocks, not the air around them
+        while (!todo.isEmpty() && removed < 256) {
             BlockPos p = todo.poll();
             if (!seen.add(p) || !level.getBlockState(p).is(DwBlocks.THREAD_LOCK.get())) continue;
-            level.removeBlock(p, false);
+            level.removeBlock(p, false); removed++;
             level.sendParticles(ParticleTypes.GLOW, p.getX() + 0.5, p.getY() + 0.5, p.getZ() + 0.5, 6, 0.3, 0.3, 0.3, 0.02);
             for (var d : net.minecraft.core.Direction.values()) todo.add(p.relative(d));
         }

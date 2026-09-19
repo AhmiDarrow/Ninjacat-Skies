@@ -105,9 +105,13 @@ public class RemnantEntity extends Monster {
         double hp = 160 * (0.6 + 0.4 * Math.max(1, party));
         getAttribute(Attributes.MAX_HEALTH).setBaseValue(hp);
         setHealth((float) hp);
+        styleBar(s);
+        entityData.set(OPEN, !immuneByDefault());
+    }
+
+    private void styleBar(Strand s) {
         bar.setName(Component.translatable("entity.driftwrecks.remnant." + s.id()));
         bar.setColor(switch (s) { case SOIL, SPROUT -> BossEvent.BossBarColor.GREEN; case SPARK, SWARM, CLOCK -> BossEvent.BossBarColor.YELLOW; case SIGIL -> BossEvent.BossBarColor.PURPLE; default -> BossEvent.BossBarColor.BLUE; });
-        entityData.set(OPEN, !immuneByDefault());
     }
 
     @Override
@@ -271,10 +275,10 @@ public class RemnantEntity extends Monster {
             for (int i = 0; i < props.size(); i++) {
                 BlockPos t = props.get(i);
                 int delay = i * 20;
-                sl.getServer().tell(new net.minecraft.server.TickTask(sl.getServer().getTickCount() + delay, () -> {
+                com.ninjacat.skies.driftwrecks.Later.run(sl.getServer(), delay, () -> {
                     sl.setBlock(t, Blocks.OCHRE_FROGLIGHT.defaultBlockState(), 3);
                     sl.playSound(null, t, SoundEvents.NOTE_BLOCK_CHIME.value(), SoundSource.HOSTILE, 1.5F, 1.0F);
-                }));
+                });
             }
             say("It winds. Watch, then step.");
         }
@@ -342,10 +346,10 @@ public class RemnantEntity extends Monster {
         if (timer % 300 == 1) for (int i = 0; i < props.size(); i++) {
             BlockPos g = props.get(i);
             int delay = i * 20;
-            sl.getServer().tell(new net.minecraft.server.TickTask(sl.getServer().getTickCount() + delay, () -> {
+            com.ninjacat.skies.driftwrecks.Later.run(sl.getServer(), delay, () -> {
                 sl.sendParticles(TEAL, g.getX() + 0.5, g.getY() + 1.5, g.getZ() + 0.5, 30, 0.2, 0.8, 0.2, 0);
                 sl.playSound(null, g, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.HOSTILE, 1.5F, 0.7F);
-            }));
+            });
         }
         for (int i = propStep; i < props.size(); i++) {
             BlockPos g = props.get(i);
@@ -423,6 +427,7 @@ public class RemnantEntity extends Monster {
         timer = tag.getInt("Timer"); openTicks = tag.getInt("Open"); propStep = tag.getInt("Step");
         props.clear(); for (Tag t : tag.getList("Props", Tag.TAG_LONG)) props.add(BlockPos.of(((LongTag) t).getAsLong()));
         entityData.set(OPEN, !immuneByDefault() || openTicks > 0);
+        styleBar(strand());                                  // a reloaded Remnant keeps its own name and colour
         if (hasCustomName()) bar.setName(getDisplayName());
     }
 
