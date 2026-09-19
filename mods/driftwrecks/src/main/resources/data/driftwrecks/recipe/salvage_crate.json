@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "P P",
+    "PPP"
+  ],
+  "key": {
+    "W": {
+      "item": "driftwrecks:salvaged_weft"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "id": "driftwrecks:salvage_crate"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Carving Bench",
+  "description": "Seal-carvers · Forge",
+  "icon": "driftwrecks:keepsake_sigil_forge",
+  "x": 6,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Carving Bench",
+      "text": "At the Carving Bench a Seal-carver could press spirit into matter and make it stay. Their tools wore down to fit the hand of one carver and no other. When a carver died, their burin was buried with their last seal. This one was not buried."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/sigil_forge"
+  }
+}

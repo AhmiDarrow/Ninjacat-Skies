@@ -11,7 +11,8 @@ $needed = @(
     "ninjacatskies-${customModVersion}.jar",
     "voidloom-${customModVersion}.jar",
     "clowderhall-${customModVersion}.jar",
-    "guardians-${customModVersion}.jar"
+    "guardians-${customModVersion}.jar",
+    "driftwrecks-${customModVersion}.jar"
 )
 $packMods = Join-Path $root "pack\mods"
 $corePresent = @(Get-ChildItem $packMods -Filter "ninjacatskies-core-*.jar" -ErrorAction SilentlyContinue).Count -gt 0
@@ -23,7 +24,7 @@ if ($SkipIfJarsPresent -and $corePresent) {
 
 Push-Location $modsRoot
 try {
-    & .\gradlew.bat :ninjacat-lib:build :ninjacatskies:build :voidloom:build :clowderhall:build :guardians:build --no-daemon
+    & .\gradlew.bat :ninjacat-lib:build :ninjacatskies:build :voidloom:build :clowderhall:build :guardians:build :driftwrecks:build --no-daemon
     if ($LASTEXITCODE -ne 0) {
         Write-Host "FAIL Test-CustomModsBuild — gradle exit $LASTEXITCODE"
         exit $LASTEXITCODE

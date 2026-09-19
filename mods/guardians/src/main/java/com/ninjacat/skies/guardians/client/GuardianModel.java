@@ -66,9 +66,24 @@ public final class GuardianModel {
         }
         return m;
     }
-    public static void clearCache() { CACHE.clear(); FAILED.clear(); }
+    public static void clearCache() { CACHE.clear(); FAILED.clear(); BY_FILE.clear(); }
 
-    static GuardianModel parse(byte[] bytes) throws IOException {
+    private static final Map<net.minecraft.resources.ResourceLocation, java.util.Optional<GuardianModel>> BY_FILE = new java.util.HashMap<>();
+
+    /** Any baked .ncgb mesh by resource location (Remnants and other small bosses outside this mod). Cached; null if missing. */
+    @Nullable
+    public static GuardianModel load(net.minecraft.resources.ResourceLocation file) {
+        return BY_FILE.computeIfAbsent(file, f -> {
+            try (InputStream in = Minecraft.getInstance().getResourceManager().getResourceOrThrow(f).open()) {
+                return java.util.Optional.of(parse(in.readAllBytes()));
+            } catch (Exception e) {
+                Guardians.LOGGER.error("Could not load mesh {}", f, e);
+                return java.util.Optional.empty();
+            }
+        }).orElse(null);
+    }
+
+    public static GuardianModel parse(byte[] bytes) throws IOException {
         ByteBuffer b = ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN);
         if (b.getInt() != 0x4247434E) throw new IOException("bad magic");   // 'NCGB'
         int version = b.getInt();

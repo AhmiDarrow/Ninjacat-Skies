@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "driftwrecks:block/wreck_chest"
+    },
+    "facing=east": {
+      "model": "driftwrecks:block/wreck_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "driftwrecks:block/wreck_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "driftwrecks:block/wreck_chest",
+      "y": 270
+    }
+  }
+}

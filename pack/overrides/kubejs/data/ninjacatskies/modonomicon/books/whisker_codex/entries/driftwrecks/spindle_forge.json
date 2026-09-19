@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Shuttle Works",
+  "description": "Loom-stitchers · Forge",
+  "icon": "driftwrecks:keepsake_spindle_forge",
+  "x": 7,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Shuttle Works",
+      "text": "At the Shuttle Works the Loom-stitchers carved shuttles that could carry thread through the sky itself. Each one crossed the void a thousand times before it wore out. This one did not wear out. It was dropped."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/spindle_forge"
+  }
+}

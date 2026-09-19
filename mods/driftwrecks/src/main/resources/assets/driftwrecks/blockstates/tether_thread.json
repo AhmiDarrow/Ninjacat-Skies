@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom": {
+      "model": "driftwrecks:block/tether_thread"
+    },
+    "half=top": {
+      "model": "driftwrecks:block/tether_thread_top"
+    }
+  }
+}

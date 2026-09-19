@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Comb Archive",
+  "description": "Colony-keepers · Library",
+  "icon": "driftwrecks:keepsake_swarm_library",
+  "x": 5,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Comb Archive",
+      "text": "The Comb Archive kept the tribe's accounts on wax tablets, stacked like honeycomb: every hive, every harvest, every jar given away. Colony-keepers gave away more than they kept. The last tablet is a list of names. They are all marked as fed."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/swarm_library"
+  }
+}

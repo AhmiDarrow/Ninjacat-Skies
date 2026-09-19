@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "driftwrecks:block/frayed_spawner"
+  }
+}

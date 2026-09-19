@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "driftwrecks:block/salvage_crate_top",
+    "bottom": "driftwrecks:block/salvage_crate_top",
+    "side": "driftwrecks:block/salvage_crate_side"
+  }
+}

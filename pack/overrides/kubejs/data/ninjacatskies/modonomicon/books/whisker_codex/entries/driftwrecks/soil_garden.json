@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Warm Bed",
+  "description": "Pad-keepers · Garden",
+  "icon": "driftwrecks:keepsake_soil_garden",
+  "x": -1,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Warm Bed",
+      "text": "The Warm Bed was a garden built over the Hearthbank's ash pit, so it never froze. Pad-keepers grew their first shoots there and carried them out to the cold fields in clay jars. It fed everyone. It could not feed a pad that was drifting."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/soil_garden"
+  }
+}

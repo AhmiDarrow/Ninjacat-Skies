@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Humming Altar",
+  "description": "Colony-keepers · Shrine",
+  "icon": "driftwrecks:keepsake_swarm_shrine",
+  "x": 5,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Humming Altar",
+      "text": "Colony-keepers built their altar inside a hive and prayed by humming in the same key as the bees. The whole island buzzed on feast days. When the Cut came, the bees went quiet first. Then they hummed louder than they ever had."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/swarm_shrine"
+  }
+}

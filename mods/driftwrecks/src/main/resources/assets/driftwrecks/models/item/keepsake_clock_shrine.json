@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "driftwrecks:item/keepsake_clock_shrine"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:driftwreck_seal"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.modifiers.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.modifiers.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:atlas"
+}

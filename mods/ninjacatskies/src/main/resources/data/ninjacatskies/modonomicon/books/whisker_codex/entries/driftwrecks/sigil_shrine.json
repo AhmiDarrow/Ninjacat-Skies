@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Oath Stone",
+  "description": "Seal-carvers · Shrine",
+  "icon": "driftwrecks:keepsake_sigil_shrine",
+  "x": 6,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Oath Stone",
+      "text": "Seal-carvers made promises in stone: a sigil carved at the Oath Stone bound whoever carved it. The stone was covered edge to edge with oaths kept and broken. One oath at the centre is still glowing. It is still being kept."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/sigil_shrine"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "driftwrecks:block/thread_lock"
+    }
+  }
+}

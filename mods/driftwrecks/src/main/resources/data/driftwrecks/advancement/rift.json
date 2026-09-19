@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:weft_key"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.rift.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.rift.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:salvage"
+}

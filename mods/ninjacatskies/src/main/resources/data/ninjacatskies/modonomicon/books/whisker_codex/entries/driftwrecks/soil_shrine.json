@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Hearthbank",
+  "description": "Pad-keepers · Shrine",
+  "icon": "driftwrecks:keepsake_soil_shrine",
+  "x": -1,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Hearthbank",
+      "text": "The Pad-keepers rang a root-bell at dusk so the soil would hold its warmth through the night. Every family carried a handful of hearth-ash to the Hearthbank. When the Cut came the bell was still warm, and someone kept ringing it."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/soil_shrine"
+  }
+}

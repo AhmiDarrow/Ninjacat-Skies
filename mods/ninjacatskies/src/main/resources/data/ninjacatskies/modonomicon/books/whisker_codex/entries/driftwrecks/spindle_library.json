@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Thread Archive",
+  "description": "Loom-stitchers · Library",
+  "icon": "driftwrecks:keepsake_spindle_library",
+  "x": 7,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Thread Archive",
+      "text": "The Thread Archive kept the pattern of the old sky on punched cards: every island, every path, every knot between them. The Loom-stitchers could weave it again if they had to. They had to. The cards are nearly all still here."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/spindle_library"
+  }
+}

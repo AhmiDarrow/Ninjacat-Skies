@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:keepsake_heartwreck"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.heartwreck.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.heartwreck.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:cells_54"
+}

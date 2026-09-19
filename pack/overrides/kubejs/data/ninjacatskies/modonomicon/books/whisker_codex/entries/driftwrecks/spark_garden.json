@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Ember Gardens",
+  "description": "Drumhearts · Garden",
+  "icon": "driftwrecks:keepsake_spark_garden",
+  "x": 3,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Ember Gardens",
+      "text": "The Ember Gardens grew around the forge's warm run-off: fire-peppers, sunroot, a flower that bloomed only at a hard beat. Drumhearts ate spicy and played loud. The run-off is cold now. The peppers are still hot."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/spark_garden"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Last Post Shrine",
+  "description": "Edge-walkers · Shrine",
+  "icon": "driftwrecks:keepsake_claw_shrine",
+  "x": 2,
+  "y": -2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Last Post Shrine",
+      "text": "Edge-walkers left a claw mark on the Last Post Shrine each time they returned from past the fence. Old walkers had stones covered in marks. Young ones had one, and were loud about it. The newest mark on this stone is unfinished."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/claw_shrine"
+  }
+}

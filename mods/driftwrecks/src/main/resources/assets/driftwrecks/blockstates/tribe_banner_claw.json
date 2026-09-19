@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "driftwrecks:block/tribe_banner_claw"
+    },
+    "facing=east": {
+      "model": "driftwrecks:block/tribe_banner_claw",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "driftwrecks:block/tribe_banner_claw",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "driftwrecks:block/tribe_banner_claw",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "index=0,lit=false": {
+      "model": "driftwrecks:block/thread_pillar_off"
+    },
+    "index=0,lit=true": {
+      "model": "driftwrecks:block/thread_pillar_on"
+    },
+    "index=1,lit=false": {
+      "model": "driftwrecks:block/thread_pillar_off"
+    },
+    "index=1,lit=true": {
+      "model": "driftwrecks:block/thread_pillar_on"
+    },
+    "index=2,lit=false": {
+      "model": "driftwrecks:block/thread_pillar_off"
+    },
+    "index=2,lit=true": {
+      "model": "driftwrecks:block/thread_pillar_on"
+    },
+    "index=3,lit=false": {
+      "model": "driftwrecks:block/thread_pillar_off"
+    },
+    "index=3,lit=true": {
+      "model": "driftwrecks:block/thread_pillar_on"
+    },
+    "index=4,lit=false": {
+      "model": "driftwrecks:block/thread_pillar_off"
+    },
+    "index=4,lit=true": {
+      "model": "driftwrecks:block/thread_pillar_on"
+    }
+  }
+}

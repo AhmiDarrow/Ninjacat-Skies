@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WSW",
+    "SSS"
+  ],
+  "key": {
+    "W": {
+      "item": "driftwrecks:salvaged_weft"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": {
+    "id": "driftwrecks:trophy_plinth"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Echo Register",
+  "description": "Grit-singers · Library",
+  "icon": "driftwrecks:keepsake_stone_library",
+  "x": 0,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Echo Register",
+      "text": "The Echo Register was a wall of carved staves, one for every quarry, marking the pitch of its best stone. Masons came from nine valleys to read it. Where a stave is chipped, the quarry is gone."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/stone_library"
+  }
+}

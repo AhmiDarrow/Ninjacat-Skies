@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Charge Vault",
+  "description": "Drumhearts · Vault",
+  "icon": "driftwrecks:keepsake_spark_vault",
+  "x": 3,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Charge Vault",
+      "text": "The Charge Vault stored the Thunder Mast's catch in sealed coils for the long, still winters. One coil could keep a hall warm for a season. This one was never opened. Listen before you open it."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/spark_vault"
+  }
+}

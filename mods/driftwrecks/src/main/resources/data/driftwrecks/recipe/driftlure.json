@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "driftwrecks:salvaged_weft"
+    },
+    {
+      "item": "driftwrecks:salvaged_weft"
+    },
+    {
+      "item": "driftwrecks:salvaged_weft"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "id": "driftwrecks:driftlure"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Strongroom Clock",
+  "description": "Pattern-weavers · Vault",
+  "icon": "driftwrecks:keepsake_clock_vault",
+  "x": 4,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Strongroom Clock",
+      "text": "The Pattern-weavers' vault opened once a year, at a minute only the Hour Tower could count. The minute came and went during the Cut with no one at the door. The box is still waiting for its hour. Wind it."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/clock_vault"
+  }
+}
