@@ -71,7 +71,7 @@ ItemEvents.modifyTooltips(event => {
     event.add('tribalpower:silent_drum', Text.gray('Four strikes, a breath apart. Sneak against the Beat; answer the Silence with the same rhythm.'))
     event.add(/tribalpower:rite_(green|rain|sky|dawn|still|ley|spring).*/, Text.gray('Sneak-use on a Ritual Brazier with the matching seal seated. A tablet wants a Rite Circle. Pulse comes from the lattice around it.'))
     event.add('tribalpower:bonding_charm', Text.gray('Adult familiar. Animals keep a failed charm; remnants spend it and want Voice with their tribe. One fighter and two helpers may follow.'))
-    event.add('tribalpower:camp_charter', Text.gray('Use on a player to invite them into a Tribal Power camp. /tribalpower camp create, invite, join. Shared vault, twelve anchors, quartered standing.'))
+    event.add('tribalpower:camp_charter', Text.gray('Use on a player to invite them into a Tribal Power camp. /tribalpower camp create <name>, invite, join. Shared vault, twelve anchors, quartered standing.'))
     event.add('tribalpower:ley_lens', Text.gray('Hold to see the ley. Sneak-use a Ley Collector, or a familiar, for its numbers.'))
     event.add('tribalpower:lattice_tuner', Text.gray('Mark a machine face, then use on a relay. Do not mark the plate. Or seat the same unique item in both Bond slots.'))
     event.add('tribalpower:item_relay', Text.gray('Snap onto a machine face. Pair Bond slots or tuner-bind a destination. Hoppers cannot steal the Bond or Rune.'))
