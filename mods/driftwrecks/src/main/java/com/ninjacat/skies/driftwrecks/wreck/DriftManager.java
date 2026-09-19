@@ -57,7 +57,9 @@ public final class DriftManager extends SavedData {
     private static final int BUILD_TICKS = 100;     // arrival spectacle: ~5 s
     private static final int UNRAVEL_TICKS = 60;    // unravel spectacle: ~3 s
 
+    private static final int RETRY_TICKS = 20 * 60 * 5;
     private final Map<Integer, Wreck> wrecks = new TreeMap<>();
+    private final Map<UUID, Long> retryAt = new HashMap<>();
     private int nextId = 1;
     private final RandomSource rng = RandomSource.create();
 
@@ -90,15 +92,22 @@ public final class DriftManager extends SavedData {
         boolean slow = server.getTickCount() % SLOW == 0;
         List<Integer> finished = new ArrayList<>();
         for (Wreck w : wrecks.values()) {
-            switch (w.phase) {
-                case BUILDING -> stepBuild(level, w);
-                case ACTIVE -> {
-                    if (!enabled) { beginUnravel(level, w, false); break; }
-                    if (slow) tickActive(level, w);
-                    WreckObjectives.tick(this, level, w);
+            try {
+                switch (w.phase) {
+                    case BUILDING -> stepBuild(level, w);
+                    case ACTIVE -> {
+                        if (!enabled) { beginUnravel(level, w, false); break; }
+                        if (slow) tickActive(level, w);
+                        WreckObjectives.tick(this, level, w);
+                    }
+                    case UNRAVELING -> { if (stepUnravel(level, w)) finished.add(w.id); }
+                    case DONE -> finished.add(w.id);
                 }
-                case UNRAVELING -> { if (stepUnravel(level, w)) finished.add(w.id); }
-                case DONE -> finished.add(w.id);
+            } catch (RuntimeException e) {
+                // e.g. an update removed this wreck's plan: let it go cleanly rather than failing every tick
+                Driftwrecks.LOGGER.error("Driftwreck {} ({}) failed to tick; unravelling it", w.id, w.planId, e);
+                if (w.phase == Wreck.Phase.UNRAVELING || w.phase == Wreck.Phase.DONE) finished.add(w.id);
+                else try { beginUnravel(level, w, false); } catch (RuntimeException e2) { finished.add(w.id); }
             }
         }
         for (int id : finished) wrecks.remove(id);
@@ -119,8 +128,11 @@ public final class DriftManager extends SavedData {
             t.setPressure(p);
             t.dirty();
             if (p >= target) {
+                long now = level.getGameTime();
+                if (now < retryAt.getOrDefault(c.id(), 0L)) continue;
                 Wreck w = arrive(server, c, null);
-                if (w != null) { t.resetCycle(); t.dirty(); }
+                if (w != null) { t.resetCycle(); t.dirty(); retryAt.remove(c.id()); }
+                else retryAt.put(c.id(), now + RETRY_TICKS);   // no clear sky: try again in a few minutes, not every second
             }
         }
     }
@@ -335,6 +347,17 @@ public final class DriftManager extends SavedData {
         }
     }
 
+    /** A wreck mob died: stop tracking it. */
+    public void mobGone(Entity e) {
+        Wreck w = wrecks.get(e.getPersistentData().getInt(MOB_TAG));
+        if (w != null && w.mobs.remove(e.getUUID())) setDirty();
+    }
+
+    /** Wreck mobs alive and loaded near a point (caps spawns from mistakes). */
+    public int mobsNear(ServerLevel level, BlockPos at, double r) {
+        return level.getEntitiesOfClass(Mob.class, new net.minecraft.world.phys.AABB(at).inflate(r), DriftManager::isWreckMob).size();
+    }
+
     public void tagMob(Wreck w, Mob mob) {
         mob.setPersistenceRequired();
         mob.getPersistentData().putInt(MOB_TAG, w.id);
@@ -385,6 +408,7 @@ public final class DriftManager extends SavedData {
         if (w.heartwreck && w.visitors.isEmpty()) return; // no timer until someone sets foot on it
         w.age += SLOW;
         setDirty();
+        if (w.pendingComplete && !w.objectiveDone) completeObjective(level, w);
         float f = w.lifeFraction();
         if (w.warned < 50 && f >= 0.5F) warn(level, c.get(), w, 50, "The weft creaks.");
         if (w.warned < 80 && f >= 0.8F) warn(level, c.get(), w, 80, "It is slipping.");
@@ -394,7 +418,7 @@ public final class DriftManager extends SavedData {
         if (w.modifier == WreckModifier.HAUNTED && server.getTickCount() % 200 == 0)
             level.playSound(null, w.center(), DwRegistries.sound("driftwreck.whisper"), SoundSource.AMBIENT, 0.6F, 0.7F + rng.nextFloat() * 0.3F);
         boolean crumbling = w.warned >= 80 || w.modifier == WreckModifier.UNSTABLE;
-        if (crumbling && server.getTickCount() % 40 == 0) crumble(level, w);
+        if (crumbling && server.getTickCount() % 40 == 0 && level.isLoaded(w.center())) crumble(level, w);
         if (w.warned >= 95) for (BlockPos t : w.tether) if (rng.nextInt(12) == 0)
             level.sendParticles(ParticleTypes.GLOW, t.getX() + 0.5, t.getY() + 0.6, t.getZ() + 0.5, 1, 0.2, 0.1, 0.2, 0.0);
         if (w.age >= w.lifetime) beginUnravel(level, w, true);
@@ -448,6 +472,9 @@ public final class DriftManager extends SavedData {
     /** The objective is met: completion bonus, Atlas cell, stamps and the lifetime extension for Hold. */
     public void completeObjective(ServerLevel level, Wreck w) {
         if (w.objectiveDone) return;
+        boolean ownerOnline = LoomTension.clowderById(level.getServer(), w.team).map(c -> !c.onlineMembers().isEmpty()).orElse(false);
+        if (!ownerOnline) { w.pendingComplete = true; setDirty(); return; }
+        w.pendingComplete = false;
         w.objectiveDone = true;
         if (w.objective == WreckObjective.HOLD) w.lifetime += w.lifetime / 2;
         setDirty();
@@ -462,6 +489,7 @@ public final class DriftManager extends SavedData {
         MinecraftServer server = level.getServer();
         Optional<Clowder> c = LoomTension.clowderById(server, w.team);
         BlockPos home = homeFor(server, w);
+        if (w.heartwreck && !w.objectiveDone) c.ifPresent(cl -> { TeamDrift t = TeamDrift.of(cl); t.setHeartwreck(1); t.dirty(); });   // it comes back
         // 1. nobody falls
         for (ServerPlayer p : level.players()) {
             if (p.isSpectator()) continue;
@@ -557,11 +585,13 @@ public final class DriftManager extends SavedData {
             items.removeIf(ItemStack::isEmpty);
             if (items.isEmpty()) continue;
             String name = Optional.ofNullable(server.getProfileCache()).flatMap(pc -> pc.get(e.getKey())).map(com.mojang.authlib.GameProfile::getName).orElse("a Clowder member");
-            ItemStack bundle = com.ninjacat.skies.driftwrecks.item.SalvageBundleItem.of(items, name);
-            if (crate != null && crate.insert(bundle)) continue;
-            net.minecraft.world.entity.item.ItemEntity ie = new net.minecraft.world.entity.item.ItemEntity(level, drop.getX() + 0.5, drop.getY() + 0.5, drop.getZ() + 0.5, bundle);
-            ie.setUnlimitedLifetime();
-            level.addFreshEntity(ie);
+            for (int from = 0; from < items.size(); from += 256) {
+                ItemStack bundle = com.ninjacat.skies.driftwrecks.item.SalvageBundleItem.of(items.subList(from, Math.min(items.size(), from + 256)), name);
+                if (crate != null && crate.insert(bundle)) continue;
+                net.minecraft.world.entity.item.ItemEntity ie = new net.minecraft.world.entity.item.ItemEntity(level, drop.getX() + 0.5, drop.getY() + 0.5, drop.getZ() + 0.5, bundle);
+                ie.setUnlimitedLifetime();
+                level.addFreshEntity(ie);
+            }
         }
     }
 

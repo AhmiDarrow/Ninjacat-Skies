@@ -2955,7 +2955,7 @@ def build_driftwrecks() -> list[dict]:
         q = task_quest(s, title=title, desc=[desc, "Repeatable: hand them in as often as you like."],
                        task={"type": "item", "item": {"id": item, "count": n}, "consume_items": True}, rewards=rewards,
                        deps=[salvage["id"]], x=1.6 + i * 1.6, y=1.8)
-        q["repeatable"] = True
+        q["can_repeat"] = True
         out.append(q)
     miles = [("A whole column", "column", "Every core of one Strand. That tribe's lures cost half, its wrecks come a little oftener, and its banner is yours.", [reward_item("driftwrecks:trophy_plinth")]),
              ("A whole row", "row", "One kind of place in all nine tribes. Its hidden rooms always open now.", [reward_item(weft, 24)]),

@@ -172,7 +172,7 @@
 				}
 			]
 			dependencies: ["42000000002B0803"]
-			repeatable: true
+			can_repeat: true
 			shape: "loom"
 		}
 		{
@@ -209,7 +209,7 @@
 				}
 			]
 			dependencies: ["42000000002B0803"]
-			repeatable: true
+			can_repeat: true
 			shape: "loom"
 		}
 		{
@@ -246,7 +246,7 @@
 				}
 			]
 			dependencies: ["42000000002B0803"]
-			repeatable: true
+			can_repeat: true
 			shape: "loom"
 		}
 		{

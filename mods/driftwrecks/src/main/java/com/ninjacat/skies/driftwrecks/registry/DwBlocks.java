@@ -37,7 +37,8 @@ public final class DwBlocks {
     public static final DeferredBlock<ThreadIdolBlock> THREAD_IDOL = BLOCKS.register("thread_idol",
             () -> new ThreadIdolBlock(wreck().strength(-1.0F, 3600000.0F).sound(SoundType.WOOD).noLootTable().noOcclusion().lightLevel(s -> 6)));
     public static final DeferredBlock<ThreadLockBlock> THREAD_LOCK = BLOCKS.register("thread_lock",
-            () -> new ThreadLockBlock(wreck().strength(-1.0F, 3600000.0F).sound(SoundType.WOOL).noLootTable().lightLevel(s -> 5)));
+            () -> new ThreadLockBlock(wreck().strength(-1.0F, 3600000.0F).sound(SoundType.WOOL).noLootTable().lightLevel(s -> 5).noOcclusion()
+                    .isViewBlocking((s, l, p) -> false).isSuffocating((s, l, p) -> false)));
     public static final DeferredBlock<RiftTearBlock> RIFT_TEAR = BLOCKS.register("rift_tear",
             () -> new RiftTearBlock(wreck().strength(-1.0F, 3600000.0F).noCollission().noLootTable().lightLevel(s -> 13).sound(SoundType.AMETHYST)));
     public static final DeferredBlock<SalvageCrateBlock> SALVAGE_CRATE = BLOCKS.register("salvage_crate",

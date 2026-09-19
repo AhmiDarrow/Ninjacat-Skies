@@ -178,6 +178,27 @@ public final class RiftManager extends SavedData {
         for (Entity e : level.getEntities((Entity) null, box, e -> !(e instanceof Player))) e.discard();
     }
 
+    /** Before the chamber is cleared: everything dropped in it (gear from a fall, rewards from a full bag) goes home. */
+    private static void rescueDrops(MinecraftServer server, ServerLevel arena, Rift r) {
+        ServerPlayer to = null;
+        for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null) { to = p; break; } }
+        AABB box = new AABB(r.origin).inflate(RADIUS + 8, 16, RADIUS + 8);
+        for (net.minecraft.world.entity.item.ItemEntity ie : arena.getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class, box)) {
+            ItemStack s = ie.getItem().copy();
+            ie.discard();
+            if (to != null) { LoomTension.giveOrDrop(to, s); continue; }
+            ServerLevel ow = server.overworld();
+            BlockPos home = ow.getSharedSpawnPos();
+            net.minecraft.world.entity.item.ItemEntity drop = new net.minecraft.world.entity.item.ItemEntity(ow, home.getX() + 0.5, home.getY() + 1, home.getZ() + 0.5, s);
+            drop.setUnlimitedLifetime();
+            ow.addFreshEntity(drop);
+        }
+        for (net.minecraft.world.entity.ExperienceOrb orb : arena.getEntitiesOfClass(net.minecraft.world.entity.ExperienceOrb.class, box)) {
+            if (to != null) to.giveExperiencePoints(orb.getValue());
+            orb.discard();
+        }
+    }
+
     private static void forceChunks(ServerLevel level, BlockPos o, boolean on) {
         ChunkPos c = new ChunkPos(o);
         for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) level.setChunkForced(c.x + dx, c.z + dz, on);
@@ -211,7 +232,8 @@ public final class RiftManager extends SavedData {
                 if (inside.isEmpty() && r.ticks > 100) { if (++r.emptyTicks > 100) lose(server, r); }
                 else r.emptyTicks = 0;
             } else if (r.ticks > END_DELAY) {
-                for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null) returnHome(p); }
+                for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null && hasReturn(p)) returnHome(p); }
+                rescueDrops(server, arena, r);
                 clear(arena, r.origin);
                 forceChunks(arena, r.origin, false);
                 done.add(r.slot);

@@ -398,7 +398,9 @@ public final class ArenaManager extends SavedData {
             }
             return;
         }
-        if (inArena(p) && inst == null) returnHome(p);
+        // a Driftwreck rift shares this dimension; its own manager brings those players home
+        boolean inRift = p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG).contains("driftwrecks_rift_return");
+        if (inArena(p) && inst == null && !inRift) returnHome(p);
         String pendingKind = pendingRelics.remove(p.getUUID());
         if (pendingKind != null) {
             GuardianKind k = GuardianKind.byId(pendingKind);

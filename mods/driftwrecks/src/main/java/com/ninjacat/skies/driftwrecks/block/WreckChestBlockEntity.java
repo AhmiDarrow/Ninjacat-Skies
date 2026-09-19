@@ -67,6 +67,11 @@ public class WreckChestBlockEntity extends BlockEntity {
     public void open(ServerPlayer p) {
         ServerLevel level = (ServerLevel) this.level;
         if (level == null) return;
+        Wreck owner = DriftManager.get(level.getServer()).byId(wreckId);
+        if (owner == null || owner.phase != Wreck.Phase.ACTIVE) {
+            p.displayClientMessage(NinjacatText.teal("The chest is still drifting into place."), true);
+            return;
+        }
         NonNullList<ItemStack> items = rolls.computeIfAbsent(p.getUUID(), u -> roll(level, u, p));
         setChanged();
         // built from the roll directly: filling a view slot by slot would write the still-empty slots back over it
@@ -76,12 +81,18 @@ public class WreckChestBlockEntity extends BlockEntity {
                 for (int i = 0; i < SIZE; i++) items.set(i, getItem(i));
                 WreckChestBlockEntity.this.setChanged();
             }
+            @Override public boolean stillValid(net.minecraft.world.entity.player.Player pl) {
+                Wreck w = DriftManager.get(level.getServer()).byId(wreckId);
+                return !isRemoved() && level.getBlockEntity(worldPosition) == WreckChestBlockEntity.this && w != null
+                        && w.phase == Wreck.Phase.ACTIVE && pl.level() == level && pl.distanceToSqr(worldPosition.getCenter()) <= 64;
+            }
         };
         Component title = Component.translatable(heart ? "container.driftwrecks.heart_chest" : hidden ? "container.driftwrecks.hidden_chest" : "container.driftwrecks.wreck_chest");
         p.openMenu(new SimpleMenuProvider((id, inv, pl) -> ChestMenu.threeRows(id, inv, view), title));
         level.playSound(null, worldPosition, SoundEvents.BARREL_OPEN, SoundSource.BLOCKS, 0.8F, 0.8F);
-        Wreck w = DriftManager.get(level.getServer()).byId(wreckId);
-        if (w != null && heart && w.objective == WreckObjective.SALVAGE && !w.objectiveDone) {
+        Wreck w = owner;
+        boolean member = com.ninjacat.skies.core.tension.LoomTension.clowderOf(p).map(c -> c.id().equals(w.team)).orElse(false);
+        if (member && heart && w.objective == WreckObjective.SALVAGE && !w.objectiveDone) {
             p.sendSystemMessage(NinjacatText.gold("The heart of the wreck gives up what it kept."));
             DriftManager.get(level.getServer()).completeObjective(level, w);
         }
@@ -120,6 +131,7 @@ public class WreckChestBlockEntity extends BlockEntity {
 
     /** At unravel: the member's leftovers, or a fresh roll if they never opened it. Empties their slot. */
     public List<ItemStack> salvageFor(ServerLevel level, UUID member) {
+        closeViewers(level);
         NonNullList<ItemStack> items = rolls.remove(member);
         if (items == null) items = roll(level, member, null);
         setChanged();
@@ -129,6 +141,22 @@ public class WreckChestBlockEntity extends BlockEntity {
     }
 
     public boolean opened(UUID u) { return rolls.containsKey(u); }
+
+    /** Shut every open window on this chest, so nothing can be taken after its contents are bundled. */
+    public void closeViewers(ServerLevel level) {
+        for (ServerPlayer p : level.getServer().getPlayerList().getPlayers()) {
+            if (p.containerMenu instanceof ChestMenu cm && rolls.containsKey(p.getUUID())
+                    && cm.getContainer() instanceof SimpleContainer && cm.getContainer().getContainerSize() == SIZE
+                    && sameItems(cm, rolls.get(p.getUUID()))) {
+                p.closeContainer();
+            }
+        }
+    }
+
+    private static boolean sameItems(ChestMenu cm, NonNullList<ItemStack> items) {
+        for (int i = 0; i < SIZE; i++) if (cm.getContainer().getItem(i) != items.get(i) && !(cm.getContainer().getItem(i).isEmpty() && items.get(i).isEmpty())) return false;
+        return true;
+    }
 
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider regs) {
