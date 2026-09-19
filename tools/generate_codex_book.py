@@ -582,7 +582,7 @@ entry("braid", "listening_pit", "Listening Pit and Gates", "Patterns, ore, voice
          "Stone Font, Listening Pit, Rite Circle, Voice Ring, Shatter Array, Way Gate and Far Gate are Spirit "
          "Codex shapes. Whisker does not reprint them."),
     text("March travel",
-         "The Gate Drum is the portable way into the March. Charge it with Pulse, then empty-handed use it. "
+         "The Gate Drum is the portable way into the March. Use it empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed. "
          "Do not strike it like a Drumheart.\n\n"
          "Bind a return compass before you go. `/tribalpower gate list` names later gates."),
     text("Check",

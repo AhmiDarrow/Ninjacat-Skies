@@ -213,10 +213,10 @@ def build_lessons(book, write, text, entry, category):
         ('pad_runners', 'Pad-runners', 'chocobosreborn:chocobo_almanac', [
             text('Goal',
                  '**Goal:** find a wild pad-runner in the March, not on your void pad.\n\n'
-                 'You need a charged **Gate Drum**, **Gysahl**, and the **Chocobo Almanac**.\n\n'
+                 'You need a **Gate Drum**, **Gysahl**, and the **Chocobo Almanac**.\n\n'
                  'Birds do not spawn on a skyblock island. There is no spawn-egg shortcut and no join gift. Walk the March.'),
             text('Find, tame, ride',
-                 '1. Charge a **Gate Drum** with Pulse, then empty-handed use it and walk through. Do not strike it like a Drumheart. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.\n'
+                 '1. Use a **Gate Drum** empty-handed and play the Gate Rite (hit the beats on A, S, D, F; 60% opens it), then walk through. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.\n'
                  '2. Pick **Gysahl** in the March (Reed Fen is densest). Craft extras into seeds and plant them on dirt or March soil at home.\n'
                  '3. Craft the **Chocobo Almanac** (book and a gysahl leaf) and right-click a bird to read it.\n'
                  '4. Tame a wild yellow with gysahl, then saddle it. Sprint dashes; ease off to recover stamina.'),

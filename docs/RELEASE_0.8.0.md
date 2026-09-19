@@ -15,4 +15,8 @@ Ships **Ninjacat Skies Core 0.5.1**, which adds a sixth companion mod: **Driftwr
 
 **Existing worlds:** any Clowder that has tensioned Soil starts building Drift pressure on first load; its first wreck arrives after roughly 90–120 minutes of play (or at once with a Driftlure). Nothing existing changes ids.
 
-Pins: Ninjacat Skies Core 0.5.1 (project 1689718, file **8922101**), Tribal Power 3.5.0 (project 1684851, file 8918180), Chocobos Reborn 1.0.4 (project 1699008, file 8918139). Minecraft 1.21.1 / NeoForge 21.1.249 / Java 21.
+Also ships **Tribal Power 3.6.0 - The living March** (CurseForge project **1684851**, file **8922875**): the Gate Drum needs no Pulse, you play the Gate Rite on it instead (use it empty-handed, hit the beats on A, S, D, F; 60% opens the gate), plus 27 March structures, six new trees with wood sets, lakes and water life, companions you tame and breed like wolves, catalyst-gated Spiritgear ranks and a rewritten Spirit Codex. The pack's quests and Codex now describe the Gate Rite. And **Chocobos Reborn 1.0.5 - Follow, Stay, Wander** (CurseForge project **1699008**, file **8922192**): orders for tame birds on the equipment screen; only Follow birds come along to Whiskerwind.
+
+**Existing worlds (Tribal Power):** the March regenerates once more on first load of 3.6.0; the old one is moved to `tribalpower_backups` inside the save, nothing is deleted. Set `retrogenMarch = false` in `tribalpower-common.toml` before loading to keep it.
+
+Pins: Ninjacat Skies Core 0.5.1 (project 1689718, file **8922101**), Tribal Power 3.6.0 (project 1684851, file **8922875**), Chocobos Reborn 1.0.5 (project 1699008, file **8922192**). Minecraft 1.21.1 / NeoForge 21.1.249 / Java 21.
