@@ -1,5 +1,7 @@
 # Ninjacat Skies 0.8.0 — Driftwrecks
 
+Pack CurseForge client file **8922954**, server additional **8922958**.
+
 Ships **Ninjacat Skies Core 0.5.1**, which adds a sixth companion mod: **Driftwrecks**. Once your Clowder has tensioned Soil, pieces of the old world drift up to your pad now and then, hold for a while, and unravel back into the void. Repeatable side content: nothing on the main line needs it.
 
 - **Arrivals.** Drift pressure fills with your Clowder's online time (about 90–120 minutes a wreck). A **Driftlure** hung on the Tension Post calls one early; a Strand Lure leans it toward that tribe. One wreck per Clowder, 160–320 blocks out from your Post.
