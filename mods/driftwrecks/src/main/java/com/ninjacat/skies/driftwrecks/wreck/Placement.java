@@ -29,7 +29,7 @@ public final class Placement {
     private Placement() {}
 
     @Nullable
-    public static BlockPos find(ServerLevel level, BlockPos post, WreckPlan plan, RandomSource rng, UUID self, Collection<Wreck> others, List<Clowder> clowders) {
+    public static BlockPos find(ServerLevel level, BlockPos post, WreckComposer.Layout plan, RandomSource rng, UUID self, Collection<Wreck> others, List<Clowder> clowders) {
         int min = DriftConfig.MIN_DISTANCE.get(), max = Math.max(min, DriftConfig.MAX_DISTANCE.get());
         for (int attempt = 0; attempt < TRIES; attempt++) {
             double ang = rng.nextDouble() * Math.PI * 2;
@@ -41,7 +41,7 @@ public final class Placement {
         return null;
     }
 
-    public static boolean fits(ServerLevel level, BlockPos origin, WreckPlan plan, UUID self, Collection<Wreck> others, List<Clowder> clowders) {
+    public static boolean fits(ServerLevel level, BlockPos origin, WreckComposer.Layout plan, UUID self, Collection<Wreck> others, List<Clowder> clowders) {
         AABB box = new AABB(origin.getX() + plan.minX, origin.getY() + plan.minY, origin.getZ() + plan.minZ,
                 origin.getX() + plan.maxX + 1, origin.getY() + plan.maxY + 1, origin.getZ() + plan.maxZ + 1);
         AABB wide = box.inflate(MARGIN);
