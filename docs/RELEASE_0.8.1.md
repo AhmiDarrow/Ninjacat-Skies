@@ -1,5 +1,7 @@
 # Ninjacat Skies 0.8.1 — Safe keeping
 
+Pack CurseForge client file **8924080**, server additional **8924085**.
+
 A bug-fix release: new builds of the pack's three own mods. Existing saves load as they are; no quest ids change.
 
 - **Ninjacat Skies Core 0.5.2** (project 1689718, file **8923743**): the bug sweep in `docs/cf-changelog-core-0.5.2.md`. Guardians are leashed to their stage, Driftwreck objectives only on reachable ground, Hold crypt stairs and watchtower ladder, party joins re-sync Strands, `sunderedSky = false` restores the vanilla sky, Charter/Barrel/Loomframe/starter-kit fixes.
