@@ -130,7 +130,9 @@ function spawnStall(level, x, y, z, yaw, tribeOrdinal, stallId, name) {
     CustomNameVisible: true,
   })
   entity.setPosition(x + 0.5, y, z + 0.5)
-  if (entity.setYaw) entity.setYaw(yaw)
+  // KubeJS 2101 has no setYaw; setRotation(yaw, pitch) is EntityKJS. Head and body follow for mobs.
+  try { entity.setRotation(yaw, 0) } catch (e) {}
+  try { entity.setYHeadRot(yaw); entity.setYBodyRot(yaw) } catch (e) {}
   entity.spawn()
   return true
 }
@@ -246,7 +248,9 @@ function spawnEster(hub) {
   })
   // West of the pad, opposite Spark, looking east toward the shop line.
   entity.setPosition(-3.5, 64, -1.5)
-  if (entity.setYaw) entity.setYaw(-90)
+  // KubeJS 2101 has no setYaw; setRotation(yaw, pitch) is EntityKJS. Head and body follow for mobs.
+  try { entity.setRotation(-90, 0) } catch (e) {}
+  try { entity.setYHeadRot(-90); entity.setYBodyRot(-90) } catch (e) {}
   entity.spawn()
   hub.persistentData.putBoolean(HUB_ESTER_FLAG, true)
 }

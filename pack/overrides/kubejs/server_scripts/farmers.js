@@ -3,12 +3,20 @@
 // tomato you don't have yet — circular). Onion is fine: zombies drop it. So the missing seeds fall from the
 // sieve alongside the vanilla ones, and cabbage leaf too, so the kitchen line is reachable from Root.
 ServerEvents.recipes(event => {
+  // event.forEachRecipe only walks datapack recipes, never ones added in this event, so the mesh-tier
+  // rewrite in voidloom_recipes.js and the March-soil copy in voidloom_sieve.js cannot reach these rows.
+  // Write the tier tag (Ex Deorum mesh + matching thread mesh) and the March-soil row here instead.
+  let meshTier = {
+    'exdeorum:string_mesh': 'ninjacatskies:meshes/string',
+    'exdeorum:flint_mesh': 'ninjacatskies:meshes/flint',
+    'exdeorum:iron_mesh': 'ninjacatskies:meshes/iron',
+  }
   const sieve = (input, mesh, result, p, compressed) => {
     event.custom({
       type: compressed ? 'exdeorum:compressed_sieve' : 'exdeorum:sieve',
       // Compressed sieves take the compressed block (Ex Deorum tag) and roll 9x — same shape as Ex Deorum's own tables.
       ingredient: compressed ? { tag: 'exdeorum:compressed/' + input.split(':')[1] } : { item: input },
-      mesh: { item: mesh },
+      mesh: meshTier[mesh] ? { tag: meshTier[mesh] } : { item: mesh },
       result: { id: result, count: 1 },
       result_amount: { type: 'minecraft:binomial', n: compressed ? 9.0 : 1.0, p: p },
     }).id(`ninjacatskies:farmers/${compressed ? 'compressed_' : ''}${input.split(':')[1]}_${mesh.split(':')[1]}_${result.split(':')[1]}`)
@@ -16,6 +24,7 @@ ServerEvents.recipes(event => {
   const both = (input, mesh, result, p) => {
     sieve(input, mesh, result, p, false)
     sieve(input, mesh, result, p, true)
+    if (input === 'minecraft:dirt' && Platform.isLoaded('tribalpower')) sieve('tribalpower:march_soil', mesh, result, p, false)
   }
 
   // Seeds from dirt, like the vanilla ones Ex Deorum already sieves. String mesh so Root can start.

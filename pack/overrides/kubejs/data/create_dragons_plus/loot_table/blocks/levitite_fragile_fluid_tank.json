@@ -1,4 +1,5 @@
 {
+  "neoforge:conditions": [{"type": "neoforge:item_exists", "item": "create_dragons_plus:levitite_fragile_fluid_tank"}],
   "type":"minecraft:block",
   "pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"create_dragons_plus:levitite_fragile_fluid_tank"}],"conditions":[{"condition":"minecraft:survives_explosion"}]}]
 }
