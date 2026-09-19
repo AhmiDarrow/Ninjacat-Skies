@@ -1,5 +1,7 @@
 # Ninjacat Skies 0.8.2 — Plain sight
 
+Pack CurseForge client file **8925530**, server additional **8925533**.
+
 New builds of the pack's own three mods, a bug sweep across them and the pack, one art pass over everything, and the End Apple. Existing saves load as they are; no quest ids change.
 
 - **Ninjacat Skies Core 0.5.3** (project 1689718, file **8925254**): the End Apple (five ender pearls, two bones, two blaze powder — one bite there, one bite back) and a new End-chapter quest; Driftwrecks, Voidloom and Guardians art redrawn at 32x32; pixel-quantised Guardian and Remnant textures; canonical tribe glyphs shared with Tribal Power; 17 fixes, including order cues that fired all at once, boss fights that did not survive a restart, and stage blocks that dropped nothing. Changelog: `docs/cf-changelog-core-0.5.3.md`.
