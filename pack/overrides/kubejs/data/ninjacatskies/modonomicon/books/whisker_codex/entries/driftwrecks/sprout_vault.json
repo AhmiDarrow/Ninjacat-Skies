@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Root Cellar",
+  "description": "Rootbinders · Vault",
+  "icon": "driftwrecks:keepsake_sprout_vault",
+  "x": 1,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Root Cellar",
+      "text": "The Rootbinders' vault was a hollow grown inside one ancient trunk, sealed by bark as it healed. What they kept there was not treasure but cuttings of every tree, alive and asleep. The trunk is still healing around them. Wake one."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/sprout_vault"
+  }
+}

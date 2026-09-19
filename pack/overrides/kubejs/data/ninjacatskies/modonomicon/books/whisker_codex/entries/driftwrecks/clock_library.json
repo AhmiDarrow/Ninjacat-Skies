@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Pattern Stacks",
+  "description": "Pattern-weavers · Library",
+  "icon": "driftwrecks:keepsake_clock_library",
+  "x": 4,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Pattern Stacks",
+      "text": "The Pattern Stacks held every loop the Pattern-weavers ever sang into a machine. Their machines ran on patterns the way others ran on fire. The last loop in the stacks was never finished. It keeps trying to repeat."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/clock_library"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "pattern": [
+    " I ",
+    "IRI",
+    " W "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "W": {
+      "item": "driftwrecks:salvaged_weft"
+    }
+  },
+  "result": {
+    "id": "driftwrecks:drift_needle"
+  }
+}

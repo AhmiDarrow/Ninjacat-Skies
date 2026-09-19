@@ -755,6 +755,57 @@ for gid, title, strand, relic, tier, arena, fight, power in GUARDIANS:
         spotlight(f"guardians:relic_{relic}", "Woven Relic", power),
     ], parents=["the_ritual"], condition={"type": "modonomicon:advancement", "advancement_id": unlock(gid, strand)}, hide=False)
 
+# ------------------------------------------------------------------------------------ Driftwrecks
+
+from driftwrecks_content import C as DW, CORES as DW_CORES, CORE_TITLES as DW_CORE_TITLES, HEART as DW_HEART, STRANDS as DW_STRANDS, TRIBES as DW_TRIBES
+
+DW_HINTS = {"shrine": "The shrine-tenders kept the best offering under the stone they knelt on.",
+            "watchtower": "Three landings up, the watch kept a room nobody climbed to.",
+            "library": "One shelf in every library was never meant to be read.",
+            "forge": "The forge-keepers kept their best work where the hammer fell.",
+            "garden": "The gardeners buried what they loved under the water they gave it.",
+            "vault": "A vault with one wall is a door. A vault with two is a promise."}
+
+
+def dw_adv(path: str) -> dict:
+    return {"type": "modonomicon:advancement", "advancement_id": f"driftwrecks:{path}"}
+
+
+category("driftwrecks", "Driftwrecks", "driftwrecks:wreck_atlas", 6, "Pieces of the old world, caught on your weft. They do not stay.")
+entry("driftwrecks", "caught", "Something drifting", "How a wreck arrives, and how to reach it.", "driftwrecks:tether_spool", 0, 0, [
+    text("Something drifting",
+         "**Goal:** reach a Driftwreck before it unravels.\n\n"
+         "Once your Clowder has tensioned Soil, pieces of the old world drift up to your pad now and then: roughly once "
+         "every hour and a half of play, or sooner if you hang a **Driftlure** on your Tension Post. The Steward tells "
+         "the whole Clowder when one is caught, and the **Drift Needle** points at it.\n\n"
+         "Stand at your pad's edge, face the wreck and use a **Tether Spool**: a thread bridge lays itself across."),
+    text("It will not hold",
+         "A wreck only ages while someone in your Clowder is online. It creaks at half its time, starts to crumble at "
+         "the rim near the end, and then unravels. Nobody falls: anyone on it is lifted home, and whatever you left in "
+         "its chests comes home in a **Salvage Bundle** (in your **Salvage Crate**, if one stands by the Post).\n\n"
+         "Fall off the tether and the thread catches you, for three hearts."),
+    text("What to do there",
+         "Every wreck asks one thing: open its heart chest, break its frayed spawners, light its thread pillars in the "
+         "order the idol shows, walk a lost Steward echo home, or hold the seam through three waves. Do it and each of "
+         "you gets **Salvaged Weft** and a **Seal**, the **Wreck Atlas** fills a page, and sometimes a **Keepsake** comes "
+         "home.\n\n**Check:** your Atlas shows the new page."),
+    spotlight("driftwrecks:salvagers_frame", "Salvager's Frame",
+              "Spend Weft on spools, lures, needles, map scrolls, Weft Keys, tribe decor and reprints of Keepsakes you already found."),
+], condition={"type": "modonomicon:advancement", "advancement_id": "ninjacatskies:strand/soil"})
+for i, core in enumerate(DW_CORES):
+    entry("driftwrecks", f"hint_{core}", f"The old {DW_CORE_TITLES[core].lower()}s", "A loose page about hidden rooms.", "driftwrecks:hint_page",
+          -3, i - 2, [text(f"The old {DW_CORE_TITLES[core].lower()}s", DW_HINTS[core] + "\n\n*From now on, your Clowder's "
+                           + DW_CORE_TITLES[core].lower() + " wrecks drift in with their hidden room open.*")],
+          parents=["caught"], condition=dw_adv(f"hint/{core}"), hide=True)
+for si, s in enumerate(DW_STRANDS):
+    for ci, core in enumerate(DW_CORES):
+        name, ins, place, lore = DW[s][core]
+        entry("driftwrecks", f"{s}_{core}", place[0].upper() + place[1:], f"{DW_TRIBES[s]} · {DW_CORE_TITLES[core]}",
+              f"driftwrecks:keepsake_{s}_{core}", si - 1, ci - 2, [text(place[0].upper() + place[1:], lore)],
+              condition=dw_adv(f"lore/{s}_{core}"), hide=True)
+entry("driftwrecks", "heart", "The heart of the old world", "Where all nine tribes met.", "driftwrecks:keepsake_heartwreck", 4, 5,
+      [text("The heart of the old world", DW_HEART[3])], condition=dw_adv("lore/heart"), hide=True)
+
 from whisker_lessons import build_lessons, sync_pack_primers, polish_book
 build_lessons(BOOK, w, text, entry, category)
 polish_book(BOOK, w)

@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Gear Loft",
+  "description": "Pattern-weavers · Forge",
+  "icon": "driftwrecks:keepsake_clock_forge",
+  "x": 4,
+  "y": 1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Gear Loft",
+      "text": "In the Gear Loft Pattern-weavers cut cogs by hand and matched them by ear. A good pair of gears hummed a single note. This cog belonged to a machine that fed a whole island. One cog, then the same cog again."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/clock_forge"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Gate Lookout",
+  "description": "Loom-stitchers · Watchtower",
+  "icon": "driftwrecks:keepsake_spindle_watchtower",
+  "x": 7,
+  "y": -1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Gate Lookout",
+      "text": "From the Gate Lookout the Loom-stitchers watched the gate-paths they had cut through the sky, and mended them when they frayed. Every stitch in the sky was theirs. The day of the Cut they saw the whole weave tear at once. They ran to fix it."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/spindle_watchtower"
+  }
+}

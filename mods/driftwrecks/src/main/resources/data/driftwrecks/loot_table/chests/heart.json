@@ -1,0 +1,119 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:salvaged_weft",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:hint_page",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "driftwrecks:core": "shrine"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:hint_page",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "driftwrecks:core": "watchtower"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:hint_page",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "driftwrecks:core": "library"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:hint_page",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "driftwrecks:core": "forge"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:hint_page",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "driftwrecks:core": "garden"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:hint_page",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "driftwrecks:core": "vault"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "driftwrecks:wreck_map_scroll",
+          "weight": 2
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ]
+    }
+  ]
+}

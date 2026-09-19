@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Measure House",
+  "description": "Drumhearts · Library",
+  "icon": "driftwrecks:keepsake_spark_library",
+  "x": 3,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Measure House",
+      "text": "The Measure House kept every rhythm the Drumhearts ever played, scratched into copper plates. A child could learn the whole history of the tribe by drumming it. The last plate is only four beats long. Someone was in a hurry."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/spark_library"
+  }
+}

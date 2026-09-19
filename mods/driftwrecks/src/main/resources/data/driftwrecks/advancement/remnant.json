@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:rift_shard"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.remnant.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.remnant.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:rift"
+}

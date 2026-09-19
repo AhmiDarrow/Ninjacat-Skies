@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:hint_page"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.hidden_room.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.hidden_room.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:salvage"
+}

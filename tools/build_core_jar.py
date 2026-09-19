@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Package the five companion mods into one CurseForge-hostable jar: Ninjacat Skies Core.
+"""Package the companion mods into one CurseForge-hostable jar: Ninjacat Skies Core.
 
-    python tools/build_core_jar.py                  # pack/mods/<mod>-<ver>.jar x5 -> pack/mods/ninjacatskies-core-<ver>.jar
+    python tools/build_core_jar.py                  # pack/mods/<mod>-<ver>.jar x6 -> pack/mods/ninjacatskies-core-<ver>.jar
     python tools/build_core_jar.py --keep-inputs    # leave the five loose jars in pack/mods (dev runs)
     python tools/build_core_jar.py --check-source   # exit 3 if mods/ changed since the released Core (pack/core-release.json)
     python tools/build_core_jar.py --record-release <fileId>   # after uploading pack/mods/ninjacatskies-core-<ver>.jar
 
 CurseForge rejects modpack zips that carry unlisted jars in overrides/mods, so the companions ship as one CurseForge
 mod project and the pack references it by project/file id like every other dependency. The outer jar has no code of
-its own (modLoader "lowcodefml"); NeoForge's Jar-in-Jar loader pulls the five nested jars out of META-INF/jarjar/.
+its own (modLoader "lowcodefml"); NeoForge's Jar-in-Jar loader pulls the nested jars out of META-INF/jarjar/.
 Mod ids, registries and saves are unchanged. The zip is written deterministically (fixed timestamps, sorted entries)
 so an unchanged input set always produces the same SHA-1 as the CurseForge file.
 """
@@ -29,7 +29,7 @@ CORE_ID = "ninjacatskies_core"
 CORE_JAR = "ninjacatskies-core-{ver}.jar"
 GROUP = "com.ninjacat.skies"
 # load order matters only for readability; FML resolves dependencies itself
-COMPANIONS = ("ninjacatlib", "ninjacatskies", "voidloom", "clowderhall", "guardians")
+COMPANIONS = ("ninjacatlib", "ninjacatskies", "voidloom", "clowderhall", "guardians", "driftwrecks")
 EPOCH = (2026, 1, 1, 0, 0, 0)
 
 
@@ -60,7 +60,7 @@ version="{ver}"
 displayName="Ninjacat Skies Core"
 authors="Ninjacat Skies"
 logoFile="ninjacatskies_core.png"
-description=\'\'\'The Ninjacat Skies companion mods in one jar: Ninjacat Lib, Ninjacat Skies (Codex, kits, Strand story), Voidloom, Clowder Hall and the Snapped Guardians. Built for the Ninjacat Skies modpack.\'\'\'
+description=\'\'\'The Ninjacat Skies companion mods in one jar: Ninjacat Lib, Ninjacat Skies (Codex, kits, Strand story), Voidloom, Clowder Hall, the Snapped Guardians and Driftwrecks. Built for the Ninjacat Skies modpack.\'\'\'
 
 [[dependencies.{CORE_ID}]]
     modId="neoforge"

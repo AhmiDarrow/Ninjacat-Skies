@@ -11,11 +11,11 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.io.DataInputStream;
+import com.ninjacat.skies.lib.plan.BlockPlan;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
@@ -64,13 +64,9 @@ public final class ArenaData {
     public static void clearCache() { CACHE.clear(); }
 
     static ArenaData read(GuardianKind kind, byte[] bytes) throws IOException {
-        ByteBuffer b = ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN);
-        if (b.getInt() != 0x4147434E) throw new IOException("bad magic");          // 'NCGA' little-endian
-        int version = b.getInt(); int nk = b.getShort() & 0xFFFF;
-        String[] keys = new String[nk];
-        for (int i = 0; i < nk; i++) { int n = b.getShort() & 0xFFFF; byte[] s = new byte[n]; b.get(s); keys[i] = new String(s, java.nio.charset.StandardCharsets.UTF_8); }
-        int n = b.getInt(); short[] xyz = new short[n*3]; byte[] key = new byte[n];
-        for (int i = 0; i < n; i++) { xyz[i*3] = b.getShort(); xyz[i*3+1] = b.getShort(); xyz[i*3+2] = b.getShort(); key[i] = b.get(); }
+        BlockPlan plan = BlockPlan.read(bytes);
+        String[] keys = plan.keys; short[] xyz = plan.xyz; byte[] key = plan.key;
+        ByteBuffer b = plan.trailer;
         int np = b.get() & 0xFF; List<BlockPos> pads = new ArrayList<>();
         for (int i = 0; i < np; i++) pads.add(new BlockPos(b.getShort(), b.getShort(), b.getShort()));
         BlockPos totem = new BlockPos(b.getShort(), b.getShort(), b.getShort());

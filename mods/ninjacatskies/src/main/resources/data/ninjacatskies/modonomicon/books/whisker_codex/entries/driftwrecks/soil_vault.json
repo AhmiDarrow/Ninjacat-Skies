@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Seed-Cellar",
+  "description": "Pad-keepers · Vault",
+  "icon": "driftwrecks:keepsake_soil_vault",
+  "x": -1,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Seed-Cellar",
+      "text": "Under the Warm Bed the Pad-keepers dug a cellar and filled it with one of every seed, sealed in tin, against a bad year. The bad year was worse than they planned for. The tins are still full. Plant them."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/soil_vault"
+  }
+}

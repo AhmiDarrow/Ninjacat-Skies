@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Canopy Lookout",
+  "description": "Rootbinders · Watchtower",
+  "icon": "driftwrecks:keepsake_sprout_watchtower",
+  "x": 1,
+  "y": -1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Canopy Lookout",
+      "text": "The Canopy Lookout was never built: the Rootbinders grew it, coaxing a trunk into a stair over forty summers. From the top you could watch weather roll across nine islands. The trunk kept growing after the watchers left. It is taller now."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/sprout_watchtower"
+  }
+}

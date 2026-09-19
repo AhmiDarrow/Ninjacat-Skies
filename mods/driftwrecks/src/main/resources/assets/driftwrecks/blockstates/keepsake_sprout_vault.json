@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "driftwrecks:block/keepsake_sprout_vault"
+    },
+    "facing=east": {
+      "model": "driftwrecks:block/keepsake_sprout_vault",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "driftwrecks:block/keepsake_sprout_vault",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "driftwrecks:block/keepsake_sprout_vault",
+      "y": 270
+    }
+  }
+}

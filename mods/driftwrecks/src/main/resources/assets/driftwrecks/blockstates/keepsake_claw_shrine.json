@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "driftwrecks:block/keepsake_claw_shrine"
+    },
+    "facing=east": {
+      "model": "driftwrecks:block/keepsake_claw_shrine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "driftwrecks:block/keepsake_claw_shrine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "driftwrecks:block/keepsake_claw_shrine",
+      "y": 270
+    }
+  }
+}

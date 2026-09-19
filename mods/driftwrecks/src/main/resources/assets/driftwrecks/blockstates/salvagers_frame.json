@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "driftwrecks:block/salvagers_frame"
+    },
+    "facing=east": {
+      "model": "driftwrecks:block/salvagers_frame",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "driftwrecks:block/salvagers_frame",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "driftwrecks:block/salvagers_frame",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:tribe_banner_soil"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.column.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.column.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:atlas"
+}

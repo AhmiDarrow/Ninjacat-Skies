@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:wreck_atlas"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.cells_25.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.cells_25.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:atlas"
+}

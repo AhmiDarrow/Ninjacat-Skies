@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Brood Vault",
+  "description": "Colony-keepers · Vault",
+  "icon": "driftwrecks:keepsake_swarm_vault",
+  "x": 5,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Brood Vault",
+      "text": "Deep in the comb the Colony-keepers kept a vault for the next queen: royal jelly, the warmest wax, a cell nobody else could enter. She had not hatched when the Cut came. The cell is still warm. Wait."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/swarm_vault"
+  }
+}

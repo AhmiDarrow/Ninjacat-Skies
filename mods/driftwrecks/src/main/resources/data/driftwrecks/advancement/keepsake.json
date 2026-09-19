@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:keepsake_soil_shrine"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.keepsake.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.keepsake.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:salvage"
+}

@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Hollow Vault",
+  "description": "Grit-singers · Vault",
+  "icon": "driftwrecks:keepsake_stone_vault",
+  "x": 0,
+  "y": 3,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Hollow Vault",
+      "text": "The Hollow Vault had no keyhole: its door opened to a single sustained note that only its keepers knew. When the keepers scattered, the note scattered with them. This key hums the first half of it. Find the rest."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/stone_vault"
+  }
+}

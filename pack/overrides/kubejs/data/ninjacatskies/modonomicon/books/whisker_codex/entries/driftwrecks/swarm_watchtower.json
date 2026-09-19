@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Drone Tower",
+  "description": "Colony-keepers · Watchtower",
+  "icon": "driftwrecks:keepsake_swarm_watchtower",
+  "x": 5,
+  "y": -1,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Drone Tower",
+      "text": "From the Drone Tower the Colony-keepers read the swarms like weather: which way they flew, how high, how loud. A low swarm meant rain. On the day of the Cut every swarm on the island flew straight up. Look up."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/swarm_watchtower"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "driftwrecks:block/keepsake_sigil_garden"
+    },
+    "facing=east": {
+      "model": "driftwrecks:block/keepsake_sigil_garden",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "driftwrecks:block/keepsake_sigil_garden",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "driftwrecks:block/keepsake_sigil_garden",
+      "y": 270
+    }
+  }
+}

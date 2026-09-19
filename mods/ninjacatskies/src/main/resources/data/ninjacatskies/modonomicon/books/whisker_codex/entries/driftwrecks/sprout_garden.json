@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Nursery Terraces",
+  "description": "Rootbinders · Garden",
+  "icon": "driftwrecks:keepsake_sprout_garden",
+  "x": 1,
+  "y": 2,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Nursery Terraces",
+      "text": "The Nursery Terraces fed three islands from one slope, watered by roots that pulled mist out of the clouds. Rootbinders sang to the seedlings, mostly to keep themselves awake. Something in the soil still sprouts at dawn. Feed it."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/sprout_garden"
+  }
+}

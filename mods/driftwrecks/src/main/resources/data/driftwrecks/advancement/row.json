@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "driftwrecks:wreck_map_scroll"
+    },
+    "title": {
+      "translate": "advancements.driftwrecks.row.title"
+    },
+    "description": {
+      "translate": "advancements.driftwrecks.row.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "driftwrecks:atlas"
+}

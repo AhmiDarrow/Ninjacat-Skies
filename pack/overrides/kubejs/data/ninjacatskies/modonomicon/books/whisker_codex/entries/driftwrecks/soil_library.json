@@ -1,0 +1,22 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The Seedlist House",
+  "description": "Pad-keepers · Library",
+  "icon": "driftwrecks:keepsake_soil_library",
+  "x": -1,
+  "y": 0,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The Seedlist House",
+      "text": "The Seedlist House kept one page for every seed the Pad-keepers ever planted, with who planted it and what it gave back. Children learned to read from the harvest columns. Half the pages are still blank. They were saving room."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/soil_library"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "category": "ninjacatskies:driftwrecks",
+  "name": "The heart of the old world",
+  "description": "Where all nine tribes met.",
+  "icon": "driftwrecks:keepsake_heartwreck",
+  "x": 4,
+  "y": 5,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": true,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "The heart of the old",
+      "text": "Before the Cut the nine tribes met in one hall at the centre of the old world, each district facing the loom in the middle.\\\nThey were not one people and never tried to be.\\\nThey were one weave.\\\nThe Skies were never an ending."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "They were the Loom, holding its breath while you learned to hold the thread.\\\nGo on weaving."
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "driftwrecks:lore/heart"
+  }
+}
