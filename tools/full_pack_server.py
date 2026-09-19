@@ -151,7 +151,7 @@ def copy_overrides(root: Path, stage: Path) -> None:
         shutil.copytree(src, dst, ignore=ignore)
 
 
-def stage_mods(pack_mods_dir: Path, stage: Path, tribal_jar: Path) -> int:
+def stage_mods(pack_mods_dir: Path, stage: Path, tribal_jar: Path, core_jar: Path | None = None) -> int:
     mods = stage / "mods"
     if mods.exists():
         shutil.rmtree(mods)
@@ -160,12 +160,16 @@ def stage_mods(pack_mods_dir: Path, stage: Path, tribal_jar: Path) -> int:
     for jar in pack_mods_dir.glob("*.jar"):
         if jar.name.startswith("tribalpower-"):
             continue
+        if core_jar and jar.name.startswith("ninjacatskies-core-"):
+            continue
         shutil.copy2(jar, mods / jar.name)
         count += 1
     dest = mods / tribal_jar.name
     shutil.copy2(tribal_jar, dest)
     count += 1
-    log(f"Staged {count} jars (tribal overlay {tribal_jar.name})")
+    if core_jar:
+        shutil.copy2(core_jar, mods / core_jar.name)
+    log(f"Staged {count} jars (tribal overlay {tribal_jar.name}{', core overlay ' + core_jar.name if core_jar else ''})")
     return count
 
 
@@ -321,6 +325,7 @@ def main() -> int:
     ap.add_argument("--root", default=str(ROOT), help="ninjacat-skies repo root")
     ap.add_argument("--stage", default="", help="server directory (default build/full-pack-server)")
     ap.add_argument("--tribal-jar", default="", help="overlay this Tribal Power jar")
+    ap.add_argument("--core-jar", default="", help="overlay this Ninjacat Skies Core jar (an unreleased build)")
     ap.add_argument("--timeout", type=int, default=900, help="seconds to wait for Done")
     ap.add_argument("--settle", type=int, default=15, help="seconds to stay up after Done")
     ap.add_argument("--keep-world", action="store_true")
@@ -339,7 +344,7 @@ def main() -> int:
         )
 
     args_txt = install_neoforge(stage)
-    stage_mods(pack_mods(root), stage, tribal)
+    stage_mods(pack_mods(root), stage, tribal, Path(args.core_jar).resolve() if args.core_jar else None)
     copy_overrides(root, stage)
     write_runtime_files(stage)
     if not args.keep_world:
