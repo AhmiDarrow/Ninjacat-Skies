@@ -1,7 +1,7 @@
 // Voidloom mesh identity — thread meshes catch the Loom's own scraps on top of the Ex Deorum tables.
 // Additive only: Ex Deorum meshes are untouched; these lines fire only for voidloom meshes.
 //   string mesh → Loom Lint (4 lint = 1 Void Yarn)
-//   flint mesh  → Frayed Thread (Recover feeds the Desk economy, not only quests)
+//   flint mesh  → Frayed Thread (Recover feeds the Kin stall economy, not only quests)
 //   iron mesh   → Strand Filament (the Loom-native strand Braid Cord is spun from)
 ServerEvents.recipes(event => {
   const sieve = (input, mesh, result, p, compressed) => {
@@ -17,6 +17,8 @@ ServerEvents.recipes(event => {
   const both = (input, mesh, result, p) => {
     sieve(input, mesh, result, p, false)
     sieve(input, mesh, result, p, true)
+    // The March-soil copy below only sees datapack recipes, not these; give March soil its row directly.
+    if (input === 'minecraft:dirt' && Platform.isLoaded('tribalpower')) sieve('tribalpower:march_soil', mesh, result, p, false)
   }
 
   both('minecraft:dirt', 'voidloom:thread_mesh_string', 'voidloom:loom_lint', 0.10)
@@ -37,7 +39,8 @@ ServerEvents.recipes(event => {
     'voidloom:loom_lint', 'voidloom:loom_lint', 'voidloom:loom_lint', 'voidloom:loom_lint'
   ]).id('ninjacatskies:void_yarn_from_lint')
 
-  // Catch any Ex Deorum item-meshes still sitting after extras registered, then clone dirt onto March soil.
+  // Catch any datapack Ex Deorum item-meshes still left, then clone datapack dirt tables onto March soil.
+  // (forEachRecipe does not see recipes added by scripts in this event; those write tags and March rows themselves.)
   const meshTags = {
     'exdeorum:string_mesh': 'ninjacatskies:meshes/string',
     'exdeorum:flint_mesh': 'ninjacatskies:meshes/flint',
