@@ -277,7 +277,7 @@ VOICE_FIX = {
     "Another Strand tensioned.": "Another Strand answers.",
     "Amethyst block for Sigil bait.": "Amethyst in a block. Sigil will want shards later.",
     "Spark Strand bait.": "Spark will want this. Keep it dry.",
-    "Trade bait.": "Villagers like these. So does the Desk.",
+    "Trade bait.": "Villagers like these. So do the Kin stalls.",
     "Sigil bait.": "Sigil will want these.",
     "Swarm bait.": "Swarm will want this.",
     "Boss bait.": "For a fight you choose on purpose.",
@@ -299,7 +299,7 @@ VOICE_FIX = {
     "Build from patterns — needs braid_cord in the craft.": "Builds from patterns. Wants a Braid Cord at its heart.",
     "Unravel Thread → 3 string; craft 4 string → 2 yarn. Later: 2 string + pearl/chorus → 2 yarn.":
         "Unravel Thread to string; four string spin two yarn. Later the Tension Barrel does it better with a pearl.",
-    "Hub shop seed money.": "Every quest returns a little. The Desk chapter spends it.",
+    "Hub shop seed money.": "Every quest returns a little. The Kin stalls at /clowder hub spend it.",
 }
 
 # In-voice descriptions for the Strand chapters, keyed by quest title. Two lines: what, and why.
@@ -314,11 +314,11 @@ LORE = {
     "Stick Bundle": ["Handles, frames, the bones of tools."],
     "Chest for the Clowder": ["Put things where they stay. A Clowder shares a chest before it shares anything else."],
     "Torch Line": ["See the edge before the edge sees you."],
-    "Cobble Cache": ["Ice and lava make stone where there was none.", "Normal and Hard pads ship both. The Desk sells a bucket."],
+    "Cobble Cache": ["Ice and lava make stone where there was none.", "Normal and Hard pads ship both. The Pad-keepers at /clowder hub sell a bucket."],
     "Furnace Heat": ["Warmth that is not yet Spark.", "The Pad-keepers would have called this a hearth."],
     "Cook a Meal": ["Hunger is a soft void. Eight loaves closes it for a while."],
     "Catch the Rain": ["Place lava, melt ice into a source, fill the bucket.", "Easy ships water; Normal and Hard ship the pieces."],
-    "Frayed Currency": ["Scraps of the Loom that still hold. Every quest returns some.", "Unravel one for string, or spend them at the Desk."],
+    "Frayed Currency": ["Scraps of the Loom that still hold. Every quest returns some.", "Unravel one for string, or spend them at the Kin stalls in /clowder hub."],
     "Codex in Hand": ["Damaged, but it still teaches. Open Start here.", "Right-click the book and open Start here. Grave (`): the assignment list."],
     # Stone
     "Pull Void Yarn": ["Thread that remembers where it came from.", "Unravel Thread to string; four string spin two yarn."],
@@ -412,7 +412,7 @@ LORE = {
     "Hum: Bone Chime": ["Bone, string, amethyst. The first beat.", "It yields two — keep one for the Spirit Codex."],
     "Hum: Spirit Shard": ["A shard of old tribe song. Needs a Chime."],
     "Hum: Copper Resonator": ["Copper around a Chime: metal tuned to spirit."],
-    "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Chime, Shard, leather — the Desk sells leather."],
+    "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Chime, Shard, leather — the Pad-keepers at /clowder hub sell leather."],
     "Hum: Pulse Cell": ["Carry Pulse between drum and lattice."],
     "Hum: Ley Collector": ["Draw ambient ley into beats under open sky. Totem voices add; a Drumheart is not required."],
     "Hum: Pulse Resonator": ["Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony."],
@@ -436,7 +436,7 @@ LORE = {
     "Precision Mechanism": ["Clockwork heart. Wants a Binding Knot at its centre.", "The Loom, asking to be included."],
     "Sequenced Gearshift": ["Programmed spin. The pattern-weavers' song, written down."],
     # Swarm
-    "Honeycomb": ["Colonies in the wind. The Desk sells comb if none drift by."],
+    "Honeycomb": ["Colonies in the wind. The Spark stall at /clowder hub sells comb if none drift by."],
     "Beehive": ["A home for workers."],
     "Advanced Beehive": ["A productive home."],
     "Centrifuge": ["Spin combs into everything they hide."],
@@ -1202,13 +1202,13 @@ def build_swarm() -> list[dict]:
     # Colony: you cannot find a bee in the void, so you make somewhere a bee wants to be.
     wings = task_quest(
         s, title="First Wings", subtitle="Colony",
-        desc=["Place the oak nest on the pad and wait. Something with wings will come out of the wood.", "Look at it. That counts."],
+        desc=["Place the oak nest on the pad and right-click it with a small flower. Wait. Something with wings will come out of the wood.", "Look at it. That counts."],
         task={"type": "observation", "observe_type": 5, "timer": 0, "to_observe": "minecraft:bee"},
         rewards=[reward_item("minecraft:shears", 1), reward_item("ninjacatskies:frayed_thread", 4), reward_xp_levels(1)],
         x=1.8, y=-1.4, shape="diamond",
     )
     main = chain(s, [
-        ("Ring of Oak", "productivebees:oak_wood_nest", 1, "Eight oak logs around a small flower. Place it; the wood remembers wings."),
+        ("Ring of Oak", "productivebees:oak_wood_nest", 1, "Eight oak logs around a small flower. Place it and wake it with another flower; the wood remembers wings."),
         ("A Flower to Argue Over", "minecraft:dandelion", 8, "Bone meal on grass. Bees will not stay where nothing blooms."),
         ("Bee Nest", "minecraft:bee_nest", 1, "Planks and flowers — a home a wild bee will move into."),
         ("Honeycomb", "minecraft:honeycomb", 16, "Shears on a full nest. Stand behind a campfire's smoke and nobody gets stung."),
@@ -2433,7 +2433,7 @@ def build_tribal_side() -> list[dict]:
         ("Spirit Shard", "tribalpower:spirit_shard", 2, "Shard of old tribe song — needs a Chime."),
         ("Copper Resonator", "tribalpower:copper_resonator", 1, "Tune metal to spirit — copper around a Chime."),
         ("Ritual Chalk", "tribalpower:ritual_chalk", 4, "Mark the lattice lines — chalk needs a Shard."),
-        ("Drumheart Beat", "tribalpower:drumheart", 1, "Place the heart — Chime + Shard + leather (Desk sells leather)."),
+        ("Drumheart Beat", "tribalpower:drumheart", 1, "Place the heart — Chime + Shard + leather (the Pad-keepers sell leather)."),
         ("Spirit Codex", "tribalpower:spirit_codex", 1, "Nine tribes hummed once — needs a spare Chime + Shard."),
         ("Ley Collector", "tribalpower:ley_collector", 1, "Draw ley into beats."),
         ("Pulse Cell", "tribalpower:pulse_cell", 4, "Carry Pulse for tools, spells and travel. Fill it at a Drumheart."),

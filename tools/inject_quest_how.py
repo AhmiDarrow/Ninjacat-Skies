@@ -42,7 +42,7 @@ HOW_ITEM = {
     "minecraft:iron_nugget": "How: one ingot makes nine, or Grit stall.",
     "ninjacatskies:frayed_thread": "How: quest rewards, flint-mesh dirt on a Loomframe, steward caches.",
     "ninjacatskies:whisker_codex": "How: starter kit / dock chest. Right-click the book; Grave (`) is the assignment list.",
-    "ninjacatskies:codex_page": "How: seating a Strand at the Post, or Desk/Kin. Right-click to read; they are kept, not spent.",
+    "ninjacatskies:codex_page": "How: seating a Strand at the Post, or the Spark stall at /clowder hub (8 Thread). Right-click to read; they are kept, not spent.",
     "ninjacatskies:braid_cord": "How: seat any two of Clock, Swarm, Spark, then right-click the Tension Post with Strand Filament.",
     "ninjacatskies:strand_filament": "How: iron thread mesh on gravel, sand, or dust (Loomframe or sieve).",
     "voidloom:strand_filament": "How: iron thread mesh on gravel, sand, or dust (Loomframe or sieve).",
@@ -57,11 +57,11 @@ HOW_ITEM = {
     "voidloom:binding_knot": "How: Void Yarn ring around a slime ball.",
     "voidloom:spindle_crook": "How: four sticks. Grit stall sells one.",
     "voidloom:loom_lint": "How: string/flint/iron thread mesh on dirt in a sieve or Loomframe. Four lint → yarn.",
-    "exdeorum:porcelain_clay": "How: clay + bone meal.",
+    "exdeorum:porcelain_clay_ball": "How: clay ball + bone meal, shapeless. Clay comes from the Tension Barrel.",
     "exdeorum:porcelain_bucket": "How: smelt porcelain clay.",
-    "exdeorum:string_mesh": "How: string on a mesh craft, or Grit stall.",
-    "exdeorum:flint_mesh": "How: flint on a mesh craft after Recover starts sieving.",
-    "exdeorum:iron_mesh": "How: iron on a mesh craft. Grit stall sells one.",
+    "exdeorum:string_mesh": "How: nine string in a 3x3. The Grit stall sells the Voidloom string thread mesh, which sieves the same.",
+    "exdeorum:flint_mesh": "How: four flint and five string in a checker. Flint is gravel, or Thread + gravel.",
+    "exdeorum:iron_mesh": "How: four iron ingots and five string in a checker. No stall sells it.",
     "tribalpower:bone_chime": "How: one bone, string, amethyst. /clowder hub Pad-keepers sell bones. Spark / Hum gate.",
     "tribalpower:spirit_shard": "How: Bone Chime, amethyst and redstone, shapeless. Yields two.",
     "tribalpower:copper_resonator": "How: copper around a Bone Chime. Yields two.",
@@ -122,7 +122,7 @@ HOW_ITEM = {
     "minecraft:arrow": "How: flint, stick, feather. Skeletons drop extras.",
     "minecraft:spectral_arrow": "How: glowstone dust around an arrow.",
     "minecraft:book": "How: three paper plus leather. Paper is sugar cane.",
-    "minecraft:paper": "How: three sugar cane in a row. Cane from sieve dirt or Pad-keepers.",
+    "minecraft:paper": "How: three sugar cane in a row. Cane comes from sieving dirt with a flint mesh or better.",
     "minecraft:amethyst_shard": "How: sieve, or budding amethyst if you grow a geode line. Occultism wants shards.",
     "minecraft:purple_dye": "How: blue plus red, or a purple flower. Occultism wants it.",
     "minecraft:white_dye": "How: bone meal in a grid, or a white flower.",
@@ -140,7 +140,7 @@ HOW_ITEM = {
     "minecraft:purple_concrete": "How: concrete powder plus water. Powder is sand, gravel, and dye.",
     "minecraft:saddle": "How: not a pad craft. Optional hunt / leatherworker. Chocobo Saddle is a different item.",
     "minecraft:wheat": "How: wheat seeds on farmland, then bone meal. Seeds from breaking grass or the starter chest.",
-    "minecraft:wheat_seeds": "How: break grass, or Pad-keepers. Plant on farmland; bone meal speeds the first field.",
+    "minecraft:wheat_seeds": "How: break grass, or sieve dirt with a flint mesh. Plant on farmland; bone meal speeds the first field.",
     "minecraft:shears": "How: two iron ingots diagonal. Shear sheep and bee nests.",
     "minecraft:hopper": "How: five iron around a chest. Sit it under a Loomframe or Tension Barrel (extract DOWN).",
     "minecraft:bone_block": "How: nine bone meal. Bones from skeletons or Pad-keepers.",
@@ -177,7 +177,14 @@ HOW_ITEM = {
     "minecraft:lapis_block": "How: nine lapis. Sieve gravel or Echo Shatter lapis ore.",
     "minecraft:golden_apple": "How: eight gold around an apple. Not the enchanted one.",
     "minecraft:fermented_spider_eye": "How: spider eye, brown mushroom, sugar.",
-    "minecraft:honeycomb": "How: shear a nest or hive after bees work a flower.",
+    "minecraft:honeycomb": "How: shear a nest or hive after bees work a flower. The Spark stall at /clowder hub sells eight for 16 Thread.",
+    "productivebees:honey_treat": "How: honeycomb plus a honey bottle, shapeless.",
+    "driftwrecks:driftwreck_seal": "How: finish a Driftwreck's task. Everyone who set foot on it gets a Seal.",
+    "driftwrecks:frayed_core": "How: break a frayed spawner on a Driftwreck; each drops its core.",
+    "driftwrecks:rift_shard": "How: open a Hold's sealed rift with a Weft Key and mend the Remnant inside.",
+    "tribalpower:song_bench": "How: Spirit Codex + Tribal Weave. Seat stone or an Echo-stage item. Raw metal belongs on Echo Shatter.",
+    "tribalpower:rite_spring_calling": "How: sneak-use the tablet on a Ritual Brazier in its Rite Circle with matching seal and Pulse.",
+    "tribalpower:music_disc_drum_circle": "How: The Unsung at the Silent Drum can drop it. Optional.",
     "minecraft:beehive": "How: three honeycomb and six planks. Campfire underneath calms them.",
     "minecraft:bee_nest": "How: oak log ring around a small flower; wait for wings. Swarm names the nest.",
     "minecraft:honey_bottle": "How: glass bottle on a full hive. Campfire underneath.",
@@ -395,10 +402,10 @@ HOW_NS = {
     "ninjacatskies": "How: pack item — Codex, Knot, token, or Thread. Earlier Strand nodes name the seat.",
     "exdeorum": "How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit.",
     "tribalpower": "How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page.",
-    "create": "How: Create — bench, millstone, mixer, or press. JEI, then the Clock chapter.",
-    "farmersdelight": "How: sieve dirt for seeds (flint mesh), then the cutting board / pot.",
-    "mysticalagriculture": "How: sieve dirt/gravel for Inferium and Prosperity ore, smelt, then craft the seed.",
-    "productivebees": "How: ring of the nest material around a small flower, place, wait for wings.",
+    "create": "How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line.",
+    "farmersdelight": "How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt.",
+    "mysticalagriculture": "How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar.",
+    "productivebees": "How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps.",
     "mekanism": "How: Mekanism Works chapter — ore chunks from the sieve, then the factory line.",
     "powah": "How: Powah Grid chapter — energizing orb and cables after Spark Pulse exists.",
     "ars_nouveau": "How: Arcane Side — archwood and sourceberry from moss, then the cascade.",
@@ -462,22 +469,31 @@ def parse_quest_items() -> dict[str, str]:
     return items
 
 
-def how_line(item: str | None, title: str) -> str:
+NEST_HOW = ("How: ring of the nest material around a small flower. Place it, then right-click it "
+            "with a small flower to wake it; bees come out after a while.")
+
+
+def how_line(item: str | None, title: str) -> str | None:
     if item and item in HOW_ITEM:
         return HOW_ITEM[item]
+    if item and item.startswith("productivebees:") and item.endswith("_nest"):
+        return NEST_HOW
     if item and ":" in item:
         ns = item.split(":", 1)[0]
         if ns in HOW_NS:
             return HOW_NS[ns]
     low = title.lower()
     if "knot" in low:
-        return "How: craft the Knot from the chapter's last items, then seat the token at a Tension Post."
+        # Strand tokens are never crafted (strand_gates.js removes every token recipe): the Knot quest pays it.
+        return "How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
     if "seat" in low:
         return "How: right-click your Tension Post with the Strand token in hand."
     if "look at the drop" in low:
         return "How: click the quest. Then punch the oak."
-    if "look" in low or "wings" in low:
-        return "How: look at the thing. The quest completes when it is in view."
+    if "wings" in low:
+        return "How: right-click the oak nest with a small flower, then look at the first bee that comes out."
+    if "look" in low:
+        return "How: look at it. The quest completes when it is in view."
     if "re-tension" in low:
         return "How: use the matching Frayed Totem, then win the arena. Advancement completes this."
     if "answer for the cut" in low:
@@ -564,7 +580,10 @@ def how_line(item: str | None, title: str) -> str:
         return "How: /tribalpower camp create (not a Clowder). Advancement on first camp."
     if "ask the codex why" in low:
         return "How: sneak-use the Spirit Codex on a Tribal block; tick when the report names a real fault."
-    return f"How: make or find {title}. JEI names the recipe; earlier quests in this chapter name the station and inputs."
+    if item:
+        return f"How: make or find {title}. JEI names the recipe; earlier quests in this chapter name the station and inputs."
+    # Advancement / checkmark quests without a rule already explain themselves; a JEI hint would mislead.
+    return None
 
 
 def main() -> None:
@@ -588,11 +607,14 @@ def main() -> None:
         body = m.group(3)
         title = titles.get(qid, "this")
         item = items.get(qid)
-        line = how_line(item, title).replace("\\", "\\\\").replace('"', '\\"').replace("&", "\\&")
+        raw = how_line(item, title)
+        if raw is None:
+            return m.group(0)
+        line = raw.replace("\\", "\\\\").replace('"', '\\"').replace("&", "\\&")
         if "How:" in body:
             generic = "How: make or find" in body
             ns_known = bool(item and ":" in item and item.split(":", 1)[0] in HOW_NS)
-            if (item and item in HOW_ITEM) or ns_known or (generic and not line.startswith("How: make or find")):
+            if (item and item in HOW_ITEM) or ns_known or not item or (generic and not line.startswith("How: make or find")):
                 replaced[0] += 1
                 body = re.sub(r'\n\t\t"How:.*?"\s*$', f'\n\t\t"{line}"', body.rstrip(), count=1)
                 return f'{m.group(1)}{body}{m.group(4)}'
