@@ -23,7 +23,7 @@ foreach ($jar in $jars) {
     }
 }
 
-# 2) Core jar-in-jar contains the five companion mods
+# 2) Core jar-in-jar contains the six companion mods
 Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
 $core = Get-ChildItem (Join-Path $root "pack\mods") -Filter "ninjacatskies-core-*.jar" | Select-Object -First 1
 if (-not $core) {
@@ -32,7 +32,7 @@ if (-not $core) {
     $z = [System.IO.Compression.ZipFile]::OpenRead($core.FullName)
     try {
         $names = @($z.Entries | ForEach-Object { $_.FullName })
-        foreach ($needle in @("ninjacatskies", "voidloom", "clowderhall", "ninjacatlib", "guardians")) {
+        foreach ($needle in @("ninjacatskies", "voidloom", "clowderhall", "ninjacatlib", "guardians", "driftwrecks")) {
             $hit = $names | Where-Object { $_ -match "META-INF/jarjar/$needle-" }
             if (-not $hit) { Add-Fail "$($core.Name) missing nested $needle jar" }
         }
