@@ -35,6 +35,8 @@ public final class ModCreativeTabs {
                         out.accept(ModItems.STRAND_TOKEN_SPINDLE.get());
                         out.accept(ModItems.BRAID_CORD.get());
                         out.accept(ModItems.SPINDLE_LOOM_FRAGMENT.get());
+                        out.accept(ModItems.END_APPLE.get());
+                        out.accept(ModItems.BITTEN_END_APPLE.get());
                         out.accept(ModItems.TENSION_POST.get());
                     })
                     .build()

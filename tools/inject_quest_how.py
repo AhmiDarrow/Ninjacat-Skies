@@ -31,6 +31,8 @@ HOW_ITEM = {
     "minecraft:bone_meal": "How: bones in a grid, or Thread + rotten flesh sink, or /clowder hub Pad-keepers.",
     "minecraft:slime_ball": "How: two dirt + wheat seeds + bone meal (pad compost), or /clowder hub Pad-keepers.",
     "minecraft:ender_pearl": "How: endermen, or /clowder hub Spark stall.",
+    "ninjacatskies:end_apple": "How: five ender pearls, two bones and two blaze powder at a crafting table.",
+    "ninjacatskies:bitten_end_apple": "How: what is left after the first bite of an End Apple.",
     "minecraft:iron_ingot": "How: smelt raw iron / iron grit (furnace or Ember Kiln). Sieve gravel for chunks.",
     "minecraft:copper_ingot": "How: smelt raw copper / copper grit. Sieve gravel.",
     "minecraft:gold_ingot": "How: smelt raw gold / gold grit. Rarer sieve catch.",

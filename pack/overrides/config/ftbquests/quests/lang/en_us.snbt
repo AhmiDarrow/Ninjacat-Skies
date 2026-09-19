@@ -4109,6 +4109,11 @@
 		"How: blaze powder, coal, and gunpowder."
 	]
 	quest.420000000016032C.title: "Fire Charge"
+	quest.4200000000178001.quest_desc: [
+		"Twelve portal frames are not a pad craft, so the End is a bite away instead.",
+		"Eat it to stand on the End's obsidian pad; eat the half that is left to come home to the spot you ate from."
+	]
+	quest.4200000000178001.title: "End Apple"
 	quest.420000000017032D.quest_desc: [
 		"Pale stone from the far side. Heavy, plain, and endless.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",

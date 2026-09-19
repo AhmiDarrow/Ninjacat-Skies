@@ -5,7 +5,9 @@ import com.ninjacat.skies.core.block.ModBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -98,6 +100,23 @@ public final class ModItems {
     public static final DeferredItem<Item> BRAID_CORD = ITEMS.registerSimpleItem(
             "braid_cord",
             new Item.Properties().stacksTo(16)
+    );
+
+    /**
+     * The pack's only way to the End: eat it to go, eat the half that is left to come back.
+     * Expensive on purpose (five pearls, two bones, two blaze powder) and not a shortcut to anything else.
+     */
+    public static final DeferredItem<EndAppleItem> END_APPLE = ITEMS.register(
+            "end_apple",
+            () -> new EndAppleItem(false, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
+                    .food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).alwaysEdible().build()))
+    );
+
+    /** Bite two. Carries nothing itself: the way back is stored on the player, so dying in the End keeps it. */
+    public static final DeferredItem<EndAppleItem> BITTEN_END_APPLE = ITEMS.register(
+            "bitten_end_apple",
+            () -> new EndAppleItem(true, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)
+                    .food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).alwaysEdible().build()))
     );
 
     /** Soft check against an item that may belong to another mod. */
