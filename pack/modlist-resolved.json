@@ -894,20 +894,20 @@
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8914264,
-    "filename": "tribalpower-3.4.3.jar",
+    "fileId": 8918180,
+    "filename": "tribalpower-3.5.0.jar",
     "releaseType": 1,
-    "sha1": "55c960a839c93f5e0c8578c29f4ce70789fface0"
+    "sha1": "a683cba0b1e1a203a5dbe914244b3be80718adf6"
   },
   {
     "key": "Chocobos Reborn",
     "name": "Chocobos Reborn",
     "slug": "chocobos-reborn",
     "projectId": 1699008,
-    "fileId": 8908978,
-    "filename": "chocobosreborn-1.0.3.jar",
+    "fileId": 8918139,
+    "filename": "chocobosreborn-1.0.4.jar",
     "releaseType": 1,
-    "sha1": "41f7cc460a5dd439c6b6edc7d5df367654210c1e"
+    "sha1": "ac910ef75111470b214565b1e8ad03b607be66b3"
   },
   {
     "key": "Resourceful Config",

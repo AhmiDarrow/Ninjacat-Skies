@@ -2688,7 +2688,7 @@ def build_chocobo() -> list[dict]:
         ("Gate to the March", "tribalpower:gate_drum", 1,
          "Wild pad-runners do not spawn on a void pad. Charge a Gate Drum with Pulse, then empty-handed use it and walk the March. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
         ("Gysahl Green", "chocobosreborn:gysahl_green", 8,
-         "Gysahl thickets grow in every March biome, heaviest in the Reed Fen. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."),
+         "Wild Gysahl grows in the Reed Fen, Steppe and Highlands, thickest in the Fen, and March Leaf sheds seeds. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."),
         ("Chocobo Almanac", "chocobosreborn:chocobo_almanac", 1,
          "A book and a gysahl leaf. Right-click a bird to read colour, grade, class, race wins, and the last nut."),
         ("Chocobo Saddle", "chocobosreborn:chocobo_saddle", 1,
