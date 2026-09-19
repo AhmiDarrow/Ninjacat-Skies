@@ -29,6 +29,8 @@ public final class WreckComposer {
         public final List<WreckPlan.Marker> markers = new ArrayList<>();
         public String fill = "wall";
         public String description = "";
+        /** Cells a player can walk to from the deck (composed wrecks only; empty for fixed plans). */
+        public Set<BlockPos> reach = Set.of();
         public int minX, minY, minZ, maxX, maxY, maxZ;
 
         void bounds() {
@@ -121,10 +123,14 @@ public final class WreckComposer {
         seam(L, R, KEEL[t], rng);
         erode(L, reserved, 0.12F + 0.05F * t, rng);
         clampHeight(L, HEIGHT[t]);
-        spreadMarkers(L, reserved, tier, top, R, rng);
+        // objectives only where a player can walk to them from the deck: not in sealed crypts, on column caps or roofs
+        Set<BlockPos> reach = reachable(L, top);
+        L.reach = reach;
+        L.markers.removeIf(m -> (m.kind().equals("mob") || (m.kind().equals("chest") && m.data() == 0)) && !reach.contains(m.pos()));
+        spreadMarkers(L, reserved, reach, tier, top, R, rng);
         if (tier == WreckTier.HOLD && L.markers("rift").isEmpty()) {
             List<BlockPos> ground = new ArrayList<>();
-            for (Map.Entry<BlockPos, String> e : L.blocks.entrySet()) if (standable(L, e.getKey().above(), reserved)) ground.add(e.getKey().above());
+            for (Map.Entry<BlockPos, String> e : L.blocks.entrySet()) if (standable(L, e.getKey().above(), reserved) && reach.contains(e.getKey().above())) ground.add(e.getKey().above());
             ground.sort(Comparator.comparingInt((BlockPos b) -> b.getX()).thenComparingInt(BlockPos::getZ).thenComparingInt(BlockPos::getY));
             if (!ground.isEmpty()) { BlockPos r = ground.get(rng.nextInt(ground.size())); L.markers.add(new WreckPlan.Marker("rift", r, 0)); reserved.add(r); }
         }
@@ -327,6 +333,65 @@ public final class WreckComposer {
         for (Map.Entry<BlockPos, String> e : L.blocks.entrySet()) if (!"x_air".equals(e.getValue())) top = Math.max(top, e.getKey().getY());
         int floor = top - limit + 1;
         L.blocks.keySet().removeIf(p -> p.getY() < floor);
+        // rooms and pits need a floor: under an open cell with nothing below, lay keel; on the cut line itself,
+        // the cell becomes the floor (a hidden room one block shorter beats a hole into the void)
+        List<BlockPos> open = new ArrayList<>();
+        for (Map.Entry<BlockPos, String> e : L.blocks.entrySet())
+            if (("x_air".equals(e.getValue()) || "h_air".equals(e.getValue())) && !L.blocks.containsKey(e.getKey().below())) open.add(e.getKey());
+        for (BlockPos p : open) {
+            if (p.getY() > floor) L.blocks.put(p.below(), "keel");
+            else L.blocks.put(p, "keel");
+        }
+    }
+
+    /** Cells a player can occupy (open, with headroom, standing on something or on a ladder). */
+    private static boolean passable(String k) {
+        return k == null || k.equals("x_air") || k.equals("mc:water") || k.startsWith("mc:ladder") || k.startsWith("mc:chain") || k.startsWith("mc:lantern");
+    }
+    private static boolean ladder(Layout L, BlockPos p) { String k = L.blocks.get(p); return k != null && k.startsWith("mc:ladder"); }
+    private static boolean node(Layout L, BlockPos p) {
+        return passable(L.blocks.get(p)) && passable(L.blocks.get(p.above()))
+                && (!passable(L.blocks.get(p.below())) || ladder(L, p) || ladder(L, p.below()));
+    }
+
+    /**
+     * Flood from the deck over walkable cells: step up one, drop up to four, jump a one-block gap, climb ladders.
+     * Hidden-room blocks ({@code h_}) count as solid, so their contents stay out until opened.
+     */
+    static Set<BlockPos> reachable(Layout L, Map<Long, Integer> top) {
+        Set<BlockPos> seen = new HashSet<>();
+        ArrayDeque<BlockPos> q = new ArrayDeque<>();
+        for (Map.Entry<Long, Integer> e : top.entrySet()) {
+            BlockPos p = new BlockPos(BlockPos.getX(e.getKey()), e.getValue() + 1, BlockPos.getZ(e.getKey()));
+            if (node(L, p) && seen.add(p)) q.add(p);
+        }
+        int[][] dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        while (!q.isEmpty()) {
+            BlockPos p = q.poll();
+            List<BlockPos> next = new ArrayList<>(8);
+            if (ladder(L, p) || ladder(L, p.below())) { next.add(p.above()); next.add(p.below()); }
+            for (int[] d : dirs) {
+                BlockPos n = p.offset(d[0], 0, d[1]);
+                if (node(L, n)) { next.add(n); continue; }
+                if (!passable(L.blocks.get(n))) {                                         // step up
+                    if (passable(L.blocks.get(p.above(2)))) next.add(n.above());
+                    continue;
+                }
+                if (!passable(L.blocks.get(n.above()))) continue;
+                boolean landed = false;
+                for (int k = 1; k <= 4; k++) {                                          // drop
+                    BlockPos r = n.below(k);
+                    if (node(L, r)) { next.add(r); landed = true; break; }
+                    if (!passable(L.blocks.get(r))) break;
+                }
+                if (!landed) {                                                          // jump the gap
+                    BlockPos far = p.offset(d[0] * 2, 0, d[1] * 2);
+                    next.add(far); next.add(far.above());
+                }
+            }
+            for (BlockPos n : next) if (node(L, n) && seen.add(n)) q.add(n);
+        }
+        return seen;
     }
 
     // ------------------------------------------------------------------ markers
@@ -337,12 +402,12 @@ public final class WreckComposer {
                 && !"x_air".equals(below);
     }
 
-    private static void spreadMarkers(Layout L, Set<BlockPos> reserved, WreckTier tier, Map<Long, Integer> top, int R, Random rng) {
+    private static void spreadMarkers(Layout L, Set<BlockPos> reserved, Set<BlockPos> reach, WreckTier tier, Map<Long, Integer> top, int R, Random rng) {
         int t = tier.ordinal();
         List<BlockPos> cells = new ArrayList<>();
         for (Map.Entry<BlockPos, String> e : L.blocks.entrySet()) {
             BlockPos up = e.getKey().above();
-            if (standable(L, up, reserved)) cells.add(up);
+            if (standable(L, up, reserved) && reach.contains(up)) cells.add(up);
         }
         cells.sort(Comparator.comparingInt((BlockPos p) -> p.getX()).thenComparingInt(BlockPos::getY).thenComparingInt(BlockPos::getZ));
         spread(L, reserved, "pillar", PILLARS[t], cells, rng, 4, true);
@@ -380,19 +445,24 @@ public final class WreckComposer {
         List<Integer> order = new ArrayList<>(buckets.keySet());
         Collections.shuffle(order, rng);
         int placed = 0;
-        for (int round = 0; round < 2 && placed < n; round++) {
-            for (int b : order) {
-                if (placed >= n) break;
-                List<BlockPos> opts = new ArrayList<>();
-                for (BlockPos c : round == 0 ? buckets.get(b) : cells)
-                    if (!reserved.contains(c) && farFromMarkers(L, c, round == 0 ? gap : 2)) opts.add(c);
-                if (opts.isEmpty()) continue;
-                BlockPos c = opts.get(rng.nextInt(opts.size()));
-                L.markers.add(new WreckPlan.Marker(kind, c, indexed ? placed : 0));
-                reserved.add(c);
-                placed++;
-                if (round == 1) break;
-            }
+        for (int b : order) {                                   // one per angular bucket, spaced
+            if (placed >= n) break;
+            List<BlockPos> opts = new ArrayList<>();
+            for (BlockPos c : buckets.get(b)) if (!reserved.contains(c) && farFromMarkers(L, c, gap)) opts.add(c);
+            if (opts.isEmpty()) continue;
+            BlockPos c = opts.get(rng.nextInt(opts.size()));
+            L.markers.add(new WreckPlan.Marker(kind, c, indexed ? placed : 0));
+            reserved.add(c);
+            placed++;
+        }
+        while (placed < n) {                                    // then anywhere, closer together, until the count is met
+            List<BlockPos> opts = new ArrayList<>();
+            for (BlockPos c : cells) if (!reserved.contains(c) && farFromMarkers(L, c, 2)) opts.add(c);
+            if (opts.isEmpty()) break;
+            BlockPos c = opts.get(rng.nextInt(opts.size()));
+            L.markers.add(new WreckPlan.Marker(kind, c, indexed ? placed : 0));
+            reserved.add(c);
+            placed++;
         }
     }
 

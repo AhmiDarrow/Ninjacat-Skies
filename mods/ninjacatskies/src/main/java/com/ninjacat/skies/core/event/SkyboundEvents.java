@@ -134,6 +134,7 @@ public final class SkyboundEvents {
         if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) {
             // lives switched off: nobody stays a spectator for a pool that no longer counts
             if (player.getPersistentData().getBoolean(EXHAUSTED)) { player.getPersistentData().remove(EXHAUSTED); if (player.isSpectator()) { seatAtRespawnOrDock(player); player.setGameMode(GameType.SURVIVAL); } }
+            LoomTension.deliverPending(player);   // relics stashed while a spectator (no-op while still one)
             return;
         }
         int lives = remainingLives(player);

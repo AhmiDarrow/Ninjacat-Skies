@@ -94,9 +94,22 @@ public class DrumheartGuardian extends GuardianEntity {
         for (int d = 0; d < 4; d++) for (int r = 4; r <= 22; r++) {
             BlockPos p = BlockPos.containing(Mech.polar(o, r, Math.PI / 4 + Math.PI / 2 * d, o.y));
             boolean onPad = false; for (int k = 1; k < 8; k += 2) if (Mech.horiz(Vec3.atCenterOf(p), Mech.polar(o, PAD_R, Math.PI / 4 * k, o.y)) < 2.6) onPad = true;   // the four diagonal beat pads stay dry
-            if (!onPad && level().getBlockState(p).isAir()) { level().setBlock(p, Blocks.LAVA.defaultBlockState(), 3); lava.add(p); }
+            if (!onPad && level().getBlockState(p).isAir()) { placeTemp(p, Blocks.LAVA.defaultBlockState()); lava.add(p); }   // temp: a restart mid-rise cannot leave lava behind
         }
         lavaTimer = LAVA_TICKS; sound(SoundEvents.LAVA_EXTINGUISH, 1.5F, 0.5F);
+    }
+
+    @Override
+    public void addAdditionalSaveData(net.minecraft.nbt.CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        tag.putLongArray("Lava", lava.stream().mapToLong(BlockPos::asLong).toArray());
+    }
+    @Override
+    public void readAdditionalSaveData(net.minecraft.nbt.CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        lava.clear();
+        for (long l : tag.getLongArray("Lava")) lava.add(BlockPos.of(l));
+        if (!lava.isEmpty()) lavaTimer = 1;   // drain on the first tick back
     }
 
     private void drainLava() {

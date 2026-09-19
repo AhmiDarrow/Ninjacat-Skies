@@ -23,8 +23,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionContents;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -337,14 +335,9 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
             }
             if (isWaterCarrier(stack)) {
                 if (water + WATER_PER_BUCKET > WATER_MAX) return stack;
+                if (!canStore(emptyWaterCarrier(stack))) return stack;
                 if (!simulate) {
-                    ItemStack empty = pourWater(stack);
-                    if (!empty.isEmpty()) {
-                        int leftover = OutputStorage.insert(output, empty, false);
-                        if (leftover > 0 && level != null && !level.isClientSide) {
-                            Containers.dropItemStack(level, worldPosition.getX() + 0.5, worldPosition.getY() + 1, worldPosition.getZ() + 0.5, empty.copyWithCount(leftover));
-                        }
-                    }
+                    OutputStorage.insert(output, pourWater(stack), false);
                     sync();
                 }
                 return stack.getCount() > 1 ? stack.copyWithCount(stack.getCount() - 1) : ItemStack.EMPTY;
@@ -415,15 +408,9 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         for (ItemStack s : takeAllOutput()) {
             Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, s);
         }
-        // Pour already handed the empty bucket back. Remaining charges are tank water, not a
-        // bucket type — refunding WATER_BUCKET minted iron buckets from porcelain pours, and
-        // leftover water % 4 vanished. One water bottle per charge keeps the leftover.
-        int leftover = water;
+        // Pour already handed the empty bucket back; leftover tank water spills. Refunding it as
+        // buckets or bottles mints free containers.
         water = 0;
-        for (int i = 0; i < leftover; i++) {
-            Containers.dropItemStack(level, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
-                    PotionContents.createItemStack(Items.POTION, Potions.WATER));
-        }
     }
 
     @Override

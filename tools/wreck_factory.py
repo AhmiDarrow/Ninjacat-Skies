@@ -288,6 +288,17 @@ class Plan:
         path.write_bytes(bytes(out))
 
 
+def crypt_stair(p: Plan, x: int, z0: int, walk_top: int, floor_y: int):
+    """A one-wide stair from a landing at (x, walk_top, z0 + 1) down, northward, to a crypt floor at floor_y.
+    The whole run must lie inside the crypt's air in x and z; above the crypt it cuts through deck and keel."""
+    n = walk_top - floor_y - 2
+    p.box(x, walk_top, z0 + 1, x, walk_top + 1, z0 + 1, "air")               # the landing
+    for k in range(1, n + 1):
+        z = z0 - (k - 1)
+        p.box(x, walk_top - k, z, x, walk_top + 1, z, "air")                 # headroom and the opening
+        p.set(x, walk_top - 1 - k, z, "stair_s")                             # climbs south, back toward the landing
+
+
 # ==================================================================== cores
 
 def shrine(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
@@ -340,10 +351,7 @@ def shrine(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
         for x in (-5, 0, 5):
             for z in (-5, 5):
                 p.column(x, -9, z, 5, "beam")
-        for s in range(6):
-            p.set(-8 + 1, -9 + s, 8 - 2 - s, "stair_n")   # stair down along the west wall
-            p.box(-7, -8 + s, 6 - s, -6, -4, 6 - s, "air")
-        p.box(-7, -4, -1, -6, 0, 1, "air"); p.set(-7, 0, 0, "floor")
+        crypt_stair(p, -7, 7, 1, -10)   # stair down along the west wall
         rift = (0, -9, 0)
         for x, z in ((-6, -6), (6, -6), (6, 6)):
             p.set(x, -8, z, "light")
@@ -415,6 +423,9 @@ def watchtower(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p.box(-tr, top_y + 1, -tr, tr, top_y + 1, tr, "roof")
     p.box(-tr + 1, top_y + 1, -tr + 1, tr - 1, top_y + 1, tr - 1, "floor")
     p.set(0, top_y + 2, 0, "mc:beacon" if t == 3 else "accent")
+    # the broken spiral never reaches the crown: a ladder up the stair-well corner, out through the crown floor
+    for yy in range(1, top_y + 2):
+        p.set(-tr + 1, yy, -tr + 1, "mc:ladder[facing=south]")
     for c in ((-tr, -tr), (tr, -tr), (-tr, tr), (tr, tr)):
         p.column(c[0], top_y + 2, c[1], t, "beam", "light")
     p.set(1, top_y + 2, 1, "mc:spyglass_placeholder") if False else None
@@ -504,9 +515,7 @@ def library(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
         p.box(-8, -7, -8, 8, -2, 8, "air")
         p.walls(-9, -8, -9, 9, -1, 9, "wall")
         p.box(-8, -8, -8, 8, -8, 8, "floor")
-        for s in range(7):
-            p.set(-hw + 1, -s, hd - 3 - s, "stair_n")
-            p.box(-hw + 1, -s + 1, hd - 3 - s, -hw + 1, 1, hd - 3 - s, "air") if s > 0 else None
+        crypt_stair(p, -7, 7, 1, -8)
         rift = (0, -7, 0)
         for x in range(-7, 8, 3):
             for y in range(-7, -4):
@@ -562,9 +571,7 @@ def forge(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
         p.box(-7, -9, -7, 7, -9, 7, "floor")
         p.box(-3, -9, -3, 3, -9, 3, "mc:magma_block")
         p.box(-2, -9, -2, 2, -9, 2, "floor")
-        for s in range(6):
-            p.set(w - 1, -s - 3, w - 2 - s, "stair_n")
-            p.box(w - 1, -s - 2, w - 2 - s, w - 1, 0, w - 2 - s, "air")
+        crypt_stair(p, 6, 6, 1, -9)
         rift = (0, -8, 0)
     p.seam(R, depth)
     p.erode(0.25)
@@ -610,8 +617,8 @@ def garden(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p.box(-1, top - 2, -1, 1, top - 1, 1, "h_air")
     p.set(fr - 1, top, 0, "h_mc:spruce_trapdoor[half=top,facing=west]")
     p.box(fr - 1, top - 2, 0, fr - 1, top - 1, 0, "h_air")
-    heart = (-fr - 1, top + 1, 0)
-    idol = (fr + 1, top + 1, 0)
+    heart = (-fr - 1, top, 0)      # on the top terrace (y = top - 1), beside the fountain
+    idol = (fr + 1, top, 0)
     rift = None
     if t == 3:
         p.box(-8, -7, -8, 8, -3, 8, "air")
@@ -621,13 +628,13 @@ def garden(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
         for x in range(-7, 8, 3):
             for z in (-7, 7):
                 p.column(x, -7, z, 4, "beam")
-        for s in range(6):
-            p.set(R - 5, -s - 2, -s, "stair_n")
-            p.box(R - 5, -s - 1, -s, R - 5, 1, -s, "air")
+        # the stair starts on whichever terrace covers its landing
+        land = [y for y in range(0, top + 1) if p.get(7, y, 7) in ("soil", "trim", "floor")]
+        crypt_stair(p, 7, 6, 1 + max(land, default=0), -8)
         rift = (0, -7, 0)
     p.seam(R, depth)
     p.erode(0.2)
-    p.standard_markers(R, heart, idol, hidden_chest=(0, top - 2, 0), rift=rift, center=(0, top + 1, -fr - 1))
+    p.standard_markers(R, heart, idol, hidden_chest=(0, top - 2, 0), rift=rift, center=(0, top, -fr - 1))
     return p
 
 
@@ -808,6 +815,7 @@ def a_well(seed):
     p = annex("well", seed)
     p.ring(0, 1, 0, 2, "trim")
     p.box(-1, 0, -1, 1, -2, 1, "x_air")
+    p.walls(-2, -2, -2, 2, -1, 2, "keel"); p.box(-2, -3, -2, 2, -3, 2, "keel")   # its own basin: near a rim the keel is too thin to hold water
     p.set(0, -2, 0, "mc:water")
     for x in (-2, 2):
         p.column(x, 2, 0, 2, "fence")

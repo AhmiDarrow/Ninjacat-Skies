@@ -152,6 +152,7 @@ public abstract class GuardianEntity extends Monster {
         ServerLevel sl = (ServerLevel) level();
         if (deathTimer >= 0) { tickDying(sl); return; }
         ageInFight++;
+        if (tickCount % 10 == 0) leashToArena();
         bossEvent.setProgress(getHealth() / getMaxHealth());
         if (showsBossBar()) { for (ServerPlayer p : party()) bossEvent.addPlayer(p); } else if (!bossEvent.getPlayers().isEmpty()) bossEvent.removeAllPlayers();
         int ph = getHealth() <= getMaxHealth()*0.25F ? 3 : getHealth() <= getMaxHealth()*0.5F ? 2 : getHealth() <= getMaxHealth()*0.75F ? 1 : 0;
@@ -198,6 +199,8 @@ public abstract class GuardianEntity extends Monster {
     public boolean hurt(DamageSource src, float amount) {
         if (level().isClientSide) return false;
         if (deathTimer >= 0) return false;
+        // a bound guardian dropped off its stage (broken bridge, a leap over a gap) is put back, never killed by the void
+        if (src.is(net.minecraft.world.damagesource.DamageTypes.FELL_OUT_OF_WORLD) && arena() != null) { returnToOrigin(); return false; }
         if (src.is(net.minecraft.tags.DamageTypeTags.IS_FALL) || src.is(net.minecraft.tags.DamageTypeTags.IS_DROWNING) || src.is(net.minecraft.tags.DamageTypeTags.IS_FIRE)) return false;
         if (src.is(net.minecraft.tags.DamageTypeTags.IS_FALL) || src.is(net.minecraft.world.damagesource.DamageTypes.IN_WALL) || src.is(net.minecraft.world.damagesource.DamageTypes.CRAMMING)) return false;
         if (isImmune() && !src.is(net.minecraft.tags.DamageTypeTags.BYPASSES_INVULNERABILITY)) {
@@ -210,6 +213,19 @@ public abstract class GuardianEntity extends Monster {
         boolean ok = super.hurt(src, amount);
         if (ok && src.getEntity() instanceof LivingEntity le) onDamagedBy(le, amount);
         return ok;
+    }
+    /** Players get a fence (ArenaManager.tick); so does the guardian: below the stage or far past its edge, back to the origin. */
+    private void leashToArena() {
+        ArenaInstance a = arena();
+        if (a == null) return;
+        Vec3 o = a.origin();
+        if (getY() < o.y - 16 || Math.max(Math.abs(getX() - o.x), Math.abs(getZ() - o.z)) > a.radius + 8) returnToOrigin();
+    }
+    private void returnToOrigin() {
+        Vec3 o = origin();
+        getNavigation().stop();
+        teleportTo(o.x, o.y + 0.5, o.z);
+        setDeltaMovement(Vec3.ZERO); fallDistance = 0;
     }
     protected String immuneMessage() { return kind.title + " cannot be harmed right now."; }
     protected void onDamagedBy(LivingEntity by, float amount) {}

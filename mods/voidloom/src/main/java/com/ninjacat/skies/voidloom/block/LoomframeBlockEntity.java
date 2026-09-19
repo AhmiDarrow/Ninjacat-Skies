@@ -132,22 +132,23 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
     public boolean canAccept(ItemStack stack) {
         if (stack.isEmpty()) return false;
+        // With a mesh in, only take what that mesh can work — anything else jams the single input slot.
+        if (!mesh.isEmpty()) return processableWithMesh(stack);
         if (isSiftable(stack)) return true;
-        if (level != null && ModList.get().isLoaded("exdeorum")) {
-            if (!mesh.isEmpty()) return ExDeorumSieveBridge.hasRecipes(level, mesh, stack);
-            return ExDeorumSieveBridge.isSiftable(level, stack);
-        }
-        return false;
+        return level != null && ModList.get().isLoaded("exdeorum") && ExDeorumSieveBridge.isSiftable(level, stack);
     }
 
     private boolean canProcess() {
-        if (!isMeshItem(mesh) || input.isEmpty()) return false;
+        return isMeshItem(mesh) && !input.isEmpty() && processableWithMesh(input);
+    }
+
+    private boolean processableWithMesh(ItemStack stack) {
         if (level != null && ModList.get().isLoaded("exdeorum")) {
-            if (ExDeorumSieveBridge.hasRecipes(level, mesh, input)) return true;
-            return input.is(Items.DIRT) || input.is(Items.COARSE_DIRT) || input.is(Items.ROOTED_DIRT)
-                    || input.is(Items.GRAVEL);
+            if (ExDeorumSieveBridge.hasRecipes(level, mesh, stack)) return true;
+            return stack.is(Items.DIRT) || stack.is(Items.COARSE_DIRT) || stack.is(Items.ROOTED_DIRT)
+                    || stack.is(Items.GRAVEL);
         }
-        return isSiftable(input);
+        return isSiftable(stack);
     }
 
     public ItemStack getInput() {

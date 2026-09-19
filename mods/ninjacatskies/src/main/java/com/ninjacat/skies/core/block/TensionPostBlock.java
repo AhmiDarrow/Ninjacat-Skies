@@ -218,7 +218,8 @@ public class TensionPostBlock extends BaseEntityBlock {
 
         // The Fragment itself → Reweave.
         if (stack.is(ModItems.SPINDLE_LOOM_FRAGMENT.get())) {
-            if (state.getValue(REWOVEN) || LoomTension.clowderOf(sp).map(LoomTension::isRewoven).orElse(false)) {
+            // The Clowder's flag decides, not the blockstate: a reclaimed Post can carry a disbanded party's REWOVEN.
+            if (LoomTension.clowderOf(sp).map(LoomTension::isRewoven).orElse(false)) {
                 player.displayClientMessage(NinjacatText.teal("Your Clowder has already rewoven its sky."), true);
                 refresh(serverLevel, pos, sp);                                       // a second Post catches up with the Clowder
             } else if (LoomTension.reweave(serverLevel, pos, sp)) {

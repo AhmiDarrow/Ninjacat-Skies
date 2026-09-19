@@ -11,9 +11,11 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.entity.SignText;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -47,14 +49,14 @@ public final class ReweaveRing {
             BlockPos cap = pillar.above();
             boolean lit = i < rewoven.size();
 
-            hall.setBlockAndUpdate(pillar, Blocks.POLISHED_DEEPSLATE.defaultBlockState());
-            hall.setBlockAndUpdate(cap, lit ? Blocks.SEA_LANTERN.defaultBlockState() : Blocks.POLISHED_DEEPSLATE_SLAB.defaultBlockState());
+            setIfDifferent(hall, pillar, Blocks.POLISHED_DEEPSLATE.defaultBlockState());
+            setIfDifferent(hall, cap, lit ? Blocks.SEA_LANTERN.defaultBlockState() : Blocks.POLISHED_DEEPSLATE_SLAB.defaultBlockState());
 
             // Name plaque on the inward face.
             Direction inward = Math.abs(dx) == 6 ? (dx > 0 ? Direction.WEST : Direction.EAST) : (dz > 0 ? Direction.NORTH : Direction.SOUTH);
             BlockPos signPos = pillar.relative(inward);
             if (lit) {
-                hall.setBlockAndUpdate(signPos, Blocks.OAK_WALL_SIGN.defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, inward));
+                setIfDifferent(hall, signPos, Blocks.OAK_WALL_SIGN.defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, inward));
                 if (hall.getBlockEntity(signPos) instanceof SignBlockEntity sign) {
                     String name = rewoven.get(i).name().getString();
                     if (name.length() > 15) {
@@ -67,8 +69,10 @@ public final class ReweaveRing {
                             .setMessage(1, Component.literal(name))
                             .setMessage(2, Component.literal("nine Strands"))
                             .setMessage(3, Component.literal("one thread"));
-                    sign.setText(text, true);
-                    sign.setText(text, false);
+                    if (!sameText(sign.getFrontText(), text) || !sameText(sign.getBackText(), text)) {
+                        sign.setText(text, true);
+                        sign.setText(text, false);
+                    }
                 }
             } else if (hall.getBlockState(signPos).is(Blocks.OAK_WALL_SIGN)) {
                 hall.setBlockAndUpdate(signPos, Blocks.AIR.defaultBlockState());
@@ -77,5 +81,16 @@ public final class ReweaveRing {
         if (!rewoven.isEmpty()) {
             ClowderHall.LOGGER.debug("Reweave ring: {} lit", rewoven.size());
         }
+    }
+
+    private static void setIfDifferent(ServerLevel hall, BlockPos pos, BlockState state) {
+        if (hall.getBlockState(pos) != state) {
+            hall.setBlockAndUpdate(pos, state);
+        }
+    }
+
+    private static boolean sameText(SignText a, SignText b) {
+        return a.getColor() == b.getColor() && a.hasGlowingText() == b.hasGlowingText()
+                && Arrays.equals(a.getMessages(false), b.getMessages(false));
     }
 }

@@ -25,6 +25,10 @@ public final class ArenaInstance {
     public final List<UUID> party = new ArrayList<>();
     /** Snapshot of party at onWin so a leave/disconnect during the gate still gets the relic. */
     public final List<UUID> winners = new ArrayList<>();
+    /** Members who died this fight: still party (a win still reaches them) but never pulled back onto the stage. */
+    public final java.util.Set<UUID> fallen = new java.util.HashSet<>();
+    /** Ticks the stage has stood with nobody on it (not saved: a restart restarts the grace). */
+    public int emptyTicks = 0;
     @Nullable public UUID clowderId;
     @Nullable public UUID boss;
     public State state = State.FIGHT;
@@ -55,6 +59,7 @@ public final class ArenaInstance {
         if (clowderId != null) t.putUUID("Clowder", clowderId); if (boss != null) t.putUUID("Boss", boss);
         t.putString("State", state.name()); t.putInt("StateTicks", stateTicks); t.putInt("Age", age);
         ListTag w = new ListTag(); for (UUID u : winners) w.add(NbtUtils.createUUID(u)); t.put("Winners", w);
+        ListTag f = new ListTag(); for (UUID u : fallen) f.add(NbtUtils.createUUID(u)); t.put("Fallen", f);
         return t;
     }
 
@@ -67,6 +72,7 @@ public final class ArenaInstance {
         try { a.state = State.valueOf(t.getString("State")); } catch (IllegalArgumentException e) { a.state = State.WIPED; }
         a.stateTicks = t.getInt("StateTicks");
         for (Tag u : t.getList("Winners", Tag.TAG_INT_ARRAY)) a.winners.add(NbtUtils.loadUUID(u));
+        for (Tag u : t.getList("Fallen", Tag.TAG_INT_ARRAY)) a.fallen.add(NbtUtils.loadUUID(u));
         a.age = 0;                       // a restart mid-fight starts the grace period again: the party and the boss's chunks are not back yet
         return a;
     }

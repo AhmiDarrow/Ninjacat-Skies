@@ -52,6 +52,7 @@ public final class WreckPlan {
         if (radius < 0) {
             double r = 0;
             for (int i = 0; i < plan.size(); i++) r = Math.max(r, Math.hypot(plan.x(i), plan.z(i)));
+            for (Marker m : markers) r = Math.max(r, Math.hypot(m.pos().getX(), m.pos().getZ()));   // an annex's mob stands beside it
             radius = r;
         }
         return radius;
