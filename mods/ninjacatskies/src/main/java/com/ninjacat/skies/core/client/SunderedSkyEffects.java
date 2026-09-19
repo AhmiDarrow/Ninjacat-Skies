@@ -45,7 +45,7 @@ public final class SunderedSkyEffects extends DimensionSpecialEffects {
     public float[] getSunriseColor(float time, float partial) {
         float[] base = super.getSunriseColor(time, partial);
         if (base == null || !SkiesConfig.SUNDERED_SKY.get()) {
-            return null;
+            return base;   // switched off: vanilla's sunrise glow, untouched
         }
         return new float[] { 0.72F, 0.42F, 0.28F, base[3] * 0.7F };
     }
