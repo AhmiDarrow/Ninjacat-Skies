@@ -1,4 +1,33 @@
 [hardcore]
-# Each member contributes three lives once to the shared FTB team pool.
-livesEnabled = true
-startingLives = 3
+	#Shared Clowder lives. Every survival death spends one team life. Rare quest rewards add lives; operator /skybound revive restores the team.
+	livesEnabled = true
+	#Lives contributed once by each member to the shared team pool; operator revive restores this count times current members.
+	# Default: 3
+	# Range: 1 ~ 99
+	startingLives = 3
+
+[skybound]
+	#Give a Whisker Codex the first time a player joins a world.
+	giveCodexOnJoin = true
+	#First-join kit extras only (wiped on pad claim). Real Easy/Normal/Hard = island template.
+	difficultyPreset = "normal"
+
+[loom]
+	#Show the Fray: a slow dark column over the Dock that thins as Clowders seat Strands.
+	frayEnabled = true
+	#Fray column X (overworld).
+	# Default: 0
+	# Range: -30000000 ~ 30000000
+	frayX = 0
+	#Fray column base Y.
+	# Default: 66
+	# Range: -64 ~ 320
+	frayY = 66
+	#Fray column Z (overworld).
+	# Default: 0
+	# Range: -30000000 ~ 30000000
+	frayZ = 0
+	#Client: warm the horizon a little as your Clowder's Loom Tension rises.
+	skyTint = true
+	#Client: replace the Overworld sky with the sundered Loom (gold Cut, void tears). Disable for shader packs that draw their own sky.
+	sunderedSky = true
