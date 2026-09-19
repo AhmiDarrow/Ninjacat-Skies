@@ -166,9 +166,12 @@ public final class DriftManager extends SavedData {
         WreckCore core = heart ? null : r.core() != null ? r.core() : rollCore(team, skin);
         WreckModifier mod = heart ? WreckModifier.UNMARKED : r.modifier() != null ? r.modifier() : rollModifier(tier);
         WreckObjective obj = heart ? WreckObjective.RETHREAD : r.objective() != null ? r.objective() : rollObjective(tier);
-        String planId = heart ? "heartwreck" : WreckPlan.planId(core, tier);
-        WreckPlan plan;
-        try { plan = WreckPlan.get(server, planId); } catch (IllegalStateException e) { Driftwrecks.LOGGER.error("{}", e.getMessage()); return null; }
+        long seed = rng.nextLong();
+        WreckComposer.Layout plan;
+        try {
+            plan = heart ? WreckComposer.Layout.of(WreckPlan.get(server, "heartwreck")) : WreckComposer.compose(server, core, tier, seed);
+        } catch (IllegalStateException e) { Driftwrecks.LOGGER.error("{}", e.getMessage()); return null; }
+        String planId = heart ? "heartwreck" : plan.description.split(" ")[0];
 
         BlockPos origin = r.origin();
         if (origin == null) {
@@ -180,6 +183,7 @@ public final class DriftManager extends SavedData {
         }
         boolean hidden = core != null && team.hiddenRoomOpen(core);
         Wreck w = new Wreck(nextId++, c.id(), planId, core, tier, skin, mod, obj, heart, origin, hidden);
+        w.seed = seed; w.layout = plan.description; w.fill = plan.fill; w.markers.addAll(plan.markers);
         w.minX = origin.getX() + plan.minX; w.minY = origin.getY() + plan.minY; w.minZ = origin.getZ() + plan.minZ;
         w.maxX = origin.getX() + plan.maxX; w.maxY = origin.getY() + plan.maxY; w.maxZ = origin.getZ() + plan.maxZ;
         float life = tier.lifetimeTicks * mod.lifetime * team.lifetimeBonus() * DriftConfig.LIFETIME_MULTIPLIER.get().floatValue();
@@ -197,7 +201,7 @@ public final class DriftManager extends SavedData {
         wrecks.put(w.id, w);
         setDirty();
         level.playSound(null, w.center(), DwRegistries.sound("driftwreck.arrive"), SoundSource.AMBIENT, 6.0F, 0.9F);
-        Driftwrecks.LOGGER.info("Driftwreck {} ({} {} {} {} {}) drifting to {} for {}", w.id, planId, skin.id(), mod.id, obj.id,
+        Driftwrecks.LOGGER.info("Driftwreck {} ({} {} {} {} {}) drifting to {} for {}", w.id, w.layout, skin.id(), mod.id, obj.id,
                 hidden ? "hidden" : "sealed", origin.toShortString(), c.name().getString());
         return w;
     }
@@ -280,9 +284,8 @@ public final class DriftManager extends SavedData {
 
     private void finishBuild(ServerLevel level, Wreck w) {
         MinecraftServer server = level.getServer();
-        WreckPlan plan = WreckPlan.get(server, w.planId);
         List<Integer> pillars = new ArrayList<>();
-        for (WreckPlan.Marker m : plan.markers) {
+        for (WreckPlan.Marker m : w.markers) {
             BlockPos p = w.origin.offset(m.pos());
             BlockEntity be = level.getBlockEntity(p);
             if (be instanceof WreckChestBlockEntity chest) chest.setup(w, m.data() == 1, m.data() == 2);
@@ -298,9 +301,9 @@ public final class DriftManager extends SavedData {
             Collections.shuffle(pillars, new Random(rng.nextLong()));
             w.pillarOrder = pillars.stream().mapToInt(Integer::intValue).toArray();
         }
-        spawnMobs(level, w, plan);
+        spawnMobs(level, w);
         if (w.objective == WreckObjective.ESCORT) {
-            for (WreckPlan.Marker m : plan.markers("echo")) {
+            for (WreckPlan.Marker m : w.markers("echo")) {
                 StewardEchoEntity echo = DwRegistries.STEWARD_ECHO.get().create(level);
                 if (echo == null) break;
                 BlockPos p = w.origin.offset(m.pos());
@@ -317,8 +320,8 @@ public final class DriftManager extends SavedData {
         setDirty();
     }
 
-    private void spawnMobs(ServerLevel level, Wreck w, WreckPlan plan) {
-        List<WreckPlan.Marker> spots = plan.markers("mob");
+    private void spawnMobs(ServerLevel level, Wreck w) {
+        List<WreckPlan.Marker> spots = w.markers("mob");
         if (spots.isEmpty()) return;
         int online = LoomTension.clowderById(level.getServer(), w.team).map(c -> c.onlineMembers().size()).orElse(1);
         float scale = partyScale(online);
@@ -507,9 +510,7 @@ public final class DriftManager extends SavedData {
         if (w.placed != null) {
             Collection<UUID> members = c.map(Clowder::memberIds).orElse(List.of(w.team));
             Map<UUID, List<ItemStack>> bundles = new HashMap<>();
-            WreckPlan plan = null;
-            try { plan = WreckPlan.get(server, w.planId); } catch (IllegalStateException ignored) {}
-            if (plan != null) for (WreckPlan.Marker m : plan.markers("chest")) {
+            for (WreckPlan.Marker m : w.markers("chest")) {
                 BlockPos p = w.origin.offset(m.pos());
                 level.getChunkAt(p);
                 if (level.getBlockEntity(p) instanceof WreckChestBlockEntity chest) {
@@ -629,9 +630,8 @@ public final class DriftManager extends SavedData {
     /** Pillar block at a plan index, for objectives. */
     @Nullable
     public static BlockPos pillarPos(MinecraftServer server, Wreck w, int index) {
-        WreckPlan plan = WreckPlan.get(server, w.planId);
         String kind = w.heartwreck ? "district" : "pillar";
-        for (WreckPlan.Marker m : plan.markers(kind)) if (m.data() == index) return w.origin.offset(m.pos());
+        for (WreckPlan.Marker m : w.markers(kind)) if (m.data() == index) return w.origin.offset(m.pos());
         return null;
     }
 

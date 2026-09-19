@@ -99,10 +99,9 @@ public final class Tether {
 
     @Nullable
     static BlockPos nearestDock(MinecraftServer server, Wreck w, Vec3 from) {
-        WreckPlan plan = WreckPlan.get(server, w.planId);
         BlockPos best = null;
         double bd = Double.MAX_VALUE;
-        for (WreckPlan.Marker mk : plan.markers("dock")) {
+        for (WreckPlan.Marker mk : w.markers("dock")) {
             BlockPos p = w.origin.offset(mk.pos());
             double d = p.distToCenterSqr(from);
             if (d < bd) { bd = d; best = p; }

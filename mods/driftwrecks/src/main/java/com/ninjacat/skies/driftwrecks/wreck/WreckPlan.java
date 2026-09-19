@@ -45,6 +45,18 @@ public final class WreckPlan {
         minX = x0; minY = y0; minZ = z0; maxX = x1; maxY = y1; maxZ = z1;
     }
 
+    private double radius = -1;
+
+    /** Horizontal reach of the plan's blocks from its origin (module footprint). */
+    public double radius() {
+        if (radius < 0) {
+            double r = 0;
+            for (int i = 0; i < plan.size(); i++) r = Math.max(r, Math.hypot(plan.x(i), plan.z(i)));
+            radius = r;
+        }
+        return radius;
+    }
+
     public List<Marker> markers(String kind) {
         List<Marker> out = new ArrayList<>();
         for (Marker m : markers) if (m.kind.equals(kind)) out.add(m);

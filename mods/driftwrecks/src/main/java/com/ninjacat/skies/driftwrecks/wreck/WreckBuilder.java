@@ -28,28 +28,32 @@ import java.util.Set;
 public final class WreckBuilder {
     private WreckBuilder() {}
 
-    public static Map<BlockPos, BlockState> build(WreckPlan plan, Wreck w, RandomSource rng) {
+    public static Map<BlockPos, BlockState> build(WreckComposer.Layout layout, Wreck w, RandomSource rng) {
         Map<BlockPos, BlockState> out = new LinkedHashMap<>();
         Map<BlockPos, String> roles = new LinkedHashMap<>();
-        for (int i = 0; i < plan.plan.size(); i++) {
-            String key = plan.plan.keyOf(i);
-            BlockPos p = plan.plan.pos(i);
+        // bottom up, so the arrival builds from the keel
+        List<Map.Entry<BlockPos, String>> sorted = new java.util.ArrayList<>(layout.blocks.entrySet());
+        sorted.sort(java.util.Comparator.comparingInt((Map.Entry<BlockPos, String> e) -> e.getKey().getY()));
+        for (Map.Entry<BlockPos, String> e : sorted) {
+            String key = e.getValue();
+            BlockPos p = e.getKey();
+            if (key.equals("x_air")) continue;
             if (key.startsWith("h_")) {
                 if (w.hiddenRoom) {
                     String inner = key.substring(2);
-                    if (inner.equals("air")) continue;
+                    if (inner.equals("air") || inner.equals("x_air")) continue;
                     key = inner;
                 } else {
-                    key = plan.fill;
+                    key = layout.fill;
                 }
             }
             out.put(p, StrandSkin.resolve(w.skin, key));
             roles.put(p, key);
         }
         Set<BlockPos> reserved = new HashSet<>();
-        for (WreckPlan.Marker m : plan.markers) reserved.add(m.pos());
+        for (WreckPlan.Marker m : layout.markers) reserved.add(m.pos());
         dress(out, roles, reserved, w, rng);
-        furnish(out, plan, w, rng);
+        furnish(out, layout.markers, w, rng);
         return out;
     }
 
@@ -111,9 +115,9 @@ public final class WreckBuilder {
     }
 
     // ------------------------------------------------------------------ furniture
-    private static void furnish(Map<BlockPos, BlockState> out, WreckPlan plan, Wreck w, RandomSource rng) {
+    private static void furnish(Map<BlockPos, BlockState> out, List<WreckPlan.Marker> markers, Wreck w, RandomSource rng) {
         boolean spawners = w.objective == WreckObjective.CLEAR || w.tier != WreckTier.RAFT;
-        for (WreckPlan.Marker m : plan.markers) {
+        for (WreckPlan.Marker m : markers) {
             BlockPos p = m.pos();
             switch (m.kind()) {
                 case "chest" -> {
@@ -135,9 +139,6 @@ public final class WreckBuilder {
             }
         }
     }
-
-    /** Marker positions of one kind, relative. */
-    public static List<WreckPlan.Marker> markers(WreckPlan plan, String kind) { return plan.markers(kind); }
 
     /** Chest facing helper for tests. */
     static boolean isChest(BlockState s) { return s.getBlock() instanceof ChestBlock || s.is(DwBlocks.WRECK_CHEST.get()); }

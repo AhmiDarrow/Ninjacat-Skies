@@ -75,27 +75,71 @@ public class DriftwreckGameTests {
 
     // ------------------------------------------------------------------ plans
 
-    @GameTest(template = "empty")
-    public static void plansLoadAndSkinsResolve(GameTestHelper h) {
+    @GameTest(template = "empty", timeoutTicks = 1200)
+    public static void wrecksAreComposedFromParts(GameTestHelper h) {
         var server = h.getLevel().getServer();
+        java.util.Set<String> distinct = new java.util.HashSet<>();
+        java.util.Set<Integer> shapes = new java.util.HashSet<>();
+        int composed = 0;
+        java.nio.file.Path previews = java.nio.file.Path.of("previews");
         for (WreckCore c : WreckCore.ALL) for (WreckTier t : WreckTier.ALL) {
-            WreckPlan p = WreckPlan.get(server, WreckPlan.planId(c, t));
-            int w = p.maxX - p.minX + 1, d = p.maxZ - p.minZ + 1, hgt = p.maxY - p.minY + 1;
-            if (w > t.maxSize || d > t.maxSize) h.fail(p.id + " footprint " + w + "x" + d);
-            if (p.plan.size() < 200) h.fail(p.id + " too few blocks");
-            for (String need : new String[]{"chest", "idol", "pillar", "spawner", "dock", "echo", "center", "mob"})
-                if (p.markers(need).isEmpty()) h.fail(p.id + " has no " + need + " marker");
-            if (t == WreckTier.HOLD && p.markers("rift").isEmpty()) h.fail(p.id + " has no rift");
-            if (hgt > 40) h.fail(p.id + " too tall");
-            for (String key : p.plan.keys) for (Strand s : Strand.ALL) {
-                String k = key.startsWith("h_") ? key.substring(2) : key;
-                if (k.equals("air")) continue;
-                if (StrandSkin.resolve(s, k).isAir()) h.fail(p.id + " key " + key + " resolves to air in " + s.id());
+            for (int v = 0; v < WreckComposer.VARIANTS; v++) {
+                WreckPlan core = WreckPlan.get(server, WreckComposer.corePlan(c, t, v));
+                for (String key : core.plan.keys) for (Strand s : Strand.ALL) {
+                    String k = key.startsWith("h_") ? key.substring(2) : key;
+                    if (k.equals("air") || k.equals("x_air")) continue;
+                    if (StrandSkin.resolve(s, k).isAir()) h.fail(core.id + " key " + key + " resolves to air in " + s.id());
+                }
+            }
+            for (int i = 0; i < 40; i++) {
+                long seed = c.ordinal() * 100_003L + t.ordinal() * 7919L + i * 31L;
+                WreckComposer.Layout l = WreckComposer.compose(server, c, t, seed);
+                composed++;
+                int w = l.maxX - l.minX + 1, d = l.maxZ - l.minZ + 1, hgt = l.maxY - l.minY + 1;
+                String id = c.id + "_" + t.id + "#" + i + " (" + l.description + ")";
+                if (w > t.maxSize || d > t.maxSize) { h.fail(id + " footprint " + w + "x" + d + " > " + t.maxSize); return; }
+                if (hgt > 40) { h.fail(id + " too tall: " + hgt); return; }
+                if (l.markers("chest").stream().filter(m -> m.data() == 1).count() != 1) { h.fail(id + " needs exactly one heart chest"); return; }
+                for (String need : new String[]{"idol", "spawner", "echo", "center", "mob"})
+                    if (l.markers(need).isEmpty()) { h.fail(id + " has no " + need); return; }
+                if (l.markers("pillar").size() < 3) { h.fail(id + " has " + l.markers("pillar").size() + " pillars"); return; }
+                if (l.markers("dock").size() < 2) { h.fail(id + " has " + l.markers("dock").size() + " docks"); return; }
+                if (t == WreckTier.HOLD && l.markers("rift").isEmpty()) { h.fail(id + " has no rift"); return; }
+                distinct.add(l.description + "|" + l.blocks.size());
+                shapes.add(l.description.hashCode() & 7);
+                if (i < 2) writePreview(previews.resolve(c.id + "_" + t.id + "_" + i + ".ncga"), l);
             }
         }
-        WreckPlan heart = WreckPlan.get(server, "heartwreck");
+        // 720 composed; nearly all should differ (a Raft with no annex can repeat on the same variant and shape)
+        if (distinct.size() < composed * 0.85) h.fail("only " + distinct.size() + " distinct of " + composed + " composed wrecks");
+        else h.succeed();
+    }
+
+    /** Dump a composed layout as NCGA so tools/wreck_factory.py --render-dir can draw it. */
+    private static void writePreview(java.nio.file.Path path, WreckComposer.Layout l) {
+        try {
+            java.nio.file.Files.createDirectories(path.getParent());
+            java.util.List<String> keys = new java.util.ArrayList<>(new java.util.TreeSet<>(l.blocks.values()));
+            java.nio.ByteBuffer b = java.nio.ByteBuffer.allocate(64 + keys.size() * 64 + l.blocks.size() * 7 + l.markers.size() * 40).order(java.nio.ByteOrder.LITTLE_ENDIAN);
+            b.putInt(0x4147434E).putInt(1).putShort((short) keys.size());
+            for (String k : keys) { byte[] s = k.getBytes(java.nio.charset.StandardCharsets.UTF_8); b.putShort((short) s.length).put(s); }
+            b.putInt(l.blocks.size());
+            for (var e : l.blocks.entrySet()) b.putShort((short) e.getKey().getX()).putShort((short) e.getKey().getY()).putShort((short) e.getKey().getZ()).put((byte) keys.indexOf(e.getValue()));
+            byte[] f = l.fill.getBytes(java.nio.charset.StandardCharsets.UTF_8);
+            b.putShort((short) f.length).put(f).putShort((short) l.markers.size());
+            for (WreckPlan.Marker m : l.markers) {
+                byte[] k = m.kind().getBytes(java.nio.charset.StandardCharsets.UTF_8);
+                b.putShort((short) k.length).put(k).putShort((short) m.pos().getX()).putShort((short) m.pos().getY()).putShort((short) m.pos().getZ()).put((byte) m.data());
+            }
+            java.nio.file.Files.write(path, java.util.Arrays.copyOf(b.array(), b.position()));
+        } catch (java.io.IOException e) { throw new RuntimeException(e); }
+    }
+
+    @GameTest(template = "empty")
+    public static void heartwreckPlanLoads(GameTestHelper h) {
+        WreckPlan heart = WreckPlan.get(h.getLevel().getServer(), "heartwreck");
         if (heart.markers("district").size() != 9) h.fail("heartwreck needs nine districts");
-        h.succeed();
+        else h.succeed();
     }
 
     // ------------------------------------------------------------------ build and unravel
@@ -140,9 +184,8 @@ public class DriftwreckGameTests {
         Wreck w = summon(h, a, WreckCore.VAULT, WreckTier.RUIN, WreckObjective.CLEAR, WreckModifier.UNMARKED);
         ServerLevel level = h.getLevel();
         waitPhase(h, w, Wreck.Phase.ACTIVE, 0, active -> {
-            WreckPlan plan = WreckPlan.get(level.getServer(), active.planId);
             WreckChestBlockEntity chest = null;
-            for (WreckPlan.Marker m : plan.markers("chest"))
+            for (WreckPlan.Marker m : active.markers("chest"))
                 if (level.getBlockEntity(active.origin.offset(m.pos())) instanceof WreckChestBlockEntity be) { chest = be; break; }
             if (chest == null) { h.fail("no wreck chest placed"); return; }
             chest.open(a);
@@ -164,8 +207,7 @@ public class DriftwreckGameTests {
         Wreck w = summon(h, p, WreckCore.LIBRARY, WreckTier.RAFT, WreckObjective.SALVAGE, WreckModifier.OVERGROWN);
         ServerLevel level = h.getLevel();
         waitPhase(h, w, Wreck.Phase.ACTIVE, 0, active -> {
-            WreckPlan plan = WreckPlan.get(level.getServer(), active.planId);
-            for (WreckPlan.Marker m : plan.markers("chest"))
+            for (WreckPlan.Marker m : active.markers("chest"))
                 if (m.data() == 1 && level.getBlockEntity(active.origin.offset(m.pos())) instanceof WreckChestBlockEntity be) be.open(p);
             if (!active.objectiveDone && !active.pendingComplete) h.fail("opening the heart chest did not finish Salvage");
             else { DriftManager.get(level.getServer()).forget(active.id); h.succeed(); }
@@ -201,8 +243,7 @@ public class DriftwreckGameTests {
         ServerLevel level = h.getLevel();
         waitPhase(h, w, Wreck.Phase.ACTIVE, 0, active -> {
             if (active.spawnersLeft < 1) { h.fail("Clear placed no spawners"); return; }
-            WreckPlan plan = WreckPlan.get(level.getServer(), active.planId);
-            for (WreckPlan.Marker mk : plan.markers("spawner")) {
+            for (WreckPlan.Marker mk : active.markers("spawner")) {
                 BlockPos sp = active.origin.offset(mk.pos());
                 if (level.getBlockState(sp).is(DwBlocks.FRAYED_SPAWNER.get())) level.destroyBlock(sp, false);
             }

@@ -64,12 +64,23 @@ public final class Wreck {
     public int holdWave;            // 0 not started, 1..3 running, 4 held
     public int holdTicks;
     public boolean riftOpened;
+    /** Where the composed layout put its chests, pillars, docks... (saved: the layout itself is not). */
+    public final List<WreckPlan.Marker> markers = new ArrayList<>();
+    public String fill = "wall";
+    public long seed;
+    public String layout = "";
     public long lastPenalty;        // game time of the last mob a wrong pillar cost (transient)
 
     public Wreck(int id, UUID team, String planId, @Nullable WreckCore core, WreckTier tier, Strand skin, WreckModifier modifier,
                  WreckObjective objective, boolean heartwreck, BlockPos origin, boolean hiddenRoom) {
         this.id = id; this.team = team; this.planId = planId; this.core = core; this.tier = tier; this.skin = skin;
         this.modifier = modifier; this.objective = objective; this.heartwreck = heartwreck; this.origin = origin; this.hiddenRoom = hiddenRoom;
+    }
+
+    public List<WreckPlan.Marker> markers(String kind) {
+        List<WreckPlan.Marker> out = new ArrayList<>();
+        for (WreckPlan.Marker m : markers) if (m.kind().equals(kind)) out.add(m);
+        return out;
     }
 
     public AABB box() { return new AABB(minX, minY, minZ, maxX + 1, maxY + 1, maxZ + 1); }
@@ -113,6 +124,13 @@ public final class Wreck {
         t.putIntArray("pillars", pillarOrder); t.putInt("pillarStep", pillarStep); t.putInt("spawners", spawnersLeft);
         if (echo != null) t.putUUID("echo", echo);
         t.putInt("holdWave", holdWave); t.putInt("holdTicks", holdTicks); t.putBoolean("rift", riftOpened);
+        ListTag mk = new ListTag();
+        for (WreckPlan.Marker m : markers) {
+            CompoundTag c = new CompoundTag();
+            c.putString("k", m.kind()); c.putLong("p", m.pos().asLong()); c.putInt("d", m.data());
+            mk.add(c);
+        }
+        t.put("markers", mk); t.putString("fill", fill); t.putLong("seed", seed); t.putString("layout", layout);
         return t;
     }
 
@@ -141,6 +159,12 @@ public final class Wreck {
         w.pillarOrder = t.getIntArray("pillars"); w.pillarStep = t.getInt("pillarStep"); w.spawnersLeft = t.getInt("spawners");
         if (t.hasUUID("echo")) w.echo = t.getUUID("echo");
         w.holdWave = t.getInt("holdWave"); w.holdTicks = t.getInt("holdTicks"); w.riftOpened = t.getBoolean("rift");
+        for (Tag x : t.getList("markers", Tag.TAG_COMPOUND)) {
+            CompoundTag c = (CompoundTag) x;
+            w.markers.add(new WreckPlan.Marker(c.getString("k"), BlockPos.of(c.getLong("p")), c.getInt("d")));
+        }
+        if (t.contains("fill")) w.fill = t.getString("fill");
+        w.seed = t.getLong("seed"); w.layout = t.getString("layout");
         return w;
     }
 }

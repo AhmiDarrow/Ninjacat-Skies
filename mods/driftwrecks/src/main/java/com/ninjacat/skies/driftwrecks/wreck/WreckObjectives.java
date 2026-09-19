@@ -137,8 +137,7 @@ public final class WreckObjectives {
 
     private static void tickHold(DriftManager m, ServerLevel level, Wreck w, Clowder c) {
         MinecraftServer server = level.getServer();
-        WreckPlan plan = WreckPlan.get(server, w.planId);
-        List<WreckPlan.Marker> centers = plan.markers("center");
+        List<WreckPlan.Marker> centers = w.markers("center");
         BlockPos center = centers.isEmpty() ? w.center() : w.origin.offset(centers.get(0).pos());
         boolean someone = false;
         for (ServerPlayer p : c.onlineMembers()) if (!p.isSpectator() && p.level() == level && p.blockPosition().closerThan(center, 12)) someone = true;

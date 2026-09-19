@@ -40,10 +40,17 @@ class Plan:
         self.markers: list[tuple[str, int, int, int, int]] = []
         self.reserved: set[tuple[int, int, int]] = set()
         self.fill = "wall"
+        # module mode: structure only. The Java composer supplies keel, deck, seam and the spread markers; air carved
+        # at or below the deck is recorded as "x_air" so it cuts through the composer's rock.
+        self.module = False
+        self.variant = 0
 
     # ---------------------------------------------------------------- primitives
     def set(self, x, y, z, key):
         if key is None or key == "air":
+            if self.module and key == "air" and y <= 0:
+                self.v[(x, y, z)] = "x_air"
+                return
             self.v.pop((x, y, z), None)
         else:
             self.v[(x, y, z)] = key
@@ -96,6 +103,8 @@ class Plan:
     # ---------------------------------------------------------------- shared DNA
     def keel(self, r: int, depth: int, cx=0, cz=0, y_top=-1):
         """An irregular rock keel under a deck: tapering, lumpy, with a soil skin on top."""
+        if self.module:
+            return
         rng = self.rng
         lumps = [(rng.uniform(0, math.tau), rng.uniform(0.6, 1.25)) for _ in range(7)]
         for d in range(depth):
@@ -117,6 +126,8 @@ class Plan:
 
     def seam(self, r: int, depth: int):
         """The frayed seam where the piece was cut loose: a glowing jagged crack down one side of the keel."""
+        if self.module:
+            return
         rng = self.rng
         a = rng.uniform(0, math.tau)
         for d in range(0, depth):
@@ -136,6 +147,8 @@ class Plan:
                 self.set(x, -d, z, "mc:cyan_wool" if i % 2 else "mc:yellow_wool")
 
     def deck(self, r: int, y=0, key="floor", cx=0, cz=0):
+        if self.module:
+            return
         self.disc(cx, y, cz, r, key)
 
     def erode(self, prob: float, top_only_above=1):
@@ -205,6 +218,10 @@ class Plan:
             self.mark("chest", *hidden_chest, 2)
         if rift:
             self.mark("rift", *rift, 0)
+        if self.module:
+            if center:
+                self.mark("center", *center, 0)
+            return
         cells = self.free_cells()
         self.spread("pillar", PILLARS[t], cells, data_fn=lambda i: i, min_gap=4)
         self.spread("chest", CHESTS[t] - 1, cells, min_gap=4)
@@ -273,15 +290,16 @@ class Plan:
 
 # ==================================================================== cores
 
-def shrine(t: int, seed: int) -> Plan:
+def shrine(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p = Plan(f"shrine_{['', 'raft', 'ruin', 'hold'][t]}", t, seed)
+    p.module, p.variant = module, v
     R = {1: 6, 2: 13, 3: 18}[t]
     depth = {1: 5, 2: 9, 3: 12}[t]
     p.keel(R, depth); p.deck(R)
     p.ring(0, 0, 0, R, "trim")
-    ring_r = {1: 4, 2: 9, 3: 12}[t]
-    n = {1: 6, 2: 10, 3: 12}[t]
-    h = {1: 3, 2: 5, 3: 7}[t]
+    ring_r = {1: 4, 2: 9, 3: 12}[t] - (p.variant % 2)
+    n = {1: (6, 5, 8), 2: (10, 8, 12), 3: (12, 10, 14)}[t][p.variant % 3]
+    h = {1: 3, 2: 5, 3: 7}[t] + (1 if p.variant == 2 else 0) - (1 if t == 1 and p.variant == 2 else 0)
     for i in range(n):
         a = i / n * math.tau
         x, z = round(math.cos(a) * ring_r), round(math.sin(a) * ring_r)
@@ -346,13 +364,14 @@ def shrine(t: int, seed: int) -> Plan:
     return p
 
 
-def watchtower(t: int, seed: int) -> Plan:
+def watchtower(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p = Plan(f"watchtower_{['', 'raft', 'ruin', 'hold'][t]}", t, seed)
+    p.module, p.variant = module, v
     R = {1: 6, 2: 12, 3: 18}[t]
     depth = {1: 3, 2: 5, 3: 9}[t]
     p.keel(R, depth); p.deck(R)
-    tr = {1: 3, 2: 5, 3: 7}[t]           # tower half-width
-    floors = {1: 2, 2: 3, 3: 4}[t]
+    tr = {1: 3, 2: 5, 3: 7}[t] - (1 if p.variant == 1 and t > 1 else 0)   # tower half-width
+    floors = {1: 2, 2: 3, 3: 4}[t] - (1 if p.variant == 2 and t > 1 else 0)
     fh = {1: 3, 2: 4, 3: 5}[t]
     top_y = floors * fh
     # the spire: square hollow shaft with floors, windows, a spiral stair with gaps
@@ -427,13 +446,18 @@ def watchtower(t: int, seed: int) -> Plan:
     return p
 
 
-def library(t: int, seed: int) -> Plan:
+def library(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p = Plan(f"library_{['', 'raft', 'ruin', 'hold'][t]}", t, seed)
+    p.module, p.variant = module, v
     R = {1: 6, 2: 13, 3: 20}[t]
     depth = {1: 4, 2: 7, 3: 10}[t]
     p.keel(R, depth)
     hw = {1: 3, 2: 9, 3: 13}[t]
     hd = {1: 5, 2: 12, 3: 16}[t]
+    if p.variant == 1:
+        hw, hd = hd - 1, hw + 1          # a wide reading room instead of a long hall
+    elif p.variant == 2 and t > 1:
+        hd -= 3
     H = {1: 4, 2: 7, 3: 7}[t]
     p.box(-hw - 1, 0, -hd - 1, hw + 1, 0, hd + 1, "floor")
     p.walls(-hw, 1, -hd, hw, H, hd, "wall")
@@ -493,13 +517,14 @@ def library(t: int, seed: int) -> Plan:
     return p
 
 
-def forge(t: int, seed: int) -> Plan:
+def forge(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p = Plan(f"forge_{['', 'raft', 'ruin', 'hold'][t]}", t, seed)
+    p.module, p.variant = module, v
     R = {1: 7, 2: 14, 3: 20}[t]
     depth = {1: 4, 2: 7, 3: 10}[t]
     p.keel(R, depth); p.deck(R)
-    w = {1: 4, 2: 8, 3: 11}[t]
-    H = {1: 4, 2: 6, 3: 7}[t]
+    w = {1: 4, 2: 8, 3: 11}[t] - (1 if p.variant == 1 else 0)
+    H = {1: 4, 2: 6, 3: 7}[t] + (1 if p.variant == 2 and t > 1 else 0)
     # open workshop: back wall + side half-walls + beams carrying a roof
     p.box(-w, 1, -w, w, H, -w, "wall")
     p.box(-w, 1, -w, -w, 2, w, "wall2"); p.box(w, 1, -w, w, 2, w, "wall2")
@@ -547,13 +572,14 @@ def forge(t: int, seed: int) -> Plan:
     return p
 
 
-def garden(t: int, seed: int) -> Plan:
+def garden(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p = Plan(f"garden_{['', 'raft', 'ruin', 'hold'][t]}", t, seed)
+    p.module, p.variant = module, v
     R = {1: 7, 2: 14, 3: 22}[t]
     depth = {1: 4, 2: 6, 3: 9}[t]
     p.keel(R, depth); p.deck(R, key="soil")
     # terraces stepping down from the centre
-    levels = {1: 2, 2: 3, 3: 4}[t]
+    levels = {1: 2, 2: 3, 3: 4}[t] - (1 if p.variant == 1 and t > 1 else 0)
     for lv in range(levels):
         rr = R - 2 - lv * (R // (levels + 1))
         p.disc(0, lv + 1, 0, rr, "soil")
@@ -605,13 +631,14 @@ def garden(t: int, seed: int) -> Plan:
     return p
 
 
-def vault(t: int, seed: int) -> Plan:
+def vault(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
     p = Plan(f"vault_{['', 'raft', 'ruin', 'hold'][t]}", t, seed)
+    p.module, p.variant = module, v
     R = {1: 7, 2: 14, 3: 21}[t]
     depth = {1: 4, 2: 7, 3: 10}[t]
     p.keel(R, depth); p.deck(R)
-    s = {1: 3, 2: 6, 3: 8}[t]
-    H = {1: 4, 2: 6, 3: 8}[t]
+    s = {1: 3, 2: 6, 3: 8}[t] - (1 if p.variant == 1 and t > 1 else 0)
+    H = {1: 4, 2: 6, 3: 8}[t] + (1 if p.variant == 2 else 0) - (1 if p.variant == 1 else 0)
     p.fill = "trim"
     # sealed stone box, one door with a thread lock
     p.hollow(-s, 0, -s, s, H + 1, s, "trim")
@@ -720,6 +747,244 @@ def heartwreck(seed: int) -> Plan:
     return p
 
 
+
+
+# ==================================================================== annexes (shared, placed by the composer)
+#
+# Small ruins the Java composer (WreckComposer) scatters around a wreck's core, rotated in 90° steps. y 0 is deck
+# level (an annex may lay its own floor there), everything else stands on it. Radius <= 4, height <= 7.
+
+def annex(name, seed):
+    p = Plan(name, 0, seed)
+    p.module = True
+    return p
+
+
+def a_ruined_wall(seed):
+    p = annex("ruined_wall", seed)
+    for x in range(-3, 4):
+        h = 1 + int(3 * (1 - abs(x) / 4) + p.rng.random() * 1.5)
+        p.column(x, 1, 0, h, "wall" if (x + h) % 3 else "wall2")
+    p.set(-1, 2, 0, "glass"); p.set(-1, 1, 1, "slab"); p.set(2, 1, -1, "keel2")
+    p.mark("mob", 0, 1, 2)
+    return p
+
+
+def a_broken_arch(seed):
+    p = annex("broken_arch", seed)
+    for x in (-2, 2):
+        p.column(x, 1, 0, 4, "trim")
+    p.box(-2, 5, 0, 0, 5, 0, "trim"); p.set(1, 5, 0, "slab")        # the right half of the lintel fell
+    p.set(1, 1, 1, "trim"); p.set(2, 1, 2, "slab")
+    p.set(-2, 6, 0, "seam")
+    return p
+
+
+def a_watch_post(seed):
+    p = annex("watch_post", seed)
+    for x, z in ((-1, -1), (1, -1), (-1, 1), (1, 1)):
+        p.column(x, 1, z, 4, "beam")
+    p.box(-1, 5, -1, 1, 5, 1, "floor")
+    p.set(0, 6, 0, "light")
+    for y in range(1, 5):
+        p.set(0, y, -2, "mc:ladder[facing=north]") if False else None
+    p.set(0, 1, 0, "mc:barrel[facing=up]")
+    p.mark("chest", 0, 6, 1, 0)
+    return p
+
+
+def a_shed(seed):
+    p = annex("shed", seed)
+    p.box(-2, 0, -2, 2, 0, 2, "floor")
+    p.walls(-2, 1, -2, 2, 3, 2, "wall2")
+    p.box(-1, 1, 2, 0, 2, 2, "air")
+    for x in range(-3, 4):
+        p.set(x, 4, -1, "roof"); p.set(x, 4, 0, "roof") if x % 3 else None; p.set(x, 4, 1, "roof")
+    p.mark("chest", 1, 1, -1, 0)
+    return p
+
+
+def a_well(seed):
+    p = annex("well", seed)
+    p.ring(0, 1, 0, 2, "trim")
+    p.box(-1, 0, -1, 1, -2, 1, "x_air")
+    p.set(0, -2, 0, "mc:water")
+    for x in (-2, 2):
+        p.column(x, 2, 0, 2, "fence")
+    p.box(-2, 4, 0, 2, 4, 0, "beam"); p.set(0, 3, 0, "mc:chain")
+    return p
+
+
+def a_statue(seed):
+    p = annex("statue", seed)
+    p.box(-1, 1, -1, 1, 1, 1, "trim")
+    p.column(0, 2, 0, 3, "accent"); p.set(0, 5, 0, "light")
+    p.set(1, 3, 0, "accent"); p.set(-1, 4, 0, "slab")                    # one arm raised, the other gone
+    p.mark("mob", 2, 1, 1)
+    return p
+
+
+def a_garden_bed(seed):
+    p = annex("garden_bed", seed)
+    p.walls(-2, 1, -2, 2, 1, 2, "trim")
+    p.box(-1, 1, -1, 1, 1, 1, "soil")
+    for x in (-1, 1):
+        for z in (-1, 1):
+            p.set(x, 2, z, p.rng.choice(["growth", "mc:potted_fern", "mc:sweet_berry_bush[age=2]"]))
+    p.set(0, 2, 0, "mc:composter")
+    return p
+
+
+def a_stair_ruin(seed):
+    p = annex("stair_ruin", seed)
+    for i in range(5):
+        p.box(-1, 1, i - 2, 1, 1 + i, i - 2, "wall")
+        p.set(-1 + (i % 2), 2 + i, i - 2, "stair_s")
+    p.set(1, 6, 2, "light")
+    p.mark("chest", 0, 2, -2, 0) if False else None
+    return p
+
+
+def a_tower_stump(seed):
+    p = annex("tower_stump", seed)
+    p.ring(0, 1, 0, 3, "wall")
+    for y in range(2, 6):
+        for x in range(-3, 4):
+            for z in range(-3, 4):
+                d = (x * x + z * z) ** 0.5
+                if 2.2 < d <= 3.3 and p.rng.random() < 0.9 - y * 0.15:
+                    p.set(x, y, z, "wall" if y % 2 else "wall2")
+    p.box(-1, 1, 3, 1, 3, 3, "air")
+    p.box(-2, 0, -2, 2, 0, 2, "floor")
+    p.mark("chest", 0, 1, -1, 0)
+    return p
+
+
+def a_column_field(seed):
+    p = annex("column_field", seed)
+    for x, z in ((-3, -3), (3, -3), (-3, 3), (3, 3), (0, 0)):
+        h = p.rng.randint(1, 5)
+        p.column(x, 1, z, h, "beam", "trim" if h > 3 else None)
+    p.set(1, 1, -2, "slab"); p.set(-2, 1, 1, "slab")
+    p.mark("mob", 1, 1, 2)
+    return p
+
+
+def a_market_stall(seed):
+    p = annex("market_stall", seed)
+    for x, z in ((-2, -1), (2, -1), (-2, 1), (2, 1)):
+        p.column(x, 1, z, 3, "fence")
+    for x in range(-3, 4):
+        for z in (-2, -1, 0, 1, 2):
+            if p.rng.random() < 0.8:
+                p.set(x, 4, z, "mc:cyan_wool" if (x + z) % 2 else "mc:white_wool")
+    p.box(-1, 1, 0, 1, 1, 0, "mc:barrel[facing=up]")
+    p.mark("chest", 0, 1, -1, 0)
+    return p
+
+
+def a_gazebo(seed):
+    p = annex("gazebo", seed)
+    p.disc(0, 0, 0, 3, "floor")
+    for k in range(6):
+        import math as _m
+        a = k / 6 * _m.tau
+        p.column(round(_m.cos(a) * 3), 1, round(_m.sin(a) * 3), 3, "fence")
+    p.disc(0, 4, 0, 3, "slab"); p.disc(0, 5, 0, 1, "roof")
+    p.set(0, 1, 0, "mc:lectern[facing=south]") if False else p.set(0, 1, 0, "accent")
+    return p
+
+
+def a_obelisk(seed):
+    p = annex("obelisk", seed)
+    p.box(-1, 1, -1, 1, 1, 1, "trim")
+    p.column(0, 2, 0, 5, "wall")
+    for y in (3, 5):
+        p.set(0, y, -1, "seam" if y == 3 else "seam2")
+    p.set(0, 7, 0, "light")
+    return p
+
+
+def a_lantern_row(seed):
+    p = annex("lantern_row", seed)
+    for x in range(-4, 5, 2):
+        h = 2 + (x // 2) % 2
+        if p.rng.random() < 0.8:
+            p.column(x, 1, 0, h, "fence", "light")
+    p.mark("mob", 0, 1, 2)
+    return p
+
+
+def a_fallen_bell(seed):
+    p = annex("fallen_bell", seed)
+    p.box(-2, 1, -1, 2, 1, -1, "beam"); p.box(-2, 1, 1, 2, 1, 1, "beam")
+    p.set(0, 1, 0, "mc:bell[attachment=floor,facing=north]")
+    p.column(-3, 1, 0, 2, "beam"); p.set(3, 1, 0, "slab")
+    return p
+
+
+def a_cistern(seed):
+    p = annex("cistern", seed)
+    p.box(-2, 0, -2, 2, -2, 2, "x_air")
+    p.walls(-3, -2, -3, 3, 1, 3, "wall")
+    p.box(-2, -2, -2, 2, -2, 2, "floor")
+    p.box(-1, -1, -1, 1, -1, 1, "mc:water")
+    p.box(-1, 1, 3, 1, 1, 3, "air")
+    p.mark("chest", 2, -1, 2, 0)
+    return p
+
+
+def a_kiln(seed):
+    p = annex("kiln", seed)
+    p.hollow(-2, 1, -2, 2, 4, 2, "metal")
+    p.box(-1, 1, 2, 1, 2, 2, "air")
+    p.set(0, 1, 0, "mc:campfire[lit=false]"); p.column(0, 5, 0, 2, "metal")
+    p.mark("mob", 3, 1, 0)
+    return p
+
+
+def a_loom_ruin(seed):
+    p = annex("loom_ruin", seed)
+    for x in (-2, 2):
+        p.column(x, 1, 0, 4, "beam")
+    p.box(-2, 4, 0, 2, 4, 0, "beam")
+    for x in range(-1, 2):
+        p.column(x, 1, 0, 3, "mc:cyan_wool" if x % 2 else "mc:yellow_wool") if p.rng.random() < 0.7 else None
+    p.set(0, 1, 1, "mc:loom[facing=south]")
+    p.mark("chest", -1, 1, 1, 0)
+    return p
+
+
+ANNEXES = [a_ruined_wall, a_broken_arch, a_watch_post, a_shed, a_well, a_statue, a_garden_bed, a_stair_ruin, a_tower_stump,
+           a_column_field, a_market_stall, a_gazebo, a_obelisk, a_lantern_row, a_fallen_bell, a_cistern, a_kiln, a_loom_ruin]
+VARIANTS = 3
+
+
+def read_ncga(path: Path) -> Plan:
+    """Read an NCGA plan back (composed previews exported by the game tests)."""
+    b = path.read_bytes()
+    o = 0
+    def u(fmt):
+        nonlocal o
+        v = struct.unpack_from(fmt, b, o); o += struct.calcsize(fmt); return v
+    magic, ver, nk = u("<IIH")
+    keys = []
+    for _ in range(nk):
+        (n,) = u("<H"); keys.append(b[o:o + n].decode()); o += n
+    (n,) = u("<I")
+    p = Plan(path.stem, 9, 0)
+    for _ in range(n):
+        x, y, z, k = u("<hhhB")
+        p.v[(x, y, z)] = keys[k]
+    (n,) = u("<H"); p.fill = b[o:o + n].decode(); o += n
+    (m,) = u("<H")
+    for _ in range(m):
+        (n,) = u("<H"); kind = b[o:o + n].decode(); o += n
+        x, y, z, d = u("<hhhB")
+        p.markers.append((kind, x, y, z, d))
+    return p
+
+
 # ==================================================================== render
 
 ROLE_RGB = {
@@ -731,6 +996,8 @@ ROLE_RGB = {
 
 
 def rgb(key: str):
+    if key == "x_air":
+        return None
     if key.startswith("h_"):
         return (200, 60, 200)
     if key.startswith("mc:"):
@@ -757,6 +1024,8 @@ def render(plan: Plan, path: Path, scale=6):
     img = Image.new("RGB", (W, H), (22, 26, 34)); d = ImageDraw.Draw(img)
     for (x, y, z), k in sorted(pts, key=lambda kv: (kv[0][0] + kv[0][2], kv[0][1])):
         c = rgb(k)
+        if c is None:
+            continue
         def P(a, b, cc):
             X, Y = iso(a, b, cc); return (X - minx, Y - miny)
         top = [P(x, y + 1, z), P(x + 1, y + 1, z), P(x + 1, y + 1, z + 1), P(x, y + 1, z + 1)]
@@ -779,17 +1048,50 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--render", default="")
     ap.add_argument("--out", default=str(OUT))
+    ap.add_argument("--render-dir", default="", help="render every .ncga in this folder (composed previews) to a contact sheet")
     a = ap.parse_args()
+    if a.render_dir:
+        rd = Path(a.render_dir)
+        from PIL import Image
+        imgs = [render(read_ncga(f), f.with_suffix(".png"), scale=4) for f in sorted(rd.glob("*.ncga"))]
+        thumbs = []
+        for im in imgs:
+            im = im.copy(); im.thumbnail((300, 300)); thumbs.append(im)
+        cols = 6; rows = (len(thumbs) + cols - 1) // cols
+        sheet = Image.new("RGB", (cols * 300, rows * 300), (14, 16, 22))
+        for i, im in enumerate(thumbs):
+            sheet.paste(im, ((i % cols) * 300 + (300 - im.width) // 2, (i // cols) * 300 + (300 - im.height) // 2))
+        sheet.save(rd / "composed_sheet.png")
+        print("sheet ->", rd / "composed_sheet.png")
+        return
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     plans = []
+    for old in out.glob("*_*.ncga"):
+        if old.stem != "heartwreck":
+            old.unlink()                              # the fixed 18 plans are gone: wrecks are composed in game
+    (out / "core").mkdir(exist_ok=True); (out / "annex").mkdir(exist_ok=True)
     for ci, (name, fn) in enumerate(CORES.items()):
         for tname, t in TIERS.items():
-            plan = fn(t, seed=1000 + ci * 10 + t)
-            plan.name = f"{name}_{tname}"
-            w, h, d = plan.check()
-            plan.write(out / f"{plan.name}.ncga")
-            plans.append(plan)
-            print(f"{plan.name:18s} {w:3d}x{h:3d}x{d:3d}  blocks={len(plan.v):6d}  markers={len(plan.markers)}")
+            for v in range(VARIANTS):
+                plan = fn(t, seed=1000 + ci * 10 + t + v * 101, v=v, module=True)
+                plan.name = f"{name}_{tname}_{v}"
+                assert plan.v, plan.name
+                kinds = {m[0] for m in plan.markers}
+                assert {"chest", "idol"} <= kinds, (plan.name, kinds)
+                if t == 3:
+                    assert "rift" in kinds, plan.name
+                r = max((x * x + z * z) ** 0.5 for x, y, z in plan.v)
+                plan.write(out / "core" / f"{plan.name}.ncga")
+                plans.append(plan)
+                print(f"core  {plan.name:22s} r={r:4.1f} blocks={len(plan.v):6d} markers={len(plan.markers)}")
+    for i, fn in enumerate(ANNEXES):
+        plan = fn(7000 + i)
+        r = max((x * x + z * z) ** 0.5 for x, y, z in plan.v)
+        hgt = max(y for x, y, z in plan.v)
+        assert r <= 4.9 and hgt <= 7, (plan.name, r, hgt)
+        plan.write(out / "annex" / f"{plan.name}.ncga")
+        plans.append(plan)
+        print(f"annex {plan.name:22s} r={r:4.1f} h={hgt} blocks={len(plan.v):5d}")
     hw = heartwreck(4242)
     xs = [p[0] for p in hw.v]; ys = [p[1] for p in hw.v]
     hw.write(out / "heartwreck.ncga"); plans.append(hw)

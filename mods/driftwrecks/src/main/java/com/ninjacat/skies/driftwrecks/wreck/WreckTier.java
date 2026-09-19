@@ -4,9 +4,9 @@ import javax.annotation.Nullable;
 
 /** Tier comes from tensioned Strands, never item count or playtime. Lifetime counts Clowder online time only. */
 public enum WreckTier {
-    RAFT("raft", "Raft", 1, 20 * 60 * 20, 15),
-    RUIN("ruin", "Ruin", 4, 40 * 60 * 20, 31),
-    HOLD("hold", "Hold", 7, 60 * 60 * 20, 48);
+    RAFT("raft", "Raft", 1, 20 * 60 * 20, 19),
+    RUIN("ruin", "Ruin", 4, 40 * 60 * 20, 35),
+    HOLD("hold", "Hold", 7, 60 * 60 * 20, 53);
 
     public static final WreckTier[] ALL = values();
 
@@ -15,7 +15,7 @@ public enum WreckTier {
     /** Strands a Clowder must have tensioned before this tier can drift in. */
     public final int strandsNeeded;
     public final int lifetimeTicks;
-    /** Largest horizontal footprint of any plan at this tier. */
+    /** Largest horizontal footprint of a composed wreck at this tier (core, annexes and islets). */
     public final int maxSize;
 
     WreckTier(String id, String title, int strandsNeeded, int lifetimeTicks, int maxSize) {
