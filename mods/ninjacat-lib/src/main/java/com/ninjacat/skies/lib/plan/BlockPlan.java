@@ -57,6 +57,7 @@ public final class BlockPlan {
         for (int i = 0; i < n; i++) {
             xyz[i * 3] = b.getShort(); xyz[i * 3 + 1] = b.getShort(); xyz[i * 3 + 2] = b.getShort();
             key[i] = b.get();
+            if ((key[i] & 0xFF) >= nk) throw new IOException("bad palette index " + (key[i] & 0xFF) + " of " + nk);
         }
         return new BlockPlan(version, keys, xyz, key, b.slice().order(ByteOrder.LITTLE_ENDIAN));
     }
