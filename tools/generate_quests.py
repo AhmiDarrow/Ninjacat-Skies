@@ -252,7 +252,7 @@ FORCE_OPTIONAL = {"minecraft:recovery_compass", "minecraft:elytra", "minecraft:t
                   "minecraft:prismarine_shard", "minecraft:prismarine_crystals", "minecraft:prismarine",
                   "minecraft:dark_prismarine", "minecraft:ender_eye", "minecraft:dragon_breath",
                   "minecraft:dragon_egg", "minecraft:enchanted_golden_apple",
-                  "minecraft:nether_star", "minecraft:beacon"}
+                  "minecraft:nether_star", "minecraft:beacon", "minecraft:bell"}
 
 # Phrases that were design-doc voice. Exact-string swaps applied to every description line.
 VOICE_FIX = {
@@ -412,7 +412,7 @@ LORE = {
     "Hum: Bone Chime": ["Bone, string, amethyst. The first beat.", "It yields two — keep one for the Spirit Codex."],
     "Hum: Spirit Shard": ["A shard of old tribe song. Needs a Chime."],
     "Hum: Copper Resonator": ["Copper around a Chime: metal tuned to spirit."],
-    "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Chime, Shard, leather — the Pad-keepers at /clowder hub sell leather."],
+    "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Two Chimes, a Shard, two leather, four planks — the Pad-keepers at /clowder hub sell leather."],
     "Hum: Pulse Cell": ["Carry Pulse between drum and lattice."],
     "Hum: Ley Collector": ["Draw ambient ley into beats under open sky. Totem voices add; a Drumheart is not required."],
     "Hum: Pulse Resonator": ["Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony."],
@@ -2433,7 +2433,7 @@ def build_tribal_side() -> list[dict]:
         ("Spirit Shard", "tribalpower:spirit_shard", 2, "Shard of old tribe song — needs a Chime."),
         ("Copper Resonator", "tribalpower:copper_resonator", 1, "Tune metal to spirit — copper around a Chime."),
         ("Ritual Chalk", "tribalpower:ritual_chalk", 4, "Mark the lattice lines — chalk needs a Shard."),
-        ("Drumheart Beat", "tribalpower:drumheart", 1, "Place the heart — Chime + Shard + leather (the Pad-keepers sell leather)."),
+        ("Drumheart Beat", "tribalpower:drumheart", 1, "Place the heart — two Bone Chimes, a Spirit Shard, two leather and four planks (the Pad-keepers sell leather)."),
         ("Spirit Codex", "tribalpower:spirit_codex", 1, "Nine tribes hummed once — needs a spare Chime + Shard."),
         ("Ley Collector", "tribalpower:ley_collector", 1, "Draw ley into beats."),
         ("Pulse Cell", "tribalpower:pulse_cell", 4, "Carry Pulse for tools, spells and travel. Fill it at a Drumheart."),
@@ -2445,7 +2445,7 @@ def build_tribal_side() -> list[dict]:
         ("Spirit Totem", "tribalpower:resonance_totem_spirit", 1, "Fifth tribe — steward core."),
         ("Song Bench", "tribalpower:song_bench", 1, "Start the lattice song. It waits for stone or an Echo-stage item; raw metal is grit on Echo Shatter."),
         ("Lattice Conductor", "tribalpower:lattice_conductor", 2, "Route harmonics between totems."),
-        ("Echo Shatter", "tribalpower:echo_shatter", 1, "Hum stage one — break the ore. Stone becomes shards; cobble becomes gravel; raw metal becomes grit. Grit shatter is 4 seconds at 20 Pulse/s."),
+        ("Echo Shatter", "tribalpower:echo_shatter", 1, "Hum stage one — break the ore. Stone becomes shards; cobble becomes gravel; raw metal becomes grit. Grit shatter is 4 seconds at 40 Pulse/s."),
         ("Echo Shard", "tribalpower:echo_shard", 8, "Shard that heard the shatter."),
         ("Echo Attune", "tribalpower:echo_attune", 1, "Hum stage two — attune."),
         ("Attuned Echo", "tribalpower:attuned_echo", 8, "Echo that found a key."),
@@ -2484,10 +2484,10 @@ def build_tribal_side() -> list[dict]:
         ('greater_pulse_cell', 'A longer song', 'resonant_core', 'Carry 1,200 Pulse in one Greater Cell. Charge it at a Drumheart or Resonator before setting out.'),
         ('spirit_cistern', 'Rain held in copper', 'bound_echo', 'Sixteen buckets in one cistern. Buckets and fluid pipes both work. A comparator reads fullness; redstone locks filling and draining. Break it and the fluid stays on the dropped block. Sky Stone Tanks dump.'),
         ('lattice_tuner', 'Name the far end', 'attuned_echo', 'Mark a machine face with the tuner, then use it on a relay plate. Use it on another machine to replace the mark. Do not mark the plate.'),
-        ('item_relay', 'A path for supplies', 'lattice_tuner', 'Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.'),
-        ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 4 Pulse. Both ends must be loaded.'),
-        ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 8 Pulse per successful beat. Use standard inventories from any compatible mod.'),
-        ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 8 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.'),
+        ('item_relay', 'A path for supplies', 'lattice_tuner', 'Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 8 Pulse. Redstone pauses it.'),
+        ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded.'),
+        ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod.'),
+        ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.'),
         ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 20 Pulse a second (2,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.'),
         ('spirit_staff', 'Six voices in one hand', 'resonant_core', 'The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
         ('resonance_maul', 'Stone yields a doorway', 'resonant_core', 'Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.'),
@@ -2500,7 +2500,7 @@ def build_tribal_side() -> list[dict]:
         ('horizon_compass', 'Beyond the horizon', 'waystone_compass', 'Return across any distance within one dimension for 40 Pulse. Leave a dry landing with two clear blocks above it.'),
         ('march_crystal', 'A voice beyond the veil', 'gate_drum', 'Seek March Crystal beyond the Gate Drum. Astral paths for people, items and fluids all draw on the same late-game material.'),
         ('astral_compass', 'A path between worlds', 'horizon_compass', 'The final compass crosses dimensions for 100 Pulse. Bind a safe return before exploring. Travel waits five seconds between uses.'),
-        ('astral_item_relay', 'Supplies cross the veil', 'longreach_item_relay', 'Astral cargo crosses dimensions without a distance limit. Each successful beat costs 16 Pulse. The receiver must already be loaded; no hidden chunk loading.'),
+        ('astral_item_relay', 'Supplies cross the veil', 'longreach_item_relay', 'Astral cargo crosses dimensions without a distance limit. Each successful beat costs 32 Pulse. The receiver must already be loaded; no hidden chunk loading.'),
         ('astral_fluid_relay', 'Rain crosses the veil', 'longreach_fluid_relay', 'Astral fluid follows the same dimensional tier as players and items. Keep the destination tank loaded. A full tank or unloaded world pauses without consuming cargo.'),
         ('wayfarer_satchel', 'The camp in your keeping', 'deep_cache', 'Open your personal 54-slot Deep Cache from the road. This is the same vault, shared between your caches and satchel. March attunement removes its opening cost.'),
     ]
@@ -2587,7 +2587,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
 
     # ---- The March remembers: halls, the Drum Circle, The Unsung, and the sixth voice
     adv('ancestor_hall', 'march/ancestor_hall', 'The halls that kept time',
-        'Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Four Lore Tablets line each hall; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.',
+        'Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Walking in ticks this. Four Lore Tablets line each hall; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.',
         ['gate_drum'], 0, 42, [reward_item('tribalpower:spiritweave', 2), reward_xp_levels(2)])
     item('loom_thread', 'A strand of the thread itself',
          'Loom Thread is the Loom, in hand: Ancestor Hall chests hold two to four, The Unsung tears loose sixteen or more, and a Loom-stitcher Elder trades one at Friend standing. It is the reagent of the sixth voice.',
@@ -2622,7 +2622,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
         'Nine tribe camps stand in the March, one per Strand: huts, a fire, a Tribe Hearth, a totem, a banner and four Tribal Kin. Right-click a hearth with what that tribe favours, or with a charged Pulse Cell, and your standing with them rises. Hurting Kin costs 25. Breaking a tribe banner costs 5, the hearth 40. Generic camp blocks do not cost.',
         ['gate_drum'], 0, 47, [reward_item('tribalpower:echo_shard', 4), reward_xp_levels(2)])
     adv('tribe_friend', 'tribes/friend', 'On good terms',
-        'Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near a hearth and completed trades count too. Elders trade two offers per rank: Grit-singers sell Echoes for raw ore, Seal-carvers sell seals and rite tablets, Loom-stitchers sell Loom Thread and, at Kin, a Horizon Compass. `/tribalpower standing` prints all nine.',
+        'Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near a hearth and completed trades count too. Elders trade two offers per rank: Grit-singers sell Echoes for raw ore, Seal-carvers sell seals and rite tablets, Loom-stitchers sell Loom Thread and a Waystone Compass, and at Kin a Loom Anchor and a Loom Seal. `/tribalpower standing` prints all nine.',
         ['tribe_offering'], 2.7, 47, [reward_item('tribalpower:attuned_echo', 4), reward_xp_levels(3)])
     adv('tribe_mark', 'tribes/mark', 'Nine agreeing',
         'At Voice standing an Elder presses a Tribe Mark into your hand, once. It opens that tribe\'s Codex page and is the one ingredient a Kinship Totem cannot do without.',
@@ -2663,7 +2663,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
          'Paper, Spiritweave and a Spirit Shard. Use the charter on a player to invite them to your camp, or in the air to see it. `/tribalpower camp` creates, invites, joins, leaves, kicks, renames.',
          ['spiritweave'], 5.4, 54, reward='tribalpower:spiritweave', reward_count=2)
     adv('first_camp', 'first_camp', 'One vault, one budget',
-        'Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other\'s devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. A Clowder is not that camp — /tribalpower camp create is.',
+        'Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other\'s devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. A Clowder is not that camp — /tribalpower camp create <name> is.',
         ['camp_charter'], 8.1, 54, [reward_item('tribalpower:greater_pulse_cell', 1), reward_xp_levels(3)])
 
     # ---- Reading the lattice
@@ -2690,17 +2690,17 @@ def build_chocobo() -> list[dict]:
         ("Gate to the March", "tribalpower:gate_drum", 1,
          "Wild pad-runners do not spawn on a void pad. Play the Gate Rite on a Gate Drum (use it empty-handed, hit the beats on A, S, D, F) and walk the March. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
         ("Gysahl Green", "chocobosreborn:gysahl_green", 8,
-         "Wild Gysahl grows in the Reed Fen, Steppe and Highlands, thickest in the Fen, and March Leaf sheds seeds. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."),
+         "Wild Gysahl grows in the Reed Fen, Steppe and Highlands, thickest in the Fen. Picking it drops seeds too, and March Leaf or grass broken with a hoe sheds more. Plant the seeds on farmland at home."),
         ("Chocobo Almanac", "chocobosreborn:chocobo_almanac", 1,
-         "A book and a gysahl leaf. Right-click a bird to read colour, grade, class, race wins, and the last nut."),
+         "A book and a gysahl leaf. Use it anywhere: its pages list each of your birds' colour, grade, class, race wins and last nut."),
         ("Chocobo Saddle", "chocobosreborn:chocobo_saddle", 1,
          "Feed Gysahl to tame a wild yellow. Craft a saddle from leather, string and iron, then ride. Sprint dashes; ease off to recover stamina."),
-        ("Square Gate", "chocobosreborn:square_gate", 1,
-         "Gold, emeralds and gysahl. After you have walked the March, Esther stands at Clowder Hall. Mount a saddled bird and speak to her, or place a Square Gate."),
+        ("Chocobo Pocketwatch", "chocobosreborn:chocobo_pocketwatch", 1,
+         "Gold nuggets around a clock, with a gysahl. It winds you to Whiskerwind and back. After you have walked the March, Esther stands at Clowder Hall too: ride a saddled bird to her, or ask the Whiskerwind Guide."),
         ("Chocobo Lure", "chocobosreborn:chocobo_lure", 1,
          "A lure in hand draws wild birds and outlines them across a field."),
         ("Gysahl Seeds", "chocobosreborn:gysahl_green_seeds", 8,
-         "Plant gysahl on dirt or March soil. A home patch is how the farm line starts."),
+         "Plant gysahl seeds on farmland. A home patch is how the farm line starts."),
         ("Carob Nut", "chocobosreborn:carob_nut", 1,
          "Feed a Carob Nut to two adults of opposite sex. Two Good-or-better Yellows plus Carob can hatch Green or Blue. Each parent needs at least one first-place finish; four combined firsts make the colour certain."),
         ("Curiel Green", "chocobosreborn:curiel_green", 1,
@@ -2944,7 +2944,7 @@ def build_driftwrecks() -> list[dict]:
     out.append(salvage)
     atlas = task_quest(s, title="The Atlas",
         desc=["The Wreck Atlas keeps every tribe's places you have finished: nine Strands by six kinds of place. A full column, a full row, every stamp: each pays a small, permanent perk.",
-              "Pages come with lore in the Codex. Hint pages found in chests open hidden rooms."],
+              "Pages come with lore in the Codex. Hint pages found in chests open hidden rooms. Open the Wreck Atlas to tick this."],
         task=adv("atlas"), rewards=[reward_item(weft, 8)], deps=[salvage["id"]], x=4.8, y=0.0)
     out.append(atlas)
     # repeatables: hand in what the wrecks give
@@ -2961,7 +2961,7 @@ def build_driftwrecks() -> list[dict]:
              ("A whole row", "row", "One kind of place in all nine tribes. Its hidden rooms always open now.", [reward_item(weft, 24)]),
              ("Six stamps", "modifiers", "Finish a wreck of every modifier. Your wrecks hold a quarter longer.", [reward_item(weft, 16)]),
              ("Half the Atlas", "cells_25", "Twenty-five pages filled.", [reward_xp_levels(10)]),
-             ("Into the rift", "rift", "A Weft Key opens a Hold's sealed rift. Something small and frayed wears a Guardian's shape inside.", [reward_item(weft, 16)]),
+             ("Into the rift", "rift", "A Weft Key cut for that wreck's Strand opens a Hold's sealed rift. Something small and frayed wears a Guardian's shape inside.", [reward_item(weft, 16)]),
              ("Every Remnant", "remnants", "Mend all nine Remnants. Weft Keys cost half.", [reward_xp_levels(15)]),
              ("Every page", "cells_54", "All fifty-four pages. Somewhere under the Skies, the heart of the old world starts to drift your way.", [reward_xp_levels(20)]),
              ("Heart of the weave", "heartwreck", "Stand in the heart of the old world and re-thread it. It does not come twice.", [reward_xp_levels(30)])]

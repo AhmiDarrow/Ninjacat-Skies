@@ -409,7 +409,9 @@
 				}
 			]
 			dependencies: ["42000000000F024A"]
+			optional: true
 			shape: "loom"
+			size: 0.85d
 		}
 		{
 			id: "42000000000F024F"

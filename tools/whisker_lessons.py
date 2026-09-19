@@ -33,7 +33,7 @@ STRAND_BRAID_CHECKS = {
     ),
     'colony': (
         '**Goal:** finish Swarm and seat the Swarm token.\n\n'
-        'You need a nest the pad can actually grow — oak logs around a flower — then hives.\n\n'
+        'You need a nest the pad can actually grow — oak logs around a flower, woken with a right-click from another flower — then hives.\n\n'
         '**Check:** Finish Swarm. Claim the token and seat it. The Swarm notch lights.'
     ),
     'hum': (
@@ -217,11 +217,11 @@ def build_lessons(book, write, text, entry, category):
                  'Birds do not spawn on a skyblock island. There is no spawn-egg shortcut and no join gift. Walk the March.'),
             text('Find, tame, ride',
                  '1. Use a **Gate Drum** empty-handed and play the Gate Rite (hit the beats on A, S, D, F; 60% opens it), then walk through. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.\n'
-                 '2. Pick **Gysahl** in the March (Reed Fen is densest). Craft extras into seeds and plant them on dirt or March soil at home.\n'
-                 '3. Craft the **Chocobo Almanac** (book and a gysahl leaf) and right-click a bird to read it.\n'
+                 '2. Pick **Gysahl** in the March (Reed Fen is densest). Picking drops seeds too; plant them on farmland at home.\n'
+                 '3. Craft the **Chocobo Almanac** (book and a gysahl leaf) and use it anywhere: its pages list your own birds.\n'
                  '4. Tame a wild yellow with gysahl, then saddle it. Sprint dashes; ease off to recover stamina.'),
             text('Esther at the hub',
-                 'After you have walked the March, **Esther** stands at Clowder Hall (`/clowder hub`). Mount a saddled bird and speak to her, or place a **Square Gate**.\n\n'
+                 'After you have walked the March, **Esther** stands at Clowder Hall (`/clowder hub`). Ride a saddled bird to her, ask the Whiskerwind Guide, or craft a **Chocobo Pocketwatch** (gold nuggets around a clock, with a gysahl).\n\n'
                  '**Check:** you are on a saddled bird, or Esther is waiting at the hub.'),
             text('Farm and colour',
                  '**Goal:** train, mate, and paint colours without chasing dyes that do not exist.\n\n'

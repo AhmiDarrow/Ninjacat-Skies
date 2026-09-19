@@ -65,11 +65,11 @@ HOW_ITEM = {
     "tribalpower:bone_chime": "How: one bone, string, amethyst. /clowder hub Pad-keepers sell bones. Spark / Hum gate.",
     "tribalpower:spirit_shard": "How: Bone Chime, amethyst and redstone, shapeless. Yields two.",
     "tribalpower:copper_resonator": "How: copper around a Bone Chime. Yields two.",
-    "tribalpower:drumheart": "How: Chime + Shard + leather. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse.",
+    "tribalpower:drumheart": "How: two Bone Chimes, a Spirit Shard, two leather and four planks. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse.",
     "tribalpower:pulse_cell": "How: craft, then fill from a Drumheart (click with the cell). Tools, spells and travel draw from the cell.",
     "tribalpower:ley_collector": "How: place under sky near water/green. Slow Pulse. Spark ladder.",
     "tribalpower:pulse_resonator": "How: seat an Echo catalyst, two different totems within 8. Redstone pauses it.",
-    "tribalpower:echo_shatter": "How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel; raw metal → grit. Four seconds at 20 Pulse/s.",
+    "tribalpower:echo_shatter": "How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel; raw metal → grit. Four seconds at 40 Pulse/s.",
     "tribalpower:echo_shard": "How: Echo Shatter stone (not cobble). Font stone tier, or silk-touched stone.",
     "tribalpower:ember_kiln": "How: furnace + resonators + chime. Fire totem. Smelts grit for Pulse — a hand Drumheart cannot run it.",
     "tribalpower:spirit_codex": "How: craft or Spark/Tribal Weave reward. Right-click: how the lattice works.",
@@ -179,6 +179,17 @@ HOW_ITEM = {
     "minecraft:fermented_spider_eye": "How: spider eye, brown mushroom, sugar.",
     "minecraft:honeycomb": "How: shear a nest or hive after bees work a flower. The Spark stall at /clowder hub sells eight for 16 Thread.",
     "productivebees:honey_treat": "How: honeycomb plus a honey bottle, shapeless.",
+    "chocobosreborn:chocobo_pocketwatch": "How: gold nuggets around a clock, with a gysahl. Use it to wind to Whiskerwind and back; a saddled bird comes with you.",
+    "tribalpower:march_stone": "How: smelt March Cobble. Mine it in the March, through a Gate Drum.",
+    "tribalpower:march_cobble": "How: mine March stone in the March, through a Gate Drum.",
+    "tribalpower:march_log": "How: cut March trees, through a Gate Drum.",
+    "tribalpower:march_planks": "How: one March Log makes four planks.",
+    "tribalpower:march_leaf": "How: March trees, through a Gate Drum. Shears or Silk Touch keep the leaves.",
+    "tribalpower:spirit_reed": "How: grows wild in the March, sits in reed-weir chests, and a Rootbinder Elder trades it.",
+    "tribalpower:march_crystal": "How: mine crystal in March grottos, or find it in March chests. Gate Drum first.",
+    "tribalpower:loom_thread": "How: Ancestor Hall chests, The Unsung, or a Loom-stitcher Elder at Friend.",
+    "tribalpower:unsung_heart": "How: The Unsung at the Silent Drum drops one per kill.",
+    "tribalpower:tribe_mark": "How: reach Voice (800) with a tribe; its Elder gives the Mark once.",
     "driftwrecks:driftwreck_seal": "How: finish a Driftwreck's task. Everyone who set foot on it gets a Seal.",
     "driftwrecks:frayed_core": "How: break a frayed spawner on a Driftwreck; each drops its core.",
     "driftwrecks:rift_shard": "How: open a Hold's sealed rift with a Weft Key and mend the Remnant inside.",
@@ -197,7 +208,7 @@ HOW_ITEM = {
     "minecraft:compass": "How: iron around redstone.",
     "minecraft:map": "How: compass surrounded by paper.",
     "minecraft:lodestone": "How: netherite ingot in chiseled stone bricks. Late Clowder luxury.",
-    "minecraft:bell": "How: gold plus a stone slab. Clowder meeting mark.",
+    "minecraft:bell": "How: no crafting recipe. Occultism's Contact Wild Spirit ritual makes one but needs a goat, and goats never reach the pad. Optional.",
     "minecraft:oak_sign": "How: planks over a stick.",
     "minecraft:white_banner": "How: six wool over a stick.",
     "minecraft:firework_rocket": "How: paper plus gunpowder. Optional burst.",
@@ -262,8 +273,8 @@ HOW_ITEM = {
     "minecraft:end_crystal": "How: glass, eye of ender, ghast tear. Nether after Claw obsidian; the egg is optional.",
     "clowderhall:island_charter": "How: K opens the island panel. Hold the Charter; sneak-use on Overworld pad ground to seal spawn. Start here names the steps.",
     "clowderhall:hub_key": "How: starter kit / Hall. `/clowder hub` and Hub Key go to Clowder Hall; `/clowder return` comes home.",
-    "chocobosreborn:gysahl_green": "How: pick March thickets (Reed Fen is densest). Craft extras into seeds; plant on dirt or March soil.",
-    "chocobosreborn:chocobo_almanac": "How: book plus gysahl. Right-click a bird to read it.",
+    "chocobosreborn:gysahl_green": "How: pick wild gysahl in the March (Reed Fen is densest). Picking also drops seeds; plant them on farmland at home.",
+    "chocobosreborn:chocobo_almanac": "How: a book and a gysahl. Use it anywhere; its pages list your own birds.",
     "pamhc2crops:aridgarden": "How: sieve dirt with a string mesh or better (Ex Deorum or Voidloom).",
     "pamhc2crops:frostgarden": "How: sieve dirt with a string mesh or better.",
     "pamhc2crops:shadedgarden": "How: sieve dirt with a string mesh or better.",
@@ -323,13 +334,13 @@ HOW_ITEM = {
     "chocobosreborn:chocobo_saddle": "How: leather, string and iron. Tame a wild yellow with gysahl, then saddle it.",
     "chocobosreborn:square_gate": "How: gold, emeralds and gysahl. After the March, speak to Esther at /clowder hub while mounted.",
     "chocobosreborn:chocobo_lure": "How: craft the lure. Hold it to find March yellows.",
-    "chocobosreborn:gysahl_green_seeds": "How: craft seeds from gysahl, or pick them with the greens.",
+    "chocobosreborn:gysahl_green_seeds": "How: picking wild gysahl drops seeds, and so do grass and March Leaf broken with a hoe. Plant on farmland.",
     "chocobosreborn:carob_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Carob. Class A races also pay it out.",
-    "chocobosreborn:curiel_green": "How: Sage Wynn at Whiskerwind, or a race prize.",
-    "chocobosreborn:sylkis_green": "How: Sage Wynn at the Square, or a race prize.",
+    "chocobosreborn:curiel_green": "How: Sage Wynn at Whiskerwind.",
+    "chocobosreborn:sylkis_green": "How: Sage Wynn at Whiskerwind, or a Class S race prize.",
     "chocobosreborn:zeio_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Zeio. Class S races rarely pay it out.",
-    "chocobosreborn:gp": "How: finish a heat at Chocobo Square. Esther or a Farmhand sends a saddled rider.",
-    "chocobosreborn:pepio_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Pepio. Farmhands sell gysahl only.",
+    "chocobosreborn:gp": "How: place in the top three of a heat at Whiskerwind. Ride a saddled bird to Esther to enter.",
+    "chocobosreborn:pepio_nut": "How: Bilo the Nutkeeper at Whiskerwind sells Pepio. A Class C win can pay it out too.",
     "chocobosreborn:krakka_green": "How: shapeless — two gysahl and bone meal.",
     "chocobosreborn:tantal_green": "How: Sage Wynn, or craft listed in JEI.",
     "chocobosreborn:pahsana_green": "How: Sage Wynn at the Square.",
@@ -358,7 +369,7 @@ HOW_ITEM = {
     "silentgear:hammer_blueprint": "How: unwrap the Blueprint Package, or JEI.",
     "silentgear:excavator_blueprint": "How: unwrap the Blueprint Package, or JEI.",
     "silentgear:knife_blueprint": "How: unwrap the Blueprint Package, or JEI.",
-    "ftbquests:book": "How: press Grave (`). Do not craft an FTB quest book.",
+    "ftbquests:book": "How: a book and any stone, shapeless. Grave (`) opens the same list without it.",
     "clowderhall:strand_banner_pattern": "How: craft at the Hall or JEI. A banner mark, not a Strand token.",
     "botanypots:terracotta_botany_pot": "How: terracotta Botany Pot in JEI. Dirt + a seed in the pot; bone meal still helps.",
     "botanypots:terracotta_hopper_botany_pot": "How: hopper Botany Pot in JEI. Sits over a chest/hopper and harvests itself.",
@@ -488,6 +499,8 @@ def how_line(item: str | None, title: str) -> str | None:
         return "How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
     if "seat" in low:
         return "How: right-click your Tension Post with the Strand token in hand."
+    if "look at the fray" in low:
+        return "How: /clowder hub, look up at the dark column over the Dock, then click the checkmark."
     if "look at the drop" in low:
         return "How: click the quest. Then punch the oak."
     if "wings" in low:
@@ -527,7 +540,7 @@ def how_line(item: str | None, title: str) -> str | None:
     if "answer from the cradle" in low:
         return "How: complete one successful summon from the cradle. Failed attempts spend nothing."
     if "halls that kept time" in low:
-        return "How: Gate Drum into the March; read all four Lore Tablets in an Ancestor Hall."
+        return "How: Gate Drum into the March and walk into an Ancestor Hall; then read its four Lore Tablets."
     if "the drum remembers" in low:
         return "How: fight The Unsung at the Silent Drum. Sneak the Beat; four-beat the Silence."
     if "tether and stitch" in low:
@@ -577,7 +590,7 @@ def how_line(item: str | None, title: str) -> str | None:
     if "friend in the dark" in low:
         return "How: use a Bonding Charm on an adult familiar. Advancement on first bond."
     if "one vault, one budget" in low:
-        return "How: /tribalpower camp create (not a Clowder). Advancement on first camp."
+        return "How: /tribalpower camp create <name> (not a Clowder). Advancement on first camp."
     if "ask the codex why" in low:
         return "How: sneak-use the Spirit Codex on a Tribal block; tick when the report names a real fault."
     if item:

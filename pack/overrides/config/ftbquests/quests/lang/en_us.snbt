@@ -1205,8 +1205,8 @@
 	quest.42000000000500D4.title: "Hum: Copper Resonator"
 	quest.42000000000500D5.quest_desc: [
 		"Strike it. Hold a Pulse. Listen before you wire anything.",
-		"Chime, Shard, leather — the Pad-keepers at /clowder hub sell leather.",
-		"How: Chime + Shard + leather. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse."
+		"Two Chimes, a Shard, two leather, four planks — the Pad-keepers at /clowder hub sell leather.",
+		"How: two Bone Chimes, a Spirit Shard, two leather and four planks. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse."
 	]
 	quest.42000000000500D5.title: "Hum: Drumheart"
 	quest.42000000000500D6.quest_desc: [
@@ -2311,7 +2311,7 @@
 	quest.42000000000901AB.title: "Gate Drum"
 	quest.42000000000901AC.quest_desc: [
 		"Footing from beyond the gate. Bring one home.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: smelt March Cobble. Mine it in the March, through a Gate Drum."
 	]
 	quest.42000000000901AC.title: "March Stone"
 	quest.42000000000901AD.quest_desc: [
@@ -2451,7 +2451,7 @@
 	quest.42000000000901C7.title: "Crystal Growth Accelerator"
 	quest.42000000000901C8.quest_desc: [
 		"March canopy proof — optional Reweave souvenir.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: grows wild in the March, sits in reed-weir chests, and a Rootbinder Elder trades it."
 	]
 	quest.42000000000901C8.title: "Spirit Reed"
 	quest.42000000000901C9.quest_desc: [
@@ -3088,7 +3088,7 @@
 	quest.42000000000F0244.quest_desc: [
 		"Above the Dock stands a slow dark column: the cut itself.",
 		"It thins as Clowders seat Strands. Come back and check it now and then.",
-		"How: look at it. The quest completes when it is in view."
+		"How: /clowder hub, look up at the dark column over the Dock, then click the checkmark."
 	]
 	quest.42000000000F0244.title: "Look at the Fray"
 	quest.42000000000F0245.quest_desc: [
@@ -3108,7 +3108,7 @@
 	quest.42000000000F0247.title: "Strand Banner"
 	quest.42000000000F0248.quest_desc: [
 		"Grave (`) opens the assignment list. Right-click the Whisker Codex for Start here. Same campaign; no Shift-click book.",
-		"How: press Grave (`). Do not craft an FTB quest book."
+		"How: a book and any stone, shapeless. Grave (`) opens the same list without it."
 	]
 	quest.42000000000F0248.title: "Assignment List"
 	quest.42000000000F0249.quest_desc: [
@@ -3138,7 +3138,7 @@
 	quest.42000000000F024D.title: "Recovery Compass"
 	quest.42000000000F024E.quest_desc: [
 		"Rings loud enough to gather the whole Clowder to one pad.",
-		"How: gold plus a stone slab. Clowder meeting mark."
+		"How: no crafting recipe. Occultism's Contact Wild Spirit ritual makes one but needs a goat, and goats never reach the pad. Optional."
 	]
 	quest.42000000000F024E.title: "Bell"
 	quest.42000000000F024F.quest_desc: [
@@ -3930,7 +3930,7 @@
 	quest.4200000000150308.title: "Jukebox Spare"
 	quest.4200000000150309.quest_desc: [
 		"Bell marks the Clowder.",
-		"How: gold plus a stone slab. Clowder meeting mark."
+		"How: no crafting recipe. Occultism's Contact Wild Spirit ritual makes one but needs a goat, and goats never reach the pad. Optional."
 	]
 	quest.4200000000150309.title: "Bell Spare"
 	quest.420000000015030A.quest_desc: [
@@ -6724,8 +6724,8 @@
 	]
 	quest.4200000000220532.title: "Ritual Chalk (Tribal)"
 	quest.4200000000220533.quest_desc: [
-		"Place the heart — Chime + Shard + leather (the Pad-keepers sell leather).",
-		"How: Chime + Shard + leather. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse."
+		"Place the heart — two Bone Chimes, a Spirit Shard, two leather and four planks (the Pad-keepers sell leather).",
+		"How: two Bone Chimes, a Spirit Shard, two leather and four planks. Strike empty-handed on tempo (17–23 ticks) for 24 Pulse."
 	]
 	quest.4200000000220533.title: "Drumheart Beat"
 	quest.4200000000220534.quest_desc: [
@@ -6784,8 +6784,8 @@
 	]
 	quest.420000000022053E.title: "Lattice Conductor"
 	quest.420000000022053F.quest_desc: [
-		"Hum stage one — break the ore. Stone becomes shards; cobble becomes gravel; raw metal becomes grit. Grit shatter is 4 seconds at 20 Pulse/s.",
-		"How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel; raw metal → grit. Four seconds at 20 Pulse/s."
+		"Hum stage one — break the ore. Stone becomes shards; cobble becomes gravel; raw metal becomes grit. Grit shatter is 4 seconds at 40 Pulse/s.",
+		"How: stone + Bone Chime + Copper Resonator. Earth totem within 8. Stone → shards; cobble → gravel; raw metal → grit. Four seconds at 40 Pulse/s."
 	]
 	quest.420000000022053F.title: "Echo Shatter"
 	quest.4200000000220540.quest_desc: [
@@ -6890,32 +6890,32 @@
 	quest.4200000000220553.title: "Spiritgear Blade"
 	quest.4200000000220554.quest_desc: [
 		"Stone from the March, underfoot in a place that shouldn't exist.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: smelt March Cobble. Mine it in the March, through a Gate Drum."
 	]
 	quest.4200000000220554.title: "March Stone (Tribal)"
 	quest.4200000000220555.quest_desc: [
 		"Rubble from the March, plain but plentiful.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: mine March stone in the March, through a Gate Drum."
 	]
 	quest.4200000000220555.title: "March Cobble"
 	quest.4200000000220556.quest_desc: [
 		"Wood grown somewhere the sun doesn't reach.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: cut March trees, through a Gate Drum."
 	]
 	quest.4200000000220556.title: "March Log"
 	quest.4200000000220557.quest_desc: [
 		"Sawn timber from the March, sturdy despite where it came from.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: one March Log makes four planks."
 	]
 	quest.4200000000220557.title: "March Planks"
 	quest.4200000000220558.quest_desc: [
 		"Leaves that murmur even without any wind.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: March trees, through a Gate Drum. Shears or Silk Touch keep the leaves."
 	]
 	quest.4200000000220558.title: "March Leaf"
 	quest.4200000000220559.quest_desc: [
 		"A reed that hums with leftover Spirit Pulse.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: grows wild in the March, sits in reed-weir chests, and a Rootbinder Elder trades it."
 	]
 	quest.4200000000220559.title: "Spirit Reed (Tribal)"
 	quest.420000000022055A.quest_desc: [
@@ -6949,22 +6949,22 @@
 	]
 	quest.420000000022055F.title: "Name the far end"
 	quest.4200000000220560.quest_desc: [
-		"Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 4 Pulse. Redstone pauses it.",
+		"Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 8 Pulse. Redstone pauses it.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220560.title: "A path for supplies"
 	quest.4200000000220561.quest_desc: [
-		"Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 4 Pulse. Both ends must be loaded.",
+		"Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220561.title: "A path for rain"
 	quest.4200000000220562.quest_desc: [
-		"Longreach carries items up to 128 blocks for 8 Pulse per successful beat. Use standard inventories from any compatible mod.",
+		"Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220562.title: "Across the workshop"
 	quest.4200000000220563.quest_desc: [
-		"Longreach carries fluids up to 128 blocks for 8 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.",
+		"Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220563.title: "Across the waterworks"
@@ -7020,7 +7020,7 @@
 	quest.420000000022056D.title: "Beyond the horizon"
 	quest.420000000022056E.quest_desc: [
 		"Seek March Crystal beyond the Gate Drum. Astral paths for people, items and fluids all draw on the same late-game material.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: mine crystal in March grottos, or find it in March chests. Gate Drum first."
 	]
 	quest.420000000022056E.title: "A voice beyond the veil"
 	quest.420000000022056F.quest_desc: [
@@ -7029,7 +7029,7 @@
 	]
 	quest.420000000022056F.title: "A path between worlds"
 	quest.4200000000220570.quest_desc: [
-		"Astral cargo crosses dimensions without a distance limit. Each successful beat costs 16 Pulse. The receiver must already be loaded; no hidden chunk loading.",
+		"Astral cargo crosses dimensions without a distance limit. Each successful beat costs 32 Pulse. The receiver must already be loaded; no hidden chunk loading.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220570.title: "Supplies cross the veil"
@@ -7183,13 +7183,13 @@
 	]
 	quest.420000000022058B.title: "An answer from the cradle"
 	quest.4200000000228001.quest_desc: [
-		"Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Four Lore Tablets line each hall; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.",
-		"How: Gate Drum into the March; read all four Lore Tablets in an Ancestor Hall."
+		"Beyond the Gate Drum, the March steppe and highlands hide sunken Ancestor Halls. Walking in ticks this. Four Lore Tablets line each hall; read every one. The chests keep Loom Thread, Echoes, Spiritweave and seals. Hollow Sentinels still stand guard.",
+		"How: Gate Drum into the March and walk into an Ancestor Hall; then read its four Lore Tablets."
 	]
 	quest.4200000000228001.title: "The halls that kept time"
 	quest.4200000000228002.quest_desc: [
 		"Loom Thread is the Loom, in hand: Ancestor Hall chests hold two to four, The Unsung tears loose sixteen or more, and a Loom-stitcher Elder trades one at Friend standing. It is the reagent of the sixth voice.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: Ancestor Hall chests, The Unsung, or a Loom-stitcher Elder at Friend."
 	]
 	quest.4200000000228002.title: "A strand of the thread itself"
 	quest.4200000000228003.quest_desc: [
@@ -7209,7 +7209,7 @@
 	quest.4200000000228005.title: "The Drum Remembers"
 	quest.4200000000228006.quest_desc: [
 		"One Unsung Heart per kill, beside Loom Thread and Resonant Cores. It crafts the Loom totem and nothing else, so spend it with care.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: The Unsung at the Silent Drum drops one per kill."
 	]
 	quest.4200000000228006.title: "The stilled drum"
 	quest.4200000000228007.quest_desc: [
@@ -7238,7 +7238,7 @@
 	]
 	quest.420000000022800B.title: "Kept warm"
 	quest.420000000022800C.quest_desc: [
-		"Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near a hearth and completed trades count too. Elders trade two offers per rank: Grit-singers sell Echoes for raw ore, Seal-carvers sell seals and rite tablets, Loom-stitchers sell Loom Thread and, at Kin, a Horizon Compass. `/tribalpower standing` prints all nine.",
+		"Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near a hearth and completed trades count too. Elders trade two offers per rank: Grit-singers sell Echoes for raw ore, Seal-carvers sell seals and rite tablets, Loom-stitchers sell Loom Thread and a Waystone Compass, and at Kin a Loom Anchor and a Loom Seal. `/tribalpower standing` prints all nine.",
 		"How: reach Friend (150) with a tribe. /tribalpower standing."
 	]
 	quest.420000000022800C.title: "On good terms"
@@ -7249,7 +7249,7 @@
 	quest.420000000022800D.title: "Nine agreeing"
 	quest.420000000022800E.quest_desc: [
 		"Hold a Tribe Mark. Each tribe's is different; nine are possible.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: reach Voice (800) with a tribe; its Elder gives the Mark once."
 	]
 	quest.420000000022800E.title: "Mark of the tribe"
 	quest.420000000022800F.quest_desc: [
@@ -7313,8 +7313,8 @@
 	]
 	quest.420000000022801A.title: "A camp of many voices"
 	quest.420000000022801B.quest_desc: [
-		"Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other's devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. A Clowder is not that camp — /tribalpower camp create is.",
-		"How: /tribalpower camp create (not a Clowder). Advancement on first camp."
+		"Camp members share a fifty-four-slot camp vault behind every Deep Cache and Wayfarer Satchel, count as owners of each other's devices, pool twelve Wayanchors, and mirror a quarter of their tribe standing to the camp. A Clowder is not that camp — /tribalpower camp create <name> is.",
+		"How: /tribalpower camp create <name> (not a Clowder). Advancement on first camp."
 	]
 	quest.420000000022801B.title: "One vault, one budget"
 	quest.420000000022801C.quest_desc: [
@@ -7339,7 +7339,7 @@
 	quest.420000000022801F.title: "Ask the Codex why"
 
 	quest.4200000000228020.quest_desc: [
-		"Ask a Stone Font for cobble. Stone is not made; stone is asked to stay. Earth totem and Pulse sit within eight.",
+		"Ask a Stone Font for cobble. Stone is not made; stone is asked to stay. Cobble needs only the shape and Pulse; an Earth totem within eight lets it ask for stone.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228020.title: "A font of stone"
@@ -7389,7 +7389,7 @@
 	]
 	quest.4200000000228029.title: "The pit keeps time"
 	quest.420000000022802A.quest_desc: [
-		"Twelve Gate Frames ring the way. A missing frame is a missing step.",
+		"Eleven Gate Frames and the keystone ring the way. A missing frame is a missing step.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.420000000022802A.title: "A frame for the way"
@@ -7399,7 +7399,7 @@
 	]
 	quest.420000000022802B.title: "The keystone"
 	quest.420000000022802C.quest_desc: [
-		"Light a Way Gate. Twelve stones, one keystone, and somewhere to be.",
+		"Light a Way Gate. Eleven frames, one keystone, and somewhere to be.",
 		"How: finish the ring and light it; the advancement fires when the way opens."
 	]
 	quest.420000000022802C.title: "Open the way"
@@ -7429,7 +7429,7 @@
 	]
 	quest.4200000000228031.title: "The water's voice"
 	quest.4200000000228032.quest_desc: [
-		"The wake-bell is earth's long tone. Seat it near its totem with the other five.",
+		"The wake-bell is spirit's long tone. Seat it near its totem with the other five.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000228032.title: "The earth's wake"
@@ -8153,13 +8153,13 @@
 	]
 	quest.42000000002805E3.title: "Gate to the March"
 	quest.42000000002805E4.quest_desc: [
-		"Wild Gysahl grows in the Reed Fen, Steppe and Highlands, thickest in the Fen, and March Leaf sheds seeds. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home.",
-		"How: pick March thickets (Reed Fen is densest). Craft extras into seeds; plant on dirt or March soil."
+		"Wild Gysahl grows in the Reed Fen, Steppe and Highlands, thickest in the Fen. Picking it drops seeds too, and March Leaf or grass broken with a hoe sheds more. Plant the seeds on farmland at home.",
+		"How: pick wild gysahl in the March (Reed Fen is densest). Picking also drops seeds; plant them on farmland at home."
 	]
 	quest.42000000002805E4.title: "Gysahl Green"
 	quest.42000000002805E5.quest_desc: [
-		"A book and a gysahl leaf. Right-click a bird to read colour, grade, class, race wins, and the last nut.",
-		"How: book plus gysahl. Right-click a bird to read it."
+		"A book and a gysahl leaf. Use it anywhere: its pages list each of your birds' colour, grade, class, race wins and last nut.",
+		"How: a book and a gysahl. Use it anywhere; its pages list your own birds."
 	]
 	quest.42000000002805E5.title: "Chocobo Almanac"
 	quest.42000000002805E6.quest_desc: [
@@ -8168,18 +8168,18 @@
 	]
 	quest.42000000002805E6.title: "Chocobo Saddle"
 	quest.42000000002805E7.quest_desc: [
-		"Gold, emeralds and gysahl. After you have walked the March, Esther stands at Clowder Hall. Mount a saddled bird and speak to her, or place a Square Gate.",
-		"How: gold, emeralds and gysahl. After the March, speak to Esther at /clowder hub while mounted."
+		"Gold nuggets around a clock, with a gysahl. It winds you to Whiskerwind and back. After you have walked the March, Esther stands at Clowder Hall too: ride a saddled bird to her, or ask the Whiskerwind Guide.",
+		"How: gold nuggets around a clock, with a gysahl. Use it to wind to Whiskerwind and back; a saddled bird comes with you."
 	]
-	quest.42000000002805E7.title: "Square Gate"
+	quest.42000000002805E7.title: "Chocobo Pocketwatch"
 	quest.42000000002805E8.quest_desc: [
 		"A lure in hand draws wild birds and outlines them across a field.",
 		"How: craft the lure. Hold it to find March yellows."
 	]
 	quest.42000000002805E8.title: "Chocobo Lure"
 	quest.42000000002805E9.quest_desc: [
-		"Plant gysahl on dirt or March soil. A home patch is how the farm line starts.",
-		"How: craft seeds from gysahl, or pick them with the greens."
+		"Plant gysahl seeds on farmland. A home patch is how the farm line starts.",
+		"How: picking wild gysahl drops seeds, and so do grass and March Leaf broken with a hoe. Plant on farmland."
 	]
 	quest.42000000002805E9.title: "Gysahl Seeds"
 	quest.42000000002805EA.quest_desc: [
@@ -8189,12 +8189,12 @@
 	quest.42000000002805EA.title: "Carob Nut"
 	quest.42000000002805EB.quest_desc: [
 		"A mid-ladder green. Train speed, stamina, intelligence or cooperation; a bird gets sated on each kind.",
-		"How: Sage Wynn at Whiskerwind, or a race prize."
+		"How: Sage Wynn at Whiskerwind."
 	]
 	quest.42000000002805EB.title: "Curiel Green"
 	quest.42000000002805EC.quest_desc: [
 		"The top training green. Move up the ladder once the bird is sated on the cheaper leaves.",
-		"How: Sage Wynn at the Square, or a race prize."
+		"How: Sage Wynn at Whiskerwind, or a Class S race prize."
 	]
 	quest.42000000002805EC.title: "Sylkis Green"
 	quest.42000000002805ED.quest_desc: [
@@ -8204,12 +8204,12 @@
 	quest.42000000002805ED.title: "Zeio Nut"
 	quest.42000000002805EE.quest_desc: [
 		"GP won on the course. Stalls at the Square price everything in it.",
-		"How: finish a heat at Chocobo Square. Esther or a Farmhand sends a saddled rider."
+		"How: place in the top three of a heat at Whiskerwind. Ride a saddled bird to Esther to enter."
 	]
 	quest.42000000002805EE.title: "GP"
 	quest.42000000002805EF.quest_desc: [
 		"The first mating nut. Talent follows the nut; colour follows the parents unless Carob or Zeio is involved.",
-		"How: Bilo the Nutkeeper at Whiskerwind sells Pepio. Farmhands sell gysahl only."
+		"How: Bilo the Nutkeeper at Whiskerwind sells Pepio. A Class C win can pay it out too."
 	]
 	quest.42000000002805EF.title: "Pepio Nut"
 	quest.42000000002805F0.quest_desc: [
@@ -8666,7 +8666,7 @@
 	quest.42000000002B0803.title: "Salvage"
 	quest.42000000002B0804.quest_desc: [
 		"The Wreck Atlas keeps every tribe's places you have finished: nine Strands by six kinds of place. A full column, a full row, every stamp: each pays a small, permanent perk.",
-		"Pages come with lore in the Codex. Hint pages found in chests open hidden rooms."
+		"Pages come with lore in the Codex. Hint pages found in chests open hidden rooms. Open the Wreck Atlas to tick this."
 	]
 	quest.42000000002B0804.title: "The Atlas"
 	quest.42000000002B0805.quest_desc: [
@@ -8704,7 +8704,7 @@
 	]
 	quest.42000000002B080B.title: "Half the Atlas"
 	quest.42000000002B080C.quest_desc: [
-		"A Weft Key opens a Hold's sealed rift. Something small and frayed wears a Guardian's shape inside."
+		"A Weft Key cut for that wreck's Strand opens a Hold's sealed rift. Something small and frayed wears a Guardian's shape inside."
 	]
 	quest.42000000002B080C.title: "Into the rift"
 	quest.42000000002B080D.quest_desc: [

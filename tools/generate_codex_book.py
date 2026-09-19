@@ -535,7 +535,8 @@ BRAID = [
      "precision mechanism wants a Binding Knot at its heart. That is the Loom asking to be included."),
     ("colony", "Colony", "Swarm", "productivebees:advanced_oak_beehive", 8, 0, "edge",
      "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of "
-     "oak logs around a small flower, placed on the pad. Wait. Wings.\n\nEvery nest is the same trick with a "
+     "oak logs around a small flower, placed on the pad and woken with another flower (right-click it). "
+     "Wait. Wings.\n\nEvery nest is the same trick with a "
      "different ring — gravel, coarse dirt, stone, quartz, end stone. Then hives, a centrifuge, an incubator, "
      "and deep essence crops. Keep something alive that keeps something else alive."),
     ("hum", "Hum", "Spark", "tribalpower:drumheart", 8, 2, "edge",
@@ -673,7 +674,7 @@ CAMPS = {
     "clock": ("the March crystal fields", "redstone, clocks, Storm Wing", "Air", "timed songs and automation"),
     "swarm": ("the March steppe", "honey, flowers, Lantern Down", "Air", "hives and March flowers"),
     "sigil": ("the March highlands", "blank and element seals, Spirit Shards", "Spirit", "the tribe's Seal, Blank Seals and rite tablets"),
-    "spindle": ("the March crystal fields, at the Crystal Spire", "March Crystal, Loom Thread, compasses", "Loom", "Loom Thread at Friend and a Horizon Compass at Kin"),
+    "spindle": ("the March crystal fields, at the Crystal Spire", "March Crystal, Loom Thread, compasses", "Loom", "Loom Thread and a Waystone Compass at Friend, a Loom Anchor and a Loom Seal at Kin"),
 }
 for sid, tribe, x, y, lore, margin in TRIBES:
     where, favours, voice, trades = CAMPS[sid]

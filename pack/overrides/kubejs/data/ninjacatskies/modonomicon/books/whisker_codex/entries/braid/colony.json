@@ -12,7 +12,7 @@
     {
       "type": "modonomicon:text",
       "title": "Colony",
-      "text": "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of oak logs around a small flower, placed on the pad. Wait. Wings."
+      "text": "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of oak logs around a small flower, placed on the pad and woken with another flower (right-click it). Wait. Wings."
     },
     {
       "type": "modonomicon:text",
@@ -22,7 +22,7 @@
     {
       "type": "modonomicon:text",
       "title": "Before you move on",
-      "text": "**Goal:** finish Swarm and seat the Swarm token.\\\nYou need a nest the pad can actually grow — oak logs around a flower — then hives.\\\n**Check:** Finish Swarm. Claim the token and seat it. The Swarm notch lights."
+      "text": "**Goal:** finish Swarm and seat the Swarm token.\\\nYou need a nest the pad can actually grow — oak logs around a flower, woken with a right-click from another flower — then hives.\\\n**Check:** Finish Swarm. Claim the token and seat it. The Swarm notch lights."
     },
     {
       "type": "modonomicon:text",
