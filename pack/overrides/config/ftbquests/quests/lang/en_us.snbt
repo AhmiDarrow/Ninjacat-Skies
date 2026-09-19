@@ -2305,8 +2305,8 @@
 	]
 	quest.42000000000901AA.title: "Digital Loom"
 	quest.42000000000901AB.quest_desc: [
-		"Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart.",
-		"How: charge the Gate Drum with Pulse, then empty-handed use it. Do not strike it like a Drumheart. Bind a return compass first."
+		"Use it empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed.",
+		"How: use the Gate Drum empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed. Bind a return compass first."
 	]
 	quest.42000000000901AB.title: "Gate Drum"
 	quest.42000000000901AC.quest_desc: [
@@ -6869,8 +6869,8 @@
 	]
 	quest.420000000022054F.title: "Rite Pedestal"
 	quest.4200000000220550.quest_desc: [
-		"Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart.",
-		"How: charge the Gate Drum with Pulse, then empty-handed use it. Do not strike it like a Drumheart. Bind a return compass first."
+		"Use it empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed.",
+		"How: use the Gate Drum empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed. Bind a return compass first."
 	]
 	quest.4200000000220550.title: "Gate Drum (Tribal)"
 	quest.4200000000220551.quest_desc: [
@@ -8147,9 +8147,9 @@
 	]
 	quest.4200000000270600.title: "Relic: Overweaver Shuttle"
 	quest.42000000002805E3.quest_desc: [
-		"Wild pad-runners do not spawn on a void pad. Charge a Gate Drum with Pulse, then empty-handed use it and walk the March. Yellows graze the Steppe and Reed Fen. Highlands lean Great. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.",
+		"Wild pad-runners do not spawn on a void pad. Play the Gate Rite on a Gate Drum (use it empty-handed, hit the beats on A, S, D, F) and walk the March. Yellows graze the Steppe and Reed Fen. Highlands lean Great. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
-		"How: charge the Gate Drum with Pulse, then empty-handed use it. Do not strike it like a Drumheart. Bind a return compass first."
+		"How: use the Gate Drum empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed. Bind a return compass first."
 	]
 	quest.42000000002805E3.title: "Gate to the March"
 	quest.42000000002805E4.quest_desc: [

@@ -73,7 +73,7 @@ HOW_ITEM = {
     "tribalpower:echo_shard": "How: Echo Shatter stone (not cobble). Font stone tier, or silk-touched stone.",
     "tribalpower:ember_kiln": "How: furnace + resonators + chime. Fire totem. Smelts grit for Pulse — a hand Drumheart cannot run it.",
     "tribalpower:spirit_codex": "How: craft or Spark/Tribal Weave reward. Right-click: how the lattice works.",
-    "tribalpower:gate_drum": "How: charge the Gate Drum with Pulse, then empty-handed use it. Do not strike it like a Drumheart. Bind a return compass first.",
+    "tribalpower:gate_drum": "How: use the Gate Drum empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed. Bind a return compass first.",
     "tribalpower:spirit_cistern": "How: craft, fill with a bucket or pipe, pick it up — fluid stays. AE2 Sky Stone Tanks empty when broken.",
     "tribalpower:seal_loom": "How: Spirit Codex names the Seal Loom craft. Seat bottles; they come back to that slot.",
     "tribalpower:shard_lamp": "How: craft a Shard Lamp, place it within eight of Pulse, then dim it with redstone if you want night.",

@@ -462,7 +462,7 @@ LORE = {
     "Charged Warp": ["Fluix — certus, quartz, and redstone charged in water."],
     "Press the Pattern": ["The inscriber presses circuits the way a loom presses cloth."],
     "Digital Loom": ["The controller. Wants a Binding Knot at its centre.", "Spindle core."],
-    "Gate Drum": ["Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart."],
+    "Gate Drum": ["Use it empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed."],
     "March Stone": ["Footing from beyond the gate. Bring one home."],
     "Loom Fragment": ["Nine seated, one March stone, one right-click on the Post: the Fragment.", "Seat it. The cut closes above your pad."],
     "Molecular Assembler": ["Builds from patterns. Wants a Braid Cord at its heart."],
@@ -1346,7 +1346,7 @@ def build_spindle() -> list[dict]:
         ("Digital Loom", "ae2:controller", 1, "The controller. Wants a Binding Knot at its centre."),
         # Reweave braid + March after controller — not behind late AE2 autocraft.
         # Spindle token before Loom Fragment (fragment recipe consumes all nine tokens).
-        ("Gate Drum", "tribalpower:gate_drum", 1, "Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart."),
+        ("Gate Drum", "tribalpower:gate_drum", 1, "Use it empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed."),
         ("March Stone", "tribalpower:march_stone", 1, "Footing from beyond the gate. Bring one home."),
         ("Fluix Cable", "ae2:fluix_glass_cable", 32, "Link machines."),
         ("Import Bus", "ae2:import_bus", 2, "Pull items into storage."),
@@ -2462,7 +2462,7 @@ def build_tribal_side() -> list[dict]:
         ("Air Seal", "tribalpower:air_seal", 1, "Seal of the wind tribe."),
         ("Spirit Seal", "tribalpower:spirit_seal", 1, "Seal of the steward tribe."),
         ("Rite Pedestal", "tribalpower:rite_pedestal", 1, "Offer seals. Ask the Loom."),
-        ("Gate Drum", "tribalpower:gate_drum", 1, "Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart."),
+        ("Gate Drum", "tribalpower:gate_drum", 1, "Use it empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed."),
         ("Spirit Door", "tribalpower:spirit_door", 1, "Dress your camp's threshold with a carved spirit frame. Compasses and the Gate Drum perform travel."),
         ("Spiritgear Pick", "tribalpower:spiritgear_pickaxe", 1, "Tool that spends Pulse."),
         ("Spiritgear Blade", "tribalpower:spiritgear_blade", 1, "Edge that spends Pulse."),
@@ -2688,7 +2688,7 @@ def build_chocobo() -> list[dict]:
     s = 40
     steps = [
         ("Gate to the March", "tribalpower:gate_drum", 1,
-         "Wild pad-runners do not spawn on a void pad. Charge a Gate Drum with Pulse, then empty-handed use it and walk the March. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
+         "Wild pad-runners do not spawn on a void pad. Play the Gate Rite on a Gate Drum (use it empty-handed, hit the beats on A, S, D, F) and walk the March. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."),
         ("Gysahl Green", "chocobosreborn:gysahl_green", 8,
          "Wild Gysahl grows in the Reed Fen, Steppe and Highlands, thickest in the Fen, and March Leaf sheds seeds. Pick the greens. Craft extras into seeds and plant them on March soil or dirt at home."),
         ("Chocobo Almanac", "chocobosreborn:chocobo_almanac", 1,
