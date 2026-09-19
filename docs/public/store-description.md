@@ -43,7 +43,7 @@ Grave (`` ` ``) opens the live quest list. Right-click the **Whisker Codex** for
 - **Bees on a void pad**: craft a nest from a ring of logs or grit around a flower and wait for wings; every Productive Bees line starts there
 - Voidloom stations: a Loomframe that sifts on its own, a Tension Barrel that batches — the pad's first machines
 - FancyMenu branded title (void sky, paw logo, indigo/teal buttons)
-- Tribal Power **3.6.0** as a core pack pillar (also playable standalone)
+- Tribal Power **3.6.1** as a core pack pillar (also playable standalone)
 - Create, Mystical Agriculture, Productive Bees, AE2, Mekanism, Occultism, and more — woven into original quests
 
 ## Driftwrecks
