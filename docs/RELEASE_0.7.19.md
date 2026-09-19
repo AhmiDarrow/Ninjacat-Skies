@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.7.19
 
-Ships **Tribal Power 3.5.0 - The March reborn** (CurseForge project **1684851**, file **8918180**) and **Chocobos Reborn 1.0.4 - Wild Gysahl** (CurseForge project **1699008**, file **8918139**). The March gets new terrain, caves, the vanilla ores in March slate, game and March Leather, and far lighter flora. Wild Gysahl grows in the Reed Fen, Steppe and Highlands.
+Ships **Tribal Power 3.5.0 - The March reborn** (CurseForge project **1684851**, file **8918180**) and **Chocobos Reborn 1.0.4 - Wild Gysahl** (CurseForge project **1699008**, file **8918139**). The March gets new terrain, caves, the vanilla ores in March slate, game and March Leather, and far lighter flora. Wild Gysahl grows in the Reed Fen, Steppe and Highlands. Pack CurseForge client file **8918314**, server additional **8918315**.
 
 Tribal Power now owns the March chocobo compat. The pack's own March chocobo spawns, gysahl patches, `animals_spawnable_on` tag and `chocobo_march.js` (Flame in the Ember Wastes) are removed, so spawns and plants are not doubled.
 
