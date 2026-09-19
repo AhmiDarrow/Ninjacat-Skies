@@ -48,8 +48,11 @@ public class ThornmotherGuardian extends GuardianEntity {
     @Override
     protected void tickMechanic() {
         Vec3 o = origin();
-        if (ageInFight == 1) {
+        if (stations.isEmpty()) {                                        // first tick, or a reloaded fight (stations and hedge are not saved)
             for (int i = 0; i < 4; i++) { Vec3 s = Mech.standOn(level(), o.x + Math.cos(Math.PI / 4 + Math.PI / 2 * i) * STATION_R, o.z + Math.sin(Math.PI / 4 + Math.PI / 2 * i) * STATION_R, (int) o.y - 3, (int) o.y + 12); stations.add(s != null ? s : Mech.polar(o, STATION_R, Math.PI / 4 + Math.PI / 2 * i, o.y + 6)); }
+            for (BlockPos p : tempBlocks) if (!hedge.contains(p) && level().getBlockState(p).is(Blocks.SWEET_BERRY_BUSH)) hedge.add(p);
+        }
+        if (ageInFight == 1) {
             shout("The Thornmother answers for the Cut. She will not strike you — her hedge will. Cut it faster than it creeps, keep the four pruning stations clear, and every eight thorns you cut fire a prune wave that stuns her.");
         }
         if (stun > 0) { stun--; if (tickCount % 3 == 0) Mech.burst(serverLevel(), ParticleTypes.HAPPY_VILLAGER, position().add(0, kind.height * 0.6, 0), 6, 3); }
