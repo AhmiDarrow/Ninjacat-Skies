@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "driftwrecks:item/../block/tribe_banner_sigil"
+    "layer0": "driftwrecks:block/tribe_banner_sigil"
   }
 }

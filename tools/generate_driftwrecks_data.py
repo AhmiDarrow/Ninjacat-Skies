@@ -113,7 +113,8 @@ def lang() -> dict:
 # ================================================================== models
 
 def item_model(name: str, tex: str | None = None, parent: str = "minecraft:item/generated"):
-    w(ASSETS / "models/item" / f"{name}.json", {"parent": parent, "textures": {"layer0": rl(f"item/{tex or name}")}})
+    """tex is a texture path under textures/ (default item/<name>)."""
+    w(ASSETS / "models/item" / f"{name}.json", {"parent": parent, "textures": {"layer0": rl(tex or f"item/{name}")}})
 
 
 def block_item_model(name: str, model: str | None = None):
@@ -213,7 +214,7 @@ def models():
             "elements": [box([0, 15, 7], [16, 16, 9], "#pole"),
                          {"from": [1, 0, 8], "to": [15, 15, 8], "faces": {"north": {"texture": "#cloth"}, "south": {"texture": "#cloth"}}}]})
         w(ASSETS / f"blockstates/{b}.json", {"variants": facing_variants(b)})
-        item_model(b, f"../block/{b}")
+        item_model(b, f"block/{b}")
 
     # items
     for n in ["salvaged_weft", "frayed_core", "driftwreck_seal", "rift_shard", "tether_spool", "driftlure", "strand_lure", "weft_key",
@@ -346,7 +347,7 @@ def recipes():
                                  "result": {"id": rl("tether_spool")}})
     w(R / "driftlure.json", {"type": "minecraft:crafting_shapeless", "category": "misc",
                               "ingredients": [weft, weft, weft, {"item": "minecraft:string"}, {"item": "minecraft:gold_nugget"}], "result": {"id": rl("driftlure")}})
-    w(R / "drift_needle.json", {"type": "minecraft:crafting_shaped", "category": "tools", "pattern": [" I ", "IRI", " W "],
+    w(R / "drift_needle.json", {"type": "minecraft:crafting_shaped", "category": "equipment", "pattern": [" I ", "IRI", " W "],
                                  "key": {"I": {"item": "minecraft:iron_nugget"}, "R": {"item": "minecraft:redstone"}, "W": weft}, "result": {"id": rl("drift_needle")}})
     w(R / "wreck_atlas.json", {"type": "minecraft:crafting_shapeless", "category": "misc",
                                 "ingredients": [{"item": "minecraft:book"}, weft, {"item": "minecraft:ink_sac"}], "result": {"id": rl("wreck_atlas")}})
