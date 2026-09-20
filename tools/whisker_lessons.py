@@ -43,8 +43,8 @@ STRAND_BRAID_CHECKS = {
     ),
     'bind': (
         '**Goal:** spin **Braid Cord** and seat Sigil.\n\n'
-        'You need any two of Clock, Swarm and Spark seated, a **Strand Filament**, and a **Tension Post**.\n\n'
-        '**Check:** Seat any two of Clock, Swarm and Spark. Right-click the Post with a Strand Filament for **Braid Cord**. Finish Sigil, then seat the Sigil token.'
+        'You need a **Strand Filament** and a **Tension Post**.\n\n'
+        '**Check:** Right-click the Post with a Strand Filament for **Braid Cord**. Finish Sigil, then seat the Sigil token.'
     ),
     'reweave': (
         '**Goal:** close your Clowder\'s cut with March Stone.\n\n'
@@ -196,18 +196,18 @@ def build_lessons(book, write, text, entry, category):
                  '**Check:** put a bucket into the Cistern, pick the block up, and place it again. The fluid is still there. If you used a Sky Stone Tank, the liquid is gone unless you bucketed first.')], 'cistern_corner'),
         ('choose_branches', 'Choose two middle branches', 'ninjacatskies:braid_cord', [
             text('Three routes',
-                 '**Goal:** seat any two of Clock, Swarm and Spark, then spin **Braid Cord** at the Post.\n\n'
-                 'You need two of those tokens seated, a **Strand Filament**, and a **Tension Post**.\n\n'
+                 '**Goal:** spin **Braid Cord** at the Post, then work the three middle branches.\n\n'
+                 'You need a **Strand Filament** and a **Tension Post**. No Strand has to be seated first.\n\n'
                  'After Claw, three branches open together:\n\n'
                  '**Pattern / Clock:** mechanical processing.\n'
                  '**Colony / Swarm:** bees and their production chains.\n'
                  '**Hum / Spark:** living power and workshops.\n\n'
                  'A team can divide the work. You will still need all nine Strands for the final reweave.'),
             text('Make Braid Cord',
-                 '1. Check that two of Clock, Swarm and Spark are seated at your Post. Merely holding their tokens is not enough.\n'
-                 '2. Hold a **Strand Filament**.\n'
+                 '1. Stand at your **Tension Post**.\n'
+                 '2. Hold a **Strand Filament** - sieve gravel or sand with an iron Thread Mesh.\n'
                  '3. Right-click the Post to receive **Braid Cord**.\n\n'
-                 'Do not put tokens in a crafting grid. They record progress. If the Post refuses, read its message and check which Strands are seated.'),
+                 'Do not put Strand tokens in a crafting grid. They record progress, and the braid does not need them.'),
             text('Check',
                  '**Check:** two of those three notches are lit, and Braid Cord is in your hand. Next: Bind and the Sigil quests.')]),
         ('pad_runners', 'Pad-runners', 'chocobosreborn:chocobo_almanac', [

@@ -38,7 +38,6 @@ public enum Strand {
             "Stitch the cut. Then go and see what the March kept for you.");
 
     public static final Strand[] ALL = values();
-    public static final Strand[] BRAID = {CLOCK, SWARM, SPARK};
 
     private final String id;
     private final String tribe;

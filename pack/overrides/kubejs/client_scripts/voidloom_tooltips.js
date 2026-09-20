@@ -11,7 +11,7 @@ ItemEvents.modifyTooltips(event => {
   event.add('voidloom:loom_lint', Text.gray('Combed out of dirt by a thread mesh. Four make a Void Yarn.'))
   event.add('voidloom:strand_filament', [
     Text.gray('Rare iron-mesh catch. Right-click a Tension Post with it to spin a Braid Cord.'),
-    Text.darkGray('Needs two of Clock, Swarm, or Spark seated.')
+    Text.darkGray('The Post is the only requirement.')
   ])
   event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. /clowder hub Kin stalls sell things for Thread.'))
   event.add('ninjacatskies:thread_shard', [

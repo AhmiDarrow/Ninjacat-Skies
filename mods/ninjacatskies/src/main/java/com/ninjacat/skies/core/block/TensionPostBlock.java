@@ -190,16 +190,14 @@ public class TensionPostBlock extends BaseEntityBlock {
             return ItemInteractionResult.CONSUME;
         }
 
-        // Strand Filament → Braid Cord, once two of Clock / Swarm / Spark are seated.
+        // Strand Filament → Braid Cord. The Post itself is the requirement: a Clowder that can raise
+        // one can braid at it. It used to want two of Clock / Swarm / Spark seated, which put the
+        // Thread of Return most of the way through the pack, well past the people who needed it.
         if (ModItems.is(stack, "voidloom:strand_filament")) {
-            if (LoomTension.canBraid(sp)) {
-                consume(player, stack);
-                LoomTension.giveOrDrop(sp, new ItemStack(ModItems.BRAID_CORD.get()));
-                level.playSound(null, pos, SoundEvents.NOTE_BLOCK_CHIME.value(), SoundSource.BLOCKS, 0.8F, 1.3F);
-                player.displayClientMessage(NinjacatText.gold("The filament takes the braid. Two paths, one cord."), true);
-            } else {
-                player.displayClientMessage(NinjacatText.teal("A braid needs two of Clock, Swarm, or Spark seated first."), true);
-            }
+            consume(player, stack);
+            LoomTension.giveOrDrop(sp, new ItemStack(ModItems.BRAID_CORD.get()));
+            level.playSound(null, pos, SoundEvents.NOTE_BLOCK_CHIME.value(), SoundSource.BLOCKS, 0.8F, 1.3F);
+            player.displayClientMessage(NinjacatText.gold("The filament takes the braid. The post holds it taut."), true);
             return ItemInteractionResult.CONSUME;
         }
 

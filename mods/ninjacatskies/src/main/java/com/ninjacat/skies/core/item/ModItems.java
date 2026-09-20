@@ -111,7 +111,7 @@ public final class ModItems {
     /** The Clowder's monument. */
     public static final DeferredItem<BlockItem> TENSION_POST = ITEMS.registerSimpleBlockItem("tension_post", ModBlocks.TENSION_POST);
 
-    /** Mid/late Loom Braid glue — any two of Clock/Swarm/Spark strand tokens. */
+    /** Loom Braid glue — a Strand Filament spun at a Tension Post. */
     public static final DeferredItem<Item> BRAID_CORD = ITEMS.registerSimpleItem(
             "braid_cord",
             new Item.Properties().stacksTo(16)
