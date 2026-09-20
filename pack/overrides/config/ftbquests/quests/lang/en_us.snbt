@@ -8520,6 +8520,7 @@
 	quest.420000000029062B.title: "Toast Slice"
 	quest.42000000002A062C.quest_desc: [
 		"Four sticks in a square. Place them on farmland. Vanilla seeds convert when you plant — Mystical Agriculture seeds do not.",
+		"Put a second set of sticks into the same block to make a cross crop — an empty pair that takes after whatever is mature beside it. Ring it with parents on all four sides and it seeds itself in a few minutes; bone meal on the cross forces an attempt straight away.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
 		"How: four sticks in a square. Place on farmland, then plant a seed."
 	]
@@ -8536,6 +8537,7 @@
 	quest.42000000002A062E.title: "Magnifying Glass"
 	quest.42000000002A062F.quest_desc: [
 		"Glass, stone slab, planks, sticks. Put a seed in with the journal. Breeding becomes visible.",
+		"Fertility is the stat that drives crossing: a fresh seed sits at 1 of 10, and every point raises the chance a plant is picked as a parent. Analyse, replant the best, and the crosses come faster.",
 		"How: glass panes, stone slab, planks, and sticks. Seat the journal, then a seed."
 	]
 	quest.42000000002A062F.title: "Seed Analyzer"
