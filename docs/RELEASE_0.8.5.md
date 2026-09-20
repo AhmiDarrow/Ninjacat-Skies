@@ -1,5 +1,7 @@
 # Ninjacat Skies 0.8.5 — Frames to spare
 
+Pack CurseForge client file **8933330**, server additional **8933332**.
+
 Seven performance mods, Tribal Power 3.7.0, and a server pack that no longer ships the
 client's renderer at it. Existing saves load as they are; no quest ids change and no
 worldgen moves.
