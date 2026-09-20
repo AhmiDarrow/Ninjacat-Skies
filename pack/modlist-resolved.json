@@ -171,7 +171,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade 🔍",
+    "name": "Jade \ud83d\udd0d",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -968,5 +968,75 @@
     "filename": "ninjacatskies-core-0.5.4.jar",
     "releaseType": 1,
     "sha1": "f1db6cfd1fdb2d14aa6fa836887d7ea33915de76"
+  },
+  {
+    "key": "Sodium",
+    "name": "Sodium",
+    "slug": "sodium",
+    "projectId": 394468,
+    "fileId": 8756580,
+    "filename": "sodium-neoforge-0.8.13+mc1.21.1.jar",
+    "releaseType": 1,
+    "sha1": "1757289be21ed18db5b0d90703fa3db1b2de5693"
+  },
+  {
+    "key": "Reese's Sodium Options",
+    "name": "Reese's Sodium Options",
+    "slug": "reeses-sodium-options",
+    "projectId": 511319,
+    "fileId": 8891797,
+    "filename": "reeses-sodium-options-neoforge-2.2.4+mc1.21.1.jar",
+    "releaseType": 1,
+    "sha1": "e9e6d101b31acb51539141937ad5b069ff2ccc4d"
+  },
+  {
+    "key": "AI Improvements",
+    "name": "AI Improvements",
+    "slug": "ai-improvements",
+    "projectId": 233019,
+    "fileId": 5426792,
+    "filename": "AI-Improvements-1.21-0.5.3.jar",
+    "releaseType": 1,
+    "sha1": "b4a8e11384454bcc341043b251db7fb5afdfdf45"
+  },
+  {
+    "key": "BadOptimizations",
+    "name": "BadOptimizations",
+    "slug": "badoptimizations",
+    "projectId": 949555,
+    "fileId": 7338300,
+    "filename": "BadOptimizations-2.4.1-1.21.1.jar",
+    "releaseType": 1,
+    "sha1": "1461d8e46391efd32a3085150e86094c9f6f5c9d"
+  },
+  {
+    "key": "Dynamic FPS",
+    "name": "Dynamic FPS",
+    "slug": "dynamic-fps",
+    "projectId": 335493,
+    "fileId": 7546938,
+    "filename": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+    "releaseType": 1,
+    "sha1": "35b17e95b2b65930116ccc83e0cc358ac1bfcf9e"
+  },
+  {
+    "key": "spark",
+    "name": "spark",
+    "slug": "spark",
+    "projectId": 361579,
+    "fileId": 6225208,
+    "filename": "spark-1.10.124-neoforge.jar",
+    "releaseType": 1,
+    "sha1": "9430cc2ab64ff89d698be593769fb9f9ee4efae6"
+  },
+  {
+    "key": "Saturn",
+    "name": "Saturn",
+    "slug": "saturn",
+    "projectId": 670986,
+    "fileId": 6139965,
+    "filename": "saturn-mc1.21.1-0.1.5.jar",
+    "releaseType": 1,
+    "sha1": "e5b9c7e6a7856302c6b078255e6b90b5cc1ec0b0"
   }
 ]

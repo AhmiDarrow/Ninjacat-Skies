@@ -25,6 +25,9 @@ import time
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cf_distribution import is_client_only  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 MC = "1.21.1"
 NEO = "21.1.249"
@@ -161,6 +164,8 @@ def stage_mods(pack_mods_dir: Path, stage: Path, tribal_jar: Path, core_jar: Pat
         if jar.name.startswith("tribalpower-"):
             continue
         if core_jar and jar.name.startswith("ninjacatskies-core-"):
+            continue
+        if is_client_only(jar.name):              # the server zip leaves these out; boot what servers really get
             continue
         shutil.copy2(jar, mods / jar.name)
         count += 1

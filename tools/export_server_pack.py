@@ -25,7 +25,7 @@ import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from cf_distribution import is_owned_jar, is_local_owned, manifest_entries  # noqa: E402
+from cf_distribution import is_owned_jar, is_local_owned, is_client_only, manifest_entries  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 MC = "1.21.1"
@@ -221,10 +221,15 @@ def main() -> int:
     entries = manifest_entries(jars, resolved)              # fail-closed: every third-party jar verified against CF
     by_project = {row["projectId"]: row for row in resolved}
     files = []
+    skipped_client = []
     for e in entries:
         row = by_project[e["projectID"]]
+        if is_client_only(row["filename"]):        # a client renderer on a dedicated server is a boot crash, not a no-op
+            skipped_client.append(row["filename"]); continue
         files.append({"projectID": e["projectID"], "fileID": e["fileID"], "filename": row["filename"], "sha1": row["sha1"]})
     files.sort(key=lambda f: f["filename"].lower())
+    if skipped_client:
+        print("Client-only, left out of the server pack: " + ", ".join(sorted(skipped_client)))
 
     version = pack_version()
     out_dir = Path(args.out_dir); out_dir.mkdir(parents=True, exist_ok=True)
