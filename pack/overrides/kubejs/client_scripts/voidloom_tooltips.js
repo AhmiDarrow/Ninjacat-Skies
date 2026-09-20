@@ -14,6 +14,11 @@ ItemEvents.modifyTooltips(event => {
     Text.darkGray('Needs two of Clock, Swarm, or Spark seated.')
   ])
   event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. /clowder hub Kin stalls sell things for Thread.'))
+  event.add('ninjacatskies:thread_shard', [
+    Text.gray('A quarter of a shared life. Four make a Thread of Return.'),
+    Text.darkGray('Craft: diamonds, Void Yarn and a Rift Shard. Or buy one from Spark in Clowder Hall for 400 Thread.')
+  ])
+  event.add('ninjacatskies:thread_of_return', Text.darkGray('Grit in Clowder Hall buys blocks and netherite back for Thread — badly, on purpose.'))
   if (Item.exists('silentgear:blueprint_package')) {
     event.add('silentgear:blueprint_package', Text.gray('Four Blueprint Paper, shapeless. Right-click to unwrap starter plans. Claiming a pad wipes Silent Gear\'s join gift.'))
   }

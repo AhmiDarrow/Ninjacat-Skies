@@ -95,6 +95,23 @@ public class LivesGameTests {
         h.succeed();
     }
     @GameTest(template="empty")
+    public static void spentThreadsOfReturnStackAndKeepNoReceipt(GameTestHelper h) {
+        var id = UUID.randomUUID(); var shared = new CompoundTag();
+        Clowder member = new TestTeam(id, shared), mate = new TestTeam(id, shared);
+        h.assertTrue(ClowderLives.grant(member, 3), "A spent Thread of Return grants one life");
+        h.assertTrue(ClowderLives.grant(mate, 3), "It is repeatable: no receipt to block the next one");
+        h.assertTrue(ClowderLives.remaining(mate, 3) == 5, "Two Threads add exactly two");
+        h.assertTrue(ClowderLives.award(mate, 3, "sigil"), "Buying lives never consumes a milestone");
+        Clowder reloaded = new TestTeam(id, shared.copy());
+        h.assertTrue(ClowderLives.grant(reloaded, 3), "Reload does not close the priced path");
+        for (int i = 0; i < 7; i++) ClowderLives.spend(reloaded, 3);
+        h.assertTrue(ClowderLives.remaining(reloaded, 3) == 0, "The pool still empties");
+        h.assertTrue(ClowderLives.isExhausted(reloaded, id), "Members are still marked down at zero");
+        h.assertTrue(ClowderLives.grant(reloaded, 3), "A Thread held in time rescues an emptied pool");
+        h.assertTrue(!ClowderLives.isExhausted(reloaded, id), "and stands the Clowder back up");
+        h.succeed();
+    }
+    @GameTest(template="empty")
     public static void everyMemberContributesOnceIncludingOfflineAndRejoins(GameTestHelper h) {
         var members = new HashSet<UUID>(); var first = UUID.randomUUID(); var second = UUID.randomUUID();
         members.add(first);

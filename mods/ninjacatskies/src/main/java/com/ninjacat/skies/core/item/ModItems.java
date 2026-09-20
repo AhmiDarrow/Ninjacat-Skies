@@ -93,6 +93,21 @@ public final class ModItems {
             new Item.Properties().stacksTo(1).fireResistant()
     );
 
+    /**
+     * The lives piece. Four stitch into a Thread of Return: the pack's repeatable answer to a spent pool,
+     * bought from the Spark stall or cut from a Rift Shard. Rare on purpose, never a drop.
+     */
+    public static final DeferredItem<Item> THREAD_SHARD = ITEMS.register(
+            "thread_shard",
+            () -> new Item(new Item.Properties().stacksTo(16).rarity(Rarity.RARE))
+    );
+
+    /** Spend it for one shared Clowder life. Repeatable, unlike the six quest milestones. */
+    public static final DeferredItem<ThreadOfReturnItem> THREAD_OF_RETURN = ITEMS.register(
+            "thread_of_return",
+            () -> new ThreadOfReturnItem(new Item.Properties().stacksTo(4).rarity(Rarity.EPIC).fireResistant())
+    );
+
     /** The Clowder's monument. */
     public static final DeferredItem<BlockItem> TENSION_POST = ITEMS.registerSimpleBlockItem("tension_post", ModBlocks.TENSION_POST);
 

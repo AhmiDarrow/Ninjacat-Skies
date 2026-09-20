@@ -13,16 +13,29 @@ public final class ClowderLives {
 
     private ClowderLives() {}
 
+    private static final java.util.Set<String> MILESTONES =
+            java.util.Set.of("clock", "dragon", "power", "sigil", "bestiary", "reweave");
+
     /** Receipt is persisted with the team: multiple members cannot multiply a quest reward. */
     public static boolean award(Clowder team, int startingLives, String milestone) {
-        if (!java.util.Set.of("clock", "dragon", "power", "sigil", "bestiary", "reweave").contains(milestone)) return false;
+        if (!MILESTONES.contains(milestone)) return false;
         String receipt = "life_reward_" + milestone;
         if (team.data().getBoolean(receipt)) return false;
+        if (!grant(team, startingLives)) return false;
+        team.data().putBoolean(receipt, true);
+        team.markDirty();
+        return true;
+    }
+
+    /**
+     * One life with no receipt, so it can be earned again: what a spent Thread of Return pays out. The price
+     * is the limit, not a counter — see docs/shared-lives.md.
+     */
+    public static boolean grant(Clowder team, int startingLives) {
         int lives = remaining(team, startingLives);
         if (lives >= MAX_LIVES) return false;
         boolean wasEmpty = lives == 0;
         team.data().putInt(KEY, lives + 1);
-        team.data().putBoolean(receipt, true);
         if (wasEmpty) team.data().remove(EXHAUSTED_MEMBERS);
         team.markDirty();
         return true;

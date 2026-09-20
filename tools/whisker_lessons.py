@@ -259,7 +259,9 @@ def build_lessons(book, write, text, entry, category):
                  'For Tribal Power, crouch and right-click the machine with the Spirit Codex. Test one machine before connecting a whole production line.'),
             text('Shared lives',
                  'When shared lives are on (default), each Clowder mate adds **three** lives to one team pool. A survival death spends one. Food and potions do not put it back. At zero, affected players become spectators.\n\n'
-                 '`/skybound lives` prints the pool. Six quest rewards named **Thread of Return** each add one life when claimed. There is no item to use. Operators run `/skybound revive`. Plan trips together.'),
+                 '`/skybound lives` prints the pool. Six quest rewards named **Thread of Return** each add one life when claimed, once per Clowder.\n\n'
+                 'After those, a **Thread of Return** is an item: four **Thread Shards** stitched around a Braid Cord, right-clicked for one more shared life, as often as you can pay for it. Cut a Shard from diamonds, Void Yarn and a Rift Shard, or buy one from Spark at `/clowder hub`.\n\n'
+                 'Keep one in a pocket **before** the pool empties: at zero you are already a spectator and cannot use anything. Operators run `/skybound revive`. Plan trips together.'),
             text('Common traps',
                  'A Sky Stone Tank that you just moved is empty unless you bucketed first. Use a Spirit Cistern to carry liquids.\n\n'
                  'Pad-runners are in the March, not on the pad. After the Gate, Esther waits at `/clowder hub`.\n\n'

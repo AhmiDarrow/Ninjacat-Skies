@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "SCS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "ninjacatskies:thread_shard"
+    },
+    "C": {
+      "item": "ninjacatskies:braid_cord"
+    }
+  },
+  "result": {
+    "id": "ninjacatskies:thread_of_return",
+    "count": 1
+  }
+}
