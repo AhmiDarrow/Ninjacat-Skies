@@ -171,7 +171,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade \ud83d\udd0d",
+    "name": "Jade 🔍",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -900,16 +900,6 @@
     "sha1": "fd75be4f2c6234b96ffd3bf315faf85f6de84946"
   },
   {
-    "key": "Chocobos Reborn",
-    "name": "Chocobos Reborn",
-    "slug": "chocobos-reborn",
-    "projectId": 1699008,
-    "fileId": 8925242,
-    "filename": "chocobosreborn-1.0.7.jar",
-    "releaseType": 1,
-    "sha1": "108ddfc614485665b6d3175a8252433a241c4a10"
-  },
-  {
     "key": "Resourceful Config",
     "name": "Resourceful Config",
     "slug": "resourceful-config",
@@ -968,5 +958,15 @@
     "filename": "AgriCraft-neoforge-1.21.1-4.0.17.jar",
     "releaseType": 1,
     "sha1": "9a1aea2262ff6f13af19f9540af621e689e0b99f"
+  },
+  {
+    "key": "Chocobos Reborn",
+    "name": "Chocobos Reborn",
+    "slug": "chocobos-reborn",
+    "projectId": 1699008,
+    "fileId": 8926685,
+    "filename": "chocobosreborn-1.0.8.jar",
+    "releaseType": 1,
+    "sha1": "d44695aa5ff772b4ae1f1caa801621cbd5409906"
   }
 ]
