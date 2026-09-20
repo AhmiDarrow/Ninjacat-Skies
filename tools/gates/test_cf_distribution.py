@@ -26,7 +26,7 @@ class DistributionTests(unittest.TestCase):
         self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 0)
         self.assertTrue(any(p.name.startswith('ninjacatskies-core-') for p in jars))
         self.assertTrue(any(p.name.startswith('chocobosreborn-') for p in jars))
-        expected = {619320: 8687896, 235577: 8163135, 1699008: 8925242, 1684851: 8925225}
+        expected = {619320: 8687896, 235577: 8163135, 1699008: 8926685, 1684851: 8925225}
         actual = {e['projectID']: e['fileID'] for e in entries}
         for pid, fid in expected.items(): self.assertEqual(actual[pid], fid)
 
