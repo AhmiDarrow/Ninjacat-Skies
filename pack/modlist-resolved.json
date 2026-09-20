@@ -171,7 +171,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade \ud83d\udd0d",
+    "name": "Jade 🔍",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -880,16 +880,6 @@
     "sha1": "439ea1baa5e3065e36e0e57422f22403918bb59f"
   },
   {
-    "key": "Tribal Power",
-    "name": "TribalPower",
-    "slug": "tribalpower",
-    "projectId": 1684851,
-    "fileId": 8925225,
-    "filename": "tribalpower-3.6.2.jar",
-    "releaseType": 1,
-    "sha1": "fd75be4f2c6234b96ffd3bf315faf85f6de84946"
-  },
-  {
     "key": "Resourceful Config",
     "name": "Resourceful Config",
     "slug": "resourceful-config",
@@ -1038,5 +1028,15 @@
     "filename": "saturn-mc1.21.1-0.1.5.jar",
     "releaseType": 1,
     "sha1": "e5b9c7e6a7856302c6b078255e6b90b5cc1ec0b0"
+  },
+  {
+    "key": "TribalPower",
+    "name": "TribalPower",
+    "slug": "tribalpower",
+    "projectId": 1684851,
+    "fileId": 8933246,
+    "filename": "tribalpower-3.7.0.jar",
+    "releaseType": 1,
+    "sha1": "d00c476d58f91c24d1d0e34b584a6e36c378f751"
   }
 ]
