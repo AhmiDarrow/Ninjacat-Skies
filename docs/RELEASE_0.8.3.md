@@ -1,5 +1,7 @@
 # Ninjacat Skies 0.8.3 — Solid ground
 
+Pack CurseForge client file **8926837**, server additional **8926838**.
+
 A Chocobos Reborn build only: the race courses in Whiskerwind. Existing saves load as
 they are; no quest ids change and no other mod moves.
 
