@@ -1,5 +1,7 @@
 # Ninjacat Skies 0.8.6 — Put it down somewhere
 
+Pack CurseForge client file **8934522**, server additional **8934526**.
+
 Tribal Power 3.7.1. Three of its recipes could not be crafted at all, and its camp furniture
 stops being only furniture. Nothing else in the pack moves: same 104 mods, no quest ids
 change, and existing saves load as they are.
