@@ -65,7 +65,11 @@ Credits below name the projects players will recognize. Full pinned filenames li
 
 ### Performance (optional QoL)
 
-- **ModernFix**, **FerriteCore**, **Entity Culling**, **ImmediatelyFast**
+- **Sodium** (+ **Reese's Sodium Options**) — chunk renderer
+- **ModernFix**, **FerriteCore**, **Entity Culling**, **ImmediatelyFast**, **BadOptimizations**, **Saturn**
+- **AI Improvements** — mob AI tick cost
+- **Dynamic FPS** — throttles the client when it is not in focus
+- **spark** — profiler (`/spark profiler`, `/spark tps`)
 
 ## License reminder
 

@@ -21,6 +21,26 @@ CANONICAL_PROJECT = {
 LOOSE_COMPANION = re.compile(r"(?:ninjacatskies|ninjacatlib|clowderhall|voidloom|guardians)-[0-9][A-Za-z0-9.+_-]*\.jar")
 
 
+# Jars the client zip ships and the dedicated server must never see. Sodium is why this list exists: its service
+# layer (SodiumWorkarounds.bootstrap) runs from ModDirTransformerDiscoverer, before NeoForge reads any mod's side,
+# and calls into LWJGL. A server with sodium in mods/ dies on NoClassDefFoundError: org/lwjgl/Version before a
+# single mod loads. The others here are client-only too and have no reason to ride along.
+# AppleSkin, Controlling and ImmediatelyFast are deliberately absent: they have shipped in working server zips
+# since 0.7 and AppleSkin syncs saturation from the server, so dropping them would cost behaviour.
+CLIENT_ONLY_PREFIXES = (
+    'sodium-neoforge-',
+    'reeses-sodium-options-',
+    'dynamic-fps-',
+    'badoptimizations-',
+)
+
+
+def is_client_only(name):
+    """True for a jar that belongs in the client zip only; the server zip and boot gate leave it out."""
+    lowered = name.lower()
+    return any(lowered.startswith(prefix) for prefix in CLIENT_ONLY_PREFIXES)
+
+
 def is_local_owned(name):
     """Own jars with no CurseForge listing yet. None remain; Chocobos Reborn is project 1699008."""
     return False

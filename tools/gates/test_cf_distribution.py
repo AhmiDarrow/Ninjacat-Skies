@@ -9,7 +9,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools'))
-from cf_distribution import manifest_entries, is_owned_jar, is_local_owned
+from cf_distribution import manifest_entries, is_owned_jar, is_local_owned, is_client_only
 from test_export_archive import verify
 
 
@@ -20,8 +20,8 @@ class DistributionTests(unittest.TestCase):
         entries = manifest_entries(jars, rows)
         local = [p for p in jars if is_local_owned(p.name)]
         self.assertEqual(len(local), 0)
-        self.assertEqual(len(jars), 97)
-        self.assertEqual(len(entries), 97)
+        self.assertEqual(len(jars), 104)
+        self.assertEqual(len(entries), 104)
         self.assertEqual(len(entries), len(jars) - len(local))
         self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 0)
         self.assertTrue(any(p.name.startswith('ninjacatskies-core-') for p in jars))
@@ -29,6 +29,16 @@ class DistributionTests(unittest.TestCase):
         expected = {619320: 8687896, 235577: 8163135, 1699008: 8926685, 1684851: 8925225, 1689718: 8927258}
         actual = {e['projectID']: e['fileID'] for e in entries}
         for pid, fid in expected.items(): self.assertEqual(actual[pid], fid)
+
+    def test_client_only_mods_stay_out_of_the_server_pack(self):
+        """Sodium's service layer touches LWJGL before NeoForge reads a mod's side: on a server it is a boot crash."""
+        jars = sorted((ROOT / 'pack/mods').glob('*.jar'))
+        client_only = [p.name for p in jars if is_client_only(p.name)]
+        self.assertEqual(len(client_only), 4, client_only)
+        self.assertTrue(any(n.startswith('sodium-neoforge-') for n in client_only))
+        self.assertFalse(any(is_client_only(n) for n in
+                             ('spark-1.10.124-neoforge.jar', 'saturn-mc1.21.1-0.1.5.jar',
+                              'AI-Improvements-1.21-0.5.3.jar', 'ninjacatskies-core-0.5.4.jar')))
 
     def test_unresolved_and_changed_dependencies_fail_closed(self):
         with tempfile.TemporaryDirectory() as tmp:

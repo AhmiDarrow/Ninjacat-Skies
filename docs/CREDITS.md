@@ -2,13 +2,14 @@
 
 Ninjacat Skies is possible because of the work of the modding community. Thank you to the authors and contributors of every project below.
 
-This page credits all **94 outside mods** shipped with the current pack, including libraries, performance tools, and other dependencies. Each mod name links to its CurseForge project page; the names beside it are the authors listed there.
+This page credits all **101 outside mods** shipped with the current pack, including libraries, performance tools, and other dependencies. Each mod name links to its CurseForge project page; the names beside it are the authors listed there.
 
-Project pages and author listings were verified against the CurseForge API on September 7, 2026. Projects retain their own licenses and attribution requirements.
+Project pages and author listings were verified against the CurseForge API on September 7, 2026; the performance mods added on September 20, 2026 were verified the same way. Projects retain their own licenses and attribution requirements.
 
 ## Outside mods
 
 - [AgriCraft ReReloaded](https://www.curseforge.com/minecraft/mc-mods/agricraft-rereloaded) — Vivoxtl
+- [AI Improvements: Performance Tuning](https://www.curseforge.com/minecraft/mc-mods/ai-improvements) — QueenOfMissiles
 - [Almost Unified](https://www.curseforge.com/minecraft/mc-mods/almostunified) — AlmostReliable, Relentless, Lytho
 - [Amendments](https://www.curseforge.com/minecraft/mc-mods/amendments) — plantspookable, MehVahdJukaar
 - [AppleSkin](https://www.curseforge.com/minecraft/mc-mods/appleskin) — squeek502
@@ -18,6 +19,7 @@ Project pages and author listings were verified against the CurseForge API on Se
 - [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api) — shedaniel, Juicebus, MaxNeedsSnacks, st0x0ef
 - [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau) — baileyholl2, Gootastic
 - [Athena](https://www.curseforge.com/minecraft/mc-mods/athena) — terrariumearth, CodexAdrian, ThatGravyBoat
+- [BadOptimizations](https://www.curseforge.com/minecraft/mc-mods/badoptimizations) — thosea
 - [Balm](https://www.curseforge.com/minecraft/mc-mods/balm) — BlayTheNinth
 - [Bookshelf](https://www.curseforge.com/minecraft/mc-mods/bookshelf) — DarkhaxDev
 - [Botany Pots](https://www.curseforge.com/minecraft/mc-mods/botany-pots) — DarkhaxDev
@@ -32,6 +34,7 @@ Project pages and author listings were verified against the CurseForge API on Se
 - [Create: Enchantment Industry](https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry) — DragonsPlus, MarbleGate, RaymondBlaze
 - [Cucumber Library](https://www.curseforge.com/minecraft/mc-mods/cucumber) — BlakeBr0
 - [Curios API](https://www.curseforge.com/minecraft/mc-mods/curios) — TheIllusiveC4
+- [Dynamic FPS](https://www.curseforge.com/minecraft/mc-mods/dynamic-fps) — juliand665, LostLuma
 - [Entity Culling Fabric/Forge](https://www.curseforge.com/minecraft/mc-mods/entityculling) — tr7zw
 - [Ex Deorum](https://www.curseforge.com/minecraft/mc-mods/ex-deorum) — thedarkcolour
 - [FancyMenu](https://www.curseforge.com/minecraft/mc-mods/fancymenu) — Keksuccino
@@ -84,19 +87,23 @@ Project pages and author listings were verified against the CurseForge API on Se
 - [Powah! (Rearchitected)](https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected) — thetechnici4n
 - [Prickle](https://www.curseforge.com/minecraft/mc-mods/prickle) — DarkhaxDev
 - [Productive Bees](https://www.curseforge.com/minecraft/mc-mods/productivebees) — LobsterJonn
+- [Reese's Sodium Options](https://www.curseforge.com/minecraft/mc-mods/reeses-sodium-options) — FlashyReese
 - [Resourceful Config](https://www.curseforge.com/minecraft/mc-mods/resourceful-config) — ThatGravyBoat, epic_oreo
 - [Resourceful Lib](https://www.curseforge.com/minecraft/mc-mods/resourceful-lib) — ThatGravyBoat, epic_oreo
 - [Rhino](https://www.curseforge.com/minecraft/mc-mods/rhino) — Lat
+- [Saturn](https://www.curseforge.com/minecraft/mc-mods/saturn) — AbdElAziz333
 - [Searchables](https://www.curseforge.com/minecraft/mc-mods/searchables) — Jaredlll08
 - [Silent Gear](https://www.curseforge.com/minecraft/mc-mods/silent-gear) — SilentChaos512
 - [Silent Lib (silentlib)](https://www.curseforge.com/minecraft/mc-mods/silent-lib) — SilentChaos512
 - [Sky GUIs](https://www.curseforge.com/minecraft/mc-mods/sky-guis) — MelanX
 - [Skyblock Builder](https://www.curseforge.com/minecraft/mc-mods/skyblock-builder) — MelanX
 - [SmartBrainLib (Forge/Fabric/Quilt)](https://www.curseforge.com/minecraft/mc-mods/smartbrainlib) — Scimiguy
+- [Sodium](https://www.curseforge.com/minecraft/mc-mods/sodium) — JellySquid
 - [Solar Flux Reborn](https://www.curseforge.com/minecraft/mc-mods/solar-flux-reborn) — Zeith, DragonForgeMC
 - [Sophisticated Backpacks](https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks) — P3pp3rF1y
 - [Sophisticated Core](https://www.curseforge.com/minecraft/mc-mods/sophisticated-core) — P3pp3rF1y
 - [Sophisticated Storage](https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage) — P3pp3rF1y
+- [spark](https://www.curseforge.com/minecraft/mc-mods/spark) — Iucko
 - [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries) — MehVahdJukaar
 - [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium) — Buuz135
 - [TrashSlot](https://www.curseforge.com/minecraft/mc-mods/trashslot) — BlayTheNinth

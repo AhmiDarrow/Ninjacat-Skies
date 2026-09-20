@@ -888,5 +888,69 @@
     "authors": [
       "xaero96"
     ]
+  },
+  {
+    "filename": "sodium-neoforge-0.8.13+mc1.21.1.jar",
+    "projectId": 394468,
+    "name": "Sodium",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sodium",
+    "authors": [
+      "JellySquid"
+    ]
+  },
+  {
+    "filename": "reeses-sodium-options-neoforge-2.2.4+mc1.21.1.jar",
+    "projectId": 511319,
+    "name": "Reese's Sodium Options",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/reeses-sodium-options",
+    "authors": [
+      "FlashyReese"
+    ]
+  },
+  {
+    "filename": "AI-Improvements-1.21-0.5.3.jar",
+    "projectId": 233019,
+    "name": "AI Improvements: Performance Tuning",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ai-improvements",
+    "authors": [
+      "QueenOfMissiles"
+    ]
+  },
+  {
+    "filename": "BadOptimizations-2.4.1-1.21.1.jar",
+    "projectId": 949555,
+    "name": "BadOptimizations",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/badoptimizations",
+    "authors": [
+      "thosea"
+    ]
+  },
+  {
+    "filename": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+    "projectId": 335493,
+    "name": "Dynamic FPS",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/dynamic-fps",
+    "authors": [
+      "juliand665",
+      "LostLuma"
+    ]
+  },
+  {
+    "filename": "spark-1.10.124-neoforge.jar",
+    "projectId": 361579,
+    "name": "spark",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/spark",
+    "authors": [
+      "Iucko"
+    ]
+  },
+  {
+    "filename": "saturn-mc1.21.1-0.1.5.jar",
+    "projectId": 670986,
+    "name": "Saturn",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/saturn",
+    "authors": [
+      "AbdElAziz333"
+    ]
   }
 ]

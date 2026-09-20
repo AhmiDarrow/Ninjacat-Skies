@@ -17,7 +17,7 @@ def main():
         "# Mod credits", "",
         "Ninjacat Skies is possible because of the work of the modding community. Thank you to the authors and contributors of every project below.", "",
         f"This page credits all **{len(rows)} outside mods** shipped with the current pack, including libraries, performance tools, and other dependencies. Each mod name links to its CurseForge project page; the names beside it are the authors listed there.", "",
-        "Project pages and author listings were verified against the CurseForge API on September 7, 2026. Projects retain their own licenses and attribution requirements.", "",
+        "Project pages and author listings were verified against the CurseForge API on September 7, 2026; the performance mods added on September 20, 2026 were verified the same way. Projects retain their own licenses and attribution requirements.", "",
         "## Outside mods", "",
     ]
     for row in sorted(rows, key=lambda r: r["name"].casefold()):
