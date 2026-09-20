@@ -133,17 +133,6 @@ public final class LoomTension {
         return c.data().getBoolean(KEY_REWOVEN);
     }
 
-    public static int braidCount(Clowder c) {
-        int bits = strandBits(c);
-        int n = 0;
-        for (Strand s : Strand.BRAID) {
-            if ((bits & s.bit()) != 0) {
-                n++;
-            }
-        }
-        return n;
-    }
-
     public static boolean allSeated(Clowder c) {
         return Integer.bitCount(strandBits(c)) == Strand.ALL.length;
     }
@@ -272,11 +261,6 @@ public final class LoomTension {
         if (gave) {
             c.data().put(KEY_REWARDS, rewards);
         }
-    }
-
-    /** Braid Cord: any two of Clock / Swarm / Spark seated. Items are handled by the caller. */
-    public static boolean canBraid(ServerPlayer player) {
-        return clowderOf(player).map(c -> braidCount(c) >= 2).orElse(false);
     }
 
     /** Spindle Loom Fragment: all nine seated. Items are handled by the caller. */
