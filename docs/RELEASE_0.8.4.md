@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.4 — Thread of Return
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8927369**, server additional **8927370**.
 
 A Core build plus the pack economy around it: the shared Clowder life becomes something a
 team can earn again after the six quest milestones run out. Existing saves load as they
