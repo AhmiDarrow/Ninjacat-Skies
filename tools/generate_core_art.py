@@ -258,6 +258,96 @@ def spindle_loom_fragment():
     return finish(im, WOOD_DARK)
 
 
+# ------------------------------------------------------------------ shared lives
+HEART_FILL = (1, 2, 3, 255)   # flat sentinel for lit()
+
+
+def heart_points(cx, cy, s, w=32, h=32):
+    """(x^2+y^2-1)^3 - x^2 y^3 <= 0 sampled on a pixel grid: the classic heart, no AA."""
+    pts = set()
+    for py in range(h):
+        for px in range(w):
+            u = (px + 0.5 - cx) / s
+            v = -(py + 0.5 - cy) / s
+            if (u * u + v * v - 1.0) ** 3 - u * u * v * v * v <= 0.0:
+                pts.add((px, py))
+    return pts
+
+
+def inner(pts):
+    return {(x, y) for (x, y) in pts if all((x + dx, y + dy) in pts for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))}
+
+
+def cloth(im, pts, r):
+    """Flat-fill a region and relight it, so lit() reads one shape rather than many strokes."""
+    for (x, y) in pts:
+        im.putpixel((x, y), HEART_FILL)
+    lit(im, HEART_FILL, r)
+
+
+def weave(im, pts, r, b):
+    """An open plait on the face: loom warp one way, bone weft the other, single pixels so the shape stays read."""
+    for (x, y) in sorted(inner(pts)):
+        u, v = (x + y) % 7, (x - y) % 7
+        if u == 0 and v == 0:
+            im.putpixel((x, y), b[3])
+        elif u == 0:
+            im.putpixel((x, y), r[3])
+        elif v == 0:
+            im.putpixel((x, y), b[1])
+
+
+def stitch(im, pts, b, on_seam):
+    """Bone stitching along a seam: two pixels on, two off, shaded so it sits in the cloth."""
+    for (x, y) in sorted(inner(pts)):
+        if on_seam(x, y) and (x + y) % 4 < 2:
+            im.putpixel((x, y), b[3] if (x + y) % 4 == 0 else b[1])
+
+
+def thread_of_return():
+    """A heart stitched whole again from four pieces: loom cloth, bone seams, a copper knot in the cleft."""
+    im = blank(); d = draw(im)
+    r, b, c = ramp(LOOM), ramp(BONE), ramp(COPPER)
+    pts = heart_points(16.0, 16.0, 11.5)
+    cloth(im, pts, r)
+    weave(im, pts, r, b)
+    stitch(im, pts, b, lambda x, y: x in (15, 16) or y in (18, 19))
+    d.ellipse((12, 2, 19, 9), fill=c[2])   # the knot that pins all four seams, seated in the cleft
+    d.arc((12, 2, 19, 9), 150, 330, fill=c[4]); d.arc((12, 2, 19, 9), 330, 150, fill=c[0])
+    d.line((14, 5, 17, 6), fill=c[3]); d.point((15, 4), fill=c[4])
+    for (x, y) in ((11, 2), (10, 1), (9, 1), (20, 2), (21, 1), (22, 1), (23, 2)):   # the ends left loose
+        im.putpixel((x, y), b[2] if x % 2 else b[1])
+    return finish(im, LOOM_DEEP)
+
+
+def thread_shard():
+    """A quarter snapped out of that heart: the point and one curved flank, two ragged breaks, fibres hanging."""
+    im = blank()
+    r, b, c = ramp(LOOM), ramp(BONE), ramp(COPPER)
+    cx, cy, s = 32.0, 20.0, 17.0
+    big = heart_points(cx, cy, s, 64, 64)
+    cut = cy - 0.30 * s                     # the widest row: quarter it there and down the centre line
+    q = {(x, y) for (x, y) in big if x <= cx and y >= cut}
+    q = {(x, y) for (x, y) in q             # chip both cut edges so they read as breaks, not as a slice
+         if not (y <= cut + 1 and (x * 5) % 4 < 2) and not (x >= cx - 1 and (y * 7) % 5 < 2)}
+    xs = [x for x, _ in q]; ys = [y for _, y in q]
+    ox = (32 - (max(xs) - min(xs) + 1)) // 2 - min(xs)
+    oy = (32 - (max(ys) - min(ys) + 1)) // 2 - min(ys)
+    pts = {(x + ox, y + oy) for (x, y) in q}
+    cloth(im, pts, r)
+    weave(im, pts, r, b)
+    stitch(im, pts, b, lambda x, y: x >= max(xs) + ox - 2)   # half of the seam it was cut along
+    edge = sorted(pts - inner(pts))
+    for i, (x, y) in enumerate(edge):       # bone fibres pulled out of the broken top edge
+        if y <= min(ys) + oy + 2 and i % 3 == 0 and 0 <= y - 1 and (x, y - 1) not in pts:
+            im.putpixel((x, y - 1), b[1])
+            if i % 6 == 0 and y - 2 >= 0:
+                im.putpixel((x, y - 2), b[0])
+    lobe = min(pts, key=lambda t: t[0] * 2 + t[1])
+    im.putpixel(lobe, c[3]); im.putpixel((lobe[0] + 1, lobe[1] + 1), c[2])   # copper glint, top-left light
+    return finish(im, LOOM_DEEP)
+
+
 # ------------------------------------------------------------------ voidloom items
 VOID = (0x4a, 0x3f, 0x7a, 255)   # void-yarn violet
 
@@ -563,6 +653,8 @@ def build():
     put("ninjacatskies", "item/frayed_thread", frayed_thread())
     put("ninjacatskies", "item/codex_page", codex_page())
     put("ninjacatskies", "item/spindle_loom_fragment", spindle_loom_fragment())
+    put("ninjacatskies", "item/thread_shard", thread_shard())
+    put("ninjacatskies", "item/thread_of_return", thread_of_return())
     put("ninjacatskies", "item/end_apple", end_apple())
     put("ninjacatskies", "item/bitten_end_apple", end_apple(bite=True))
     put("ninjacatskies", "block/tension_post", tension_post_side())

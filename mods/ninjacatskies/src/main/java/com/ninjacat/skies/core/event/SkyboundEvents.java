@@ -171,6 +171,24 @@ public final class SkyboundEvents {
         }).orElse(false);
     }
 
+    /**
+     * A Thread of Return spent from the hand: repeatable, so it carries no milestone receipt. Returns false when
+     * lives are switched off or the player has no Clowder, and the item is then not consumed.
+     */
+    public static boolean spendThreadOfReturn(ServerPlayer player) {
+        if (!SkiesConfig.HARDCORE_LIVES_ENABLED.get()) return false;
+        return LoomTension.clowderOf(player).map(team -> {
+            if (!ClowderLives.grant(team, SkiesConfig.STARTING_LIVES.get())) return false;
+            int lives = ClowderLives.remaining(team, SkiesConfig.STARTING_LIVES.get());
+            for (ServerPlayer member : team.onlineMembers()) {
+                enforceLives(member);
+                member.sendSystemMessage(NinjacatText.gold(player.getGameProfile().getName()
+                        + " spends a Thread of Return: +1 shared Clowder life. Remaining: " + lives));
+            }
+            return true;
+        }).orElse(false);
+    }
+
     public static int resetLives(ServerPlayer player) {
         return LoomTension.clowderOf(player)
                 .map(team -> ClowderLives.reset(team, SkiesConfig.STARTING_LIVES.get())).orElse(0);

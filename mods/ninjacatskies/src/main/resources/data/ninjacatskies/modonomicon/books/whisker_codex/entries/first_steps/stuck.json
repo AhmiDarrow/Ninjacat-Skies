@@ -42,7 +42,17 @@
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "`/skybound lives` prints the pool. Six quest rewards named **Thread of Return** each add one life when claimed. There is no item to use. Operators run `/skybound revive`. Plan trips together."
+      "text": "`/skybound lives` prints the pool. Six quest rewards named **Thread of Return** each add one life when claimed, once per Clowder."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "After those, a **Thread of Return** is an item: four **Thread Shards** stitched around a Braid Cord, right-clicked for one more shared life, as often as you can pay for it. Cut a Shard from diamonds, Void Yarn and a Rift Shard, or buy one from Spark at `/clowder hub`."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "Keep one in a pocket **before** the pool empties: at zero you are already a spectator and cannot use anything. Operators run `/skybound revive`. Plan trips together."
     },
     {
       "type": "modonomicon:text",

@@ -1,0 +1,12 @@
+{
+  "stall": "grit",
+  "cost": {
+    "id": "minecraft:netherite_ingot",
+    "count": 1
+  },
+  "result": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 64
+  },
+  "max_uses": 4
+}

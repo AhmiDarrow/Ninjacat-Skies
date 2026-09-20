@@ -182,6 +182,14 @@ entry("the_cut", "thread", "Frayed Thread", "Currency, string, and Hall stalls."
               "for three string. Or keep it: **Kin stalls in Clowder Hall** (`/clowder hub`) sell saplings, "
               "buckets, meshes, pearls, and other things a pad runs short of. Right-click an Elder.\n\n"
               "**Check:** you can buy a sapling or mesh at a Hall Elder without going broke on string."),
+    text("Earning Thread back",
+         "**Goal:** turn a mined stockpile into spendable Thread.\n\n"
+         "You need blocks of copper, iron, gold, amethyst, emerald or diamond, or a netherite ingot.\n\n"
+         "**Grit** in Clowder Hall takes them across the counter for Thread. The rate is bad on purpose "
+         "— a whole diamond block comes back as 24 Thread, and Spark sells two diamonds for 80 — so it "
+         "is a way to spend a surplus, never a loop to farm. Stock returns each Minecraft day.\n\n"
+         "**Check:** you can price one life at the Spark stall (four Shards, 400 Thread each) and say "
+         "how many blocks that is before you start digging."),
     text("Codex Pages",
          "**Goal:** read a margin note without spending the page.\n\n"
          "You need a **Codex Page** from seating (every third Strand) or a Hall Kin stall.\n\n"

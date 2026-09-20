@@ -25,6 +25,21 @@
     },
     {
       "type": "modonomicon:text",
+      "title": "Earning Thread back",
+      "text": "**Goal:** turn a mined stockpile into spendable Thread.\\\nYou need blocks of copper, iron, gold, amethyst, emerald or diamond, or a netherite ingot."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Grit** in Clowder Hall takes them across the counter for Thread. The rate is bad on purpose — a whole diamond block comes back as 24 Thread, and Spark sells two diamonds for 80 — so it is a way to spend a surplus, never a loop to farm. Stock returns each Minecraft day."
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "Continue",
+      "text": "**Check:** you can price one life at the Spark stall (four Shards, 400 Thread each) and say how many blocks that is before you start digging."
+    },
+    {
+      "type": "modonomicon:text",
       "title": "Codex Pages",
       "text": "**Goal:** read a margin note without spending the page.\\\nYou need a **Codex Page** from seating (every third Strand) or a Hall Kin stall.\\\nEvery third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. Right-click to read it. Pages are kept, not spent."
     },

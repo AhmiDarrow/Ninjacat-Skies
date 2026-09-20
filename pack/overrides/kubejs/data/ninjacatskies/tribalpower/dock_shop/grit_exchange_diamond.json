@@ -1,0 +1,12 @@
+{
+  "stall": "grit",
+  "cost": {
+    "id": "minecraft:diamond_block",
+    "count": 1
+  },
+  "result": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 24
+  },
+  "max_uses": 8
+}

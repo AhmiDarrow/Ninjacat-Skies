@@ -880,16 +880,6 @@
     "sha1": "439ea1baa5e3065e36e0e57422f22403918bb59f"
   },
   {
-    "key": "Ninjacat Skies Core",
-    "name": "Ninjacat Skies Core",
-    "slug": "ninjacat-skies-core",
-    "projectId": 1689718,
-    "fileId": 8925254,
-    "filename": "ninjacatskies-core-0.5.3.jar",
-    "releaseType": 1,
-    "sha1": "fb09275ad36b7511646beec6efc267960e7ddd96"
-  },
-  {
     "key": "Tribal Power",
     "name": "TribalPower",
     "slug": "tribalpower",
@@ -968,5 +958,15 @@
     "filename": "chocobosreborn-1.0.8.jar",
     "releaseType": 1,
     "sha1": "d44695aa5ff772b4ae1f1caa801621cbd5409906"
+  },
+  {
+    "key": "Ninjacat Skies Core",
+    "name": "Ninjacat Skies Core",
+    "slug": "ninjacat-skies-core",
+    "projectId": 1689718,
+    "fileId": 8927258,
+    "filename": "ninjacatskies-core-0.5.4.jar",
+    "releaseType": 1,
+    "sha1": "f1db6cfd1fdb2d14aa6fa836887d7ea33915de76"
   }
 ]
