@@ -1964,9 +1964,9 @@
 	]
 	quest.4200000000080168.title: "Amethyst"
 	quest.4200000000080169.quest_desc: [
-		"Right-click the Tension Post with a Strand Filament. The Post is all you need.",
+		"Right-click the Tension Post holding 16 Strand Filaments. No Strand has to be seated.",
 		"Bind begins here.",
-		"How: right-click the Tension Post with a Strand Filament. Sieve gravel or sand with an iron Thread Mesh to find one."
+		"How: right-click the Tension Post holding 16 Strand Filaments. Sieve gravel or sand with an iron Thread Mesh to find them."
 	]
 	quest.4200000000080169.title: "Braid Cord"
 	quest.420000000008016A.quest_desc: [
@@ -2198,9 +2198,9 @@
 	]
 	quest.4200000000090195.title: "Spin the Filament"
 	quest.4200000000090196.quest_desc: [
-		"One Filament, one right-click on the Post.",
+		"Sixteen Filaments, one right-click on the Post.",
 		"Bind has begun; Reweave starts here.",
-		"How: right-click the Tension Post with a Strand Filament. Sieve gravel or sand with an iron Thread Mesh to find one."
+		"How: right-click the Tension Post holding 16 Strand Filaments. Sieve gravel or sand with an iron Thread Mesh to find them."
 	]
 	quest.4200000000090196.title: "Splice a Braid"
 	quest.4200000000090197.quest_desc: [

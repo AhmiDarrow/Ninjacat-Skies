@@ -44,6 +44,9 @@ import java.util.Map;
  * so tokens are proof, never fuel.
  */
 public class TensionPostBlock extends BaseEntityBlock {
+    /** Filaments a Braid Cord costs, taken from the stack in hand. */
+    public static final int BRAID_FILAMENTS = 16;
+
     public static final MapCodec<TensionPostBlock> CODEC = simpleCodec(TensionPostBlock::new);
     public static final Map<Strand, BooleanProperty> SEATED = new EnumMap<>(Strand.class);
     public static final BooleanProperty REWOVEN = BooleanProperty.create("rewoven");
@@ -190,14 +193,24 @@ public class TensionPostBlock extends BaseEntityBlock {
             return ItemInteractionResult.CONSUME;
         }
 
-        // Strand Filament → Braid Cord. The Post itself is the requirement: a Clowder that can raise
-        // one can braid at it. It used to want two of Clock / Swarm / Spark seated, which put the
+        // Strand Filaments → Braid Cord. The Post is the only progression requirement — no Strand has
+        // to be seated — but a cord is BRAID_FILAMENTS filaments' worth of thread, taken from the
+        // stack in hand. The old gate wanted two of Clock / Swarm / Spark seated, which put the
         // Thread of Return most of the way through the pack, well past the people who needed it.
         if (ModItems.is(stack, "voidloom:strand_filament")) {
-            consume(player, stack);
+            if (!player.getAbilities().instabuild && stack.getCount() < BRAID_FILAMENTS) {
+                int short_ = BRAID_FILAMENTS - stack.getCount();
+                level.playSound(null, pos, SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.BLOCKS, 0.6F, 0.6F);
+                player.displayClientMessage(NinjacatText.teal(
+                        "A cord wants " + BRAID_FILAMENTS + " filaments in hand. " + short_ + " short."), true);
+                return ItemInteractionResult.CONSUME;
+            }
+            if (!player.getAbilities().instabuild) {
+                stack.shrink(BRAID_FILAMENTS);
+            }
             LoomTension.giveOrDrop(sp, new ItemStack(ModItems.BRAID_CORD.get()));
             level.playSound(null, pos, SoundEvents.NOTE_BLOCK_CHIME.value(), SoundSource.BLOCKS, 0.8F, 1.3F);
-            player.displayClientMessage(NinjacatText.gold("The filament takes the braid. The post holds it taut."), true);
+            player.displayClientMessage(NinjacatText.gold("Sixteen filaments take the braid. The post holds it taut."), true);
             return ItemInteractionResult.CONSUME;
         }
 

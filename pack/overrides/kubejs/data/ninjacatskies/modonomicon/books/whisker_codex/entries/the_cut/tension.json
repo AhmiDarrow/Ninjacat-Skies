@@ -36,12 +36,12 @@
     {
       "type": "modonomicon:text",
       "title": "Spun at the Post",
-      "text": "**Goal:** spin **Braid Cord**, then a **Spindle Loom Fragment**, at the Post — not the bench.\\\nYou need a **Strand Filament**; **March Stone** once all nine are seated.\\\n**Braid Cord**: right-click with a Strand Filament. The Post is the only requirement."
+      "text": "**Goal:** spin **Braid Cord**, then a **Spindle Loom Fragment**, at the Post — not the bench.\\\nYou need **16 Strand Filaments**; **March Stone** once all nine are seated.\\\n**Braid Cord**: right-click holding **16 Strand Filaments**. No Strand has to be seated."
     },
     {
       "type": "modonomicon:text",
       "title": "Continue",
-      "text": "**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave.\\\n**Check:** a Strand Filament at the Post gives you Braid Cord, and a Fragment after nine seats plus March Stone."
+      "text": "**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave.\\\n**Check:** 16 filaments at the Post give you Braid Cord, and a Fragment after nine seats plus March Stone."
     }
   ],
   "parents": [
