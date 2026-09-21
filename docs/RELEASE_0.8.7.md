@@ -1,5 +1,7 @@
 # Ninjacat Skies 0.8.7 — A braid needs a Post
 
+Pack CurseForge client file **8935987**, server additional **8935991**.
+
 Ninjacat Skies Core 0.5.6. One progression fix: the **Braid Cord** no longer waits on seated
 Strands, which moves the **Thread of Return** out of the late game. Existing saves load as they
 are; no quest ids change, nothing already seated or earned is touched, and the mod list is
