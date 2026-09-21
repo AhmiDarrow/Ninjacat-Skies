@@ -43,8 +43,8 @@ STRAND_BRAID_CHECKS = {
     ),
     'bind': (
         '**Goal:** spin **Braid Cord** and seat Sigil.\n\n'
-        'You need a **Strand Filament** and a **Tension Post**.\n\n'
-        '**Check:** Right-click the Post with a Strand Filament for **Braid Cord**. Finish Sigil, then seat the Sigil token.'
+        'You need **16 Strand Filaments** and a **Tension Post**.\n\n'
+        '**Check:** Right-click the Post holding 16 Strand Filaments for **Braid Cord**. Finish Sigil, then seat the Sigil token.'
     ),
     'reweave': (
         '**Goal:** close your Clowder\'s cut with March Stone.\n\n'
@@ -197,7 +197,7 @@ def build_lessons(book, write, text, entry, category):
         ('choose_branches', 'Choose two middle branches', 'ninjacatskies:braid_cord', [
             text('Three routes',
                  '**Goal:** spin **Braid Cord** at the Post, then work the three middle branches.\n\n'
-                 'You need a **Strand Filament** and a **Tension Post**. No Strand has to be seated first.\n\n'
+                 'You need **16 Strand Filaments** and a **Tension Post**. No Strand has to be seated first.\n\n'
                  'After Claw, three branches open together:\n\n'
                  '**Pattern / Clock:** mechanical processing.\n'
                  '**Colony / Swarm:** bees and their production chains.\n'
@@ -205,7 +205,7 @@ def build_lessons(book, write, text, entry, category):
                  'A team can divide the work. You will still need all nine Strands for the final reweave.'),
             text('Make Braid Cord',
                  '1. Stand at your **Tension Post**.\n'
-                 '2. Hold a **Strand Filament** - sieve gravel or sand with an iron Thread Mesh.\n'
+                 '2. Hold **16 Strand Filaments** - sieve gravel or sand with an iron Thread Mesh.\n'
                  '3. Right-click the Post to receive **Braid Cord**.\n\n'
                  'Do not put Strand tokens in a crafting grid. They record progress, and the braid does not need them.'),
             text('Check',

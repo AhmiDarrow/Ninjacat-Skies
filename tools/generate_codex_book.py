@@ -168,10 +168,10 @@ entry("the_cut", "tension", "Loom Tension", "The Post, the seat, the hum.", f"{N
          "at a time."),
     text("Spun at the Post",
          "**Goal:** spin **Braid Cord**, then a **Spindle Loom Fragment**, at the Post — not the bench.\n\n"
-         "You need a **Strand Filament**; **March Stone** once all nine are seated.\n\n"
-         "**Braid Cord**: right-click with a Strand Filament. The Post is the only requirement.\n\n"
+         "You need **16 Strand Filaments**; **March Stone** once all nine are seated.\n\n"
+         "**Braid Cord**: right-click holding **16 Strand Filaments**. No Strand has to be seated.\n\n"
          "**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave.\n\n"
-         "**Check:** a Strand Filament at the Post gives you Braid Cord, and a Fragment after nine seats plus March Stone."),
+         "**Check:** 16 filaments at the Post give you Braid Cord, and a Fragment after nine seats plus March Stone."),
 ], parents=["clowder"])
 
 entry("the_cut", "thread", "Frayed Thread", "Currency, string, and Hall stalls.", f"{NS}:frayed_thread", 4, 2, [
@@ -552,7 +552,7 @@ BRAID = [
      "and Mekanism are bridges you cross later, if you want.\n\nBone Chime, Spirit Shard, Copper Resonator, "
      "Drumheart. Then listen."),
     ("bind", "Bind", "Sigil", f"{NS}:braid_cord", 10, 0, None,
-     "**Sigil.** A Strand Filament in hand, right-click the Post: **Braid "
+     "**Sigil.** Sixteen Strand Filaments in hand, right-click the Post: **Braid "
      "Cord**.\n\nThen seals and rites — Tribal Power's own, with Nature's Aura, Ars Nouveau, and Occultism as "
      "peers. Carve carefully."),
     ("reweave", "Reweave", "Spindle", "ae2:controller", 12, 0, "bind",

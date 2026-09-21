@@ -1,4 +1,4 @@
-// Loom Braid glue — Braid Cord is spun at the Tension Post from a Strand Filament. The Post is the
+// Loom Braid glue — Braid Cord is spun at the Tension Post from 16 Strand Filaments. The Post is the
 // only requirement: the two-of-Clock/Swarm/Spark gate put the Thread of Return most of the way
 // through the pack, past the players who needed a spare life most.
 // This file only keeps the Reweave soft gate: the molecular assembler wants a braid at its centre.
