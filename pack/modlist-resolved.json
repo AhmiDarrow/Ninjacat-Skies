@@ -950,16 +950,6 @@
     "sha1": "d44695aa5ff772b4ae1f1caa801621cbd5409906"
   },
   {
-    "key": "Ninjacat Skies Core",
-    "name": "Ninjacat Skies Core",
-    "slug": "ninjacat-skies-core",
-    "projectId": 1689718,
-    "fileId": 8927258,
-    "filename": "ninjacatskies-core-0.5.4.jar",
-    "releaseType": 1,
-    "sha1": "f1db6cfd1fdb2d14aa6fa836887d7ea33915de76"
-  },
-  {
     "key": "Sodium",
     "name": "Sodium",
     "slug": "sodium",
@@ -1038,5 +1028,15 @@
     "filename": "tribalpower-3.7.1.jar",
     "releaseType": 1,
     "sha1": "ddaead442167ee164cf789a094fb9b53bbf0d44c"
+  },
+  {
+    "key": "Ninjacat Skies Core",
+    "name": "Ninjacat Skies Core",
+    "slug": "ninjacat-skies-core",
+    "projectId": 1689718,
+    "fileId": 8935836,
+    "filename": "ninjacatskies-core-0.5.6.jar",
+    "releaseType": 1,
+    "sha1": "5cf67d939cfcb0a22d6583dbc9511ddc0f21f2b9"
   }
 ]
