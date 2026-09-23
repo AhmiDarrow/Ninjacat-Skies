@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.8 — A quarter of the beds
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8958894**, server additional **8958897**.
 
 Ninjacat Skies Core 0.5.7, Tribal Power 4.0.1 and Chocobos Reborn 1.0.12. Existing saves load as
 they are; no quest ids change, and the mod list is unchanged at 104.
