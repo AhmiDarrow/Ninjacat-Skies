@@ -15,6 +15,7 @@ public final class SkiesConfig {
     public static final ModConfigSpec.IntValue FRAY_Z;
     public static final ModConfigSpec.BooleanValue SKY_TINT;
     public static final ModConfigSpec.BooleanValue SUNDERED_SKY;
+    public static final ModConfigSpec.IntValue SLEEP_PERCENTAGE;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -50,6 +51,12 @@ public final class SkiesConfig {
         STARTING_LIVES = builder
                 .comment("Lives contributed once by each member to the shared team pool; operator revive restores this count times current members.")
                 .defineInRange("startingLives", 3, 1, 99);
+        builder.pop();
+
+        builder.push("sleep");
+        SLEEP_PERCENTAGE = builder
+                .comment("Share of a dimension's online players who must sleep to pass the night there. Written to the playersSleepingPercentage gamerule on every server start. -1 leaves the gamerule alone.")
+                .defineInRange("playersSleepingPercentage", 25, -1, 100);
         builder.pop();
 
         SPEC = builder.build();
