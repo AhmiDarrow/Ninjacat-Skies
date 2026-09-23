@@ -31,3 +31,9 @@
 	skyTint = true
 	#Client: replace the Overworld sky with the sundered Loom (gold Cut, void tears). Disable for shader packs that draw their own sky.
 	sunderedSky = true
+
+[sleep]
+	#Share of a dimension's online players who must sleep to pass the night there. Written to the playersSleepingPercentage gamerule on every server start. -1 leaves the gamerule alone.
+	# Default: 25
+	# Range: -1 ~ 100
+	playersSleepingPercentage = 25

@@ -36,6 +36,15 @@ foreach ($c in $chapters) {
     if ($lang -notmatch [regex]::Escape("chapter.$chapterId.title")) {
         [void]$failures.Add("Missing lang chapter title for $($c.Name) id=$chapterId")
     }
+    # FTB drops a whole chapter that does not parse ("Unexpected end of file"), so its brackets must close
+    $depth = 0
+    foreach ($m in [regex]::Matches(($text -replace '"(?:[^"\\]|\\.)*"', '""'), '[\{\[\}\]]')) {
+        if ($m.Value -eq '{' -or $m.Value -eq '[') { $depth++ } else { $depth-- }
+        if ($depth -lt 0) { break }
+    }
+    if ($depth -ne 0) {
+        [void]$failures.Add("$($c.Name) brackets do not balance (depth $depth); FTB Quests would skip the chapter")
+    }
     # Count quest-like objects: blocks that include both id and tasks
     $questBlocks = [regex]::Matches($text, '(?s)\{\s*[^\}]*?\bid:\s*"[0-9A-Fa-f]{16}"[^\}]*?\btasks:\s*\[')
     if ($questBlocks.Count -lt 5) {
