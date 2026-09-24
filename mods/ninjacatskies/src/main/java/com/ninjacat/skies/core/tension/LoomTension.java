@@ -305,6 +305,8 @@ public final class LoomTension {
     }
 
     public static void sync(ServerPlayer player, Clowder c) {
+        // A connection that never negotiated the channel (a GameTest mock player) cannot take it: sending would throw.
+        if (!player.connection.hasChannel(TensionSyncPayload.TYPE)) return;
         PacketDistributor.sendToPlayer(player, new TensionSyncPayload(strandBits(c), isRewoven(c)));
     }
 

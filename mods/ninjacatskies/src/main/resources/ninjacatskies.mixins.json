@@ -4,6 +4,9 @@
   "package": "com.ninjacat.skies.core.mixin",
   "compatibilityLevel": "JAVA_21",
   "plugin": "com.ninjacat.skies.core.mixin.SkiesMixinPlugin",
+  "mixins": [
+    "PlayerDismountMixin"
+  ],
   "client": [
     "MobTooltipMixin"
   ],

@@ -312,5 +312,11 @@
     "key": "key.keyboard.f7",
     "modifier": "NONE",
     "context": "original"
+  },
+  {
+    "name": "key.ninjacatskies.dismount",
+    "key": "key.keyboard.caps.lock",
+    "modifier": "NONE",
+    "context": "world"
   }
 ]

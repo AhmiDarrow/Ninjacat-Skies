@@ -50,6 +50,8 @@ public final class NinjacatSkies {
             modBus.addListener(com.ninjacat.skies.core.client.PanoramicSky::registerShaders);
             NeoForge.EVENT_BUS.register(new SkyTint());
             NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.PackKeybindings());
+            modBus.addListener(com.ninjacat.skies.core.client.DismountKey::register);
+            NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.DismountKey());
             if (Boolean.getBoolean("ninjacatskies.uiVerification")) NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.UiVerification());
         }
 
@@ -59,6 +61,8 @@ public final class NinjacatSkies {
     private void onRegisterPayloads(RegisterPayloadHandlersEvent event) {
         PayloadRegistrar registrar = event.registrar("1");
         registrar.playToClient(TensionSyncPayload.TYPE, TensionSyncPayload.STREAM_CODEC, ClientTension::handle);
+        registrar.playToServer(com.ninjacat.skies.core.network.DismountPayload.TYPE,
+                com.ninjacat.skies.core.network.DismountPayload.STREAM_CODEC, com.ninjacat.skies.core.network.DismountPayload::handle);
     }
 
     private void onRegisterCommands(RegisterCommandsEvent event) {
