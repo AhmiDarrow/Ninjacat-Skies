@@ -48,15 +48,18 @@ public class ThreadGameTests {
                     .withParameter(LootContextParams.ORIGIN, player.position())
                     .withParameter(LootContextParams.THIS_ENTITY, player)
                     .create(LootContextParamSets.GIFT);
-            boolean shard = false, life = false;
-            for (int i = 0; i < 20000 && !(shard && life); i++) {
+            boolean shard = false, life = false, chicken = false, cow = false;
+            for (int i = 0; i < 20000 && !(shard && life && chicken && cow); i++) {
                 for (ItemStack stack : table.getRandomItems(params)) {
                     shard |= stack.is(ModItems.THREAD_SHARD.get());
                     life |= stack.is(ModItems.THREAD_OF_RETURN.get());
+                    chicken |= stack.is(net.minecraft.world.item.Items.CHICKEN_SPAWN_EGG);
+                    cow |= stack.is(net.minecraft.world.item.Items.COW_SPAWN_EGG);
                     h.assertFalse(stack.getItem() instanceof com.ninjacat.skies.core.item.StewardCacheItem, "A cache never holds a cache");
                 }
             }
             h.assertTrue(shard && life, tier + " cache can hold a Thread Shard and a Thread of Return");
+            h.assertTrue(chicken && cow, tier + " cache can hold livestock eggs for a pad");
         }
         h.succeed();
     }
