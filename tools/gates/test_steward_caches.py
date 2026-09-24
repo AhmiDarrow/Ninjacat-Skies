@@ -98,8 +98,8 @@ class StewardCaches(unittest.TestCase):
             self.assertEqual(set(weights), {'minecraft:empty', 'ninjacatskies:thread_shard', 'ninjacatskies:thread_of_return'})
             total = sum(weights.values())
             shard, whole = weights['ninjacatskies:thread_shard'] / total, weights['ninjacatskies:thread_of_return'] / total
-            self.assertTrue(0 < whole < shard <= 0.10, (tier, shard, whole))
-            self.assertLessEqual(whole, 0.01, 'a whole life stays a very long shot')
+            self.assertTrue(0 < whole < shard <= 0.12, (tier, shard, whole))
+            self.assertLessEqual(whole, 0.015, 'a whole life stays a very long shot')
             rare_odds.append((shard, whole))
         self.assertEqual(rare_odds, sorted(rare_odds), 'a bigger seal never has worse odds')
 

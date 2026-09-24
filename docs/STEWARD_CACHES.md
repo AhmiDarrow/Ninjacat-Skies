@@ -5,7 +5,7 @@ The Nine Tribes set aside provisions for the Clowders who would follow. These se
 - **Small:** two weighted supply rolls: bread, torches, bone meal, string, clay, saplings, seeds and leather, and about one roll in four copper, iron or Frayed Thread.
 - **Medium:** five rolls; roughly half are the better pool: iron and copper ingots, gold, redstone, lapis, bottled experience and Frayed Thread.
 - **Large:** twelve rolls; roughly three in five are better: ingots, redstone, lapis, experience, and a chance of diamonds, emeralds, ender pearls, obsidian or a Thread Skein.
-- **The rare draw:** every seal also makes one draw on its own: a **Thread Shard** at 1% / 3% / 10% (small / medium / large), or a whole **Thread of Return** at 0.1% / 0.3% / 1%. Across a campaign's ~530 caches that is about eight Shards and slightly under one whole Thread on average.
+- **The rare draw:** every seal also makes one draw on its own: a **Thread Shard** at 1.5% / 4% / 12% (small / medium / large), or a whole **Thread of Return** at 0.2% / 0.5% / 1.5%. Across a campaign's ~530 caches that is about eleven Shards and one and a half whole Threads on average.
 
 ![The three Steward cache sizes in Minecraft](images/steward-cache-models.png)
 
