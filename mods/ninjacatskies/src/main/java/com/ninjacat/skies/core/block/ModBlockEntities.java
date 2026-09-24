@@ -16,5 +16,11 @@ public final class ModBlockEntities {
                     () -> BlockEntityType.Builder.of(TensionPostBlockEntity::new, ModBlocks.TENSION_POST.get()).build(null)
             );
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<YarnBasketBlockEntity>> YARN_BASKET =
+            BLOCK_ENTITY_TYPES.register(
+                    "yarn_basket",
+                    () -> BlockEntityType.Builder.of(YarnBasketBlockEntity::new, ModBlocks.YARN_BASKET.get()).build(null)
+            );
+
     private ModBlockEntities() {}
 }
