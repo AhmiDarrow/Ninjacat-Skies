@@ -1,6 +1,14 @@
 # Ninjacat Skies Core 0.5.10
 
-**Thread comes in skeins and bolts, and Steward Caches are worth opening.** Existing saves load as they are; no ids change. This replaces 0.5.8 and 0.5.9, which never shipped in a pack.
+**Your things wait in a basket, Thread comes in skeins and bolts, and Steward Caches are worth opening.** Existing saves load as they are; no ids change. This replaces 0.5.8 and 0.5.9, which never shipped in a pack.
+
+**The Yarn Basket**
+
+- **When you die, everything you drop goes into a Yarn Basket** where you fell: a wicker basket of yarn balls, not a scatter of items. That includes your Curios slots. If you fell into the void, it waits where you last stood. You get a chat line saying where it is.
+- **Right-click it to take everything back** into your inventory, or break it to spill it on the ground. Right-click works even where breaking is protected, like the Dock and the Hall.
+- **It is yours and your Clowder's.** Anyone else gets a polite no, and can neither open it nor break it. It shrugs off explosions and pistons, and never despawns.
+- Deaths on a Guardians stage or in a rift are handled as before: those drops still come home with you.
+- Server owners can switch it off with `hardcore.yarnBasket` in `ninjacatskies-common.toml`.
 
 **Thread Skeins and Thread Bolts**
 

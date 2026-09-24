@@ -42,6 +42,7 @@ public final class NinjacatSkies {
         NeoForge.EVENT_BUS.register(new SkyboundEvents());
         NeoForge.EVENT_BUS.register(new TensionEffects());
         NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.SleepRule());
+        NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.DeathBasket());
         com.ninjacat.skies.core.tension.LoomTension.init();
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
         if (FMLEnvironment.dist.isClient()) {

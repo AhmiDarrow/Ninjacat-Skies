@@ -682,6 +682,71 @@ def end_apple(bite=False):
     return finish(im, END_SKIN)
 
 
+# ------------------------------------------------------------------ yarn basket (death stash)
+def basket_weave(im, x0, y0, x1, y1):
+    """Wicker: each 4 px withy row bulges round (lit top, cool underside) and dips behind every other
+    upright stake; rows alternate which stakes they cover, so the whole face reads over-under."""
+    w = ramp(WOOD_LIGHT); k = ramp(WOOD)
+    for y in range(y0, y1 + 1):
+        row, ry = divmod(y - y0, 4)
+        for x in range(x0, x1 + 1):
+            col, rx = divmod(x - x0, 4)
+            front = (col + row) % 2 == 0
+            c = (w[4], w[3], w[2], w[1])[ry]
+            if not front and rx in (0, 3):      # the withy tucks behind a stake: its ends fall into shade
+                c = mix(c, INK, 0.28)
+            if not front and rx in (1, 2):      # the stake itself, showing between two rows
+                c = (k[3], k[2], k[2], k[1])[ry]
+            if ry == 3 and front:
+                c = w[0]
+            im.putpixel((x, y), c)
+
+
+def yarn_basket_side():
+    im = blank(); basket_weave(im, 0, 0, 31, 31)
+    d = draw(im); k = ramp(WOOD)
+    d.line((0, 31, 31, 31), fill=k[0])
+    return im
+
+
+def yarn_basket_rim():
+    """A braided rim band: the model uses it for the rim sides and the ring on top (centre left clear)."""
+    im = blank(); w = ramp(WOOD_LIGHT)
+    for y in range(32):
+        for x in range(32):
+            c = w[3] if (x + y // 2) % 4 < 2 else w[1]
+            if y % 8 == 0:
+                c = w[4]
+            im.putpixel((x, y), c)
+    for y in range(4, 28):  # hollow centre for the top face: the balls sit inside
+        for x in range(4, 28):
+            im.putpixel((x, y), CLEAR)
+    return im
+
+
+def yarn_basket_inside():
+    im = blank(); basket_weave(im, 0, 0, 31, 31)
+    for y in range(32):
+        for x in range(32):
+            im.putpixel((x, y), mix(im.getpixel((x, y)), INK, 0.45))
+    return im
+
+
+def yarn_ball(base):
+    """A wound ball face: diagonal wraps across, a crossing band, top-left light."""
+    im = blank(); r = ramp(base)
+    for y in range(32):
+        for x in range(32):
+            wrap = (x + y) % 6
+            c = r[3] if wrap < 2 else (r[2] if wrap < 4 else r[1])
+            if (x - y) % 11 == 0:
+                c = r[4]
+            if x + y > 50:                      # the lower-right curve turns away from the light
+                c = mix(c, INK, 0.22)
+            im.putpixel((x, y), c)
+    return im
+
+
 # ------------------------------------------------------------------ build
 def build():
     kept()
@@ -698,6 +763,12 @@ def build():
     put("ninjacatskies", "item/end_apple", end_apple())
     put("ninjacatskies", "item/bitten_end_apple", end_apple(bite=True))
     put("ninjacatskies", "block/tension_post", tension_post_side())
+    put("ninjacatskies", "block/yarn_basket_side", yarn_basket_side())
+    put("ninjacatskies", "block/yarn_basket_rim", yarn_basket_rim())
+    put("ninjacatskies", "block/yarn_basket_inside", yarn_basket_inside())
+    put("ninjacatskies", "block/yarn_ball_teal", yarn_ball(LOOM))
+    put("ninjacatskies", "block/yarn_ball_copper", yarn_ball(COPPER))
+    put("ninjacatskies", "block/yarn_ball_bone", yarn_ball(BONE))
     put("ninjacatskies", "block/tension_post_top", tension_post_top())
     put("voidloom", "item/void_yarn", void_yarn())
     put("voidloom", "item/binding_knot", binding_knot())

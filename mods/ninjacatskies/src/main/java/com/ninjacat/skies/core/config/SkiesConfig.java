@@ -16,6 +16,7 @@ public final class SkiesConfig {
     public static final ModConfigSpec.BooleanValue SKY_TINT;
     public static final ModConfigSpec.BooleanValue SUNDERED_SKY;
     public static final ModConfigSpec.IntValue SLEEP_PERCENTAGE;
+    public static final ModConfigSpec.BooleanValue YARN_BASKET;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -51,6 +52,9 @@ public final class SkiesConfig {
         STARTING_LIVES = builder
                 .comment("Lives contributed once by each member to the shared team pool; operator revive restores this count times current members.")
                 .defineInRange("startingLives", 3, 1, 99);
+        YARN_BASKET = builder
+                .comment("On death, gather a player's dropped items into a Yarn Basket where they fell (or where they last stood, after a fall into the void). Only the owner, their Clowder or a creative player can open it.")
+                .define("yarnBasket", true);
         builder.pop();
 
         builder.push("sleep");
