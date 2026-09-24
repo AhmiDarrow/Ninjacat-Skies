@@ -17,6 +17,7 @@ public final class SkiesConfig {
     public static final ModConfigSpec.BooleanValue SUNDERED_SKY;
     public static final ModConfigSpec.IntValue SLEEP_PERCENTAGE;
     public static final ModConfigSpec.BooleanValue YARN_BASKET;
+    public static final ModConfigSpec.BooleanValue SNEAK_DISMOUNTS;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -61,6 +62,12 @@ public final class SkiesConfig {
         SLEEP_PERCENTAGE = builder
                 .comment("Share of a dimension's online players who must sleep to pass the night there. Written to the playersSleepingPercentage gamerule on every server start. -1 leaves the gamerule alone.")
                 .defineInRange("playersSleepingPercentage", 25, -1, 100);
+        builder.pop();
+
+        builder.push("controls");
+        SNEAK_DISMOUNTS = builder
+                .comment("Vanilla sneak-to-dismount. Off: sneak only steers what you ride (a chocobo descends) and the Dismount key (Caps Lock by default) gets you off.")
+                .define("sneakDismounts", false);
         builder.pop();
 
         SPEC = builder.build();
