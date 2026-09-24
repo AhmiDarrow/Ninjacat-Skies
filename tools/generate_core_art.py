@@ -208,6 +208,44 @@ def frayed_thread():
     return finish(im, BONE_SHADE)
 
 
+def thread_skein():
+    """Nine threads wound into a hank: a bone loop pinched by a brass tie, a frayed tail below."""
+    im = blank(); r = ramp(BONE)
+    for k in range(3):  # three nested windings, each a slightly smaller ellipse
+        ax, ay = 10.5 - k * 1.6, 6.0 - k * 1.2
+        pts = curve(lambda t: (16 + ax * math.cos(t * 2 * math.pi), 15 + ay * math.sin(t * 2 * math.pi)), 200)
+        cord(im, pts, r if k != 1 else [r[0], r[1], r[1], r[2], r[3]], 2)
+    d = draw(im); rb = ramp(BRASS)
+    d.rectangle((14, 7, 18, 23), fill=rb[2])
+    d.line((14, 7, 14, 23), fill=rb[3]); d.line((18, 7, 18, 23), fill=rb[1])
+    d.line((14, 7, 18, 7), fill=rb[4]); d.line((14, 23, 18, 23), fill=rb[0])
+    d.point((16, 12), fill=rb[1]); d.point((16, 18), fill=rb[1])
+    for dx, dy in ((0, 0), (0, 1), (-1, 2), (1, 2), (-1, 3), (1, 4)):  # frayed tail out of the tie
+        im.putpixel((16 + dx, 24 + dy), r[3 if dy < 3 else 2])
+    return finish(im, BONE_SHADE)
+
+
+def thread_bolt():
+    """Nine skeins on a wooden bolt: a wound bone drum between two wood flanges, a copper pin through the core."""
+    im = blank(); d = draw(im); r = ramp(BONE); w = ramp(WOOD_LIGHT)
+    d.rectangle((9, 8, 22, 24), fill=r[2])
+    for y in range(8, 25):  # winding rows: lit top rows, cool lower rows, a seam every other row
+        tone = 3 if y < 12 else (2 if y < 20 else 1)
+        d.line((9, y, 22, y), fill=r[tone])
+        if y % 2 == 0:
+            for x in range(9 + (y // 2) % 3, 23, 3):
+                im.putpixel((x, y), r[max(0, tone - 1)])
+    d.line((9, 8, 9, 24), fill=r[4])
+    for x0 in (5, 23):  # flanges
+        d.rectangle((x0, 5, x0 + 3, 27), fill=w[2])
+        d.line((x0, 5, x0, 27), fill=w[3]); d.line((x0 + 3, 5, x0 + 3, 27), fill=w[1])
+        d.line((x0, 5, x0 + 3, 5), fill=w[4]); d.line((x0, 27, x0 + 3, 27), fill=w[0])
+    c = ramp(COPPER)
+    for x0 in (6, 24):  # the copper pin heads
+        d.rectangle((x0, 15, x0 + 1, 17), fill=c[2]); im.putpixel((x0, 15), c[4]); im.putpixel((x0 + 1, 17), c[0])
+    return finish(im, WOOD_DARK)
+
+
 def codex_page():
     """A loose Codex page: torn left edge, dog-eared corner, teal and ink text lines, copper seal."""
     im = blank(); d = draw(im); r = ramp(BONE)
@@ -651,6 +689,8 @@ def build():
     notches()
     put("ninjacatskies", "item/braid_cord", braid_cord())
     put("ninjacatskies", "item/frayed_thread", frayed_thread())
+    put("ninjacatskies", "item/thread_skein", thread_skein())
+    put("ninjacatskies", "item/thread_bolt", thread_bolt())
     put("ninjacatskies", "item/codex_page", codex_page())
     put("ninjacatskies", "item/spindle_loom_fragment", spindle_loom_fragment())
     put("ninjacatskies", "item/thread_shard", thread_shard())

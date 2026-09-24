@@ -20,6 +20,8 @@ public final class ModCreativeTabs {
                     .displayItems((params, out) -> {
                         out.accept(ModItems.WHISKER_CODEX.get());
                         out.accept(ModItems.FRAYED_THREAD.get());
+                        out.accept(ModItems.THREAD_SKEIN.get());
+                        out.accept(ModItems.THREAD_BOLT.get());
                         out.accept(ModItems.SMALL_STEWARD_CACHE.get());
                         out.accept(ModItems.MEDIUM_STEWARD_CACHE.get());
                         out.accept(ModItems.LARGE_STEWARD_CACHE.get());

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ninjacatskies:frayed_thread"
+    }
+  },
+  "result": {
+    "id": "ninjacatskies:thread_skein",
+    "count": 1
+  }
+}

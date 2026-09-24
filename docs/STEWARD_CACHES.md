@@ -2,15 +2,16 @@
 
 The Nine Tribes set aside provisions for the Clowders who would follow. These sealed parcels reward steady progress without handing out machinery or bypassing the Loom.
 
-- **Small:** two weighted supply rolls: bread, torches, bone meal, string, clay, saplings or wheat seeds.
-- **Medium:** five rolls, adding leather, copper, iron nuggets and flower pots to a practical supply pool.
-- **Large:** twelve rolls, including food, growing supplies, leather, copper, small quantities of iron or gold, lanterns, books, honeycomb and occasional bottled experience.
+- **Small:** two weighted supply rolls: bread, torches, bone meal, string, clay, saplings, seeds and leather, and about one roll in four copper, iron or Frayed Thread.
+- **Medium:** five rolls; roughly half are the better pool: iron and copper ingots, gold, redstone, lapis, bottled experience and Frayed Thread.
+- **Large:** twelve rolls; roughly three in five are better: ingots, redstone, lapis, experience, and a chance of diamonds, emeralds, ender pearls, obsidian or a Thread Skein.
+- **The rare draw:** every seal also makes one draw on its own: a **Thread Shard** at 1% / 3% / 10% (small / medium / large), or a whole **Thread of Return** at 0.1% / 0.3% / 1%. Across a campaign's ~530 caches that is about eight Shards and slightly under one whole Thread on average.
 
 ![The three Steward cache sizes in Minecraft](images/steward-cache-models.png)
 
 Use a cache to unwrap it. Rolls can repeat; a particular item is never guaranteed. Four unopened small caches craft into one medium; three unopened mediums craft into one large. Combining trades some total basic-supply rolls for a broader pool and denser parcels. There is no downgrade recipe and opened supplies cannot be repacked.
 
-The new pools contain no machines, equipment, progression tokens, caches, Thread currency or extra lives. They do not drop from mobs. Six existing milestone rewards still grant the campaign's rare shared lives. The ten older, tribe-specific milestone caches keep their separate themed loot pools.
+The pools contain no machines, equipment, progression tokens or caches. They do not drop from mobs. The rare draw is the only way a cache touches a life; the six milestone rewards still grant the campaign's guaranteed shared lives. The ten older, tribe-specific milestone caches keep their separate themed loot pools.
 
 The 0.6.1 audit found 1,441 of 1,495 quests awarding Threads, with 1,211 awarding only Threads. Version 0.6.2 adds 381 small, 104 medium and six large caches across 491 quests. Existing Thread rewards and the repeatable Desk shop are unchanged. Every third eligible quest within a chapter receives a cache; occasional larger parcels replace that small-cache allocation. The first cache in each chapter explains the system.
 

@@ -22,7 +22,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:torch",
-          "weight": 3,
+          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -37,7 +37,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:bone_meal",
-          "weight": 3,
+          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -67,7 +67,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:clay_ball",
-          "weight": 2,
+          "weight": 1,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -108,6 +108,85 @@
               }
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:copper_ingot",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ninjacatskies:frayed_thread",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 989
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ninjacatskies:thread_shard",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ninjacatskies:thread_of_return",
+          "weight": 1
         }
       ]
     }
