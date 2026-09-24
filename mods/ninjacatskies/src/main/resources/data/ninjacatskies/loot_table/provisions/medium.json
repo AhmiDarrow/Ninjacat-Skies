@@ -236,17 +236,17 @@
       "entries": [
         {
           "type": "minecraft:empty",
-          "weight": 967
+          "weight": 955
         },
         {
           "type": "minecraft:item",
           "name": "ninjacatskies:thread_shard",
-          "weight": 30
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "ninjacatskies:thread_of_return",
-          "weight": 3
+          "weight": 5
         }
       ]
     }
