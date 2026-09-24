@@ -702,7 +702,7 @@ def finalize_chapter(strand_i, quests):
                         "The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, "
                         "or craft four small caches into a medium and three mediums into a large. "
                         "Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. "
-                        "No machines, progression tokens or extra lives hide inside.")
+                        "No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.")
         title_key = f"quest.{q['id']}.title"
         title = lang.get(title_key)
         life_milestone = {"Seat Clock": "clock", "Dragon Egg Show": "dragon", "Ultimate Cube": "power", "Seat Sigil": "sigil", "Thirteen voices, one sky": "bestiary", "Reweave": "reweave"}.get(title)

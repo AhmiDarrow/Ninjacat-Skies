@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ninjacatskies:thread_skein"
+    }
+  ],
+  "result": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 9
+  }
+}

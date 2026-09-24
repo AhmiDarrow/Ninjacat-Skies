@@ -25,6 +25,10 @@ public final class ModItems {
             new Item.Properties()
     );
 
+    // Denser Thread for the Hall stalls: a trade slot holds one stack, so big prices are paid in skeins and bolts.
+    public static final DeferredItem<Item> THREAD_SKEIN = ITEMS.registerSimpleItem("thread_skein", new Item.Properties());
+    public static final DeferredItem<Item> THREAD_BOLT = ITEMS.registerSimpleItem("thread_bolt", new Item.Properties());
+
     public static final DeferredItem<StewardCacheItem> SMALL_STEWARD_CACHE = ITEMS.register(
             "small_steward_cache", () -> new StewardCacheItem("small"));
     public static final DeferredItem<StewardCacheItem> MEDIUM_STEWARD_CACHE = ITEMS.register(

@@ -188,7 +188,7 @@ entry("the_cut", "thread", "Frayed Thread", "Currency, string, and Hall stalls."
          "**Grit** in Clowder Hall takes them across the counter for Thread. The rate is bad on purpose "
          "— a whole diamond block comes back as 24 Thread, and Spark sells two diamonds for 80 — so it "
          "is a way to spend a surplus, never a loop to farm. Stock returns each Minecraft day.\n\n"
-         "**Check:** you can price one life at the Spark stall (four Shards, 400 Thread each) and say "
+         "**Check:** you can price one life at the Spark stall (four Shards, 44 Thread Skeins each) and say "
          "how many blocks that is before you start digging."),
     text("Codex Pages",
          "**Goal:** read a margin note without spending the page.\n\n"

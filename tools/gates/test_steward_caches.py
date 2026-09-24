@@ -78,18 +78,30 @@ class StewardCaches(unittest.TestCase):
         print('Cache rewards:', caches)
 
     def test_supplies_are_bounded_and_cannot_recurse_or_skip_progression(self):
-        allowed = set('bread torch bone_meal string clay_ball oak_sapling wheat_seeds leather copper_ingot iron_nugget flower_pot cooked_beef iron_ingot gold_ingot lantern book honeycomb experience_bottle'.split())
+        allowed = set('bread torch bone_meal string clay_ball oak_sapling wheat_seeds leather copper_ingot iron_nugget flower_pot cooked_beef iron_ingot gold_ingot lantern book honeycomb experience_bottle redstone lapis_lazuli diamond emerald ender_pearl obsidian'.split())
+        allowed = {'minecraft:' + i for i in allowed} | {'ninjacatskies:frayed_thread', 'ninjacatskies:thread_skein'}
+        rare_odds = []
         for tier, rolls in zip(TIERS, (2, 5, 12)):
             data = json.loads((RES / f'data/ninjacatskies/loot_table/provisions/{tier}.json').read_text())
             self.assertEqual(data['type'], 'minecraft:gift')
-            self.assertEqual(len(data['pools']), 1)
-            pool = data['pools'][0]
+            self.assertEqual(len(data['pools']), 2, 'supplies, then one rare draw')
+            pool, rare = data['pools']
             self.assertEqual(pool['rolls'], rolls)
             for e in pool['entries']:
-                self.assertIn(e['name'], {'minecraft:' + i for i in allowed})
+                self.assertIn(e['name'], allowed)
                 self.assertGreater(e['weight'], 0)
                 count = e['functions'][0]['count']
                 self.assertTrue(1 <= count['min'] <= count['max'] <= 12)
+            # The rare draw is the only way a cache touches a life: a Thread Shard, or very rarely a whole Thread of Return.
+            self.assertEqual(rare['rolls'], 1)
+            weights = {e.get('name', e['type']): e['weight'] for e in rare['entries']}
+            self.assertEqual(set(weights), {'minecraft:empty', 'ninjacatskies:thread_shard', 'ninjacatskies:thread_of_return'})
+            total = sum(weights.values())
+            shard, whole = weights['ninjacatskies:thread_shard'] / total, weights['ninjacatskies:thread_of_return'] / total
+            self.assertTrue(0 < whole < shard <= 0.10, (tier, shard, whole))
+            self.assertLessEqual(whole, 0.01, 'a whole life stays a very long shot')
+            rare_odds.append((shard, whole))
+        self.assertEqual(rare_odds, sorted(rare_odds), 'a bigger seal never has worse odds')
 
     def test_combining_only_consumes_sealed_caches(self):
         for source, dest, count in [('small', 'medium', 4), ('medium', 'large', 3)]:
