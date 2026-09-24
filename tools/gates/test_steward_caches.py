@@ -78,20 +78,30 @@ class StewardCaches(unittest.TestCase):
         print('Cache rewards:', caches)
 
     def test_supplies_are_bounded_and_cannot_recurse_or_skip_progression(self):
-        allowed = set('bread torch bone_meal string clay_ball oak_sapling wheat_seeds leather copper_ingot iron_nugget flower_pot cooked_beef iron_ingot gold_ingot lantern book honeycomb experience_bottle redstone lapis_lazuli diamond emerald ender_pearl obsidian'.split())
-        allowed = {'minecraft:' + i for i in allowed} | {'ninjacatskies:frayed_thread', 'ninjacatskies:thread_skein'}
+        import generate_provisions as gp
+        supplies = set('bread torch bone_meal string clay_ball oak_sapling wheat_seeds leather copper_ingot iron_nugget flower_pot cooked_beef iron_ingot gold_ingot lantern book honeycomb experience_bottle redstone lapis_lazuli diamond emerald ender_pearl obsidian'.split())
+        supplies = {'minecraft:' + i for i in supplies} | {'ninjacatskies:frayed_thread', 'ninjacatskies:thread_skein'}
+        # Only passive vanilla animals: a pad cannot otherwise get livestock, and nothing here should fight back.
+        eggs = {f'minecraft:{a}_spawn_egg' for a in gp.EGGS_FARM + gp.EGGS_MORE}
+        self.assertFalse({'zombie', 'skeleton', 'creeper', 'villager', 'wither_skeleton', 'blaze', 'enderman'} & set(gp.EGGS_FARM + gp.EGGS_MORE))
+        garden = {'minecraft:' + i for i in gp.SAPLINGS + gp.SEEDS + gp.CROPS + gp.PLANTS + gp.FLOWERS} | eggs
+        decor = {'minecraft:' + d[0] for d in gp.DECOR}
         rare_odds = []
-        for tier, rolls in zip(TIERS, (2, 5, 12)):
+        for tier, rolls, garden_rolls, decor_rolls in zip(TIERS, (2, 5, 12), (1, 2, 3), (1, 1, 2)):
             data = json.loads((RES / f'data/ninjacatskies/loot_table/provisions/{tier}.json').read_text())
             self.assertEqual(data['type'], 'minecraft:gift')
-            self.assertEqual(len(data['pools']), 2, 'supplies, then one rare draw')
-            pool, rare = data['pools']
-            self.assertEqual(pool['rolls'], rolls)
-            for e in pool['entries']:
-                self.assertIn(e['name'], allowed)
-                self.assertGreater(e['weight'], 0)
-                count = e['functions'][0]['count']
-                self.assertTrue(1 <= count['min'] <= count['max'] <= 12)
+            self.assertEqual(len(data['pools']), 4, 'supplies, garden, decor, then one rare draw')
+            pool, grow, deco, rare = data['pools']
+            for p, want, allowed in ((pool, rolls, supplies), (grow, garden_rolls, garden), (deco, decor_rolls, decor)):
+                self.assertEqual(p['rolls'], want)
+                for e in p['entries']:
+                    self.assertIn(e['name'], allowed)
+                    self.assertGreater(e['weight'], 0)
+                    count = e['functions'][0]['count']
+                    self.assertTrue(1 <= count['min'] <= count['max'] <= 12)
+            egg_share = sum(e['weight'] for e in grow['entries'] if e['name'] in eggs) / sum(e['weight'] for e in grow['entries'])
+            self.assertTrue(0.05 <= egg_share <= 0.20, (tier, egg_share))
+            self.assertTrue({f'minecraft:{a}_spawn_egg' for a in gp.EGGS_FARM} <= {e['name'] for e in grow['entries']}, 'every seal can hold the farm four')
             # The rare draw is the only way a cache touches a life: a Thread Shard, or very rarely a whole Thread of Return.
             self.assertEqual(rare['rolls'], 1)
             weights = {e.get('name', e['type']): e['weight'] for e in rare['entries']}
