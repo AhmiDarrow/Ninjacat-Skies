@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.10 — Your keys, your gear, deeper cells
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8969517**, server additional **8969519**.
 
 Tribal Power 5.2.0. Existing saves load as they are; no quest ids change, and the mod list is
 unchanged at 104.
