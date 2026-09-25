@@ -111,7 +111,7 @@
 	quest.4200000000010001.quest_desc: [
 		"You are Skybound. This is what did not fall.",
 		"Eight logs. Start with the tree; it started with you.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: punch the oak on your pad. Eight logs start Wake."
 	]
 	quest.4200000000010001.title: "Wake on a Pad"
@@ -459,7 +459,7 @@
 	quest.4200000000020044.quest_desc: [
 		"Thread that remembers where it came from.",
 		"Unravel Thread to string; four string spin two yarn.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: four string → two yarn. Tension Barrel: string + pearl. Four Loom Lint."
 	]
 	quest.4200000000020044.title: "Pull Void Yarn"
@@ -732,7 +732,7 @@
 	quest.4200000000020078.title: "Boom, Later"
 	quest.4200000000030079.quest_desc: [
 		"Scratch rows into the pad.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: two iron ingots over a stick."
 	]
 	quest.4200000000030079.title: "Iron Hoe"
@@ -977,7 +977,7 @@
 	quest.42000000000300A8.title: "Wrong Potato"
 	quest.42000000000400A9.quest_desc: [
 		"Cut the void on your terms. Eight sheets of plans.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: four paper and one blue dye, shapeless. Yields four sheets."
 	]
 	quest.42000000000400A9.title: "Blueprint Paper"
@@ -1168,7 +1168,7 @@
 	quest.42000000000400CD.title: "Edge of the Edge"
 	quest.42000000000500CE.quest_desc: [
 		"A brief signal before the Hum. Sixty-four dust.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: sieve gravel, or Echo Shatter redstone ore after Recover."
 	]
 	quest.42000000000500CE.title: "Redstone Dust"
@@ -1449,7 +1449,7 @@
 	quest.4200000000050104.title: "Bottled Trouble"
 	quest.4200000000060105.quest_desc: [
 		"Hands that work while you sleep. Thirty-two.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: andesite + iron nugget in a crafting table (or mixer)."
 	]
 	quest.4200000000060105.title: "Andesite Alloy"
@@ -1712,7 +1712,7 @@
 	quest.4200000000070137.title: "First Wings"
 	quest.4200000000070138.quest_desc: [
 		"Eight oak logs around a small flower. Place it and wake it with another flower; the wood remembers wings.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: ring of the nest material around a small flower. Place it, then right-click it with a small flower to wake it; bees come out after a while."
 	]
 	quest.4200000000070138.title: "Ring of Oak"
@@ -1959,7 +1959,7 @@
 	quest.4200000000070167.title: "Regret"
 	quest.4200000000080168.quest_desc: [
 		"The stewards left tricks in crystal. Thirty-two shards.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: sieve, or budding amethyst if you grow a geode line. Occultism wants shards."
 	]
 	quest.4200000000080168.title: "Amethyst"
@@ -2193,7 +2193,7 @@
 	quest.4200000000090195.quest_desc: [
 		"An iron mesh, gravel or sand, patience.",
 		"Strand Filament is the Loom's own thread. The braid is spun from it.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: iron thread mesh on gravel, sand, or dust (Loomframe or sieve)."
 	]
 	quest.4200000000090195.title: "Spin the Filament"
@@ -2484,12 +2484,12 @@
 	quest.42000000000901CC.title: "Reweave"
 	quest.42000000000901CD.quest_desc: [
 		"A wither, on a pad, in the sky. The Loom-stitchers would have been impressed and then furious.",
-		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 1000 Thread. Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.42000000000901CD.title: "A Star, Somehow"
 	quest.42000000000A01CE.quest_desc: [
 		"Leaves drop more saplings.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
 	]
 	quest.42000000000A01CE.title: "Crook Basics"
@@ -2620,7 +2620,7 @@
 	quest.42000000000A01E7.title: "Sponge"
 	quest.42000000000B01E8.quest_desc: [
 		"Links every drawer on the pad into one searchable network.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: barrel + iron/redstone in JEI. Links nearby Sophisticated barrels."
 	]
 	quest.42000000000B01E8.title: "Storage Controller"
@@ -2756,7 +2756,7 @@
 	quest.42000000000B0202.title: "Tank Upgrade"
 	quest.42000000000C0203.quest_desc: [
 		"The backbone metal behind most machines and casings on this line.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Mekanism Works chapter — ore chunks from the sieve, then the factory line."
 	]
 	quest.42000000000C0203.title: "Steel Ingot"
@@ -2887,7 +2887,7 @@
 	quest.42000000000C021C.title: "Digital Miner"
 	quest.42000000000D021D.quest_desc: [
 		"A sticky base ingredient behind most of the grid's machines.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Powah Grid chapter — energizing orb and cables after Spark Pulse exists."
 	]
 	quest.42000000000D021D.title: "Dielectric Paste"
@@ -2968,7 +2968,7 @@
 	quest.42000000000D022C.title: "Nitro Crystal"
 	quest.42000000000E022D.quest_desc: [
 		"Spun from magebloom, and woven into robes and spell gear.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Arcane Side — archwood and sourceberry from moss, then the cascade."
 	]
 	quest.42000000000E022D.title: "Mage Fiber"
@@ -3075,7 +3075,7 @@
 	quest.42000000000F0242.quest_desc: [
 		"Logs around a Binding Knot, Thread on top. Place it on the pad.",
 		"Stand near it: the pad starts mending you once a Strand is seated.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: logs around a Binding Knot, Thread on top. Place it on the pad. Look at it to complete."
 	]
 	quest.42000000000F0242.title: "Raise the Post"
@@ -3200,7 +3200,7 @@
 	quest.42000000000F0259.title: "Boat"
 	quest.4200000000110278.quest_desc: [
 		"Shows where aura pools thick or thin across the land.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: gold leaf + spider eye. Shows local aura."
 	]
 	quest.4200000000110278.title: "Eye (Aura)"
@@ -3331,7 +3331,7 @@
 	quest.4200000000110291.title: "Spawn Lamp"
 	quest.4200000000120292.quest_desc: [
 		"Cooks stew-type meals that feed more than one plate at once.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
 	]
 	quest.4200000000120292.title: "Cooking Pot (Kitchen)"
@@ -3452,7 +3452,7 @@
 	quest.42000000001202A9.title: "Tatami"
 	quest.42000000001302AA.quest_desc: [
 		"The first book that lets you cast spells in a real fight.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: iron + paper + arcane essence. Spells chapter names ink."
 	]
 	quest.42000000001302AA.title: "Iron Spell Book"
@@ -3553,7 +3553,7 @@
 	quest.42000000001302BD.title: "Ruined Codex"
 	quest.42000000001402BE.quest_desc: [
 		"Redirects sunlight toward a solar tower for a bigger yield.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: glass and iron in JEI. First Solar Flux part."
 	]
 	quest.42000000001402BE.title: "Mirror"
@@ -3644,7 +3644,7 @@
 	quest.42000000001402CF.title: "Blank Upgrade"
 	quest.42000000001502D0.quest_desc: [
 		"Plain, dependable stone for walls and floors.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: four stone in a square, or the stonecutter."
 	]
 	quest.42000000001502D0.title: "Stone Bricks"
@@ -3960,7 +3960,7 @@
 	quest.420000000015030E.title: "Shulker Shell"
 	quest.420000000016030F.quest_desc: [
 		"The floor and walls of anywhere you're building over lava.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: the Nether here is void, not terrain. Pour lava into an Ex Deorum barrel of witch water (a water barrel standing on mycelium; mycelium spores sieve from dirt)."
 	]
 	quest.420000000016030F.title: "Netherrack Stock"
@@ -4116,7 +4116,7 @@
 	quest.4200000000178001.title: "End Apple"
 	quest.420000000017032D.quest_desc: [
 		"Pale stone from the far side. Heavy, plain, and endless.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: chorus fruit and ender pearls (Spark stall) around a Binding Knot. Yields eight. The End island is gone."
 	]
 	quest.420000000017032D.title: "End Stone"
@@ -4186,7 +4186,7 @@
 	quest.420000000017033A.quest_desc: [
 		"A portable chest that keeps its contents when you break it.",
 		"Optional — the void may never offer one.",
-		"How: the Spark stall at /clowder hub sells one for 200 Thread; shells never drop here. Optional."
+		"How: the Spark stall at /clowder hub sells one for 22 Thread Skeins (198 Thread); shells never drop here. Optional."
 	]
 	quest.420000000017033A.title: "Shulker Box Show"
 	quest.420000000017033B.quest_desc: [
@@ -4241,7 +4241,7 @@
 	quest.4200000000170344.title: "Totem Show"
 	quest.4200000000170345.quest_desc: [
 		"The wither's only drop. A beacon needs one to light up.",
-		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 1000 Thread. Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.4200000000170345.title: "Nether Star Show"
 	quest.4200000000170346.quest_desc: [
@@ -4268,7 +4268,7 @@
 	quest.4200000000170349.title: "Trident Show"
 	quest.420000000018034A.quest_desc: [
 		"Base essence. Feeds growth accelerators and reprocessors alike.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018034A.title: "Inferium Stock"
@@ -4639,7 +4639,7 @@
 	quest.4200000000180393.title: "Redstone Essence"
 	quest.4200000000190394.quest_desc: [
 		"Points at nests you placed and forgot about.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
 	]
 	quest.4200000000190394.title: "Nest Locator"
@@ -4910,7 +4910,7 @@
 	quest.42000000001903C9.title: "Shears Spare"
 	quest.42000000001A03CA.quest_desc: [
 		"One block that moves items where you tell it — the pad's nervous system.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: iron + chest + paper in JEI. Modules go in the router."
 	]
 	quest.42000000001A03CA.title: "Modular Router"
@@ -5121,7 +5121,7 @@
 	quest.42000000001A03F3.title: "Ult Cable"
 	quest.42000000001B03F4.quest_desc: [
 		"Lists every spirit you can bind and what it needs.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: book + purple dye (JEI). Read it; Spirit Fire is next."
 	]
 	quest.42000000001B03F4.title: "Dictionary of Spirits"
@@ -5302,7 +5302,7 @@
 	quest.42000000001B0417.title: "Miner Afrit Deeps"
 	quest.42000000001C0418.quest_desc: [
 		"Turn it by hand when nothing else is spinning yet.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0418.title: "Hand Crank (Clockworks)"
@@ -5628,7 +5628,7 @@
 	quest.42000000001C0458.title: "Gantry Carriage (Clockworks)"
 	quest.42000000001D0459.quest_desc: [
 		"Grows in caves and holds a network's memory.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Spindle Network — certus from sand, controller wants a Knot."
 	]
 	quest.42000000001D0459.title: "Certus Crystal"
@@ -5944,7 +5944,7 @@
 	quest.42000000001D0497.title: "Cell Workbench"
 	quest.42000000001E0498.quest_desc: [
 		"Fired clay, a step toward porcelain tools.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: clay ball + bone meal, shapeless. Clay comes from the Tension Barrel."
 	]
 	quest.42000000001E0498.title: "Porcelain Clay (Voidcraft)"
@@ -6120,7 +6120,7 @@
 	quest.42000000001E04BA.title: "Whisker Codex"
 	quest.42000000001F04BB.quest_desc: [
 		"The paper inside a package, before it's sealed shut.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: iron + AE2/processor parts in JEI. First Packaged Auto craft."
 	]
 	quest.42000000001F04BB.title: "Package Component"
@@ -6251,7 +6251,7 @@
 	quest.42000000001F04D4.title: "Item Vault (Packaged)"
 	quest.42000000002004D5.quest_desc: [
 		"A basic quantum storage disk for the QIO network.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: Mekanism Works chapter — ore chunks from the sieve, then the factory line."
 	]
 	quest.42000000002004D5.title: "QIO Drive Base"
@@ -6498,7 +6498,7 @@
 	quest.4200000000200505.title: "Combiner"
 	quest.4200000000210506.quest_desc: [
 		"Zombies drop it whether you want it or not.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: kill zombies on the pad at night, or a dark hole."
 	]
 	quest.4200000000210506.title: "Rotten Flesh Stock"
@@ -6554,7 +6554,7 @@
 	quest.4200000000210510.title: "Wither Skull"
 	quest.4200000000210511.quest_desc: [
 		"The wither's own tax, rare and heavy with power.",
-		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 1000 Thread. Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.4200000000210511.title: "Nether Star"
 	quest.4200000000210512.quest_desc: [
@@ -6709,7 +6709,7 @@
 	quest.420000000021052E.title: "Player Head"
 	quest.420000000022052F.quest_desc: [
 		"First craft yields 2 — keep one for Codex later.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: one bone, string, amethyst. /clowder hub Pad-keepers sell bones. Spark / Hum gate."
 	]
 	quest.420000000022052F.title: "Bone Chime"
@@ -6954,22 +6954,22 @@
 	]
 	quest.420000000022055F.title: "Name the far end"
 	quest.4200000000220560.quest_desc: [
-		"Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 8 Pulse. Redstone pauses it.",
+		"Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 8 Pulse. Redstone pauses it. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220560.title: "A path for supplies"
 	quest.4200000000220561.quest_desc: [
-		"Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded.",
+		"Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220561.title: "A path for rain"
 	quest.4200000000220562.quest_desc: [
-		"Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod.",
+		"Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220562.title: "Across the workshop"
 	quest.4200000000220563.quest_desc: [
-		"Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.",
+		"Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220563.title: "Across the waterworks"
@@ -7034,12 +7034,12 @@
 	]
 	quest.420000000022056F.title: "A path between worlds"
 	quest.4200000000220570.quest_desc: [
-		"Astral cargo crosses dimensions without a distance limit. Each successful beat costs 32 Pulse. The receiver must already be loaded; no hidden chunk loading.",
+		"Astral cargo crosses dimensions without a distance limit. Each successful beat costs 32 Pulse. The receiver must already be loaded; no hidden chunk loading. Since 5.0 the plate wants a kept Loom Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220570.title: "Supplies cross the veil"
 	quest.4200000000220571.quest_desc: [
-		"Astral fluid follows the same dimensional tier as players and items. Keep the destination tank loaded. A full tank or unloaded world pauses without consuming cargo.",
+		"Astral fluid follows the same dimensional tier as players and items. Keep the destination tank loaded. A full tank or unloaded world pauses without consuming cargo. Since 5.0 the plate wants a kept Loom Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220571.title: "Rain crosses the veil"
@@ -7153,17 +7153,17 @@
 	]
 	quest.4200000000220584.title: "A place at the hearth"
 	quest.4200000000220585.quest_desc: [
-		"Place the tender at crop height in a 9-by-9 bed. Put seeds in the first row; harvests fill the lower two rows. Planting costs 4 Pulse, harvest and replant costs 12. Supply power within eight blocks. A full output preserves the crop; redstone pauses the work.",
+		"Place the tender at crop height in a 9-by-9 bed. Put seeds in the first row; harvests fill the lower two rows. Planting costs 4 Pulse, harvest and replant costs 12. Supply power within eight blocks. A full output preserves the crop; redstone pauses the work. Since 5.0 it wants a kept Earth Resonance Totem within eight blocks, or it stands idle and says which voice it is missing. Keep a Water totem near it as well and it waters every furrow of the bed.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220585.title: "The garden keeps singing"
 	quest.4200000000220586.quest_desc: [
-		"Eight Pulse each second wards hostile spawning within 24 blocks. Existing creatures remain. The ward also prevents hostile cradle summons, so keep your summoning ground outside it. Redstone immediately silences the ward.",
+		"Eight Pulse each second wards hostile spawning within 24 blocks. Existing creatures remain. The ward also prevents hostile cradle summons, so keep your summoning ground outside it. Redstone immediately silences the ward. Since 5.0 it wants a kept Spirit Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220586.title: "Quiet at the camp edge"
 	quest.4200000000220587.quest_desc: [
-		"The Wayanchor holds its own chunk awake for 16 Pulse each second. Place one at a distant relay receiver and sustain its local power supply. At most 32 anchors may run in one dimension. Redstone or an empty buffer releases the chunk.",
+		"The Wayanchor holds its own chunk awake for 16 Pulse each second. Place one at a distant relay receiver and sustain its local power supply. At most 32 anchors may run in one dimension. Redstone or an empty buffer releases the chunk. Since 5.0 it wants a kept Earth Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220587.title: "A camp that remembers"
@@ -7173,7 +7173,7 @@
 	]
 	quest.4200000000220588.title: "Borrow a living voice"
 	quest.4200000000220589.quest_desc: [
-		"Seat an awakened effigy in the first slot and Spiritweave in the second. Each successful summon uses 80 Pulse, one Spiritweave and one binding thread. Leave safe flooring within three blocks. Eight nearby mobs pause the cradle; redstone pauses all work and automation.",
+		"Seat an awakened effigy in the first slot and Spiritweave in the second. Each successful summon uses 80 Pulse, one Spiritweave and one binding thread. Leave safe flooring within three blocks. Eight nearby mobs pause the cradle; redstone pauses all work and automation. Since 5.0 it wants a kept Spirit Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
 	]
 	quest.4200000000220589.title: "A hearth for borrowed life"
@@ -7474,7 +7474,7 @@
 	]
 	quest.4200000000228039.title: "Grit in the kiln"
 	quest.420000000022803A.quest_desc: [
-		"Weave a Recipe Seal for a workshop. Empty bottles return to the slot that held them. Side-IO refuses spectators and other camps.",
+		"Weave a Recipe Seal for a workshop. Empty bottles return to the slot that held them. Side-IO refuses spectators and other camps. Since 5.0 it wants a kept Loom Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex names the Seal Loom craft. Seat bottles; they come back to that slot."
 	]
 	quest.420000000022803A.title: "A loom for seals"
@@ -7489,7 +7489,7 @@
 	]
 	quest.420000000022803C.title: "A charm with a voice"
 	quest.420000000022803D.quest_desc: [
-		"The water workshop. Rank it at Echo stations the same way as Spiritgear; higher rank spends more Pulse as it speeds up. Rank survives pickup.",
+		"The water workshop. Rank it at Echo stations the same way as Spiritgear; higher rank spends more Pulse as it speeds up. Rank survives pickup. Since 5.0 it wants a kept Water Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
 		"How: Spirit Codex Workshop pages. Place the Tide Pump on a cistern face, then sneak-use the Codex if it stays silent."
 	]
 	quest.420000000022803D.title: "A pump for the cistern"
@@ -7533,10 +7533,260 @@
 		"How: craft Spiritgear Axe. Optional once the pick exists."
 	]
 	quest.4200000000228045.title: "An edge for timber"
+	quest.4200000000228046.quest_desc: [
+		"Bricks and a bowl over three copper. Set it over a lit campfire, fire, magma, lava or an Ember Bowl; it asks no Pulse at all. Up to four ingredients and a bowl in any order, about twelve seconds a meal. Hoppers feed it from above and the sides and take the meal from below.",
+		"How: bricks and a bowl over three copper. Set it over a campfire, fire, magma, lava or an Ember Bowl; no Pulse."
+	]
+	quest.4200000000228046.title: "A pot for the camp"
+	quest.4200000000228047.quest_desc: [
+		"A hot red tuber from the Ember Wastes. What you pick is the seed; plant it on farmland like a potato. The Spiritgear Hoe reaps and replants in one stroke.",
+		"How: grows wild in the Ember Wastes, through a Gate Drum. What you pick is the seed; plant it on farmland."
+	]
+	quest.4200000000228047.title: "Emberroot"
+	quest.4200000000228048.quest_desc: [
+		"Grows wild in the Reed Fen. Pick a patch and plant what you picked; four stages on tilled ground, and bees pollinate it.",
+		"How: grows wild in the Reed Fen, through a Gate Drum. Plant what you picked on farmland."
+	]
+	quest.4200000000228048.title: "Fen Rice"
+	quest.4200000000228049.quest_desc: [
+		"From the Snow Fields. It also counts as a herb for the Spirit Kettle.",
+		"How: grows wild in the Snow Fields, through a Gate Drum. Plant what you picked on farmland."
+	]
+	quest.4200000000228049.title: "Frostberry"
+	quest.420000000022804A.quest_desc: [
+		"From Glimmer Ridge. A herb for the kettle as well as a crop.",
+		"How: grows wild on Glimmer Ridge, through a Gate Drum. Plant what you picked on farmland."
+	]
+	quest.420000000022804A.title: "Glimmer Bean"
+	quest.420000000022804B.quest_desc: [
+		"From the Steppe, and the grain most tribe dishes are built on. Grow a bed of it before the rest.",
+		"How: grows wild on the Steppe, through a Gate Drum. Plant what you picked on farmland."
+	]
+	quest.420000000022804B.title: "Steppe Grain"
+	quest.420000000022804C.quest_desc: [
+		"Two Steppe Grain and one Iron Grit in the Hearth Pot. Eating a tribe's dish carries its boon for five minutes; the Grit-singers' breaks more from ore. Once a tribe calls you Friend its Kin sell the dish for four of its crop, and offering a tribe its own dish at its hearth pays six standing.",
+		"How: two Steppe Grain and an Iron Grit in a Hearth Pot over heat. Grit-singer Kin sell it at Friend."
+	]
+	quest.420000000022804C.title: "The Grit-singers' loaf"
+	quest.420000000022804D.quest_desc: [
+		"Two Raw Game and an Emberroot. Raw Game drops from the March's game animals. The Edge-walkers' boon: you never fall while you sneak. Every tribe has a dish; JEI lists all nine under the pot.",
+		"How: two Raw Game and an Emberroot in a Hearth Pot. Raw Game drops from March game animals."
+	]
+	quest.420000000022804D.title: "The Edge-walkers' jerky"
+	quest.420000000022804E.quest_desc: [
+		"Keeper's Root Mash, Grit-baked Bread, an Emberroot and Steppe Grain in the pot. Set the feast on a solid block and it holds six servings; each fills you and grants the Earth blessing for eight minutes — dig faster, stand firm. Every voice has a feast of its own dishes.",
+		"How: Keeper's Root Mash, Grit-baked Bread, Emberroot and Steppe Grain in a Hearth Pot. Place it; six servings."
+	]
+	quest.420000000022804E.title: "A table for the camp"
+	quest.420000000022804F.quest_desc: [
+		"Bones and iron around a cauldron, a Bone Chime under it. Sit it over heat. Three seats: one raw reagent out of your pouch, a March herb, and a base — a glass bottle makes two tinctures, honeycomb two salves, charcoal four incense. A batch is ten seconds and 24 Pulse from the lattice. The nearest totem within eight blocks sings into the brew.",
+		"How: bones and iron around a cauldron, a Bone Chime under. Sit it over heat; a totem within 8 shapes the brew."
+	]
+	quest.420000000022804F.title: "A kettle over the fire"
+	quest.4200000000228050.quest_desc: [
+		"The reagent's family picks the remedy: Kindling is Strength, Cooling is Fire Resistance, Antidote lifts poison, Mending is Regeneration, and so on. A tincture lasts three minutes and hands the bottle back. Every remedy lifts Spirit Sickness, the Hush, Frayed and Ley Sickness.",
+		"How: Spirit Kettle — a raw reagent, a March herb and a glass bottle. Ten seconds, 24 Pulse, two tinctures."
+	]
+	quest.4200000000228050.title: "Drink it"
+	quest.4200000000228051.quest_desc: [
+		"Honeycomb as the base. Use a salve on yourself, or on a friend, a villager or your familiar: three hearts at once, every harmful effect gone, and the remedy for half a tincture's time. A stack of these is the difference between a hard night in the March and a walk home.",
+		"How: Spirit Kettle — a raw reagent, a March herb and honeycomb. Two salves a batch."
+	]
+	quest.4200000000228051.title: "Lay it on"
+	quest.4200000000228052.quest_desc: [
+		"Charcoal as the base. Seat incense in a Ritual Brazier — up to sixteen sticks, no seal and no Pulse — and every two seconds everyone within eight blocks gets the remedy, familiars mended a heart. Each stick burns thirty seconds. Redstone puts it out; sneak empty-handed to take it back.",
+		"How: Spirit Kettle — a raw reagent, a March herb and charcoal. Four incense a batch; burn them in a Ritual Brazier."
+	]
+	quest.4200000000228052.title: "Burn it for everyone"
+	quest.4200000000228053.quest_desc: [
+		"Two Bone Chimes around a Manifested Ingot on a stick. Hold use and every half second it mends whoever you look at within six blocks, or you: three-quarters of a heart for 2 Pulse. It ranks at the Echo stations like the rest of Spiritgear; from Bound each shake eases Spirit Sickness a level.",
+		"How: two Bone Chimes around a Manifested Ingot on a stick. Hold use to mend whoever you look at."
+	]
+	quest.4200000000228053.title: "Shake it"
+	quest.4200000000228054.quest_desc: [
+		"Cobble over a magma block makes four. Over heat they steam. Sleep the whole night in a bed with hot stones within five blocks and a roof over you: you wake fully healed, cleansed, with ten minutes of Spirit Blessing so the sickness cannot take hold.",
+		"How: cobble over a magma block makes four. Sit them over heat within five blocks of a roofed bed."
+	]
+	quest.4200000000228054.title: "A night in the lodge"
+	quest.4200000000228055.quest_desc: [
+		"Two stone, a Mossback Scale and Spirit Reed around a Spirit Seal; the seal is handed back. Cast it on a brazier with a Spirit Seal seated, inside its Rite Circle, for 500 Pulse: everyone within twelve blocks is healed ten hearts, cleansed and blessed, and the circle stays open ten minutes. Lay a fallen familiar's Spirit Remnant on a pedestal first and it comes back whole.",
+		"How: two stone, a Mossback Scale, Spirit Reed and a Spirit Seal, shapeless; the seal comes back. Cast on a sealed brazier in its Rite Circle."
+	]
+	quest.4200000000228055.title: "Rite Tablet: Healing Circle"
+	quest.4200000000228056.quest_desc: [
+		"A Manifested Ingot, a Bone Chime and a stick on the diagonal. Seven damage, reach plus one and a half, and a sprinting thrust hits 35 percent harder. Underneath it is a Blade: it ranks at the Echo stations, spends Pulse on echo strikes and takes a totem voice. It keeps a Rift Hound at arm's length.",
+		"How: Manifested Ingot, Bone Chime and a stick on the diagonal. Ranks at the Echo stations like the Blade."
+	]
+	quest.4200000000228056.title: "Reach first"
+	quest.4200000000228057.quest_desc: [
+		"Three Manifested Ingots in a T over a Bone Chime. Ten damage, reach plus half, heavy — it slows your walk while it is in hand — and the widest, strongest sweep of the family. The halberd, battle axe, warhammer, dagger, scythe and trident are made the same way; each trades reach, speed and weight against the others.",
+		"How: three Manifested Ingots in a T over a Bone Chime. Heavy; the widest sweep."
+	]
+	quest.4200000000228057.title: "The widest sweep"
+	quest.4200000000228058.quest_desc: [
+		"String and Copper Resonators around a Bone Chime. It fires sonic bolts on Pulse from the cells you carry and takes verse arrows. Quick to loose again, and a half draw when you are in a hurry.",
+		"How: string and Copper Resonators around a Bone Chime. Fires sonic bolts on carried Pulse."
+	]
+	quest.4200000000228058.title: "A bow that sings"
+	quest.4200000000228059.quest_desc: [
+		"Manifested Ingots either side of a Pulse Bow, a tripwire hook and sticks below. Hold use to load — 10 Pulse up front, a little longer than a full draw — then use again to fire. It hits about half again as hard, flies almost straight, and holds its shot as long as you like.",
+		"How: Manifested Ingots either side of a Pulse Bow, tripwire hook and sticks below. Hold use to load, use to fire."
+	]
+	quest.4200000000228059.title: "The bow's heavier sister"
+	quest.420000000022805A.quest_desc: [
+		"The Song Bench has a weapon seat beside the output. Stand a totem within reach with Pulse in the lattice, keep your Reagent Pouch on the hotbar with four empowered reagents of one kind, seat a Spiritgear weapon, pick the reagent and press Anoint: four reagents and 32 Pulse. Searing burns, Stormcall arcs lightning, Bloodthirst steals life, Mending repairs the weapon — eleven in all, one at a time; a different reagent replaces it. Only Spiritgear takes the bench's work unless a pack opens tribalpower:anointable. Tick this when a weapon carries one.",
+		"How: Spiritgear weapon in the Song Bench's weapon seat, four empowered reagents in the pouch, 32 Pulse; press Anoint. Tick when it is anointed."
+	]
+	quest.420000000022805A.title: "A reagent in the blade"
+	quest.420000000022805B.quest_desc: [
+		"Vines around Spirit Reed and an ender pearl make two. Put one on each floor in the same column; they find each other, no linking and no power. Jump to rise to the next lift above, sneak to sink to the one below, up to 48 blocks each way. A lift with a ceiling on it is passed over.",
+		"How: vines around Spirit Reed and an ender pearl make two. Stack them in one column; jump up, sneak down."
+	]
+	quest.420000000022805B.title: "Up the column"
+	quest.420000000022805C.quest_desc: [
+		"Spirit Reed under a string. Use it on a creature to take it and on a block to set it down, safe and whole. Never a player, a boss or a March elite. Woven is two uses — one trip; copper, manifested and resonant urns carry more, and the resonant never wears out. It will not take a creature when it has only one use left.",
+		"How: Spirit Reed under a string. Use on a creature to take it, on a block to set it down. Two uses."
+	]
+	quest.420000000022805C.title: "Carry a creature home"
+	quest.420000000022805D.quest_desc: [
+		"Leather over planks around a note block. The Gate Rite as a game with no portal at the end: every track in the pack, played on A, S, D, F as the beats reach the line. It keeps your best score per track and a board of the server's five best. Practise here before a real Gate Drum.",
+		"How: leather over planks around a note block. Use it to pick a track and play A, S, D, F."
+	]
+	quest.420000000022805D.title: "Drum for the joy of it"
+	quest.420000000022805E.quest_desc: [
+		"Spiritweave, a Manifested Ingot and a Spirit Seal, shapeless. Use it to wear it; sneak-use to open the three charm slots. The Lantern charm carries the Spirit voice: night sight, and any voice blessing on you lasts half again as long. Worn charms cost 2 Pulse per voice every two seconds from a carried cell.",
+		"How: Spiritweave, a Manifested Ingot and a Spirit Seal, shapeless. Use it to wear it; sneak-use opens the slots."
+	]
+	quest.420000000022805E.title: "A light you wear"
+	quest.420000000022805F.quest_desc: [
+		"Once a tribe calls you Guest, right-click its Elder and talk. Ask for work and they hand you a request — three open a day, one held per tribe, each paying standing and every third a Tribe Mark. Ask for their story and a seven-step road begins: Friend, the thing they prize, hunting near their fires, a rite in their camp, their dish cooked, and where they send you. The last step is a trial against a guardian. Finish one story and hold its relic.",
+		"How: right-click a tribe's Elder at Guest or better and ask for their story; seven steps end at a guardian. Advancement on the first relic."
+	]
+	quest.420000000022805F.title: "A story told"
+	quest.4200000000228060.quest_desc: [
+		"The Pad-keepers' relic. Their story ends at the Stampede Spirit at the Trampled Ring on the Steppe; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: you never trample a field.",
+		"How: finish the Pad-keepers' story with their Elder; the trial is the Stampede Spirit on the Steppe."
+	]
+	quest.4200000000228060.title: "Kept Ember"
+	quest.4200000000228061.quest_desc: [
+		"The Grit-singers' relic. Their story ends at the Prism Serpent at the Singing Fracture in the Crystal Fields; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: you break more from ore.",
+		"How: finish the Grit-singers' story with their Elder; the trial is the Prism Serpent in the Crystal Fields."
+	]
+	quest.4200000000228061.title: "Ringing Stone"
+	quest.4200000000228062.quest_desc: [
+		"The Rootbinders' relic. Their story ends at the Bog Matriarch at the Drowned Root in the Reed Fen; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: crops hurry along around you.",
+		"How: finish the Rootbinders' story with their Elder; the trial is the Bog Matriarch in the Reed Fen."
+	]
+	quest.4200000000228062.title: "First Root"
+	quest.4200000000228063.quest_desc: [
+		"The Edge-walkers' relic. Their story ends at the Storm Roc at the Roost on the Highlands; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: you never fall while you sneak.",
+		"How: finish the Edge-walkers' story with their Elder; the trial is the Storm Roc on the Highlands."
+	]
+	quest.4200000000228063.title: "Bridge Nail"
+	quest.4200000000228064.quest_desc: [
+		"The Drumhearts' relic. Their story ends at the Slag Titan at the Slag Throne in the Ember Wastes; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: you swing faster.",
+		"How: finish the Drumhearts' story with their Elder; the trial is the Slag Titan in the Ember Wastes."
+	]
+	quest.4200000000228064.title: "Steady Drum"
+	quest.4200000000228065.quest_desc: [
+		"The Pattern-weavers' relic. Their story ends at the Tide Drummer at the Tide Stone in the Shallows; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: Echo stations near you work double.",
+		"How: finish the Pattern-weavers' story with their Elder; the trial is the Tide Drummer in the Shallows."
+	]
+	quest.4200000000228065.title: "Silent Gear"
+	quest.4200000000228066.quest_desc: [
+		"The Colony-keepers' relic. Their story ends at the Cairn Wight at the Cairn Ring in the Snow Fields; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: you are never stung.",
+		"How: finish the Colony-keepers' story with their Elder; the trial is the Cairn Wight in the Snow Fields."
+	]
+	quest.4200000000228066.title: "Hive Seal"
+	quest.4200000000228067.quest_desc: [
+		"The Seal-carvers' relic. Their story ends at the Vault Sentinel at the Sealed Gate on Glimmer Ridge; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: your charms ask half the Pulse.",
+		"How: finish the Seal-carvers' story with their Elder; the trial is the Vault Sentinel on Glimmer Ridge."
+	]
+	quest.4200000000228067.title: "Polite Seal"
+	quest.4200000000228068.quest_desc: [
+		"The Loom-stitchers' relic. Their story ends at The Unsung at the Silent Drum; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: you sing cheaper.",
+		"How: finish the Loom-stitchers' story with their Elder; the trial is The Unsung at the Silent Drum."
+	]
+	quest.4200000000228068.title: "Ninth Thread"
+	quest.4200000000228069.quest_desc: [
+		"Every tribe's story finished: eight guardians faced and The Unsung. With all nine relics in your pack, the Ninth Agreement is within reach. `/tribalpower standing` shows where each tribe stands with you.",
+		"How: finish all nine stories. Advancement when the ninth relic is in hand."
+	]
+	quest.4200000000228069.title: "Nine relics"
+	quest.420000000022806A.quest_desc: [
+		"The Slag Throne in the Ember Wastes: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Magma Scales — then lay them on and stand back. Sneak to brace against its slams; roused, the rings ignite and Cinder Imps rise from the slag. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Slag Core, and its fall ends the Drumhearts' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.420000000022806A.title: "Slag Titan stilled"
+	quest.420000000022806B.quest_desc: [
+		"The Drowned Root in the Reed Fen: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Reed Fangs — then lay them on and stand back. Its snare drags you in and slows you; keep to solid ground and cut down the Reed Stalkers it calls. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Fen Heart, and its fall ends the Rootbinders' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.420000000022806B.title: "Bog Matriarch stilled"
+	quest.420000000022806C.quest_desc: [
+		"The Cairn Ring in the Snow Fields: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Rime Mandibles — then lay them on and stand back. Its breath freezes everything in front of it. Circle behind; the Rime Crawlers it calls are slow. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Cairn Stone, and its fall ends the Colony-keepers' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.420000000022806C.title: "Cairn Wight stilled"
+	quest.420000000022806D.quest_desc: [
+		"The Singing Fracture in the Crystal Fields: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Prism Carapace — then lay them on and stand back. It fires bolts of light that mark you glowing. Strafe, close in, and watch for the second bolt it adds once roused. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Prism Core, and its fall ends the Grit-singers' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.420000000022806D.title: "Prism Serpent stilled"
+	quest.420000000022806E.quest_desc: [
+		"The Sealed Gate on Glimmer Ridge: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Sentinel Sigils — then lay them on and stand back. The heaviest armour in the March and a sweep that throws you off the ridge. Roused, it wards itself three seconds at a time: wait it out. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Vault Seal, and its fall ends the Seal-carvers' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.420000000022806E.title: "Vault Sentinel stilled"
+	quest.420000000022806F.quest_desc: [
+		"The Tide Stone in the Shallows: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Brine Fangs — then lay them on and stand back. Each beat pulls everyone toward it and hurts. Fight it from the shore with your back to something solid. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Tide Shell, and its fall ends the Pattern-weavers' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.420000000022806F.title: "Tide Drummer stilled"
+	quest.4200000000228070.quest_desc: [
+		"The Trampled Ring on the Steppe: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Shank Sinew — then lay them on and stand back. It charges. Sidestep and hit it as it passes; when Burrow Gnashers surface, stand on a block. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Herd Horn, and its fall ends the Pad-keepers' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.4200000000228070.title: "Stampede Spirit stilled"
+	quest.4200000000228071.quest_desc: [
+		"The Roost on the Highlands: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight Storm Wings — then lay them on and stand back. It swoops and throws you into the air; roused, lightning follows each swoop. A bow and a roof help more than a shield. At half health it is roused and calls its country's creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the Storm Plume, and its fall ends the Edge-walkers' story.",
+		"How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+	]
+	quest.4200000000228071.title: "Storm Roc stilled"
+	quest.4200000000228072.quest_desc: [
+		"All eight guardian cores and an Unsung Heart, shapeless. A core with a Loom Thread would make six Resonant Cores instead, so take a second set of drops if you want both. The boss bar of every guardian wears its tribe's colour.",
+		"How: all eight guardian cores and an Unsung Heart, shapeless. Cast in a Loom circle with nine relics on you."
+	]
+	quest.4200000000228072.title: "The tablet of nine"
+	quest.4200000000228073.quest_desc: [
+		"Draw a Loom circle — a Loom Seal seated in the brazier inside its Rite Circle — and cast the tablet with all nine relics on you; the rite draws its Pulse before it takes. Nine lights rise, one in each tribe's colour. From then on every tribe treats you as Kin at the least, all nine boons settle on you for a while, and the aurora burns full every night you stand under it. Once per player; a second casting only lights the circle.",
+		"How: Loom Seal in a brazier inside its Rite Circle, nine relics in your pack; sneak-use the tablet on the brazier."
+	]
+	quest.4200000000228073.title: "The Loom agrees"
+	quest.4200000000228074.quest_desc: [
+		"Sixteen fragments of the Loom's history are carved into the March: eight Carved Stones in the walls of its ruins, eight two-by-two Murals at the guardians' grounds. Right-click one to read it; the Codex keeps it and its Chronicle section puts it in order. Read all sixteen and the story is whole.",
+		"How: right-click all eight Carved Stones in March ruins and all eight Murals at the guardians' grounds."
+	]
+	quest.4200000000228074.title: "The Chronicle whole"
+	quest.4200000000228075.quest_desc: [
+		"Set into the walls of the March's ruins — the old works, the sunken shrine, the barrows, the tombs, the vaults. Read it where you find it, then pick it up and set it on a wall of your own; what you read stays read.",
+		"How: set into the walls of March ruins. Read it, then break it and set it on your own wall."
+	]
+	quest.4200000000228075.title: "A stone that remembers"
+	quest.4200000000228076.quest_desc: [
+		"Two blocks wide and two tall at each guardian's ground, each painting the country it stands in. Reading any part reads it all. Placed as one piece, it comes down as one; a mural cut in creative changes its chapter with a sneak-click.",
+		"How: stands two-by-two at each guardian's ground. Read it, then take it down whole and place it at home."
+	]
+	quest.4200000000228076.title: "A wall that paints its country"
+	quest.4200000000228077.quest_desc: [
+		"The March acts on its own. Ashfall, a Glimmer Storm, a Whiteout and Fen Mist close a country in and raise spirits by day; each feeds one voice's generators and hampers another's. Now and then one voice's ley threads surge: collectors carrying it yield double, but stand on a bare crossing with no collector and Ley Sickness sways the ground and drains your Pulse. Every tribe keeps a festival day in turn — join the feast for a gift. A warm light drifting near you is a wandering spirit; reach it for a line of its country's story and a small gift. Storms and surges are called two minutes ahead, in chat and over the hotbar. Tick this when you have weathered one.",
+		"How: be in the March through a weather, a surge or a festival day; tick it when you have."
+	]
+	quest.4200000000228077.title: "The March breathes"
 
 	quest.420000000023058C.quest_desc: [
 		"Grit-singers never cut a stone the same way twice. This bench remembers every cut.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: stone + table parts in JEI. Insert a block and pick a variant."
 	]
 	quest.420000000023058C.title: "Mason Table"
@@ -7602,7 +7852,7 @@
 	quest.4200000000230598.title: "Sandstone Variety"
 	quest.4200000000240599.quest_desc: [
 		"The first thing that turns a pad into a place someone lives.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: oak planks in JEI. First Handcrafted piece."
 	]
 	quest.4200000000240599.title: "A Chair"
@@ -7713,7 +7963,7 @@
 	quest.42000000002405AE.title: "Andesite Bridge"
 	quest.42000000002505AF.quest_desc: [
 		"A wall light that is not a torch stuck in shame. The stewards had standards.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: torch + iron nuggets. First Stewardries craft."
 	]
 	quest.42000000002505AF.title: "Sconce"
@@ -7814,7 +8064,7 @@
 	quest.42000000002505C2.title: "Cage"
 	quest.42000000002605C3.quest_desc: [
 		"The first wire. The pulse the Drumhearts kept now has somewhere to go.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: rolling mill (or JEI) from copper ingots. Current chapter starts here."
 	]
 	quest.42000000002605C3.title: "Copper Wire"
@@ -7921,7 +8171,7 @@
 	quest.42000000002705D8.quest_desc: [
 		"Each Strand has a guardian the Cut snapped: a Loom-construct gone feral. You do not murder a monster; you re-tension the Strand by beating it. Craft its Frayed Totem once the Strand is seated, use it anywhere outside an arena, and you and every Clowder mate within 32 blocks are pulled into its stage. Win, and every one of you carries home that guardian's Woven Relic. Lose, and you are spat back out with the totem spent.",
 		"Relics work from the Curios relic slot, the off-hand or the hotbar: a passive while worn and a right-click power on a cooldown. `/guardians leave` abandons a fight; `/guardians status` shows the Clowder's record.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: checkmark. Craft each Frayed Totem after that Strand is seated; use it outside an arena."
 	]
 	quest.42000000002705D8.title: "Answer for the Cut"
@@ -8153,7 +8403,7 @@
 	quest.4200000000270600.title: "Relic: Overweaver Shuttle"
 	quest.42000000002805E3.quest_desc: [
 		"Wild pad-runners do not spawn on a void pad. Play the Gate Rite on a Gate Drum (use it empty-handed, hit the beats on A, S, D, F) and walk the March. Yellows graze the Steppe and Reed Fen. Highlands lean Great. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: use the Gate Drum empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed. Bind a return compass first."
 	]
 	quest.42000000002805E3.title: "Gate to the March"
@@ -8274,7 +8524,7 @@
 	quest.42000000002805FA.title: "Porov Nut"
 	quest.42000000002905FB.quest_desc: [
 		"The void never grew Pam's bushes. Sieve dirt with a string mesh. Break the garden for arid seeds — chili, corn, cactus fruit.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: sieve dirt with a string mesh or better (Ex Deorum or Voidloom)."
 	]
 	quest.42000000002905FB.title: "Arid Garden"
@@ -8521,7 +8771,7 @@
 	quest.42000000002A062C.quest_desc: [
 		"Four sticks in a square. Place them on farmland. Vanilla seeds convert when you plant — Mystical Agriculture seeds do not.",
 		"Put a second set of sticks into the same block to make a cross crop — an empty pair that takes after whatever is mature beside it. Ring it with parents on all four sides and it seeds itself in a few minutes; bone meal on the cross forces an attempt straight away.",
-		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines, progression tokens or extra lives hide inside.",
+		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: four sticks in a square. Place on farmland, then plant a seed."
 	]
 	quest.42000000002A062C.title: "Wooden Crop Sticks"

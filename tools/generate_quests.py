@@ -2502,10 +2502,10 @@ def build_tribal_side() -> list[dict]:
         ('greater_pulse_cell', 'A longer song', 'resonant_core', 'Carry 1,200 Pulse in one Greater Cell. Charge it at a Drumheart or Resonator before setting out.'),
         ('spirit_cistern', 'Rain held in copper', 'bound_echo', 'Sixteen buckets in one cistern. Buckets and fluid pipes both work. A comparator reads fullness; redstone locks filling and draining. Break it and the fluid stays on the dropped block. Sky Stone Tanks dump.'),
         ('lattice_tuner', 'Name the far end', 'attuned_echo', 'Mark a machine face with the tuner, then use it on a relay plate. Use it on another machine to replace the mark. Do not mark the plate.'),
-        ('item_relay', 'A path for supplies', 'lattice_tuner', 'Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 8 Pulse. Redstone pauses it.'),
-        ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded.'),
-        ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod.'),
-        ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern.'),
+        ('item_relay', 'A path for supplies', 'lattice_tuner', 'Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 8 Pulse. Redstone pauses it. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
+        ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
+        ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
+        ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
         ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 20 Pulse a second (2,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.'),
         ('spirit_staff', 'Six voices in one hand', 'resonant_core', 'The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
         ('resonance_maul', 'Stone yields a doorway', 'resonant_core', 'Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.'),
@@ -2518,8 +2518,8 @@ def build_tribal_side() -> list[dict]:
         ('horizon_compass', 'Beyond the horizon', 'waystone_compass', 'Return across any distance within one dimension for 40 Pulse. Leave a dry landing with two clear blocks above it.'),
         ('march_crystal', 'A voice beyond the veil', 'gate_drum', 'Seek March Crystal beyond the Gate Drum. Astral paths for people, items and fluids all draw on the same late-game material.'),
         ('astral_compass', 'A path between worlds', 'horizon_compass', 'The final compass crosses dimensions for 100 Pulse. Bind a safe return before exploring. Travel waits five seconds between uses.'),
-        ('astral_item_relay', 'Supplies cross the veil', 'longreach_item_relay', 'Astral cargo crosses dimensions without a distance limit. Each successful beat costs 32 Pulse. The receiver must already be loaded; no hidden chunk loading.'),
-        ('astral_fluid_relay', 'Rain crosses the veil', 'longreach_fluid_relay', 'Astral fluid follows the same dimensional tier as players and items. Keep the destination tank loaded. A full tank or unloaded world pauses without consuming cargo.'),
+        ('astral_item_relay', 'Supplies cross the veil', 'longreach_item_relay', 'Astral cargo crosses dimensions without a distance limit. Each successful beat costs 32 Pulse. The receiver must already be loaded; no hidden chunk loading. Since 5.0 the plate wants a kept Loom Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
+        ('astral_fluid_relay', 'Rain crosses the veil', 'longreach_fluid_relay', 'Astral fluid follows the same dimensional tier as players and items. Keep the destination tank loaded. A full tank or unloaded world pauses without consuming cargo. Since 5.0 the plate wants a kept Loom Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
         ('wayfarer_satchel', 'The camp in your keeping', 'deep_cache', 'Open your personal 54-slot Deep Cache from the road. This is the same vault, shared between your caches and satchel. March attunement removes its opening cost.'),
     ]
     expansion = []
@@ -2547,11 +2547,11 @@ def build_tribal_side() -> list[dict]:
         ('spirit_lantern', 'A light for the returning', ['spirit_shard'], 'Hang the camp\'s song in copper. A Spirit Lantern gives full light without fuel; redstone dims it. Mark safe paths back from the dark.'),
         ('rain_chime', 'Listen to the weather', ['bone_chime'], 'The chime is both ornament and instrument. Its comparator gives 0 in clear skies, 8 in rain and 15 in thunder. Redstone silences it.'),
         ('offering_table', 'A place at the hearth', ['bound_echo'], 'A carved table holds 27 stacks. Standard item pipes and relays can share its offerings; comparators read fullness and redstone locks access.'),
-        ('grove_tender', 'The garden keeps singing', ['earth_seal', 'bound_echo'], 'Place the tender at crop height in a 9-by-9 bed. Put seeds in the first row; harvests fill the lower two rows. Planting costs 4 Pulse, harvest and replant costs 12. Supply power within eight blocks. A full output preserves the crop; redstone pauses the work.'),
-        ('hush_totem', 'Quiet at the camp edge', ['spirit_seal', 'gate_drum'], 'Eight Pulse each second wards hostile spawning within 24 blocks. Existing creatures remain. The ward also prevents hostile cradle summons, so keep your summoning ground outside it. Redstone immediately silences the ward.'),
-        ('wayanchor', 'A camp that remembers', ['march_crystal', 'resonant_core'], 'The Wayanchor holds its own chunk awake for 16 Pulse each second. Place one at a distant relay receiver and sustain its local power supply. At most 32 anchors may run in one dimension. Redstone or an empty buffer releases the chunk.'),
+        ('grove_tender', 'The garden keeps singing', ['earth_seal', 'bound_echo'], 'Place the tender at crop height in a 9-by-9 bed. Put seeds in the first row; harvests fill the lower two rows. Planting costs 4 Pulse, harvest and replant costs 12. Supply power within eight blocks. A full output preserves the crop; redstone pauses the work. Since 5.0 it wants a kept Earth Resonance Totem within eight blocks, or it stands idle and says which voice it is missing. Keep a Water totem near it as well and it waters every furrow of the bed.'),
+        ('hush_totem', 'Quiet at the camp edge', ['spirit_seal', 'gate_drum'], 'Eight Pulse each second wards hostile spawning within 24 blocks. Existing creatures remain. The ward also prevents hostile cradle summons, so keep your summoning ground outside it. Redstone immediately silences the ward. Since 5.0 it wants a kept Spirit Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
+        ('wayanchor', 'A camp that remembers', ['march_crystal', 'resonant_core'], 'The Wayanchor holds its own chunk awake for 16 Pulse each second. Place one at a distant relay receiver and sustain its local power supply. At most 32 anchors may run in one dimension. Redstone or an empty buffer releases the chunk. Since 5.0 it wants a kept Earth Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
         ('binding_effigy', 'Borrow a living voice', ['ritual_brazier', 'spiritweave', 'resonant_core'], 'Sneak-use an uncharged effigy on a supported creature to take a harmless imprint. The effigy remembers the species. Bosses cannot be bound; the Codex explains compatible spirits and renewal.'),
-        ('summoning_cradle', 'A hearth for borrowed life', ['binding_effigy', 'march_crystal'], 'Seat an awakened effigy in the first slot and Spiritweave in the second. Each successful summon uses 80 Pulse, one Spiritweave and one binding thread. Leave safe flooring within three blocks. Eight nearby mobs pause the cradle; redstone pauses all work and automation.'),
+        ('summoning_cradle', 'A hearth for borrowed life', ['binding_effigy', 'march_crystal'], 'Seat an awakened effigy in the first slot and Spiritweave in the second. Each successful summon uses 80 Pulse, one Spiritweave and one binding thread. Leave safe flooring within three blocks. Eight nearby mobs pause the cradle; redstone pauses all work and automation. Since 5.0 it wants a kept Spirit Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
     ]
     for i, (item, title, parents, description) in enumerate(camp):
         q = item_quest(s, title=title, desc=[description], item='tribalpower:'+item,
@@ -2569,6 +2569,7 @@ def build_tribal_side() -> list[dict]:
         task={'type':'advancement', 'advancement':'tribalpower:first_summon', 'criterion':''},
         rewards=[reward_item('tribalpower:spiritweave', 4)], deps=[binding['id'], existing['summoning_cradle']], x=10.8, y=39.2))
     expansion += tribal_nine_tribes(s, main + side + expansion, existing)
+    expansion += tribal_five(s, main + side + expansion, existing)
     return main + side + expansion
 
 
@@ -2697,6 +2698,192 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
     mark('codex_diagnostics', 'Ask the Codex why',
          'Sneak-use the Spirit Codex on any Tribal block for a plain report: stored Pulse, the generators feeding it, the attunements within eight blocks, what is missing for the current recipe, a full output, a redstone pause, an unloaded relay end. Tick this when it has told you something you did not know.',
          ['spirit_codex'], 8.1, 57, [reward_item('tribalpower:echo_shard', 4)])
+    late_ids(False)
+    return out
+
+
+def tribal_five(s: int, before: list[dict], existing: dict) -> list[dict]:
+    """Tribal Power 5.0 — the table, shamanic healing, weapons, the camp kit, the tribes' stories, the guardians,
+    the Ninth Agreement and the living March. Late ids again, so every shipped quest keeps its id."""
+    by_item = {}
+    for q in before:
+        t = q['tasks'][0]
+        if t.get('type') == 'item' and 'item' in t:
+            by_item.setdefault(t['item']['id'].split(':', 1)[1], q['id'])
+        elif t.get('type') == 'advancement':
+            by_item.setdefault(t['advancement'].split('/')[-1], q['id'])
+    by_item.update(existing)
+    def dep(*names):
+        out = []
+        for n in names:
+            if n in by_item: out.append(by_item[n])
+            elif n not in WARNED: WARNED.add(n); print("SKIP missing dep", n)
+        return out
+    late_ids(True)
+    # The shipped chapter carries hand-patched quests 0x8020-0x8045 (Tribal Power 4.0) that this generator never
+    # wrote; skip past them so the 5.0 block starts at 0x8046 and never reuses a live id.
+    _late["n"][s] = max(_late["n"].get(s, 0), 0x45)
+    out: list[dict] = []
+    THREAD = 'ninjacatskies:frayed_thread'
+    def keep(q):
+        # Late-appended quests stay out of the Steward Cache rotation (see finalize_chapter).
+        q['no_cache'] = True
+        out.append(q)
+        return q
+    def item(key, title, desc, parents, x, y, count=1, extra=None, optional=False):
+        # Three Frayed Thread like the rest of the expansion; `extra` is a small Tribal item on top of it.
+        q = item_quest(s, title=title, desc=[desc], item='tribalpower:' + key, count=count, deps=dep(*parents), x=x, y=y,
+                       reward_count=3, optional=optional)
+        if q:
+            if extra:
+                q['rewards'].append({'id': hid(int(q['rewards'][0]['id'], 16) + 0x1000000), **extra})
+            keep(q); by_item[key] = q['id']
+        return q
+    def adv(key, path, title, desc, parents, x, y, extra=(), optional=False):
+        q = task_quest(s, title=title, desc=[desc], task={'type': 'advancement', 'advancement': 'tribalpower:' + path, 'criterion': ''},
+                       rewards=[reward_item(THREAD, 3)] + list(extra), deps=dep(*parents), x=x, y=y, optional=optional)
+        keep(q); by_item[key] = q['id']
+        return q
+    def mark(key, title, desc, parents, x, y, extra=()):
+        q = task_quest(s, title=title, desc=[desc], task={'type': 'checkmark'}, rewards=[reward_item(THREAD, 3)] + list(extra),
+                       deps=dep(*parents), x=x, y=y, shape='diamond')
+        keep(q); by_item[key] = q['id']
+        return q
+
+    # ---- The table: the Hearth Pot, the five March crops, tribe dishes and a feast
+    item('hearth_pot', 'A pot for the camp',
+         'Bricks and a bowl over three copper. Set it over a lit campfire, fire, magma, lava or an Ember Bowl; it asks no Pulse at all. Up to four ingredients and a bowl in any order, about twelve seconds a meal. Hoppers feed it from above and the sides and take the meal from below.',
+         ['spirit_codex'], 0, 83)
+    crops = [
+        ('emberroot', 'Emberroot', 'A hot red tuber from the Ember Wastes. What you pick is the seed; plant it on farmland like a potato. The Spiritgear Hoe reaps and replants in one stroke.'),
+        ('fen_rice', 'Fen Rice', 'Grows wild in the Reed Fen. Pick a patch and plant what you picked; four stages on tilled ground, and bees pollinate it.'),
+        ('frostberry', 'Frostberry', 'From the Snow Fields. It also counts as a herb for the Spirit Kettle.'),
+        ('glimmer_bean', 'Glimmer Bean', 'From Glimmer Ridge. A herb for the kettle as well as a crop.'),
+        ('steppe_grain', 'Steppe Grain', 'From the Steppe, and the grain most tribe dishes are built on. Grow a bed of it before the rest.'),
+    ]
+    for i, (key, title, desc) in enumerate(crops):
+        item(key, title, desc, ['gate_drum'], 2.7 + i * 2.7, 83, count=4, optional=True)
+    item('grit_baked_bread', 'The Grit-singers\' loaf',
+         'Two Steppe Grain and one Iron Grit in the Hearth Pot. Eating a tribe\'s dish carries its boon for five minutes; the Grit-singers\' breaks more from ore. Once a tribe calls you Friend its Kin sell the dish for four of its crop, and offering a tribe its own dish at its hearth pays six standing.',
+         ['hearth_pot', 'steppe_grain', 'iron_grit'], 0, 85.5)
+    item('edge_walker_jerky', 'The Edge-walkers\' jerky',
+         'Two Raw Game and an Emberroot. Raw Game drops from the March\'s game animals. The Edge-walkers\' boon: you never fall while you sneak. Every tribe has a dish; JEI lists all nine under the pot.',
+         ['hearth_pot', 'emberroot'], 2.7, 85.5)
+    item('earth_feast', 'A table for the camp',
+         'Keeper\'s Root Mash, Grit-baked Bread, an Emberroot and Steppe Grain in the pot. Set the feast on a solid block and it holds six servings; each fills you and grants the Earth blessing for eight minutes — dig faster, stand firm. Every voice has a feast of its own dishes.',
+         ['grit_baked_bread', 'emberroot'], 5.4, 85.5, extra=reward_item('tribalpower:spiritweave', 2))
+
+    # ---- Shamanic healing
+    item('spirit_kettle', 'A kettle over the fire',
+         'Bones and iron around a cauldron, a Bone Chime under it. Sit it over heat. Three seats: one raw reagent out of your pouch, a March herb, and a base — a glass bottle makes two tinctures, honeycomb two salves, charcoal four incense. A batch is ten seconds and 24 Pulse from the lattice. The nearest totem within eight blocks sings into the brew.',
+         ['bone_chime', 'song_bench'], 0, 88.5)
+    item('spirit_tincture', 'Drink it',
+         'The reagent\'s family picks the remedy: Kindling is Strength, Cooling is Fire Resistance, Antidote lifts poison, Mending is Regeneration, and so on. A tincture lasts three minutes and hands the bottle back. Every remedy lifts Spirit Sickness, the Hush, Frayed and Ley Sickness.',
+         ['spirit_kettle'], 2.7, 88.5, count=2)
+    item('spirit_salve', 'Lay it on',
+         'Honeycomb as the base. Use a salve on yourself, or on a friend, a villager or your familiar: three hearts at once, every harmful effect gone, and the remedy for half a tincture\'s time. A stack of these is the difference between a hard night in the March and a walk home.',
+         ['spirit_kettle'], 5.4, 88.5, count=2)
+    item('spirit_incense', 'Burn it for everyone',
+         'Charcoal as the base. Seat incense in a Ritual Brazier — up to sixteen sticks, no seal and no Pulse — and every two seconds everyone within eight blocks gets the remedy, familiars mended a heart. Each stick burns thirty seconds. Redstone puts it out; sneak empty-handed to take it back.',
+         ['spirit_kettle', 'ritual_brazier'], 8.1, 88.5, count=4)
+    item('spiritgear_rattle', 'Shake it',
+         'Two Bone Chimes around a Manifested Ingot on a stick. Hold use and every half second it mends whoever you look at within six blocks, or you: three-quarters of a heart for 2 Pulse. It ranks at the Echo stations like the rest of Spiritgear; from Bound each shake eases Spirit Sickness a level.',
+         ['manifested_ingot', 'bone_chime'], 10.8, 88.5)
+    item('sweat_stones', 'A night in the lodge',
+         'Cobble over a magma block makes four. Over heat they steam. Sleep the whole night in a bed with hot stones within five blocks and a roof over you: you wake fully healed, cleansed, with ten minutes of Spirit Blessing so the sickness cannot take hold.',
+         ['spirit_codex'], 13.5, 88.5, count=4)
+    item('rite_healing_circle', 'Rite Tablet: Healing Circle',
+         'Two stone, a Mossback Scale and Spirit Reed around a Spirit Seal; the seal is handed back. Cast it on a brazier with a Spirit Seal seated, inside its Rite Circle, for 500 Pulse: everyone within twelve blocks is healed ten hearts, cleansed and blessed, and the circle stays open ten minutes. Lay a fallen familiar\'s Spirit Remnant on a pedestal first and it comes back whole.',
+         ['ritual_brazier', 'spirit_seal', 'mossback_scale'], 0, 91, extra=reward_item('tribalpower:blank_seal', 1))
+
+    # ---- Weapons and anointing
+    item('spiritgear_spear', 'Reach first',
+         'A Manifested Ingot, a Bone Chime and a stick on the diagonal. Seven damage, reach plus one and a half, and a sprinting thrust hits 35 percent harder. Underneath it is a Blade: it ranks at the Echo stations, spends Pulse on echo strikes and takes a totem voice. It keeps a Rift Hound at arm\'s length.',
+         ['spiritgear_blade', 'manifested_ingot'], 0, 94)
+    item('spiritgear_greatsword', 'The widest sweep',
+         'Three Manifested Ingots in a T over a Bone Chime. Ten damage, reach plus half, heavy — it slows your walk while it is in hand — and the widest, strongest sweep of the family. The halberd, battle axe, warhammer, dagger, scythe and trident are made the same way; each trades reach, speed and weight against the others.',
+         ['spiritgear_blade', 'manifested_ingot'], 2.7, 94)
+    item('pulse_bow', 'A bow that sings',
+         'String and Copper Resonators around a Bone Chime. It fires sonic bolts on Pulse from the cells you carry and takes verse arrows. Quick to loose again, and a half draw when you are in a hurry.',
+         ['copper_resonator', 'bone_chime'], 5.4, 94)
+    item('pulse_crossbow', 'The bow\'s heavier sister',
+         'Manifested Ingots either side of a Pulse Bow, a tripwire hook and sticks below. Hold use to load — 10 Pulse up front, a little longer than a full draw — then use again to fire. It hits about half again as hard, flies almost straight, and holds its shot as long as you like.',
+         ['pulse_bow', 'manifested_ingot'], 8.1, 94)
+    mark('anoint', 'A reagent in the blade',
+         'The Song Bench has a weapon seat beside the output. Stand a totem within reach with Pulse in the lattice, keep your Reagent Pouch on the hotbar with four empowered reagents of one kind, seat a Spiritgear weapon, pick the reagent and press Anoint: four reagents and 32 Pulse. Searing burns, Stormcall arcs lightning, Bloodthirst steals life, Mending repairs the weapon — eleven in all, one at a time; a different reagent replaces it. Only Spiritgear takes the bench\'s work unless a pack opens tribalpower:anointable. Tick this when a weapon carries one.',
+         ['song_bench', 'spiritgear_blade'], 10.8, 94, [reward_item('tribalpower:pulse_cell', 2)])
+
+    # ---- The camp kit
+    item('vine_lift', 'Up the column',
+         'Vines around Spirit Reed and an ender pearl make two. Put one on each floor in the same column; they find each other, no linking and no power. Jump to rise to the next lift above, sneak to sink to the one below, up to 48 blocks each way. A lift with a ceiling on it is passed over.',
+         ['spirit_reed'], 0, 97, count=2)
+    item('woven_soul_urn', 'Carry a creature home',
+         'Spirit Reed under a string. Use it on a creature to take it and on a block to set it down, safe and whole. Never a player, a boss or a March elite. Woven is two uses — one trip; copper, manifested and resonant urns carry more, and the resonant never wears out. It will not take a creature when it has only one use left.',
+         ['spirit_reed'], 2.7, 97)
+    item('songkeeper_drum', 'Drum for the joy of it',
+         'Leather over planks around a note block. The Gate Rite as a game with no portal at the end: every track in the pack, played on A, S, D, F as the beats reach the line. It keeps your best score per track and a board of the server\'s five best. Practise here before a real Gate Drum.',
+         ['drumheart'], 5.4, 97)
+    item('lantern_charm', 'A light you wear',
+         'Spiritweave, a Manifested Ingot and a Spirit Seal, shapeless. Use it to wear it; sneak-use to open the three charm slots. The Lantern charm carries the Spirit voice: night sight, and any voice blessing on you lasts half again as long. Worn charms cost 2 Pulse per voice every two seconds from a carried cell.',
+         ['spiritweave', 'manifested_ingot', 'spirit_seal'], 8.1, 97)
+
+    # ---- Tribes that talk: Elders, requests, stories, relics
+    adv('first_story', 'tribes/first_story', 'A story told',
+        'Once a tribe calls you Guest, right-click its Elder and talk. Ask for work and they hand you a request — three open a day, one held per tribe, each paying standing and every third a Tribe Mark. Ask for their story and a seven-step road begins: Friend, the thing they prize, hunting near their fires, a rite in their camp, their dish cooked, and where they send you. The last step is a trial against a guardian. Finish one story and hold its relic.',
+        ['friend', 'spirit_codex'], 0, 100, [reward_item('tribalpower:spiritweave', 2)])
+    relics = [
+        ('relic_soil', 'Kept Ember', 'Pad-keepers', 'the Stampede Spirit at the Trampled Ring on the Steppe', 'you never trample a field'),
+        ('relic_stone', 'Ringing Stone', 'Grit-singers', 'the Prism Serpent at the Singing Fracture in the Crystal Fields', 'you break more from ore'),
+        ('relic_sprout', 'First Root', 'Rootbinders', 'the Bog Matriarch at the Drowned Root in the Reed Fen', 'crops hurry along around you'),
+        ('relic_claw', 'Bridge Nail', 'Edge-walkers', 'the Storm Roc at the Roost on the Highlands', 'you never fall while you sneak'),
+        ('relic_spark', 'Steady Drum', 'Drumhearts', 'the Slag Titan at the Slag Throne in the Ember Wastes', 'you swing faster'),
+        ('relic_clock', 'Silent Gear', 'Pattern-weavers', 'the Tide Drummer at the Tide Stone in the Shallows', 'Echo stations near you work double'),
+        ('relic_swarm', 'Hive Seal', 'Colony-keepers', 'the Cairn Wight at the Cairn Ring in the Snow Fields', 'you are never stung'),
+        ('relic_sigil', 'Polite Seal', 'Seal-carvers', 'the Vault Sentinel at the Sealed Gate on Glimmer Ridge', 'your charms ask half the Pulse'),
+        ('relic_spindle', 'Ninth Thread', 'Loom-stitchers', 'The Unsung at the Silent Drum', 'you sing cheaper'),
+    ]
+    for i, (key, name, tribe, trial, boon) in enumerate(relics):
+        item(key, name, f'The {tribe}\' relic. Their story ends at {trial}; win the trial and the Elder hands it over. Carried anywhere in your pack it keeps their boon on you whatever your standing: {boon}.',
+             ['first_story'], (i % 5) * 2.7, 102.5 + (i // 5) * 2.5, optional=True)
+    adv('all_stories', 'tribes/all_stories', 'Nine relics',
+        'Every tribe\'s story finished: eight guardians faced and The Unsung. With all nine relics in your pack, the Ninth Agreement is within reach. `/tribalpower standing` shows where each tribe stands with you.',
+        [k for k, *_ in relics], 10.8, 105, [reward_item('tribalpower:greater_pulse_cell', 1)])
+
+    # ---- The guardians, one per March country
+    guardians = [
+        ('slag_titan', 'Slag Titan', 'The Slag Throne in the Ember Wastes', 'Magma Scales', 'Sneak to brace against its slams; roused, the rings ignite and Cinder Imps rise from the slag.', 'Slag Core', 'Drumhearts'),
+        ('bog_matriarch', 'Bog Matriarch', 'The Drowned Root in the Reed Fen', 'Reed Fangs', 'Its snare drags you in and slows you; keep to solid ground and cut down the Reed Stalkers it calls.', 'Fen Heart', 'Rootbinders'),
+        ('cairn_wight', 'Cairn Wight', 'The Cairn Ring in the Snow Fields', 'Rime Mandibles', 'Its breath freezes everything in front of it. Circle behind; the Rime Crawlers it calls are slow.', 'Cairn Stone', 'Colony-keepers'),
+        ('prism_serpent', 'Prism Serpent', 'The Singing Fracture in the Crystal Fields', 'Prism Carapace', 'It fires bolts of light that mark you glowing. Strafe, close in, and watch for the second bolt it adds once roused.', 'Prism Core', 'Grit-singers'),
+        ('vault_sentinel', 'Vault Sentinel', 'The Sealed Gate on Glimmer Ridge', 'Sentinel Sigils', 'The heaviest armour in the March and a sweep that throws you off the ridge. Roused, it wards itself three seconds at a time: wait it out.', 'Vault Seal', 'Seal-carvers'),
+        ('tide_drummer', 'Tide Drummer', 'The Tide Stone in the Shallows', 'Brine Fangs', 'Each beat pulls everyone toward it and hurts. Fight it from the shore with your back to something solid.', 'Tide Shell', 'Pattern-weavers'),
+        ('stampede_spirit', 'Stampede Spirit', 'The Trampled Ring on the Steppe', 'Shank Sinew', 'It charges. Sidestep and hit it as it passes; when Burrow Gnashers surface, stand on a block.', 'Herd Horn', 'Pad-keepers'),
+        ('storm_roc', 'Storm Roc', 'The Roost on the Highlands', 'Storm Wings', 'It swoops and throws you into the air; roused, lightning follows each swoop. A bow and a roof help more than a shield.', 'Storm Plume', 'Edge-walkers'),
+    ]
+    for i, (key, name, ground, call, tactic, core, tribe) in enumerate(guardians):
+        adv('guardian_' + key, 'march/guardian_' + key, name + ' stilled',
+            f'{ground}: a ring of stone with a Guardian Altar at its centre, on polished deepslate between four lit candles, open air above. Sneak-use the altar empty-handed and it names what it wants — eight {call} — then lay them on and stand back. {tactic} At half health it is roused and calls its country\'s creatures, which drop nothing. Leave it half a minute and it sleeps again; the altar rests twenty minutes between calls. It drops the {core}, and its fall ends the {tribe}\' story.',
+            ['gate_drum', 'resonant_core'], (i % 4) * 2.7, 108 + (i // 4) * 2.5, [reward_xp_levels(5)], optional=True)
+    item('rite_ninth_agreement', 'The tablet of nine',
+         'All eight guardian cores and an Unsung Heart, shapeless. A core with a Loom Thread would make six Resonant Cores instead, so take a second set of drops if you want both. The boss bar of every guardian wears its tribe\'s colour.',
+         ['guardian_' + k for k, *_ in guardians] + ['unsung_heart'], 0, 113.5, extra=reward_item('tribalpower:loom_thread', 2))
+    adv('ninth_agreement', 'march/ninth_agreement', 'The Loom agrees',
+        'Draw a Loom circle — a Loom Seal seated in the brazier inside its Rite Circle — and cast the tablet with all nine relics on you; the rite draws its Pulse before it takes. Nine lights rise, one in each tribe\'s colour. From then on every tribe treats you as Kin at the least, all nine boons settle on you for a while, and the aurora burns full every night you stand under it. Once per player; a second casting only lights the circle.',
+        ['rite_ninth_agreement', 'all_stories', 'loom_seal'], 2.7, 113.5, [reward_item('tribalpower:greater_pulse_cell', 1), reward_xp_levels(10)])
+
+    # ---- The living March: the Chronicle, weather, surges, festivals, wandering spirits
+    adv('chronicle', 'march/chronicle', 'The Chronicle whole',
+        'Sixteen fragments of the Loom\'s history are carved into the March: eight Carved Stones in the walls of its ruins, eight two-by-two Murals at the guardians\' grounds. Right-click one to read it; the Codex keeps it and its Chronicle section puts it in order. Read all sixteen and the story is whole.',
+        ['gate_drum', 'spirit_codex'], 0, 116.5, [reward_item('tribalpower:lore_tablet', 2)])
+    item('carved_stone', 'A stone that remembers',
+         'Set into the walls of the March\'s ruins — the old works, the sunken shrine, the barrows, the tombs, the vaults. Read it where you find it, then pick it up and set it on a wall of your own; what you read stays read.',
+         ['gate_drum'], 2.7, 116.5, optional=True)
+    item('mural', 'A wall that paints its country',
+         'Two blocks wide and two tall at each guardian\'s ground, each painting the country it stands in. Reading any part reads it all. Placed as one piece, it comes down as one; a mural cut in creative changes its chapter with a sneak-click.',
+         ['gate_drum'], 5.4, 116.5, optional=True)
+    mark('living_march', 'The March breathes',
+         'The March acts on its own. Ashfall, a Glimmer Storm, a Whiteout and Fen Mist close a country in and raise spirits by day; each feeds one voice\'s generators and hampers another\'s. Now and then one voice\'s ley threads surge: collectors carrying it yield double, but stand on a bare crossing with no collector and Ley Sickness sways the ground and drains your Pulse. Every tribe keeps a festival day in turn — join the feast for a gift. A warm light drifting near you is a wandering spirit; reach it for a line of its country\'s story and a small gift. Storms and surges are called two minutes ahead, in chat and over the hotbar. Tick this when you have weathered one.',
+         ['gate_drum', 'ley_lens'], 8.1, 116.5, [reward_item('tribalpower:pulse_cell', 2)])
     late_ids(False)
     return out
 

@@ -1,8 +1,8 @@
 {
   "stall": "spark",
   "cost": {
-    "id": "ninjacatskies:frayed_thread",
-    "count": 400
+    "id": "ninjacatskies:thread_skein",
+    "count": 44
   },
   "result": {
     "id": "ninjacatskies:thread_shard",
