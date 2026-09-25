@@ -706,19 +706,19 @@ for sid, tribe, x, y, lore, margin in TRIBES:
     entry("tribes", sid, tribe, f"Keepers of the {sid.title()} Strand.", f"{NS}:strand_token_{sid}", x, y, [
         text(tribe, lore),
         spotlight(f"{NS}:strand_token_{sid}", f"{sid.title()} Strand", f"*{margin}*\n\nSeated. The {tribe} answer when this Post hums."),
-        text("Their camp", f"The {tribe} keep a camp in {where}: huts, a fire, a Tribe Hearth, a {voice} totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours {favours}. Their Elder trades {trades}, and at Voice standing presses the tribe's Mark into your hand."),
+        text("Their camp", f"The {tribe} keep a camp in {where}: huts, a fire, a Tribe Hearth, a {voice} totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours {favours}. Their Elder talks: ask, and they trade {trades}, hand you the day's work, or tell the tribe's story. At Voice standing, or every third request you finish for them, they press the tribe's Mark into your hand."),
     ], condition=advancement(f"strand/{sid}"), hide=False)
 
 entry("tribes", "camps", "The Nine Camps", "Standing, offerings, marks.", "tribalpower:tribe_hearth", -4, 0, [
-    text("Standing", "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near the hearth and completed trades count. Hurting Kin costs 25 and turns the Hunters on you. Breaking a tribe banner costs five, the hearth forty. Generic camp blocks do not cost."),
-    spotlight("tribalpower:tribe_mark", "Tribe Mark", "Given once, by an Elder, at Voice. With the tribe's Resonance Totem and two Spiritweave it becomes a Kinship Totem: an extra voice for the Pulse Resonator. Nine tribes can carry the song to fifteen voices."),
+    text("Standing", "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800. Kills near the hearth, completed trades and finished requests count. Hurting Kin costs 25 and turns the Hunters on you. Breaking a tribe banner costs five, the hearth forty. Generic camp blocks do not cost."),
+    spotlight("tribalpower:tribe_mark", "Tribe Mark", "An Elder gives it at Voice, or for every third request you finish. With the tribe's Resonance Totem and two Spiritweave it becomes a Kinship Totem: an extra voice for the Pulse Resonator. Nine tribes can carry the song to fifteen voices."),
     text("The camp keeps the beat", "A Drummer plays every few seconds. A Drumheart within eight blocks takes two Pulse from each beat, so a camp is a small, honest source of power. `/tribalpower standing` prints all nine standings."),
 ], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:tribes/offering"}, hide=False)
 
 entry("tribes", "the_unsung", "The Unsung", "What the March remembers.", "tribalpower:silent_drum", 4, 2, [
     text("The halls that kept time", "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, four Lore Tablets in each hall, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."),
-    text("The Drum Circle", "Twelve pillars around a Silent Drum in the March highlands. Strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double."),
-    spotlight("tribalpower:unsung_heart", "Unsung Heart", "One per kill, with Loom Thread and Resonant Cores. It crafts the Resonance Totem (Loom), the sixth voice."),
+    text("The Drum Circle", "Twelve pillars around a Silent Drum in the March highlands. With the circle's candles lit and open sky above the drum, strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double.\n\nIts fall is the Loom-stitchers' trial; the other eight tribes' trials end at the guardians of the March."),
+    spotlight("tribalpower:unsung_heart", "Unsung Heart", "One per kill, with Loom Thread and Resonant Cores. It crafts the Resonance Totem (Loom), the sixth voice, and with the eight guardian cores the tablet of the Ninth Agreement."),
 ], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:march/ancestor_hall"}, hide=False)
 
 entry("tribes", "reweave", "Reweave", "The cut, closed.", f"{NS}:spindle_loom_fragment", 0, 0, [
@@ -727,6 +727,185 @@ entry("tribes", "reweave", "Reweave", "The cut, closed.", f"{NS}:spindle_loom_fr
          "thinner for it. When every Clowder has done the same, it turns to lit thread and stays that way.\n\n"
          "Go and see what the March kept for you. Tell it we are sorry it took so long."),
 ], condition=advancement("reweave"), hide=True)
+
+# 5.0: Tribal Power 4.1–5.0 in one — Elders that talk, the March's own guardians and the Ninth Agreement, weather
+# and surges, the table and the kettle, Spiritgear arms, and the voice every automated hand now asks for.
+# A row under the ring; the same two tribalpower gates the camps and Unsung entries use.
+OFFERING = {"type": "modonomicon:advancement", "advancement_id": "tribalpower:tribes/offering"}
+ANCESTOR_HALL = {"type": "modonomicon:advancement", "advancement_id": "tribalpower:march/ancestor_hall"}
+
+entry("tribes", "elders", "Elders that talk", "Conversations, requests, stories, relics.", "tribalpower:tribe_mark", -5, 5, [
+    text("Elders that talk",
+         "Right-click a tribe's Elder and a conversation opens: what they say, and what you can say back. Trading is "
+         "one thing you can ask for; work and their story are the others. A stranger gets a gruff word and a hint "
+         "about the hearth. A Friend gets work. Finish their story and the welcome warms.\n\n"
+         "The camp's Drummer, Hunter and Weaver have a word for you too."),
+    text("Requests",
+         "Ask an Elder for work and they hand you one of the tribe's requests: bring what they prize, deliver their "
+         "dish cooked, turn back the dark's creatures near their fires, perform a rite in their camp, or raise a small "
+         "build near it with Builder's Chalk in hand. The offers change with the days.\n\n"
+         "You may finish three requests a day across all the tribes; the Elder says so when the day's work is done. "
+         "Each pays standing, and every third request you finish for one tribe pays a **Tribe Mark**, so you need not "
+         "wait for Voice to hold one."),
+    text("Nine stories",
+         "Ask an Elder to tell you their story and a seven-step road begins: become their Friend, bring the one thing "
+         "they prize, hunt near their fires, sing a rite in their camp, cook their dish, and go where they send you. A "
+         "step that asks for a rank you already hold moves straight on.\n\n"
+         "The last step is a **trial** against one of the March's own guardians. The Loom-stitchers' ends at The Unsung."),
+    spotlight("tribalpower:relic_soil", "Nine relics",
+              "Finish a story and the Elder hands you the tribe's relic: Kept Ember, Ringing Stone, First Root, Bridge "
+              "Nail, Steady Drum, Silent Gear, Hive Seal, Polite Seal, Ninth Thread. Carried anywhere in your pack, a "
+              "relic keeps that tribe's boon on you whatever your standing. All nine are the price of the Ninth "
+              "Agreement.\n\n"
+              "The Spirit Codex keeps score. Each tribe's page ends with their open request and where their story "
+              "stands, and **Where to go next** opens with a **Next step** panel: one thing to do, from the first "
+              "hearth to the Ninth Agreement, moving as you go."),
+], condition=OFFERING, hide=False)
+
+entry("tribes", "march_guardians", "Guardians of the March", "Eight altars, eight cores, one agreement.", "tribalpower:guardian_altar", -3, 5, [
+    text("March guardians",
+         "Not the Snapped Guardians of the arenas: these are the March's own, one per country, each the end of a "
+         "tribe's story. The **Slag Titan** in the Ember Wastes. The **Bog Matriarch** in the Reed Fen. The **Cairn "
+         "Wight** on the Snow Fields. The **Prism Serpent** in the Crystal Fields. The **Vault Sentinel** on Glimmer "
+         "Ridge. The **Tide Drummer** in the Shallows. The **Stampede Spirit** on the Steppe. The **Storm Roc** on "
+         "the Highlands.\n\nThe ninth trial is The Unsung, at the Drum Circle."),
+    spotlight("tribalpower:guardian_altar", "Guardian grounds",
+              "Each country has a ring of its own stone with a **Guardian Altar** at its centre. A guardian rises only "
+              "from its altar: on polished deepslate, between four lit candles, with open sky above, and it rests "
+              "twenty minutes between calls. Sneak-use the altar with an empty hand and it tells you what it wants: a "
+              "fistful of that country's reagent. JEI's **Guardian calls** page lists them. Warded ground refuses "
+              "the call and keeps your reagents."),
+    text("Two phases",
+         "Every guardian has a signature attack — slams, snares, frost breath, light bolts, sweeps, tides, charges, "
+         "swoops — that sharpens at half health, when it also calls its country's creatures to its side. Those drop "
+         "nothing and vanish when it falls. Leave it alone half a minute and it goes back to sleep and frees its "
+         "altar.\n\n"
+         "It is a boss in every sense: a boss bar in its tribe's colour, no knockback, no potions, no leash, no Soul "
+         "Urn, no bed while one stands.\n\n"
+         "When it falls, everyone who fought finishes that tribe's trial, and it drops its **core** with a heap of "
+         "its country's reagents. A core and a Loom Thread make six Resonant Cores; keep one of each of the eight "
+         "for what comes next."),
+    spotlight("tribalpower:rite_ninth_agreement", "The Ninth Agreement",
+              "The eight cores — Slag Core, Fen Heart, Cairn Stone, Prism Core, Vault Seal, Tide Shell, Herd Horn, "
+              "Storm Plume — and an Unsung Heart make the tablet. Draw a Loom circle and perform the rite with all "
+              "nine relics on you. Nine lights rise, one in each tribe's colour, and the Loom agrees again.\n\n"
+              "After: every tribe treats you as Kin at the least, all nine boons settle on you for a while, and the "
+              "March's aurora burns full and steady every night you stand under it. The world remembers it for good."),
+], parents=["elders"], condition=ANCESTOR_HALL, hide=False)
+
+entry("tribes", "living_march", "The living March", "Weather, surges, festivals, spirits, the Chronicle.", "tribalpower:ley_lens", -1, 5, [
+    text("March weather",
+         "The March acts on its own now. The Spirit Codex's **The living March** page shows what it is doing: the "
+         "weather, the surge, whose festival it is. A storm or a surge is called two minutes before it sets in, in "
+         "chat and on the action bar. That is your time to find a roof or step off a crossing.\n\n"
+         "Four countries have weather beyond rain, and spirits rise under it by day as they would at night. "
+         "**Ashfall** over the Ember Wastes feeds Ember Horns and chokes Wind Harps. A **Glimmer Storm** over the "
+         "Crystal Fields feeds Wake Bells and dulls Drumhearts. A **Whiteout** on the Snow Fields drives Wind Harps "
+         "and freezes Wave Drums. **Fen Mist** in the Reed Fen swells Wave Drums and damps Ember Horns. Weather "
+         "comes and goes whether or not anyone is there to see it."),
+    spotlight("tribalpower:ley_lens", "Ley surges",
+              "Now and then one voice's ley threads run bright. Through the Ley Lens they blaze and the lens names "
+              "the voice; every Ley Collector whose threads carry it yields double while the surge lasts.\n\n"
+              "Stand on a bare crossing — where a cell's threads meet, with no collector to drink it — and the surge "
+              "gives you **Ley Sickness**: the ground sways and your Pulse drains. Step off it. A remedy, the Healing "
+              "Circle or a night at the Sweat Stones lifts it."),
+    text("Festivals, spirits",
+         "Every tribe keeps a festival day, the nine taking turns. On their day the camp's fires burn, the hearth "
+         "throws its colour into the air and the Kin keep to it. The Elder has festival words and a gift for anyone "
+         "who joins the feast; a rite performed in the camp that day earns festival thanks, and a feast eaten by "
+         "the hearth counts you at their table.\n\n"
+         "Rarely a warm light drifts near you out in the March. It does not flee. Reach it and it tells you a line "
+         "of its country's story, leaves a small gift, and goes."),
+    spotlight("tribalpower:carved_stone", "The Chronicle",
+              "Sixteen fragments of the Loom's history are carved into the March: eight **Carved Stones** in the "
+              "walls of its ruins, from the Loom Ruin and the Stilt Village to the Ossuary and the Glimmer Vault, "
+              "and eight two-by-two **Murals** at the guardians' grounds. Right-click one and you read it; the "
+              "Spirit Codex keeps it under **The Chronicle**, in order. Read all sixteen and the story is whole.\n\n"
+              "Both can be picked up and set on a wall of your own. A mural is placed as one piece and comes down "
+              "as one."),
+], condition=ANCESTOR_HALL, hide=False)
+
+entry("tribes", "the_table", "The table and the kettle", "Crops, the pot, dishes, remedies, healers.", "tribalpower:hearth_pot", 1, 5, [
+    spotlight("tribalpower:hearth_pot", "The Hearth Pot",
+              "Five March crops grow wild in their own country and on your farmland: Emberroot, Fen Rice, Frostberry, "
+              "Glimmer Bean and Steppe Grain, each its own seed. The Spiritgear Hoe reaps and replants them.\n\n"
+              "The **Hearth Pot** cooks over a campfire, fire, magma, lava or an Ember Bowl and asks no Pulse: up to "
+              "four ingredients and a bowl, in any order. JEI lists its meals under the pot."),
+    text("Dishes and feasts",
+         "Nine tribe dishes, one per tribe, each carry that tribe's **boon** for five minutes. The Pad-keepers never "
+         "trample a field, the Grit-singers break more from ore, the Rootbinders hurry the crops around them, the "
+         "Edge-walkers never fall while they sneak, the Drumhearts swing faster. The Pattern-weavers' Echo stations "
+         "work double, the Colony-keepers are never stung, the Seal-carvers' charms ask half the Pulse, the "
+         "Loom-stitchers sing cheaper.\n\n"
+         "Kin sell theirs once they call you Friend; at Kin standing you carry the boon always.\n\n"
+         "Six **feasts**, one per voice: set one down and it serves six, and every serving carries that voice's "
+         "blessing. Spirit arms lists the six."),
+    spotlight("tribalpower:spirit_kettle", "The Spirit Kettle",
+              "The **Spirit Kettle** brews a raw reagent, a March herb and a base into remedies: a bottle makes a "
+              "tincture to drink, honeycomb a salve to lay on yourself or a friend, charcoal an incense to burn in a "
+              "Ritual Brazier for everyone around. The reagent's family picks the remedy; the nearest totem's voice "
+              "shapes it.\n\n"
+              "**Spirit Sickness** comes from March elites and spirits that rose at night. It stacks, costs health "
+              "and speed, and milk does nothing. Only a shaman's remedy lifts it; Spirit Blessing keeps it from "
+              "taking hold."),
+    text("Healers",
+         "The **Healer's Rattle** is Spiritgear: hold use and it mends whoever you look at, or you, for a little "
+         "Pulse, and ranks like the rest. The **Healing Circle** is a Spirit rite: it heals, cleanses and blesses "
+         "everyone in the circle, stays open ten minutes, and calls back any fallen familiar whose Spirit Remnant "
+         "you laid on its pedestals. **Sweat Stones** steam over heat; sleep the night near them under a roof and "
+         "you wake whole and blessed.\n\n"
+         "Every one of these lifts Spirit Sickness, Ley Sickness, Frayed and the Unsung Hush. So does washing in a "
+         "Spirit Well: sneak in its water with Pulse in a cell."),
+], condition=OFFERING, hide=False)
+
+entry("tribes", "spirit_arms", "Spirit arms", "Eight weapons, anointing, the crossbow, blessings.", "tribalpower:spiritgear_spear", 3, 5, [
+    spotlight("tribalpower:spiritgear_spear", "Spirit arms",
+              "Eight Spiritgear weapons join the Blade, every one on a bone handle, ranked at the Echo stations and "
+              "given a totem voice like the rest. Each trades reach, speed, weight and damage against the others and "
+              "has one move of its own.\n\n"
+              "**Spear:** long reach; a sprinting thrust strikes harder. **Halberd:** long reach and a heavy sweep; "
+              "breaks shields. **Battle axe:** a cleaving sweep; breaks shields. **Warhammer:** slow and crushing; "
+              "through armour, breaks shields. **Dagger:** quick and close; from behind lands far harder. "
+              "**Scythe:** each blow reaps every hostile around the target. **Greatsword:** the widest, strongest "
+              "sweep. **Trident:** long reach; bites deeper into anything standing in water or rain."),
+    spotlight("tribalpower:song_bench", "Anointing",
+              "The **Song Bench** has a weapon seat. Four **empowered** reagents work the reagent's power into the "
+              "weapon, one anointment at a time, until another replaces it. Eleven of them: Searing, Stormcall, "
+              "Frostbite, Venom, Gale, Rooting, Sundering, Echo, Sapping, Bloodthirst, Mending. JEI's **Anointing** "
+              "page says which reagent gives which.\n\n"
+              "Spiritgear only, unless the pack opens the `tribalpower:anointable` tag to swords, axes, tridents "
+              "and maces."),
+    spotlight("tribalpower:pulse_crossbow", "The Pulse Crossbow",
+              "Hold use to load it with Pulse, six more with a verse arrow, then use again to fire. Slower than the "
+              "Pulse Bow, but it hits harder, flies truer and holds its shot."),
+    text("Blessings",
+         "A voice is also a blessing you can carry. A Ward song grants its voice's blessing, a seal rite at a Rite "
+         "Pedestal blesses everyone in the circle, and a feast shares one round the table. A worn Lantern charm "
+         "keeps them lit half again as long.\n\n"
+         "**Earth** digs faster and stands firm against knockback. **Fire's** blows burn; at level II fire cannot "
+         "touch you. **Water** swims faster and mends while wet. **Air** falls softly and jumps higher. **Spirit** "
+         "shows hostiles through walls. **Loom** threads a tenth of every Pulse spend back."),
+], condition=OFFERING, hide=False)
+
+entry("tribes", "voices", "Every hand wants a voice", "Automated devices and the totem they answer to.", "tribalpower:resonance_totem_earth", 5, 5, [
+    text("Every hand, a voice",
+         "Since Tribal Power 5.0 every automated hand answers to a voice. A device needs a **kept** Resonance Totem "
+         "of its own voice within eight blocks, or it stands idle — and its status names the totem it misses. "
+         "Sneak-use the Spirit Codex on it, or read Jade, and it says so in plain words.\n\n"
+         "Kept means the totem is answering, not quiet. A totem that has gone quiet wants a strike, or a Bone Chime."),
+    spotlight("tribalpower:resonance_totem_earth", "Who wants what",
+              "**Earth:** the Grove Tender and the Wayanchor. A Water totem kept beside a Grove Tender also lets it "
+              "water its bed, soaking the dry furrows in one beat for a little Pulse.\n\n"
+              "**Spirit:** the Ward Drum, the Hush Totem and the Summoning Cradle.\n\n"
+              "**Water:** the Tide Pump.\n\n"
+              "**Air:** the Wind Snare, and the Item and Fluid Relays.\n\n"
+              "**Loom:** the Seal Loom, and the Astral relays."),
+    text("Totem first",
+         "One kept totem serves every device of its voice within reach, so a workshop wants one of each voice it "
+         "uses, not one per machine. Place the totem, then the device, then check the status once.\n\n"
+         "**Check:** the device's status no longer names a totem, and a Grove Tender with a Water totem keeps its "
+         "bed wet."),
+], condition=OFFERING, hide=False)
 
 # ------------------------------------------------------------------------------------ Snapped Guardians
 

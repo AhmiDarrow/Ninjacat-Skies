@@ -1,0 +1,75 @@
+{
+  "category": "ninjacatskies:tribes",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.description",
+  "icon": "tribalpower:ley_lens",
+  "x": -1,
+  "y": 5,
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "hide_while_locked": false,
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.0.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.1.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.2.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "tribalpower:ley_lens",
+        "count": 1
+      },
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.3.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.4.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.5.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.6.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.7.text"
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "item": {
+        "id": "tribalpower:carved_stone",
+        "count": 1
+      },
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.8.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.8.text"
+    },
+    {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.living_march.page.9.text"
+    }
+  ],
+  "condition": {
+    "type": "modonomicon:advancement",
+    "advancement_id": "tribalpower:march/ancestor_hall"
+  }
+}
