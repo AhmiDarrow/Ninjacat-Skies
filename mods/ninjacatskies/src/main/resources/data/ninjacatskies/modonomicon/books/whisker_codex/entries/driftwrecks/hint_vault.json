@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The old vaults",
-  "description": "A loose page about hidden rooms.",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_vault.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_vault.description",
   "icon": "driftwrecks:hint_page",
   "x": -3,
   "y": 3,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The old vaults",
-      "text": "A vault with one wall is a door. A vault with two is a promise.\\\n*From now on, your Clowder's vault wrecks drift in with their hidden room open.*"
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_vault.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_vault.page.0.text"
     }
   ],
   "parents": [

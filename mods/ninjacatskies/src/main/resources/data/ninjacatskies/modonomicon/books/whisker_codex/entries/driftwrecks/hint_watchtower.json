@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The old watchtowers",
-  "description": "A loose page about hidden rooms.",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_watchtower.description",
   "icon": "driftwrecks:hint_page",
   "x": -3,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The old watchtowers",
-      "text": "Three landings up, the watch kept a room nobody climbed to.\\\n*From now on, your Clowder's watchtower wrecks drift in with their hidden room open.*"
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_watchtower.page.0.text"
     }
   ],
   "parents": [

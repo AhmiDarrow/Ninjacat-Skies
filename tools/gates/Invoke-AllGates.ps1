@@ -65,6 +65,9 @@ try {
     Invoke-Gate "ShippedConfigs" {
         python -X utf8 (Join-Path $gateDir "test_shipped_configs.py")
     }
+    Invoke-Gate "LangKeys" {
+        python -X utf8 (Join-Path $gateDir "test_lang_keys.py")
+    }
     Invoke-Gate "Reachability" {
         python -X utf8 (Join-Path $root "tools\check_reachability.py")
     }

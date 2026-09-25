@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Named continents",
-  "description": "Pads that forgot they were pads. Cities that hung. Hearths first.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.description",
   "icon": "minecraft:grass_block",
   "x": -2,
   "y": -1,
@@ -11,33 +11,33 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Named continents",
-      "text": "The old maps did not say *island*.\\\nThey named continents the way you name a house: by who kept the hearth, by which river had manners, by which city hung over which Strand-knot.\\\nA pad that had forgotten it was a pad got a name."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "A name was a promise that the inspection had gone well for long enough to stop calling it a pad."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Cities that hung",
-      "text": "Markets sat on lattice, not bedrock. Stairs went down to the under-thread and up to the weather-road. You could walk a street and never think about the drop because the Soil Strand ran under the cobbles the way warmth runs under a well-kept floor."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Hanging felt like standing. That was the trick, and it was work."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Hearths first",
-      "text": "Before Stone named shards, before Clock sang a factory, a Pad-keeper banked heat in thin dirt and called it a world. The hearth is the first physics. A continent is a hearth that got out of hand in the useful direction."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Seat Soil and you are not founding a nation. You are reminding a scrap of dirt that it used to be allowed to stay warm."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.continents_named.page.5.text"
     }
   ],
   "parents": [

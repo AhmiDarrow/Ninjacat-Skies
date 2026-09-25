@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Mattock Shed",
-  "description": "Pad-keepers · Forge",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_forge.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_forge.description",
   "icon": "driftwrecks:keepsake_soil_forge",
   "x": -1,
   "y": 1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Mattock Shed",
-      "text": "The Pad-keepers forged nothing sharper than a mattock and needed nothing sharper. They re-edged the same heads for generations, so a tool outlived three owners. The shed smelled of wet iron and bread. Bank the fire before you leave."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_forge.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_forge.page.0.text"
     }
   ],
   "condition": {

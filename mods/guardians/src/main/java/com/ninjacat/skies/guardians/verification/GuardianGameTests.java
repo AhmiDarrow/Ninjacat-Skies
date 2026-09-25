@@ -80,8 +80,12 @@ public class GuardianGameTests {
         BlockPos base = h.absolutePos(new BlockPos(1, 1, 1));
         fake.teleportTo(base.getX() + 0.5, base.getY(), base.getZ() + 0.5);
         ArenaManager m = ArenaManager.get(level.getServer());
-        String fail = m.summon(fake, GuardianKind.BEDDOWN);
-        if (fail == null || !fail.contains("Soil")) { h.fail("gate totem answered without the Strand seated: " + fail); return; }
+        net.minecraft.network.chat.Component refusal = m.summon(fake, GuardianKind.BEDDOWN);
+        String fail = text(refusal);
+        boolean namesSoil = fail != null && (fail.contains("Soil") || refusal.getContents() instanceof net.minecraft.network.chat.contents.TranslatableContents tc
+                && java.util.Arrays.stream(tc.getArgs()).anyMatch(a -> "Soil".equals(a) || a instanceof net.minecraft.network.chat.Component ac
+                        && ac.getContents() instanceof net.minecraft.network.chat.contents.TranslatableContents at && Strand.SOIL.titleKey().equals(at.getKey())));
+        if (!namesSoil) { h.fail("gate totem answered without the Strand seated: " + fail); return; }
         if (m.instanceOf(fake) != null) { h.fail("an arena was opened anyway"); return; }
         GuardianEntity shade = ModEntities.create(GuardianKind.BEDDOWN, level);
         if (shade == null) { h.fail("no entity"); return; }
@@ -90,6 +94,9 @@ public class GuardianGameTests {
         shade.discard();
         h.succeed();
     }
+
+    /** The refusal as plain text (the summon returns a lang-keyed component). */
+    private static String text(@javax.annotation.Nullable net.minecraft.network.chat.Component c) { return c == null ? null : c.getString(); }
 
     /** Solo persistent data: seat a Strand so Easy-tier totems (Lint Golem / Tangle) will answer. */
     private static void seat(ServerPlayer p, Strand s) {
@@ -109,7 +116,7 @@ public class GuardianGameTests {
         fake.teleportTo(base.getX() + 0.5, base.getY(), base.getZ() + 0.5);
         seat(fake, Strand.SOIL);
         ArenaManager m = ArenaManager.get(level.getServer());
-        String fail = m.summon(fake, GuardianKind.LINTGOLEM);
+        String fail = text(m.summon(fake, GuardianKind.LINTGOLEM));
         if (fail != null) { h.fail("summon refused: " + fail); return; }
         ArenaInstance inst = m.instanceOf(fake);
         if (inst == null) { h.fail("no instance"); return; }
@@ -150,7 +157,7 @@ public class GuardianGameTests {
         // its disconnected party in SavedData, making every later run fail setup.
         ArenaInstance previous = m.instanceOf(fake);
         if (previous != null) clearTestArena(level, m, previous);
-        String fail = m.summon(fake, GuardianKind.LINTGOLEM);
+        String fail = text(m.summon(fake, GuardianKind.LINTGOLEM));
         if (fail != null) { h.fail("summon refused: " + fail); return; }
         ArenaInstance inst = m.instanceOf(fake);
         if (inst == null) { h.fail("no instance"); return; }

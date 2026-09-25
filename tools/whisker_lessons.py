@@ -205,8 +205,9 @@ def build_lessons(book, write, text, entry, category):
                  'A team can divide the work. You will still need all nine Strands for the final reweave.'),
             text('Make Braid Cord',
                  '1. Stand at your **Tension Post**.\n'
-                 '2. Hold **16 Strand Filaments** - sieve gravel or sand with an iron Thread Mesh.\n'
-                 '3. Right-click the Post to receive **Braid Cord**.\n\n'
+                 '2. Hold **16 Strand Filaments** — sieve gravel or sand with an iron Thread Mesh.\n'
+                 '3. Right-click the Post to receive **Braid Cord**.'),
+            text('Continue',
                  'Do not put Strand tokens in a crafting grid. They record progress, and the braid does not need them.'),
             text('Check',
                  '**Check:** two of those three notches are lit, and Braid Cord is in your hand. Next: Bind and the Sigil quests.')]),

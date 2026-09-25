@@ -1,6 +1,6 @@
 {
-  "name": "The Cut",
-  "description": "What happened, and what still works.",
+  "name": "book.ninjacatskies.whisker_codex.category.the_cut.name",
+  "description": "book.ninjacatskies.whisker_codex.category.the_cut.description",
   "icon": "ninjacatskies:whisker_codex",
   "sort_number": 1,
   "background": "ninjacatskies:textures/gui/quest_atlas.png",

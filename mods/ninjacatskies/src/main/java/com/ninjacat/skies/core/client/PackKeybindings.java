@@ -48,7 +48,7 @@ public final class PackKeybindings {
             apply(false);
         }
         if (event.getScreen() instanceof KeyBindsScreen screen) {
-            event.addListener(Button.builder(Component.literal("Pack defaults"), button -> {
+            event.addListener(Button.builder(Component.translatable("message.ninjacatskies.keybinds.pack_defaults"), button -> {
                 apply(true);
                 Minecraft.getInstance().setScreen(screen);
             }).bounds(screen.width-110, 3, 104, 20).build());
@@ -80,7 +80,7 @@ public final class PackKeybindings {
             mc.options.save();
             try {
                 Files.createDirectories(MARKER.getParent());
-                Files.writeString(MARKER,"Pack bindings v2 applied. Change keys normally in Controls; Pack defaults reapplies this preset.\n",StandardCharsets.UTF_8);
+                Files.writeString(MARKER,"Pack bindings v2 applied. Change keys normally in Controls; Pack defaults reapplies this preset.\n",StandardCharsets.UTF_8);   // lang-exempt: marker file contents, never shown in game
             } catch (Exception ex) { NinjacatSkies.LOGGER.warn("Could not save keybinding migration marker",ex); }
             NinjacatSkies.LOGGER.info("Applied {} pack keybindings; preserved customized bindings",changed);
         }

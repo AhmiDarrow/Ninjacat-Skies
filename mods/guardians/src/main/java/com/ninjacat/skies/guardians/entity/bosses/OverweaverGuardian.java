@@ -8,6 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
@@ -48,7 +49,7 @@ public class OverweaverGuardian extends GuardianEntity {
     public OverweaverGuardian(EntityType<? extends GuardianEntity> type, Level level) { super(type, level, GuardianKind.OVERWEAVER); for (int k = 0; k < 9; k++) lines[k] = new Mech.Ledger(); }
 
     @Override protected boolean mobile() { return false; }
-    @Override protected String immuneMessage() { return "No thread is taut. Kill a shade on its strand-platform to pull one tight."; }
+    @Override protected MutableComponent immuneMessage() { return Component.translatable("message.guardians.overweaver.no_thread_taut_kill_shade"); }
     /** Strand k's platform. arena_factory puts it at 90° + 40°k; the plan is that mirrored into Minecraft z, so the angle is negated. */
     private double angle(int k) { return -(Math.PI * 2 * k / 9 + Math.PI / 2); }
     private int tautCount() { int n = 0; for (int t : tautUntil) if (t > tickCount) n++; return n; }
@@ -58,7 +59,7 @@ public class OverweaverGuardian extends GuardianEntity {
     @Override
     public boolean hurt(DamageSource src, float amount) {
         if (keystone && !isImmune() && src.getEntity() instanceof ServerPlayer p && Mech.horiz(p.position(), origin()) > KEYSTONE_R) {
-            if (tickCount % 10 == 0) p.displayClientMessage(NinjacatText.teal("The keystone has come down — strike from beneath it."), true);
+            if (tickCount % 10 == 0) p.displayClientMessage(NinjacatText.tealKey("message.guardians.overweaver.keystone_down"), true);
             return false;
         }
         return super.hurt(src, amount);
@@ -66,7 +67,7 @@ public class OverweaverGuardian extends GuardianEntity {
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) shout("The Overweaver answers for the Cut with every guardian you have broken. It throws their shades onto the nine strands; each shade you kill pulls a thread taut for 25 s, and only then can the loom itself be hurt.");
+        if (ageInFight == 1) shout("message.guardians.overweaver.overweaver_answers_for_cut_with");
         setImmune(tautCount() == 0);
         if (tickCount % 10 == 0) auditShades();
         if (--nextThrow <= 0) throwShades();
@@ -78,9 +79,9 @@ public class OverweaverGuardian extends GuardianEntity {
 
     @Override
     protected void onPhase(int phase) {
-        if (phase == 1) shout("The loom quickens.");
-        if (phase == 2) { shout("The Overweaver throws three shades at once!"); nextThrow = 1; }
-        if (phase == 3) { keystone = true; shout("All nine strands at once — and the keystone descends. When it settles, only blows from beneath it land."); sound(SoundEvents.END_PORTAL_SPAWN, 3F, 0.5F); nextThrow = 1; }
+        if (phase == 1) shout("message.guardians.overweaver.loom_quickens");
+        if (phase == 2) { shout("message.guardians.overweaver.overweaver_throws_three_shades_at"); nextThrow = 1; }
+        if (phase == 3) { keystone = true; shout("message.guardians.overweaver.all_nine_strands_at_once"); sound(SoundEvents.END_PORTAL_SPAWN, 3F, 0.5F); nextThrow = 1; }
     }
 
     // ------------------------------------------------------------------ shades
@@ -103,14 +104,14 @@ public class OverweaverGuardian extends GuardianEntity {
         Vec3 o = origin(), spot = Mech.polar(o, SHADE_R, angle(k), o.y);
         Vec3 at = Mech.standOn(level(), spot.x, spot.z, (int) o.y - 4, (int) o.y + 4); if (at == null) at = spot;
         g.moveTo(at.x, at.y, at.z, (float) Math.toDegrees(angle(k)) + 90, 0);
-        g.setCustomName(Component.literal("Shade of " + sk.title)); g.setCustomNameVisible(true);
+        g.setCustomName(Component.translatable("message.guardians.overweaver.shade_name", sk.titleComponent())); g.setCustomNameVisible(true);
         g.addTag(Mech.tag(this)); g.addTag("guardians_add"); g.setPersistenceRequired();
         AttributeInstance h = g.getAttribute(Attributes.MAX_HEALTH); if (h != null) { h.setBaseValue(sk.baseHealth * 0.4 * (0.6 + 0.4 * partySize())); g.setHealth(g.getMaxHealth()); }
         g.finalizeSpawn(serverLevel(), serverLevel().getCurrentDifficultyAt(g.blockPosition()), MobSpawnType.MOB_SUMMONED, null);
         serverLevel().addFreshEntity(g); shade[k] = g.getUUID();
         Mech.line(serverLevel(), Mech.VIOLET, position().add(0, kind.height * 0.5, 0), at.add(0, 2, 0), 40); Mech.burst(serverLevel(), ParticleTypes.PORTAL, at.add(0, 2, 0), 40, 2);
         Mech.soundAt(serverLevel(), at, SoundEvents.SHULKER_TELEPORT, 2F, 0.5F);
-        say("The Overweaver throws the shade of " + sk.title + " onto its strand.");
+        say("message.guardians.overweaver.throws_shade", sk.titleComponent());
         return true;
     }
     /** A shade that is dead, dying (death clip) or simply gone counts as killed: its thread pulls taut. */
@@ -120,7 +121,7 @@ public class OverweaverGuardian extends GuardianEntity {
             Entity e = serverLevel().getEntity(shade[k]);
             if (e instanceof GuardianEntity g && g.isAlive() && g.clip() != CLIP_DEATH) continue;
             shade[k] = null; tautUntil[k] = tickCount + TAUT; lightLine(k);
-            shout("The shade of " + STRANDS[k].title + " unravels — its thread pulls taut! The loom can be hurt for 25 s.");
+            shout("message.guardians.overweaver.shade_unravels", STRANDS[k].titleComponent());
             sound(SoundEvents.NOTE_BLOCK_CHIME.value(), 3F, 0.5F); Mech.burst(serverLevel(), ParticleTypes.END_ROD, position().add(0, kind.height * 0.6, 0), 40, 5);
             if (phase() < 2) nextThrow = Math.min(nextThrow, 100);            // the next shade follows the kill quickly
         }
@@ -133,7 +134,7 @@ public class OverweaverGuardian extends GuardianEntity {
         for (int r = BRIDGE_IN; r <= BRIDGE_OUT; r++) { BlockPos b = BlockPos.containing(Mech.polar(o, r, angle(k), o.y)); if (!level().getBlockState(b).isAir() && !lines[k].has(b)) lines[k].set(level(), b, Blocks.SEA_LANTERN.defaultBlockState()); }
     }
     private void slacken() {
-        for (int k = 0; k < 9; k++) if (lines[k].size() > 0 && tautUntil[k] <= tickCount) { lines[k].restoreAll(level()); say("A thread slackens."); }
+        for (int k = 0; k < 9; k++) if (lines[k].size() > 0 && tautUntil[k] <= tickCount) { lines[k].restoreAll(level()); say("message.guardians.overweaver.thread_slackens"); }
     }
     private void drawThreads() {
         Vec3 o = origin(), key = new Vec3(o.x, o.y + keystoneY, o.z);

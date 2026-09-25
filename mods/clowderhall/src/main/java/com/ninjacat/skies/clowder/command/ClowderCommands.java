@@ -157,7 +157,7 @@ public final class ClowderCommands {
             return 0;
         }
         ctx.getSource().sendSuccess(
-                () -> NinjacatText.teal("Self-revive complete — lives: " + lives),
+                () -> NinjacatText.tealKey("message.clowderhall.revive_self_complete", lives),
                 true
         );
         return 1;
@@ -186,11 +186,11 @@ public final class ClowderCommands {
             return 0;
         }
         ctx.getSource().sendSuccess(
-                () -> NinjacatText.teal("Revived Clowder mate " + target.getGameProfile().getName() + " — lives: " + lives),
+                () -> NinjacatText.tealKey("message.clowderhall.revive_mate_complete", target.getGameProfile().getName(), lives),
                 true
         );
         target.displayClientMessage(
-                NinjacatText.gold(actor.getGameProfile().getName() + " pulled you back — Skybound lives restored."),
+                NinjacatText.goldKey("message.clowderhall.revive_pulled_back", actor.getGameProfile().getName()),
                 false
         );
         return 1;

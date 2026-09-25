@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Songs with no singer",
-  "description": "Factories running. Drums beating. Gates open into nowhere.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.description",
   "icon": "minecraft:note_block",
   "x": -2,
   "y": 0,
@@ -11,33 +11,33 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Songs with no singer",
-      "text": "After the Cut the world did not go quiet. It went unattended. Factories kept the round the Pattern-weavers had taught them. Drums kept the beat the Drumhearts had left in them. Gates stood open into nowhere because a Loom-stitcher had always meant to come back and close them after lunch."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Lunch did not come. The work did."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Asking politely",
-      "text": "The Seal-carvers had a rule: spirit goes where it is asked politely and stays where it is fed. After the Cut, a lot of asking kept happening with nobody to feed the answer. Seals held promises to empty rooms. Rites fired into the Fray."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Polite is still the method. The budget is smaller. Ask for a pad, not a continent."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Asking too much",
-      "text": "The old world broke on appetite as much as on slack. Exceptions stacked until the Loom had more appointments than thread. You will find blank seals by the thousand in the March. That is not treasure. That is a warning written in inventory."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Never bind what you would not unbind. Feed what you ask to stay. The new sky will hold on manners."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.silence_after.page.5.text"
     }
   ],
   "parents": [

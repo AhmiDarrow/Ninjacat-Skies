@@ -39,7 +39,7 @@ public final class WreckObjectives {
                 WreckRewards.award(p, "root");
                 if (w.visitors.size() == 1) {
                     TeamDrift t = TeamDrift.of(c.get()); t.count("explored"); t.dirty();
-                    if (w.heartwreck) for (ServerPlayer q : c.get().onlineMembers()) q.sendSystemMessage(NinjacatText.teal("You stand in the heart of the old world. It starts to slip the moment you arrive."));
+                    if (w.heartwreck) for (ServerPlayer q : c.get().onlineMembers()) q.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.objective.heart_arrive"));
                 }
             }
         }
@@ -61,10 +61,10 @@ public final class WreckObjectives {
             w.pillarStep++;
             m.markDirty();
             if (w.pillarStep >= w.pillarOrder.length) {
-                p.sendSystemMessage(NinjacatText.gold(w.heartwreck ? "Nine threads, one weave. The heart holds its breath." : "The pillars sing in order. The seam steadies."));
+                p.sendSystemMessage((w.heartwreck ? NinjacatText.goldKey("message.driftwrecks.objective.heart_pillars_done") : NinjacatText.goldKey("message.driftwrecks.objective.pillars_done")));
                 m.completeObjective(level, w);
             } else {
-                p.displayClientMessage(NinjacatText.teal(w.pillarStep + " of " + w.pillarOrder.length + " threads hold."), true);
+                p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.objective.pillar_step", w.pillarStep, w.pillarOrder.length), true);
             }
         } else {
             for (int i = 0; i < w.pillarOrder.length; i++) {
@@ -76,7 +76,7 @@ public final class WreckObjectives {
             w.pillarStep = 0;
             m.markDirty();
             level.playSound(null, at, SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.BLOCKS, 1.0F, 0.5F);
-            p.displayClientMessage(NinjacatText.teal("Wrong thread. The pillars go dark—watch the idol again."), true);
+            p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.objective.wrong_thread"), true);
             long now = level.getGameTime();
             if (now >= w.lastPenalty + 100 && m.mobsNear(level, at, 24) < 8) {
                 w.lastPenalty = now;
@@ -88,7 +88,7 @@ public final class WreckObjectives {
     /** The idol shows the order: each pillar flares in turn. */
     public static void showOrder(ServerLevel level, Wreck w, ServerPlayer p) {
         if (w.pillarOrder.length == 0) {
-            p.displayClientMessage(NinjacatText.teal("The idol is quiet. This wreck asks something else of you."), true);
+            p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.objective.idol_quiet"), true);
             return;
         }
         int[] order = w.pillarOrder;
@@ -102,7 +102,7 @@ public final class WreckObjectives {
                 level.playSound(null, pp, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.5F, 0.7F + 0.12F * step);
             });
         }
-        p.displayClientMessage(NinjacatText.gold("Watch, then act."), true);
+        p.displayClientMessage(NinjacatText.goldKey("message.driftwrecks.objective.watch_then_act"), true);
     }
 
     // ------------------------------------------------------------------ clear
@@ -113,7 +113,7 @@ public final class WreckObjectives {
         Optional<Clowder> c = LoomTension.clowderById(level.getServer(), w.team);
         c.ifPresent(cl -> { TeamDrift t = TeamDrift.of(cl); t.count("spawners"); t.dirty(); });
         if (w.objective == WreckObjective.CLEAR && w.spawnersLeft == 0 && !w.objectiveDone) {
-            c.ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.gold("The last frayed spawner goes quiet.")); });
+            c.ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.objective.spawners_quiet")); });
             m.completeObjective(level, w);
         }
     }
@@ -122,7 +122,7 @@ public final class WreckObjectives {
 
     public static void echoHome(DriftManager m, ServerLevel level, Wreck w) {
         if (w.objective != WreckObjective.ESCORT || w.objectiveDone) return;
-        LoomTension.clowderById(level.getServer(), w.team).ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.gold("The echo steps onto your pad and settles, purring. Thank you, it seems to say.")); });
+        LoomTension.clowderById(level.getServer(), w.team).ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.objective.echo_saved")); });
         m.completeObjective(level, w);
     }
 
@@ -130,7 +130,7 @@ public final class WreckObjectives {
         if (w.objectiveDone) return;
         w.echo = null;
         m.markDirty();
-        LoomTension.clowderById(level.getServer(), w.team).ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.teal("The echo fades. The chests are still yours.")); });
+        LoomTension.clowderById(level.getServer(), w.team).ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.objective.echo_fades")); });
     }
 
     // ------------------------------------------------------------------ hold
@@ -152,7 +152,7 @@ public final class WreckObjectives {
         if (w.holdTicks >= HOLD_WAVE_TICKS) {
             if (w.holdWave >= 3) {
                 w.holdWave = 4; m.markDirty();
-                for (ServerPlayer p : c.onlineMembers()) p.sendSystemMessage(NinjacatText.gold("The seam holds. The wreck will stay a while longer."));
+                for (ServerPlayer p : c.onlineMembers()) p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.objective.seam_holds"));
                 m.completeObjective(level, w);
             } else {
                 startWave(m, level, w, c, center, w.holdWave + 1);
@@ -169,7 +169,7 @@ public final class WreckObjectives {
             spawnAt(m, level, w, at, m.mobFor(w, i + wave));
         }
         level.playSound(null, center, SoundEvents.RAID_HORN.value(), SoundSource.HOSTILE, 2.0F, 1.4F);
-        for (ServerPlayer p : c.onlineMembers()) p.displayClientMessage(NinjacatText.teal("Wave " + wave + " of 3. Hold the seam."), true);
+        for (ServerPlayer p : c.onlineMembers()) p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.objective.wave", wave), true);
     }
 
     static void spawnAt(DriftManager m, ServerLevel level, Wreck w, BlockPos at, EntityType<?> type) {

@@ -5,6 +5,7 @@ import com.ninjacat.skies.core.tension.Strand;
 import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -22,55 +23,6 @@ import java.util.List;
  * nine tribes' worth make a shelf worth having.
  */
 public class CodexPageItem extends Item {
-    /** Three notes per tribe, in canon order. Each is one screen, one thought, one verb. */
-    private static final String[][] NOTES = {
-            { // Soil — Pad-keepers
-                    "We never called it dirt. We called it what was left, and we kept it warm.",
-                    "A pad holds because someone decided it would. Decide daily.",
-                    "Plant the sapling before you are hungry. Hunger makes poor gardeners."
-            },
-            { // Stone — Grit-singers
-                    "Every shard has a note. Iron is low and patient. Gold barely bothers to answer.",
-                    "The mesh does not find the ore. The mesh gives the ore somewhere to land.",
-                    "Yarn from the void is not magic. It is thread that remembers where it came from."
-            },
-            { // Sprout — Rootbinders
-                    "Roots are the only rope the void respects.",
-                    "Feed the pad and the pad feeds the Clowder. That is the whole treaty.",
-                    "A seed you can grow twice is worth more than an ingot you can grow once."
-            },
-            { // Claw — Edge-walkers
-                    "The rim is not the edge of the world. It is the edge of your attention.",
-                    "Boots first. Then the bridge. Then the courage; it arrives on its own.",
-                    "We left footholds so nobody would have to be brave in the same place twice."
-            },
-            { // Spark — Drumhearts
-                    "Power is a rhythm before it is a number.",
-                    "The drum is not loud. The drum is steady. Be the drum.",
-                    "An orphan engine still hums. Listen to it before you feed it."
-            },
-            { // Clock — Pattern-weavers
-                    "A factory is a song that has stopped needing the singer.",
-                    "Make one thing well. Then teach the cogs to make it without you.",
-                    "Every belt is a thread. Every gear is a knot. You already know this craft."
-            },
-            { // Swarm — Colony-keepers
-                    "You do not own a hive. You are on good terms with it.",
-                    "Living industry forgives mistakes that machines do not.",
-                    "The March had flowers that hummed back. We miss them most at dusk."
-            },
-            { // Sigil — Seal-carvers
-                    "A seal is a promise you carve so the world has to keep it.",
-                    "Never bind what you would not be willing to unbind.",
-                    "Spirit goes where it is asked politely and stays where it is fed."
-            },
-            { // Spindle — Loom-stitchers
-                    "We cut the gate-paths. We always meant to come back and mend them.",
-                    "The Loom was never one thread. It was nine agreeing.",
-                    "When you reach the March, tell it we are sorry it took so long."
-            },
-    };
-
     public CodexPageItem(Properties properties) {
         super(properties);
     }
@@ -83,11 +35,10 @@ public class CodexPageItem extends Item {
         }
         Strand strand = tribeOf(stack);
         int slot = Math.floorMod((int) (level.getGameTime() / 20L) + player.getUUID().hashCode(), 3);
-        String note = NOTES[strand.ordinal()][slot];
 
         level.playSound(null, player.blockPosition(), ModSounds.PAGE.get(), SoundSource.PLAYERS, 0.8F, 1.0F);
-        sp.sendSystemMessage(Component.literal("— " + strand.tribe() + " margin —").withStyle(s -> s.withColor(strand.color()).withItalic(true)));
-        sp.sendSystemMessage(NinjacatText.teal(note));
+        sp.sendSystemMessage(Component.translatable("message.ninjacatskies.page.margin", strand.tribe()).withStyle(s -> s.withColor(strand.color()).withItalic(true)));
+        sp.sendSystemMessage(NinjacatText.tealKey("message.ninjacatskies.page." + strand.id() + ".note_" + (slot + 1)));
         player.getCooldowns().addCooldown(this, 20);
         return InteractionResultHolder.sidedSuccess(stack, false);
     }
@@ -97,8 +48,22 @@ public class CodexPageItem extends Item {
         Component name = stack.get(DataComponents.CUSTOM_NAME);
         if (name != null) {
             String raw = name.getString();
+            // A page named at seat time carries its tribe as a translation argument; read it without a lang lookup.
+            // New pages carry the tribe's lang key; pages named before translation carry the English tribe string.
+            if (name.getContents() instanceof TranslatableContents tc) {
+                for (Object arg : tc.getArgs()) {
+                    if (arg instanceof Component c && c.getContents() instanceof TranslatableContents argKey) {
+                        for (Strand s : Strand.ALL) {
+                            if (s.tribeKey().equals(argKey.getKey())) {
+                                return s;
+                            }
+                        }
+                    }
+                    raw += " " + (arg instanceof Component c ? c.getString() : String.valueOf(arg));
+                }
+            }
             for (Strand s : Strand.ALL) {
-                if (raw.contains(s.tribe())) {
+                if (s.legacyTribeIn(raw)) {
                     return s;
                 }
             }

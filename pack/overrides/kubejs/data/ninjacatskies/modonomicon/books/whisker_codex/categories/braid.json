@@ -1,6 +1,6 @@
 {
-  "name": "The Loom Braid",
-  "description": "The campaign, phase by phase.",
+  "name": "book.ninjacatskies.whisker_codex.category.braid.name",
+  "description": "book.ninjacatskies.whisker_codex.category.braid.description",
   "icon": "minecraft:string",
   "sort_number": 3,
   "background": "ninjacatskies:textures/gui/quest_atlas.png",

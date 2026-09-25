@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "The Living Lattice",
-  "description": "Workshops, rites and paths.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.description",
   "icon": "tribalpower:resonant_core",
   "x": 8,
   "y": 5,
@@ -11,23 +11,23 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The camp answers",
-      "text": "Tribal Weave is the workshop beside the nine Strands. Rhythm, landscape and reusable Echo catalysts make Pulse.\\\nOpen the **Spirit Codex** for every generator, station, relay, Kiln, Voice Ring and rite. Sneak-use it on a silent machine. This book does not copy those manuals."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What the pack needs",
-      "text": "**Goal:** a Resonator that can feed Spark, then the later workshops the Spirit Codex diagrams.\\\nYou need the **Spirit Codex** and a working Pulse Resonator from Start here.\\\n1\\. Finish **Make the first Echo Shard** and **Start automatic power** in Start here.\\\n2\\. Keep the Spirit Codex on your hotbar while you run Tribal Weave."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "3\\. Slot faces, Shatter-on-Kiln, relays, compass landings and the sixth Loom voice live in that book, not here."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Check",
-      "text": "**Check:** sneak-use the Spirit Codex on the Resonator. Stored Pulse should rise with two different voices and a catalyst seated."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.living_lattice.page.3.text"
     }
   ],
   "parents": [

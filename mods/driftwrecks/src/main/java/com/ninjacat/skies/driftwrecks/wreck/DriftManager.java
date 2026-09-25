@@ -392,16 +392,16 @@ public final class DriftManager extends SavedData {
         Optional<Clowder> c = LoomTension.clowderById(server, w.team);
         if (c.isEmpty()) return;
         BlockPos at = w.center();
-        String what = w.heartwreck ? "The Heartwreck" : "A " + w.skin.tribe() + " " + w.core.title.toLowerCase(Locale.ROOT);
+        Component what = w.heartwreck ? Component.translatable("message.driftwrecks.drift.arrival_heartwreck") : Component.translatable("message.driftwrecks.drift.arrival_wreck", w.skin.tribe(), w.core.titleInline());
         String waypoint = "xaero-waypoint:Driftwreck:D:" + at.getX() + ":" + at.getY() + ":" + at.getZ() + ":11:false:0:Internal-overworld-waypoints";
         for (ServerPlayer p : c.get().onlineMembers()) {
-            p.sendSystemMessage(NinjacatText.teal(w.heartwreck
-                    ? "Every tribe's thread pulls the same way at once. Something enormous is caught on your weft."
-                    : "Something old is caught on your weft. It will not hold for long—go."));
-            p.sendSystemMessage(NinjacatText.gold(what + " (" + w.tier.title + ", " + w.modifier.title + "): " + w.objective.brief));
+            p.sendSystemMessage(w.heartwreck
+                    ? NinjacatText.tealKey("message.driftwrecks.drift.arrival_heart_line")
+                    : NinjacatText.tealKey("message.driftwrecks.drift.arrival_line"));
+            p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.drift.arrival_brief", what, w.tier.title(), w.modifier.title(), w.objective.brief()));
             p.sendSystemMessage(Component.literal(waypoint).withStyle(s -> s.withColor(ChatFormatting.DARK_GRAY)
                     .withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, at.getX() + " " + at.getY() + " " + at.getZ()))
-                    .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal("Driftwreck at " + at.toShortString())))));
+                    .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.translatable("message.driftwrecks.drift.waypoint_hover", at.toShortString())))));
             WreckRewards.award(p, "root");
         }
         w.announced = true;
@@ -419,9 +419,9 @@ public final class DriftManager extends SavedData {
         setDirty();
         if (w.pendingComplete && !w.objectiveDone) completeObjective(level, w);
         float f = w.lifeFraction();
-        if (w.warned < 50 && f >= 0.5F) warn(level, c.get(), w, 50, "The weft creaks.");
-        if (w.warned < 80 && f >= 0.8F) warn(level, c.get(), w, 80, "It is slipping.");
-        if (w.warned < 95 && f >= 0.95F) warn(level, c.get(), w, 95, "Let go, or be taken with it.");
+        if (w.warned < 50 && f >= 0.5F) warn(level, c.get(), w, 50, NinjacatText.tealKey("message.driftwrecks.drift.warn_50"));
+        if (w.warned < 80 && f >= 0.8F) warn(level, c.get(), w, 80, NinjacatText.tealKey("message.driftwrecks.drift.warn_80"));
+        if (w.warned < 95 && f >= 0.95F) warn(level, c.get(), w, 95, NinjacatText.tealKey("message.driftwrecks.drift.warn_95"));
         if (w.warned >= 50 && server.getTickCount() % 100 == 0)
             level.playSound(null, w.center(), DwRegistries.sound("driftwreck.creak"), SoundSource.AMBIENT, 0.4F + w.lifeFraction(), 0.8F);
         if (w.modifier == WreckModifier.HAUNTED && server.getTickCount() % 200 == 0)
@@ -433,10 +433,10 @@ public final class DriftManager extends SavedData {
         if (w.age >= w.lifetime) beginUnravel(level, w, true);
     }
 
-    private void warn(ServerLevel level, Clowder c, Wreck w, int at, String line) {
+    private void warn(ServerLevel level, Clowder c, Wreck w, int at, Component line) {
         w.warned = at;
         for (ServerPlayer p : c.onlineMembers()) {
-            p.sendSystemMessage(NinjacatText.teal(line));
+            p.sendSystemMessage(line);
             if (at == 95) p.playNotifySound(DwRegistries.sound("driftwreck.warn_final"), SoundSource.AMBIENT, 1.0F, 1.0F);
         }
     }
@@ -511,7 +511,7 @@ public final class DriftManager extends SavedData {
             p.setDeltaMovement(Vec3.ZERO); p.fallDistance = 0;
             p.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 120, 0, false, false, true));
             p.playNotifySound(DwRegistries.sound("driftwreck.unravel"), SoundSource.AMBIENT, 1.0F, 1.0F);
-            p.displayClientMessage(NinjacatText.teal("The thread snaps. You are home."), true);
+            p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.drift.thread_snaps"), true);
         }
         // 2. what players earned is not lost
         if (w.placed != null) {
@@ -541,7 +541,7 @@ public final class DriftManager extends SavedData {
         w.phase = Wreck.Phase.UNRAVELING;
         rimCache.remove(w.id);
         level.playSound(null, w.center(), DwRegistries.sound("driftwreck.unravel"), SoundSource.AMBIENT, 5.0F, 1.0F);
-        if (expired) c.ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.teal("The driftwreck unravels back into the void.")); });
+        if (expired) c.ifPresent(cl -> { for (ServerPlayer p : cl.onlineMembers()) p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.drift.unravels")); });
         setDirty();
     }
 
@@ -592,7 +592,7 @@ public final class DriftManager extends SavedData {
             List<ItemStack> items = e.getValue();
             items.removeIf(ItemStack::isEmpty);
             if (items.isEmpty()) continue;
-            String name = Optional.ofNullable(server.getProfileCache()).flatMap(pc -> pc.get(e.getKey())).map(com.mojang.authlib.GameProfile::getName).orElse("a Clowder member");
+            String name = Optional.ofNullable(server.getProfileCache()).flatMap(pc -> pc.get(e.getKey())).map(com.mojang.authlib.GameProfile::getName).orElse("");   // empty: the bundle tooltip names "a Clowder member"
             for (int from = 0; from < items.size(); from += 256) {
                 ItemStack bundle = com.ninjacat.skies.driftwrecks.item.SalvageBundleItem.of(items.subList(from, Math.min(items.size(), from + 256)), name);
                 if (crate != null && crate.insert(bundle)) continue;

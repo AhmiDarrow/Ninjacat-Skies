@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Edge",
-  "description": "Claw Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.edge.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.edge.description",
   "icon": "silentgear:blueprint_paper",
   "x": 6,
   "y": 0,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Edge",
-      "text": "**Claw.** Silent Gear plans, iron on your back, a bow, a portal frame. Leave the pad on purpose.\\\nClaiming a pad wipes Silent Gear's join gift. Four **Blueprint Paper**, shapeless, make a **Blueprint Package**. Right-click to unwrap starter plans.\\\nEdge opens the braid: after Claw, Pattern, Colony, and Hum are all yours to choose from."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.edge.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.edge.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "**Goal:** finish Claw and seat the Claw token.\\\nYou need four **Blueprint Paper** if the join gift is gone, then iron on your back.\\\n**Check:** Finish Claw. If the Blueprint Package is missing, craft it from four Blueprint Paper, then seat the Claw token. The Claw notch lights."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.edge.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.edge.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.edge.page.2.text"
     }
   ],
   "parents": [

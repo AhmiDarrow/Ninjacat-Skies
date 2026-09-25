@@ -53,9 +53,9 @@ public class RelicItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> tip, TooltipFlag flag) {
-        tip.add(NinjacatText.gold(power.title()));
-        tip.add(NinjacatText.teal("Passive: ").append(Component.literal(power.passiveText()).withStyle(ChatFormatting.GRAY)));
-        tip.add(NinjacatText.teal("Right-click: ").append(Component.literal(power.activeText()).withStyle(ChatFormatting.GRAY)));
-        tip.add(Component.literal("Cooldown " + (power.cooldownTicks()/20) + " s · won from " + kind.title).withStyle(ChatFormatting.DARK_GRAY));
+        tip.add(NinjacatText.goldKey(power.title(), power.titleArgs()));
+        tip.add(NinjacatText.tealKey("message.guardians.relic.passive_label").append(Component.translatable(power.passiveText()).withStyle(ChatFormatting.GRAY)));
+        tip.add(NinjacatText.tealKey("message.guardians.relic.active_label").append(Component.translatable(power.activeText()).withStyle(ChatFormatting.GRAY)));
+        tip.add(Component.translatable("message.guardians.relic.cooldown_won_from", power.cooldownTicks()/20, kind.titleComponent()).withStyle(ChatFormatting.DARK_GRAY));
     }
 }

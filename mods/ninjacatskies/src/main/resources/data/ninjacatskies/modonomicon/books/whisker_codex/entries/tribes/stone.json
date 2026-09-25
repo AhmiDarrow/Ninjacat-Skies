@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "Grit-singers",
-  "description": "Keepers of the Stone Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.stone.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.stone.description",
   "icon": "ninjacatskies:strand_token_stone",
   "x": -2,
   "y": -3,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Grit-singers",
-      "text": "The Grit-singers named every shard by its echo. Iron is low and patient. Gold barely bothers to answer. Diamond does not answer at all; you find it by the silence around it.\\\nThey built the first meshes: not to find ore, but to give it somewhere to land."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Before the Cut they named ore as it arrived, not as it was dug — continents of stone that answered when sung to, meshes hung in the under-lattice like welcome mats.\\\nWhat they lost was a ground that wanted to be found.\\\nThe shards still fall."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "They just have nowhere to land unless you build the welcome again."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,18 +30,18 @@
         "id": "ninjacatskies:strand_token_stone",
         "count": 1
       },
-      "title": "Stone Strand",
-      "text": "*The mesh does not find the ore. The mesh gives the ore somewhere to land.*\\\nSeated. The Grit-singers answer when this Post hums."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Their camp",
-      "text": "The Grit-singers keep a camp in the March highlands: huts, a fire, a Tribe Hearth, a Earth totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Their hearth favours raw ores, grits, Attuned Echo. Their Elder trades Echo Shards for raw ore, Attuned Echo for grit, and at Voice standing presses the tribe's Mark into your hand."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.stone.page.5.text"
     }
   ],
   "condition": {

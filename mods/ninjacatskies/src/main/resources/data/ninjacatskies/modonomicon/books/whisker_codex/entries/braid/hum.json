@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Hum",
-  "description": "Spark Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.hum.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.hum.description",
   "icon": "tribalpower:drumheart",
   "x": 8,
   "y": 2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Hum",
-      "text": "**Spark.** Strike a Drumheart before you touch a wire. Spirit Pulse is the power fantasy here; Powah and Mekanism are bridges you cross later, if you want.\\\nBone Chime, Spirit Shard, Copper Resonator, Drumheart. Then listen."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.hum.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.hum.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "**Goal:** finish Spark and seat the Spark token.\\\nYou need a **Drumheart** and the first Pulse trickle from Start here.\\\n**Check:** Finish Spark. Claim the token and seat it. The Spark notch lights."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.hum.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.hum.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.hum.page.2.text"
     }
   ],
   "parents": [

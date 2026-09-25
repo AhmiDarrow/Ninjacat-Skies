@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Grindmaw",
-  "description": "Keeper of the Stone Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.description",
   "icon": "guardians:frayed_totem_grindmaw",
   "x": -2,
   "y": -3,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Grindmaw",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Millpit: a deepslate quarry with a rotating grindstone ring in the floor and four stone sieve chutes pouring gravel into the central grit pit."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Grindmaw is immune while its maw is closed. Each chute drops a grit block every fifteen seconds; carry one onto the ring and let it ride into the pit's mouth to jam the maw open for twelve seconds. The ring reverses every phase and shoves the careless into the pit."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_grindmaw",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_grindcore",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Grindcore: immune to Mining Fatigue, and your hand sieves get one extra fortune roll. Shred strips two armour from the next thing you hit."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.grindmaw.page.4.text"
     }
   ],
   "parents": [

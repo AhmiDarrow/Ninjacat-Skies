@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Hivemind",
-  "description": "Keeper of the Swarm Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.description",
   "icon": "guardians:frayed_totem_hivemind",
   "x": 2,
   "y": 2,
@@ -11,13 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Hivemind",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Comb: a hexagonal wax arena of rising and falling comb cells, honey pools, and six drone cells in the wall."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Hivemind is fragile but every wave its six cells pour drones. A campfire set on a drone cell seals it for thirty seconds; seal all six and the royal chamber opens for ten. Your own Productive Bees attack the drones on sight.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.page.1.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -25,8 +25,8 @@
         "id": "guardians:frayed_totem_hivemind",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -34,8 +34,8 @@
         "id": "guardians:relic_hivecall",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Hivecall: bees never turn on you, and hives within sixteen blocks work a tenth faster. Call the Swarm sends four relic-bees after whatever you hit."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.hivemind.page.3.text"
     }
   ],
   "parents": [

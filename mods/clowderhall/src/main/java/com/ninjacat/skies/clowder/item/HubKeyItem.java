@@ -37,6 +37,6 @@ public class HubKeyItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.translatable("item.clowderhall.hub_key.desc"));
-        tooltip.add(NinjacatText.gold("Right-click: enter Hall — or leave if you are already there."));
+        tooltip.add(NinjacatText.goldKey("message.clowderhall.hub_key.tooltip"));
     }
 }

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Thunder Mast",
-  "description": "Drumhearts · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_watchtower.description",
   "icon": "driftwrecks:keepsake_spark_watchtower",
   "x": 3,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Thunder Mast",
-      "text": "The Thunder Mast caught lightning and stored it in copper coils for the drums below. Drumhearts climbed it in storms to listen to the coils hum. When the Cut opened, the mast caught something that was not lightning. The horn blew three short notes."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_watchtower.page.0.text"
     }
   ],
   "condition": {

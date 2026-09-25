@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Anchor Grove",
-  "description": "Rootbinders · Shrine",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_shrine.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_shrine.description",
   "icon": "driftwrecks:keepsake_sprout_shrine",
   "x": 1,
   "y": -2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Anchor Grove",
-      "text": "Rootbinders tied a living knot into a sapling for every child and planted it at the Anchor Grove. The trees grew roots deep enough to hold the island still in a gale. Where the Cut ran, the roots held on to both halves. They are holding still."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_shrine.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_shrine.page.0.text"
     }
   ],
   "condition": {

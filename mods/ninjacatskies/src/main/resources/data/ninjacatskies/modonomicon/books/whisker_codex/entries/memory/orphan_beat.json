@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Orphan engines",
-  "description": "The drum is not loud. The drum is steady.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.orphan_beat.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.orphan_beat.description",
   "icon": "tribalpower:drumheart",
   "x": 8,
   "y": 1,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Orphan engines",
-      "text": "The Drumhearts kept the beat under the whole sky. Spirit Pulse ran from their drums along the lattice to every tribe. When the Cut came, the drums did not stop. They had nobody left to stop for."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.orphan_beat.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.orphan_beat.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "You will find engines still keeping time in the March and on pads that have not seen a cat in an age. Listen before you feed one. It may still be waiting for a beat you have not struck yet."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.orphan_beat.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Spark mends",
-      "text": "Seat Spark and you are not inventing power. You are sitting down at a drum that never learned how to quit. Strike empty-handed, about a breath apart. The drum is not loud. The drum is steady. Be the drum."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.orphan_beat.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.orphan_beat.page.2.text"
     }
   ],
   "parents": [

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "Something drifting",
-  "description": "How a wreck arrives, and how to reach it.",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.description",
   "icon": "driftwrecks:tether_spool",
   "x": -5,
   "y": 0,
@@ -11,33 +11,33 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Something drifting",
-      "text": "**Goal:** reach a Driftwreck before it unravels.\\\nOnce your Clowder has tensioned Soil, pieces of the old world drift up to your pad now and then: roughly once every hour and a half of play, or sooner if you hang a **Driftlure** on your Tension Post."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Steward tells the whole Clowder when one is caught, and the **Drift Needle** points at it.\\\nStand at your pad's edge, face the wreck and use a **Tether Spool**: a thread bridge lays itself across."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "It will not hold",
-      "text": "A wreck only ages while someone in your Clowder is online.\\\nIt creaks at half its time, starts to crumble at the rim near the end, and then unravels."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Nobody falls: anyone on it is lifted home, and whatever you left in its chests comes home in a **Salvage Bundle** (in your **Salvage Crate**, if one stands by the Post).\\\nFall off the tether and the thread catches you, for three hearts."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What to do there",
-      "text": "Every wreck asks one thing: open its heart chest, break its frayed spawners, light its thread pillars in the order the idol shows, walk a lost Steward echo home, or hold the seam through three waves."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Do it and each of you gets **Salvaged Weft** and a **Seal**, the **Wreck Atlas** fills a page, and sometimes a **Keepsake** comes home.\\\n**Check:** your Atlas shows the new page."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.5.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -45,8 +45,8 @@
         "id": "driftwrecks:salvagers_frame",
         "count": 1
       },
-      "title": "Salvager's Frame",
-      "text": "Spend Weft on spools, lures, needles, map scrolls, Weft Keys, tribe decor and reprints of Keepsakes you already found."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.6.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.caught.page.6.text"
     }
   ],
   "condition": {

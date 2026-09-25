@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Leaf Archive",
-  "description": "Rootbinders · Library",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_library.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_library.description",
   "icon": "driftwrecks:keepsake_sprout_library",
   "x": 1,
   "y": 0,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Leaf Archive",
-      "text": "In the Leaf Archive, Rootbinders pressed one leaf from every plant they tended, with the date it first bloomed. Reading the pages in order is like watching a spring arrive. The last page holds a leaf nobody could name. It arrived with the Cut."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_library.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_library.page.0.text"
     }
   ],
   "condition": {

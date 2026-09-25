@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Roads into nowhere",
-  "description": "They always meant to come back and mend them.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.unmended_gates.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.unmended_gates.description",
   "icon": "minecraft:ender_pearl",
   "x": 0,
   "y": 2,
@@ -11,13 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Roads into nowhere",
-      "text": "The Loom-stitchers cut the gate-paths — into the March, into the Nether and End, into places the map does not have words for — and always meant to come back and mend them. They did not get to. Open gates dumped weather into the void. Closed ones trapped whole roads in the March, still walking."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.unmended_gates.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.unmended_gates.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Spindle mends",
-      "text": "Seat Spindle and you pick up a needle they dropped. The digital loom, the Gate Drum, a March stone, the Fragment. Nine seated, one stone, one right-click: the cut closes above your pad. They will not be there to thank you. Do it anyway."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.unmended_gates.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.unmended_gates.page.1.text"
     }
   ],
   "parents": [

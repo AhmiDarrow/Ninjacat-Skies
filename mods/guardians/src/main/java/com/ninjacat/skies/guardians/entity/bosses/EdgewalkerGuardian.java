@@ -39,13 +39,13 @@ public class EdgewalkerGuardian extends GuardianEntity {
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) shout("The Edgewalker answers for the Cut. No trick to this one: watch for the gold claw-mark and be somewhere else when it lands. Bridges crumble behind you.");
+        if (ageInFight == 1) shout("message.guardians.edgewalker.edgewalker_answers_for_cut_no");
         if (tell >= 0) tickTell(); else if (airborne >= 0) tickFlight(); else if (--nextPounce <= 0) startPounce();
         tickBridges();
         if (tickCount % 40 == 0 && Mech.horiz(position(), origin()) > ARENA_R + 6) leapTo(origin().add(0, 1, 0));     // never leaves the shards
     }
 
-    @Override protected void onPhase(int phase) { shout(phase == 3 ? "The Edgewalker bares every claw — it pounces without pause!" : "The Edgewalker quickens."); }
+    @Override protected void onPhase(int phase) { shout(phase == 3 ? "message.guardians.edgewalker.edgewalker_bares_every_claw_pounces" : "message.guardians.edgewalker.edgewalker_quickens"); }
     private int pounceInterval() { return Math.max(50, POUNCE_EVERY - phase() * 20); }
 
     /** Pick the most exposed player (furthest from any other player and from the boss) and mark the landing spot. */

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The First Cut",
-  "description": "After the Reweave.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.description",
   "icon": "guardians:frayed_totem_firstcut",
   "x": 4,
   "y": 3,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The First Cut",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Severance: a great obsidian shard crossed by the glowing Cut, twenty world-shards drifting around it, teal void-tears in the air."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "A shape the Cut left on the shard, not a confession of who swung.\\\nEvery twenty seconds it cuts a line across the shard and the blocks fall away for fifteen; the seam gives Speed but its beam follows the seam."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Drifting shards crush, void-tears pull, and at a fifth of its health the shard splits in two along the Cut.\\\nAfter the Reweave only.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_firstcut",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Frayed Thread and obsidian around the Loomthread relic; the relic is handed back."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_firstcut_shard",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Shard of the First Cut: cuts through ward phases. Best-in-pack, reserved for those who passed."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.firstcut.page.4.text"
     }
   ],
   "parents": [

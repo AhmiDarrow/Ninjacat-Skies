@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "The Nine Camps",
-  "description": "Standing, offerings, marks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.camps.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.camps.description",
   "icon": "tribalpower:tribe_hearth",
   "x": -4,
   "y": 0,
@@ -11,13 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Standing",
-      "text": "Right-click a Tribe Hearth with what its tribe favours, or with a charged Pulse Cell, and your standing rises: Guest at 50, Friend at 150, Kin at 400, Voice at 800.\\\nKills near the hearth and completed trades count.\\\nHurting Kin costs 25 and turns the Hunters on you."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.camps.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.tribes.camps.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Breaking a tribe banner costs five, the hearth forty.\\\nGeneric camp blocks do not cost."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.tribes.camps.page.1.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -25,13 +25,13 @@
         "id": "tribalpower:tribe_mark",
         "count": 1
       },
-      "title": "Tribe Mark",
-      "text": "Given once, by an Elder, at Voice. With the tribe's Resonance Totem and two Spiritweave it becomes a Kinship Totem: an extra voice for the Pulse Resonator. Nine tribes can carry the song to fifteen voices."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.camps.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.camps.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Camp drum",
-      "text": "A Drummer plays every few seconds. A Drumheart within eight blocks takes two Pulse from each beat, so a camp is a small, honest source of power. `/tribalpower standing` prints all nine standings."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.camps.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.camps.page.3.text"
     }
   ],
   "condition": {

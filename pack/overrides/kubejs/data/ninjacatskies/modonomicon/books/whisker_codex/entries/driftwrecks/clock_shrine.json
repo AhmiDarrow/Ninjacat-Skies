@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Round Chapel",
-  "description": "Pattern-weavers · Shrine",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_shrine.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_shrine.description",
   "icon": "driftwrecks:keepsake_clock_shrine",
   "x": 4,
   "y": -2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Round Chapel",
-      "text": "Pattern-weavers sang in rounds: one voice began, the next followed, until a hall of voices turned like gears. The Round Chapel was built so the echo arrived exactly one beat late. The echo is still arriving. Nobody started it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_shrine.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_shrine.page.0.text"
     }
   ],
   "condition": {

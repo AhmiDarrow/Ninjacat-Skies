@@ -20,14 +20,14 @@ public class LedgerGameTests {
         level.setBlock(p, Blocks.STONE.defaultBlockState(), 3);
         Mech.Ledger led = new Mech.Ledger();
         led.set(level, p, Blocks.DIRT.defaultBlockState());
-        h.assertTrue(level.getBlockState(p).is(Blocks.DIRT), "ledger overwrote the block");
+        h.assertTrue(level.getBlockState(p).is(Blocks.DIRT), "ledger overwrote the block");   // lang-exempt: GameTest assertion message
         CompoundTag tag = new CompoundTag();
         led.save(tag, "L");
         Mech.Ledger loaded = new Mech.Ledger();
         loaded.load(tag, "L", level);
-        h.assertTrue(loaded.has(p), "position remembered after NBT");
+        h.assertTrue(loaded.has(p), "position remembered after NBT");   // lang-exempt: GameTest assertion message
         loaded.restoreAll(level);
-        h.assertTrue(level.getBlockState(p).is(Blocks.STONE), "original state restored");
+        h.assertTrue(level.getBlockState(p).is(Blocks.STONE), "original state restored");   // lang-exempt: GameTest assertion message
         h.succeed();
     }
 }

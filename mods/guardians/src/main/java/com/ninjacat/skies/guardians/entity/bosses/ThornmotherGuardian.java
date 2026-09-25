@@ -53,7 +53,7 @@ public class ThornmotherGuardian extends GuardianEntity {
             for (BlockPos p : tempBlocks) if (!hedge.contains(p) && level().getBlockState(p).is(Blocks.SWEET_BERRY_BUSH)) hedge.add(p);
         }
         if (ageInFight == 1) {
-            shout("The Thornmother answers for the Cut. She will not strike you — her hedge will. Cut it faster than it creeps, keep the four pruning stations clear, and every eight thorns you cut fire a prune wave that stuns her.");
+            shout("message.guardians.thornmother.thornmother_answers_for_cut_she");
         }
         if (stun > 0) { stun--; if (tickCount % 3 == 0) Mech.burst(serverLevel(), ParticleTypes.HAPPY_VILLAGER, position().add(0, kind.height * 0.6, 0), 6, 3); }
         else if (ageInFight % SEED_EVERY == 0) seed(o);
@@ -63,7 +63,7 @@ public class ThornmotherGuardian extends GuardianEntity {
         if (tickCount % 10 == 0) for (Vec3 s : stations) ring(Mech.TEAL, s, CIRCLE, 12, s.y + 0.1);
     }
 
-    @Override protected void onPhase(int phase) { shout(phase == 3 ? "The Thornmother strains — the hedge grows wild!" : "The Thornmother thickens her hedge."); }
+    @Override protected void onPhase(int phase) { shout(phase == 3 ? "message.guardians.thornmother.thornmother_strains_hedge_grows_wild" : "message.guardians.thornmother.thornmother_thickens_her_hedge"); }
     private int seedsPerCycle() { return 1 + phase() / 2 + (partySize() - 1) / 2; }
 
     /** A seed lands near a random player (or a station) and sprouts. */
@@ -111,7 +111,7 @@ public class ThornmotherGuardian extends GuardianEntity {
             serverLevel().sendParticles(ParticleTypes.COMPOSTER, p.getX() + 0.5, p.getY() + 0.5, p.getZ() + 0.5, 6, 0.3, 0.3, 0.3, 0.05);
         }
         stun = STUN; getNavigation().stop();
-        shout("Prune wave! " + cleared + " thorns wither and the Thornmother reels — strike her now!");
+        shout("message.guardians.thornmother.prune_wave", cleared);
         sound(SoundEvents.COMPOSTER_READY, 2F, 0.7F); sound(SoundEvents.RAVAGER_STUNNED, 2F, 0.6F);
     }
 
@@ -121,7 +121,7 @@ public class ThornmotherGuardian extends GuardianEntity {
             boolean over = false; for (BlockPos p : hedge) if (Mech.horiz(Vec3.atCenterOf(p), stations.get(i)) <= CIRCLE) { over = true; break; }
             overgrown[i] = over ? overgrown[i] + 20 : 0;
             if (over && tickCount % 40 == 0) Mech.column(serverLevel(), Mech.RED, stations.get(i), 3, 4);
-            if (overgrown[i] >= 200) { overgrown[i] = 0; heal(getMaxHealth() * 0.1F); shout("A pruning station is choked — the Thornmother drinks from it and heals!"); sound(SoundEvents.BONE_MEAL_USE, 2F, 0.5F); Mech.burst(serverLevel(), ParticleTypes.HEART, position().add(0, kind.height * 0.7, 0), 12, 3); }
+            if (overgrown[i] >= 200) { overgrown[i] = 0; heal(getMaxHealth() * 0.1F); shout("message.guardians.thornmother.pruning_station_choked_thornmother_drinks"); sound(SoundEvents.BONE_MEAL_USE, 2F, 0.5F); Mech.burst(serverLevel(), ParticleTypes.HEART, position().add(0, kind.height * 0.7, 0), 12, 3); }
         }
     }
 

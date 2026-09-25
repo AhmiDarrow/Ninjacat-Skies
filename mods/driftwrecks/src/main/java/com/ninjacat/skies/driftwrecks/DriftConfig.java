@@ -19,16 +19,16 @@ public final class DriftConfig {
     static {
         ModConfigSpec.Builder b = new ModConfigSpec.Builder();
         b.push("driftwrecks");
-        ENABLED = b.comment("Turn Driftwrecks on. Turning it off unravels active wrecks cleanly on the next tick.").define("enabled", true);
-        PRESSURE_MIN_MINUTES = b.comment("Drift pressure fills in this many minutes of Clowder online time, at least...").defineInRange("pressureMinMinutes", 90, 1, 1440);
-        PRESSURE_MAX_MINUTES = b.comment("...and at most (a new random target each cycle).").defineInRange("pressureMaxMinutes", 120, 1, 1440);
-        LURE_COOLDOWN_MINUTES = b.comment("Minutes a Clowder waits between Driftlures.").defineInRange("lureCooldownMinutes", 30, 0, 1440);
-        BLOCKS_PER_TICK = b.comment("Most blocks a wreck places or removes per server tick.").defineInRange("blocksPerTick", 2000, 50, 20000);
-        MIN_DISTANCE = b.comment("Closest a wreck arrives to the Tension Post, in blocks.").defineInRange("minDistance", 160, 48, 2000);
-        MAX_DISTANCE = b.comment("Farthest a wreck arrives from the Tension Post, in blocks.").defineInRange("maxDistance", 320, 64, 2000);
-        NEIGHBOUR_DISTANCE = b.comment("A wreck never lands closer than this to another Clowder's Tension Post (half the island spacing).").defineInRange("neighbourDistance", 2048, 0, 100000);
-        LIFETIME_MULTIPLIER = b.comment("Scales every wreck's lifetime.").defineInRange("lifetimeMultiplier", 1.0, 0.1, 10.0);
-        FINISH_UNLOADED = b.comment("Load a wreck's chunks briefly to finish unravelling it at expiry, instead of waiting for them to load.").define("finishUnloaded", true);
+        ENABLED = b.comment("Turn Driftwrecks on. Turning it off unravels active wrecks cleanly on the next tick.").define("enabled", true);   // lang-exempt: config file comment for server operators
+        PRESSURE_MIN_MINUTES = b.comment("Drift pressure fills in this many minutes of Clowder online time, at least...").defineInRange("pressureMinMinutes", 90, 1, 1440);   // lang-exempt: config file comment for server operators
+        PRESSURE_MAX_MINUTES = b.comment("...and at most (a new random target each cycle).").defineInRange("pressureMaxMinutes", 120, 1, 1440);   // lang-exempt: config file comment for server operators
+        LURE_COOLDOWN_MINUTES = b.comment("Minutes a Clowder waits between Driftlures.").defineInRange("lureCooldownMinutes", 30, 0, 1440);   // lang-exempt: config file comment for server operators
+        BLOCKS_PER_TICK = b.comment("Most blocks a wreck places or removes per server tick.").defineInRange("blocksPerTick", 2000, 50, 20000);   // lang-exempt: config file comment for server operators
+        MIN_DISTANCE = b.comment("Closest a wreck arrives to the Tension Post, in blocks.").defineInRange("minDistance", 160, 48, 2000);   // lang-exempt: config file comment for server operators
+        MAX_DISTANCE = b.comment("Farthest a wreck arrives from the Tension Post, in blocks.").defineInRange("maxDistance", 320, 64, 2000);   // lang-exempt: config file comment for server operators
+        NEIGHBOUR_DISTANCE = b.comment("A wreck never lands closer than this to another Clowder's Tension Post (half the island spacing).").defineInRange("neighbourDistance", 2048, 0, 100000);   // lang-exempt: config file comment for server operators
+        LIFETIME_MULTIPLIER = b.comment("Scales every wreck's lifetime.").defineInRange("lifetimeMultiplier", 1.0, 0.1, 10.0);   // lang-exempt: config file comment for server operators
+        FINISH_UNLOADED = b.comment("Load a wreck's chunks briefly to finish unravelling it at expiry, instead of waiting for them to load.").define("finishUnloaded", true);   // lang-exempt: config file comment for server operators
         b.pop();
         SPEC = b.build();
     }

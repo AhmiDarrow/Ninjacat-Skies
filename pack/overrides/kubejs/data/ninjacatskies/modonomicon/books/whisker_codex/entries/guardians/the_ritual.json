@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "Answer for the Cut",
-  "description": "Totems, arenas, relics.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.description",
   "icon": "guardians:frayed_totem_beddown",
   "x": 0,
   "y": 0,
@@ -11,33 +11,33 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Answer for the Cut",
-      "text": "**Goal:** re-tension a snapped keeper on its own ground.\\\nYou need that Strand seated, then its **Frayed Totem** from JEI. Gate totems are four **Frayed Thread** and four of the Strand's block around **Void Yarn**. Lint Golem uses white wool. First Cut uses obsidian around the Loomthread relic. Overweaver uses purpur around the Loomthread relic."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Each Strand had a guardian: a Loom-construct that kept its thread taut. The Cut snapped them. They are not monsters to be killed but Strands to be re-tensioned, and the only way to re-tension one is to beat its keeper on its own ground."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Craft the guardian's **Frayed Totem** once your Clowder has seated that Strand. Use it anywhere outside an arena. A spent life cannot call a guardian."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "The arena",
-      "text": "You and every Clowder mate within 32 blocks are pulled to a stage built for that guardian alone: four spawn pads, the totem stone, and a sealed gate that opens on a win or a wipe.\\\nA fence returns anyone who falls, at a cost in hearts."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Win and everyone goes home a few seconds later, each with the guardian's **Woven Relic**, including mates who spent a life during the fight.\\\nWipe and you are spat back out with the totem spent; craft another.\\\n`/guardians leave` abandons a fight."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Relics",
-      "text": "A relic is a trophy with one power: a passive while worn — the Curios relic slot, the off-hand or the hotbar — and a right-click on a cooldown. `/guardians status` shows the Clowder's record.\\\n**Check:** `/guardians status` lists the win, and each living mate holds the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.the_ritual.page.5.text"
     }
   ]
 }

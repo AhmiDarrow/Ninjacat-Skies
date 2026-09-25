@@ -51,9 +51,10 @@ public final class DeathBasket {
         BlockPos at = stash(spot.level, spot.pos, player.getUUID(), player.getGameProfile().getName(), clowder, stacks);
         if (at == null) return;
         event.setCanceled(true);
-        String where = at.getX() + ", " + at.getY() + ", " + at.getZ()
-                + (spot.level.dimension() == Level.OVERWORLD ? "" : " in " + spot.level.dimension().location().getPath().replace('_', ' '));
-        player.sendSystemMessage(NinjacatText.gold("Your things wait in a Yarn Basket at " + where + "."));
+        player.sendSystemMessage(spot.level.dimension() == Level.OVERWORLD
+                ? NinjacatText.goldKey("message.ninjacatskies.basket.waiting", at.getX(), at.getY(), at.getZ())
+                : NinjacatText.goldKey("message.ninjacatskies.basket.waiting_dim", at.getX(), at.getY(), at.getZ(),
+                        spot.level.dimension().location().getPath().replace('_', ' ')));
     }
 
     /** Remember the last block a player stood on, so a fall into the void leaves the basket at the edge. */

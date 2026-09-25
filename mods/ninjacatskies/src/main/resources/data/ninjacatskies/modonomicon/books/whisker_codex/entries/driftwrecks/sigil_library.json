@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Rune Library",
-  "description": "Seal-carvers · Library",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_library.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_library.description",
   "icon": "driftwrecks:keepsake_sigil_library",
   "x": 6,
   "y": 0,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Rune Library",
-      "text": "The Rune Library held a rubbing of every seal ever carved, so a broken seal could be carved again. Seal-carvers read by candlelight, tracing runes with a finger. This is a rubbing of their first seal. Nobody alive can carve it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_library.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_library.page.0.text"
     }
   ],
   "condition": {

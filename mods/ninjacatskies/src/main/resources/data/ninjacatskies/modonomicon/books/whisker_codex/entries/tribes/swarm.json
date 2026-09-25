@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "Colony-keepers",
-  "description": "Keepers of the Swarm Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.description",
   "icon": "ninjacatskies:strand_token_swarm",
   "x": 2,
   "y": 2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Colony-keepers",
-      "text": "The Colony-keepers tended hives that hummed in the Loom's own key, and March flowers that hummed back.\\\nThey did not own their colonies. They were on good terms with them. That is the whole of the method."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Before the Cut that conversation ran at continent scale: hives in the Loom's key, flowers humming back across hanging fields.\\\nWhat they lost was the large talk.\\\nA great many hives went quiet rather than angry.\\\nQuiet is a kind of loyalty."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "There are no bees in the void until you make somewhere a bee wants to be."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,18 +30,18 @@
         "id": "ninjacatskies:strand_token_swarm",
         "count": 1
       },
-      "title": "Swarm Strand",
-      "text": "*You do not own a hive. You are on good terms with it.*\\\nSeated. The Colony-keepers answer when this Post hums."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Their camp",
-      "text": "The Colony-keepers keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Air totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Their hearth favours honey, flowers, Lantern Down. Their Elder trades hives and March flowers, and at Voice standing presses the tribe's Mark into your hand."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.swarm.page.5.text"
     }
   ],
   "condition": {

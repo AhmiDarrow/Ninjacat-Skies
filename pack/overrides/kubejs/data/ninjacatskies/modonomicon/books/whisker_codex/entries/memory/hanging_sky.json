@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "A sky that was a floor",
-  "description": "Before anything fell.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.description",
   "icon": "ninjacatskies:spindle_loom_fragment",
   "x": 0,
   "y": 0,
@@ -11,68 +11,68 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Hanging continents",
-      "text": "Ask a Pad-keeper what a continent was and they will tell you: a pad that had forgotten it was a pad.\\\nFields ran to the horizon because the Soil Strand ran with them.\\\nRivers kept to their beds because the Sprout Strand taught water manners.\\\nCities did not float."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "They hung, and hanging felt like standing, the way a well-tied hammock feels like a floor."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "A maintained floor",
-      "text": "The sky-floor was a job, not a miracle.\\\nPad-keepers walked the hearths.\\\nGrit-singers listened for cracks.\\\nRootbinders checked the living anchors."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Edge-walkers walked the rim and came back with a list.\\\nDrumhearts kept the beat so the rest of the work had a tempo.\\\nPattern-weavers sang the factories that fed the rest.\\\nColony-keepers kept the hives that kept the flowers that kept the roots."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Seal-carvers asked, politely, for exceptions.\\\nLoom-stitchers mended the roads so nobody had to jump.\\\nA continent that looked like ground was a continent whose last inspection had gone well."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Weather with a road",
-      "text": "Rain did not guess. It followed Clock-sung channels along the lattice and arrived when the Pattern-weavers said it should. Storms were a Drumheart argument that got out of hand, then got walked back. Night was a veil the Seal-carvers asked for, politely, and the Loom kept the appointment."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.5.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "You can still see the habit in the aurora. It is the sky trying to remember a schedule."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.6.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "A schedule",
-      "text": "Weather was a roster. You could set a table by it, because the table had been sung. Wind had a shift. Fog had a route. Harvest rain arrived on the day the Pattern-weavers marked, not when a cloud felt generous."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.7.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.7.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "When the Cut came the appointments kept firing into empty air. That is why the aurora still tries. It is not pretty. It is a timetable with nobody on it."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.8.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Nine agreeing",
-      "text": "No tribe could hold the sky alone. Soil without Stone is warmth with nowhere to stand. Spark without Clock is a beat with no song. Sigil without Spindle is a promise with no road home."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.9.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.9.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The old world was not peace. It was nine pulls kept taut at once. Peace was a side effect, and a thin one."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.10.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Maintenance",
-      "text": "Nine tribes is nine jobs. They argued. They borrowed each other's tools and forgot to bring them back. They wrote rude notes on each other's drums. What they did not do was let a Strand slacken because they were sulking."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.11.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.11.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The floor held because the work got done in public. The Cut is what happens when maintenance stops: the hammock remembers it was never ground."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.hanging_sky.page.12.text"
     }
   ]
 }

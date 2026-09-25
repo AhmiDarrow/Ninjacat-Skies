@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:the_cut",
-  "name": "Skybound",
-  "description": "You, on a pad, with a damaged book.",
+  "name": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.description",
   "icon": "ninjacatskies:frayed_thread",
   "x": 4,
   "y": 0,
@@ -11,28 +11,28 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Skybound",
-      "text": "You are Skybound: whoever the Loom dropped on a pad with enough grit to stay. The Codex teaches. Grave assigns the work. That is the arrangement."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Open **Grave** (backtick) for the assignment list. Click a quest item to open its recipe in JEI. This book is for why, and for how to place the work. They are the same campaign."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What fixing it means",
-      "text": "You are not rebuilding the old continents. You are teaching nine Strands to agree again, one pad at a time. A seated token is a promise kept. A thinned Fray is the sky noticing."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "When a Clowder reweaves, that Clowder's Strand of the sky closes. When every Clowder has done the same, the Fray turns to lit thread and stays that way. The world does not snap back. It learns to hold."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Nine Strands",
-      "text": "Nine Strands still answer if pulled correctly: Soil, Stone, Sprout, Claw, Spark, Clock, Swarm, Sigil, Spindle.\\\nEach one ends in a **Strand token**. A token is proof, not fuel — it is never crafted, never consumed by a recipe. Seat it at a Tension Post and it stays seated."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.skybound.page.4.text"
     }
   ],
   "parents": [

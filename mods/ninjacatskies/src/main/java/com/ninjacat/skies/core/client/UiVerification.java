@@ -25,7 +25,7 @@ public final class UiVerification {
         if(stage==1){capture(mc,"quests-from-codex");mc.setScreen(null);use(mc,"clowderhall:island_charter");}
         if(stage==2){
             capture(mc,"clowders-from-charter");
-            if(mc.screen!=null)for(var child:mc.screen.children())if(child instanceof net.minecraft.client.gui.components.Button button && button.getMessage().getString().equals("Create New Team")){button.onPress();break;}
+            if(mc.screen!=null)for(var child:mc.screen.children())if(child instanceof net.minecraft.client.gui.components.Button button && button.getMessage().getString().equals("Create New Team")){button.onPress();break;}   // lang-exempt: dev UI capture; matches FTB Teams' own button label
         }
         if(stage==3){capture(mc,"create-team-from-panel");mc.setScreen(null);press("key.keyboard.k");}
         if(stage==4){capture(mc,"clowders-from-key");mc.setScreen(null);press("key.keyboard.grave.accent");}

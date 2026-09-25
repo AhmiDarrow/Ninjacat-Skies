@@ -44,7 +44,7 @@ public class RiftTearBlock extends Block {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-        if (!level.isClientSide) player.displayClientMessage(NinjacatText.teal("The tear is sealed. A Weft Key of this wreck's Strand would open it."), true);
+        if (!level.isClientSide) player.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.tear_sealed"), true);
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
 

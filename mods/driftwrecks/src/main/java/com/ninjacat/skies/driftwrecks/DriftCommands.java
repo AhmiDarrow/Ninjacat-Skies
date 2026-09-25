@@ -45,8 +45,8 @@ public final class DriftCommands {
 
     private static int list(CommandContext<CommandSourceStack> c) {
         DriftManager m = DriftManager.get(c.getSource().getServer());
-        c.getSource().sendSuccess(() -> NinjacatText.gold("Driftwrecks: " + m.size()), false);
-        for (Wreck w : m.wrecks()) c.getSource().sendSuccess(() -> NinjacatText.teal("#" + w.id + " " + w.planId + " " + w.skin.id() + " " + w.modifier.id + " " + w.objective.id
+        c.getSource().sendSuccess(() -> NinjacatText.goldKey("message.driftwrecks.command.list_header", m.size()), false);
+        for (Wreck w : m.wrecks()) c.getSource().sendSuccess(() -> NinjacatText.teal("#" + w.id + " " + w.planId + " " + w.skin.id() + " " + w.modifier.id + " " + w.objective.id // lang-exempt: operator debug dump of wreck ids and ticks
                 + " " + w.phase + " " + w.age / 20 + "/" + w.lifetime / 20 + "s at " + w.center().toShortString() + (w.objectiveDone ? " (done)" : "")), false);
         return m.size();
     }
@@ -57,14 +57,14 @@ public final class DriftCommands {
         if (cl.isEmpty()) return 0;
         DriftManager m = DriftManager.get(p.server);
         Wreck old = m.byTeam(cl.get().id());
-        if (old != null) { c.getSource().sendFailure(NinjacatText.teal("Your Clowder already has wreck #" + old.id + ". /driftwreck unravel " + old.id)); return 0; }
+        if (old != null) { c.getSource().sendFailure(NinjacatText.tealKey("message.driftwrecks.command.already_has", old.id, old.id)); return 0; }
         DriftManager.Roll r = new DriftManager.Roll(core == null ? null : WreckCore.byId(core), skin == null ? null : Strand.byId(skin),
                 mod == null ? null : WreckModifier.byId(mod), obj == null ? null : WreckObjective.byId(obj), tier == null ? null : WreckTier.byId(tier), false,
                 LoomTension.postOf(cl.get()) == null ? p.blockPosition().offset(40, 0, 0) : null);
         if (r.tier() == null && LoomTension.strandBits(cl.get()) == 0) r = new DriftManager.Roll(r.core(), r.skin(), r.modifier(), r.objective(), WreckTier.RAFT, false, r.origin());
         Wreck w = m.arrive(p.server, cl.get(), r);
-        if (w == null) { c.getSource().sendFailure(NinjacatText.teal("No wreck could land (no clear sky, or bad arguments).")); return 0; }
-        c.getSource().sendSuccess(() -> NinjacatText.gold("Driftwreck #" + w.id + " drifting to " + w.center().toShortString()), true);
+        if (w == null) { c.getSource().sendFailure(NinjacatText.tealKey("message.driftwrecks.command.no_land")); return 0; }
+        c.getSource().sendSuccess(() -> NinjacatText.goldKey("message.driftwrecks.command.spawned", w.id, w.center().toShortString()), true);
         return w.id;
     }
 
@@ -74,17 +74,17 @@ public final class DriftCommands {
         if (cl.isEmpty()) return 0;
         Wreck w = DriftManager.get(p.server).arrive(p.server, cl.get(), new DriftManager.Roll(null, Strand.SPINDLE, null, null, null, true,
                 LoomTension.postOf(cl.get()) == null ? p.blockPosition().offset(60, 0, 0) : null));
-        if (w == null) { c.getSource().sendFailure(NinjacatText.teal("The Heartwreck could not land.")); return 0; }
-        c.getSource().sendSuccess(() -> NinjacatText.gold("The Heartwreck drifts in at " + w.center().toShortString()), true);
+        if (w == null) { c.getSource().sendFailure(NinjacatText.tealKey("message.driftwrecks.command.heart_no_land")); return 0; }
+        c.getSource().sendSuccess(() -> NinjacatText.goldKey("message.driftwrecks.command.heart_spawned", w.center().toShortString()), true);
         return 1;
     }
 
     private static int unravel(CommandContext<CommandSourceStack> c) {
         DriftManager m = DriftManager.get(c.getSource().getServer());
         Wreck w = m.byId(IntegerArgumentType.getInteger(c, "id"));
-        if (w == null) { c.getSource().sendFailure(NinjacatText.teal("No such wreck.")); return 0; }
+        if (w == null) { c.getSource().sendFailure(NinjacatText.tealKey("message.driftwrecks.command.no_such_wreck")); return 0; }
         m.beginUnravel(DriftManager.level(c.getSource().getServer()), w, false);
-        c.getSource().sendSuccess(() -> NinjacatText.gold("Unravelling #" + w.id), true);
+        c.getSource().sendSuccess(() -> NinjacatText.goldKey("message.driftwrecks.command.unravelling", w.id), true);
         return 1;
     }
 
@@ -101,7 +101,7 @@ public final class DriftCommands {
         ServerPlayer p = EntityArgument.getPlayer(c, "player");
         int ticks = IntegerArgumentType.getInteger(c, "ticks");
         LoomTension.clowderOf(p).ifPresent(cl -> { TeamDrift t = TeamDrift.of(cl); t.setPressure(ticks); t.dirty(); });
-        c.getSource().sendSuccess(() -> NinjacatText.gold("Drift pressure set to " + ticks + " ticks"), true);
+        c.getSource().sendSuccess(() -> NinjacatText.goldKey("message.driftwrecks.command.pressure_set", ticks), true);
         return 1;
     }
 

@@ -1,6 +1,6 @@
 {
-  "name": "Driftwrecks",
-  "description": "Pieces of the old world, caught on your weft. They do not stay.",
+  "name": "book.ninjacatskies.whisker_codex.category.driftwrecks.name",
+  "description": "book.ninjacatskies.whisker_codex.category.driftwrecks.description",
   "icon": "driftwrecks:wreck_atlas",
   "sort_number": 7,
   "background": "ninjacatskies:textures/gui/quest_atlas.png",

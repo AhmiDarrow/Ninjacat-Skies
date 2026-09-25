@@ -1,6 +1,6 @@
 {
-  "name": "Snapped Guardians",
-  "description": "The keepers the Cut snapped. Unlocks as you seat Strands.",
+  "name": "book.ninjacatskies.whisker_codex.category.guardians.name",
+  "description": "book.ninjacatskies.whisker_codex.category.guardians.description",
   "icon": "guardians:frayed_totem_unwoven",
   "sort_number": 5,
   "background": "ninjacatskies:textures/gui/quest_atlas.png",

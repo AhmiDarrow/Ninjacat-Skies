@@ -54,7 +54,7 @@ public final class TownPlan {
             if (level.getBlockEntity(pos(sign,"pos")) instanceof SignBlockEntity be) {
                 var text = new SignText().setColor(DyeColor.WHITE).setHasGlowingText(true);
                 var lines = sign.getAsJsonArray("lines");
-                for (int i=0;i<Math.min(4,lines.size());i++) text=text.setMessage(i,Component.literal(lines.get(i).getAsString()));
+                for (int i=0;i<Math.min(4,lines.size());i++) { String line=lines.get(i).getAsString(); text=text.setMessage(i, line.isEmpty() ? Component.literal("") : Component.translatable(line)); }   // lines are lang keys
                 be.setText(text,true); be.setText(text,false); be.setWaxed(true); be.setChanged();
             }
         }

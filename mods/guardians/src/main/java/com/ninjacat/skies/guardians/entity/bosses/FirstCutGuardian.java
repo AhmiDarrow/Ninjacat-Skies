@@ -46,14 +46,14 @@ public class FirstCutGuardian extends GuardianEntity {
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) shout("The First Cut answers for nothing — it made the Cut. When it raises the blade, the red line is where the floor stops existing. The gold seam is fast, and the seam is where its beam runs.");
+        if (ageInFight == 1) shout("message.guardians.firstcut.first_cut_answers_for_nothing");
         Vec3 o = origin();
         if (severTell >= 0) tickSever(o); else if (ageInFight % SEVER_EVERY == 100) startSever(o);
         if (gapTimer > 0 && --gapTimer == 0) { gap.restoreAll(level()); sound(SoundEvents.DEEPSLATE_PLACE, 2F, 0.4F); }
-        if (beamTell >= 0) tickBeam(o); else if (ageInFight % BEAM_EVERY == 0) { beamTell = 0; say("The beam gathers along the seam."); sound(SoundEvents.BEACON_POWER_SELECT, 2F, 0.5F); }
+        if (beamTell >= 0) tickBeam(o); else if (ageInFight % BEAM_EVERY == 0) { beamTell = 0; say("message.guardians.firstcut.beam_gathers_along_seam"); sound(SoundEvents.BEACON_POWER_SELECT, 2F, 0.5F); }
         if (tickCount % 10 == 0) seamSpeed();
         if (phase() >= 1) { if (crushTell >= 0) tickCrush(); else if (ageInFight % CRUSH_EVERY == 0) startCrush(o); }
-        if (phase() >= 2) { if (pullTell >= 0) tickPull(o); else if (ageInFight % PULL_EVERY == 50) { pullDir = Mech.polar(Vec3.ZERO, 1, random.nextDouble() * Math.PI, 0); pullTell = 0; say("The void tears pull..."); sound(SoundEvents.ENDERMAN_STARE, 2F, 0.5F); } }
+        if (phase() >= 2) { if (pullTell >= 0) tickPull(o); else if (ageInFight % PULL_EVERY == 50) { pullDir = Mech.polar(Vec3.ZERO, 1, random.nextDouble() * Math.PI, 0); pullTell = 0; say("message.guardians.firstcut.void_tears_pull"); sound(SoundEvents.ENDERMAN_STARE, 2F, 0.5F); } }
         if (phase() >= 3) tickSplit(o);
         if (tickCount % 20 == 5) rotRubble();
     }
@@ -61,15 +61,15 @@ public class FirstCutGuardian extends GuardianEntity {
     @Override
     protected void onPhase(int phase) {
         Vec3 o = origin();
-        if (phase == 1) shout("The world-shards begin to collide with the floor. Red rings are crush zones.");
-        if (phase == 2) shout("The void tears open — teal lines lift whoever stands on them.");
+        if (phase == 1) shout("message.guardians.firstcut.world_shards_begin_collide_with");
+        if (phase == 2) shout("message.guardians.firstcut.void_tears_open_teal_lines");
         if (phase == 3) {
             // the boss steps off the seam, then the shard splits along it
             Vec3 perp = new Vec3(-SEAM_DIR.z, 0, SEAM_DIR.x).scale(random.nextBoolean() ? 11 : -11);
             Vec3 to = o.add(perp); teleportTo(to.x, o.y, to.z);
             gap.restoreAll(level()); gapTimer = 0;                       // the two ledgers never overlap
             splitHalf = 1; widenClock = 0; queueSplit(o);
-            shout("The main shard splits along the Cut! The halves drift apart — jump while you still can.");
+            shout("message.guardians.firstcut.main_shard_splits_along_cut");
             sound(SoundEvents.ENDER_DRAGON_GROWL, 3F, 0.4F);
         }
     }
@@ -84,7 +84,7 @@ public class FirstCutGuardian extends GuardianEntity {
         ServerPlayer p = Mech.randomPlayer(this); if (p == null || arena() == null) return;
         severAt = new Vec3(p.getX(), o.y, p.getZ()); severDir = Mech.polar(Vec3.ZERO, 1, random.nextDouble() * Math.PI, 0); severTell = 0;
         playClip(CLIP_ATTACK); getNavigation().stop();
-        say("The First Cut raises the blade..."); sound(SoundEvents.WITHER_SHOOT, 2F, 0.4F);
+        say("message.guardians.firstcut.first_cut_raises_blade"); sound(SoundEvents.WITHER_SHOOT, 2F, 0.4F);
     }
     private void tickSever(Vec3 o) {
         severTell++;
@@ -101,7 +101,7 @@ public class FirstCutGuardian extends GuardianEntity {
         gapTimer = GAP_LIFE;
         Mech.line(serverLevel(), ParticleTypes.SWEEP_ATTACK, severAt.add(severDir.scale(-SHARD_R)).add(0, 1, 0), severAt.add(severDir.scale(SHARD_R)).add(0, 1, 0), 30);
         sound(SoundEvents.GLASS_BREAK, 3F, 0.3F); sound(SoundEvents.GENERIC_EXPLODE.value(), 2F, 0.5F);
-        shout("SEVERED. The floor along the line is gone for fifteen seconds.");
+        shout("message.guardians.firstcut.severed_floor_along_line_gone");
     }
 
     // ------------------------------------------------------------------ the seam
@@ -113,7 +113,7 @@ public class FirstCutGuardian extends GuardianEntity {
         beamTell = -1;
         Mech.line(serverLevel(), ParticleTypes.END_ROD, o.add(SEAM_DIR.scale(-SHARD_R)).add(0, 1, 0), o.add(SEAM_DIR.scale(SHARD_R)).add(0, 1, 0), 80);
         sound(SoundEvents.BEACON_DEACTIVATE, 3F, 1.4F);
-        for (ServerPlayer p : party()) if (onSeam(p) || lineDist(o, SEAM_DIR, p.position()) < 1.2 && Mech.horiz(p.position(), o) < SHARD_R) { p.hurt(damageSources().mobAttack(this), 8); p.displayClientMessage(NinjacatText.teal("The beam runs the seam."), true); }
+        for (ServerPlayer p : party()) if (onSeam(p) || lineDist(o, SEAM_DIR, p.position()) < 1.2 && Mech.horiz(p.position(), o) < SHARD_R) { p.hurt(damageSources().mobAttack(this), 8); p.displayClientMessage(NinjacatText.tealKey("message.guardians.firstcut.beam_runs_seam"), true); }
     }
 
     // ------------------------------------------------------------------ phase 1: crush zones
@@ -147,7 +147,7 @@ public class FirstCutGuardian extends GuardianEntity {
         pullTell = -1; sound(SoundEvents.ENDERMAN_TELEPORT, 2F, 0.4F);
         for (ServerPlayer p : party()) if (lineDist(o, pullDir, p.position()) < 1.6 && Mech.horiz(p.position(), o) < SHARD_R) {
             p.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 50, 1)); p.hurt(damageSources().mobAttack(this), 4);
-            p.displayClientMessage(NinjacatText.teal("A void tear pulls you up!"), true); Mech.column(serverLevel(), Mech.TEAL, p.position(), 6, 10);
+            p.displayClientMessage(NinjacatText.tealKey("message.guardians.firstcut.void_tear_pulls"), true); Mech.column(serverLevel(), Mech.TEAL, p.position(), 6, 10);
         }
     }
 
@@ -164,7 +164,7 @@ public class FirstCutGuardian extends GuardianEntity {
     private void tickSplit(Vec3 o) {
         for (int i = 0; i < 120 && !splitQueue.isEmpty(); i++) { BlockPos b = splitQueue.remove(splitQueue.size() - 1); if (!gap.has(b)) split.clear(level(), b); }
         if (!splitQueue.isEmpty() && tickCount % 5 == 0) sound(SoundEvents.DEEPSLATE_BREAK, 2F, 0.3F);
-        if (++widenClock >= 200 && splitHalf < MAX_SPLIT) { widenClock = 0; splitHalf++; queueSplit(o); say("The halves drift further apart."); }
+        if (++widenClock >= 200 && splitHalf < MAX_SPLIT) { widenClock = 0; splitHalf++; queueSplit(o); say("message.guardians.firstcut.halves_drift_further_apart"); }
         if (tickCount % 6 == 0) Mech.line(serverLevel(), ParticleTypes.PORTAL, o.add(SEAM_DIR.scale(-SHARD_R)).add(0, -1, 0), o.add(SEAM_DIR.scale(SHARD_R)).add(0, -1, 0), 40);
     }
 

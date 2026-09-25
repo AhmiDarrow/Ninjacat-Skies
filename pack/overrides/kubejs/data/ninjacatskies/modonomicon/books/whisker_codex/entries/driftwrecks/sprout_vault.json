@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Root Cellar",
-  "description": "Rootbinders · Vault",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_vault.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_vault.description",
   "icon": "driftwrecks:keepsake_sprout_vault",
   "x": 1,
   "y": 3,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Root Cellar",
-      "text": "The Rootbinders' vault was a hollow grown inside one ancient trunk, sealed by bark as it healed. What they kept there was not treasure but cuttings of every tree, alive and asleep. The trunk is still healing around them. Wake one."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_vault.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_vault.page.0.text"
     }
   ],
   "condition": {

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Pulse Circle",
-  "description": "Drumhearts · Shrine",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_shrine.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_shrine.description",
   "icon": "driftwrecks:keepsake_spark_shrine",
   "x": 3,
   "y": -2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Pulse Circle",
-      "text": "Drumhearts believed the sky had a heartbeat and that someone had to keep time with it. At the Pulse Circle a drummer played every hour of every day for three hundred years. The beat stopped during the Cut. Then, faintly, it started again."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_shrine.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_shrine.page.0.text"
     }
   ],
   "condition": {

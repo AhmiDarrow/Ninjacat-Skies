@@ -36,21 +36,21 @@ public final class Tether {
     public static boolean lay(ServerPlayer p) {
         MinecraftServer server = p.server;
         ServerLevel level = DriftManager.level(server);
-        if (p.level() != level) { p.displayClientMessage(NinjacatText.teal("Wrecks drift in the Skies. The spool finds nothing to catch here."), true); return false; }
+        if (p.level() != level) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.wrong_level"), true); return false; }
         DriftManager m = DriftManager.get(server);
         Wreck w = LoomTension.clowderOf(p).map(c -> m.byTeam(c.id())).orElse(null);
-        if (w == null || w.phase != Wreck.Phase.ACTIVE) { p.displayClientMessage(NinjacatText.teal("No wreck is caught on your weft."), true); return false; }
+        if (w == null || w.phase != Wreck.Phase.ACTIVE) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.no_wreck"), true); return false; }
         BlockPos dock = nearestDock(server, w, p.position());
         Vec3 target = Vec3.atBottomCenterOf(dock).add(0, 1, 0);   // surface of the deck block
         Vec3 look = p.getLookAngle();
         Vec3 dir = target.subtract(p.position());
         double lookAng = Math.toDegrees(Math.atan2(look.z, look.x)), dirAng = Math.toDegrees(Math.atan2(dir.z, dir.x));
         double diff = Math.abs(((lookAng - dirAng) % 360 + 540) % 360 - 180);
-        if (diff > AIM_DEGREES) { p.displayClientMessage(NinjacatText.teal("Face the wreck, then throw the thread."), true); return false; }
+        if (diff > AIM_DEGREES) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.face_wreck"), true); return false; }
         double horiz = Math.hypot(dir.x, dir.z);
-        if (horiz > MAX_LENGTH) { p.displayClientMessage(NinjacatText.teal("Too far. A spool holds " + MAX_LENGTH + " blocks of thread."), true); return false; }
-        if (!p.onGround()) { p.displayClientMessage(NinjacatText.teal("Plant your feet first."), true); return false; }
-        if (w.contains(p.blockPosition(), 16)) { p.displayClientMessage(NinjacatText.teal("Throw the thread from your own ground, not from the wreck."), true); return false; }
+        if (horiz > MAX_LENGTH) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.too_far", MAX_LENGTH), true); return false; }
+        if (!p.onGround()) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.plant_feet"), true); return false; }
+        if (w.contains(p.blockPosition(), 16)) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.own_ground"), true); return false; }
 
         List<BlockPos> path = new ArrayList<>();
         List<BlockState> states = new ArrayList<>();
@@ -63,12 +63,12 @@ public final class Tether {
             if (!level.getBlockState(b).isAir()) continue;
             todo.add(b); st.add(states.get(i));
         }
-        if (todo.isEmpty()) { p.displayClientMessage(NinjacatText.teal("The way is already bridged."), true); return false; }
+        if (todo.isEmpty()) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.already_bridged"), true); return false; }
         LAYING.add(new Lay(w.id, todo, st));
         w.tetherStart = p.blockPosition();
         m.markDirty();
         WreckRewards.award(p, "cross");
-        p.displayClientMessage(NinjacatText.gold("The thread runs out ahead of you."), true);
+        p.displayClientMessage(NinjacatText.goldKey("message.driftwrecks.tether.runs_out"), true);
         return true;
     }
 
@@ -167,7 +167,7 @@ public final class Tether {
         p.fallDistance = 0;
         p.hurt(p.damageSources().fellOutOfWorld(), Math.min(6F, Math.max(0, p.getHealth() - 1)));
         level.playSound(null, to, DwRegistries.sound("tether.catch"), SoundSource.PLAYERS, 1.0F, 1.0F);
-        p.displayClientMessage(NinjacatText.teal("The thread catches you. It will not always be there."), true);
+        p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.tether.catches"), true);
     }
 
     /** Server stopping: lay whatever is still queued at once, so a restart never leaves half a bridge. */

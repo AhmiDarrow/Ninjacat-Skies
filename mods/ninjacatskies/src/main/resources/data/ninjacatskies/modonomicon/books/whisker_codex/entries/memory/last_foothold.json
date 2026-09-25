@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Boots first",
-  "description": "Then the bridge. Then the courage; it arrives on its own.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.last_foothold.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.last_foothold.description",
   "icon": "minecraft:iron_boots",
   "x": 8,
   "y": -1,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Boots first",
-      "text": "The Edge-walkers kept footholds past the last fence post — cuts in the Loom that led somewhere on purpose. When the sky came apart they were already standing on the thin bits. Some of them walked people home. Some of them walked off the edge because that was the job."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.last_foothold.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.last_foothold.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Spiritgear was theirs: tools that spend Pulse instead of edge, so a foothold could be cut without wearing the mountain out."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.last_foothold.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Claw mends",
-      "text": "Seat Claw and fall damage stops within sight of the Post. That is a foothold, scaled to a pad. Edge is also when the braid opens: Pattern, Colony, Hum. The Edge-walkers never asked anyone to be brave in the same place twice. Pick a way and walk it."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.last_foothold.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.last_foothold.page.2.text"
     }
   ],
   "parents": [

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "Edge-walkers",
-  "description": "Keepers of the Claw Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.claw.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.claw.description",
   "icon": "ninjacatskies:strand_token_claw",
   "x": 2,
   "y": -3,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Edge-walkers",
-      "text": "The Edge-walkers kept footholds past the last fence post — cuts in the Loom that led somewhere on purpose. Spiritgear was theirs: tools that spend Pulse instead of edge.\\\nThey left the footholds so nobody would have to be brave in the same place twice."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Before the Cut the rim was a job, not a dare: a list of places you could stand, a bridge already cut, courage allowed to arrive late.\\\nWhat they lost was a horizon that led somewhere on purpose.\\\nSome walked people home.\\\nSome walked off because that was the job."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The thin bits are still thin."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,18 +30,18 @@
         "id": "ninjacatskies:strand_token_claw",
         "count": 1
       },
-      "title": "Claw Strand",
-      "text": "*Boots first. Then the bridge. Then the courage; it arrives on its own.*\\\nSeated. The Edge-walkers answer when this Post hums."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Their camp",
-      "text": "The Edge-walkers keep a camp in the March highlands: huts, a fire, a Tribe Hearth, a Fire totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Their hearth favours leather, iron, Rift Tooth. Their Elder trades Spiritgear and footholds, and at Voice standing presses the tribe's Mark into your hand."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.claw.page.5.text"
     }
   ],
   "condition": {

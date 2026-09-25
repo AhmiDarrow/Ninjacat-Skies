@@ -50,13 +50,13 @@ public class TangleGuardian extends GuardianEntity {
         float dmg = (float) getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) * (lonely ? 1.5F : 1F);
         t.hurt(damageSources().mobAttack(this), dmg);
         t.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 0));
-        if (t instanceof ServerPlayer p) p.displayClientMessage(NinjacatText.teal(lonely ? "Alone in a dead end — the Tangle's venom bites deep." : "The Tangle's venom seeps in."), true);
+        if (t instanceof ServerPlayer p) p.displayClientMessage(NinjacatText.tealKey(lonely ? "message.guardians.tangle.venom_alone" : "message.guardians.tangle.venom_seeps"), true);
         sound(SoundEvents.SPIDER_AMBIENT, 1.5F, 0.6F);
     }
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) shout("The Tangle answers for the Cut. It strings the paths shut behind you — cut the knots — and it hunts whoever wanders off alone. Stay together.");
+        if (ageInFight == 1) shout("message.guardians.tangle.tangle_answers_for_cut_strings");
         if (tickCount % (phase() >= 1 ? 20 : 30) == 0) trailAndString();
         if (tickCount % 20 == 10) rotWebs();
         if (tickCount % RETARGET == 0) retarget();
@@ -65,7 +65,7 @@ public class TangleGuardian extends GuardianEntity {
         if (phase() >= 3 && ageInFight % 300 == 0) knotlings();
     }
 
-    @Override protected void onPhase(int phase) { shout(phase == 1 ? "The Tangle spins faster." : phase == 2 ? "The Tangle spits knots — watch the line at your feet." : "The Tangle calls its knotlings!"); sound(SoundEvents.SPIDER_AMBIENT, 2F, 0.4F); }
+    @Override protected void onPhase(int phase) { shout(phase == 1 ? "message.guardians.tangle.tangle_spins_faster" : phase == 2 ? "message.guardians.tangle.tangle_spits_knots_watch_line" : "message.guardians.tangle.tangle_calls_knotlings"); sound(SoundEvents.SPIDER_AMBIENT, 2F, 0.4F); }
 
     // ------------------------------------------------------------------ rope knots
     /** Remember the last few floor positions of every player; string the block three steps back if it sits in a hedge corridor. */
@@ -111,7 +111,7 @@ public class TangleGuardian extends GuardianEntity {
             double score = near * 4 - p.distanceTo(this);
             if (score > bs) { bs = score; best = p; }
         }
-        if (best != null && best != getTarget()) { setTarget(best); if (isLonely(best)) best.displayClientMessage(NinjacatText.teal("The Tangle has caught your scent — you are alone."), true); }
+        if (best != null && best != getTarget()) { setTarget(best); if (isLonely(best)) best.displayClientMessage(NinjacatText.tealKey("message.guardians.tangle.caught_scent"), true); }
     }
     /** A 7-wide spider does not fit the paths: when the target is out of reach and the path is stuck, it hops the hedge. */
     private void tryHop() {
@@ -151,9 +151,9 @@ public class TangleGuardian extends GuardianEntity {
         if (Mech.countMinions(this) >= cap) return;
         for (int i = 0; i < 2 && Mech.countMinions(this) < cap; i++) {
             Vec3 at = Mech.polar(position(), 2.5, random.nextDouble() * Math.PI * 2, getY());
-            Mech.spawn(this, EntityType.CAVE_SPIDER, at, "Knotling", 8, 2);
+            Mech.spawn(this, EntityType.CAVE_SPIDER, at, "message.guardians.minion.knotling", 8, 2);
         }
-        say("Knotlings skitter out of the hedge!"); sound(SoundEvents.SPIDER_AMBIENT, 1.5F, 1.4F);
+        say("message.guardians.tangle.knotlings_skitter_out_hedge"); sound(SoundEvents.SPIDER_AMBIENT, 1.5F, 1.4F);
     }
 
     @Override protected void onDefeated() { super.onDefeated(); Mech.discardMinions(this); webs.clear(); webBorn.clear(); trails.clear(); }

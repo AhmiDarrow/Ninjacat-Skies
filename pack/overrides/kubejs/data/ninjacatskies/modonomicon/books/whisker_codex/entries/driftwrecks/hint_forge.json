@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The old forges",
-  "description": "A loose page about hidden rooms.",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_forge.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_forge.description",
   "icon": "driftwrecks:hint_page",
   "x": -3,
   "y": 1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The old forges",
-      "text": "The forge-keepers kept their best work where the hammer fell.\\\n*From now on, your Clowder's forge wrecks drift in with their hidden room open.*"
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_forge.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_forge.page.0.text"
     }
   ],
   "parents": [

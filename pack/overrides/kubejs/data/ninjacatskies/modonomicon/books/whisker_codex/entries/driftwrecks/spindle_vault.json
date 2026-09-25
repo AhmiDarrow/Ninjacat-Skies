@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Gate Vault",
-  "description": "Loom-stitchers · Vault",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_vault.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_vault.description",
   "icon": "driftwrecks:keepsake_spindle_vault",
   "x": 7,
   "y": 3,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Gate Vault",
-      "text": "In the Gate Vault the Loom-stitchers kept the one tapestry they never showed: all nine tribes woven together, with a thread left loose at the edge on purpose. They always meant to come back. Stitch the cut. Then go and see what the March kept for you."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_vault.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_vault.page.0.text"
     }
   ],
   "condition": {

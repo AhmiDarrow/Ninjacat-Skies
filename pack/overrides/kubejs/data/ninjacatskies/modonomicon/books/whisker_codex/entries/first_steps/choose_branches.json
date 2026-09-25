@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Choose two middle branches",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.description",
   "icon": "ninjacatskies:braid_cord",
   "x": 8,
   "y": 3,
@@ -11,28 +11,28 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Three routes",
-      "text": "**Goal:** spin **Braid Cord** at the Post, then work the three middle branches.\\\nYou need **16 Strand Filaments** and a **Tension Post**. No Strand has to be seated first.\\\nAfter Claw, three branches open together:\\\n**Pattern / Clock:** mechanical processing."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Colony / Swarm:** bees and their production chains.\\\n**Hum / Spark:** living power and workshops.\\\nA team can divide the work. You will still need all nine Strands for the final reweave."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Make Braid Cord",
-      "text": "1\\. Stand at your **Tension Post**.\\\n2\\. Hold **16 Strand Filaments** — sieve gravel or sand with an iron Thread Mesh.\\\n3\\. Right-click the Post to receive **Braid Cord**."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Do not put Strand tokens in a crafting grid. They record progress, and the braid does not need them."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Check",
-      "text": "**Check:** two of those three notches are lit, and Braid Cord is in your hand. Next: Bind and the Sigil quests."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.choose_branches.page.4.text"
     }
   ],
   "parents": [

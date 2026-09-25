@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Pad-runners",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.pad_runners.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.pad_runners.description",
   "icon": "chocobosreborn:chocobo_almanac",
   "x": 0,
   "y": 6,
@@ -11,53 +11,53 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Goal",
-      "text": "**Goal:** find a wild pad-runner in the March, not on your void pad.\\\nYou need a **Gate Drum**, **Gysahl**, and the **Chocobo Almanac**.\\\nBirds do not spawn on a skyblock island. There is no spawn-egg shortcut and no join gift. Walk the March."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.pad_runners.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Find, tame, ride",
-      "text": "1\\. Use a **Gate Drum** empty-handed and play the Gate Rite (hit the beats on A, S, D, F; 60% opens it), then walk through. Yellows graze the Steppe and Reed Fen. Snow Fields hide Wonderful grades. Ember Wastes keep Flame birds."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.pad_runners.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "2\\. Pick **Gysahl** in the March (Reed Fen is densest). Picking drops seeds too; plant them on farmland at home.\\\n3\\. Craft the **Chocobo Almanac** (book and a gysahl leaf) and use it anywhere: its pages list your own birds."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "4\\. Tame a wild yellow with gysahl, then saddle it. Sprint dashes; ease off to recover stamina."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.pad_runners.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Esther at the hub",
-      "text": "After you have walked the March, **Esther** stands at Clowder Hall (`/clowder hub`). Ride a saddled bird to her, ask the Whiskerwind Guide, or craft a **Chocobo Pocketwatch** (gold nuggets around a clock, with a gysahl).\\\n**Check:** you are on a saddled bird, or Esther is waiting at the hub."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.pad_runners.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Farm and colour",
-      "text": "**Goal:** train, mate, and paint colours without chasing dyes that do not exist.\\\nYou need greens to train, nuts to mate, and the **Chocobo Almanac** to read the bird."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.pad_runners.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.5.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "1\\. Train an adult on greens until it is sated on each kind. Gysahl is the only green in the wild; Krakka is two gysahl and bone meal.\\\n2\\. Mate with nuts. Talent follows the nut. Colour follows the parents unless Carob or Zeio is involved."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.6.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "3\\. **Carob** (Bilo at Whiskerwind, or Class A races): two Good-or-better Yellows hatch Green or Blue. Each parent needs 1 first-place race; 4 combined firsts make the colour certain."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.7.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "4\\. Green plus Blue hatch Black (a miss is White) — 2 firsts each, 9 combined for a sure roll. **Zeio** (Bilo, rare at Class S): Black plus a Wonderful Yellow hatch Gold — 3 firsts each, 12 combined."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.8.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "5\\. There are no Pink or Red birds. The Fair stall does not sell those dyes. Purple is End; Flame is Ember Wastes; Gold flies.\\\n**Check:** the Almanac shows colour, grade, class, race wins and the last nut. Recipes stay in JEI."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.first_steps.pad_runners.page.9.text"
     }
   ],
   "parents": [

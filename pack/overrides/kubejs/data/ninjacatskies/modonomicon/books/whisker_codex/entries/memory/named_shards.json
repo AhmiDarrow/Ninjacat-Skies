@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Named by echo",
-  "description": "Iron is low and patient. Diamond does not answer at all.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.named_shards.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.named_shards.description",
   "icon": "minecraft:iron_ore",
   "x": 4,
   "y": -2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Named by echo",
-      "text": "The Grit-singers named every shard by its voice. Iron is low and patient. Gold barely bothers to answer. Diamond does not answer at all; you find it by the silence around it."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.named_shards.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.named_shards.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "When the Cut came, the meshes kept humming to nothing. Ore had nowhere to land. Continents that were mostly stone fell as gravel and still fall, somewhere below the void, if below still means anything."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.named_shards.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Stone mends",
-      "text": "A mesh is not a finder. It is a welcome. Seat Stone and you are telling the ground it may arrive again. The Listening Pit, the Loomframe, the hammer chain — they are all the same courtesy: give the shard a place to sit."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.named_shards.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.named_shards.page.2.text"
     }
   ],
   "parents": [

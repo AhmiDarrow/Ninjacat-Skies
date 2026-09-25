@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Route Loft",
-  "description": "Edge-walkers · Library",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_library.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_library.description",
   "icon": "driftwrecks:keepsake_claw_library",
   "x": 2,
   "y": 0,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Route Loft",
-      "text": "Edge-walkers wrote their routes as knotted cords, one knot for every safe foothold, so they could read them in the dark. The Route Loft held thousands. The longest cord led to an island nobody else believed in. The cord ends past the edge."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_library.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_library.page.0.text"
     }
   ],
   "condition": {

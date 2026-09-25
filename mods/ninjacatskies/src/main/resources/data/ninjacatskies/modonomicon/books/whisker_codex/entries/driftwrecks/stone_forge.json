@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Grit Mill",
-  "description": "Grit-singers · Forge",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_forge.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_forge.description",
   "icon": "driftwrecks:keepsake_stone_forge",
   "x": 0,
   "y": 1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Grit Mill",
-      "text": "The Grit Mill ground stone to sand by song: the millstones turned faster when the singers held a high note. A good miller could grade grit by ear alone. The mill still turns when the wind is right. Nobody grades the grit now."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_forge.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_forge.page.0.text"
     }
   ],
   "condition": {

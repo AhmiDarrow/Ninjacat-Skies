@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:the_cut",
-  "name": "Loom Tension",
-  "description": "The Post, the seat, the hum.",
+  "name": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.description",
   "icon": "ninjacatskies:tension_post",
   "x": 8,
   "y": 0,
@@ -15,33 +15,33 @@
         "id": "ninjacatskies:tension_post",
         "count": 1
       },
-      "title": "Tension Post",
-      "text": "**Goal:** raise a Post and seat the first token.\\\nYou need logs, a **Binding Knot**, and a scrap of **Frayed Thread**."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Logs, a Binding Knot, and a scrap of Thread make a **Tension Post**. Raise one on the pad. Right-click it with a Strand token to seat that Strand; the notch lights, the tribe chimes, and the Post starts to hum.\\\n**Check:** the Soil notch is lit, and the pad starts mending you near the Post."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Tension does",
-      "text": "Seated Strands are **Loom Tension**. It is not a bar and it does not nag. It changes the pad."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Near the Post: the pad mends you (Soil). It feeds you a little (Sprout). Fall damage stops within sight of it (Claw). Hands quicken (five Strands). Luck (Sigil). And the horizon warms, one Strand at a time."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Spun at the Post",
-      "text": "**Goal:** spin **Braid Cord**, then a **Spindle Loom Fragment**, at the Post — not the bench.\\\nYou need **16 Strand Filaments**; **March Stone** once all nine are seated.\\\n**Braid Cord**: right-click holding **16 Strand Filaments**. No Strand has to be seated."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Spindle Loom Fragment**: right-click with a March stone once all nine are seated. Seat the Fragment to Reweave.\\\n**Check:** 16 filaments at the Post give you Braid Cord, and a Fragment after nine seats plus March Stone."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.tension.page.5.text"
     }
   ],
   "parents": [

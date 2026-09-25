@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Recover",
-  "description": "Stone Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.recover.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.recover.description",
   "icon": "voidloom:spindle_hammer",
   "x": 2,
   "y": 0,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Recover",
-      "text": "**Stone.** Unravel Thread to string, spin yarn, tie a Knot, raise a Loomframe. The Tension Barrel makes clay; clay makes porcelain; porcelain carries lava.\\\nThen the sieve. It is a tool inside Recover, not the name of it. Iron mesh is the target: that is where Strand Filament starts falling."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.recover.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.recover.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "**Goal:** finish Recover and seat the Stone token.\\\nYou need Frayed Thread, a **Loomframe**, a **Tension Barrel**, and a mesh.\\\n**Check:** Finish Recover. Claim the Stone token and seat it. The Stone notch lights. A working Loomframe and Tension Barrel are the practical check."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.recover.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.recover.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.recover.page.2.text"
     }
   ],
   "parents": [

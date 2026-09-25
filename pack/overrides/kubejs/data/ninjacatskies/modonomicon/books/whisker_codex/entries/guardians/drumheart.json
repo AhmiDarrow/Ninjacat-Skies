@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Drumheart",
-  "description": "Keeper of the Spark Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.description",
   "icon": "guardians:frayed_totem_drumheart",
   "x": 4,
   "y": -2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Drumheart",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Forge Drum: a brass drum-platform over a lava crater, eight copper piston hammers with beat pads before them, four lava channels through the floor."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Drumheart can only be hurt for a moment after every fourth beat. Stand on a beat pad at the downbeat to charge a spark that counts triple; on beat four the lava channels rise, so be on the pads, not in the channels. The tempo climbs every phase."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_drumheart",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_drumpulse",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Drumpulse: every fourth hit lands two extra hearts. Downbeat stuns and throws back everything within seven blocks."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.drumheart.page.4.text"
     }
   ],
   "parents": [

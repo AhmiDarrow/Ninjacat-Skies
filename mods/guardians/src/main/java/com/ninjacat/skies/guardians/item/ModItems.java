@@ -31,7 +31,7 @@ public final class ModItems {
     }
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("guardians", () -> CreativeModeTab.builder()
-            .title(Component.literal("Snapped Guardians"))
+            .title(Component.translatable("itemGroup.guardians"))
             .icon(() -> new ItemStack(RELICS.get(GuardianKind.UNWOVEN).get()))
             .displayItems((params, out) -> {
                 for (GuardianKind k : GuardianKind.values()) out.accept(TOTEMS.get(k).get());

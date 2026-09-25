@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Wake",
-  "description": "Soil Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.wake.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.wake.description",
   "icon": "minecraft:oak_sapling",
   "x": 0,
   "y": 0,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Wake",
-      "text": "**Soil.** Wood, dirt, a bench, a sapling, a chest, warmth. Melt ice with lava for water on Normal and Hard. Cook something.\\\nThe Soil token comes from the **Soil Knot** at the end of the chapter. Raise a Tension Post and seat it. The pad starts mending you."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.wake.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.wake.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "**Goal:** finish Soil and seat the Soil token.\\\nYou need the **Soil Knot** claimed and a **Tension Post** placed.\\\n**Check:** Finish Soil in the quest screen. Claim the **Soil Knot**, then seat the Soil token. The Soil notch lights."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.wake.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.wake.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.wake.page.2.text"
     }
   ]
 }

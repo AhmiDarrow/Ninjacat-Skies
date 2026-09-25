@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "Seal-carvers",
-  "description": "Keepers of the Sigil Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.description",
   "icon": "ninjacatskies:strand_token_sigil",
   "x": 0,
   "y": 3,
@@ -11,13 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Seal-carvers",
-      "text": "The Seal-carvers pressed spirit into matter and made it stay. A seal is a promise carved so the world has to keep it; a rite is asking the Loom, politely, for an exception.\\\nNever bind what you would not be willing to unbind."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Before the Cut they carved promises by the thousand — exceptions asked politely, then asked again, then asked too much. What they lost was manners with a budget. Bind is their chapter. The old world broke on appetite. The new one will hold on asking smaller."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.1.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -25,18 +25,18 @@
         "id": "ninjacatskies:strand_token_sigil",
         "count": 1
       },
-      "title": "Sigil Strand",
-      "text": "*Spirit goes where it is asked politely and stays where it is fed.*\\\nSeated. The Seal-carvers answer when this Post hums."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Their camp",
-      "text": "The Seal-carvers keep a camp in the March highlands: huts, a fire, a Tribe Hearth, a Spirit totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Their hearth favours blank and element seals, Spirit Shards. Their Elder trades the tribe's Seal, Blank Seals and rite tablets, and at Voice standing presses the tribe's Mark into your hand."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.sigil.page.4.text"
     }
   ],
   "condition": {

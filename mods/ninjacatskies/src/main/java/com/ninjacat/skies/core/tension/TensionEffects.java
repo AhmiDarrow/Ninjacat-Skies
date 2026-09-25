@@ -257,7 +257,7 @@ public final class TensionEffects {
                     && player.level().isLoaded(pos)
                     && player.level().getBlockState(pos).is(com.ninjacat.skies.core.block.ModBlocks.TENSION_POST.get())) {
                 event.setCanceled(true);
-                player.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.teal("Edge-walker footing. The pad caught you."), true);
+                player.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.tealKey("message.ninjacatskies.tension.edge_footing"), true);
             }
         });
     }

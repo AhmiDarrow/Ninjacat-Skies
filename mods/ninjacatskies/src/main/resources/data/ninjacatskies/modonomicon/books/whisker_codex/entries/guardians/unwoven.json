@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Unwoven",
-  "description": "Keeper of the Spindle Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.description",
   "icon": "guardians:frayed_totem_unwoven",
   "x": -2,
   "y": 2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Unwoven",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Collapsing Loom: a loom sixty-six blocks wide whose floor is the warp — plank strips that unravel into thread bridges as the heddle bars drop."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Five phases. Each quotes two of the other eight mechanics for thirty seconds, then a heddle bar drops and three more strips unravel. In its true form the last four strips remain and the warp threads are the only way up to the beam where it stands. Kill it there: the Reweave."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_unwoven",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_loomthread",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Loomthread: two more Loom Tension for your Clowder and slower decay. Loomthread tethers your Clowder to your side. It is the keystone for the true Reweave and the key to the two sealed arenas."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.unwoven.page.4.text"
     }
   ],
   "parents": [

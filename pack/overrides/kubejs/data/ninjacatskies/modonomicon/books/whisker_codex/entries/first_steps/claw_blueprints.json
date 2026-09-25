@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Claw Blueprint Package",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.description",
   "icon": "silentgear:blueprint_package",
   "x": 0,
   "y": 3,
@@ -11,23 +11,23 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Goal",
-      "text": "**Goal:** get Silent Gear starter plans when Claw opens, even if the join gift is gone.\\\nYou need four **Blueprint Paper**.\\\nClaiming a pad wipes Silent Gear's first-join **Blueprint Package**. That is Skyblock Builder clearing the inventory, not a missing recipe."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Craft the package",
-      "text": "1\\. Reach the Claw / Edge quests. Open a Blueprint Paper in JEI if you need the current paper recipe.\\\n2\\. Craft a **Blueprint Package** from four **Blueprint Paper**, shapeless.\\\n3\\. Right-click the package to unwrap starter plans."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "4\\. Follow Claw for rods, tools, iron on your back, a bow, and a portal frame. Leave the pad on purpose."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Check",
-      "text": "**Check:** you are holding the package or the unwrapped plans, and the Claw quest can see them.\\\nDo not wait for another join gift. Tokens still are not crafted in a grid. After Claw, Pattern, Colony and Hum open together."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.claw_blueprints.page.3.text"
     }
   ],
   "parents": [

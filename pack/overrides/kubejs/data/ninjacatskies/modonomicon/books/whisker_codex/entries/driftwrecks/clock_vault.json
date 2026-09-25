@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Strongroom Clock",
-  "description": "Pattern-weavers · Vault",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_vault.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_vault.description",
   "icon": "driftwrecks:keepsake_clock_vault",
   "x": 4,
   "y": 3,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Strongroom Clock",
-      "text": "The Pattern-weavers' vault opened once a year, at a minute only the Hour Tower could count. The minute came and went during the Cut with no one at the door. The box is still waiting for its hour. Wind it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_vault.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_vault.page.0.text"
     }
   ],
   "condition": {

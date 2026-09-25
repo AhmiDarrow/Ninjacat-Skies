@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Drone Tower",
-  "description": "Colony-keepers · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_watchtower.description",
   "icon": "driftwrecks:keepsake_swarm_watchtower",
   "x": 5,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Drone Tower",
-      "text": "From the Drone Tower the Colony-keepers read the swarms like weather: which way they flew, how high, how loud. A low swarm meant rain. On the day of the Cut every swarm on the island flew straight up. Look up."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_watchtower.page.0.text"
     }
   ],
   "condition": {

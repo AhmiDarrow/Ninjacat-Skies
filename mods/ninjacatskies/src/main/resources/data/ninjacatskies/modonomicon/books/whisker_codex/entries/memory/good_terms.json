@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "On good terms",
-  "description": "You do not own a hive. You are on good terms with it.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.good_terms.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.good_terms.description",
   "icon": "minecraft:honeycomb",
   "x": 4,
   "y": 2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "On good terms",
-      "text": "The Colony-keepers tended hives that hummed in the Loom's own key, and March flowers that hummed back. They did not own their colonies. They were on good terms with them. When the sky fell, a great many hives went quiet rather than angry. Quiet is a kind of loyalty."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.good_terms.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.good_terms.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "There are no bees to find in the void. You make somewhere a bee wants to be, and you wait."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.good_terms.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Swarm mends",
-      "text": "Seat Swarm and you are resuming a conversation, not founding a livestock industry. Keep something alive that keeps something else alive. Take without asking and the comb goes quiet. It is very patient about this."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.good_terms.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.good_terms.page.2.text"
     }
   ],
   "parents": [

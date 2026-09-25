@@ -61,7 +61,7 @@ final class Mech {
         T m = type.create(sl);
         if (m == null) return null;
         m.moveTo(at.x, at.y, at.z, boss.getRandom().nextFloat() * 360F, 0);
-        m.setCustomName(net.minecraft.network.chat.Component.literal(name));
+        m.setCustomName(net.minecraft.network.chat.Component.translatable(name));   // name is a lang key
         m.setCustomNameVisible(false);
         m.setPersistenceRequired();
         m.addTag(tag(boss));

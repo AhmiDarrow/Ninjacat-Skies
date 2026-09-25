@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The old librarys",
-  "description": "A loose page about hidden rooms.",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_library.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_library.description",
   "icon": "driftwrecks:hint_page",
   "x": -3,
   "y": 0,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The old librarys",
-      "text": "One shelf in every library was never meant to be read.\\\n*From now on, your Clowder's library wrecks drift in with their hidden room open.*"
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_library.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_library.page.0.text"
     }
   ],
   "parents": [

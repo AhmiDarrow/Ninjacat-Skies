@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Far Cache",
-  "description": "Edge-walkers · Vault",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_vault.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_vault.description",
   "icon": "driftwrecks:keepsake_claw_vault",
   "x": 2,
   "y": 3,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Far Cache",
-      "text": "At the end of their longest route the Edge-walkers built the Far Cache: rope, food, a bed, a note for the next walker. Whoever reached it wore the gold clasp home. The clasp never made it home the last time. It is going home now."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_vault.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_vault.page.0.text"
     }
   ],
   "condition": {

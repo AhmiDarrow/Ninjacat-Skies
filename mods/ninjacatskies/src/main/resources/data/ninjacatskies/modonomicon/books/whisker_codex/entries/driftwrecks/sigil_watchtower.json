@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Ward Beacon",
-  "description": "Seal-carvers · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_watchtower.description",
   "icon": "driftwrecks:keepsake_sigil_watchtower",
   "x": 6,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Ward Beacon",
-      "text": "The Ward Beacon lit a ring of wards around the Seal-carvers' island every night. Nothing walked through the light that was not invited. The night of the Cut the ring held. It was the island underneath that broke. Carve carefully."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_watchtower.page.0.text"
     }
   ],
   "condition": {

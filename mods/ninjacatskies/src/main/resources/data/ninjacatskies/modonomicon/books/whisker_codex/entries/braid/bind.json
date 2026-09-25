@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Bind",
-  "description": "Sigil Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.bind.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.bind.description",
   "icon": "ninjacatskies:braid_cord",
   "x": 10,
   "y": 0,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Bind",
-      "text": "**Sigil.** Sixteen Strand Filaments in hand, right-click the Post: **Braid Cord**.\\\nThen seals and rites — Tribal Power's own, with Nature's Aura, Ars Nouveau, and Occultism as peers. Carve carefully."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.bind.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.bind.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "**Goal:** spin **Braid Cord** and seat Sigil.\\\nYou need **16 Strand Filaments** and a **Tension Post**.\\\n**Check:** Right-click the Post holding 16 Strand Filaments for **Braid Cord**. Finish Sigil, then seat the Sigil token."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.bind.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.bind.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.bind.page.2.text"
     }
   ],
   "parents": [

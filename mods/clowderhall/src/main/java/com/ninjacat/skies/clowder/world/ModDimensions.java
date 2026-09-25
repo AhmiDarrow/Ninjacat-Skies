@@ -268,10 +268,10 @@ public final class ModDimensions {
                         .setValue(BlockStateProperties.ROTATION_16, RotationSegment.convertToSegment(Direction.SOUTH))
         );
         writeSign(level, standSign, new String[]{
-                "Clowder Hall",
-                "Nine Strands",
-                "One Loom",
-                "— Ninjacats —"
+                "sign.clowderhall.hall_plaque.1",
+                "sign.clowderhall.hall_plaque.2",
+                "sign.clowderhall.hall_plaque.3",
+                "sign.clowderhall.hall_plaque.4"
         }, DyeColor.CYAN);
 
         BlockPos post = PAD_CENTER.offset(0, 1, -2);
@@ -282,10 +282,10 @@ public final class ModDimensions {
                 Blocks.OAK_WALL_SIGN.defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
         );
         writeSign(level, wallSign, new String[]{
-                "Welcome,",
-                "Skybound.",
-                "Claim a pad.",
-                "Reweave."
+                "sign.clowderhall.hall_welcome.1",
+                "sign.clowderhall.hall_welcome.2",
+                "sign.clowderhall.hall_welcome.3",
+                "sign.clowderhall.hall_welcome.4"
         }, DyeColor.WHITE);
 
         ensureVillage(level);
@@ -345,6 +345,7 @@ public final class ModDimensions {
         level.setBlockAndUpdate(base.above(), banner);
     }
 
+    /** {@code lines} are lang keys; an empty entry leaves that line blank. */
     private static void writeSign(ServerLevel level, BlockPos pos, String[] lines, DyeColor color) {
         if (!(level.getBlockEntity(pos) instanceof SignBlockEntity sign)) {
             return;
@@ -352,7 +353,7 @@ public final class ModDimensions {
         SignText text = new SignText();
         for (int i = 0; i < 4; i++) {
             String line = i < lines.length ? lines[i] : "";
-            text = text.setMessage(i, Component.literal(line));
+            text = text.setMessage(i, line.isEmpty() ? Component.literal("") : Component.translatable(line));
         }
         text = text.setColor(color).setHasGlowingText(true);
         sign.setText(text, true);
@@ -361,32 +362,12 @@ public final class ModDimensions {
 
     private static ItemStack createHallBook() {
         List<Filterable<Component>> pages = List.of(
-                Filterable.passThrough(Component.literal(
-                        "Clowder Hall\n\n" +
-                                "Teams are Clowders.\n" +
-                                "Pads are claimed, not owned forever.\n" +
-                                "The Loom still listens."
-                )),
-                Filterable.passThrough(Component.literal(
-                        "Hall rules\n\n" +
-                                "1. Share the hub.\n" +
-                                "2. Claim a pad via Skyblock / Charter.\n" +
-                                "3. Pull Strands; do not skip Soil.\n" +
-                                "4. Frayed Thread buys help, not shortcuts past the braid."
-                )),
-                Filterable.passThrough(Component.literal(
-                        "Begin\n\n" +
-                                "/clowder help\n" +
-                                "Hub Key toggles the Hall.\n\n" +
-                                "Invite a friend: hold the Charter\n" +
-                                "and right-click them, or\n" +
-                                "/clowder invite <name>. They run\n" +
-                                "/clowder accept.\n\n" +
-                                "Ops only: /clowder revive."
-                ))
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_hall.page_1")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_hall.page_2")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_hall.page_3"))
         );
         WrittenBookContent content = new WrittenBookContent(
-                Filterable.passThrough("Clowder Hall"),
+                Filterable.passThrough("Clowder Hall"),   // lang-exempt: vanilla book title is a plain string (matched by id); the shown name is the CUSTOM_NAME key
                 "Ninjacats",
                 0,
                 pages,
@@ -394,70 +375,29 @@ public final class ModDimensions {
         );
         ItemStack book = new ItemStack(Items.WRITTEN_BOOK);
         book.set(DataComponents.WRITTEN_BOOK_CONTENT, content);
+        book.set(DataComponents.CUSTOM_NAME, Component.translatable("message.clowderhall.book_hall.title").withStyle(s -> s.withItalic(false)));
         return book;
     }
 
     private static ItemStack createHowToStartBook() {
         // Keep Recover / kit copy aligned with starter_book.js v7.
         List<Filterable<Component>> pages = List.of(
-                Filterable.passThrough(Component.literal(
-                        "HOW TO START (read me)\n\n" +
-                                "You are in Clowder Hall or on Dock — not your forever island.\n\n" +
-                                "Goal: open Create Team on the Dock, pick a pad, then open the Whisker Codex."
-                )),
-                Filterable.passThrough(Component.literal(
-                        "CLAIM A PAD\n\n" +
-                                "1) Island Charter (or press K)\n" +
-                                "2) Create Team → name your Clowder\n" +
-                                "3) Pick a pad:\n" +
-                                "   Ninjacat Pad = Normal\n" +
-                                "   Dojo Cottage = Easy\n" +
-                                "   Frayed Thread = Hard\n" +
-                                "4) Whisker Codex — Start here.\n" +
-                                "   Grave (`): assignment list.\n\n" +
-                                "Playing together? See the last page."
-                )),
-                Filterable.passThrough(Component.literal(
-                        "QUESTS / RECOVER\n\n" +
-                                "Easy ships water already.\n" +
-                                "Normal/Hard: ice + lava + empty bucket.\n\n" +
-                                "1) Unravel Thread → 3 string\n" +
-                                "2) Craft 4 string → 2 Void Yarn\n" +
-                                "3) Spindle Hammer = cobble + sticks\n" +
-                                "4) Tension Barrel: water+dirt → clay\n" +
-                                "   (empty bucket returns to you)\n" +
-                                "5) Porcelain clay → porcelain bucket\n" +
-                                "6) Sieve grit; slime = dirt+seeds+meal"
-                )),
-                Filterable.passThrough(Component.literal(
-                        "SOFT HARDCORE\n\n" +
-                                "Each mate adds three shared lives:\n" +
-                                "• Deaths spend a shared life\n" +
-                                "• /skybound lives checks the pool\n" +
-                                "• Op: /skybound revive [player]\n\n" +
-                                "Hub Key toggles Hall enter/leave.\n" +
-                                "Sneak-use Charter seals spawn on solid pad ground."
-                )),
-                Filterable.passThrough(Component.literal(
-                        "PLAY TOGETHER\n\n" +
-                                "One Clowder shares one pad, one\n" +
-                                "quest list and one life pool.\n\n" +
-                                "Invite: hold the Charter and\n" +
-                                "right-click a friend, or\n" +
-                                "/clowder invite <name>.\n\n" +
-                                "They accept with /clowder accept\n" +
-                                "or the panel's Review Invites."
-                ))
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_start.page_1")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_start.page_2")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_start.page_3")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_start.page_4")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_start.page_5"))
         );
         WrittenBookContent content = new WrittenBookContent(
-                Filterable.passThrough("How to Start"),
-                "Skybound Field Desk",
+                Filterable.passThrough("How to Start"),   // lang-exempt: vanilla book title is a plain string (matched by id); the shown name is the CUSTOM_NAME key (starter_book.js matches it)
+                "Skybound Field Desk",   // lang-exempt: vanilla book author is a plain string, a byline name
                 0,
                 pages,
                 true
         );
         ItemStack book = new ItemStack(Items.WRITTEN_BOOK);
         book.set(DataComponents.WRITTEN_BOOK_CONTENT, content);
+        book.set(DataComponents.CUSTOM_NAME, Component.translatable("message.clowderhall.book_start.title").withStyle(s -> s.withItalic(false)));
         return book;
     }
 

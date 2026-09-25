@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Brink Watch",
-  "description": "Edge-walkers · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_watchtower.description",
   "icon": "driftwrecks:keepsake_claw_watchtower",
   "x": 2,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Brink Watch",
-      "text": "The Brink Watch hung over nothing, braced on three iron claws driven into the cliff. Edge-walkers stood there to learn the wind before they stepped off. You were not an Edge-walker until you had eaten a meal at the Brink with your feet dangling. Sit."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_watchtower.page.0.text"
     }
   ],
   "condition": {

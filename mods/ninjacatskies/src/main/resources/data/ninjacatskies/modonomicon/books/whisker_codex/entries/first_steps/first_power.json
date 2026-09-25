@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Make the first Echo Shard",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.description",
   "icon": "tribalpower:echo_shatter",
   "x": 2,
   "y": 3,
@@ -11,29 +11,29 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Goal and supplies",
-      "text": "**Goal:** make an Echo Shard for an automatic generator.\\\nYou need Echo Shatter, an Earth Resonance Totem, a Drumheart and **stone**, not cobblestone. Smelt cobblestone if necessary.\\\nUse the **Spirit Codex** for Tribal Power recipes, diagrams and troubleshooting. Sneak-use it on the station if it stays silent."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Build and run it",
-      "text": "1\\. Place the drum and Earth totem beside Echo Shatter, within 8 blocks.\\\n2\\. Right-click the drum with an empty hand about once a second. Build a reserve of Pulse.\\\n3\\. Put stone into Shatter and leave output space."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "4\\. Wait for an Echo Shard. If it stops, charge the drum again and inspect the station with the Spirit Codex.\\\nCobblestone becomes gravel instead. A slow generator can finish a batch using stored energy."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Check",
-      "text": "**Check:** an Echo Shard is in the output. The diagram is a compact example, not a quest shape."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.first_power.page.3.text"
     },
     {
       "type": "modonomicon:multiblock",
       "multiblock_id": "ninjacatskies:codex/shatter_workshop",
-      "multiblock_name": "Placement example",
-      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "multiblock_name": "book.ninjacatskies.whisker_codex.multiblock.placement_example",
+      "text": "book.ninjacatskies.whisker_codex.multiblock.placement_example.text",
       "show_visualize_button": true
     }
   ],

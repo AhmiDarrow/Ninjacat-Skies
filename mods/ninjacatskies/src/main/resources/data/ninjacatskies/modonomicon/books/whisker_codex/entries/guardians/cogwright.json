@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Cogwright",
-  "description": "Keeper of the Clock Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.description",
   "icon": "guardians:frayed_totem_cogwright",
   "x": 4,
   "y": 0,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Cogwright",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Escapement: four rotating copper rings carrying dark-oak sequence tiles around an iron hub, six gear-towers and a sixteen-block pendulum keeping time."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Every phase the Cogwright winds: tiles light in sequence across the turning rings and you have twelve seconds to step them in order. Success opens its chassis for eight seconds; failure fires every gear-tower. The pendulum is the metronome; the rings reverse when it swings far."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_cogwright",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_cogloop",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Cogloop: Haste I, and tools wear a fifth slower. Rewind resets every other relic you carry and snaps you back three seconds."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.cogwright.page.4.text"
     }
   ],
   "parents": [

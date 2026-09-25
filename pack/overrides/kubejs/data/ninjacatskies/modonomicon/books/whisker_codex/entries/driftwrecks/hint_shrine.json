@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The old shrines",
-  "description": "A loose page about hidden rooms.",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_shrine.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_shrine.description",
   "icon": "driftwrecks:hint_page",
   "x": -3,
   "y": -2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The old shrines",
-      "text": "The shrine-tenders kept the best offering under the stone they knelt on.\\\n*From now on, your Clowder's shrine wrecks drift in with their hidden room open.*"
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_shrine.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.hint_shrine.page.0.text"
     }
   ],
   "parents": [

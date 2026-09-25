@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "What mending means",
-  "description": "Nine agreeing, again.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.description",
   "icon": "ninjacatskies:spindle_loom_fragment",
   "x": 4,
   "y": 0,
@@ -11,53 +11,53 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Not the old world",
-      "text": "Reweave does not put the continents back. It does not un-kill the guardians or un-scatter the tribes. It teaches nine Strands to hold a pad, then a Dock, then a sky that is honest about being made of thread."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The old world was a floor that pretended it was ground. The mended world is a floor that knows it is a promise."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "A Clowder's share",
-      "text": "When your Clowder seats the Fragment, your Strand of the Fray closes. Other Clowders still have theirs to do. You do not own the sky you just taught to hold. You own a share of the work, and the share is public."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "A seated Fragment is a Clowder saying, in front of the Dock: we kept nine promises. The next Clowder still has nine to keep."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "The Fray clock",
-      "text": "The column over the Dock is not scenery.\\\nIt is the only honest clock this campaign has.\\\nIt thins when a Clowder reweaves.\\\nIt turns to lit thread when every Clowder has done the same."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Go look at it.\\\nIf it is still dark, the work is not finished — not because you failed, but because someone else has not had their hour yet."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.5.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Tablets and drums",
-      "text": "The March kept the record.\\\nAncestor Halls: four tablets each, three rooms, sentinels on a job nobody cancelled.\\\nRead every tablet before you call the work done.\\\nThe Silent Drum in the highlands still takes four beats, a breath apart."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.6.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.6.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Strike it when you are ready.\\\nThe Unsung is not a boss to loot.\\\nIt is the March asking whether you learned the tempo."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.7.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Help them",
-      "text": "If the Fray has gone to lit thread, the sky has learned to hold. If it has not, someone else still has work. Help them. Share a mesh. Walk their pad. Sit at their drum. Mending that stays on one Clowder's island is just a nicer hammock."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.8.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.8.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Tell the camps we are sorry it took so long. Then make sure it does not take that long for the next team."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.what_mending_means.page.9.text"
     }
   ],
   "parents": [

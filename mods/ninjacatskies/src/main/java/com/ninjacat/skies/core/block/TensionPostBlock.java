@@ -8,6 +8,7 @@ import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ComponentUtils;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -35,7 +36,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.EnumMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -139,11 +142,10 @@ public class TensionPostBlock extends BaseEntityBlock {
                     be.setClowder(c.id());
                 }
                 int seated = Integer.bitCount(LoomTension.strandBits(c));
-                player.displayClientMessage(NinjacatText.teal(
-                        seated == 0
-                                ? "A Tension Post. Seat Strand tokens here as the Clowder tensions them."
-                                : "The Post remembers " + seated + (seated == 1 ? " Strand." : " Strands.")
-                ), true);
+                player.displayClientMessage(seated == 0
+                                ? NinjacatText.tealKey("message.ninjacatskies.tension.post_intro")
+                                : NinjacatText.tealKey(seated == 1 ? "message.ninjacatskies.tension.post_remembers_one"
+                                        : "message.ninjacatskies.tension.post_remembers_many", seated), true);
             });
         }
     }
@@ -176,7 +178,7 @@ public class TensionPostBlock extends BaseEntityBlock {
             return ItemInteractionResult.SUCCESS;
         }
         if (!owns(serverLevel, pos, sp)) {
-            player.displayClientMessage(NinjacatText.teal("This Post answers to another Clowder."), true);
+            player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.tension.other_clowder"), true);
             return ItemInteractionResult.CONSUME;
         }
 
@@ -188,7 +190,7 @@ public class TensionPostBlock extends BaseEntityBlock {
                 refresh(serverLevel, pos, sp);
             } else {
                 level.playSound(null, pos, SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.BLOCKS, 0.6F, 0.6F);
-                player.displayClientMessage(NinjacatText.teal(strand.title() + " is already tensioned here. Keep the spare as proof."), true);
+                player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.tension.already_tensioned", strand.title()), true);
             }
             return ItemInteractionResult.CONSUME;
         }
@@ -201,8 +203,8 @@ public class TensionPostBlock extends BaseEntityBlock {
             if (!player.getAbilities().instabuild && stack.getCount() < BRAID_FILAMENTS) {
                 int short_ = BRAID_FILAMENTS - stack.getCount();
                 level.playSound(null, pos, SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.BLOCKS, 0.6F, 0.6F);
-                player.displayClientMessage(NinjacatText.teal(
-                        "A cord wants " + BRAID_FILAMENTS + " filaments in hand. " + short_ + " short."), true);
+                player.displayClientMessage(NinjacatText.tealKey(
+                        "message.ninjacatskies.tension.cord_short", BRAID_FILAMENTS, short_), true);
                 return ItemInteractionResult.CONSUME;
             }
             if (!player.getAbilities().instabuild) {
@@ -210,7 +212,7 @@ public class TensionPostBlock extends BaseEntityBlock {
             }
             LoomTension.giveOrDrop(sp, new ItemStack(ModItems.BRAID_CORD.get()));
             level.playSound(null, pos, SoundEvents.NOTE_BLOCK_CHIME.value(), SoundSource.BLOCKS, 0.8F, 1.3F);
-            player.displayClientMessage(NinjacatText.gold("Sixteen filaments take the braid. The post holds it taut."), true);
+            player.displayClientMessage(NinjacatText.goldKey("message.ninjacatskies.tension.braided"), true);
             return ItemInteractionResult.CONSUME;
         }
 
@@ -220,9 +222,9 @@ public class TensionPostBlock extends BaseEntityBlock {
                 consume(player, stack);
                 LoomTension.giveOrDrop(sp, new ItemStack(ModItems.SPINDLE_LOOM_FRAGMENT.get()));
                 level.playSound(null, pos, SoundEvents.NOTE_BLOCK_BELL.value(), SoundSource.BLOCKS, 1.0F, 0.8F);
-                player.displayClientMessage(NinjacatText.gold("March stone against nine Strands. The Spindle spins a Fragment."), true);
+                player.displayClientMessage(NinjacatText.goldKey("message.ninjacatskies.tension.fragment_spun"), true);
             } else {
-                player.displayClientMessage(NinjacatText.teal("The Spindle needs every Strand seated before it will take March stone."), true);
+                player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.tension.fragment_needs_all"), true);
             }
             return ItemInteractionResult.CONSUME;
         }
@@ -231,13 +233,13 @@ public class TensionPostBlock extends BaseEntityBlock {
         if (stack.is(ModItems.SPINDLE_LOOM_FRAGMENT.get())) {
             // The Clowder's flag decides, not the blockstate: a reclaimed Post can carry a disbanded party's REWOVEN.
             if (LoomTension.clowderOf(sp).map(LoomTension::isRewoven).orElse(false)) {
-                player.displayClientMessage(NinjacatText.teal("Your Clowder has already rewoven its sky."), true);
+                player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.tension.already_rewoven"), true);
                 refresh(serverLevel, pos, sp);                                       // a second Post catches up with the Clowder
             } else if (LoomTension.reweave(serverLevel, pos, sp)) {
                 consume(player, stack);
                 refresh(serverLevel, pos, sp);
             } else {
-                player.displayClientMessage(NinjacatText.teal("Nine Strands first. Then the Fragment."), true);
+                player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.tension.fragment_too_soon"), true);
             }
             return ItemInteractionResult.CONSUME;
         }
@@ -256,27 +258,24 @@ public class TensionPostBlock extends BaseEntityBlock {
             return InteractionResult.SUCCESS;
         }
         if (!owns((ServerLevel) level, pos, sp)) {
-            player.displayClientMessage(NinjacatText.teal("This Post answers to another Clowder."), true);
+            player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.tension.other_clowder"), true);
             return InteractionResult.CONSUME;
         }
         refresh((ServerLevel) level, pos, sp);
         LoomTension.clowderOf(sp).ifPresent(c -> {
             int bits = LoomTension.strandBits(c);
-            StringBuilder seated = new StringBuilder();
-            StringBuilder waiting = new StringBuilder();
+            List<Component> seated = new ArrayList<>();
+            List<Component> waiting = new ArrayList<>();
             for (Strand s : Strand.ALL) {
-                StringBuilder target = (bits & s.bit()) != 0 ? seated : waiting;
-                if (target.length() > 0) {
-                    target.append(", ");
-                }
-                target.append(s.title());
+                ((bits & s.bit()) != 0 ? seated : waiting).add(s.title());
             }
-            player.displayClientMessage(NinjacatText.gold("Tensioned: ").append(Component.literal(seated.length() == 0 ? "none yet" : seated.toString())), false);
-            if (waiting.length() > 0) {
-                player.displayClientMessage(NinjacatText.teal("Waiting: ").append(Component.literal(waiting.toString())), false);
+            player.displayClientMessage(NinjacatText.goldKey("message.ninjacatskies.tension.tensioned_list", seated.isEmpty()
+                    ? Component.translatable("message.ninjacatskies.tension.none_yet") : ComponentUtils.formatList(seated, Component.literal(", "))), false);
+            if (!waiting.isEmpty()) {
+                player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.tension.waiting_list", ComponentUtils.formatList(waiting, Component.literal(", "))), false);
             }
             if (LoomTension.isRewoven(c)) {
-                player.displayClientMessage(NinjacatText.gold("Rewoven. The cut is closed above this pad."), false);
+                player.displayClientMessage(NinjacatText.goldKey("message.ninjacatskies.tension.rewoven_here"), false);
             }
         });
         return InteractionResult.CONSUME;

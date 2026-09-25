@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Claw Smithy",
-  "description": "Edge-walkers · Forge",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_forge.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_forge.description",
   "icon": "driftwrecks:keepsake_claw_forge",
   "x": 2,
   "y": 1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Claw Smithy",
-      "text": "The Claw Smithy made crampons, hooks and pitons, and tested every one by hanging the smith from it over the void. A smith who trusted their work was a smith who lived. Their hooks still hold. The walls around them do not."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_forge.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_forge.page.0.text"
     }
   ],
   "condition": {

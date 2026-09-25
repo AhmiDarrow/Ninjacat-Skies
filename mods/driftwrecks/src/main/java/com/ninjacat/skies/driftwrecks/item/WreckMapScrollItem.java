@@ -28,10 +28,10 @@ public class WreckMapScrollItem extends Item {
         if (player instanceof ServerPlayer sp) {
             LoomTension.clowderOf(sp).ifPresent(c -> {
                 TeamDrift t = TeamDrift.of(c);
-                if (t.scrollPending()) { sp.displayClientMessage(NinjacatText.teal("The last map still points the way."), true); return; }
+                if (t.scrollPending()) { sp.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.map_scroll.pending"), true); return; }
                 t.setScrollPending(true); t.dirty();
                 level.playSound(null, sp.blockPosition(), SoundEvents.BOOK_PAGE_TURN, SoundSource.PLAYERS, 1.0F, 0.8F);
-                sp.sendSystemMessage(NinjacatText.teal("The map shows a place your Atlas has not. The next wreck will be one of those."));
+                sp.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.map_scroll.read"));
                 if (!sp.getAbilities().instabuild) s.shrink(1);
             });
         }

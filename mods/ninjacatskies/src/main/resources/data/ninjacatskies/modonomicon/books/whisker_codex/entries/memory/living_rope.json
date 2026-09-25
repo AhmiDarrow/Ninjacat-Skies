@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "The season the roots held",
-  "description": "Roots are the only rope the void respects.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.living_rope.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.living_rope.description",
   "icon": "minecraft:oak_sapling",
   "x": 6,
   "y": -2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Roots held",
-      "text": "The Rootbinders grew living anchors: March flora whose roots ran along the Strands and held pads that would otherwise have drifted. When the Loom was cut, those roots held for a season. Half of them. That season is why anything is still up here."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.living_rope.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.living_rope.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "After that, the anchors went feral, or quiet, or into the March. You will meet what they became."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.living_rope.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Sprout mends",
-      "text": "Food is infrastructure. A Clowder that eats well leaves the pad sooner because the Strand remembers being a continent's pantry. Seat Sprout and the Post feeds you a little. Plant something. The void respects a root more than a rope."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.living_rope.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.living_rope.page.2.text"
     }
   ],
   "parents": [

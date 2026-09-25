@@ -11,6 +11,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -68,7 +69,7 @@ public abstract class GuardianEntity extends Monster {
     protected GuardianEntity(EntityType<? extends GuardianEntity> type, Level level, GuardianKind kind) {
         super(type, level);
         this.kind = kind;
-        this.bossEvent = new ServerBossEvent(Component.literal(kind.title), kind.tier == GuardianKind.Tier.INSANE ? BossEvent.BossBarColor.PURPLE : BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_10);
+        this.bossEvent = new ServerBossEvent(kind.titleComponent(), kind.tier == GuardianKind.Tier.INSANE ? BossEvent.BossBarColor.PURPLE : BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_10);
         this.bossEvent.setDarkenScreen(kind.tier == GuardianKind.Tier.INSANE);
         this.setPersistenceRequired();
         this.xpReward = 60;
@@ -207,7 +208,7 @@ public abstract class GuardianEntity extends Monster {
         if (src.is(net.minecraft.tags.DamageTypeTags.IS_FALL) || src.is(net.minecraft.world.damagesource.DamageTypes.IN_WALL) || src.is(net.minecraft.world.damagesource.DamageTypes.CRAMMING)) return false;
         if (isImmune() && !src.is(net.minecraft.tags.DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             if (src.getEntity() != null) {                                       // a real blow: tell the striker (throttled) and clang
-                if (src.getEntity() instanceof ServerPlayer p && p.tickCount % 10 == 0) p.displayClientMessage(NinjacatText.teal(immuneMessage()), true);
+                if (src.getEntity() instanceof ServerPlayer p && p.tickCount % 10 == 0) p.displayClientMessage(immuneMessage().withStyle(st -> st.withColor(NinjacatText.TEAL)), true);
                 if (tickCount - lastClang >= 5) { lastClang = tickCount; level().playSound(null, blockPosition(), SoundEvents.SHIELD_BLOCK, SoundSource.HOSTILE, 1.0F, 0.6F); }
             }
             return false;
@@ -229,7 +230,7 @@ public abstract class GuardianEntity extends Monster {
         teleportTo(o.x, o.y + 0.5, o.z);
         setDeltaMovement(Vec3.ZERO); fallDistance = 0;
     }
-    protected String immuneMessage() { return kind.title + " cannot be harmed right now."; }
+    protected MutableComponent immuneMessage() { return Component.translatable("message.guardians.boss.cannot_be_harmed", kind.titleComponent()); }
     protected void onDamagedBy(LivingEntity by, float amount) {}
 
     @Override
@@ -305,8 +306,8 @@ public abstract class GuardianEntity extends Monster {
 
     // ------------------------------------------------------------------ helpers for mechanics
     protected ServerLevel serverLevel() { return (ServerLevel) level(); }
-    protected void say(String line) { for (ServerPlayer p : party()) p.displayClientMessage(NinjacatText.gold(line), true); }
-    protected void shout(String line) { for (ServerPlayer p : party()) p.sendSystemMessage(NinjacatText.teal(line)); }
+    protected void say(String key, Object... args) { for (ServerPlayer p : party()) p.displayClientMessage(NinjacatText.goldKey(key, args), true); }
+    protected void shout(String key, Object... args) { for (ServerPlayer p : party()) p.sendSystemMessage(NinjacatText.tealKey(key, args)); }
     protected void particles(ParticleOptions type, Vec3 at, int n, double spread, double speed) { serverLevel().sendParticles(type, at.x, at.y, at.z, n, spread, spread*0.5, spread, speed); }
     protected void ring(ParticleOptions type, Vec3 c, double r, int n, double y) {
         for (int i = 0; i < n; i++) { double a = Math.PI*2*i/n; serverLevel().sendParticles(type, c.x + Math.cos(a)*r, y, c.z + Math.sin(a)*r, 1, 0, 0, 0, 0); }

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Long Furrow Post",
-  "description": "Pad-keepers · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_watchtower.description",
   "icon": "driftwrecks:keepsake_soil_watchtower",
   "x": -1,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Long Furrow Post",
-      "text": "From the Long Furrow Post a Pad-keeper could see every field at once and tell which one was thirsty by its colour. They signalled with lanterns: green for rain, red for frost. The last lantern hung red for a week before the post let go."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.soil_watchtower.page.0.text"
     }
   ],
   "condition": {

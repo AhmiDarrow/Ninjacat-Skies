@@ -63,6 +63,6 @@ public class SpindleCrookItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(NinjacatText.teal("Pull silk from leaves — Ex Deorum crook recipes apply."));
+        tooltip.add(NinjacatText.tealKey("message.voidloom.tooltip.spindle_crook"));
     }
 }
