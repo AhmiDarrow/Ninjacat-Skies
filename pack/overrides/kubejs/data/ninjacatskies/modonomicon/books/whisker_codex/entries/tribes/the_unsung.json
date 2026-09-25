@@ -25,13 +25,18 @@
       "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.2.text"
     },
     {
+      "type": "modonomicon:text",
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.3.text"
+    },
+    {
       "type": "modonomicon:spotlight",
       "item": {
         "id": "tribalpower:unsung_heart",
         "count": 1
       },
-      "title": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.3.title",
-      "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.3.text"
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.4.text"
     }
   ],
   "condition": {
