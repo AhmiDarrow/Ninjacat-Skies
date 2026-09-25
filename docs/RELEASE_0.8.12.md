@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.12 — Steady dash
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8974901**, server additional **8974904**.
 
 Chocobos Reborn 1.0.14. Existing saves load as they are; no quest ids change, and the mod list is
 unchanged at 104.
