@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.9 — The March speaks
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8968555**, server additional **8968558**.
 
 Tribal Power 5.0.1, Ninjacat Skies Core 0.5.13 and Chocobos Reborn 1.0.13. Existing saves load as they are; no quest ids
 change, and the mod list is unchanged at 104.
