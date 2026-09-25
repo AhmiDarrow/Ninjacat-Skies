@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.11 — Piled stones
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8973733**, server additional **8973734**.
 
 Tribal Power 5.3.2. Existing saves load as they are; no quest ids change, and the mod list is
 unchanged at 104.
