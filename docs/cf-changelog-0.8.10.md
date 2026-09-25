@@ -1,8 +1,11 @@
-# 0.8.10 — Your keys, your gear
+# 0.8.10 — Your keys, your gear, deeper cells
 
-Tribal Power 5.1.0. Existing saves load as they are, no quest ids change, and the mod list is
+Tribal Power 5.2.0. Existing saves load as they are, no quest ids change, and the mod list is
 unchanged at 104.
 
+- **Pulse Cells hold six times what they did.** A Pulse Cell holds 1,200 (was 200), a Greater 4,800
+  (was 1,200), and a new **Grand Pulse Cell** holds 19,200: a Greater cell ringed by four Resonant
+  Cores and four Manifested Ingots. Cells already in your world keep their charge with more room.
 - **Tribal Power has its own heading in Options › Controls.** The four Gate Rite drums (A, S, D, F
   by default; the arrow keys still work), the ley goggles, the Sixfold Staff's next voice, the
   satchel's personal / camp vault, the Pulse HUD, and a new **Gear screen** on the apostrophe key.
