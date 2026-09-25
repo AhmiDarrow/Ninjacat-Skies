@@ -31,6 +31,16 @@ class KeybindingTests(unittest.TestCase):
     def test_preset_is_complete_and_has_unique_chords(self):
         validate()
 
+    def test_gear_screen_pack_default_is_numpad_minus(self):
+        script = (ROOT / 'pack/overrides/kubejs/client_scripts/tribal_gear_key.js').read_text(encoding='utf-8')
+        self.assertIn('key.tribalpower.gear', script)
+        self.assertIn('key.keyboard.keypad.subtract', script)
+        self.assertIn('isDefault()', script)
+        self.assertNotIn('key.keyboard.grave.accent', script)
+        controls = (ROOT / 'pack/overrides/CONTROLS.md').read_text(encoding='utf-8')
+        self.assertIn('key.tribalpower.gear', controls)
+        self.assertIn('Numpad minus', controls)
+
 
 if __name__ == '__main__':
     count = validate(sys.argv[1] if len(sys.argv) > 1 else None)
