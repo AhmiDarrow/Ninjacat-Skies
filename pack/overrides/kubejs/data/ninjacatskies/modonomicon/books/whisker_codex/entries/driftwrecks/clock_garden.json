@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Hedge Maze",
-  "description": "Pattern-weavers · Garden",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_garden.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_garden.description",
   "icon": "driftwrecks:keepsake_clock_garden",
   "x": 4,
   "y": 2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Hedge Maze",
-      "text": "Pattern-weavers grew a garden that repeated: a hedge maze whose paths were a round sung in green. Walk it right and you came out singing. Walk it wrong and you came out where you began. Try again."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_garden.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_garden.page.0.text"
     }
   ],
   "condition": {

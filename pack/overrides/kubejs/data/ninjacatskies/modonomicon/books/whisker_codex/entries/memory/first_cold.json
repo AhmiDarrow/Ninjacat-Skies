@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "The first cold",
-  "description": "The hearths went out while the sky still looked whole.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.first_cold.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.first_cold.description",
   "icon": "minecraft:campfire",
   "x": 2,
   "y": -1,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The first cold",
-      "text": "The Pad-keepers kept the warmth, not the fires — banked heat in thin dirt that let a family sleep through a long dark. They felt the Cut before anyone named it. Pads got cold. Bread took longer to rise. Moss would not take."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.first_cold.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.first_cold.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "They carried dirt in baskets, a pad at a time, and set a hearth on every scrap they saved. That is why you have a pad at all."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.first_cold.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Soil remembers",
-      "text": "Seat Soil and the pad starts mending you. That is not a blessing invented for Skybound. It is the old hearth-trick, scaled down to whatever dirt is left. The Strand still knows how to keep a body warm if you ask it in the old way: a token, a Post, a promise kept."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.first_cold.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.first_cold.page.2.text"
     }
   ],
   "parents": [

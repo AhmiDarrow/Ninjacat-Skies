@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Canopy Lookout",
-  "description": "Rootbinders · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_watchtower.description",
   "icon": "driftwrecks:keepsake_sprout_watchtower",
   "x": 1,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Canopy Lookout",
-      "text": "The Canopy Lookout was never built: the Rootbinders grew it, coaxing a trunk into a stair over forty summers. From the top you could watch weather roll across nine islands. The trunk kept growing after the watchers left. It is taller now."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_watchtower.page.0.text"
     }
   ],
   "condition": {

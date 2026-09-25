@@ -208,13 +208,12 @@ public final class LoomTension {
         Collection<ServerPlayer> members = c.onlineMembers();
         for (ServerPlayer member : members) {
             member.level().playSound(null, member.blockPosition(), ModSounds.STRAND_CHIME.get(), SoundSource.PLAYERS, 0.9F, strand.chimePitch());
-            member.sendSystemMessage(NinjacatText.teal(strand.lineA()));
-            member.sendSystemMessage(NinjacatText.gold(strand.lineB()));
-            member.displayClientMessage(NinjacatText.gold(
-                    remaining == 0
-                            ? "Every Strand answers. The Spindle waits for a March stone."
-                            : strand.title() + " is tensioned. " + remaining + (remaining == 1 ? " Strand remains." : " Strands remain.")
-            ), true);
+            member.sendSystemMessage(NinjacatText.tealKey(strand.lineAKey()));
+            member.sendSystemMessage(NinjacatText.goldKey(strand.lineBKey()));
+            member.displayClientMessage(remaining == 0
+                    ? NinjacatText.goldKey("message.ninjacatskies.tension.all_answer")
+                    : NinjacatText.goldKey(remaining == 1 ? "message.ninjacatskies.tension.strand_tensioned_one"
+                            : "message.ninjacatskies.tension.strand_tensioned_many", strand.title(), remaining), true);
             awardAdvancement(member, strand.advancementId());
             sync(member, c);
         }
@@ -227,9 +226,9 @@ public final class LoomTension {
         if (seated % PAGE_EVERY == 0) {
             ItemStack page = new ItemStack(ModItems.CODEX_PAGE.get());
             page.set(net.minecraft.core.component.DataComponents.CUSTOM_NAME,
-                    Component.literal("Codex Page — " + strand.tribe()).withStyle(s -> s.withItalic(false).withColor(strand.color())));
+                    Component.translatable("message.ninjacatskies.page.named", strand.tribe()).withStyle(s -> s.withItalic(false).withColor(strand.color())));
             giveOrDrop(player, page);
-            player.sendSystemMessage(NinjacatText.teal("A Codex Page slips free — a " + strand.tribe() + " margin note."));
+            player.sendSystemMessage(NinjacatText.tealKey("message.ninjacatskies.tension.page_slips", strand.tribe()));
         }
         milestone(c, player, seated);
         c.markDirty();
@@ -243,19 +242,19 @@ public final class LoomTension {
         if (seated >= 3 && !rewards.getBoolean("r3")) {
             rewards.putBoolean("r3", true);
             giveOrDrop(player, new ItemStack(ModItems.FRAYED_THREAD.get(), 6));
-            player.displayClientMessage(NinjacatText.gold("The Loom returns a little Thread. Root is holding."), false);
+            player.displayClientMessage(NinjacatText.goldKey("message.ninjacatskies.tension.reward_thread"), false);
             gave = true;
         }
         if (seated >= 5 && !rewards.getBoolean("r5")) {
             rewards.putBoolean("r5", true);
             giveOrDrop(player, new ItemStack(ModItems.CODEX_PAGE.get(), 2));
-            player.displayClientMessage(NinjacatText.gold("Two pages the stewards never finished. Read them anyway."), false);
+            player.displayClientMessage(NinjacatText.goldKey("message.ninjacatskies.tension.reward_pages"), false);
             gave = true;
         }
         if (seated >= 7 && !rewards.getBoolean("r7")) {
             rewards.putBoolean("r7", true);
             giveOrDrop(player, new ItemStack(ModItems.FRAYED_THREAD.get(), 12));
-            player.displayClientMessage(NinjacatText.gold("Bind is close. The post hums loud enough to feel in your teeth."), false);
+            player.displayClientMessage(NinjacatText.goldKey("message.ninjacatskies.tension.reward_bind"), false);
             gave = true;
         }
         if (gave) {
@@ -285,13 +284,13 @@ public final class LoomTension {
         MinecraftServer server = level.getServer();
         Component name = c.name();
         server.getPlayerList().broadcastSystemMessage(
-                NinjacatText.gold("The Loom-stitchers' cut is closed. ").append(name.copy().withStyle(s -> s.withColor(NinjacatText.TEAL)))
-                        .append(NinjacatText.gold(" has rewoven their Strand of the sky.")),
+                NinjacatText.goldKey("message.ninjacatskies.tension.reweave_broadcast",
+                        name.copy().withStyle(s -> s.withColor(NinjacatText.TEAL))),
                 false
         );
         for (ServerPlayer member : c.onlineMembers()) {
             awardAdvancement(member, ResourceLocation.fromNamespaceAndPath(NinjacatSkies.MOD_ID, "reweave"));
-            member.sendSystemMessage(NinjacatText.teal("Nine tribes, one thread. Go and see what the March kept for you."));
+            member.sendSystemMessage(NinjacatText.tealKey("message.ninjacatskies.tension.reweave_members"));
             sync(member, c);
         }
         TensionEffects.finale(level, pos);

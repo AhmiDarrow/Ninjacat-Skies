@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Nine pulls, nine arguments",
-  "description": "Maintenance stopped. Eight pulls became eight arguments. The Spindle seam tore.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.description",
   "icon": "minecraft:compass",
   "x": 8,
   "y": 3,
@@ -11,23 +11,23 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Nine arguments",
-      "text": "The Cut was not a war. It was the moment the work stopped being done. Nine tribes had nine pulls. When the schedule failed, eight of those pulls turned into eight arguments about whose fault the slack was. Blame is a kind of tension. It does not hold a sky."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "The Spindle seam",
-      "text": "The Loom-stitchers were the ones who mended the joins. While the others argued, the Spindle seam — the road between pads, the stitch that let nine pulls act as one floor — tore. Gates that should have led home led into weather. Weather that should have had a road had a hole."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "A clock with no stitch is just nine ticking things, each sure it is on time."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Clock knows",
-      "text": "The Pattern-weavers kept trying to sing the factories through it. Songs do not stop because the choir is fighting. Seat Clock and you are not picking a side in the old argument. You are putting a tempo back under work that has been improvising since the Cut."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.the_argument.page.3.text"
     }
   ],
   "parents": [

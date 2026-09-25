@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "When progress stops",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.description",
   "icon": "minecraft:book",
   "x": 4,
   "y": 6,
@@ -11,53 +11,53 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Quest checks",
-      "text": "**Goal:** unstick one blocked task without rebuilding the pad.\\\nYou need the quest screen, JEI, and (for Tribal) the **Spirit Codex**."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read the exact task and its prerequisites. Check item counts, variants and whether the task wants possession, crafting or another action. Click the quest item to open JEI. Try the task's detect button when one is available."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Check rewards too: an unclaimed token cannot be seated. If Claw is stuck on plans, craft the Blueprint Package from four Blueprint Paper. If playing together, confirm you are in the intended Clowder before repeating a long crafting chain."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Machine checks",
-      "text": "Check these separately:\\\n1\\. Correct input and recipe.\\\n2\\. Available power and range.\\\n3\\. Required totem or other structure."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "4\\. Space for the result.\\\n5\\. Pausing redstone and side settings.\\\nFor Tribal Power, crouch and right-click the machine with the Spirit Codex. Test one machine before connecting a whole production line."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Shared lives",
-      "text": "When shared lives are on (default), each Clowder mate adds **three** lives to one team pool. A survival death spends one. Food and potions do not put it back. At zero, affected players become spectators."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.5.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "`/skybound lives` prints the pool. Six quest rewards named **Thread of Return** each add one life when claimed, once per Clowder."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.6.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "After those, a **Thread of Return** is an item: four **Thread Shards** stitched around a Braid Cord, right-clicked for one more shared life, as often as you can pay for it. Cut a Shard from diamonds, Void Yarn and a Rift Shard, or buy one from Spark at `/clowder hub`."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.7.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Keep one in a pocket **before** the pool empties: at zero you are already a spectator and cannot use anything. Operators run `/skybound revive`. Plan trips together."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.8.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Common traps",
-      "text": "A Sky Stone Tank that you just moved is empty unless you bucketed first. Use a Spirit Cistern to carry liquids.\\\nPad-runners are in the March, not on the pad. After the Gate, Esther waits at `/clowder hub`.\\\n**Check:** you have isolated one cause from this page, not rebuilt the whole workshop on a guess."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.9.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.stuck.page.9.text"
     }
   ],
   "parents": [

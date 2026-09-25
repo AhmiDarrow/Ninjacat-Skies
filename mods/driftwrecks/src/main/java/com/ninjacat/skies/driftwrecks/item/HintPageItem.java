@@ -52,16 +52,16 @@ public class HintPageItem extends Item {
                 boolean fresh = t.readHint(core);
                 t.dirty();
                 level.playSound(null, sp.blockPosition(), SoundEvents.BOOK_PAGE_TURN, SoundSource.PLAYERS, 1.0F, 1.0F);
-                sp.sendSystemMessage(NinjacatText.teal(core.hint));
+                sp.sendSystemMessage(NinjacatText.tealKey(core.hintKey()));
                 if (fresh) {
                     for (ServerPlayer m : c.onlineMembers()) {
                         WreckRewards.award(m, "hint/" + core.id);
-                        m.sendSystemMessage(NinjacatText.gold("A page about the old " + core.title.toLowerCase() + "s is filed in the Codex."));
+                        m.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.hint_page.filed", core.titleInline()));
                     }
                     WreckRewards.syncAll(c);
                     if (!sp.getAbilities().instabuild) s.shrink(1);
                 } else {
-                    sp.displayClientMessage(NinjacatText.teal("Your Clowder already knows this page. Keep it, or let it go."), true);
+                    sp.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.hint_page.known"), true);
                 }
             });
         }
@@ -71,7 +71,7 @@ public class HintPageItem extends Item {
     @Override
     public Component getName(ItemStack stack) {
         WreckCore c = coreOf(stack);
-        return c == null ? super.getName(stack) : Component.translatable("item.driftwrecks.hint_page.named", c.title);
+        return c == null ? super.getName(stack) : Component.translatable("item.driftwrecks.hint_page.named", c.title());
     }
 
     @Override

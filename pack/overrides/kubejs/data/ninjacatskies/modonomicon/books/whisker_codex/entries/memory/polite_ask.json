@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:memory",
-  "name": "Asked politely",
-  "description": "Spirit goes where it is asked politely and stays where it is fed.",
+  "name": "book.ninjacatskies.whisker_codex.entry.memory.polite_ask.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.memory.polite_ask.description",
   "icon": "ninjacatskies:braid_cord",
   "x": 2,
   "y": 1,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Asked politely",
-      "text": "The Seal-carvers pressed spirit into matter and made it stay. A seal is a promise carved so the world has to keep it. A rite is asking the Loom, politely, for an exception. They cut blank seals by the thousand before the Cut, and asked for far too much."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.polite_ask.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.polite_ask.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Bind is their chapter. Braid Cord is spun at the Post once two peers are seated. That is not a recipe. That is three Strands agreeing in public."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.polite_ask.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "What Sigil mends",
-      "text": "Seat Sigil and you are allowed to ask again — smaller this time. Never bind what you would not be willing to unbind. Feed what you ask to stay. The old world broke on appetite. The new one will hold on manners."
+      "title": "book.ninjacatskies.whisker_codex.entry.memory.polite_ask.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.memory.polite_ask.page.2.text"
     }
   ],
   "parents": [

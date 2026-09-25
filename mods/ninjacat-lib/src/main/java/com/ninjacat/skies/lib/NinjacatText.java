@@ -24,4 +24,19 @@ public final class NinjacatText {
     public static MutableComponent gold(String text) {
         return Component.literal(text).withStyle(Style.EMPTY.withColor(TextColor.fromRgb(GOLD)));
     }
+
+    // Player-facing text goes through lang keys so it can be translated; the String forms above are for
+    // text that is not language (player names, numbers, ids). tools/gates/test_lang_keys.py enforces it.
+
+    public static MutableComponent indigoKey(String key, Object... args) {
+        return Component.translatable(key, args).withStyle(Style.EMPTY.withColor(TextColor.fromRgb(INDIGO)));
+    }
+
+    public static MutableComponent tealKey(String key, Object... args) {
+        return Component.translatable(key, args).withStyle(Style.EMPTY.withColor(TextColor.fromRgb(TEAL)));
+    }
+
+    public static MutableComponent goldKey(String key, Object... args) {
+        return Component.translatable(key, args).withStyle(Style.EMPTY.withColor(TextColor.fromRgb(GOLD)));
+    }
 }

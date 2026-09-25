@@ -1,11 +1,13 @@
 """Deterministic block-native town plans; no generated raster art."""
-import json, math
+import json, math, re
 from pathlib import Path
 
 class Town:
-    def __init__(self, name, y, warm=False):
+    def __init__(self, name, y, warm=False, lang_ns=None):
         self.name,self.y,self.warm=name,y,warm
         self.ops=[]; self.signs=[]; self.residents=[]
+        # With lang_ns set, sign lines are written as lang keys (sign.<ns>.<slug>.<n>) and the English lands in self.lang.
+        self.lang_ns=lang_ns; self.lang={}
         self.wood='spruce' if warm else 'dark_oak'
         self.roof='waxed_oxidized_cut_copper' if warm else 'deepslate_tiles'
     def box(self,x,y,z,X,Y,Z,b):
@@ -13,6 +15,14 @@ class Town:
     def p(self,x,y,z,b):self.box(x,y,z,x,y,z,b)
     def sign(self,x,y,z,*lines):
         self.p(x,y,z,'oak_sign[rotation=0]')
+        if self.lang_ns:
+            base=re.sub(r'[^a-z0-9]+','_',lines[0].lower()).strip('_').removeprefix('the_'); slug=base; n=2
+            while any(k.startswith(f'sign.{self.lang_ns}.{slug}.') for k in self.lang): slug=f'{base}_{n}'; n+=1
+            keyed=[]
+            for i,line in enumerate(lines,1):
+                if not line: keyed.append(''); continue   # blank lines stay blank (TownPlan writes a literal "")
+                key=f'sign.{self.lang_ns}.{slug}.{i}'; self.lang[key]=line; keyed.append(key)
+            lines=keyed
         self.signs.append(dict(pos=[x,y,z],lines=list(lines)))
     def lamp(self,x,z):
         y=self.y
@@ -113,6 +123,11 @@ class Town:
     def save(self,path):
         Path(path).parent.mkdir(parents=True,exist_ok=True)
         Path(path).write_text(json.dumps(dict(name=self.name,boxes=[{'from':o['from_'], 'to':o['to'],'block':o['block']} for o in self.ops],signs=self.signs,residents=self.residents),indent=2)+'\n')
+    def save_lang(self,path):
+        '''Merge the sign English into an en_us.json, keeping its key order, line endings and trailing newline.'''
+        raw=Path(path).read_bytes().decode('utf-8'); nl='\r\n' if '\r\n' in raw else '\n'; tail=raw[len(raw.rstrip()):]
+        data=json.loads(raw); data.update(self.lang)
+        Path(path).write_bytes((json.dumps(data,indent=2,ensure_ascii=False).replace('\n',nl)+tail).encode('utf-8'))
 
 def race():
     t=Town('Whiskerwind Race Town',64)
@@ -169,7 +184,7 @@ def race():
     return t
 
 def clowder():
-    t=Town('Lanternweave Village',63,True);t.island(46,42)
+    t=Town('Lanternweave Village',63,True,lang_ns='clowderhall');t.island(46,42)
     t.box(-11,63,-11,11,63,11,'stone_bricks')
     t.box(-3,63,-37,3,63,37,'polished_andesite')
     t.box(-39,63,-3,39,63,3,'polished_andesite')
@@ -224,5 +239,11 @@ def clowder():
 
 if __name__=='__main__':
     import argparse
-    p=argparse.ArgumentParser();p.add_argument('kind',choices=['race','clowder']);p.add_argument('output');a=p.parse_args()
-    (race() if a.kind=='race' else clowder()).save(a.output)
+    p=argparse.ArgumentParser();p.add_argument('kind',choices=['race','clowder']);p.add_argument('output')
+    p.add_argument('--lang',help='en_us.json that receives the sign English (clowder: mods/clowderhall/src/main/resources/assets/clowderhall/lang/en_us.json)')
+    a=p.parse_args()
+    t=race() if a.kind=='race' else clowder()
+    t.save(a.output)
+    if t.lang:
+        if a.lang: t.save_lang(a.lang)
+        else: print('sign lines are lang keys; pass --lang to write their English')

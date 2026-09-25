@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Keep a water supply",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.water.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.water.description",
   "icon": "minecraft:water_bucket",
   "x": 4,
   "y": 0,
@@ -11,34 +11,34 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Goal and supplies",
-      "text": "**Goal:** a refillable water source that will not burn the pad.\\\nYou need ice, lava and an empty bucket on Normal/Hard. Easy pads already have water.\\\nEasy pads include water. Normal and Hard pads supply ice, lava and an empty bucket."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "First water source",
-      "text": "1\\. Make a contained area from nonflammable blocks.\\\n2\\. Put the ice where the water should remain. Use nearby lava as the heat source, with blocks containing its flow.\\\n3\\. Let the ice melt. Collect the resulting water source with the bucket."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Keep lava away from wood and stored items. Do not let the two liquids flow together."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "A refillable pool",
-      "text": "**Once you have two water source buckets**, build the four-block pool shown next. Fill opposite corners. On ordinary water-source rules, all four spaces become sources."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** collect a bucket and watch the pool refill before you rely on it. One source alone is not enough for this layout. Keep water available for the Tension Barrel and farming."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.water.page.4.text"
     },
     {
       "type": "modonomicon:multiblock",
       "multiblock_id": "ninjacatskies:codex/water_pool",
-      "multiblock_name": "Placement example",
-      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "multiblock_name": "book.ninjacatskies.whisker_codex.multiblock.placement_example",
+      "text": "book.ninjacatskies.whisker_codex.multiblock.placement_example.text",
       "show_visualize_button": true
     }
   ],

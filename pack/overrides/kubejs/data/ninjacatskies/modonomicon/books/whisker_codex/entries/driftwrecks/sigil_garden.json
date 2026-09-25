@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Crystal Beds",
-  "description": "Seal-carvers · Garden",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_garden.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_garden.description",
   "icon": "driftwrecks:keepsake_sigil_garden",
   "x": 6,
   "y": 2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Crystal Beds",
-      "text": "Seal-carvers grew amethyst the way others grew herbs, in beds of calcite watered with salt. Each crystal took a lifetime and a seal pressed into it at the start. The beds are still growing. The seals are still working."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_garden.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_garden.page.0.text"
     }
   ],
   "condition": {

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Overweaver",
-  "description": "After the Reweave.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.description",
   "icon": "guardians:frayed_totem_overweaver",
   "x": 4,
   "y": -4,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Overweaver",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Loom Above: a purpur weave, nine strand-bridges to nine pillared platforms, twenty-seven cathedral threads to a keystone sixty-four blocks up."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Your own restored Loom turned against you. The Overweaver throws shades of the nine guardians onto their strands; kill a shade and its thread pulls taut for twenty-five seconds, and only then can the loom itself be hurt. Later it throws three, then all nine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_overweaver",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Frayed Thread and purpur around the Loomthread relic; the relic is handed back."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_overweaver_shuttle",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "The Overweaver's Shuttle: an echo of every Strand relic in one, and it reweaves a fallen Clowder mate."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.overweaver.page.4.text"
     }
   ],
   "parents": [

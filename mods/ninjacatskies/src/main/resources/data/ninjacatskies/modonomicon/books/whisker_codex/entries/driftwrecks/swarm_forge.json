@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Wax Works",
-  "description": "Colony-keepers · Forge",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_forge.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_forge.description",
   "icon": "driftwrecks:keepsake_swarm_forge",
   "x": 5,
   "y": 1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Wax Works",
-      "text": "At the Wax Works, Colony-keepers cast candles, sealed jars and poured the wax that held their houses together. Nothing they built had a nail in it. Warm hands kept it all standing. It stood for longer than anyone expected."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_forge.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_forge.page.0.text"
     }
   ],
   "condition": {

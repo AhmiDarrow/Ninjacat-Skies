@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Sealed Undercroft",
-  "description": "Seal-carvers · Vault",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_vault.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_vault.description",
   "icon": "driftwrecks:keepsake_sigil_vault",
   "x": 6,
   "y": 3,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Sealed Undercrof",
-      "text": "Under the Oath Stone the Seal-carvers built a vault closed with nine seals and no door. What it holds is a question for a braver Clowder. A seal is a promise the world has to keep. This one is still kept."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_vault.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sigil_vault.page.0.text"
     }
   ],
   "condition": {

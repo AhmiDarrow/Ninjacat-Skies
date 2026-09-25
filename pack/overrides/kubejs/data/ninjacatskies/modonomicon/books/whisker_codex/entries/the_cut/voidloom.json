@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:the_cut",
-  "name": "Voidloom",
-  "description": "Yarn, knots, meshes, and two stations.",
+  "name": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.description",
   "icon": "voidloom:void_yarn",
   "x": 6,
   "y": 2,
@@ -15,18 +15,18 @@
         "id": "voidloom:void_yarn",
         "count": 1
       },
-      "title": "Void Yarn",
-      "text": "**Goal:** have yarn without eating the whole string stock.\\\nYou need four string (early) or string plus a pearl in the Tension Barrel."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Thread that remembers where it came from. Early: four string make two yarn. Later: string and an ender pearl in the Tension Barrel make two. The Loomframe combs a little out of dirt as **Loom Lint** — four lint, one yarn."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** JEI shows two yarn from four string, and you have yarn in the inventory."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -34,13 +34,13 @@
         "id": "voidloom:binding_knot",
         "count": 1
       },
-      "title": "Binding Knot",
-      "text": "**Goal:** tie the Loom's soft gate so Recover stations can exist.\\\nYou need Void Yarn and a slime ball (pad compost: dirt, seeds, bone meal).\\\nA ring of yarn around a slime ball. Early slime is pad compost: dirt, seeds, bone meal."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Knot is the Loom's soft gate: Loomframes, Tension Posts, the first precision mechanism, and the AE2 controller all want one.\\\n**Check:** you hold a Binding Knot."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.4.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -48,18 +48,18 @@
         "id": "voidloom:loomframe",
         "count": 1
       },
-      "title": "Loomframe",
-      "text": "**Goal:** a hopper sieve that also catches Loom scraps.\\\nYou need planks around a Binding Knot, a mesh, and grit.\\\nStretch a mesh, load it with dirt, gravel, sand or dust, and let it work — one piece every few seconds with a shuttle clack."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.5.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Hoppers feed the top and pull from below.\\\nThe mesh is hand-only.\\\nAn oak sieve is still click; this machine is the hopper one.\\\nThread meshes catch what Ex Deorum meshes do **and** the Loom's own scraps: Lint on string, Thread on flint, **Strand Filament** on iron (gravel, sand or dust)."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.6.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** a hopper above feeds grit and a hopper below pulls scraps."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.7.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -67,18 +67,18 @@
         "id": "voidloom:tension_barrel",
         "count": 1
       },
-      "title": "Tension Barrel",
-      "text": "**Goal:** clay without a clay biome, and yarn from string plus a pearl.\\\nYou need planks, string, Void Yarn, then water and dirt (or string and pearls)."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.8.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.8.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Pour water (the bucket comes straight back), add up to eight dirt, come back for clay. String and pearls in the same barrel make yarn.\\\nClay to porcelain clay to a porcelain bucket: that is how a pad first carries lava."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.9.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** empty-hand the barrel and take clay; the empty bucket came back when you poured."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.voidloom.page.10.text"
     }
   ],
   "parents": [

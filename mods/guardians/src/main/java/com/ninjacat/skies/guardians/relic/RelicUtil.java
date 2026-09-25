@@ -271,5 +271,5 @@ final class RelicUtil {
         }
     }
 
-    static void note(ServerPlayer p, String text) { p.displayClientMessage(NinjacatText.teal(text), true); }
+    static void note(ServerPlayer p, String key, Object... args) { p.displayClientMessage(NinjacatText.tealKey(key, args), true); }
 }

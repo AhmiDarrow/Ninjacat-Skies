@@ -19,8 +19,8 @@ public final class SkyboundCommands {
                 Commands.literal("skybound")
                         .then(Commands.literal("lives").executes(ctx -> {
                             ServerPlayer player = ctx.getSource().getPlayerOrException();
-                            ctx.getSource().sendSuccess(() -> NinjacatText.teal("Clowder lives remaining: "
-                                    + SkyboundEvents.remainingLives(player)), false);
+                            ctx.getSource().sendSuccess(() -> NinjacatText.tealKey("message.ninjacatskies.command.lives_remaining",
+                                    SkyboundEvents.remainingLives(player)), false);
                             return 1;
                         }))
                         .then(Commands.literal("rewardlife").requires(source -> source.hasPermission(2))
@@ -39,7 +39,7 @@ public final class SkyboundCommands {
 
     private static int reviveSelf(CommandContext<CommandSourceStack> ctx) {
         if (!(ctx.getSource().getEntity() instanceof ServerPlayer player)) {
-            ctx.getSource().sendFailure(NinjacatText.gold("Players only."));
+            ctx.getSource().sendFailure(NinjacatText.goldKey("message.ninjacatskies.command.players_only"));
             return 0;
         }
         return revive(ctx.getSource(), player);
@@ -53,11 +53,11 @@ public final class SkyboundCommands {
     private static int revive(CommandSourceStack source, ServerPlayer player) {
         int lives = SkyboundEvents.revivePlayer(player);
         if (lives < 0) {
-            source.sendFailure(NinjacatText.gold("Soft hardcore lives are disabled in config."));
+            source.sendFailure(NinjacatText.goldKey("message.ninjacatskies.command.lives_disabled"));
             return 0;
         }
         source.sendSuccess(
-                () -> NinjacatText.teal("Revived " + player.getGameProfile().getName() + " — lives: " + lives),
+                () -> NinjacatText.tealKey("message.ninjacatskies.command.revived", player.getGameProfile().getName(), lives),
                 true
         );
         return 1;

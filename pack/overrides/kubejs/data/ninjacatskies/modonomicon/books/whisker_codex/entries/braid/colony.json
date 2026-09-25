@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Colony",
-  "description": "Swarm Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.colony.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.colony.description",
   "icon": "productivebees:advanced_oak_beehive",
   "x": 8,
   "y": 0,
@@ -11,23 +11,23 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Colony",
-      "text": "**Swarm.** There are no bees to find in the void, so you make somewhere a bee wants to be: a ring of oak logs around a small flower, placed on the pad and woken with another flower (right-click it). Wait. Wings."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.colony.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.braid.colony.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Every nest is the same trick with a different ring — gravel, coarse dirt, stone, quartz, end stone. Then hives, a centrifuge, an incubator, and deep essence crops. Keep something alive that keeps something else alive."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.colony.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "**Goal:** finish Swarm and seat the Swarm token.\\\nYou need a nest the pad can actually grow — oak logs around a flower, woken with a right-click from another flower — then hives.\\\n**Check:** Finish Swarm. Claim the token and seat it. The Swarm notch lights."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.colony.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.braid.colony.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.colony.page.3.text"
     }
   ],
   "parents": [

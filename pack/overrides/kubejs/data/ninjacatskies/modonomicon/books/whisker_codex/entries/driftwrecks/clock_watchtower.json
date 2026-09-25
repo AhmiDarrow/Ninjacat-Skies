@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Hour Tower",
-  "description": "Pattern-weavers · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_watchtower.description",
   "icon": "driftwrecks:keepsake_clock_watchtower",
   "x": 4,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Hour Tower",
-      "text": "The Hour Tower rang every hour for every island, so nine tribes could keep one time. Pattern-weavers adjusted it with a key the size of an arm. After the Cut the islands drifted apart and the hours stopped matching. The tower rings anyway."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.clock_watchtower.page.0.text"
     }
   ],
   "condition": {

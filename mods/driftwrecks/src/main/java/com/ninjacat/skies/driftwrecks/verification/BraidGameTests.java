@@ -113,7 +113,7 @@ public class BraidGameTests {
         var clowder = LoomTension.clowderOf(player).orElseThrow();
         h.assertTrue(LoomTension.strandBits(clowder) == 0, "Braiding seats nothing");
         for (Strand s : Strand.ALL) {
-            h.assertTrue(!LoomTension.isSeated(clowder, s), s.title() + " is not seated by a braid");
+            h.assertTrue(!LoomTension.isSeated(clowder, s), s.id() + " is not seated by a braid");
         }
         h.succeed();
     }

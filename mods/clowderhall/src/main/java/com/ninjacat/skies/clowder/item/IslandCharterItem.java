@@ -28,8 +28,8 @@ import java.util.List;
  * this item is the pack-facing ritual and opens the guided Create Team screen.
  */
 public class IslandCharterItem extends Item {
-    private static final String RULES_TITLE = "Clowder Rules";
-    private static final String RULES_AUTHOR = "Clowder Hall";
+    private static final String RULES_TITLE = "Clowder Rules";   // lang-exempt: vanilla book title is a plain string (matched by id); the shown name is the CUSTOM_NAME key
+    private static final String RULES_AUTHOR = "Clowder Hall";   // lang-exempt: vanilla book author is a plain string, a byline name
 
 
     public IslandCharterItem(Properties properties) {
@@ -44,7 +44,7 @@ public class IslandCharterItem extends Item {
         if (level.isClientSide) {
             if (!player.isShiftKeyDown()) {
                 if (ModList.get().isLoaded("skyguis")) com.ninjacat.skies.clowder.client.ClowderClient.open();
-                else player.displayClientMessage(NinjacatText.gold("Clowder UI requires Sky GUIs. Use /skyblock help for island commands."), false);
+                else player.displayClientMessage(NinjacatText.goldKey("message.clowderhall.charter.needs_skyguis"), false);
             }
         } else if (player instanceof ServerPlayer serverPlayer) {
             // Seal spawn only on an overworld pad — never Dock, Hall, Nether, or End.
@@ -56,12 +56,12 @@ public class IslandCharterItem extends Item {
                 BlockPos spawn = level.getBlockState(feet).getCollisionShape(level, feet).isEmpty() ? feet : feet.above();
                 if (!hasSolidFooting(level, feet)) {
                     serverPlayer.displayClientMessage(
-                            NinjacatText.gold("Stand on solid pad ground before sealing spawn."),
+                            NinjacatText.goldKey("message.clowderhall.charter.need_solid_ground"),
                             true
                     );
                 } else if (!canRespawnIn(level, spawn) || !canRespawnIn(level, spawn.above())) {
                     serverPlayer.displayClientMessage(
-                            NinjacatText.gold("No headroom here — spawn would not hold. Step onto open pad ground."),
+                            NinjacatText.goldKey("message.clowderhall.charter.no_headroom"),
                             true
                     );
                 } else {
@@ -73,7 +73,7 @@ public class IslandCharterItem extends Item {
                             true
                     );
                     serverPlayer.displayClientMessage(
-                            NinjacatText.teal("Pad spawn sealed here."),
+                            NinjacatText.tealKey("message.clowderhall.charter.spawn_sealed"),
                             true
                     );
                 }
@@ -85,23 +85,23 @@ public class IslandCharterItem extends Item {
                     serverPlayer.drop(book, false);
                 }
                 serverPlayer.displayClientMessage(
-                        NinjacatText.gold("Clowder Rules pressed into your hands."),
+                        NinjacatText.goldKey("message.clowderhall.charter.rules_given"),
                         false
                 );
             }
 
             if (onDock) {
                 serverPlayer.displayClientMessage(
-                        NinjacatText.teal("Open Create Team in the Clowder panel, name your Clowder, then pick a pad."),
+                        NinjacatText.tealKey("message.clowderhall.charter.dock_create_team"),
                         false
                 );
                 serverPlayer.displayClientMessage(
-                        NinjacatText.gold("After you land, sneak-use Charter to seal pad spawn. Lost? /clowder hub"),
+                        NinjacatText.goldKey("message.clowderhall.charter.dock_after_land"),
                         false
                 );
             } else if (!onPad) {
                 serverPlayer.displayClientMessage(
-                        NinjacatText.gold("Charter opens the Clowder panel. Sneak-use on your Overworld pad to seal spawn."),
+                        NinjacatText.goldKey("message.clowderhall.charter.off_pad"),
                         false
                 );
             }
@@ -152,7 +152,7 @@ public class IslandCharterItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(NinjacatText.indigo("Names a pad as yours. Ink still wet."));
+        tooltip.add(NinjacatText.indigoKey("message.clowderhall.charter.tooltip"));
         tooltip.add(Component.translatable("item.clowderhall.island_charter.desc"));
     }
 
@@ -172,53 +172,10 @@ public class IslandCharterItem extends Item {
 
     private static ItemStack createRulesBook() {
         List<Filterable<Component>> pages = List.of(
-                Filterable.passThrough(Component.literal(
-                        "Clowder Rules\n\n" +
-                                "1. The Dock is shared.\n" +
-                                "2. Pads belong to Clowders — claim via Create Team + pad template.\n" +
-                                "3. Soil first. Stone: 1 Thread → 3 string; " +
-                                "4 string → 2 Void Yarn; then Tension Barrel clay / porcelain / sieve.\n" +
-                                "4. Frayed Thread buys help, not a skip past the braid."
-                )),
-                Filterable.passThrough(Component.literal(
-                        "Strand tribes\n\n" +
-                                "Soil — Pad-keepers\n" +
-                                "Stone — Grit-singers\n" +
-                                "Sprout — Rootbinders\n" +
-                                "Claw — Edge-walkers\n" +
-                                "Spark — Drumhearts\n" +
-                                "Clock — Pattern-weavers\n" +
-                                "Swarm — Colony-keepers\n" +
-                                "Sigil — Seal-carvers\n" +
-                                "Spindle — Loom-stitchers"
-                )),
-                Filterable.passThrough(Component.literal(
-                        "How to start (OOC)\n\n" +
-                                "1) Right-click Island Charter\n" +
-                                "   (or press K — Clowder panel)\n" +
-                                "2) Create Team → type a name\n" +
-                                "3) Pick a pad template:\n" +
-                                "   Ninjacat Pad = Normal\n" +
-                                "   Dojo Cottage = Easy\n" +
-                                "   Frayed Thread = Hard\n" +
-                                "4) Whisker Codex — Start here.\n" +
-                                "   Grave (`): assignment list.\n\n" +
-                                "Invite a friend: hold this Charter and\n" +
-                                "right-click them, or /clowder invite <name>.\n" +
-                                "They accept with /clowder accept.\n\n" +
-                                "Also: /clowder help · /clowder hub · Hub Key."
-                )),
-                Filterable.passThrough(Component.literal(
-                        "If you feel lost\n\n" +
-                                "• Dock is the hub, not your pad.\n" +
-                                "• Charter opens Clowders; Create Team picks a pad.\n" +
-                                "• On your pad: sneak-use Charter seals spawn here.\n" +
-                                "• /clowder hub is always safe.\n" +
-                                "• /clowder return leaves the Hall.\n" +
-                                "• Whisker Codex: Start here first.\n" +
-                                "  Grave (`): quests.\n" +
-                                "• How to Start book = plain OOC steps."
-                ))
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_rules.page_1")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_rules.page_2")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_rules.page_3")),
+                Filterable.passThrough(Component.translatable("message.clowderhall.book_rules.page_4"))
         );
         WrittenBookContent content = new WrittenBookContent(
                 Filterable.passThrough(RULES_TITLE),
@@ -229,6 +186,7 @@ public class IslandCharterItem extends Item {
         );
         ItemStack book = new ItemStack(Items.WRITTEN_BOOK);
         book.set(DataComponents.WRITTEN_BOOK_CONTENT, content);
+        book.set(DataComponents.CUSTOM_NAME, Component.translatable("message.clowderhall.book_rules.title").withStyle(s -> s.withItalic(false)));
         return book;
     }
 }

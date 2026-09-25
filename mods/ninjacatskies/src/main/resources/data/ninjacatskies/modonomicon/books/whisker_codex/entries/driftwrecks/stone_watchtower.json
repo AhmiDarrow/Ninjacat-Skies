@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Listening Spire",
-  "description": "Grit-singers · Watchtower",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_watchtower.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_watchtower.description",
   "icon": "driftwrecks:keepsake_stone_watchtower",
   "x": 0,
   "y": -1,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Listening Spire",
-      "text": "The Listening Spire leaned into the wind so its stones would ring when a rockfall began far off. Grit-singers took turns sleeping at the top with their ear to the wall. The last watcher heard the Cut coming. There was no note for it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_watchtower.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_watchtower.page.0.text"
     }
   ],
   "condition": {

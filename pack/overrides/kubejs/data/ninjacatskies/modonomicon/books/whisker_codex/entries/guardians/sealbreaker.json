@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Sealbreaker",
-  "description": "Keeper of the Sigil Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.description",
   "icon": "guardians:frayed_totem_sealbreaker",
   "x": 0,
   "y": 3,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Sealbreaker",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Ward Circle: a stone sanctum of gold circles and nine glyph pillars with amethyst spires, a nine-sided dais of gold pegs at the centre."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Sealbreaker hides behind three active wards.\\\nThe dais pegs light the order once per phase — watch first.\\\nDispel the pillars in that order with an Ars dispel or any Sigil-strand item; a wrong one re-arms all three and the ward-glass bites.\\\nThree right and it is open for twelve seconds."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Later phases shuffle the runes and add a decoy.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_sealbreaker",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_sealmark",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Sealmark: magic damage taken is cut by a fifth. Sealmark wards you, or a Clowder mate you look at, against one heavy hit."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.sealbreaker.page.4.text"
     }
   ],
   "parents": [

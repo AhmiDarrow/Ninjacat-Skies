@@ -69,7 +69,7 @@ public class WreckChestBlockEntity extends BlockEntity {
         if (level == null) return;
         Wreck owner = DriftManager.get(level.getServer()).byId(wreckId);
         if (owner == null || owner.phase != Wreck.Phase.ACTIVE) {
-            p.displayClientMessage(NinjacatText.teal("The chest is still drifting into place."), true);
+            p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.chest.still_drifting"), true);
             return;
         }
         NonNullList<ItemStack> items = rolls.computeIfAbsent(p.getUUID(), u -> roll(level, u, p));
@@ -93,7 +93,7 @@ public class WreckChestBlockEntity extends BlockEntity {
         Wreck w = owner;
         boolean member = com.ninjacat.skies.core.tension.LoomTension.clowderOf(p).map(c -> c.id().equals(w.team)).orElse(false);
         if (member && heart && w.objective == WreckObjective.SALVAGE && !w.objectiveDone) {
-            p.sendSystemMessage(NinjacatText.gold("The heart of the wreck gives up what it kept."));
+            p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.chest.heart_opens"));
             DriftManager.get(level.getServer()).completeObjective(level, w);
         }
         if (hidden) WreckRewards.award(p, "hidden_room");

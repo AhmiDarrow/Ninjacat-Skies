@@ -35,9 +35,9 @@ public class FrayedTotemItem extends Item {
         ItemStack stack = player.getItemInHand(hand);
         if (!(player instanceof ServerPlayer sp)) return InteractionResultHolder.sidedSuccess(stack, true);
         if (sp.isSpectator()) return InteractionResultHolder.fail(stack);
-        String fail = ArenaManager.get(sp.server).summon(sp, kind);
+        Component fail = ArenaManager.get(sp.server).summon(sp, kind);
         if (fail != null) {
-            sp.displayClientMessage(NinjacatText.teal(fail), true);
+            sp.displayClientMessage(fail, true);
             level.playSound(null, sp.blockPosition(), SoundEvents.NOTE_BLOCK_BASS.value(), SoundSource.PLAYERS, 0.8F, 0.5F);
             return InteractionResultHolder.fail(stack);
         }
@@ -47,10 +47,10 @@ public class FrayedTotemItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> tip, TooltipFlag flag) {
-        tip.add(NinjacatText.gold("Calls " + kind.title + " to the arena."));
-        tip.add(NinjacatText.teal("Clowder mates within 32 blocks answer with you."));
-        if (kind.tier == GuardianKind.Tier.INSANE) tip.add(NinjacatText.teal("Only after the Reweave."));
-        else tip.add(NinjacatText.teal("Answers once " + kind.unlockName() + " is seated."));
-        tip.add(Component.literal("Spent when the fight begins.").withStyle(net.minecraft.ChatFormatting.GRAY));
+        tip.add(NinjacatText.goldKey("message.guardians.totem.calls_to_arena", kind.titleComponent()));
+        tip.add(NinjacatText.tealKey("message.guardians.totem.mates_answer"));
+        if (kind.tier == GuardianKind.Tier.INSANE) tip.add(NinjacatText.tealKey("message.guardians.totem.only_after_reweave"));
+        else tip.add(NinjacatText.tealKey("message.guardians.totem.answers_once_seated", kind.unlockName()));
+        tip.add(Component.translatable("message.guardians.totem.spent_when_fight_begins").withStyle(net.minecraft.ChatFormatting.GRAY));
     }
 }

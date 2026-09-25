@@ -5,6 +5,7 @@ import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -34,27 +35,27 @@ public class GrindmawGuardian extends GuardianEntity {
 
     public GrindmawGuardian(EntityType<? extends GuardianEntity> type, Level level) { super(type, level, GuardianKind.GRINDMAW); }
 
-    @Override protected String immuneMessage() { return "The Grindmaw's maw is shut. Ride sieve grit round the grindstone into its mouth."; }
+    @Override protected MutableComponent immuneMessage() { return Component.translatable("message.guardians.grindmaw.grindmaw_s_maw_shut_ride"); }
     @Override protected boolean mobile() { return false; }   // it squats in its own grit pit
     @Override protected double meleeReach() { return kind.width * 0.75 + 4.5; }
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) { shout("The Grindmaw answers for the Cut. Its maw only opens for its own grit: take a chute's grit block, set it on the grindstone ring and let the ring carry it into the gold-lit mouth."); }
+        if (ageInFight == 1) { shout("message.guardians.grindmaw.grindmaw_answers_for_cut_maw"); }
         Vec3 o = origin();
         if (arena() != null && ageInFight % DROP_EVERY == 40) dropGrit(o);
         if (arena() == null && openTimer <= 0 && ageInFight % 400 == 60) jamOpen();        // no chutes to route grit from (a shade, or /summon): the maw jams on a timer
         if (ageInFight % STEP == 0) { carryGrit(o); }
         pushRiders(o);
         tickMouth(o);
-        if (openTimer > 0 && --openTimer == 0) { say("The maw grinds shut again."); sound(SoundEvents.IRON_TRAPDOOR_CLOSE, 1.5F, 0.5F); }
+        if (openTimer > 0 && --openTimer == 0) { say("message.guardians.grindmaw.maw_grinds_shut_again"); sound(SoundEvents.IRON_TRAPDOOR_CLOSE, 1.5F, 0.5F); }
         setImmune(openTimer <= 0);
     }
 
     @Override
     protected void onPhase(int phase) {
         dir = -dir; mouthAngle = mouthAngle + Math.PI / 2 * (random.nextBoolean() ? 1 : -1);
-        shout("The grindstone reverses! The maw turns to " + compass(mouthAngle) + ".");
+        shout("message.guardians.grindmaw.grindstone_reverses", compass(mouthAngle));
         sound(SoundEvents.GRINDSTONE_USE, 2F, 0.4F);
     }
 
@@ -62,12 +63,12 @@ public class GrindmawGuardian extends GuardianEntity {
     private void dropGrit(Vec3 o) {
         for (int i = 0; i < 4; i++) {
             Vec3 at = Mech.polar(o, CHUTE_R, Math.PI / 2 * i, o.y + 6);
-            ItemStack grit = new ItemStack(Items.GRAVEL); grit.set(net.minecraft.core.component.DataComponents.CUSTOM_NAME, Component.literal("Sieve Grit"));
+            ItemStack grit = new ItemStack(Items.GRAVEL); grit.set(net.minecraft.core.component.DataComponents.CUSTOM_NAME, Component.translatable("message.guardians.grindmaw.sieve_grit"));
             ItemEntity e = new ItemEntity(level(), at.x, at.y, at.z, grit); e.setDeltaMovement(0, -0.2, 0); e.setUnlimitedLifetime(); e.addTag(Mech.tag(this));
             serverLevel().addFreshEntity(e);
             Mech.burst(serverLevel(), ParticleTypes.CLOUD, at, 8, 0.6);
         }
-        say("The sieve chutes pour fresh grit."); sound(SoundEvents.GRAVEL_FALL, 1.5F, 0.8F);
+        say("message.guardians.grindmaw.sieve_chutes_pour_fresh_grit"); sound(SoundEvents.GRAVEL_FALL, 1.5F, 0.8F);
     }
 
     /** Every 2 s each gravel block on the ring advances one block tangentially; on the maw mark it is eaten. */
@@ -99,7 +100,7 @@ public class GrindmawGuardian extends GuardianEntity {
 
     private void jamOpen() {
         openTimer = OPEN_TICKS;
-        shout("Grit in the gears! The Grindmaw's maw is jammed open — strike now!");
+        shout("message.guardians.grindmaw.grit_gears_grindmaw_s_maw");
         sound(SoundEvents.IRON_TRAPDOOR_OPEN, 2F, 0.4F); Mech.burst(serverLevel(), ParticleTypes.CRIT, position().add(0, 4, 0), 40, 3);
     }
 
@@ -109,7 +110,7 @@ public class GrindmawGuardian extends GuardianEntity {
         if (tickCount % 4 == 0) { Mech.column(serverLevel(), Mech.GOLD, mouth, 3, 6); ring(Mech.GOLD, mouth, 2.5, 8, o.y + 0.2); }
         if (tickCount % 60 == 0) for (ServerPlayer p : party()) if (Mech.horiz(p.position(), o) < PIT && p.getY() < o.y + 0.5) {
             p.hurt(damageSources().mobAttack(this), 2); p.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 0));
-            p.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.teal("The grit pit grinds at you."), true);
+            p.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.tealKey("message.guardians.grindmaw.grit_pit_grinds"), true);
         }
     }
 
@@ -124,7 +125,7 @@ public class GrindmawGuardian extends GuardianEntity {
         }
     }
 
-    private static String compass(double a) { double d = Math.toDegrees(a) % 360; if (d < 0) d += 360; return d < 45 || d >= 315 ? "the east" : d < 135 ? "the south" : d < 225 ? "the west" : "the north"; }
+    private static Component compass(double a) { double d = Math.toDegrees(a) % 360; if (d < 0) d += 360; return Component.translatable(d < 45 || d >= 315 ? "message.guardians.grindmaw.compass_east" : d < 135 ? "message.guardians.grindmaw.compass_south" : d < 225 ? "message.guardians.grindmaw.compass_west" : "message.guardians.grindmaw.compass_north"); }
 
     @Override protected void onDefeated() { super.onDefeated(); Mech.discardMinions(this); }
 }

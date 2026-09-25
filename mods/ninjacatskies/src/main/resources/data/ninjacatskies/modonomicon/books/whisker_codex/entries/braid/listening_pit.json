@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Listening Pit and Gates",
-  "description": "Patterns, ore, voices, travel.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.description",
   "icon": "tribalpower:resonance_mesh",
   "x": 8,
   "y": 7,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Goal",
-      "text": "**Goal:** run one rite and one travel tool the Spirit Codex already diagrams.\\\nYou need the **Spirit Codex**; those shapes live there, not here.\\\nStone Font, Listening Pit, Rite Circle, Voice Ring, Shatter Array, Way Gate and Far Gate are Spirit Codex shapes. Whisker does not reprint them."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "March travel",
-      "text": "The Gate Drum is the portable way into the March. Charge it with Pulse, then empty-handed use it. Do not strike it like a Drumheart.\\\nBind a return compass before you go. `/tribalpower gate list` names later gates."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Check",
-      "text": "**Check:** one Font or Pit from the Spirit Codex diagram produces an output. If it stays silent, crouch and right-click with the Spirit Codex."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.listening_pit.page.2.text"
     }
   ],
   "parents": [

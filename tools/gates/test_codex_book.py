@@ -7,6 +7,26 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 BOOK = ROOT/'mods/ninjacatskies/src/main/resources/data/ninjacatskies/modonomicon/books/whisker_codex'
 PACK = ROOT/'pack/overrides/kubejs/data/ninjacatskies/modonomicon/books/whisker_codex'
+# The book JSON holds lang keys; read the English through the codex lang files (Core, then pack-only).
+LANG = {}
+for _lang in (ROOT/'mods/ninjacatskies/src/main/resources/assets/ninjacatskies_codex/lang/en_us.json',
+              ROOT/'pack/overrides/kubejs/assets/ninjacatskies_codex/lang/en_us.json'):
+    LANG.update(json.loads(_lang.read_text(encoding='utf-8')))
+FIELDS = ('name', 'description', 'tooltip', 'title', 'text', 'multiblock_name')
+
+def english(node):
+    if isinstance(node, dict):
+        return {k: (LANG[v].replace('%%', '%') if k in FIELDS and isinstance(v, str) and v in LANG else english(v))
+                for k, v in node.items()}
+    if isinstance(node, list):
+        return [english(v) for v in node]
+    return node
+
+def load(path):
+    return english(json.loads(path.read_text(encoding='utf-8')))
+
+def blob_of(path):
+    return json.dumps(load(path), ensure_ascii=False)
 
 class CodexBookTests(unittest.TestCase):
     def test_pagination_preserves_conditions_and_is_repeatable(self):
@@ -33,8 +53,8 @@ class CodexBookTests(unittest.TestCase):
         self.assertEqual(sorts.get('first_steps'), 0)
         self.assertEqual(sorts.get('the_work'), 6)
         self.assertEqual(len(sorts), len(set(sorts.values())), sorts)
-        overlay = json.loads((PACK / 'book.json').read_text(encoding='utf-8'))
-        core = json.loads((BOOK / 'book.json').read_text(encoding='utf-8'))
+        overlay = load(PACK / 'book.json')
+        core = load(BOOK / 'book.json')
         self.assertEqual(overlay['name'], core['name'])
         self.assertEqual(overlay['tooltip'], core['tooltip'])
         self.assertEqual(overlay['description'], core['description'])
@@ -73,11 +93,11 @@ class CodexBookTests(unittest.TestCase):
             'using_the_book','safe_start','water','first_token','materials','claw_blueprints',
             'first_power','automatic_power','hold_fluids','choose_branches','pad_runners','finish','stuck',
         })
-        blob=' '.join(p.read_text(encoding='utf-8') for p in paths).lower()
+        blob=' '.join(blob_of(p) for p in paths).lower()
         self.assertIn('silentgear:blueprint_package', blob)
         self.assertIn('tribalpower:spirit_cistern', blob)
         self.assertIn('chocobosreborn:sage_notes', blob)
-        overlay_pad = json.loads((PACK/'entries/first_steps/pad_runners.json').read_text(encoding='utf-8'))
+        overlay_pad = load(PACK/'entries/first_steps/pad_runners.json')
         self.assertEqual(overlay_pad['icon'], 'chocobosreborn:chocobo_almanac')
         overlay_blob = json.dumps(overlay_pad).lower()
         self.assertIn('gysahl is the only green', overlay_blob)
@@ -100,7 +120,7 @@ class CodexBookTests(unittest.TestCase):
         self.assertNotIn('chocopedia', blob)
         self.assertNotIn('recovery item', blob)
         for p in paths:
-            d=json.loads(p.read_text(encoding='utf-8'))
+            d=load(p)
             self.assertFalse(d['hide_while_locked'])
             self.assertNotIn('condition',d)
             for parent in d.get('parents',[]):self.assertIn(parent['entry'],entries)
@@ -109,7 +129,7 @@ class CodexBookTests(unittest.TestCase):
                 self.assertLessEqual(len(page.get('text','').split()),120,p.name)
             if p.name == 'pad_runners.json':
                 continue
-            self.assertEqual(d,json.loads((PACK/'entries/first_steps'/p.name).read_text(encoding='utf-8')))
+            self.assertEqual(d,load(PACK/'entries/first_steps'/p.name))
 
     def test_models_have_one_origin_and_valid_layers(self):
         paths=list((BOOK.parents[1]/'multiblocks/codex').glob('*.json'))
@@ -138,8 +158,8 @@ class CodexBookTests(unittest.TestCase):
                          'tokens':'ninjacatskies:the_work/first_hour',
                          'the_campaign':'ninjacatskies:the_work/tokens'}
         for target,source in mapping:
-            pack=json.loads((PACK/'entries/the_work'/f'{target}.json').read_text(encoding='utf-8'))
-            core=json.loads((BOOK/'entries/first_steps'/f'{source}.json').read_text(encoding='utf-8'))
+            pack=load(PACK/'entries/the_work'/f'{target}.json')
+            core=load(BOOK/'entries/first_steps'/f'{source}.json')
             self.assertEqual(pack['pages'], core['pages'], target)
             parents=[p['entry'] for p in pack.get('parents',[])]
             want=expected_parent[target]
@@ -150,33 +170,33 @@ class CodexBookTests(unittest.TestCase):
         self.assertFalse((BOOK/'categories'/'the_work.json').exists())
         titles=[]
         for p in (BOOK/'entries').glob('*/*.json'):
-            titles += [page.get('title','') for page in json.loads(p.read_text(encoding='utf-8'))['pages']]
+            titles += [page.get('title','') for page in load(p)['pages']]
         self.assertFalse(any('...' in t for t in titles), [t for t in titles if '...' in t])
 
     def test_braid_stage_checks_are_single_and_specific(self):
         strand={'wake','recover','root','edge','pattern','colony','hum','bind','reweave'}
         for path in (BOOK/'entries/braid').glob('*.json'):
-            titles=[p.get('title') for p in json.loads(path.read_text(encoding='utf-8'))['pages']]
+            titles=[p.get('title') for p in load(path)['pages']]
             count=titles.count('Before you move on')
             if path.stem in strand:
                 self.assertEqual(count, 1, path.name)
-                blob=' '.join(p.get('text','') for p in json.loads(path.read_text(encoding='utf-8'))['pages'])
+                blob=' '.join(p.get('text','') for p in load(path)['pages'])
                 self.assertIn('**Goal:**', blob, path.name)
                 self.assertIn('You need', blob, path.name)
                 self.assertIn('**Check:**', blob, path.name)
             else:
                 self.assertEqual(count, 0, path.name)
-        pit=json.loads((BOOK/'entries/braid/listening_pit.json').read_text(encoding='utf-8'))
+        pit=load(BOOK/'entries/braid/listening_pit.json')
         blob=' '.join(p.get('text','') for p in pit['pages'])
         self.assertIn('Spirit Codex', blob)
         self.assertIn('empty-handed use', blob.lower())
         self.assertNotIn('seat its Strand token', blob)
         self.assertNotIn('Earth is the Drumheart', blob)
-        lattice=json.loads((BOOK/'entries/braid/living_lattice.json').read_text(encoding='utf-8'))
+        lattice=load(BOOK/'entries/braid/living_lattice.json')
         lattice_blob=' '.join(p.get('text','') for p in lattice['pages'])
         self.assertIn('Spirit Codex', lattice_blob)
         self.assertNotIn('Feed slot 0', lattice_blob)
-        edge=json.loads((BOOK/'entries/braid/edge.json').read_text(encoding='utf-8'))
+        edge=load(BOOK/'entries/braid/edge.json')
         self.assertIn('Blueprint Package', ' '.join(p.get('text','') for p in edge['pages']))
         workshop=json.loads((BOOK.parents[1]/'multiblocks/codex/starter_workshop.json').read_text(encoding='utf-8'))
         self.assertEqual(workshop['mapping']['0']['block'], 'minecraft:crafting_table')
@@ -185,20 +205,20 @@ class CodexBookTests(unittest.TestCase):
 
     def test_cut_station_pages_have_goal_need_check(self):
         for stem in ('voidloom', 'tension', 'thread'):
-            pages=json.loads((BOOK/'entries/the_cut'/f'{stem}.json').read_text(encoding='utf-8'))['pages']
+            pages=load(BOOK/'entries/the_cut'/f'{stem}.json')['pages']
             blob=' '.join(p.get('text','') for p in pages)
             self.assertIn('**Goal:**', blob, stem)
             self.assertIn('You need', blob, stem)
             self.assertIn('**Check:**', blob, stem)
 
     def test_guardians_walkthroughs_have_goal_need_check(self):
-        ritual=json.loads((BOOK/'entries/guardians/the_ritual.json').read_text(encoding='utf-8'))
+        ritual=load(BOOK/'entries/guardians/the_ritual.json')
         blob=' '.join(p.get('text','') for p in ritual['pages'])
         self.assertIn('**Goal:**', blob)
         self.assertIn('You need', blob)
         self.assertIn('**Check:**', blob)
         self.assertIn('purpur', blob.lower())
-        bed=json.loads((BOOK/'entries/guardians/beddown.json').read_text(encoding='utf-8'))
+        bed=load(BOOK/'entries/guardians/beddown.json')
         bblob=' '.join(p.get('text','') for p in bed['pages'])
         self.assertIn('**Goal:**', bblob)
         self.assertIn('You need', bblob)

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Hall of Echoes",
-  "description": "Grit-singers · Shrine",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_shrine.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_shrine.description",
   "icon": "driftwrecks:keepsake_stone_shrine",
   "x": 0,
   "y": -2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Hall of Echoes",
-      "text": "Grit-singers named every shard by the note it gave when struck, and the Hall of Echoes was where the names were sung aloud. A choir of forty could make the whole cliff hum. After the Cut the hall kept humming with nobody in it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_shrine.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_shrine.page.0.text"
     }
   ],
   "condition": {

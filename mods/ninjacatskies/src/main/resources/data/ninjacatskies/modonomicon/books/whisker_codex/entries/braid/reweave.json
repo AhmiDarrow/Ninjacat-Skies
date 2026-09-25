@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:braid",
-  "name": "Reweave",
-  "description": "Spindle Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.braid.reweave.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.braid.reweave.description",
   "icon": "ae2:controller",
   "x": 12,
   "y": 0,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Reweave",
-      "text": "**Spindle.** A digital loom (AE2, with a Knot in the controller and a Braid in the assembler). A Gate Drum. The March, and a March stone from it.\\\nNine seated, one stone, one right-click: the Fragment. Seat it. The cut closes above your pad."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.reweave.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.reweave.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Before you move on",
-      "text": "**Goal:** close your Clowder's cut with March Stone.\\\nYou need nine seated tokens and **March Stone** from the March.\\\n**Check:** Seat all nine tokens. Right-click the Post with March Stone for a **Spindle Loom Fragment**, then right-click again holding the Fragment. Your Clowder's Strand of the Fray closes."
+      "title": "book.ninjacatskies.whisker_codex.entry.braid.reweave.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.reweave.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Read **Start here** for worked examples. Recipes live in JEI; the **Spirit Codex** covers Tribal Power machinery. If you get stuck, test one recipe at a time and sneak-use the Spirit Codex on a silent machine."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.braid.reweave.page.2.text"
     }
   ],
   "parents": [

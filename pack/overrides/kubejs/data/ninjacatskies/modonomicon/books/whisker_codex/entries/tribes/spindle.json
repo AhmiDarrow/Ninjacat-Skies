@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "Loom-stitchers",
-  "description": "Keepers of the Spindle Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.description",
   "icon": "ninjacatskies:strand_token_spindle",
   "x": -2,
   "y": 2,
@@ -11,13 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Loom-stitchers",
-      "text": "The Loom-stitchers cut the gate-paths — into the March, into the Nether and End, into places the map does not have words for — and always meant to come back and mend them.\\\nThey did not get to. You will."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Before the Cut they kept the roads between pads, between worlds, between the March and home. What they lost was the appointment. Open gates dumped weather into the void. Closed ones trapped whole roads still walking. The Spindle seam tore while the other eight pulls turned into arguments. You pick up the needle they dropped."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.page.1.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -25,18 +25,18 @@
         "id": "ninjacatskies:strand_token_spindle",
         "count": 1
       },
-      "title": "Spindle Strand",
-      "text": "*The Loom was never one thread. It was nine agreeing.*\\\nSeated. The Loom-stitchers answer when this Post hums."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Their camp",
-      "text": "The Loom-stitchers keep a camp in the March crystal fields, at the Crystal Spire: huts, a fire, a Tribe Hearth, a Loom totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spindle.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Their hearth favours March Crystal, Loom Thread, compasses. Their Elder trades Loom Thread and a Waystone Compass at Friend, a Loom Anchor and a Loom Seal at Kin, and at Voice standing presses the tribe's Mark into your hand."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.pack.entry.tribes.spindle.page.4.text"
     }
   ],
   "condition": {

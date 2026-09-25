@@ -1,114 +1,116 @@
 // Client tooltips for Loom stations and proof items. Short; the Codex book carries the rest.
 ItemEvents.modifyTooltips(event => {
   event.add('voidloom:loomframe', [
-    Text.gray('Stretch a mesh, hopper grit in the top, sit it on a hopper for scraps. Same table as an Ex Deorum sieve, a little less per block because it runs itself.'),
-    Text.darkGray('Empty hand takes scraps; sneak to pull the mesh. Mesh is hand-only. Redstone pauses it.')
+    Text.translate('tooltip.ninjacatpack.loomframe.1').gray(),
+    Text.translate('tooltip.ninjacatpack.loomframe.2').darkGray()
   ])
   event.add('voidloom:tension_barrel', [
-    Text.gray('Pour water (bucket comes back) and add dirt → clay. String + ender pearl → 2 yarn.'),
-    Text.darkGray('Holds 8 of each. Empty hand takes what settled; sneak to pull dry inputs.')
+    Text.translate('tooltip.ninjacatpack.tension_barrel.1').gray(),
+    Text.translate('tooltip.ninjacatpack.tension_barrel.2').darkGray()
   ])
-  event.add('voidloom:loom_lint', Text.gray('Combed out of dirt by a thread mesh. Four make a Void Yarn.'))
+  event.add('voidloom:loom_lint', Text.translate('tooltip.ninjacatpack.loom_lint').gray())
   event.add('voidloom:strand_filament', [
-    Text.gray('Rare iron-mesh catch. 16 of them at a Tension Post spin a Braid Cord.'),
-    Text.darkGray('No Strand has to be seated — the Post is enough.')
+    Text.translate('tooltip.ninjacatpack.strand_filament.1').gray(),
+    Text.translate('tooltip.ninjacatpack.strand_filament.2').darkGray()
   ])
-  event.add('ninjacatskies:frayed_thread', Text.gray('Unravel: 1 Thread → 3 string. /clowder hub Kin stalls sell things for Thread.'))
+  event.add('ninjacatskies:frayed_thread', Text.translate('tooltip.ninjacatpack.frayed_thread').gray())
+  event.add('ninjacatskies:thread_skein', Text.translate('tooltip.ninjacatpack.thread_skein').gray())
+  event.add('ninjacatskies:thread_bolt', Text.translate('tooltip.ninjacatpack.thread_bolt').gray())
   event.add('ninjacatskies:thread_shard', [
-    Text.gray('A quarter of a shared life. Four make a Thread of Return.'),
-    Text.darkGray('Craft: diamonds, Void Yarn and a Rift Shard. Or buy one from Spark in Clowder Hall for 400 Thread.')
+    Text.translate('tooltip.ninjacatpack.thread_shard.1').gray(),
+    Text.translate('tooltip.ninjacatpack.thread_shard.2').darkGray()
   ])
-  event.add('ninjacatskies:thread_of_return', Text.darkGray('Grit in Clowder Hall buys blocks and netherite back for Thread — badly, on purpose.'))
+  event.add('ninjacatskies:thread_of_return', Text.translate('tooltip.ninjacatpack.thread_of_return').darkGray())
   if (Item.exists('silentgear:blueprint_package')) {
-    event.add('silentgear:blueprint_package', Text.gray('Four Blueprint Paper, shapeless. Right-click to unwrap starter plans. Claiming a pad wipes Silent Gear\'s join gift.'))
+    event.add('silentgear:blueprint_package', Text.translate('tooltip.ninjacatpack.blueprint_package').gray())
   }
   if (Item.exists('ae2:sky_stone_tank')) {
-    event.add('ae2:sky_stone_tank', Text.gray('Does not keep fluids when broken — that is AE2, not a pack bug. Bucket them out, or move liquids in a Spirit Cistern.'))
+    event.add('ae2:sky_stone_tank', Text.translate('tooltip.ninjacatpack.sky_stone_tank').gray())
   }
-  event.add('minecraft:rotten_flesh', Text.gray('Smelt or campfire it for leather. Zombies on the pad are the cow.'))
+  event.add('minecraft:rotten_flesh', Text.translate('tooltip.ninjacatpack.rotten_flesh').gray())
   if (Item.exists('pamhc2foodcore:freshmilkitem')) {
-    event.add('pamhc2foodcore:freshmilkitem', Text.gray('Coconut plus freshwater, or split a milk bucket. There are no cows on the pad.'))
-    event.add('pamhc2trees:coconutitem', Text.gray('Iron-mesh dirt grows the palm. Craft with freshwater for kitchen milk.'))
-    event.add('pamhc2foodextended:silkentofuitem', Text.gray('Soybean in a saucepan. Counts as egg and as raw meat for chili. Roll it for firm tofu.'))
-    event.add('pamhc2foodextended:firmtofuitem', Text.gray('Silken tofu plus the roller. Counts as raw meat until animals exist.'))
+    event.add('pamhc2foodcore:freshmilkitem', Text.translate('tooltip.ninjacatpack.freshmilkitem').gray())
+    event.add('pamhc2trees:coconutitem', Text.translate('tooltip.ninjacatpack.coconutitem').gray())
+    event.add('pamhc2foodextended:silkentofuitem', Text.translate('tooltip.ninjacatpack.silkentofuitem').gray())
+    event.add('pamhc2foodextended:firmtofuitem', Text.translate('tooltip.ninjacatpack.firmtofuitem').gray())
   }
-  event.add('minecraft:leather', Text.gray('Smelt rotten flesh, or sieve dirt with flint mesh and up. Pad-keepers in Clowder Hall sell a little.'))
+  event.add('minecraft:leather', Text.translate('tooltip.ninjacatpack.leather').gray())
   event.add('voidloom:void_yarn', [
-    Text.gray('Early: 4 string → 2 yarn. Later: string + pearl in the Tension Barrel → 2 yarn.'),
-    Text.darkGray('Or four Loom Lint from the Loomframe.')
+    Text.translate('tooltip.ninjacatpack.void_yarn.1').gray(),
+    Text.translate('tooltip.ninjacatpack.void_yarn.2').darkGray()
   ])
   event.add('voidloom:binding_knot', [
-    Text.gray('Void Yarn ring around a slime ball. The Loom\'s soft gate.'),
-    Text.darkGray('Early slime: 2 dirt + wheat seeds + bone meal.')
+    Text.translate('tooltip.ninjacatpack.binding_knot.1').gray(),
+    Text.translate('tooltip.ninjacatpack.binding_knot.2').darkGray()
   ])
   event.add('ninjacatskies:tension_post', [
-    Text.gray('Seat Strand tokens here. Each one lights a notch, chimes for the Clowder, and changes the pad.'),
-    Text.darkGray('Braid Cord and the Spindle Loom Fragment are spun here, not crafted.')
+    Text.translate('tooltip.ninjacatpack.tension_post.1').gray(),
+    Text.translate('tooltip.ninjacatpack.tension_post.2').darkGray()
   ])
-  event.add('ninjacatskies:braid_cord', Text.gray('Two braid paths, one cord. Heart of the molecular assembler.'))
-  event.add('ninjacatskies:spindle_loom_fragment', Text.gold('Seat it at the Tension Post to Reweave.'))
+  event.add('ninjacatskies:braid_cord', Text.translate('tooltip.ninjacatpack.braid_cord').gray())
+  event.add('ninjacatskies:spindle_loom_fragment', Text.translate('tooltip.ninjacatpack.spindle_loom_fragment').gold())
   if (Item.exists('mysticalagriculture:inferium_ore')) {
-    event.add('mysticalagriculture:inferium_essence', Text.gray('Smelt Inferium Ore — sieve dirt for it. Hostile mobs drop essence too.'))
-    event.add('mysticalagriculture:prosperity_shard', Text.gray('Smelt Prosperity Ore — sieve gravel or sand. Rarer than Inferium; it gates seed bases.'))
-    event.add('mysticalagriculture:inferium_ore', Text.gray('From the sieve. Smelt for Inferium Essence — the floor of every crop tier.'))
-    event.add('mysticalagriculture:prosperity_ore', Text.gray('From the sieve. Smelt for a Prosperity Shard — every seed base needs one.'))
+    event.add('mysticalagriculture:inferium_essence', Text.translate('tooltip.ninjacatpack.inferium_essence').gray())
+    event.add('mysticalagriculture:prosperity_shard', Text.translate('tooltip.ninjacatpack.prosperity_shard').gray())
+    event.add('mysticalagriculture:inferium_ore', Text.translate('tooltip.ninjacatpack.inferium_ore').gray())
+    event.add('mysticalagriculture:prosperity_ore', Text.translate('tooltip.ninjacatpack.prosperity_ore').gray())
   }
-  event.add(/productivebees:.*_nest$/, Text.gray('A ring of this around a small flower. Place it, then right-click it with a small flower to wake the bee.'))
-  event.add('productivebees:oak_wood_nest', Text.darkGray('Also spawns plain honey bees — the root of every breeding line.'))
-  event.add('minecraft:bee_nest', Text.gray('Planks and flowers. A wild bee will move in; shear it with smoke underneath.'))
+  event.add(/productivebees:.*_nest$/, Text.translate('tooltip.ninjacatpack.productivebees_nest').gray())
+  event.add('productivebees:oak_wood_nest', Text.translate('tooltip.ninjacatpack.oak_wood_nest').darkGray())
+  event.add('minecraft:bee_nest', Text.translate('tooltip.ninjacatpack.bee_nest').gray())
   if (Item.exists('tribalpower:pulse_resonator')) {
-    event.add('tribalpower:pulse_resonator', Text.gray('Seat a reusable Echo catalyst. Distinct totem voices strengthen the song; a Voice Ring at radius 3 is what six voices now means. Redstone pauses it.'))
-    event.add('tribalpower:ley_collector', Text.gray('Place under open sky. Night, rain, water, plants and totem voices add. A strong pad keeps nearby totems answered. Redstone pauses it.'))
-    event.add('tribalpower:pulse_cell', Text.gray('Carry Pulse between Drumheart, Ley, generators and the pit.'))
+    event.add('tribalpower:pulse_resonator', Text.translate('tooltip.ninjacatpack.pulse_resonator').gray())
+    event.add('tribalpower:ley_collector', Text.translate('tooltip.ninjacatpack.ley_collector').gray())
+    event.add('tribalpower:pulse_cell', Text.translate('tooltip.ninjacatpack.pulse_cell').gray())
   }
   if (Item.exists('tribalpower:drumheart')) {
-    event.add('tribalpower:drumheart', Text.gray('Strike empty-handed on tempo (17–23 ticks) for 24 Pulse, 10 off-tempo. Redstone pays only a rising edge — a lever left on is not a drum. Nothing closer than 8 ticks counts.'))
+    event.add('tribalpower:drumheart', Text.translate('tooltip.ninjacatpack.drumheart').gray())
   }
   if (Item.exists('tribalpower:march_stone')) {
-    event.add('tribalpower:march_stone', Text.gold('Right-click a Tension Post with it once nine Strands are seated.'))
+    event.add('tribalpower:march_stone', Text.translate('tooltip.ninjacatpack.march_stone').gold())
   }
   // Tribal Power 3.0 — the Nine Tribes. Camps stand in the March; the pack's quests are in Tribal Weave.
   if (Item.exists('tribalpower:tribe_hearth')) {
-    event.add('tribalpower:tribe_hearth', Text.gray('Offer what the tribe favours. Standing opens trades, then the Mark. Sixty standing a day per tribe. Do not break it.'))
-    event.add('tribalpower:tribe_mark', Text.gray('An Elder gives it once, at Voice. Craft it into a Kinship Totem.'))
-    event.add('tribalpower:kinship_totem', Text.gray('One more voice for the Pulse Resonator — up to fifteen with all nine tribes.'))
-    event.add('tribalpower:loom_thread', Text.gray('Ancestor Halls, The Unsung, or a Loom-stitcher at Friend. The sixth voice starts here.'))
-    event.add('tribalpower:silent_drum', Text.gray('Four strikes, a breath apart. Sneak against the Beat; answer the Silence with the same rhythm.'))
-    event.add(/tribalpower:rite_(green|rain|sky|dawn|still|ley|spring).*/, Text.gray('Sneak-use on a Ritual Brazier with the matching seal seated. A tablet wants a Rite Circle. Pulse comes from the lattice around it.'))
-    event.add('tribalpower:bonding_charm', Text.gray('Adult familiar. Animals keep a failed charm; remnants spend it and want Voice with their tribe. One fighter and two helpers may follow.'))
-    event.add('tribalpower:camp_charter', Text.gray('Use on a player to invite them into a Tribal Power camp. /tribalpower camp create <name>, invite, join. Shared vault, twelve anchors, quartered standing.'))
-    event.add('tribalpower:ley_lens', Text.gray('Hold to see the ley. Sneak-use a Ley Collector, or a familiar, for its numbers.'))
-    event.add('tribalpower:lattice_tuner', Text.gray('Mark a machine face, then use on a relay. Do not mark the plate. Or seat the same unique item in both Bond slots.'))
-    event.add('tribalpower:item_relay', Text.gray('Snap onto a machine face. Pair Bond slots or tuner-bind a destination. Hoppers cannot steal the Bond or Rune.'))
-    event.add('tribalpower:fluid_relay', Text.gray('Snap onto a tank face. Water Seal moves fluid, Earth Seal moves items; empty uses the plate name.'))
+    event.add('tribalpower:tribe_hearth', Text.translate('tooltip.ninjacatpack.tribe_hearth').gray())
+    event.add('tribalpower:tribe_mark', Text.translate('tooltip.ninjacatpack.tribe_mark').gray())
+    event.add('tribalpower:kinship_totem', Text.translate('tooltip.ninjacatpack.kinship_totem').gray())
+    event.add('tribalpower:loom_thread', Text.translate('tooltip.ninjacatpack.loom_thread').gray())
+    event.add('tribalpower:silent_drum', Text.translate('tooltip.ninjacatpack.silent_drum').gray())
+    event.add(/tribalpower:rite_(green|rain|sky|dawn|still|ley|spring).*/, Text.translate('tooltip.ninjacatpack.tribalpower_rite').gray())
+    event.add('tribalpower:bonding_charm', Text.translate('tooltip.ninjacatpack.bonding_charm').gray())
+    event.add('tribalpower:camp_charter', Text.translate('tooltip.ninjacatpack.camp_charter').gray())
+    event.add('tribalpower:ley_lens', Text.translate('tooltip.ninjacatpack.ley_lens').gray())
+    event.add('tribalpower:lattice_tuner', Text.translate('tooltip.ninjacatpack.lattice_tuner').gray())
+    event.add('tribalpower:item_relay', Text.translate('tooltip.ninjacatpack.item_relay').gray())
+    event.add('tribalpower:fluid_relay', Text.translate('tooltip.ninjacatpack.fluid_relay').gray())
   }
   // Tribal Power 3.2 — Listening Pit, gates, six voices. Quests are the rest of Tribal Weave.
   if (Item.exists('tribalpower:stone_font')) {
-    event.add('tribalpower:stone_font', Text.gray('Four chalk marks. Cobble at 4 Pulse/s; Earth for stone; Fire and Water, or water plus lava, for obsidian. Sneak-use the Codex on it.'))
-    event.add('tribalpower:resonance_mesh', Text.gray('Centre of a Listening Pit. Sample on top is a filter. Mining stays cheaper.'))
-    event.add('tribalpower:anchor_stone', Text.gray('Braces a font, a pit and a Far Gate. Four corners.'))
-    event.add('tribalpower:gate_frame', Text.gray('A five-by-five Way Gate ring without its corners. Keystone at the bottom centre.'))
-    event.add('tribalpower:gate_keystone', Text.gray('Lights the gate. Waystone Compass or chalk within 64 blocks; Gate Sigil for a Far Gate.'))
-    event.add('tribalpower:gate_sigil', Text.gray('Names a Far Gate pair. Loom voice nearby. 120 Pulse a traveller.'))
-    event.add('tribalpower:ember_horn', Text.gray('Fire. Burns furnace fuel for up to 20 Pulse a second while lit.'))
-    event.add('tribalpower:wind_harp', Text.gray('Air. Altitude, open sky, weather. Harps within 12 blocks divide the wind.'))
-    event.add('tribalpower:wave_drum', Text.gray('Water. Adjacent water or piped. Passive drums within 8 blocks divide the water.'))
-    event.add('tribalpower:wake_bell', Text.gray('Spirit. Nearby deaths, tolled out at no more than 8 Pulse a second.'))
-    event.add('tribalpower:loom_anchor', Text.gray('Loom. One Pulse a second per distinct nearby voice, doubled during a Ley Binding.'))
-    event.add('tribalpower:pulse_cairn', Text.gray('4,000 Pulse. Stack five. Turns a bursty bell into a steady pit.'))
-    event.add('tribalpower:music_disc_drum_circle', Text.gray('From a chest at the Drum Circle, or from The Unsung. Play it in a jukebox.'))
+    event.add('tribalpower:stone_font', Text.translate('tooltip.ninjacatpack.stone_font').gray())
+    event.add('tribalpower:resonance_mesh', Text.translate('tooltip.ninjacatpack.resonance_mesh').gray())
+    event.add('tribalpower:anchor_stone', Text.translate('tooltip.ninjacatpack.anchor_stone').gray())
+    event.add('tribalpower:gate_frame', Text.translate('tooltip.ninjacatpack.gate_frame').gray())
+    event.add('tribalpower:gate_keystone', Text.translate('tooltip.ninjacatpack.gate_keystone').gray())
+    event.add('tribalpower:gate_sigil', Text.translate('tooltip.ninjacatpack.gate_sigil').gray())
+    event.add('tribalpower:ember_horn', Text.translate('tooltip.ninjacatpack.ember_horn').gray())
+    event.add('tribalpower:wind_harp', Text.translate('tooltip.ninjacatpack.wind_harp').gray())
+    event.add('tribalpower:wave_drum', Text.translate('tooltip.ninjacatpack.wave_drum').gray())
+    event.add('tribalpower:wake_bell', Text.translate('tooltip.ninjacatpack.wake_bell').gray())
+    event.add('tribalpower:loom_anchor', Text.translate('tooltip.ninjacatpack.loom_anchor').gray())
+    event.add('tribalpower:pulse_cairn', Text.translate('tooltip.ninjacatpack.pulse_cairn').gray())
+    event.add('tribalpower:music_disc_drum_circle', Text.translate('tooltip.ninjacatpack.music_disc_drum_circle').gray())
   }
   if (Item.exists('tribalpower:shard_lamp')) {
-    event.add('tribalpower:shard_lamp', Text.gray('1–2 Pulse a second. Redstone dims it.'))
-    event.add('tribalpower:glow_reed', Text.gray('Cheap Pulse lamp. Redstone dims it.'))
-    event.add('tribalpower:echo_sconce', Text.gray('Wall Pulse lamp. Redstone dims it.'))
-    event.add('tribalpower:ember_bowl', Text.gray('Bowl Pulse lamp. Redstone dims it.'))
-    event.add('tribalpower:sky_charm', Text.gray('Wear in a Tribal charm slot. Sneak-use a totem to bind a voice. Sky with Air is creative flight.'))
-    event.add('tribalpower:chorus_charm', Text.gray('Binds every nearby totem voice at a Ritual Brazier.'))
-    event.add('tribalpower:seal_loom', Text.gray('Weaves Recipe Seals. Empty bottles return to the slot that held them.'))
-    event.add('tribalpower:tide_pump', Text.gray('Moves cistern fluid. Rank it at Echo stations; rank survives pickup.'))
-    event.add('tribalpower:ember_kiln', Text.gray('Fire totem. Smelts grit and every furnace recipe for Pulse.'))
-    event.add('tribalpower:pulse_adapter', Text.gray('1 Pulse = 100 FE. Unranked 20 Pulse/s. Rank at Echo stations. Cannot receive FE.'))
-    event.add('tribalpower:wind_charm', Text.gray('Hang from a ceiling. March camp furniture.'))
+    event.add('tribalpower:shard_lamp', Text.translate('tooltip.ninjacatpack.shard_lamp').gray())
+    event.add('tribalpower:glow_reed', Text.translate('tooltip.ninjacatpack.glow_reed').gray())
+    event.add('tribalpower:echo_sconce', Text.translate('tooltip.ninjacatpack.echo_sconce').gray())
+    event.add('tribalpower:ember_bowl', Text.translate('tooltip.ninjacatpack.ember_bowl').gray())
+    event.add('tribalpower:sky_charm', Text.translate('tooltip.ninjacatpack.sky_charm').gray())
+    event.add('tribalpower:chorus_charm', Text.translate('tooltip.ninjacatpack.chorus_charm').gray())
+    event.add('tribalpower:seal_loom', Text.translate('tooltip.ninjacatpack.seal_loom').gray())
+    event.add('tribalpower:tide_pump', Text.translate('tooltip.ninjacatpack.tide_pump').gray())
+    event.add('tribalpower:ember_kiln', Text.translate('tooltip.ninjacatpack.ember_kiln').gray())
+    event.add('tribalpower:pulse_adapter', Text.translate('tooltip.ninjacatpack.pulse_adapter').gray())
+    event.add('tribalpower:wind_charm', Text.translate('tooltip.ninjacatpack.wind_charm').gray())
   }
 })

@@ -31,8 +31,8 @@ final class StrandRelics {
     private static final String ROOT_KEY = "root_until";
 
     static RelicPower rootheart() {
-        return new BaseRelic("Rootheart", "Anchored: knockback taken -60 %.",
-                "Root Down: root yourself for 5 s with 8 hearts of absorption, no fall damage, and Slowness II on anything that hits you. Sneak to cancel.", 600) { // 30 s
+        return new BaseRelic("item.guardians.relic_rootheart", "message.guardians.relic.rootheart.passive",
+                "message.guardians.relic.rootheart.active", 600) { // 30 s
             @Override public void onWorn(ServerPlayer p, boolean worn) {
                 RelicUtil.modifier(p, Attributes.KNOCKBACK_RESISTANCE, "rootheart_anchor", 0.6, AttributeModifier.Operation.ADD_VALUE, worn);
                 if (!worn && RelicUtil.until(p, ROOT_KEY)) { RelicUtil.clear(p, ROOT_KEY); RelicUtil.unroot(p); }
@@ -65,8 +65,8 @@ final class StrandRelics {
     private static final String SHRED_KEY = "shred_until";
 
     static RelicPower grindcore() {
-        return new BaseRelic("Grindcore", "Grit: immune to Mining Fatigue; your hand sieves get one extra fortune roll.",
-                "Shred: your next melee hit within 6 s strips 2 armour from the target for 8 s.", 500) { // 25 s
+        return new BaseRelic("item.guardians.relic_grindcore", "message.guardians.relic.grindcore.passive",
+                "message.guardians.relic.grindcore.active", 500) { // 25 s
             @Override public void onWearerUseBlock(ServerPlayer p, ItemStack s, BlockPos pos) {
                 if (RelicUtil.EXDEORUM) SieveCompat.onRightClick(p, p.serverLevel(), pos);
             }
@@ -95,8 +95,8 @@ final class StrandRelics {
 
     // ================================================================== Thornseed (Sprout)
     static RelicPower thornseed() {
-        return new BaseRelic("Thornseed", "Bramble Skin: attackers take 1 heart; immune to berry-bush and cactus damage.",
-                "Bloom: grow a ring of thorn hedge around you for 20 s and give you and mates inside it Regeneration II for 6 s.", 800) { // 40 s
+        return new BaseRelic("item.guardians.relic_thornseed", "message.guardians.relic.thornseed.passive",
+                "message.guardians.relic.thornseed.active", 800) { // 40 s
             @Override public void onWearerHurt(ServerPlayer p, ItemStack s, LivingIncomingDamageEvent e) {
                 RelicUtil.contactImmune(e);
                 RelicUtil.thorns(p, e, 2.0F);                                    // 1 heart
@@ -123,7 +123,7 @@ final class StrandRelics {
                 RelicUtil.burst(l, ParticleTypes.HAPPY_VILLAGER, p.position().add(0, 1, 0), 30, 2.0, 0.1);
                 RelicUtil.ring(l, ParticleTypes.GLOW, p.position().add(0, 0.6, 0), 2.7, 24);
                 RelicUtil.sound(p, SoundEvents.SWEET_BERRY_BUSH_BREAK, 1.2F, 0.7F);
-                if (placed == 0) RelicUtil.note(p, "No soil for the hedge here, but the sap still runs.");
+                if (placed == 0) RelicUtil.note(p, "message.guardians.relic.no_soil_for_hedge_here");
                 return true;
             }
         };
@@ -135,8 +135,8 @@ final class StrandRelics {
     private static final int EDGE_MAX = 2, EDGE_CD = 240;                          // 2 charges, one back every 12 s
 
     static RelicPower edgestep() {
-        return new BaseRelic("Edgestep", "Cat's Landing: no fall damage from 12 blocks or less.",
-                "Edgestep: dash 6 blocks the way you look (works in the air), 0.3 s of i-frames, and +50 % damage on a hit right after. Two charges.", EDGE_CD) {
+        return new BaseRelic("item.guardians.relic_edgestep", "message.guardians.relic.edgestep.passive",
+                "message.guardians.relic.edgestep.active", EDGE_CD) {
             @Override public void onWorn(ServerPlayer p, boolean worn) {
                 RelicUtil.modifier(p, Attributes.SAFE_FALL_DISTANCE, "edgestep_landing", 9.0, AttributeModifier.Operation.ADD_VALUE, worn); // 3 -> 12
             }
@@ -186,8 +186,8 @@ final class StrandRelics {
     private static final String DRUM_HITS = "drum_hits";
 
     static RelicPower drumpulse() {
-        return new BaseRelic("Drumpulse", "On the Beat: every 4th hit you land deals +2 hearts.",
-                "Downbeat: stun every mob within 7 blocks for 2 s and knock them back.", 700) { // 35 s
+        return new BaseRelic("item.guardians.relic_drumpulse", "message.guardians.relic.drumpulse.passive",
+                "message.guardians.relic.drumpulse.active", 700) { // 35 s
             @Override public void onWearerHit(ServerPlayer p, ItemStack s, LivingEntity target, LivingDamageEvent.Pre e) {
                 CompoundTag t = RelicUtil.tag(p);
                 int hits = t.getInt(DRUM_HITS) + 1;
@@ -219,8 +219,8 @@ final class StrandRelics {
 
     // ================================================================== Cogloop (Clock)
     static RelicPower cogloop() {
-        return new BaseRelic("Cogloop", "Wound Tight: Haste I while worn.",
-                "Rewind: reset the cooldown of every other relic you carry, refill Edgestep, and blink back to where you stood 3 s ago.", 1200) { // 60 s
+        return new BaseRelic("item.guardians.relic_cogloop", "message.guardians.relic.cogloop.passive",
+                "message.guardians.relic.cogloop.active", 1200) { // 60 s
             @Override public void tickWorn(ServerPlayer p, ItemStack s) {
                 RelicUtil.passive(p, MobEffects.DIG_SPEED, 0);                  // Haste I
                 RelicTimers.recordTrail(p);
@@ -252,8 +252,8 @@ final class StrandRelics {
 
     // ================================================================== Hivecall (Swarm)
     static RelicPower hivecall() {
-        return new BaseRelic("Hivecall", "Keeper: bees never hurt you; hives within 16 blocks work 10 % faster.",
-                "Call the Swarm: four relic-bees for 20 s that harass whatever you hit (Poison I on sting) and pop into a honey bottle each.", 900) { // 45 s
+        return new BaseRelic("item.guardians.relic_hivecall", "message.guardians.relic.hivecall.passive",
+                "message.guardians.relic.hivecall.active", 900) { // 45 s
             @Override public void onWearerHurt(ServerPlayer p, ItemStack s, LivingIncomingDamageEvent e) { RelicUtil.beeImmune(e); }
             @Override public void tickWorn(ServerPlayer p, ItemStack s) { RelicUtil.calmBees(p); if (p.tickCount % 10 == 0) RelicUtil.hurryHives(p, 16); }
             @Override public boolean activate(ServerPlayer p, ItemStack s) {
@@ -285,8 +285,8 @@ final class StrandRelics {
 
     // ================================================================== Sealmark (Sigil)
     static RelicPower sealmark() {
-        return new BaseRelic("Sealmark", "Warded: magic damage taken -20 %.",
-                "Sealmark: ward yourself (or the mate you look at, within 8 blocks): the next hit of 3 hearts or more is negated. Lasts 20 s.", 1000) { // 50 s
+        return new BaseRelic("item.guardians.relic_sealmark", "message.guardians.relic.sealmark.passive",
+                "message.guardians.relic.sealmark.active", 1000) { // 50 s
             @Override public void onWearerHurt(ServerPlayer p, ItemStack s, LivingIncomingDamageEvent e) { RelicUtil.magicReduce(e, 0.8F); }
             @Override public boolean activate(ServerPlayer p, ItemStack s) {
                 ServerPlayer target = RelicUtil.lookedMate(p, 8);
@@ -298,8 +298,8 @@ final class StrandRelics {
                 RelicUtil.ring(l, RelicUtil.TEAL, c.add(0, 0.6, 0), 0.8, 8);
                 RelicUtil.ring(l, RelicUtil.TEAL, c.add(0, -0.6, 0), 0.8, 8);
                 RelicUtil.sound(target, SoundEvents.AMETHYST_BLOCK_CHIME, 1.2F, 0.8F);
-                if (target != p) { RelicUtil.note(p, "Ward placed on " + target.getGameProfile().getName() + "."); RelicUtil.note(target, p.getGameProfile().getName() + " warded you."); }
-                else RelicUtil.note(p, "Ward up.");
+                if (target != p) { RelicUtil.note(p, "message.guardians.relic.ward_placed_on", target.getGameProfile().getName()); RelicUtil.note(target, "message.guardians.relic.warded_you", p.getGameProfile().getName()); }
+                else RelicUtil.note(p, "message.guardians.relic.ward_up");
                 return true;
             }
         };
@@ -307,8 +307,8 @@ final class StrandRelics {
 
     // ================================================================== Loomthread (Spindle)
     static RelicPower loomthread() {
-        return new BaseRelic("Loomthread", "Re-woven: +1 heart max health per two Strands your Clowder has tensioned (up to +4).",
-                "Loomthread: reel every Clowder-mate within 24 blocks to your side and give everyone Resistance I for 5 s.", 1800) { // 90 s
+        return new BaseRelic("item.guardians.relic_loomthread", "message.guardians.relic.loomthread.passive",
+                "message.guardians.relic.loomthread.active", 1800) { // 90 s
             @Override public void tickWorn(ServerPlayer p, ItemStack s) {
                 if (p.tickCount % 20 != 0) return;
                 // Loom Tension has no max pool or decay in this pack (it is a count of seated Strands), so the passive scales off it instead.
@@ -333,7 +333,7 @@ final class StrandRelics {
                     m.teleportTo(l, dest.x, dest.y, dest.z, m.getYRot(), m.getXRot());
                     m.setDeltaMovement(Vec3.ZERO); m.fallDistance = 0;
                     RelicUtil.effect(m, MobEffects.DAMAGE_RESISTANCE, 100, 0);
-                    RelicUtil.note(m, p.getGameProfile().getName() + " reels you in.");
+                    RelicUtil.note(m, "message.guardians.relic.reels_you_in", p.getGameProfile().getName());
                 }
                 RelicUtil.burst(l, RelicUtil.TEAL, p.position().add(0, 1, 0), 20, 0.8, 0.0);
                 RelicUtil.sound(p, SoundEvents.UI_LOOM_TAKE_RESULT, 1.2F, 0.9F);

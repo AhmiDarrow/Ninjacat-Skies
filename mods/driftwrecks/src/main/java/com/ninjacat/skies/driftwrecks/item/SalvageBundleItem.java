@@ -42,7 +42,8 @@ public class SalvageBundleItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext ctx, List<Component> tip, TooltipFlag flag) {
         String owner = stack.get(DwComponents.OWNER.get());
-        if (owner != null) tip.add(Component.translatable("item.driftwrecks.salvage_bundle.owner", owner).withStyle(st -> st.withColor(0xD4A84B)));
+        if (owner != null) tip.add(Component.translatable("item.driftwrecks.salvage_bundle.owner",
+                owner.isEmpty() ? Component.translatable("item.driftwrecks.salvage_bundle.owner_unknown") : owner).withStyle(st -> st.withColor(0xD4A84B)));
         tip.add(Component.translatable("item.driftwrecks.salvage_bundle.tip").withStyle(st -> st.withColor(0x3D7A7A)));
     }
 }

@@ -36,5 +36,7 @@
   "message.voidloom.tension.input_added": "Sealed into the Tension Barrel: %s.",
   "message.voidloom.tension.collected": "Tension settles — you take what it made.",
   "subtitles.voidloom.loomframe_sift": "Loomframe sifts",
-  "subtitles.voidloom.barrel_settle": "Barrel settles"
+  "subtitles.voidloom.barrel_settle": "Barrel settles",
+  "message.voidloom.tooltip.spindle_crook": "Pull silk from leaves — Ex Deorum crook recipes apply.",
+  "message.voidloom.tooltip.spindle_hammer": "Break grit into something the Loom can use."
 }

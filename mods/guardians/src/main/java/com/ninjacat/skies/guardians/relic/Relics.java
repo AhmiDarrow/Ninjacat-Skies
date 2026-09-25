@@ -34,9 +34,10 @@ public final class Relics {
 
     static RelicPower trophy(GuardianKind kind) {
         return new RelicPower() {
-            public String title() { return "Woven Relic of " + kind.title; }
-            public String passiveText() { return "A trophy from the arena."; }
-            public String activeText() { return "Nothing yet."; }
+            public String title() { return "message.guardians.relic.trophy_title"; }
+            public Object[] titleArgs() { return new Object[] {kind.titleComponent()}; }
+            public String passiveText() { return "message.guardians.relic.trophy_passive"; }
+            public String activeText() { return "message.guardians.relic.trophy_active"; }
             public int cooldownTicks() { return 20; }
             public boolean activate(ServerPlayer p, ItemStack s) { return false; }
         };

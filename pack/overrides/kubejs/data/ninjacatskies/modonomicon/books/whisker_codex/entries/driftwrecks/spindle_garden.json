@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Flax Field",
-  "description": "Loom-stitchers · Garden",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_garden.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_garden.description",
   "icon": "driftwrecks:keepsake_spindle_garden",
   "x": 7,
   "y": 2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Flax Field",
-      "text": "The Loom-stitchers grew their own thread: a blue flax field on a slope above the looms, harvested by every hand on the island at once. It was the only day the looms were quiet. The field still flowers blue. Harvest it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_garden.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_garden.page.0.text"
     }
   ],
   "condition": {

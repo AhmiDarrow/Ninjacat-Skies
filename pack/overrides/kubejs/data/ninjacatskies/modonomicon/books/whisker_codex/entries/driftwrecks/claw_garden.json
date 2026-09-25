@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Ledge Beds",
-  "description": "Edge-walkers · Garden",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_garden.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_garden.description",
   "icon": "driftwrecks:keepsake_claw_garden",
   "x": 2,
   "y": 2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Ledge Beds",
-      "text": "Edge-walkers kept gardens on ledges no one else could reach: cliff-roses, rope-moss, a stubborn kind of bean. A ledge bed was a reward for a new route. Some of these beds are still blooming on a piece of cliff that is no longer attached to anything. Climb."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_garden.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.claw_garden.page.0.text"
     }
   ],
   "condition": {

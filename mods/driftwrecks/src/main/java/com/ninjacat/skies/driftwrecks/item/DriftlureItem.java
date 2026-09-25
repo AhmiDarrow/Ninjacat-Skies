@@ -39,7 +39,7 @@ public class DriftlureItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        if (!level.isClientSide) player.displayClientMessage(NinjacatText.teal("Hang the lure on your Tension Post."), true);
+        if (!level.isClientSide) player.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.lure.hang_on_post"), true);
         return InteractionResultHolder.pass(player.getItemInHand(hand));
     }
 
@@ -48,23 +48,23 @@ public class DriftlureItem extends Item {
         Optional<Clowder> oc = LoomTension.clowderOf(p);
         if (oc.isEmpty()) return false;
         Clowder c = oc.get();
-        if (!LoomTension.isSeated(c, Strand.SOIL)) { p.displayClientMessage(NinjacatText.teal("Tension the Soil Strand first. Nothing drifts to a loose weave."), true); return false; }
+        if (!LoomTension.isSeated(c, Strand.SOIL)) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.lure.need_soil"), true); return false; }
         DriftManager m = DriftManager.get(p.server);
-        if (m.byTeam(c.id()) != null) { p.displayClientMessage(NinjacatText.teal("Your weft already holds a wreck."), true); return false; }
+        if (m.byTeam(c.id()) != null) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.lure.already_holds"), true); return false; }
         TeamDrift t = TeamDrift.of(c);
         long now = p.serverLevel().getGameTime();
         if (now < t.lureReadyAt()) {
             long mins = (t.lureReadyAt() - now + 1199) / 1200;
-            p.displayClientMessage(NinjacatText.teal("The weft is still settling. Try again in " + mins + (mins == 1 ? " minute." : " minutes.")), true);
+            p.displayClientMessage((mins == 1 ? NinjacatText.tealKey("message.driftwrecks.lure.settling_one", mins) : NinjacatText.tealKey("message.driftwrecks.lure.settling_many", mins)), true);
             return false;
         }
         Strand s = strandBead ? strandOf(stack) : null;
-        if (strandBead && (s == null || !LoomTension.isSeated(c, s))) { p.displayClientMessage(NinjacatText.teal("That bead's Strand is not tensioned here."), true); return false; }
+        if (strandBead && (s == null || !LoomTension.isSeated(c, s))) { p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.lure.bead_not_tensioned"), true); return false; }
         t.fill();
         t.setLureStrand(s);
         t.setLureReadyAt(now + DriftConfig.LURE_COOLDOWN_MINUTES.get() * 1200L);
         t.dirty();
-        p.sendSystemMessage(NinjacatText.teal("The lure hums on the post. Something out there turns toward it."));
+        p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.lure.hums"));
         return true;
     }
 

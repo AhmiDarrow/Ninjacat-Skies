@@ -1,5 +1,7 @@
 package com.ninjacat.skies.guardians.entity.bosses;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import com.ninjacat.skies.guardians.GuardianKind;
 import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import net.minecraft.core.BlockPos;
@@ -31,12 +33,12 @@ public class BeddownGuardian extends GuardianEntity {
 
     public BeddownGuardian(EntityType<? extends GuardianEntity> type, Level level) { super(type, level, GuardianKind.BEDDOWN); }
 
-    @Override protected String immuneMessage() { return "The Beddown sleeps under the soil. Dig to the glowing seam and break its root core."; }
+    @Override protected MutableComponent immuneMessage() { return Component.translatable("message.guardians.beddown.beddown_sleeps_under_soil_dig"); }
     @Override protected boolean mobile() { return core == null && slamTimer < 0; }
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) shout("The Beddown answers for the Cut. When it slams and the soil rises, dig for the seam that glows.");
+        if (ageInFight == 1) shout("message.guardians.beddown.beddown_answers_for_cut_when");
         if (slamTimer >= 0) tickSlam();
         if (!fillQueue.isEmpty()) tickFill();
         if (core != null) tickBuried();
@@ -47,7 +49,7 @@ public class BeddownGuardian extends GuardianEntity {
     protected void onPhase(int phase) {
         if (core != null || slamTimer >= 0) return;
         slamTimer = 0; getNavigation().stop(); playClip(CLIP_ATTACK);
-        say("The Beddown rears up... the ground is coming.");
+        say("message.guardians.beddown.beddown_rears_up_ground_coming");
     }
 
     /** 0.9 s telegraph then the slam: 3 hearts + knockback in r 8, and the burial starts. */
@@ -61,7 +63,7 @@ public class BeddownGuardian extends GuardianEntity {
 
     private void startBurial() {
         Vec3 o = origin();
-        if (arena() == null) { say("(no arena — the soil stays still)"); return; }
+        if (arena() == null) { say("message.guardians.beddown.no_arena_soil_stays_still"); return; }
         // pick the seam that surfaces this time and plant the core on the pit floor before the dirt covers it
         double a = -(Math.PI * 2 * random.nextInt(SEAMS) / SEAMS);            // seams at 2πk/7 in arena_factory, mirrored into -z by the plan
         core = BlockPos.containing(Mech.polar(o, 6, a, o.y));
@@ -77,7 +79,7 @@ public class BeddownGuardian extends GuardianEntity {
         }
         java.util.Collections.shuffle(fillQueue, new java.util.Random(random.nextLong()));
         setImmune(true); buryTicks = 0;
-        shout("The soil floods the pit. Find the seam that glows and break the root core!");
+        shout("message.guardians.beddown.soil_floods_pit_find_seam");
     }
 
     private void tickFill() {
@@ -106,7 +108,7 @@ public class BeddownGuardian extends GuardianEntity {
         if (tickCount % 20 == 0) Mech.burst(serverLevel(), Mech.TEAL, c.add(0, LAYER + 1.5, 0), 12, 1.2);
         boolean broken = !serverLevel().getBlockState(core).is(Blocks.SHROOMLIGHT);
         if (broken || buryTicks > 20 * 90) {                       // 90 s safety valve so a stuck party is never soft-locked
-            if (broken) shout("The root core cracks. The Beddown heaves up through the soil!"); else say("The soil settles on its own...");
+            if (broken) shout("message.guardians.beddown.root_core_cracks_beddown_heaves"); else say("message.guardians.beddown.soil_settles_own");
             sound(SoundEvents.WITHER_BREAK_BLOCK, 1.5F, 0.6F); Mech.burst(serverLevel(), ParticleTypes.EXPLOSION, c, 3, 1);
             core = null; fillQueue.clear(); setImmune(false); sinking = Math.max(1, layer.size());
         }

@@ -6,7 +6,9 @@ The Work lives only in the pack kubejs copy. Category maps share the questline a
 """
 from __future__ import annotations
 
+import copy
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,11 +16,26 @@ BOOK = ROOT / "mods/ninjacatskies/src/main/resources/data/ninjacatskies/modonomi
 PACK_BOOK = ROOT / "pack/overrides/kubejs/data/ninjacatskies/modonomicon/books/whisker_codex"
 NS = "ninjacatskies"
 ATLAS = f"{NS}:textures/gui/quest_atlas.png"
+# The book JSON holds lang keys; the English lives in its own namespace so it never collides with
+# assets/ninjacatskies/lang. Keys the pack copy alone uses go in the kubejs resource pack.
+CORE_LANG = ROOT / "mods/ninjacatskies/src/main/resources/assets/ninjacatskies_codex/lang/en_us.json"
+PACK_LANG = ROOT / "pack/overrides/kubejs/assets/ninjacatskies_codex/lang/en_us.json"
+KEY_ROOT = f"book.{NS}.whisker_codex"
+LANG_FIELDS = ("name", "description", "tooltip", "title", "text", "multiblock_name")
+KEY_SHAPE = re.compile(r"^[a-z0-9_.\-]+$")
+# English of the keys from the previous run: pack-only hand files (the_work primers) are re-read
+# already keyed, so their fields are turned back into English before keying again.
+OLD_LANG: dict[str, str] = {}
+for _lang in (CORE_LANG, PACK_LANG):
+    if _lang.exists():
+        OLD_LANG.update({k: v.replace("%%", "%") for k, v in json.loads(_lang.read_text(encoding="utf-8")).items()})
+_RAW: dict[Path, dict] = {}  # last unpaginated object written per path (Core pins re-paginate from it)
 
 
 def w(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    _RAW[path] = copy.deepcopy(obj)
 
 
 def text(title: str, body: str) -> dict:
@@ -815,8 +832,9 @@ for si, s in enumerate(DW_STRANDS):
 entry("driftwrecks", "heart", "The heart of the old world", "Where all nine tribes met.", "driftwrecks:keepsake_heartwreck", 4, 5,
       [text("The heart of the old world", DW_HEART[3])], condition=dw_adv("lore/heart"), hide=True)
 
-from whisker_lessons import build_lessons, sync_pack_primers, polish_book
+from whisker_lessons import build_lessons, sync_pack_primers, polish_book, paginate_pages
 build_lessons(BOOK, w, text, entry, category)
+CORE_RAW = {p: o for p, o in _RAW.items() if BOOK in p.parents}
 polish_book(BOOK, w)
 print("Whisker Codex book written to", BOOK.relative_to(ROOT))
 
@@ -888,3 +906,143 @@ w(PACK_BOOK / "entries" / "the_work" / "old_world.json", {
 print("Pack kubejs book synced to", PACK_BOOK.relative_to(ROOT))
 sync_pack_primers(BOOK, PACK_BOOK, w)
 polish_book(PACK_BOOK, w)
+
+# ------------------------------------------------------------------------------------ Core pins
+# The Core mod's own copy keeps its shipped wording for these entries (the pack copy, which wins at
+# runtime, carries the current text above; test_codex_book pins Core pad_runners to Sage Notes).
+# Each pair is (current source text, Core wording), applied before pagination, Core only.
+CORE_PINS = {
+    "braid/colony": {"text": [
+        ("placed on the pad and woken with another flower (right-click it). Wait.", "placed on the pad. Wait."),
+        ("oak logs around a flower, woken with a right-click from another flower — then hives", "oak logs around a flower — then hives"),
+    ]},
+    "braid/listening_pit": {"text": [
+        ("Use it empty-handed and play the Gate Rite: hit the falling beats on A, S, D, F. Land 60% and it opens; no Pulse needed. ",
+         "Charge it with Pulse, then empty-handed use it. "),
+    ]},
+    "braid/living_lattice": {"text": [
+        ("compass landings, ranked machines, Spirit Charms, Pulse lamps and the sixth Loom voice live in that book, not here.\n"
+         "A held redstone signal pauses generators other than the Drumheart.",
+         "compass landings and the sixth Loom voice live in that book, not here."),
+    ]},
+    "tribes/camps": {"text": [
+        ("Hurting Kin costs 25 and turns the Hunters on you. Breaking a tribe banner costs five, the hearth forty. Generic camp blocks do not cost.",
+         "Hurting Kin costs 25 and turns the Hunters on you; breaking camp blocks costs five each, the hearth forty."),
+    ]},
+    "tribes/spindle": {"text": [
+        ("Loom Thread and a Waystone Compass at Friend, a Loom Anchor and a Loom Seal at Kin",
+         "Loom Thread at Friend and a Horizon Compass at Kin"),
+    ]},
+    "first_steps/pad_runners": {"icon": "chocobosreborn:sage_notes", "text": [
+        ("You need a **Gate Drum**, **Gysahl**, and the **Chocobo Almanac**.",
+         "You need a charged **Gate Drum**, **Gysahl**, and **Sage Notes**."),
+        ("1. Use a **Gate Drum** empty-handed and play the Gate Rite (hit the beats on A, S, D, F; 60% opens it), then walk through.",
+         "1. Charge a **Gate Drum** with Pulse, then empty-handed use it and walk through. Do not strike it like a Drumheart."),
+        ("Picking drops seeds too; plant them on farmland at home.",
+         "Craft extras into seeds and plant them on dirt or March soil at home."),
+        ("3. Craft the **Chocobo Almanac** (book and a gysahl leaf) and use it anywhere: its pages list your own birds.",
+         "3. Craft **Sage Notes** (book and a gysahl leaf) and right-click a bird to read it."),
+        ("Ride a saddled bird to her, ask the Whiskerwind Guide, or craft a **Chocobo Pocketwatch** (gold nuggets around a clock, with a gysahl).",
+         "Mount a saddled bird and speak to her, or place a **Square Gate**."),
+        ("and the **Chocobo Almanac** to read the bird.", "and **Sage Notes** to read the bird."),
+        ("Gysahl is the only green in the wild; Krakka is two gysahl", "Krakka is two gysahl"),
+        ("**Carob** (Bilo at Whiskerwind, or Class A races)", "**Carob** (ravagers)"),
+        ("**Zeio** (Bilo, rare at Class S)", "**Zeio** (piglin brutes)"),
+        ("**Check:** the Almanac shows", "**Check:** Sage Notes shows"),
+    ]},
+}
+for rel, pin in CORE_PINS.items():
+    path = BOOK / "entries" / f"{rel}.json"
+    obj = copy.deepcopy(CORE_RAW[path])
+    if "icon" in pin:
+        obj["icon"] = pin["icon"]
+    for new, old in pin["text"]:
+        hits = 0
+        for page in obj["pages"]:
+            if new in page.get("text", ""):
+                page["text"] = page["text"].replace(new, old)
+                hits += 1
+        if not hits:
+            raise SystemExit(f"Core pin for {rel} no longer matches the source: {new[:60]!r}")
+    obj["pages"] = paginate_pages(obj["pages"])
+    w(path, obj)
+print("Core pins applied to", len(CORE_PINS), "entries")
+
+# ------------------------------------------------------------------------------------ lang keys
+# Every player-facing field becomes a key: <root>.category.<cat>.<field>, <root>.entry.<cat>.<entry>.<field>,
+# <root>.entry.<cat>.<entry>.page.<n>.<field>. The pack copy reuses a Core key wherever it shows the same
+# text in the same place (the_work primers mirror first_steps); anything else the pack alone shows gets
+# a <root>.pack.* key in the kubejs lang file. A literal % is written %% for Minecraft's formatter.
+SHARED = {  # (field, English) that is the same thing wherever it appears
+    ("title", "Continue"): f"{KEY_ROOT}.page.continue",
+    ("multiblock_name", "Placement example"): f"{KEY_ROOT}.multiblock.placement_example",
+    ("text", "Example layout, not an exact quest requirement. Read the steps for materials and operation."):
+        f"{KEY_ROOT}.multiblock.placement_example.text",
+}
+PRIMERS = {"this_book": "using_the_book", "first_hour": "safe_start", "tokens": "first_token", "the_campaign": "choose_branches"}
+
+
+def _base(root: str, rel: Path) -> str:
+    parts = rel.with_suffix("").parts
+    if parts == ("book",):
+        return root
+    if parts[0] == "categories":
+        return f"{root}.category.{parts[1]}"
+    return f"{root}.entry.{parts[1]}.{parts[2]}"
+
+
+def _fields(obj: dict):
+    """(slot, holder, field) for every lang field: slot is 'name' or 'page.3.text'."""
+    for f in LANG_FIELDS:
+        if isinstance(obj.get(f), str):
+            yield f, obj, f
+    for i, page in enumerate(obj.get("pages", [])):
+        for f in LANG_FIELDS:
+            if isinstance(page.get(f), str):
+                yield f"page.{i}.{f}", page, f
+
+
+def localize(book: Path, root: str, lang: dict, core: dict | None, core_lang: dict | None) -> dict:
+    seen = {}
+    for path in sorted(p for p in book.rglob("*.json")):
+        rel = path.relative_to(book)
+        obj = json.loads(path.read_text(encoding="utf-8"))
+        base = _base(root, rel)
+        slots = seen.setdefault(rel.as_posix(), {})
+        for slot, holder, field in _fields(obj):
+            english = holder[field]
+            if KEY_SHAPE.match(english):
+                if english not in OLD_LANG:
+                    raise SystemExit(f"{rel}: {slot} holds unknown key {english}")
+                english = OLD_LANG[english]
+            if not english:
+                continue
+            key = SHARED.get((field, english))
+            if key is None and core is not None:
+                twin = rel.as_posix()
+                if slot.startswith("page.") and rel.parts[:2] == ("entries", "the_work") and rel.stem in PRIMERS:
+                    twin = f"entries/first_steps/{PRIMERS[rel.stem]}.json"
+                hit = core.get(twin, {}).get(slot)
+                if hit and hit[1] == english:
+                    key = hit[0]
+            if key is None:
+                key = f"{base}.{slot}"
+            target = core_lang if (core_lang is not None and key in core_lang) else lang
+            value = english.replace("%", "%%")
+            if key in target and target[key] != value:
+                raise SystemExit(f"{rel}: key {key} already holds different text")
+            assert KEY_SHAPE.match(key), key
+            target[key] = value
+            holder[field] = key
+            slots[slot] = (key, english)
+        w(path, obj)
+    return seen
+
+
+core_lang: dict[str, str] = {}
+pack_lang: dict[str, str] = {}
+core_map = localize(BOOK, KEY_ROOT, core_lang, None, None)
+localize(PACK_BOOK, f"{KEY_ROOT}.pack", pack_lang, core_map, core_lang)
+w(CORE_LANG, core_lang)
+w(PACK_LANG, pack_lang)
+print(f"Codex lang: {len(core_lang)} Core keys, {len(pack_lang)} pack-only keys")

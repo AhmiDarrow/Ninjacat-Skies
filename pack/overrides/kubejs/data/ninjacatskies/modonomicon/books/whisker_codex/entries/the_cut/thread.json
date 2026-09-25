@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:the_cut",
-  "name": "Frayed Thread",
-  "description": "Currency, string, and Hall stalls.",
+  "name": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.description",
   "icon": "ninjacatskies:frayed_thread",
   "x": 4,
   "y": 2,
@@ -15,38 +15,38 @@
         "id": "ninjacatskies:frayed_thread",
         "count": 1
       },
-      "title": "Frayed Thread",
-      "text": "**Goal:** keep Thread as currency, and unravel it only when you need string.\\\nYou need quest rewards, flint-mesh dirt on a Loomframe, or a steward cache.\\\nEvery quest returns a little **Frayed Thread** — scraps of the Loom that still hold."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Unravel one for three string.\\\nOr keep it: **Kin stalls in Clowder Hall** (`/clowder hub`) sell saplings, buckets, meshes, pearls, and other things a pad runs short of.\\\nRight-click an Elder.\\\n**Check:** you can buy a sapling or mesh at a Hall Elder without going broke on string."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Earning Thread back",
-      "text": "**Goal:** turn a mined stockpile into spendable Thread.\\\nYou need blocks of copper, iron, gold, amethyst, emerald or diamond, or a netherite ingot."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Grit** in Clowder Hall takes them across the counter for Thread. The rate is bad on purpose — a whole diamond block comes back as 24 Thread, and Spark sells two diamonds for 80 — so it is a way to spend a surplus, never a loop to farm. Stock returns each Minecraft day."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** you can price one life at the Spark stall (four Shards, 400 Thread each) and say how many blocks that is before you start digging."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Codex Pages",
-      "text": "**Goal:** read a margin note without spending the page.\\\nYou need a **Codex Page** from seating (every third Strand) or a Hall Kin stall.\\\nEvery third Strand a Clowder seats, a **Codex Page** slips free — a margin note from that tribe. Right-click to read it. Pages are kept, not spent."
+      "title": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.5.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Hall Kin stalls at `/clowder hub` sell a few loose ones too. Those pick a tribe on their own.\\\n**Check:** right-click a page; it stays in your hand."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.the_cut.thread.page.6.text"
     }
   ],
   "parents": [

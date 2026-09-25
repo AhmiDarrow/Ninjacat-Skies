@@ -1,7 +1,7 @@
 {
-  "name": "Whisker Codex",
-  "tooltip": "Build, check, and explore the campaign.",
-  "description": "Start here for practical lessons, placement diagrams and the story of the broken sky.",
+  "name": "book.ninjacatskies.whisker_codex.name",
+  "tooltip": "book.ninjacatskies.whisker_codex.tooltip",
+  "description": "book.ninjacatskies.whisker_codex.description",
   "generate_book_item": false,
   "custom_book_item": "ninjacatskies:whisker_codex",
   "default_title_color": 13936715,

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "Drumhearts",
-  "description": "Keepers of the Spark Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.spark.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.spark.description",
   "icon": "ninjacatskies:strand_token_spark",
   "x": 4,
   "y": -2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Drumhearts",
-      "text": "The Drumhearts kept the beat under the whole sky. Spirit Pulse — power as rhythm before it was a number — ran from their drums along the lattice to every tribe.\\\nThe orphan engines you find still keep their time. Listen before you feed one."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Before the Cut the beat was civic: Pulse as a utility, drums as the sky's metronome, every pad on the same downbeat.\\\nWhat they lost was an audience.\\\nThe engines did not stop.\\\nThey had nobody left to stop for."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "You will find them still keeping time, waiting for a beat you have not struck yet."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,18 +30,18 @@
         "id": "ninjacatskies:strand_token_spark",
         "count": 1
       },
-      "title": "Spark Strand",
-      "text": "*The drum is not loud. The drum is steady. Be the drum.*\\\nSeated. The Drumhearts answer when this Post hums."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Their camp",
-      "text": "The Drumhearts keep a camp in the March steppe: huts, a fire, a Tribe Hearth, a Fire totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Their hearth favours copper, charged Pulse Cells, Bone Chimes. Their Elder trades Bone Chimes and Pulse Cells, and at Voice standing presses the tribe's Mark into your hand."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.spark.page.5.text"
     }
   ],
   "condition": {

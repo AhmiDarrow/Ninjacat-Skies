@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:tribes",
-  "name": "The Unsung",
-  "description": "What the March remembers.",
+  "name": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.description",
   "icon": "tribalpower:silent_drum",
   "x": 4,
   "y": 2,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Ancestor Halls",
-      "text": "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, four Lore Tablets in each hall, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "The Drum Circle",
-      "text": "Twelve pillars around a Silent Drum in the March highlands. Strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Beat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "tribalpower:unsung_heart",
         "count": 1
       },
-      "title": "Unsung Heart",
-      "text": "One per kill, with Loom Thread and Resonant Cores. It crafts the Resonance Totem (Loom), the sixth voice."
+      "title": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.tribes.the_unsung.page.3.text"
     }
   ],
   "condition": {

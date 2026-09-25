@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Start automatic power",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.description",
   "icon": "tribalpower:pulse_resonator",
   "x": 4,
   "y": 3,
@@ -11,29 +11,29 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Goal",
-      "text": "**Goal:** a Pulse Resonator that makes a small, steady trickle of Pulse without you standing at the drum.\\\nYou need a **Pulse Resonator**, an **Echo Shard**, and **Earth and Fire Resonance Totems**."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Starter generator",
-      "text": "1\\. Place the Resonator.\\\n2\\. Right-click it with the shard to install the reusable catalyst.\\\n3\\. Place the two different totems within 8 blocks. The diagram shows a compact example.\\\n4\\. Wait a second and inspect the generator. Stored Pulse should rise."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Power budget",
-      "text": "**Check:** stored Pulse climbs while you stand still.\\\nThe starter generator does not mean every machine can run continuously. If a machine spends power faster than you make it, let a reserve build up or improve generation."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Two identical totems count as one element. If generation stops, check the catalyst, different elements and pausing redstone. Read the Spirit Codex before larger totem layouts or a Conductor."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.automatic_power.page.3.text"
     },
     {
       "type": "modonomicon:multiblock",
       "multiblock_id": "ninjacatskies:codex/resonator_workshop",
-      "multiblock_name": "Placement example",
-      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "multiblock_name": "book.ninjacatskies.whisker_codex.multiblock.placement_example",
+      "text": "book.ninjacatskies.whisker_codex.multiblock.placement_example.text",
       "show_visualize_button": true
     }
   ],

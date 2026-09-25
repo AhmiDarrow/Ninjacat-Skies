@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Prepare the final reweave",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.description",
   "icon": "ninjacatskies:spindle_loom_fragment",
   "x": 2,
   "y": 6,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Readiness checklist",
-      "text": "**Goal:** seat all nine Strands, bring March Stone home, and close your Clowder's cut.\\\nYou need nine seated tokens, **March Stone**, and a way home.\\\nCount the Post notches before you leave. Prepare food, equipment and a return route. The **Spirit Codex** covers the Gate Drum and March travel."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Use the Post twice",
-      "text": "1\\. With all nine Strands seated, right-click the Tension Post with March Stone. This makes a **Spindle Loom Fragment**.\\\n2\\. Right-click the Post again, this time holding the Fragment, to reweave your team's sky.\\\nThese are world interactions, not crafting-table recipes."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.page.1.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Check",
-      "text": "**Check:** nine notches are lit, then the Fragment seats and the Fray over the Dock is thinner for your Clowder. If nothing happens, read the Post message. Other teams have their own progress."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.finish.page.2.text"
     }
   ],
   "parents": [

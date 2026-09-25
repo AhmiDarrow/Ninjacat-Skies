@@ -76,9 +76,9 @@ public final class SkyboundEvents {
         persistent.put(ROOT, data);
         enforceLives(player);
 
-        player.displayClientMessage(NinjacatText.teal("Skybound. The Loom is cut. Codex: Start here. Soil first."), true);
+        player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.join.welcome"), true);
         player.displayClientMessage(
-                NinjacatText.gold("Island Charter in hand — Dock: Create Team. Pad chests restore kits after claim."),
+                NinjacatText.goldKey("message.ninjacatskies.join.charter"),
                 false
         );
     }
@@ -91,8 +91,8 @@ public final class SkyboundEvents {
         LoomTension.clowderOf(player).ifPresent(team -> {
             int lives = ClowderLives.spend(team, SkiesConfig.STARTING_LIVES.get());
             for (ServerPlayer member : team.onlineMembers()) {
-                member.sendSystemMessage(NinjacatText.gold(player.getGameProfile().getName()
-                        + " fell. Clowder lives remaining: " + lives));
+                member.sendSystemMessage(NinjacatText.goldKey("message.ninjacatskies.lives.fell",
+                        player.getGameProfile().getName(), lives));
                 // The dying member's mode is applied after vanilla respawn.
                 if (member != player) enforceLives(member);
             }
@@ -143,8 +143,8 @@ public final class SkyboundEvents {
             if (!player.isSpectator()) {
                 player.getPersistentData().putBoolean(EXHAUSTED, true);
                 player.setGameMode(GameType.SPECTATOR);
-                player.sendSystemMessage(NinjacatText.gold(
-                        "Your Clowder has spent its last life. A rare life reward or an operator revive can restore the pool."));
+                player.sendSystemMessage(NinjacatText.goldKey(
+                        "message.ninjacatskies.lives.exhausted"));
             }
         } else if (lives > 0 && !teamDown && player.getPersistentData().getBoolean(EXHAUSTED)) {
             player.getPersistentData().remove(EXHAUSTED);
@@ -164,8 +164,8 @@ public final class SkyboundEvents {
             if (!ClowderLives.award(team, SkiesConfig.STARTING_LIVES.get(), milestone)) return false;
             for (ServerPlayer member : team.onlineMembers()) {
                 enforceLives(member);
-                member.sendSystemMessage(NinjacatText.gold("A Thread of Return: +1 shared Clowder life. Remaining: "
-                        + ClowderLives.remaining(team, SkiesConfig.STARTING_LIVES.get())));
+                member.sendSystemMessage(NinjacatText.goldKey("message.ninjacatskies.lives.thread_award",
+                        ClowderLives.remaining(team, SkiesConfig.STARTING_LIVES.get())));
             }
             return true;
         }).orElse(false);
@@ -182,8 +182,8 @@ public final class SkyboundEvents {
             int lives = ClowderLives.remaining(team, SkiesConfig.STARTING_LIVES.get());
             for (ServerPlayer member : team.onlineMembers()) {
                 enforceLives(member);
-                member.sendSystemMessage(NinjacatText.gold(player.getGameProfile().getName()
-                        + " spends a Thread of Return: +1 shared Clowder life. Remaining: " + lives));
+                member.sendSystemMessage(NinjacatText.goldKey("message.ninjacatskies.lives.thread_spent",
+                        player.getGameProfile().getName(), lives));
             }
             return true;
         }).orElse(false);
@@ -203,7 +203,7 @@ public final class SkyboundEvents {
                 enforceLives(member);
             }
         });
-        player.sendSystemMessage(NinjacatText.gold("Clowder revive — shared lives restored: " + lives));
+        player.sendSystemMessage(NinjacatText.goldKey("message.ninjacatskies.lives.revive", lives));
         return lives;
     }
 

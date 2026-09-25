@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Edgewalker",
-  "description": "Keeper of the Claw Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.description",
   "icon": "guardians:frayed_totem_edgewalker",
   "x": 2,
   "y": -3,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Edgewalker",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Sky Shards: ten deepslate shards floating over the void, crumbling bridges between them, gold claw-marks on the main shard where the boss lands."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "A pure duel. The Edgewalker leaps shard to shard and pounces whoever stands furthest from a wall; a gold claw-mark shows where, a breath before it lands — step off it. Bridges crumble behind you and return later. Falling costs six hearts and a trip back to your pad."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_edgewalker",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_edgestep",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Edgestep: no fall damage under twelve blocks and no slipping off edges. Edgestep dashes six blocks, twice, with a stronger hit at the end."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.edgewalker.page.4.text"
     }
   ],
   "parents": [

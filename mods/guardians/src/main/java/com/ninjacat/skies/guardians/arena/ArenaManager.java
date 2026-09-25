@@ -14,6 +14,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
@@ -66,24 +67,24 @@ public final class ArenaManager extends SavedData {
     // ------------------------------------------------------------------ summon
     /** Called by the Frayed Totem. Returns a failure message, or null when the fight started. */
     @Nullable
-    public String summon(ServerPlayer summoner, GuardianKind kind) {
+    public MutableComponent summon(ServerPlayer summoner, GuardianKind kind) {
         MinecraftServer server = summoner.server;
-        if (summoner.isSpectator()) return "A spent life cannot call a guardian.";
-        if (inArena(summoner)) return "You are already answering for the Cut.";
-        if (instanceOf(summoner) != null) return "Your Clowder is already in an arena.";
+        if (summoner.isSpectator()) return NinjacatText.tealKey("message.guardians.arena.spent_life_cannot_call");
+        if (inArena(summoner)) return NinjacatText.tealKey("message.guardians.arena.already_answering");
+        if (instanceOf(summoner) != null) return NinjacatText.tealKey("message.guardians.arena.clowder_already_in_arena");
         ServerLevel arena = arenaLevel(server);
-        if (arena == null) return "The arena is not woven into this world (dimension missing).";
+        if (arena == null) return NinjacatText.tealKey("message.guardians.arena.not_woven");
         Optional<Clowder> clowder = LoomTension.clowderOf(summoner);
         if (kind.tier == GuardianKind.Tier.INSANE && (clowder.isEmpty() || !LoomTension.isRewoven(clowder.get())))
-            return "That door only opens after the Reweave.";
+            return NinjacatText.tealKey("message.guardians.arena.door_after_reweave");
         if (kind.strand != null && (clowder.isEmpty() || !LoomTension.isSeated(clowder.get(), kind.strand)))
-            return "Seat the " + kind.strand.title() + " Strand at your Tension Post first — " + kind.title + " only answers for a Strand that is held.";
+            return NinjacatText.tealKey("message.guardians.arena.seat_strand_first", kind.strand.title(), kind.titleComponent());
         if (kind.strand == null && kind.tier == GuardianKind.Tier.EASY) {
             com.ninjacat.skies.core.tension.Strand need = kind == GuardianKind.LINTGOLEM
                     ? com.ninjacat.skies.core.tension.Strand.SOIL
                     : com.ninjacat.skies.core.tension.Strand.CLAW;
             if (clowder.isEmpty() || !LoomTension.isSeated(clowder.get(), need))
-                return "Seat the " + need.title() + " Strand at your Tension Post first — " + kind.title + " only answers for a Strand that is held.";
+                return NinjacatText.tealKey("message.guardians.arena.seat_strand_first", need.title(), kind.titleComponent());
         }
         // the party: Clowder members online and within 32 blocks of the summoner (they hear the totem)
         List<ServerPlayer> party = new ArrayList<>(); party.add(summoner);
@@ -104,8 +105,8 @@ public final class ArenaManager extends SavedData {
             storeReturnPoint(p);
             BlockPos pad = data.pads.isEmpty() ? BlockPos.ZERO : data.pads.get(i % data.pads.size());
             teleportToPad(p, arena, origin, pad);
-            p.sendSystemMessage(NinjacatText.gold("The Frayed Totem calls ").append(NinjacatText.teal(kind.title)).append(NinjacatText.gold(" to answer for the Cut.")));
-            p.displayClientMessage(NinjacatText.teal("Prove worthiness. Fall, and the totem is spent."), true);
+            p.sendSystemMessage(NinjacatText.goldKey("message.guardians.arena.totem_calls", kind.titleComponent().withStyle(st -> st.withColor(NinjacatText.TEAL))));
+            p.displayClientMessage(NinjacatText.tealKey("message.guardians.arena.prove_worthiness"), true);
         }
         // the guardian
         GuardianEntity boss = ModEntities.create(kind, arena);
@@ -118,7 +119,7 @@ public final class ArenaManager extends SavedData {
             arena.addFreshEntity(boss); inst.boss = boss.getUUID();
             arena.playSound(null, origin, SoundEvents.WITHER_SPAWN, SoundSource.HOSTILE, 3.0F, 0.6F);
         } else {
-            wipe(server, inst, "The guardian did not answer. The totem is spent.");   // no boss would mean a stage that never ends
+            wipe(server, inst, "message.guardians.arena.guardian_did_not_answer_totem");   // no boss would mean a stage that never ends
         }
         setDirty();
         return null;
@@ -181,7 +182,7 @@ public final class ArenaManager extends SavedData {
         root.remove(DEATH_STASH); persisted.put(PERSIST_ROOT, root); p.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
         for (int i = 0; i < stash.size(); i++)
             ItemStack.parse(p.registryAccess(), stash.getCompound(i)).ifPresent(s -> LoomTension.giveOrDrop(p, s));
-        p.displayClientMessage(NinjacatText.teal("What you dropped on the stage came home with you."), true);
+        p.displayClientMessage(NinjacatText.tealKey("message.guardians.arena.drops_came_home"), true);
     }
 
     private void build(ServerLevel level, ArenaData data, BlockPos origin) {
@@ -328,7 +329,7 @@ public final class ArenaManager extends SavedData {
                     p.setDeltaMovement(Vec3.ZERO); p.fallDistance = 0;
                     float dmg = inst.kind == GuardianKind.EDGEWALKER || inst.kind.tier == GuardianKind.Tier.INSANE ? 12 : 6;
                     p.hurt(p.damageSources().fellOutOfWorld(), Math.min(dmg, Math.max(0, p.getHealth() - 1)));
-                    p.displayClientMessage(NinjacatText.teal("The Loom pulls you back onto the stage."), true);
+                    p.displayClientMessage(NinjacatText.tealKey("message.guardians.arena.loom_pulls_back"), true);
                 }
             }
             switch (inst.state) {
@@ -336,16 +337,16 @@ public final class ArenaManager extends SavedData {
                     inst.emptyTicks = inside.isEmpty() ? inst.emptyTicks + 1 : 0;
                     if (inside.isEmpty() && inst.age > 100 && partyWithdrawn(server, inst)) {
                         // they walked out without /guardians leave — spend the totem
-                        wipe(server, inst, "Nobody stands. The totem is spent.");
+                        wipe(server, inst, "message.guardians.arena.nobody_stands_totem_spent");
                     }
                     // one member staying offline must not hold the stage (and 81 forced chunks) forever
                     else if (inst.emptyTicks > EMPTY_STAGE_TICKS) {
-                        wipe(server, inst, "The stage stood empty too long. The totem is spent.");
+                        wipe(server, inst, "message.guardians.arena.stage_stood_empty_too_long");
                     }
                     // a full disconnect leaves party UUIDs with no online players: keep the stage until they log back in
                     else if (inst.boss != null && inst.age > 100 && arena.isLoaded(inst.originPos) && arena.getEntity(inst.boss) == null && inst.age % 20 == 0) {
                         // boss vanished (killed by /kill or unloaded) — count it as a win only if it actually died via die()
-                        wipe(server, inst, "The guardian slipped the weave. The totem is spent.");
+                        wipe(server, inst, "message.guardians.arena.guardian_slipped_weave_totem_spent");
                     }
                 }
                 case WON -> { if (inst.stateTicks > RETURN_DELAY + 60) { sendEveryoneHome(server, inst); done.add(inst.slot); } }
@@ -384,7 +385,7 @@ public final class ArenaManager extends SavedData {
     public void wipe(MinecraftServer server, ArenaInstance inst, String line) {
         if (inst.state != ArenaInstance.State.FIGHT) return;
         inst.state = ArenaInstance.State.WIPED; inst.stateTicks = 0; setDirty();
-        for (UUID id : inst.party) { ServerPlayer p = server.getPlayerList().getPlayer(id); if (p != null) p.sendSystemMessage(NinjacatText.teal(line)); }
+        for (UUID id : inst.party) { ServerPlayer p = server.getPlayerList().getPlayer(id); if (p != null) p.sendSystemMessage(NinjacatText.tealKey(line)); }
         ServerLevel arena = arenaLevel(server);
         if (arena != null) { ArenaData data = ArenaData.get(server, inst.kind); setGate(arena, data, inst.originPos, false); }
     }
@@ -405,8 +406,8 @@ public final class ArenaManager extends SavedData {
         inst.winners.clear();
         inst.winners.addAll(inst.party);
         for (ServerPlayer p : present) {
-            p.sendSystemMessage(NinjacatText.gold(inst.kind.title + " answers for the Cut. ").append(NinjacatText.teal("The Strand re-tensions.")));
-            p.displayClientMessage(NinjacatText.gold("Worthy. The gate opens; you will be returned shortly."), true);
+            p.sendSystemMessage(NinjacatText.goldKey("message.guardians.arena.answers_for_cut", inst.kind.titleComponent()).append(NinjacatText.tealKey("message.guardians.arena.strand_retensions")));
+            p.displayClientMessage(NinjacatText.goldKey("message.guardians.arena.worthy_gate_opens"), true);
             p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG); // ensure exists
             recordDefeat(p, inst.kind);
         }
@@ -481,8 +482,8 @@ public final class ArenaManager extends SavedData {
     public void onDeath(ServerPlayer p) {
         ArenaInstance a = instanceOf(p); if (a == null) return;
         if (a.state == ArenaInstance.State.FIGHT && a.fallen.add(p.getUUID())) setDirty();
-        for (ServerPlayer o : a.onlinePlayers()) if (o != p) o.sendSystemMessage(NinjacatText.teal(p.getName().getString() + " has fallen."));
-        if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "Nobody stands. The totem is spent.");
+        for (ServerPlayer o : a.onlinePlayers()) if (o != p) o.sendSystemMessage(NinjacatText.tealKey("message.guardians.arena.has_fallen", p.getName().getString()));
+        if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "message.guardians.arena.nobody_stands_totem_spent");
     }
     public void leave(ServerPlayer p) {
         ArenaInstance a = instanceOf(p); if (a == null) return;
@@ -496,7 +497,7 @@ public final class ArenaManager extends SavedData {
             return;
         }
         a.party.remove(p.getUUID()); returnHome(p); setDirty();
-        if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "The Clowder withdrew. The totem is spent.");
+        if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "message.guardians.arena.clowder_withdrew_totem_spent");
     }
 
     // ------------------------------------------------------------------ saved data

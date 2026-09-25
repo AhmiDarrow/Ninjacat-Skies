@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Thornmother",
-  "description": "Keeper of the Sprout Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.description",
   "icon": "guardians:frayed_totem_thornmother",
   "x": 0,
   "y": -4,
@@ -11,18 +11,18 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Thornmother",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Overgrowth Terrace: four garden terraces under a leaf canopy, eight trellis posts, and four pruning stations on the second tier."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Thornmother never strikes; she seeds thorn-hedge that spreads and burns to the touch, and heals whenever a pruning station is overgrown. Shears and axes clear it. Compost eight hedge at a station to fire a prune wave that clears the ground and stuns her — the only clean damage window."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -30,8 +30,8 @@
         "id": "guardians:frayed_totem_thornmother",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -39,8 +39,8 @@
         "id": "guardians:relic_thornseed",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Thornseed: Thorns and no berry or cactus damage. Bloom raises a ring of hedge and gives Regeneration II to you and your Clowder inside it."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.thornmother.page.4.text"
     }
   ],
   "parents": [

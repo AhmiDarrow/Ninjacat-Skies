@@ -296,7 +296,7 @@ final class RelicTimers {
             e.setCanceled(true);
             RelicUtil.sound(p, SoundEvents.GLASS_BREAK, 1.0F, 0.8F);
             RelicUtil.burst(p.serverLevel(), ParticleTypes.END_ROD, p, 24, 0.6, 0.15);
-            RelicUtil.note(p, "The ward shatters.");
+            RelicUtil.note(p, "message.guardians.relic.ward_shatters");
             return;
         }
         // Overweaver's Reweave: everyone inside takes 20 % less.

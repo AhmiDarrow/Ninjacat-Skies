@@ -24,19 +24,6 @@ public class WhiskerCodexItem extends Item {
     private static final boolean MODONOMICON = ModList.get().isLoaded("modonomicon");
     private static final boolean QUESTS = ModList.get().isLoaded("ftbquests");
 
-    /** What the Codex says the next unseated Strand needs. One line, one verb. */
-    private static final String[] NUDGES = {
-            "Soil first. Wood, dirt, a bench, a sapling. Claim the pad and let it hold you.",
-            "Stone: unravel Thread to string, spin Void Yarn, tie a Binding Knot. Then let the mesh catch grit.",
-            "Sprout: a field, a kitchen, a first Inferium row. Feed the Clowder before the forge.",
-            "Claw: blueprints, iron on your back, a way off the pad that you chose.",
-            "Spark: strike a Drumheart and hold a Pulse before you touch a wire.",
-            "Clock: one cog, then the same cog again. Let Create carry the pattern.",
-            "Swarm: keep something alive that keeps something else alive. Bees, deep crops.",
-            "Sigil: two braid paths make a cord. Then carve seals and ask the stewards' rites.",
-            "Spindle: a digital loom, a March stone, and the Post. Stitch the cut.",
-    };
-
     public WhiskerCodexItem(Properties properties) {
         super(properties);
     }
@@ -64,22 +51,22 @@ public class WhiskerCodexItem extends Item {
             }
         }
         if (next == null) {
-            player.sendSystemMessage(NinjacatText.gold("Every Strand answers. Seat the Fragment and go see the March."));
+            player.sendSystemMessage(NinjacatText.goldKey("message.ninjacatskies.codex.all_answer"));
             return;
         }
         int seated = Integer.bitCount(bits);
-        player.sendSystemMessage(NinjacatText.teal("The Codex thins to a point."));
-        player.sendSystemMessage(NinjacatText.gold(NUDGES[next.ordinal()]));
+        player.sendSystemMessage(NinjacatText.tealKey("message.ninjacatskies.codex.thins"));
+        player.sendSystemMessage(NinjacatText.goldKey("message.ninjacatskies.codex.nudge." + next.id()));
         if (seated > 0) {
-            player.sendSystemMessage(NinjacatText.teal(seated + " of nine tensioned. Grave (`): remaining quests. Tokens to the Post."));
+            player.sendSystemMessage(NinjacatText.tealKey("message.ninjacatskies.codex.progress", seated));
         } else {
-            player.sendSystemMessage(NinjacatText.teal("Open Start here. Grave (`): quests. Raise a Tension Post when the first token comes."));
+            player.sendSystemMessage(NinjacatText.tealKey("message.ninjacatskies.codex.start"));
         }
     }
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(NinjacatText.teal("Damaged, but it still assigns work."));
+        tooltip.add(NinjacatText.tealKey("tooltip.ninjacatskies.codex.damaged"));
         tooltip.add(Component.translatable(MODONOMICON ? "tooltip.ninjacatskies.codex.book" : QUESTS ? "tooltip.ninjacatskies.codex.quests" : "tooltip.ninjacatskies.codex.nudge")
                 .withStyle(s -> s.withColor(0x8A8580)));
     }

@@ -65,10 +65,10 @@ public final class ReweaveRing {
                     SignText text = new SignText()
                             .setColor(DyeColor.CYAN)
                             .setHasGlowingText(true)
-                            .setMessage(0, Component.literal("Rewoven"))
-                            .setMessage(1, Component.literal(name))
-                            .setMessage(2, Component.literal("nine Strands"))
-                            .setMessage(3, Component.literal("one thread"));
+                            .setMessage(0, Component.translatable("sign.clowderhall.rewoven.1"))
+                            .setMessage(1, Component.literal(name))   // the Clowder's own name
+                            .setMessage(2, Component.translatable("sign.clowderhall.rewoven.3"))
+                            .setMessage(3, Component.translatable("sign.clowderhall.rewoven.4"));
                     if (!sameText(sign.getFrontText(), text) || !sameText(sign.getBackText(), text)) {
                         sign.setText(text, true);
                         sign.setText(text, false);

@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Lint Golem",
-  "description": "A gentle first fight.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.description",
   "icon": "guardians:frayed_totem_lintgolem",
   "x": -4,
   "y": 0,
@@ -11,13 +11,13 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Lint Golem",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you.\\\nThe Dock Dustbin: a corner of the Dock itself — a plank yard, a washing line of cloth sheets, baskets of wool, a red rug."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The one fight with no risk. The golem throws lint balls that only blind for a moment and hides behind the washing; beat the rug and it sneezes and staggers. It teaches totem, arena and gate.\\\n**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.page.1.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -25,8 +25,8 @@
         "id": "guardians:frayed_totem_lintgolem",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four white wool around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.page.2.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -34,8 +34,8 @@
         "id": "guardians:relic_lintwisp",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Lintwisp: immune to cactus, berry and hedge damage and to being pushed. Puff blinds nearby mobs for an escape."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.page.3.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.lintgolem.page.3.text"
     }
   ],
   "parents": [

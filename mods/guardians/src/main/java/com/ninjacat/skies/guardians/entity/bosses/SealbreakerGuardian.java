@@ -1,5 +1,7 @@
 package com.ninjacat.skies.guardians.entity.bosses;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import com.ninjacat.skies.guardians.GuardianKind;
 import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import net.minecraft.core.BlockPos;
@@ -29,7 +31,7 @@ public class SealbreakerGuardian extends GuardianEntity {
 
     public SealbreakerGuardian(EntityType<? extends GuardianEntity> type, Level level) { super(type, level, GuardianKind.SEALBREAKER); }
 
-    @Override protected String immuneMessage() { return "The Sealbreaker hides behind its wards. Watch the dais pegs and dispel the wards in that order."; }
+    @Override protected MutableComponent immuneMessage() { return Component.translatable("message.guardians.sealbreaker.sealbreaker_hides_behind_wards_watch"); }
     /** Pillar k stands at 90° + 40°k in arena_factory; the plan mirrors Blender y into Minecraft -z, hence the negated angle. */
     private static double pillarAngle(int k) { return -(Math.PI * 2 * k / PILLARS + Math.PI / 2); }
     private Vec3 pillar(int k) { Vec3 o = origin(); return Mech.polar(o, PILLAR_R, pillarAngle(k), o.y); }
@@ -38,12 +40,12 @@ public class SealbreakerGuardian extends GuardianEntity {
     @Override
     protected void tickMechanic() {
         if (arena() == null) {                                          // a shade (or /summon): no glyph pillars to ward — it drops its guard every 20 s
-            if (open > 0) open--; else if (ageInFight % 400 == 60) { open = OPEN_TICKS; shout("The Sealbreaker's wards flicker — it is exposed for twelve seconds!"); sound(SoundEvents.BEACON_DEACTIVATE, 2F, 0.5F); }
+            if (open > 0) open--; else if (ageInFight % 400 == 60) { open = OPEN_TICKS; shout("message.guardians.sealbreaker.sealbreaker_s_wards_flicker_exposed"); sound(SoundEvents.BEACON_DEACTIVATE, 2F, 0.5F); }
             setImmune(open <= 0); return;
         }
-        if (ageInFight == 1) { shout("The Sealbreaker answers for the Cut. Three wards hold it: teal-lit ward-glass at the foot of three pillars. Don't rush them — the dais pegs light the order. Dispel the glass in that order; break the wrong one and the whole circle bites."); arm(true); }
+        if (ageInFight == 1) { shout("message.guardians.sealbreaker.sealbreaker_answers_for_cut_three"); arm(true); }
         else if (open <= 0 && order.isEmpty()) arm(true);                // wards are not saved: a reloaded fight re-arms instead of staying immune
-        if (open > 0) { open--; if (open == 0) { say("The wards re-knit."); arm(true); } }
+        if (open > 0) { open--; if (open == 0) { say("message.guardians.sealbreaker.wards_re_knit"); arm(true); } }
         setImmune(open <= 0);
         if (open <= 0) {
             if (tickCount % 5 == 0) checkGlyphs();
@@ -58,7 +60,7 @@ public class SealbreakerGuardian extends GuardianEntity {
     @Override
     protected void onPhase(int phase) {
         if (open > 0) return;
-        shout(phase == 3 ? "The Sealbreaker raises a fourth ward — a decoy. Only three are written on the dais." : "The runes shuffle! Watch the dais again.");
+        shout(phase == 3 ? "message.guardians.sealbreaker.sealbreaker_raises_fourth_ward_decoy" : "message.guardians.sealbreaker.runes_shuffle_watch_dais_again");
         arm(true);
     }
 
@@ -99,11 +101,11 @@ public class SealbreakerGuardian extends GuardianEntity {
             if (order.get(progress) == k) {
                 progress++; active.remove(Integer.valueOf(k));
                 Mech.burst(serverLevel(), ParticleTypes.SOUL_FIRE_FLAME, pillar(k).add(0, 2, 0), 30, 1); sound(SoundEvents.RESPAWN_ANCHOR_DEPLETE.value(), 2F, 1.2F);
-                say("Ward " + progress + " of 3 dispelled.");
-                if (progress >= 3) { open = OPEN_TICKS; clearGlyphs(); active.clear(); shout("The wards fall — the Sealbreaker is exposed! Twelve seconds."); sound(SoundEvents.BEACON_DEACTIVATE, 2F, 0.5F); }
+                say("message.guardians.sealbreaker.ward_dispelled", progress);
+                if (progress >= 3) { open = OPEN_TICKS; clearGlyphs(); active.clear(); shout("message.guardians.sealbreaker.wards_fall_sealbreaker_exposed_twelve"); sound(SoundEvents.BEACON_DEACTIVATE, 2F, 0.5F); }
             } else {
                 for (int j : active) Mech.arc(serverLevel(), pillar(j));
-                areaDamage(origin(), 40, 6, 0.3); shout("Wrong ward! The circle bites and every ward re-arms.");
+                areaDamage(origin(), 40, 6, 0.3); shout("message.guardians.sealbreaker.wrong_ward_circle_bites_every");
                 sound(SoundEvents.ELDER_GUARDIAN_CURSE, 2F, 0.8F); arm(false);
             }
             return;

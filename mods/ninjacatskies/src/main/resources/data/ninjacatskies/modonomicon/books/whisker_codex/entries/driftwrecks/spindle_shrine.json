@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Loom Chapel",
-  "description": "Loom-stitchers · Shrine",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_shrine.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_shrine.description",
   "icon": "driftwrecks:keepsake_spindle_shrine",
   "x": 7,
   "y": -2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Loom Chapel",
-      "text": "The Loom-stitchers' chapel held a small loom that was never stopped: whoever passed added a thread. It was a weaving of everyone who ever visited. When they cut the gate-paths, they meant to come back and finish it. It is still unfinished."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_shrine.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spindle_shrine.page.0.text"
     }
   ],
   "condition": {

@@ -18,6 +18,6 @@ public class SpindleHammerItem extends DiggerItem {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(NinjacatText.teal("Break grit into something the Loom can use."));
+        tooltip.add(NinjacatText.tealKey("message.voidloom.tooltip.spindle_hammer"));
     }
 }

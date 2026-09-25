@@ -102,12 +102,12 @@ public final class RiftManager extends SavedData {
         MinecraftServer server = level.getServer();
         DriftManager dm = DriftManager.get(server);
         Wreck w = dm.at(tear, 0);
-        if (w == null || w.phase != Wreck.Phase.ACTIVE || w.tier != WreckTier.HOLD) { opener.displayClientMessage(NinjacatText.teal("The tear does not answer."), true); return; }
-        if (w.riftOpened) { opener.displayClientMessage(NinjacatText.teal("This rift has already been walked."), true); return; }
+        if (w == null || w.phase != Wreck.Phase.ACTIVE || w.tier != WreckTier.HOLD) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.no_answer"), true); return; }
+        if (w.riftOpened) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.already_walked"), true); return; }
         Strand ks = DriftlureItem.strandOf(key);
-        if (ks != w.skin) { opener.displayClientMessage(NinjacatText.teal("The key is cut for another Strand. This rift wants " + w.skin.title() + "."), true); return; }
+        if (ks != w.skin) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.wrong_key", w.skin.title()), true); return; }
         ServerLevel arena = ArenaManager.arenaLevel(server);
-        if (arena == null) { opener.displayClientMessage(NinjacatText.teal("The rift has nowhere to open (arena dimension missing)."), true); return; }
+        if (arena == null) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.no_arena"), true); return; }
         RiftManager rm = get(server);
         Rift r = new Rift();
         int slot = 0; while (rm.rifts.containsKey(slot)) slot++;
@@ -128,7 +128,7 @@ public final class RiftManager extends SavedData {
             storeReturn(p);
             double a = Math.PI * 2 * i / party.size();
             teleport(p, arena, r.origin.getX() + 0.5 + Math.cos(a) * 9, r.origin.getY(), r.origin.getZ() + 0.5 + Math.sin(a) * 9);
-            p.sendSystemMessage(NinjacatText.teal("The rift folds shut behind you. Something small and frayed wears the shape of a Guardian."));
+            p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.rift.enter"));
             WreckRewards.award(p, "rift");
         }
         RemnantEntity rem = DwRegistries.REMNANT.get().create(arena);
@@ -225,7 +225,7 @@ public final class RiftManager extends SavedData {
                 if (Math.sqrt(dx * dx + dz * dz) > RADIUS + 3 || p.getY() < r.origin.getY() - 8) {
                     teleport(p, arena, r.origin.getX() + 0.5 + 6, r.origin.getY(), r.origin.getZ() + 0.5);
                     p.hurt(p.damageSources().fellOutOfWorld(), Math.min(6F, Math.max(0, p.getHealth() - 1)));
-                    p.displayClientMessage(NinjacatText.teal("The rift folds you back in."), true);
+                    p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.fold_back"), true);
                 }
             }
             if (r.state == 0) {
@@ -245,7 +245,7 @@ public final class RiftManager extends SavedData {
 
     private void lose(MinecraftServer server, Rift r) {
         r.state = 2; r.ticks = 0; setDirty();
-        for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null) p.sendSystemMessage(NinjacatText.teal("The rift lets go of you. The Remnant stays frayed.")); }
+        for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null) p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.rift.failed")); }
         ServerLevel arena = ArenaManager.arenaLevel(server);
         if (arena != null && r.remnant != null) { Entity e = arena.getEntity(r.remnant); if (e != null) e.discard(); }
     }
@@ -271,13 +271,13 @@ public final class RiftManager extends SavedData {
             }
             for (ItemStack s : rareRoll(level, p)) LoomTension.giveOrDrop(p, s);
             LoomTension.giveOrDrop(p, new ItemStack(DwItems.RIFT_SHARD.get()));
-            p.sendSystemMessage(NinjacatText.gold("The Remnant comes apart into clean thread. The " + r.strand.tribe() + " would have called that mending."));
+            p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rift.mended", r.strand.tribe()));
             WreckRewards.award(p, "remnant");
         }
         if (team != null) {
             if (stamp && team.allRemnantStamps()) c.get().onlineMembers().forEach(p -> {
                 WreckRewards.award(p, "remnants");
-                p.sendSystemMessage(NinjacatText.gold("Every Remnant mended. Weft Keys cost you half now."));
+                p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rift.all_mended"));
             });
             team.dirty();
             WreckRewards.syncAll(c.get());

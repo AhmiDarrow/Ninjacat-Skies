@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Nursery Terraces",
-  "description": "Rootbinders · Garden",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_garden.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_garden.description",
   "icon": "driftwrecks:keepsake_sprout_garden",
   "x": 1,
   "y": 2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Nursery Terraces",
-      "text": "The Nursery Terraces fed three islands from one slope, watered by roots that pulled mist out of the clouds. Rootbinders sang to the seedlings, mostly to keep themselves awake. Something in the soil still sprouts at dawn. Feed it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_garden.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.sprout_garden.page.0.text"
     }
   ],
   "condition": {

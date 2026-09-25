@@ -11,7 +11,9 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
  * they are called from {@link RelicEvents}. Implementations live in {@link Relics}.
  */
 public interface RelicPower {
+    /** Lang keys: the title (with {@link #titleArgs()}), the passive and the right-click text. */
     String title();
+    default Object[] titleArgs() { return new Object[0]; }
     String passiveText();
     String activeText();
     int cooldownTicks();

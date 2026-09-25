@@ -1,6 +1,6 @@
 {
-  "name": "Nine Tribes",
-  "description": "Who kept the Loom. Unlocks as you seat Strands.",
+  "name": "book.ninjacatskies.whisker_codex.category.tribes.name",
+  "description": "book.ninjacatskies.whisker_codex.category.tribes.description",
   "icon": "ninjacatskies:strand_token_spindle",
   "sort_number": 4,
   "background": "ninjacatskies:textures/gui/quest_atlas.png",

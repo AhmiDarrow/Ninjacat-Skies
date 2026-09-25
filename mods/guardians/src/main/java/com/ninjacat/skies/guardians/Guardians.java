@@ -79,15 +79,15 @@ public final class Guardians {
                 .then(Commands.literal("summon").requires(s -> s.hasPermission(2))
                         .then(Commands.argument("guardian", StringArgumentType.word()).executes(ctx -> {
                             GuardianKind k = GuardianKind.byId(StringArgumentType.getString(ctx, "guardian"));
-                            if (k == null || !(ctx.getSource().getEntity() instanceof ServerPlayer p)) { ctx.getSource().sendFailure(NinjacatText.teal("Unknown guardian.")); return 0; }
-                            String fail = ArenaManager.get(p.server).summon(p, k);
-                            if (fail != null) { ctx.getSource().sendFailure(NinjacatText.teal(fail)); return 0; }
+                            if (k == null || !(ctx.getSource().getEntity() instanceof ServerPlayer p)) { ctx.getSource().sendFailure(NinjacatText.tealKey("message.guardians.command.unknown_guardian")); return 0; }
+                            net.minecraft.network.chat.MutableComponent fail = ArenaManager.get(p.server).summon(p, k);
+                            if (fail != null) { ctx.getSource().sendFailure(fail); return 0; }
                             return 1;
                         })))
                 .then(Commands.literal("status").executes(ctx -> {
                     var m = ArenaManager.get(ctx.getSource().getServer());
-                    ctx.getSource().sendSuccess(() -> NinjacatText.gold("Arenas running: " + m.instances().size()), false);
-                    for (var a : m.instances()) ctx.getSource().sendSuccess(() -> NinjacatText.teal("slot " + a.slot + " " + a.kind.id + " " + a.state + " party " + a.party.size() + " inside " + a.onlinePlayers().size()), false);
+                    ctx.getSource().sendSuccess(() -> NinjacatText.goldKey("message.guardians.command.arenas_running", m.instances().size()), false);
+                    for (var a : m.instances()) ctx.getSource().sendSuccess(() -> NinjacatText.tealKey("message.guardians.command.arena_status", a.slot, a.kind.id, a.state.name(), a.party.size(), a.onlinePlayers().size()), false);
                     return 1;
                 })));
     }

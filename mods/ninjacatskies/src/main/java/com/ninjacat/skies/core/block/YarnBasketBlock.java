@@ -68,7 +68,7 @@ public class YarnBasketBlock extends BaseEntityBlock {
         if (!(level.getBlockEntity(pos) instanceof YarnBasketBlockEntity basket)) return InteractionResult.PASS;
         if (level.isClientSide) return InteractionResult.SUCCESS;
         if (!mayOpen(player, basket)) {
-            player.displayClientMessage(NinjacatText.teal(basket.ownerName() + "'s yarn basket. It is not yours to unpick."), true);
+            player.displayClientMessage(NinjacatText.tealKey("message.ninjacatskies.basket.not_yours", basket.ownerName()), true);
             return InteractionResult.CONSUME;
         }
         // Right-click works where breaking is protected (the Dock, the Hall): everything goes straight to the inventory.
@@ -78,8 +78,9 @@ public class YarnBasketBlock extends BaseEntityBlock {
         }
         level.removeBlock(pos, false);
         level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.BLOCKS, 1.0F, 1.1F);
-        player.displayClientMessage(NinjacatText.teal(player.getGameProfile().getName().equals(name)
-                ? "You gather up your things." : "You gather up " + name + "'s things."), true);
+        player.displayClientMessage((player.getGameProfile().getName().equals(name)
+                ? NinjacatText.tealKey("message.ninjacatskies.basket.gather_own")
+                : NinjacatText.tealKey("message.ninjacatskies.basket.gather_other", name)), true);
         return InteractionResult.CONSUME;
     }
 

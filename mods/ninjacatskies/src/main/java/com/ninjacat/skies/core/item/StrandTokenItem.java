@@ -24,7 +24,7 @@ public class StrandTokenItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.literal(strand.tribe()).withStyle(s -> s.withColor(strand.color()).withItalic(true)));
+        tooltip.add(strand.tribe().withStyle(s -> s.withColor(strand.color()).withItalic(true)));
         tooltip.add(Component.translatable("tooltip.ninjacatskies.strand_token").withStyle(s -> s.withColor(0x8A8580)));
     }
 }

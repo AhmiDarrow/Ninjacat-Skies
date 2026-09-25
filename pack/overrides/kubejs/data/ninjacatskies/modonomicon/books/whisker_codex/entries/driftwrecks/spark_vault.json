@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Charge Vault",
-  "description": "Drumhearts · Vault",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_vault.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_vault.description",
   "icon": "driftwrecks:keepsake_spark_vault",
   "x": 3,
   "y": 3,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Charge Vault",
-      "text": "The Charge Vault stored the Thunder Mast's catch in sealed coils for the long, still winters. One coil could keep a hall warm for a season. This one was never opened. Listen before you open it."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_vault.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.spark_vault.page.0.text"
     }
   ],
   "condition": {

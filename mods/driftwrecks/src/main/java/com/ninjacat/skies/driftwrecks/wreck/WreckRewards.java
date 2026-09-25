@@ -58,10 +58,10 @@ public final class WreckRewards {
             for (ServerPlayer p : all) {
                 award(p, "heartwreck");
                 award(p, "lore/heart");
-                p.sendSystemMessage(NinjacatText.teal("The Skies were never an ending. They were the Loom, holding its breath."));
-                p.sendSystemMessage(NinjacatText.gold("The Heartwreck lets go. Keep what it gave you—and go on weaving."));
+                p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.rewards.heart_lore"));
+                p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rewards.heart_done"));
             }
-            server.getPlayerList().broadcastSystemMessage(NinjacatText.gold("A Clowder stood in the heart of the old world: ")
+            server.getPlayerList().broadcastSystemMessage(NinjacatText.goldKey("message.driftwrecks.rewards.heart_broadcast")
                     .append(c.name().copy().withStyle(s -> s.withColor(NinjacatText.TEAL))), false);
             team.dirty();
             syncAll(c);
@@ -74,19 +74,19 @@ public final class WreckRewards {
             for (ServerPlayer p : all) {
                 award(p, "lore/" + w.skin.id() + "_" + w.core.id);
                 p.playNotifySound(DwRegistries.sound("atlas.page"), SoundSource.PLAYERS, 1.0F, 1.0F);
-                p.sendSystemMessage(NinjacatText.teal("A page of the Wreck Atlas fills in: ")
-                        .append(NinjacatText.gold(w.skin.tribe() + " " + w.core.title + ".")));
+                p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.rewards.atlas_page")
+                        .append(NinjacatText.goldKey("message.driftwrecks.rewards.atlas_page_name", w.skin.tribe(), w.core.title())));
             }
             if (team.columnComplete(w.skin)) {
                 for (ServerPlayer p : all) {
                     award(p, "column");
-                    p.sendSystemMessage(NinjacatText.gold("The " + w.skin.title() + " column is whole. " + w.skin.tribe() + " lures cost half, their wrecks come oftener, and their banner is yours to weave."));
+                    p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rewards.column_whole", w.skin.title(), w.skin.tribe()));
                 }
             }
             if (team.rowComplete(w.core)) {
                 for (ServerPlayer p : all) {
                     award(p, "row");
-                    p.sendSystemMessage(NinjacatText.gold("Every tribe's " + w.core.title.toLowerCase() + " is in the Atlas. Their hidden rooms will always open for you."));
+                    p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rewards.row_whole", w.core.titleInline()));
                 }
             }
             int cells = team.cellCount();
@@ -95,15 +95,15 @@ public final class WreckRewards {
                 team.setHeartwreck(1);
                 for (ServerPlayer p : all) {
                     award(p, "cells_54");
-                    p.sendSystemMessage(NinjacatText.teal("Every page answers. Somewhere under the Skies, the heart of the old world starts to drift your way."));
+                    p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.rewards.atlas_complete"));
                 }
             }
         }
         if (team.stampModifier(w.modifier)) {
-            for (ServerPlayer p : all) p.sendSystemMessage(NinjacatText.teal("Atlas stamp: " + w.modifier.title + "."));
+            for (ServerPlayer p : all) p.sendSystemMessage(NinjacatText.tealKey("message.driftwrecks.rewards.stamp", w.modifier.title()));
             if (team.allModifierStamps()) for (ServerPlayer p : all) {
                 award(p, "modifiers");
-                p.sendSystemMessage(NinjacatText.gold("All six stamps. Your wrecks hold a quarter longer."));
+                p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rewards.all_stamps"));
             }
         }
 
@@ -122,7 +122,7 @@ public final class WreckRewards {
         LoomTension.giveOrDrop(to, new ItemStack(DwBlocks.keepsake(s, core).asItem()));
         to.playNotifySound(DwRegistries.sound("keepsake.found"), SoundSource.PLAYERS, 1.0F, 1.0F);
         for (ServerPlayer p : team.clowder().onlineMembers()) {
-            p.sendSystemMessage(NinjacatText.gold(first ? "A Keepsake: " : "Another Keepsake: ").append(keepsakeName(s, core)));
+            p.sendSystemMessage((first ? NinjacatText.goldKey("message.driftwrecks.rewards.keepsake_first") : NinjacatText.goldKey("message.driftwrecks.rewards.keepsake_another")).append(keepsakeName(s, core)));
             award(p, "keepsake");
         }
     }

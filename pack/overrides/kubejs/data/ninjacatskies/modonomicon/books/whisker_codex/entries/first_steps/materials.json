@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:first_steps",
-  "name": "Build a material supply",
-  "description": "Practical steps and checks.",
+  "name": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.description",
   "icon": "voidloom:loomframe",
   "x": 8,
   "y": 0,
@@ -11,44 +11,44 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "Goal and sequence",
-      "text": "**Goal:** turn pad scraps into materials for Recover and the chapters after it.\\\nYou need Frayed Thread, Recover open, and a mesh.\\\n1\\. Unravel Frayed Thread into string when you need it. Keep some Thread for trading.\\\n2\\. Follow JEI for Void Yarn, a Binding Knot and a Loomframe."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "3\\. Make a Tension Barrel and keep water nearby.\\\n4\\. Follow Recover for clay, porcelain and the route to handling lava."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Test small batches",
-      "text": "Read the Loomframe and barrel in JEI before adding items. Start with one batch and check the output. Keep the input and result in separate storage until you know the process."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.2.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** the Loomframe produces scraps from a loaded mesh, and the barrel returns clay or yarn. Adjacent placement alone does not automate these stations. The next model is a workspace example."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.3.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Sieves",
-      "text": "**Goal:** a click sieve for early grit, then a hopper Loomframe.\\\nYou need an oak sieve, a string mesh, and cobble to hammer.\\\n1\\. Craft an **oak sieve**. Hold a mesh and right-click the sieve; this one is hand-only."
+      "title": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.4.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "2\\. Hammer cobble toward gravel, sand or dust as Recover asks. String mesh first; iron mesh is when **Strand Filament** starts.\\\n3\\. The **Loomframe** is the hopper machine: mesh by hand, dirt/gravel/sand/dust in the top, output below."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.5.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** the oak sieve yields a click of grit, and the Loomframe ticks with a loaded mesh. Follow Recover and JEI for the current mesh and substrate. Adjacent placement does not automate either station."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.first_steps.materials.page.6.text"
     },
     {
       "type": "modonomicon:multiblock",
       "multiblock_id": "ninjacatskies:codex/material_workshop",
-      "multiblock_name": "Placement example",
-      "text": "Example layout, not an exact quest requirement. Read the steps for materials and operation.",
+      "multiblock_name": "book.ninjacatskies.whisker_codex.multiblock.placement_example",
+      "text": "book.ninjacatskies.whisker_codex.multiblock.placement_example.text",
       "show_visualize_button": true
     }
   ],

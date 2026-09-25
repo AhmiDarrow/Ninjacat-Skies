@@ -27765,8 +27765,8 @@
         -15
       ],
       "lines": [
-        "The Purring Hearth",
-        "Welcome, traveler"
+        "sign.clowderhall.purring_hearth.1",
+        "sign.clowderhall.purring_hearth.2"
       ]
     },
     {
@@ -27776,8 +27776,8 @@
         -15
       ],
       "lines": [
-        "Weavers Workshop",
-        "Welcome, traveler"
+        "sign.clowderhall.weavers_workshop.1",
+        "sign.clowderhall.weavers_workshop.2"
       ]
     },
     {
@@ -27787,8 +27787,8 @@
         12
       ],
       "lines": [
-        "Clowder Commons",
-        "Welcome, traveler"
+        "sign.clowderhall.clowder_commons.1",
+        "sign.clowderhall.clowder_commons.2"
       ]
     },
     {
@@ -27798,8 +27798,8 @@
         12
       ],
       "lines": [
-        "Lantern Library",
-        "Welcome, traveler"
+        "sign.clowderhall.lantern_library.1",
+        "sign.clowderhall.lantern_library.2"
       ]
     },
     {
@@ -27809,8 +27809,8 @@
         -21
       ],
       "lines": [
-        "LANTERN BELFRY",
-        "Gather together"
+        "sign.clowderhall.lantern_belfry.1",
+        "sign.clowderhall.lantern_belfry.2"
       ]
     },
     {
@@ -27820,7 +27820,7 @@
         -6
       ],
       "lines": [
-        "Strand Exchange"
+        "sign.clowderhall.strand_exchange.1"
       ]
     },
     {
@@ -27830,7 +27830,7 @@
         -6
       ],
       "lines": [
-        "Community Pantry"
+        "sign.clowderhall.community_pantry.1"
       ]
     },
     {
@@ -27840,9 +27840,9 @@
         28
       ],
       "lines": [
-        "LANTERN WALK",
-        "Nine strands",
-        "One shared sky"
+        "sign.clowderhall.lantern_walk.1",
+        "sign.clowderhall.lantern_walk.2",
+        "sign.clowderhall.lantern_walk.3"
       ]
     }
   ],

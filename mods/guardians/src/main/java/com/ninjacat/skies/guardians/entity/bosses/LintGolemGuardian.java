@@ -62,7 +62,7 @@ public class LintGolemGuardian extends GuardianEntity {
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) shout("The Lint Golem answers for the Cut... sort of. It throws lint, it hides behind the washing, and it cannot hurt you. Stomp the red rug to make it sneeze, then hit it while it reels.");
+        if (ageInFight == 1) shout("message.guardians.lintgolem.lint_golem_answers_for_cut");
         if (sneezeCd > 0) sneezeCd--;
         tickBalls();
         if (stagger > 0) { stagger--; getNavigation().stop(); if (tickCount % 4 == 0) particles(ParticleTypes.CLOUD, position().add(0, kind.height * 0.7, 0), 3, 0.8, 0.02); return; }
@@ -74,7 +74,7 @@ public class LintGolemGuardian extends GuardianEntity {
 
     @Override
     protected void onPhase(int phase) {
-        shout(phase == 1 ? "The Lint Golem sheds a little. It throws faster." : phase == 2 ? "The Lint Golem throws with both hands!" : "The Lint Golem is coming apart in tufts — mind the puff!");
+        shout(phase == 1 ? "message.guardians.lintgolem.lint_golem_sheds_little_throws" : phase == 2 ? "message.guardians.lintgolem.lint_golem_throws_with_both" : "message.guardians.lintgolem.lint_golem_coming_apart_tufts");
         Mech.burst(serverLevel(), ParticleTypes.CLOUD, position().add(0, kind.height * 0.5, 0), 30, 2);
     }
 
@@ -105,7 +105,7 @@ public class LintGolemGuardian extends GuardianEntity {
             Vec3 at = b.ball.position();
             for (ServerPlayer p : party()) if (p.isAlive() && p.distanceToSqr(at) < 2.5 * 2.5) {
                 p.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0));
-                p.displayClientMessage(NinjacatText.teal("Lint in your eyes!"), true);
+                p.displayClientMessage(NinjacatText.tealKey("message.guardians.lintgolem.lint_in_eyes"), true);
                 serverLevel().sendParticles(ParticleTypes.CLOUD, p.getX(), p.getEyeY(), p.getZ(), 10, 0.4, 0.3, 0.4, 0.02);
             }
         }
@@ -135,19 +135,19 @@ public class LintGolemGuardian extends GuardianEntity {
             Vec3 c = position().add(0, kind.height * 0.8, 0);
             Mech.burst(serverLevel(), ParticleTypes.CLOUD, c, 40, 1.5); Mech.burst(serverLevel(), ParticleTypes.SNEEZE, c, 20, 1);
             sound(SoundEvents.PANDA_SNEEZE, 2F, 0.6F);
-            shout(p.getName().getString() + " beats the rug — the Lint Golem sneezes and reels! Hit it now (double damage).");
+            shout("message.guardians.lintgolem.beats_rug", p.getName().getString());
             return;
         }
     }
 
     /** Phase 3: a lint puff — a 1 s tell ring, then Blindness to everyone within r 5. Still 0 damage. */
     private void tickPuff() {
-        if (puffTell < 0) { if (ageInFight % PUFF_EVERY == 0) { puffTell = 0; say("The Lint Golem swells up..."); sound(SoundEvents.PUFFER_FISH_BLOW_UP, 1.5F, 0.6F); } return; }
+        if (puffTell < 0) { if (ageInFight % PUFF_EVERY == 0) { puffTell = 0; say("message.guardians.lintgolem.lint_golem_swells_up"); sound(SoundEvents.PUFFER_FISH_BLOW_UP, 1.5F, 0.6F); } return; }
         puffTell++;
         ring(ParticleTypes.CLOUD, position(), 5, 20, getY() + 0.3);
         if (puffTell < PUFF_TELL) return;
         puffTell = -1; Mech.burst(serverLevel(), ParticleTypes.CLOUD, position().add(0, 2, 0), 80, 3); sound(SoundEvents.PUFFER_FISH_BLOW_OUT, 2F, 0.5F);
-        for (ServerPlayer p : party()) if (p.distanceTo(this) <= 5.5) { p.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 50, 0)); p.displayClientMessage(NinjacatText.teal("Lint everywhere!"), true); }
+        for (ServerPlayer p : party()) if (p.distanceTo(this) <= 5.5) { p.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 50, 0)); p.displayClientMessage(NinjacatText.tealKey("message.guardians.lintgolem.lint_everywhere"), true); }
     }
 
     @Override protected void onDefeated() { super.onDefeated(); for (Ball b : balls) b.ball.discard(); balls.clear(); }

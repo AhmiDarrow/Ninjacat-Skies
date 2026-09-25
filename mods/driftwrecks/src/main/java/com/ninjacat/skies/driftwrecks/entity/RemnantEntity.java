@@ -58,7 +58,7 @@ public class RemnantEntity extends Monster {
     private static final DustParticleOptions TEAL = new DustParticleOptions(new Vector3f(0.24F, 0.85F, 0.8F), 1.6F);
     private static final DustParticleOptions GOLD = new DustParticleOptions(new Vector3f(0.95F, 0.75F, 0.25F), 1.6F);
 
-    private final ServerBossEvent bar = new ServerBossEvent(Component.literal("Remnant"), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_10);
+    private final ServerBossEvent bar = new ServerBossEvent(Component.translatable("entity.driftwrecks.remnant"), BossEvent.BossBarColor.BLUE, BossEvent.BossBarOverlay.NOTCHED_10);
     private int riftSlot = -1;
     private BlockPos home = BlockPos.ZERO;
     private long clipStart;
@@ -130,7 +130,7 @@ public class RemnantEntity extends Monster {
         return switch (strand()) { case SOIL, STONE, SPARK, CLOCK, SWARM, SIGIL -> true; default -> false; };
     }
 
-    private void open(int ticks, String line) {
+    private void open(int ticks, Component line) {
         openTicks = ticks;
         entityData.set(OPEN, true);
         say(line);
@@ -166,7 +166,7 @@ public class RemnantEntity extends Monster {
         ServerLevel sl = (ServerLevel) level();
         bar.setProgress(getHealth() / getMaxHealth());
         setClip(getDeltaMovement().horizontalDistanceSqr() > 1e-4 ? CLIP_WALK : getTarget() != null && distanceToSqr(getTarget()) < 12 ? CLIP_ATTACK : CLIP_IDLE);
-        if (openTicks > 0 && --openTicks == 0 && immuneByDefault()) { entityData.set(OPEN, false); say("It closes again."); }
+        if (openTicks > 0 && --openTicks == 0 && immuneByDefault()) { entityData.set(OPEN, false); say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.closes")); }
         if (home.distToCenterSqr(position()) > 12 * 12) { teleportTo(home.getX() + 0.5, home.getY(), home.getZ() + 0.5); getNavigation().stop(); }
         timer++;
         switch (strand()) {
@@ -191,12 +191,12 @@ public class RemnantEntity extends Monster {
             sl.setBlock(seam, Blocks.VERDANT_FROGLIGHT.defaultBlockState(), 3);
             sl.setBlock(seam.above(), Blocks.ROOTED_DIRT.defaultBlockState(), 3);
             props.add(seam);
-            say("It buries itself. A root-seam glows—dig.");
+            say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.soil_buries"));
         }
         if (!props.isEmpty()) {
             BlockPos core = props.get(0);
             sl.sendParticles(TEAL, core.getX() + 0.5, core.getY() + 2.2, core.getZ() + 0.5, 3, 0.2, 0.4, 0.2, 0);
-            if (!sl.getBlockState(core).is(Blocks.VERDANT_FROGLIGHT)) { props.clear(); timer = 0; open(160, "The root core breaks. It is exposed!"); }
+            if (!sl.getBlockState(core).is(Blocks.VERDANT_FROGLIGHT)) { props.clear(); timer = 0; open(160, com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.soil_exposed")); }
         }
     }
 
@@ -208,11 +208,11 @@ public class RemnantEntity extends Monster {
             ItemEntity grit = new ItemEntity(sl, at.x, at.y, at.z, new ItemStack(Items.GRAVEL));
             grit.setPickUpDelay(10);
             sl.addFreshEntity(grit);
-            say("Grit falls from the seam. Feed it to the maw.");
+            say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.stone_grit"));
         }
         if (!isOpen() && timer % 10 == 0) {
             List<ItemEntity> near = sl.getEntitiesOfClass(ItemEntity.class, getBoundingBox().inflate(1.5), e -> e.getItem().is(Items.GRAVEL));
-            if (!near.isEmpty()) { near.get(0).getItem().shrink(1); if (near.get(0).getItem().isEmpty()) near.get(0).discard(); open(160, "Grit jams the maw open!"); }
+            if (!near.isEmpty()) { near.get(0).getItem().shrink(1); if (near.get(0).getItem().isEmpty()) near.get(0).discard(); open(160, com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.stone_jammed")); }
         }
     }
 
@@ -230,8 +230,8 @@ public class RemnantEntity extends Monster {
             for (BlockPos b : BlockPos.betweenClosed(home.offset(-11, 0, -11), home.offset(11, 1, 11))) if (sl.getBlockState(b).is(Blocks.SWEET_BERRY_BUSH)) bushes++;
             if (bushes < lastBushes) prunedSince += lastBushes - bushes;
             lastBushes = bushes;
-            if (bushes >= 6 && timer % 200 == 0) { heal(getMaxHealth() * 0.05F); say("The thicket feeds it."); }
-            if (prunedSince >= 5) { prunedSince = 0; openTicks = 80; getNavigation().stop(); say("Pruned back—it reels!"); }
+            if (bushes >= 6 && timer % 200 == 0) { heal(getMaxHealth() * 0.05F); say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.sprout_feeds")); }
+            if (prunedSince >= 5) { prunedSince = 0; openTicks = 80; getNavigation().stop(); say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.sprout_pruned")); }
         }
     }
 
@@ -280,7 +280,7 @@ public class RemnantEntity extends Monster {
                     sl.playSound(null, t, SoundEvents.NOTE_BLOCK_CHIME.value(), SoundSource.HOSTILE, 1.5F, 1.0F);
                 });
             }
-            say("It winds. Watch, then step.");
+            say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.clock_winds"));
         }
         if (props.isEmpty()) return;
         BlockPos want = props.get(propStep);
@@ -289,7 +289,7 @@ public class RemnantEntity extends Monster {
                 sl.setBlock(want, floor(sl), 3);
                 propStep++;
                 sl.playSound(null, want, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.2F, 0.8F + 0.2F * propStep);
-                if (propStep >= props.size()) { props.clear(); open(160, "The pattern holds. The chassis opens!"); }
+                if (propStep >= props.size()) { props.clear(); open(160, com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.clock_opens")); }
                 return;
             }
         }
@@ -297,7 +297,7 @@ public class RemnantEntity extends Monster {
             for (BlockPos t : props) sl.setBlock(t, floor(sl), 3);
             props.clear();
             for (ServerPlayer p : sl.getEntitiesOfClass(ServerPlayer.class, new AABB(home).inflate(12))) p.hurt(damageSources().magic(), 6);
-            say("Out of pattern. The gears bite.");
+            say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.clock_wrong"));
             timer = 0;
         }
     }
@@ -311,11 +311,11 @@ public class RemnantEntity extends Monster {
                 sl.setBlock(c, Blocks.BEE_NEST.defaultBlockState(), 3);
                 props.add(c);
             }
-            say("Drone cells knit into the walls. Break them.");
+            say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.swarm_cells"));
         }
         if (props.isEmpty()) return;
         props.removeIf(c -> !sl.getBlockState(c).is(Blocks.BEE_NEST));
-        if (props.isEmpty()) { open(200, "The last cell falls. The queen is bare!"); return; }
+        if (props.isEmpty()) { open(200, com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.swarm_bare")); return; }
         if (timer % 160 == 0) {
             int bees = sl.getEntitiesOfClass(Bee.class, new AABB(home).inflate(14)).size();
             for (BlockPos c : props) if (bees++ < 6) {
@@ -356,12 +356,12 @@ public class RemnantEntity extends Monster {
             if (sl.getBlockState(g).is(Blocks.PURPLE_STAINED_GLASS)) continue;
             if (i == propStep) {
                 propStep++;
-                if (propStep >= props.size()) { props.clear(); open(200, "The last ward breaks. It stands exposed!"); }
+                if (propStep >= props.size()) { props.clear(); open(200, com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.sigil_exposed")); }
             } else {
                 for (BlockPos r : props) sl.setBlock(r, Blocks.PURPLE_STAINED_GLASS.defaultBlockState(), 3);
                 propStep = 0;
                 for (ServerPlayer p : sl.getEntitiesOfClass(ServerPlayer.class, new AABB(home).inflate(12))) p.hurt(damageSources().magic(), 4);
-                say("Wrong seal. The wards re-arm.");
+                say(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.sigil_wrong"));
             }
             return;
         }
@@ -391,9 +391,9 @@ public class RemnantEntity extends Monster {
         }
     }
 
-    private void say(String line) {
+    private void say(Component line) {
         if (level() instanceof ServerLevel sl)
-            for (ServerPlayer p : sl.getEntitiesOfClass(ServerPlayer.class, new AABB(home).inflate(16))) p.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.teal(line), true);
+            for (ServerPlayer p : sl.getEntitiesOfClass(ServerPlayer.class, new AABB(home).inflate(16))) p.displayClientMessage(line, true);
     }
 
     @Override public void startSeenByPlayer(ServerPlayer p) { super.startSeenByPlayer(p); bar.addPlayer(p); }

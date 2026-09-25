@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:guardians",
-  "name": "The Beddown",
-  "description": "Keeper of the Soil Strand.",
+  "name": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.description",
   "icon": "guardians:frayed_totem_beddown",
   "x": -4,
   "y": -2,
@@ -11,23 +11,23 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Beddown",
-      "text": "**Goal:** beat this keeper and bring its relic home.\\\nYou need its **Frayed Totem** after the unlock, used outside an arena. Mates within 32 blocks come with you."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.0.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "The Burrow Bowl: a sunken bowl of four soil tiers stepping down to a mud pit under six dark-oak root arches, seven teal root-seams glowing across the pit floor."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.1.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "Every quarter of its health the Beddown slams and floods the pit with a layer of dirt, immune inside it. One of the seven seams lights: dig a channel to it, expose the core and hit it to break the burial. The first gate, and a forgiving one."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.2.text"
     },
     {
       "type": "modonomicon:text",
-      "title": "Continue",
-      "text": "**Check:** `/guardians status` lists this win, and you hold the Woven Relic."
+      "title": "book.ninjacatskies.whisker_codex.page.continue",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.3.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -35,8 +35,8 @@
         "id": "guardians:frayed_totem_beddown",
         "count": 1
       },
-      "title": "Frayed Totem",
-      "text": "Four Frayed Thread and four of the Strand's block around a Void Yarn."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.4.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.4.text"
     },
     {
       "type": "modonomicon:spotlight",
@@ -44,8 +44,8 @@
         "id": "guardians:relic_rootheart",
         "count": 1
       },
-      "title": "Woven Relic",
-      "text": "Rootheart: knockback taken is cut by sixty percent and nothing can pull you. Root Down plants you for five seconds behind eight hearts of absorption."
+      "title": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.5.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.guardians.beddown.page.5.text"
     }
   ],
   "parents": [

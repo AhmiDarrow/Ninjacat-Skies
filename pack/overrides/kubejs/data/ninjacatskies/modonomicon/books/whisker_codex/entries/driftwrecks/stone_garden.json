@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Moss Terraces",
-  "description": "Grit-singers · Garden",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_garden.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_garden.description",
   "icon": "driftwrecks:keepsake_stone_garden",
   "x": 0,
   "y": 2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Moss Terraces",
-      "text": "Grit-singers grew lichen on their terraces the way others grew flowers, and read the seasons in its rings. A lichen stone was a gift for a newborn. Some of these rings are older than the Cut. Keep counting."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_garden.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.stone_garden.page.0.text"
     }
   ],
   "condition": {

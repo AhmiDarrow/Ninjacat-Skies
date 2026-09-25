@@ -1,5 +1,7 @@
 package com.ninjacat.skies.guardians.entity.bosses;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import com.ninjacat.skies.guardians.GuardianKind;
 import com.ninjacat.skies.guardians.entity.GuardianEntity;
 import com.ninjacat.skies.lib.NinjacatText;
@@ -34,14 +36,14 @@ public class DrumheartGuardian extends GuardianEntity {
     public DrumheartGuardian(EntityType<? extends GuardianEntity> type, Level level) { super(type, level, GuardianKind.DRUMHEART); }
 
     @Override protected boolean mobile() { return false; }
-    @Override protected String immuneMessage() { return "The Drumheart only opens on its fourth beat. Strike on the downbeat."; }
+    @Override protected MutableComponent immuneMessage() { return Component.translatable("message.guardians.drumheart.drumheart_only_opens_fourth_beat"); }
     private double bpm() { return 120 + 10 * phase(); }
 
     @Override
     public boolean hurt(DamageSource src, float amount) {
         if (!isImmune() && src.getEntity() instanceof ServerPlayer p && spark.getOrDefault(p.getUUID(), 0) > tickCount) {
             spark.remove(p.getUUID()); amount *= 3;
-            p.displayClientMessage(NinjacatText.gold("Spark strike! ×3"), true); sound(SoundEvents.LIGHTNING_BOLT_IMPACT, 1.2F, 1.4F);
+            p.displayClientMessage(NinjacatText.goldKey("message.guardians.drumheart.spark_strike"), true); sound(SoundEvents.LIGHTNING_BOLT_IMPACT, 1.2F, 1.4F);
             Mech.burst(serverLevel(), ParticleTypes.ELECTRIC_SPARK, position().add(0, kind.height * 0.5, 0), 40, 3);
         }
         return super.hurt(src, amount);
@@ -49,7 +51,7 @@ public class DrumheartGuardian extends GuardianEntity {
 
     @Override
     protected void tickMechanic() {
-        if (ageInFight == 1) shout("The Drumheart answers for the Cut. Listen: three beats, then the downbeat. It opens only on the fourth. Stand on an amber pad as the fourth beat lands to charge a spark, and mind the hammers and the lava lines.");
+        if (ageInFight == 1) shout("message.guardians.drumheart.drumheart_answers_for_cut_listen");
         Vec3 o = origin();
         beatClock += 1; double interval = 1200.0 / bpm();
         if (beatClock >= interval) { beatClock -= interval; beat = beat % 4 + 1; onBeat(o); }
@@ -61,7 +63,7 @@ public class DrumheartGuardian extends GuardianEntity {
         spark.entrySet().removeIf(e -> e.getValue() < tickCount);
     }
 
-    @Override protected void onPhase(int phase) { shout("The Drumheart quickens — " + (int) bpm() + " beats a minute."); sound(SoundEvents.NOTE_BLOCK_BASEDRUM.value(), 3F, 0.5F); }
+    @Override protected void onPhase(int phase) { shout("message.guardians.drumheart.quickens", (int) bpm()); sound(SoundEvents.NOTE_BLOCK_BASEDRUM.value(), 3F, 0.5F); }
 
     private boolean slams(int k, int b) { return b == 4 || k % 3 == b - 1; }
 
@@ -83,7 +85,7 @@ public class DrumheartGuardian extends GuardianEntity {
         // the downbeat: the boss opens, pads charge sparks, the lava lines rise
         open = OPEN_TICKS; Mech.burst(serverLevel(), ParticleTypes.ELECTRIC_SPARK, position().add(0, kind.height * 0.6, 0), 30, 4);
         for (ServerPlayer p : party()) for (int k = 0; k < 8; k++) if (Mech.horiz(p.position(), Mech.polar(o, PAD_R, Math.PI / 4 * k, o.y)) <= 1.6 && Math.abs(p.getY() - o.y) < 2.5) {
-            spark.put(p.getUUID(), tickCount + SPARK_TICKS); p.displayClientMessage(NinjacatText.gold("Spark charged — hit it on the next open beat!"), true);
+            spark.put(p.getUUID(), tickCount + SPARK_TICKS); p.displayClientMessage(NinjacatText.goldKey("message.guardians.drumheart.spark_charged"), true);
             serverLevel().sendParticles(ParticleTypes.ELECTRIC_SPARK, p.getX(), p.getY() + 1, p.getZ(), 20, 0.5, 0.8, 0.5, 0.1); break;
         }
         if (arena() != null) raiseLava(o);

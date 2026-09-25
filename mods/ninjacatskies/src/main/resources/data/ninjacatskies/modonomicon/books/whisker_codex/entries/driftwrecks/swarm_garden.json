@@ -1,7 +1,7 @@
 {
   "category": "ninjacatskies:driftwrecks",
-  "name": "The Bloom Fields",
-  "description": "Colony-keepers · Garden",
+  "name": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_garden.name",
+  "description": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_garden.description",
   "icon": "driftwrecks:keepsake_swarm_garden",
   "x": 5,
   "y": 2,
@@ -11,8 +11,8 @@
   "pages": [
     {
       "type": "modonomicon:text",
-      "title": "The Bloom Fields",
-      "text": "The Bloom Fields were planted for bees, not people: row on row of flowers timed so something was always open. Colony-keepers ate what the bees left. The fields still bloom on schedule. Keep something alive that keeps something else alive."
+      "title": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_garden.page.0.title",
+      "text": "book.ninjacatskies.whisker_codex.entry.driftwrecks.swarm_garden.page.0.text"
     }
   ],
   "condition": {
