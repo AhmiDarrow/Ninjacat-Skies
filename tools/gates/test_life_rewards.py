@@ -7,6 +7,8 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 SHOP = ROOT / "pack/overrides/kubejs/data/ninjacatskies/tribalpower/dock_shop"
 THREAD = "ninjacatskies:frayed_thread"
+# A trade slot holds one stack, so big prices are paid in denser Thread: a skein is 9, a bolt 9 skeins.
+THREAD_VALUE = {THREAD: 1, "ninjacatskies:thread_skein": 9, "ninjacatskies:thread_bolt": 81}
 
 # What one exchanged block is worth if you bought the same material back from a stall, so the two
 # directions can be compared: (unit item sold by a stall, how many of that unit the cost block is).
@@ -23,6 +25,12 @@ EXCHANGED = {
 
 def listings():
     return {path.name: json.loads(path.read_text(encoding="utf-8")) for path in SHOP.glob("*.json")}
+
+
+def thread_cost(entry):
+    """What a listing costs in Frayed Thread, or None when it is not priced in Thread."""
+    unit = THREAD_VALUE.get(entry["cost"]["id"])
+    return None if unit is None else unit * entry["cost"]["count"]
 
 
 class LifeRewardTests(unittest.TestCase):
@@ -60,23 +68,30 @@ class LifeRewardTests(unittest.TestCase):
         self.assertEqual(recipe["result"]["count"], 1)
 
         shard = listings()["spark_thread_shard.json"]
-        self.assertEqual(shard["cost"]["id"], THREAD)
+        self.assertIsNotNone(thread_cost(shard), "the shard is priced in Thread")
         self.assertEqual(shard["result"], {"id": "ninjacatskies:thread_shard", "count": 1})
-        self.assertGreaterEqual(shard["cost"]["count"], 300, "a bought life must stay in nether-star territory")
+        self.assertGreaterEqual(thread_cost(shard), 300, "a bought life must stay in nether-star territory")
         self.assertLessEqual(shard["max_uses"], 4, "stall stock restocks daily; more than 4 is a life a day")
 
         craft = (ROOT / "pack/overrides/kubejs/server_scripts/lives.js").read_text(encoding="utf-8")
         self.assertIn("driftwrecks:rift_shard", craft, "the craft path must stay gated behind a mended Remnant")
         self.assertIn("ninjacatskies:thread_shard", craft)
 
+    def test_every_stall_price_fits_one_stack(self):
+        """The trade screen clamps a price to one stack: 400 Thread silently charged 64 until 0.8.9."""
+        for name, entry in listings().items():
+            with self.subTest(name):
+                self.assertLessEqual(entry["cost"]["count"], 64, "price it in skeins or bolts instead")
+                self.assertLessEqual(entry["result"]["count"], 64)
+
     def test_turning_resources_into_thread_never_pays(self):
         """Grit buys materials back for Thread; every rate must stay far under what a stall sells them for."""
         shop = listings()
         sell = {}   # item -> cheapest Thread per unit across the stalls
         for entry in shop.values():
-            if entry["cost"]["id"] != THREAD:
+            if thread_cost(entry) is None:
                 continue
-            per = entry["cost"]["count"] / entry["result"]["count"]
+            per = thread_cost(entry) / entry["result"]["count"]
             item = entry["result"]["id"]
             sell[item] = min(sell.get(item, per), per)
 

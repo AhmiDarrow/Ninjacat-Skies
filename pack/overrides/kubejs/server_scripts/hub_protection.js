@@ -23,6 +23,8 @@ function mayEditHall(player) {
 BlockEvents.broken(event => {
   if (!inHall(event.level)) return
   if (mayEditHall(event.player)) return
+  // A Yarn Basket holds someone's death drops; it guards itself (owner and Clowder only).
+  if (String(event.block.id) === 'ninjacatskies:yarn_basket') return
   event.cancel()
 })
 

@@ -1,8 +1,8 @@
 {
   "stall": "spark",
   "cost": {
-    "id": "ninjacatskies:frayed_thread",
-    "count": 1000
+    "id": "ninjacatskies:thread_bolt",
+    "count": 12
   },
   "result": {
     "id": "minecraft:nether_star",

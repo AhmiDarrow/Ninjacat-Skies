@@ -5,6 +5,8 @@
 	# Default: 3
 	# Range: 1 ~ 99
 	startingLives = 3
+	#On death, gather a player's dropped items into a Yarn Basket where they fell (or where they last stood, after a fall into the void). Only the owner, their Clowder or a creative player can open it.
+	yarnBasket = true
 
 [skybound]
 	#Give a Whisker Codex the first time a player joins a world.
@@ -37,3 +39,7 @@
 	# Default: 25
 	# Range: -1 ~ 100
 	playersSleepingPercentage = 25
+
+[controls]
+	#Vanilla sneak-to-dismount. Off: sneak only steers what you ride (a chocobo descends) and the Dismount key (Caps Lock by default) gets you off.
+	sneakDismounts = false

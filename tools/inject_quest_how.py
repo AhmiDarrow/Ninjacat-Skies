@@ -198,6 +198,47 @@ HOW_ITEM = {
     "tribalpower:song_bench": "How: Spirit Codex + Tribal Weave. Seat stone or an Echo-stage item. Raw metal belongs on Echo Shatter.",
     "tribalpower:rite_spring_calling": "How: sneak-use the tablet on a Ritual Brazier in its Rite Circle with matching seal and Pulse.",
     "tribalpower:music_disc_drum_circle": "How: The Unsung at the Silent Drum can drop it. Optional.",
+    # Tribal Power 5.0 — the table
+    "tribalpower:hearth_pot": "How: bricks and a bowl over three copper. Set it over a campfire, fire, magma, lava or an Ember Bowl; no Pulse.",
+    "tribalpower:emberroot": "How: grows wild in the Ember Wastes, through a Gate Drum. What you pick is the seed; plant it on farmland.",
+    "tribalpower:fen_rice": "How: grows wild in the Reed Fen, through a Gate Drum. Plant what you picked on farmland.",
+    "tribalpower:frostberry": "How: grows wild in the Snow Fields, through a Gate Drum. Plant what you picked on farmland.",
+    "tribalpower:glimmer_bean": "How: grows wild on Glimmer Ridge, through a Gate Drum. Plant what you picked on farmland.",
+    "tribalpower:steppe_grain": "How: grows wild on the Steppe, through a Gate Drum. Plant what you picked on farmland.",
+    "tribalpower:grit_baked_bread": "How: two Steppe Grain and an Iron Grit in a Hearth Pot over heat. Grit-singer Kin sell it at Friend.",
+    "tribalpower:edge_walker_jerky": "How: two Raw Game and an Emberroot in a Hearth Pot. Raw Game drops from March game animals.",
+    "tribalpower:earth_feast": "How: Keeper's Root Mash, Grit-baked Bread, Emberroot and Steppe Grain in a Hearth Pot. Place it; six servings.",
+    # Tribal Power 5.0 — shamanic healing
+    "tribalpower:spirit_kettle": "How: bones and iron around a cauldron, a Bone Chime under. Sit it over heat; a totem within 8 shapes the brew.",
+    "tribalpower:spirit_tincture": "How: Spirit Kettle — a raw reagent, a March herb and a glass bottle. Ten seconds, 24 Pulse, two tinctures.",
+    "tribalpower:spirit_salve": "How: Spirit Kettle — a raw reagent, a March herb and honeycomb. Two salves a batch.",
+    "tribalpower:spirit_incense": "How: Spirit Kettle — a raw reagent, a March herb and charcoal. Four incense a batch; burn them in a Ritual Brazier.",
+    "tribalpower:spiritgear_rattle": "How: two Bone Chimes around a Manifested Ingot on a stick. Hold use to mend whoever you look at.",
+    "tribalpower:sweat_stones": "How: cobble over a magma block makes four. Sit them over heat within five blocks of a roofed bed.",
+    "tribalpower:rite_healing_circle": "How: two stone, a Mossback Scale, Spirit Reed and a Spirit Seal, shapeless; the seal comes back. Cast on a sealed brazier in its Rite Circle.",
+    # Tribal Power 5.0 — weapons
+    "tribalpower:spiritgear_spear": "How: Manifested Ingot, Bone Chime and a stick on the diagonal. Ranks at the Echo stations like the Blade.",
+    "tribalpower:spiritgear_greatsword": "How: three Manifested Ingots in a T over a Bone Chime. Heavy; the widest sweep.",
+    "tribalpower:pulse_bow": "How: string and Copper Resonators around a Bone Chime. Fires sonic bolts on carried Pulse.",
+    "tribalpower:pulse_crossbow": "How: Manifested Ingots either side of a Pulse Bow, tripwire hook and sticks below. Hold use to load, use to fire.",
+    # Tribal Power 5.0 — the camp kit
+    "tribalpower:vine_lift": "How: vines around Spirit Reed and an ender pearl make two. Stack them in one column; jump up, sneak down.",
+    "tribalpower:woven_soul_urn": "How: Spirit Reed under a string. Use on a creature to take it, on a block to set it down. Two uses.",
+    "tribalpower:songkeeper_drum": "How: leather over planks around a note block. Use it to pick a track and play A, S, D, F.",
+    "tribalpower:lantern_charm": "How: Spiritweave, a Manifested Ingot and a Spirit Seal, shapeless. Use it to wear it; sneak-use opens the slots.",
+    # Tribal Power 5.0 — relics, the finale, the Chronicle
+    "tribalpower:relic_soil": "How: finish the Pad-keepers' story with their Elder; the trial is the Stampede Spirit on the Steppe.",
+    "tribalpower:relic_stone": "How: finish the Grit-singers' story with their Elder; the trial is the Prism Serpent in the Crystal Fields.",
+    "tribalpower:relic_sprout": "How: finish the Rootbinders' story with their Elder; the trial is the Bog Matriarch in the Reed Fen.",
+    "tribalpower:relic_claw": "How: finish the Edge-walkers' story with their Elder; the trial is the Storm Roc on the Highlands.",
+    "tribalpower:relic_spark": "How: finish the Drumhearts' story with their Elder; the trial is the Slag Titan in the Ember Wastes.",
+    "tribalpower:relic_clock": "How: finish the Pattern-weavers' story with their Elder; the trial is the Tide Drummer in the Shallows.",
+    "tribalpower:relic_swarm": "How: finish the Colony-keepers' story with their Elder; the trial is the Cairn Wight in the Snow Fields.",
+    "tribalpower:relic_sigil": "How: finish the Seal-carvers' story with their Elder; the trial is the Vault Sentinel on Glimmer Ridge.",
+    "tribalpower:relic_spindle": "How: finish the Loom-stitchers' story with their Elder; the trial is The Unsung at the Silent Drum.",
+    "tribalpower:rite_ninth_agreement": "How: all eight guardian cores and an Unsung Heart, shapeless. Cast in a Loom circle with nine relics on you.",
+    "tribalpower:carved_stone": "How: set into the walls of March ruins. Read it, then break it and set it on your own wall.",
+    "tribalpower:mural": "How: stands two-by-two at each guardian's ground. Read it, then take it down whole and place it at home.",
     "minecraft:beehive": "How: three honeycomb and six planks. Campfire underneath calms them.",
     "minecraft:bee_nest": "How: oak log ring around a small flower; wait for wings. Swarm names the nest.",
     "minecraft:honey_bottle": "How: glass bottle on a full hive. Campfire underneath.",
@@ -597,6 +638,20 @@ def how_line(item: str | None, title: str) -> str | None:
         return "How: /tribalpower camp create <name> (not a Clowder). Advancement on first camp."
     if "ask the codex why" in low:
         return "How: sneak-use the Spirit Codex on a Tribal block; tick when the report names a real fault."
+    if "reagent in the blade" in low:
+        return "How: Spiritgear weapon in the Song Bench's weapon seat, four empowered reagents in the pouch, 32 Pulse; press Anoint. Tick when it is anointed."
+    if low == "a story told":
+        return "How: right-click a tribe's Elder at Guest or better and ask for their story; seven steps end at a guardian. Advancement on the first relic."
+    if low == "nine relics":
+        return "How: finish all nine stories. Advancement when the ninth relic is in hand."
+    if low.endswith(" stilled"):
+        return "How: sneak-use the country's Guardian Altar empty-handed, lay on eight of the reagent it names, and win. Advancement on the kill."
+    if low == "the loom agrees":
+        return "How: Loom Seal in a brazier inside its Rite Circle, nine relics in your pack; sneak-use the tablet on the brazier."
+    if low == "the chronicle whole":
+        return "How: right-click all eight Carved Stones in March ruins and all eight Murals at the guardians' grounds."
+    if "march breathes" in low:
+        return "How: be in the March through a weather, a surge or a festival day; tick it when you have."
     if item:
         return f"How: make or find {title}. JEI names the recipe; earlier quests in this chapter name the station and inputs."
     # Advancement / checkmark quests without a rule already explain themselves; a JEI hint would mislead.

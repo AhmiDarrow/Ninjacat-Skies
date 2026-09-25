@@ -32,18 +32,20 @@ Grave (`` ` ``) opens the live quest list. Right-click the **Whisker Codex** for
 
 - Void islands with Clowder Dock spawn and Easy / Normal / Hard pads
 - Clowder Hall hub dimension (`/clowder hub`), with Kin stalls and a guide to Whiskerwind
-- FTB Quests Loom Braid progression — **1,689** authored quests across **42** chapters
+- FTB Quests Loom Braid progression — **1,739** authored quests across **42** chapters
 - **Tension Post**: seat Strand tokens on your pad; each tribe chimes, the notches light, and the pad itself changes (hearth, footing, haste, luck)
 - **The Fray**: the cut in the sky, visible over the Dock, thinning as the server reweaves
 - **Whisker Codex** in-game book: The Work, The Cut, the Loom Braid, Nine Tribes, Snapped Guardians and Driftwrecks — entries unlock as you play
 - **Snapped Guardians**: thirteen bosses in their own arenas. Craft a Frayed Totem after seating that Strand, pull the Clowder in, and bring home a Woven Relic
 - **Driftwrecks**: modular ruins of the old world that drift up to your pad, hold for a while, and unravel — no two alike
 - **Pad-runners**: catch chocobos in the March, breed the farm line to Gold, and race them in Whiskerwind
+- **Shared Clowder lives**: one pool for the team, spent one per death; six milestone lives, and a Thread of Return to buy one back. What you drop when you die waits in a **Yarn Basket** only you and your Clowder can open
+- **Ready to translate**: every line a player reads, chat to Codex, sits in lang files
 - **Skyblock-tuned**: every mod is reachable from a bare pad — bees, Mystical Agriculture essences, Ars archwood and more all bootstrap from the sieve, no worldgen required
 - **Bees on a void pad**: craft a nest from a ring of logs or grit around a flower and wait for wings; every Productive Bees line starts there
 - Voidloom stations: a Loomframe that sifts on its own, a Tension Barrel that batches — the pad's first machines
 - FancyMenu branded title (void sky, paw logo, indigo/teal buttons)
-- Tribal Power **3.6.2** as a core pack pillar (also playable standalone)
+- Tribal Power **5.0.1** as a core pack pillar (also playable standalone): Elders that talk, nine tribe stories, eight March guardians and the Ninth Agreement, a March with its own weather, festivals and music
 - Create, Mystical Agriculture, Productive Bees, AE2, Mekanism, Occultism, and more — woven into original quests
 
 ## Driftwrecks
@@ -59,6 +61,8 @@ Chocobos roam the March. Tame a wild Yellow with Gysahl, train it on the eight g
 ## The living March
 
 The March, beyond the Gate Drum, is a world of its own. Beat out the **Gate Rite** — one of six drumming songs, struck in time on four drums — and the gate carries you through. Terraced mesas, deep caves and canyons, the vanilla ores in March slate, 27 structures with guarded vaults, six trees of its own (the Weeping Colossus stands over a hundred blocks tall), meres full of glowing water life, and spirits that walk by day and grow stronger after dark. Tame its creatures like wolves, read their stats, and breed toward the Exalted tier.
+
+The March acts on its own now. Four countries have weather of their own making — Ashfall, Glimmer Storm, Whiteout, Fen Mist — each feeding one voice's generators and choking another's; ley surges run one voice's threads bright and double every collector on them, and punish anyone standing on a bare crossing; every tribe keeps a festival day; a warm light drifts near you now and then with a line of its country's story and a gift. Storms and surges are called two minutes ahead. Eight guardians keep the eight countries, one at the end of each tribe's story, each rising from its own altar; and sixteen fragments of the Loom's history, carved into the ruins, assemble in the Codex into the **Chronicle**.
 
 ## Mods
 
@@ -87,4 +91,4 @@ A fifteen-quest bestiary branch after the Gate Drum supplies a brush and guides 
 
 ## A camp with a living heart
 
-Tribal Power brings an illustrated, animated Spirit Codex written in plain language, with clickable links, search, bookmarks and live recipes. Nine tribe camps still stand: raise standing at a Tribe Hearth, trade with Elders, and wake The Unsung. Placement is the ritual — Stone Fonts, the Listening Pit, tablet Rite Circles, and built Way and Far Gates — with six voice generators around the Drumheart. Spiritgear and Spiritweave climb catalyst-gated ranks to Manifested. Camp quests introduce ritual mob binding, finite-use summoning, chunk anchors, spawn wards, automated crop tending and functional decorations.
+Tribal Power brings an illustrated, animated Spirit Codex written in plain language, with clickable links, search, bookmarks, live recipes and a **Next step** panel that reads where you are on the path. Nine tribe camps still stand, and now their Elders talk: ask for work and they hand you one of the tribe's requests, three a day; ask for their story and a seven-step road begins that ends at a **trial** against a guardian and a **relic** that keeps the tribe's boon on you wherever you go. Finish all nine and the **Ninth Agreement** ties them together. Placement is the ritual — Stone Fonts, the Listening Pit, tablet Rite Circles, built Way and Far Gates, six voice generators around the Drumheart — and the table is the camp's other heart: five March crops, a Hearth Pot that cooks nine tribe dishes and six feasts, a Spirit Kettle that brews tinctures, salves and incense, Sweat Stones and a Healing Circle. Spiritgear climbs catalyst-gated ranks to Manifested and now comes as eight weapons, each with a move of its own, anointed at the Song Bench with four empowered reagents. Camp quests introduce ritual mob binding, finite-use summoning, chunk anchors, spawn wards and automated crop tending — and every automated hand answers to a kept totem of its voice.

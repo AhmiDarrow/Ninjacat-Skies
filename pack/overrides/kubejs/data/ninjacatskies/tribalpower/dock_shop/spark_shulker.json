@@ -1,8 +1,8 @@
 {
   "stall": "spark",
   "cost": {
-    "id": "ninjacatskies:frayed_thread",
-    "count": 200
+    "id": "ninjacatskies:thread_skein",
+    "count": 22
   },
   "result": {
     "id": "minecraft:shulker_box",
