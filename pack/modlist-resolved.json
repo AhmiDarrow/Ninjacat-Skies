@@ -171,7 +171,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade 🔍",
+    "name": "Jade \ud83d\udd0d",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -1034,9 +1034,9 @@
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8972319,
-    "filename": "tribalpower-5.2.1.jar",
+    "fileId": 8973651,
+    "filename": "tribalpower-5.3.2.jar",
     "releaseType": 1,
-    "sha1": "5266f6a86725e7a2568e88d03dbf6299d29060ef"
+    "sha1": "1785ef44257894d8bff26f9ae355dc8f97dbed63"
   }
 ]
