@@ -5,6 +5,7 @@ The pack applies its curated defaults once on first launch or upgrade. Existing 
 ## Everyday controls
 
 - **Grave / backtick (`):** the assignment list (checkmarks and rewards). Right-click the Whisker Codex and open **Start here** first. Same campaign; no Shift-click mode.
+- **Numpad minus:** Tribal Power Gear screen. Opens the settings for worn Spiritweave, goggles, and the vault. The assignment list stays on grave.
 - **K:** Clowder island and invitation panel. Hold the Island Charter and **right-click a friend to invite** them (or `/clowder invite <name>`; they run `/clowder accept`). The Island Charter opens the same panel anywhere; sneak-use on solid Overworld pad ground seals spawn.
 - **Alt+K:** FTB party team panel.
 - **M:** Xaero world map. **Ctrl+M:** FTB claims map. **Ctrl+Comma:** claim manager.
@@ -70,3 +71,4 @@ JEI recipe/uses keys remain R/U while hovering items in an inventory. Those are 
 - `key.sophisticatedbackpacks.toggle_upgrade_2`: **Alt+X** (world context).
 - `key.saveToolbarActivator`: **F6** (original context).
 - `key.loadToolbarActivator`: **F7** (original context).
+- `key.tribalpower.gear`: **Numpad minus** (world context). Pack default. Tribal Power's own mod default stays apostrophe.
