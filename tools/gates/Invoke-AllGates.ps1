@@ -65,6 +65,9 @@ try {
     Invoke-Gate "ShippedConfigs" {
         python -X utf8 (Join-Path $gateDir "test_shipped_configs.py")
     }
+    Invoke-Gate "SoundFiles" {
+        python -X utf8 (Join-Path $gateDir "test_sound_files.py")
+    }
     Invoke-Gate "LangKeys" {
         python -X utf8 (Join-Path $gateDir "test_lang_keys.py")
     }
