@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.13 — The Songkeeper's Drum
 
-Pack CurseForge client file **(pending)**, server additional **(pending)**.
+Pack CurseForge client file **8978123**, server additional **8978127**.
 
 Ninjacat Skies Core 0.5.15, Tribal Power 5.3.6 and Chocobos Reborn 1.0.15. Existing saves load as they
 are; no quest ids change, and the mod list is unchanged at 104. Shamanic Mounts waits for CurseForge's
