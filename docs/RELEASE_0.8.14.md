@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.14 — Every drum sounds
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8978901**, server additional **8978907**.
 
 Ninjacat Skies Core 0.5.16 and Tribal Power 5.3.7. Existing saves load as they are; no quest ids change, and
 the mod list is unchanged at 104. Shamanic Mounts still waits for CurseForge's approval.
