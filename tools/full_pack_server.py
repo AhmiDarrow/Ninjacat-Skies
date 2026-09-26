@@ -205,7 +205,8 @@ def fail_from_line(line: str) -> str | None:
     return None
 
 
-def run_server(stage: Path, args_txt: Path, timeout: int, settle: int) -> None:
+def run_server(stage: Path, args_txt: Path, timeout: int, settle: int,
+               commands: list[str] | None = None, expects: list[str] | None = None) -> None:
     cmd = [
         "java",
         f"@{stage / 'user_jvm_args.txt'}",
@@ -281,6 +282,30 @@ def run_server(stage: Path, args_txt: Path, timeout: int, settle: int) -> None:
                 saw_done = True
                 done_at = time.monotonic()
                 log(f"Reached Done; waiting {settle}s for ServerStarted")
+        # Console checks: each command runs as the server console; every expected pattern must then appear.
+        for command in commands or []:
+            log(f"Console: {command}")
+            proc.stdin.write(command + "\n")
+            proc.stdin.flush()
+        pending = [re.compile(pattern) for pattern in (expects or [])]
+        deadline = time.monotonic() + 60
+        while pending and time.monotonic() < deadline:
+            try:
+                line = lines.get(timeout=0.5)
+            except queue.Empty:
+                continue
+            if line is None:
+                break
+            print(line, flush=True)
+            if re.search(r"selftest FAIL", line):
+                proc.stdin.write("stop\n")
+                proc.stdin.flush()
+                raise SystemExit(f"FAIL console check: {line.strip()}")
+            pending = [pattern for pattern in pending if not pattern.search(line)]
+        if pending:
+            proc.stdin.write("stop\n")
+            proc.stdin.flush()
+            raise SystemExit(f"FAIL console check: never saw {[p.pattern for p in pending]}")
         if not saw_mek:
             raise SystemExit("FAIL: Mekanism never appeared in the server log")
         if not saw_tribal:
@@ -334,6 +359,8 @@ def main() -> int:
     ap.add_argument("--timeout", type=int, default=900, help="seconds to wait for Done")
     ap.add_argument("--settle", type=int, default=15, help="seconds to stay up after Done")
     ap.add_argument("--keep-world", action="store_true")
+    ap.add_argument("--command", action="append", default=[], help="console command to run once the server is up (repeatable)")
+    ap.add_argument("--expect", action="append", default=[], help="regex that must then appear in the log (repeatable)")
     args = ap.parse_args()
 
     root = Path(args.root).resolve()
@@ -354,7 +381,7 @@ def main() -> int:
     write_runtime_files(stage)
     if not args.keep_world:
         wipe_world(stage)
-    run_server(stage, args_txt, args.timeout, args.settle)
+    run_server(stage, args_txt, args.timeout, args.settle, args.command, args.expect)
     return 0
 
 
