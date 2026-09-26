@@ -1,0 +1,110 @@
+{
+  "music.beddown": {
+    "sounds": [
+      {
+        "name": "guardians:music/beddown",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.cogwright": {
+    "sounds": [
+      {
+        "name": "guardians:music/cogwright",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.drumheart": {
+    "sounds": [
+      {
+        "name": "guardians:music/drumheart",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.edgewalker": {
+    "sounds": [
+      {
+        "name": "guardians:music/edgewalker",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.grindmaw": {
+    "sounds": [
+      {
+        "name": "guardians:music/grindmaw",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.hivemind": {
+    "sounds": [
+      {
+        "name": "guardians:music/hivemind",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.lint_golem": {
+    "sounds": [
+      {
+        "name": "guardians:music/lint_golem",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.overweaver": {
+    "sounds": [
+      {
+        "name": "guardians:music/overweaver",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.sealbreaker": {
+    "sounds": [
+      {
+        "name": "guardians:music/sealbreaker",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.tangle": {
+    "sounds": [
+      {
+        "name": "guardians:music/tangle",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.thornmother": {
+    "sounds": [
+      {
+        "name": "guardians:music/thornmother",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  },
+  "music.unwoven": {
+    "sounds": [
+      {
+        "name": "guardians:music/unwoven",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.guardians.music"
+  }
+}
