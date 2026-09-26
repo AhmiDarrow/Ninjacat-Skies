@@ -29,7 +29,7 @@ public final class Craftweave {
                 CraftTables.applyPick(event.getContainer(), player);
             }
         });
-        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.RegisterCommandsEvent event) -> SelfTest.register(event.getDispatcher()));
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.RegisterCommandsEvent event) -> com.ninjacat.skies.craftweave.verification.SelfTest.register(event.getDispatcher()));
         if (FMLEnvironment.dist.isClient()) com.ninjacat.skies.craftweave.client.CraftweaveClient.init(modBus);
     }
 

@@ -14,14 +14,14 @@ import net.minecraft.world.item.crafting.RecipeHolder;
  * grid, finds each ingredient, fills the slots), without the book's rule that the recipe be unlocked first. A
  * bookmark, or a quantity that outruns the grid, needs the ingredients pulled in whether or not the book knows it.
  */
-final class Placer extends ServerPlaceRecipe<CraftingInput, CraftingRecipe> {
+public final class Placer extends ServerPlaceRecipe<CraftingInput, CraftingRecipe> {
     @SuppressWarnings("unchecked")
-    Placer(AbstractContainerMenu menu) {
+    public Placer(AbstractContainerMenu menu) {
         super((RecipeBookMenu<CraftingInput, CraftingRecipe>) menu);
     }
 
     /** Place one set (or as many as will fit with {@code all}). False when the pack and grid cannot make it. */
-    boolean place(ServerPlayer player, RecipeHolder<CraftingRecipe> recipe, boolean all) {
+    public boolean place(ServerPlayer player, RecipeHolder<CraftingRecipe> recipe, boolean all) {
         this.inventory = player.getInventory();
         stackedContents.clear();
         inventory.fillStackedContents(stackedContents);
@@ -33,7 +33,7 @@ final class Placer extends ServerPlaceRecipe<CraftingInput, CraftingRecipe> {
     }
 
     /** Everything on the grid back into the pack (what will not fit stays on the grid). */
-    void clear(ServerPlayer player) {
+    public void clear(ServerPlayer player) {
         this.inventory = player.getInventory();
         clearGrid();
         inventory.setChanged();

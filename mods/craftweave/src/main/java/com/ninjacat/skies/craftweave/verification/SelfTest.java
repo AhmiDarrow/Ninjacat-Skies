@@ -1,4 +1,7 @@
-package com.ninjacat.skies.craftweave;
+package com.ninjacat.skies.craftweave.verification;
+
+import com.ninjacat.skies.craftweave.CraftTables;
+import com.ninjacat.skies.craftweave.Placer;
 
 import com.mojang.brigadier.CommandDispatcher;
 import java.util.ArrayList;
@@ -21,12 +24,12 @@ import org.slf4j.LoggerFactory;
  * player, checks both recipes meet, cycles between them, and crafts each. The full-pack server gate runs it on the
  * packed Core jar; it prints one PASS or FAIL line.
  */
-final class SelfTest {
+public final class SelfTest {
     private static final Logger LOG = LoggerFactory.getLogger("craftweave");
 
     private SelfTest() {}
 
-    static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
+    public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("craftweave").requires(source -> source.hasPermission(2))
                 .then(Commands.literal("selftest").executes(context -> {
                     String verdict = run(context.getSource().getLevel());
@@ -36,7 +39,7 @@ final class SelfTest {
                 })));
     }
 
-    static String run(ServerLevel level) {
+    public static String run(ServerLevel level) {
         var player = FakePlayerFactory.getMinecraft(level);
         player.getInventory().clearContent();
         var menu = new CraftingMenu(0, player.getInventory(), ContainerLevelAccess.create(level, level.getSharedSpawnPos()));

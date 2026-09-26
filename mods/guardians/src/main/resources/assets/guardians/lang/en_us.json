@@ -246,5 +246,6 @@
   "message.guardians.title.lintgolem": "the Lint Golem",
   "message.guardians.title.tangle": "the Tangle",
   "message.guardians.title.firstcut": "the First Cut",
-  "message.guardians.title.overweaver": "the Overweaver"
+  "message.guardians.title.overweaver": "the Overweaver",
+  "subtitles.guardians.music": "Guardian theme plays"
 }
