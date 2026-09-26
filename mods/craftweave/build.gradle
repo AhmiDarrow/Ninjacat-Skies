@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.146'
+    id 'idea'
+}
+
+ext {
+    mod_id = 'craftweave'
+    mod_name = 'Craftweave'
+    mod_description = 'Craftweave for Ninjacat Skies: a better crafting table. Cycle between recipes that share a grid, craft a whole number of items in one click, and keep a few favourite recipes on a tab. Works at the vanilla crafting table and any 3x3 table with a recipe book (the Tribal Bench included).'
+}
+apply from: rootProject.file('neoforge-mod.gradle')
+
+neoForge {
+    runs {
+        verification {
+            type = 'gameTestServer'
+            gameDirectory = project.file('build/verification')
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'craftweave'
+        }
+    }
+}

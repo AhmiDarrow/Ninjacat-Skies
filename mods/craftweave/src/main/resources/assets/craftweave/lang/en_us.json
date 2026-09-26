@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "How many to craft",
+  "craftweave.quantity.tip": "How many to make. Type a number (or scroll; shift for a stack), then click the result or press Enter. When the grid runs out, the same recipe is laid out again from your pack. Empty or 1 is the table as usual.",
+  "craftweave.cycle": "Recipe %s of %s for this grid",
+  "craftweave.cycle.tip": "Click for the next, right-click for the previous. Your pick is remembered.",
+  "craftweave.bookmark": "Bookmark this recipe",
+  "craftweave.unbookmark": "Remove the bookmark",
+  "craftweave.bookmark.place": "Click to lay it out from your pack (shift: as many as fit)",
+  "craftweave.bookmark.remove": "Right-click to remove",
+  "craftweave.max": "max %s",
+  "craftweave.clear": "Put everything on the grid back in your pack",
+  "craftweave.bookmark.can": "You can make %s",
+  "craftweave.bookmark.short": "Not enough in your pack"
+}

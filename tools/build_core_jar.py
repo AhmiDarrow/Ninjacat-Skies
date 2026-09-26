@@ -29,7 +29,7 @@ CORE_ID = "ninjacatskies_core"
 CORE_JAR = "ninjacatskies-core-{ver}.jar"
 GROUP = "com.ninjacat.skies"
 # load order matters only for readability; FML resolves dependencies itself
-COMPANIONS = ("ninjacatlib", "ninjacatskies", "voidloom", "clowderhall", "guardians", "driftwrecks")
+COMPANIONS = ("ninjacatlib", "ninjacatskies", "voidloom", "clowderhall", "guardians", "driftwrecks", "craftweave")
 EPOCH = (2026, 1, 1, 0, 0, 0)
 
 
@@ -60,7 +60,7 @@ version="{ver}"
 displayName="Ninjacat Skies Core"
 authors="Ninjacat Skies"
 logoFile="ninjacatskies_core.png"
-description=\'\'\'The Ninjacat Skies companion mods in one jar: Ninjacat Lib, Ninjacat Skies (Codex, kits, Strand story), Voidloom, Clowder Hall, the Snapped Guardians and Driftwrecks. Built for the Ninjacat Skies modpack.\'\'\'
+description=\'\'\'The Ninjacat Skies companion mods in one jar: Ninjacat Lib, Ninjacat Skies (Codex, kits, Strand story), Voidloom, Clowder Hall, the Snapped Guardians, Driftwrecks and Craftweave (a better crafting table). Built for the Ninjacat Skies modpack.\'\'\'
 
 [[dependencies.{CORE_ID}]]
     modId="neoforge"
