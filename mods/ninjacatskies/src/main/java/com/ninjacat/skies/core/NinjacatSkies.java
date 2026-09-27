@@ -42,6 +42,7 @@ public final class NinjacatSkies {
         NeoForge.EVENT_BUS.register(new SkyboundEvents());
         NeoForge.EVENT_BUS.register(new TensionEffects());
         NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.SleepRule());
+        NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.ShortNights());
         NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.DeathBasket());
         com.ninjacat.skies.core.tension.LoomTension.init();
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
@@ -49,6 +50,7 @@ public final class NinjacatSkies {
             modBus.addListener(com.ninjacat.skies.core.client.SunderedSkyEffects::register);
             modBus.addListener(com.ninjacat.skies.core.client.PanoramicSky::registerShaders);
             NeoForge.EVENT_BUS.register(new SkyTint());
+            NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.ClientShortNights());
             NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.PackKeybindings());
             modBus.addListener(com.ninjacat.skies.core.client.DismountKey::register);
             NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.DismountKey());

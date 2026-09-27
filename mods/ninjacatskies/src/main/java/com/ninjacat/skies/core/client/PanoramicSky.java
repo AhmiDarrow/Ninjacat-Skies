@@ -7,7 +7,10 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import org.joml.Matrix4f;
 
-/** Camera-centred HD panoramas; geometry is calculated once, not once per frame. */
+/**
+ * Camera-centred HD panoramas under two opposing suns and five moons. The panorama sphere is a static GPU buffer
+ * built once; each frame binds it and draws, and every sun and moon is one quad (skipped when faded or set).
+ */
 public final class PanoramicSky {
     private static net.minecraft.client.renderer.ShaderInstance panoramaShader;
 
@@ -18,8 +21,30 @@ public final class PanoramicSky {
     }
     private static final int SEGMENTS = 96, RINGS = 48;
     private static final float[] MESH = mesh();
-    private static final ResourceLocation SUN = ResourceLocation.withDefaultNamespace("textures/environment/sun.png");
-    private static final ResourceLocation MOON = ResourceLocation.withDefaultNamespace("textures/environment/moon_phases.png");
+    private static VertexBuffer sphere;
+    /** The Hearth rides vanilla's track; the Lantern runs against it, tilted, so they meet side by side at noon. */
+    private static final ResourceLocation HEARTH = sky("sundered_sun_amber"), LANTERN = sky("sundered_sun_azure");
+    private static final float LANTERN_TILT = 25F;
+
+    /**
+     * A moon: its phase atlas (vanilla's 4 x 2 layout, frame 0 full), half-width in sky units, how far its track is
+     * tilted, and its cycle against the suns. Nearer moons are bigger and quicker. A cycle of 0 keeps vanilla's moon
+     * (opposite the suns, the world's own phase), so full-moon rules still read it. Listed far to near: nearer moons
+     * are drawn over farther ones.
+     */
+    private record Moon(ResourceLocation texture, float size, float tiltDegrees, float cycleDays, float offset) {}
+
+    private static final Moon[] MOONS = {
+        new Moon(sky("sundered_moon_glint"), 3.0F, 38F, 19F, 0.07F),
+        new Moon(sky("sundered_moon_cinder"), 4.6F, -14F, 12F, -0.27F),
+        new Moon(sky("sundered_moon_hollow"), 7.0F, 29F, 7.5F, 0.36F),
+        new Moon(sky("sundered_moon_rime"), 13.0F, -24F, 0F, 0F),
+        new Moon(sky("sundered_moon_skein"), 15.0F, 9F, 2.5F, -0.12F),
+    };
+
+    private static ResourceLocation sky(String name) {
+        return ResourceLocation.fromNamespaceAndPath("ninjacatskies", "textures/sky/" + name + ".png");
+    }
     private PanoramicSky() {}
 
     static void draw(ClientLevel level, float partial, Matrix4f modelView,
@@ -38,29 +63,47 @@ public final class PanoramicSky {
         RenderSystem.setShaderColor(1, 1, 1, 1);
         try {
             float sum = 0;
+            var shader = panoramaShader != null ? panoramaShader : GameRenderer.getPositionTexColorShader();
+            VertexBuffer mesh = sphere();
+            mesh.bind();
             for (int layer = 0; layer < layers.length; layer++) {
                 float weight = Math.clamp(weights[layer], 0F, 1F);
                 if (weight < .001F) continue;
                 sum += weight;
                 float alpha = weight / sum; // Exact weighted crossfade, including healing.
                 RenderSystem.setShaderTexture(0, layers[layer]);
-                var buffer = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
-                for (int i = 0; i < MESH.length; i += 5)
-                    buffer.addVertex(matrix, MESH[i], MESH[i+1], MESH[i+2])
-                            .setUv(MESH[i+3], MESH[i+4]).setColor(light, light, light, alpha);
-                BufferUploader.drawWithShader(buffer.buildOrThrow());
+                RenderSystem.setShaderColor(light, light, light, alpha);
+                mesh.drawWithShader(matrix, RenderSystem.getProjectionMatrix(), shader);
             }
+            VertexBuffer.unbind();
+            RenderSystem.setShaderColor(1, 1, 1, 1);
             RenderSystem.setShader(GameRenderer::getPositionTexColorShader);
+            float rain = level.getRainLevel(partial);
+            float celestial = level.getTimeOfDay(partial);
+            // The suns first, added: black is nothing. The Lantern runs the Hearth's arc backwards, rising in the west.
             RenderSystem.blendFunc(com.mojang.blaze3d.platform.GlStateManager.SourceFactor.SRC_ALPHA,
                     com.mojang.blaze3d.platform.GlStateManager.DestFactor.ONE);
-            float celestial = level.getTimeOfDay(partial);
-            celestial(matrix, SUN, celestial, 8, 0, 0, 1, 1,
-                    com.ninjacat.skies.core.sky.SunderedSkyMath.sunAlpha(day, level.getRainLevel(partial)));
-            int phase = Math.floorMod(level.getMoonPhase(), 8);
-            celestial(matrix, MOON, celestial + .5F, 6,
-                    (phase % 4) / 4F, (phase / 4) / 2F,
-                    (phase % 4 + 1) / 4F, (phase / 4 + 1) / 2F,
-                    com.ninjacat.skies.core.sky.SunderedSkyMath.moonAlpha(day, level.getRainLevel(partial)));
+            // Visible whenever they are up (both set at night), so they rise and set on the horizon; rain dims them.
+            float sunAlpha = 1F - Math.clamp(rain, 0F, 1F) * 0.65F;
+            celestial(matrix, HEARTH, celestial, 20, 0F, 0, 0, 1, 1, sunAlpha);
+            celestial(matrix, LANTERN, -celestial, 13, LANTERN_TILT, 0, 0, 1, 1, sunAlpha);
+            // Then the moons, with ordinary alpha: a dark limb hides the stars, and a moon crossing a sun eclipses it.
+            RenderSystem.defaultBlendFunc();
+            float moonAlpha = com.ninjacat.skies.core.sky.SunderedSkyMath.moonAlpha(day, rain);
+            double days = (level.getDayTime() + (double) partial) / 24000.0;
+            for (Moon moon : MOONS) {
+                float elongation;
+                int phase;
+                if (moon.cycleDays() <= 0) {
+                    elongation = .5F;
+                    phase = Math.floorMod(level.getMoonPhase(), 8);
+                } else {
+                    elongation = (float) (((.5 + moon.offset() - days / moon.cycleDays()) % 1 + 1) % 1);
+                    phase = Math.floorMod(Math.round((.5F - elongation) * 8), 8);
+                }
+                celestial(matrix, moon.texture(), celestial + elongation, moon.size(), moon.tiltDegrees(),
+                        (phase % 4) / 4F, (phase / 4) / 2F, (phase % 4 + 1) / 4F, (phase / 4 + 1) / 2F, moonAlpha);
+            }
         } finally {
             RenderSystem.setShaderTexture(0, oldTexture);
             RenderSystem.setShaderColor(oldColor[0], oldColor[1], oldColor[2], oldColor[3]);
@@ -68,6 +111,19 @@ public final class PanoramicSky {
             RenderSystem.defaultBlendFunc();
             RenderSystem.depthMask(true); RenderSystem.enableCull(); RenderSystem.disableBlend();
         }
+    }
+
+    private static VertexBuffer sphere() {
+        if (sphere == null) {
+            var buffer = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
+            for (int i = 0; i < MESH.length; i += 5)
+                buffer.addVertex(MESH[i], MESH[i+1], MESH[i+2]).setUv(MESH[i+3], MESH[i+4]).setColor(1F, 1F, 1F, 1F);
+            sphere = new VertexBuffer(VertexBuffer.Usage.STATIC);
+            sphere.bind();
+            sphere.upload(buffer.buildOrThrow());
+            VertexBuffer.unbind();
+        }
+        return sphere;
     }
 
     private static float[] mesh() {
@@ -87,17 +143,21 @@ public final class PanoramicSky {
         return result;
     }
 
-    private static void celestial(Matrix4f matrix, ResourceLocation texture, float time, float size,
+    private static void celestial(Matrix4f matrix, ResourceLocation texture, float time, float size, float tiltDegrees,
                                   float u0, float v0, float u1, float v1, float alpha) {
         double angle = time * Math.PI * 2;
         float cosine = (float) Math.cos(angle), sine = (float) Math.sin(angle);
+        float tc = (float) Math.cos(Math.toRadians(tiltDegrees)), ts = (float) Math.sin(Math.toRadians(tiltDegrees));
+        if (alpha < .004F || cosine * 90 * tc < -size * 2) return;   // faded out, or under the world
         // Local vertical is tangent to the celestial orbit, so the disc never collapses to a sliver.
         RenderSystem.setShaderTexture(0, texture);
         var buffer = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
         for (int corner = 0; corner < 4; corner++) {
             float x = (corner == 0 || corner == 3 ? -size : size);
             float vertical = corner < 2 ? -size : size;
-            buffer.addVertex(matrix, x, cosine * 90 + sine * vertical, sine * 90 - cosine * vertical)
+            float y = cosine * 90 + sine * vertical;
+            // a tilted track: the orbit plane turned about the horizon axis it rises on
+            buffer.addVertex(matrix, x * tc - y * ts, x * ts + y * tc, sine * 90 - cosine * vertical)
                     .setUv(corner == 0 || corner == 3 ? u0 : u1, corner < 2 ? v1 : v0)
                     .setColor(1F, 1F, 1F, alpha);
         }
