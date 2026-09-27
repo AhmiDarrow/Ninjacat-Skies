@@ -15,6 +15,7 @@ public final class SkiesConfig {
     public static final ModConfigSpec.IntValue FRAY_Z;
     public static final ModConfigSpec.BooleanValue SKY_TINT;
     public static final ModConfigSpec.BooleanValue SUNDERED_SKY;
+    public static final ModConfigSpec.BooleanValue SHORT_NIGHTS;
     public static final ModConfigSpec.IntValue SLEEP_PERCENTAGE;
     public static final ModConfigSpec.BooleanValue YARN_BASKET;
     public static final ModConfigSpec.BooleanValue SNEAK_DISMOUNTS;
@@ -62,6 +63,9 @@ public final class SkiesConfig {
         SLEEP_PERCENTAGE = builder
                 .comment("Share of a dimension's online players who must sleep to pass the night there. Written to the playersSleepingPercentage gamerule on every server start. -1 leaves the gamerule alone.")   // lang-exempt: config file comment for server operators
                 .defineInRange("playersSleepingPercentage", 25, -1, 100);
+        SHORT_NIGHTS = builder
+                .comment("Under the Sundered sky's two suns the Overworld night runs at double speed (dusk to dawn in half the time). Off: vanilla-length nights.")   // lang-exempt: config file comment for server operators
+                .define("shortNights", true);
         builder.pop();
 
         builder.push("controls");

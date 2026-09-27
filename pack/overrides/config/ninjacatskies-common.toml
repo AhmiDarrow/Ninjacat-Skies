@@ -39,6 +39,8 @@
 	# Default: 25
 	# Range: -1 ~ 100
 	playersSleepingPercentage = 25
+	#Under the Sundered sky's two suns the Overworld night runs at double speed (dusk to dawn in half the time). Off: vanilla-length nights.
+	shortNights = true
 
 [controls]
 	#Vanilla sneak-to-dismount. Off: sneak only steers what you ride (a chocobo descends) and the Dismount key (Caps Lock by default) gets you off.
