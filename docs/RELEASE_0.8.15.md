@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.15 — Two Suns and Three Moons
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8986961**, server additional **8986972**.
 
 Ninjacat Skies Core 0.5.17, Tribal Power 5.3.10 and Chocobos Reborn 1.0.16. Existing saves load as they are; no
 quest ids change, and the mod list is unchanged at 104. Shamanic Mounts still waits for CurseForge's approval.
