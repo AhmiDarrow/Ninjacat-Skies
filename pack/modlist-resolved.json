@@ -1014,29 +1014,29 @@
     "name": "Chocobos Reborn",
     "slug": "chocobos-reborn",
     "projectId": 1699008,
-    "fileId": 8977931,
-    "filename": "chocobosreborn-1.0.15.jar",
+    "fileId": 8986453,
+    "filename": "chocobosreborn-1.0.16.jar",
     "releaseType": 1,
-    "sha1": "57db4786de5a5976fdcce54b3b6bb03885960b40"
+    "sha1": "847bf658fbc2d2a3c3d5ebdaa871b758cec82f6f"
   },
   {
     "key": "Ninjacat Skies Core",
     "name": "Ninjacat Skies Core",
     "slug": "ninjacat-skies-core",
     "projectId": 1689718,
-    "fileId": 8978706,
-    "filename": "ninjacatskies-core-0.5.16.jar",
+    "fileId": 8986898,
+    "filename": "ninjacatskies-core-0.5.17.jar",
     "releaseType": 1,
-    "sha1": "ab84b149bc195bac2942314e7606f554585ebb4a"
+    "sha1": "57c6605848fdb37307c2b3166f16207269d43a04"
   },
   {
     "key": "TribalPower",
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8978709,
-    "filename": "tribalpower-5.3.7.jar",
+    "fileId": 8986890,
+    "filename": "tribalpower-5.3.10.jar",
     "releaseType": 1,
-    "sha1": "666e4053a53f379ab71c2a3a526944bc1a161d05"
+    "sha1": "128e4634f71c8f7f4f01e36a7ddd54c167bc8abf"
   }
 ]
