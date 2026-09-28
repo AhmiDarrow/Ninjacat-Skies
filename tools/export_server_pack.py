@@ -76,6 +76,21 @@ while IFS='|' read -r fid fn sha; do
   mv -f "$dst.part" "$dst"
 done < server-mods.txt
 
+# Updating over an older pack: jars it installed that this version no longer ships would load twice and stop the
+# server; they move to mods-removed/. .installed-mods.txt records what the pack put in mods/, so your own mods stay;
+# without it (installed before the record existed) every jar not in this version moves and is listed.
+record=".installed-mods.txt"
+for jar in mods/*.jar; do
+  [ -e "$jar" ] || continue
+  name=$(basename "$jar")
+  grep -qF "|$name|" server-mods.txt && continue
+  if [ -f "$record" ] && ! grep -qxF "$name" "$record"; then continue; fi
+  mkdir -p mods-removed; mv -f "$jar" "mods-removed/$name"; say "  retired $name -> mods-removed/"
+  [ -f "$record" ] || first_record=1
+done
+if [ -n "${first_record:-}" ]; then say "  (first update with a record: if one of those is a mod you added yourself, move it back into mods/)"; fi
+cut -d'|' -f2 server-mods.txt | grep . > "$record"
+
 [ -f server.properties ] || cp -n server.properties.default server.properties
 [ -f user_jvm_args.txt ] || cp -n user_jvm_args.default.txt user_jvm_args.txt
 
@@ -95,7 +110,9 @@ INSTALL_PS1 = r'''# Ninjacat Skies dedicated server — installer (Windows Power
 $ErrorActionPreference = "Stop"
 Set-Location -Path $PSScriptRoot
 $MC = "{MC}"; $NEO = "{NEO}"
-$jvLine = (& java -version 2>&1 | Select-String -Pattern 'version "(\d+)' | Select-Object -First 1)
+if (-not (Get-Command java -ErrorAction SilentlyContinue)) { Write-Host "Java 21 or newer is required (java is not on PATH)"; exit 1 }
+# cmd merges java's stderr: in Windows PowerShell 5.1 a native command's stderr under "Stop" is a terminating error
+$jvLine = (cmd /c "java -version 2>&1" | Select-String -Pattern 'version "(\d+)' | Select-Object -First 1)
 $jv = if ($jvLine) { [int]$jvLine.Matches[0].Groups[1].Value } else { 0 }
 if ($jv -lt 21) { Write-Host "Java 21 or newer is required (found: $jvLine)"; exit 1 }
 
@@ -122,6 +139,22 @@ foreach ($f in $manifest.files) {
   if ($got -ne $f.sha1) { Remove-Item -Force "$dst.part"; throw "checksum mismatch for $($f.filename)" }
   Move-Item -Force "$dst.part" $dst
 }
+
+# Updating over an older pack: jars it installed that this version no longer ships would load twice (two versions
+# of one mod) and stop the server. Those move to mods-removed/. .installed-mods.txt records what the pack put in
+# mods/, so a mod you added yourself stays; without that record (installed before it existed) every jar that is not
+# part of this version moves, and is listed so you can move your own back.
+$wanted = @{}; foreach ($f in $manifest.files) { $wanted[$f.filename] = $true }
+$record = ".installed-mods.txt"
+$ours = $null
+if (Test-Path $record) { $ours = @{}; foreach ($line in Get-Content $record) { if ($line) { $ours[$line] = $true } } }
+$retired = @(Get-ChildItem mods -Filter *.jar | Where-Object { -not $wanted.ContainsKey($_.Name) -and ($null -eq $ours -or $ours.ContainsKey($_.Name)) })
+if ($retired.Count -gt 0) {
+  New-Item -ItemType Directory -Force -Path mods-removed | Out-Null
+  foreach ($j in $retired) { Move-Item -Force $j.FullName (Join-Path mods-removed $j.Name); Write-Host "  retired $($j.Name) -> mods-removed/" }
+  if ($null -eq $ours) { Write-Host "  (first update with a record: if one of those is a mod you added yourself, move it back into mods/)" }
+}
+Set-Content -Path $record -Value ($manifest.files | ForEach-Object { $_.filename }) -Encoding ascii
 
 if (-not (Test-Path server.properties)) { Copy-Item server.properties.default server.properties }
 if (-not (Test-Path user_jvm_args.txt)) { Copy-Item user_jvm_args.default.txt user_jvm_args.txt }
@@ -197,8 +230,9 @@ and every mod from CurseForge's CDN, checking each file against the checksums in
 - Give yourself operator once: `op <name>` in the console. `/clowder`, `/skybound`, `/guardians` are the pack's commands.
 
 ## Updating
-Unzip the newer server pack over this folder and run `install` again: it fetches only files whose checksum changed
-and keeps `world/`, `server.properties`, `eula.txt` and `user_jvm_args.txt`.
+Unzip the newer server pack over this folder and run `install` again: it fetches only files whose checksum changed,
+moves jars this version no longer ships to `mods-removed/` (a mod you added yourself stays in `mods/`), and keeps
+`world/`, `server.properties`, `eula.txt` and `user_jvm_args.txt`.
 '''
 
 
