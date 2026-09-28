@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
     'minecraft:glass_bottle'
   ]).id('ninjacatskies:ink_from_charcoal')
 
-  // End island is gone. Chorus (Spark stall) and pearls around a Binding Knot make End Stone.
+  // End island is gone. Chorus (Edge-walkers' stall) and pearls around a Binding Knot make End Stone.
   event.shaped('8x minecraft:end_stone', [
     'CPC',
     'PBP',

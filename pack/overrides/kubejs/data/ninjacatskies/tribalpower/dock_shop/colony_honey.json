@@ -1,0 +1,12 @@
+{
+  "stall": "colony",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 12
+  },
+  "result": {
+    "id": "minecraft:honey_bottle",
+    "count": 2
+  },
+  "max_uses": 16
+}

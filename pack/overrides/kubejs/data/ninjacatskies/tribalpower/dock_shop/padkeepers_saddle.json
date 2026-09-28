@@ -1,0 +1,12 @@
+{
+  "stall": "padkeepers",
+  "cost": {
+    "id": "minecraft:diamond_block",
+    "count": 1
+  },
+  "result": {
+    "id": "minecraft:saddle",
+    "count": 1
+  },
+  "max_uses": 4
+}

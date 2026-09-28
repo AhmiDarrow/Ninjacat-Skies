@@ -199,7 +199,7 @@ def item_quest(
         return None
     if item in FORCE_OPTIONAL:
         optional = True
-        desc = list(desc) + ["Optional — the void may never offer one."]
+        desc = list(desc) + [STALL_OPTIONAL.get(item, "Optional — the void may never offer one.")]
     if strand_i in SIDE_LORE and title in SIDE_LORE[strand_i]:
         desc = [SIDE_LORE[strand_i][title]]
     if strand_i in STRAND_CHAPTERS and title in LORE and len(LORE[title][0].split()) > 2:
@@ -244,6 +244,12 @@ CURRENT = {"strand_i": 0, "title_counts": {}}
 
 # Items the void world cannot produce on the main line. REMOVE drops the quest; OPTIONAL keeps it as a side note.
 REMOVE_ITEMS = {"minecraft:heart_of_the_sea", "minecraft:rabbit_hide", "minecraft:turtle_helmet", "minecraft:wolf_armor"}
+# Optional items a Kin stall at /clowder hub sells (dock_shop listings) say who sells them instead.
+STALL_OPTIONAL = {
+    "minecraft:saddle": "Optional — the Pad-keepers in Clowder Hall sell one.",
+    "minecraft:name_tag": "Optional — the Seal-carvers in Clowder Hall sell one.",
+    "minecraft:shulker_box": "Optional — the Edge-walkers in Clowder Hall sell one.",
+}
 FORCE_OPTIONAL = {"minecraft:recovery_compass", "minecraft:elytra", "minecraft:totem_of_undying", "minecraft:trident",
                   "minecraft:echo_shard", "minecraft:music_disc_cat", "minecraft:sponge", "minecraft:saddle",
                   "minecraft:nautilus_shell", "minecraft:conduit", "minecraft:rabbit_foot", "minecraft:name_tag",
@@ -436,7 +442,7 @@ LORE = {
     "Precision Mechanism": ["Clockwork heart. Wants a Binding Knot at its centre.", "The Loom, asking to be included."],
     "Sequenced Gearshift": ["Programmed spin. The pattern-weavers' song, written down."],
     # Swarm
-    "Honeycomb": ["Colonies in the wind. The Spark stall at /clowder hub sells comb if none drift by."],
+    "Honeycomb": ["Colonies in the wind. The Colony-keepers' stall at /clowder hub sells comb if none drift by."],
     "Beehive": ["A home for workers."],
     "Advanced Beehive": ["A productive home."],
     "Centrifuge": ["Spin combs into everything they hide."],

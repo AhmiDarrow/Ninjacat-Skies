@@ -293,15 +293,22 @@ public final class ModDimensions {
         return true;
     }
 
+    /**
+     * The town around the pad comes from the pack (TownPlan). Each plan revision N leaves a marker at 0,61-N,0 under
+     * the pad (revision 1, Lanternweave Village, was 0,60,0); a world whose marker for the current revision is
+     * missing gets the plan, which also clears what the older revision left.
+     */
     private static void ensureVillage(ServerLevel level) {
-        BlockPos revision = new BlockPos(0, 60, 0);
-        if (level.getBlockState(revision).is(Blocks.REINFORCED_DEEPSLATE)) return;
-        if (level.getBlockState(revision).is(Blocks.WAXED_OXIDIZED_COPPER)) {
-            level.setBlock(revision, Blocks.REINFORCED_DEEPSLATE.defaultBlockState(), 2);
+        int revision = TownPlan.revision(level);
+        if (revision <= 0 || revision > 10) return;
+        BlockPos marker = new BlockPos(0, 61 - revision, 0);
+        if (level.getBlockState(marker).is(Blocks.REINFORCED_DEEPSLATE)) {
+            TownPlan.tidyResidents(level);
             return;
         }
-        TownPlan.build(level, "/data/clowderhall/towns/clowder_town.json", true);
-        level.setBlock(revision, Blocks.REINFORCED_DEEPSLATE.defaultBlockState(), 2);
+        if (!TownPlan.build(level)) return;
+        level.setBlock(marker, Blocks.REINFORCED_DEEPSLATE.defaultBlockState(), 2);
+        ClowderHall.LOGGER.info("Clowder Hall raised the pack's town, revision {}", revision);
     }
 
     private static void fillCeremonyChest(ChestBlockEntity chest) {

@@ -84,7 +84,8 @@ for jar in mods/*.jar; do
   [ -e "$jar" ] || continue
   name=$(basename "$jar")
   grep -qF "|$name|" server-mods.txt && continue
-  if [ -f "$record" ] && ! grep -qxF "$name" "$record"; then continue; fi
+  # a record written by install.ps1 has CRLF line ends
+  if [ -f "$record" ] && ! grep -qxF -e "$name" -e "$name"$'\r' "$record"; then continue; fi
   mkdir -p mods-removed; mv -f "$jar" "mods-removed/$name"; say "  retired $name -> mods-removed/"
   [ -f "$record" ] || first_record=1
 done
@@ -108,7 +109,13 @@ say "Installed. Start with ./start.sh (edit server.properties and user_jvm_args.
 
 INSTALL_PS1 = r'''# Ninjacat Skies dedicated server — installer (Windows PowerShell). Needs Java 21.
 $ErrorActionPreference = "Stop"
-Set-Location -Path $PSScriptRoot
+# Windows PowerShell 5.1: its download progress bar slows Invoke-WebRequest to a crawl, and older Windows offers no TLS 1.2
+$ProgressPreference = "SilentlyContinue"
+if ([Net.ServicePointManager]::SecurityProtocol -ne 0) { [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12 }
+# [brackets] in the folder name are wildcards to PowerShell's path handling: -Path could land in a sibling folder and
+# relative writes fail half way through (after mods were retired, before the record is written), so refuse up front
+if ($PSScriptRoot -match '[\[\]]') { Write-Host "Rename this folder without [ or ] and run install again: $PSScriptRoot"; exit 1 }
+Set-Location -LiteralPath $PSScriptRoot
 $MC = "{MC}"; $NEO = "{NEO}"
 if (-not (Get-Command java -ErrorAction SilentlyContinue)) { Write-Host "Java 21 or newer is required (java is not on PATH)"; exit 1 }
 # cmd merges java's stderr: in Windows PowerShell 5.1 a native command's stderr under "Stop" is a terminating error
@@ -118,8 +125,9 @@ if ($jv -lt 21) { Write-Host "Java 21 or newer is required (found: $jvLine)"; ex
 
 Write-Host "== NeoForge $NEO server"
 if (-not (Test-Path "libraries/net/neoforged/neoforge/$NEO/win_args.txt")) {
-  Invoke-WebRequest -Uri "https://maven.neoforged.net/releases/net/neoforged/neoforge/$NEO/neoforge-$NEO-installer.jar" -OutFile neoforge-installer.jar
+  Invoke-WebRequest -Uri "https://maven.neoforged.net/releases/net/neoforged/neoforge/$NEO/neoforge-$NEO-installer.jar" -OutFile neoforge-installer.jar -UseBasicParsing
   & java -jar neoforge-installer.jar --install-server . | Out-Null
+  if ($LASTEXITCODE -ne 0) { throw "NeoForge installer failed (exit $LASTEXITCODE)" }
   Remove-Item -Force neoforge-installer.jar, neoforge-installer.jar.log -ErrorAction SilentlyContinue
 }
 
@@ -134,7 +142,7 @@ foreach ($f in $manifest.files) {
   $enc = [uri]::EscapeDataString($f.filename)
   $url = "https://edge.forgecdn.net/files/$([math]::Floor($f.fileID / 1000))/$($f.fileID % 1000)/$enc"
   Write-Host "  [$i/$total] $($f.filename)"
-  Invoke-WebRequest -Uri $url -OutFile "$dst.part"
+  Invoke-WebRequest -Uri $url -OutFile "$dst.part" -UseBasicParsing
   $got = (Get-FileHash "$dst.part" -Algorithm SHA1).Hash.ToLower()
   if ($got -ne $f.sha1) { Remove-Item -Force "$dst.part"; throw "checksum mismatch for $($f.filename)" }
   Move-Item -Force "$dst.part" $dst
@@ -171,8 +179,13 @@ Write-Host ""; Write-Host "Installed. Start with start.bat (edit server.properti
 '''
 
 INSTALL_BAT = r'''@echo off
+setlocal
+rem Started from a PowerShell 7 prompt, PSModulePath would point Windows PowerShell 5.1 at 7's modules (no Get-FileHash)
+set "PSModulePath="
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0install.ps1" %*
+set "rc=%errorlevel%"
 pause
+exit /b %rc%
 '''
 
 START_SH = r'''#!/usr/bin/env bash

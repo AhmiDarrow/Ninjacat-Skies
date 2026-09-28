@@ -1,0 +1,12 @@
+{
+  "stall": "edgewalkers",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 6
+  },
+  "result": {
+    "id": "supplementaries:rope",
+    "count": 8
+  },
+  "max_uses": 16
+}

@@ -1,0 +1,12 @@
+{
+  "stall": "hearth",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 20
+  },
+  "result": {
+    "id": "farmersdelight:beef_stew",
+    "count": 1
+  },
+  "max_uses": 16
+}
