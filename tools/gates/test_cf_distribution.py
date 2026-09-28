@@ -20,13 +20,14 @@ class DistributionTests(unittest.TestCase):
         entries = manifest_entries(jars, rows)
         local = [p for p in jars if is_local_owned(p.name)]
         self.assertEqual(len(local), 0)
-        self.assertEqual(len(jars), 104)
-        self.assertEqual(len(entries), 104)
+        self.assertEqual(len(jars), 105)
+        self.assertEqual(len(entries), 105)
         self.assertEqual(len(entries), len(jars) - len(local))
         self.assertEqual(sum(is_owned_jar(p.name) for p in jars), 0)
         self.assertTrue(any(p.name.startswith('ninjacatskies-core-') for p in jars))
         self.assertTrue(any(p.name.startswith('chocobosreborn-') for p in jars))
-        expected = {619320: 8687896, 235577: 8163135, 1699008: 8996621, 1684851: 8986890, 1689718: 8986898}
+        self.assertTrue(any(p.name.startswith('shamanicmounts-') for p in jars))
+        expected = {619320: 8985962, 235577: 8163135, 1699008: 8999472, 1684851: 8986890, 1689718: 8986898, 1711650: 8978477}
         actual = {e['projectID']: e['fileID'] for e in entries}
         for pid, fid in expected.items(): self.assertEqual(actual[pid], fid)
 
