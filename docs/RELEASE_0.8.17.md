@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.8.17 — Back on track
 
-Pack CurseForge client file **TBD**, server additional **TBD**.
+Pack CurseForge client file **8996675**, server additional **8996699**.
 
 Ninjacat Skies Core 0.5.17, Tribal Power 5.3.10 and Chocobos Reborn 1.0.19. Existing saves load as they are; no
 quest ids change, and the mod list is unchanged at 104.
