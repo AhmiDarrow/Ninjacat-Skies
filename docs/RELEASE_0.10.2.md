@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.2 — Fair Odds
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Chocobos Reborn 1.1.1 is CurseForge file **9004058**; Tribal Power 5.3.11 is **9004145**.
+Pack CurseForge client file **9004254**, server additional **9004255**. Chocobos Reborn 1.1.1 is CurseForge file **9004058**; Tribal Power 5.3.11 is **9004145**.
 
 105 mods (101 on the server): Ninjacat Skies Core 0.5.19, Tribal Power 5.3.11, Chocobos Reborn 1.1.1, Shamanic Mounts
 0.1.3. Existing saves load as they are; no quest ids change.
