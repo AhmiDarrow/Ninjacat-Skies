@@ -764,10 +764,10 @@
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 8986890,
-    "filename": "tribalpower-5.3.10.jar",
+    "fileId": 9004145,
+    "filename": "tribalpower-5.3.11.jar",
     "releaseType": 1,
-    "sha1": "128e4634f71c8f7f4f01e36a7ddd54c167bc8abf"
+    "sha1": "fa21682029596bee0a3b39132fbec8e819c4c38f"
   },
   {
     "key": "Applied Energistics 2",
