@@ -50,6 +50,7 @@ public final class NinjacatSkies {
             modBus.addListener(com.ninjacat.skies.core.client.SunderedSkyEffects::register);
             modBus.addListener(com.ninjacat.skies.core.client.PanoramicSky::registerShaders);
             NeoForge.EVENT_BUS.register(new SkyTint());
+            NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.FrayRenderer());
             NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.ClientShortNights());
             NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.client.PackKeybindings());
             modBus.addListener(com.ninjacat.skies.core.client.DismountKey::register);
@@ -63,6 +64,8 @@ public final class NinjacatSkies {
     private void onRegisterPayloads(RegisterPayloadHandlersEvent event) {
         PayloadRegistrar registrar = event.registrar("1");
         registrar.playToClient(TensionSyncPayload.TYPE, TensionSyncPayload.STREAM_CODEC, ClientTension::handle);
+        registrar.playToClient(com.ninjacat.skies.core.network.FraySyncPayload.TYPE,
+                com.ninjacat.skies.core.network.FraySyncPayload.STREAM_CODEC, com.ninjacat.skies.core.client.ClientFray::handle);
         registrar.playToServer(com.ninjacat.skies.core.network.DismountPayload.TYPE,
                 com.ninjacat.skies.core.network.DismountPayload.STREAM_CODEC, com.ninjacat.skies.core.network.DismountPayload::handle);
     }

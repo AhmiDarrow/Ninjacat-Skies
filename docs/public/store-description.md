@@ -49,7 +49,7 @@ The hub at the edge of the cut world, raised by the nine tribes and every craft 
 - FTB Quests Loom Braid progression — **1,740** authored quests across **42** chapters
 - **Tension Post**: seat Strand tokens on your pad; each tribe chimes, the notches light, and the pad itself changes (hearth, footing, haste, luck)
 - **The Sundered Sky**: two opposing suns and five moons, each on its own path, with short nights
-- **The Fray**: the cut in the sky, visible over the Dock, thinning as the server reweaves
+- **The Fray**: the cut in the sky at Loom's End, rooted in the void and rising past the broken end of the gate-path, thinning as the server reweaves
 - **Whisker Codex** in-game book: The Work, The Cut, the Loom Braid, Nine Tribes, Snapped Guardians and Driftwrecks — entries unlock as you play
 - **Snapped Guardians**: thirteen bosses in their own arenas. Craft a Frayed Totem after seating that Strand, pull the Clowder in, and bring home a Woven Relic
 - **Driftwrecks**: modular ruins of the old world that drift up to your pad, hold for a while, and unravel — no two alike

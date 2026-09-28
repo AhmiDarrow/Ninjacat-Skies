@@ -1,10 +1,12 @@
 package com.ninjacat.skies.core.command;
 
 import com.mojang.brigadier.CommandDispatcher;
+import com.mojang.brigadier.arguments.FloatArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.ninjacat.skies.core.event.SkyboundEvents;
+import com.ninjacat.skies.core.tension.TensionEffects;
 import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -34,6 +36,32 @@ public final class SkyboundCommands {
                                 .executes(SkyboundCommands::reviveSelf)
                                 .then(Commands.argument("player", EntityArgument.player())
                                         .executes(SkyboundCommands::reviveOther)))
+                        // The Fray: how far the server has rewoven; operators can hold it at a value to look at it.
+                        .then(Commands.literal("fray")
+                                .executes(ctx -> {
+                                    float closed = TensionEffects.frayProgress(ctx.getSource().getServer());
+                                    ctx.getSource().sendSuccess(() -> NinjacatText.tealKey(
+                                            TensionEffects.frayOverride() >= 0F
+                                                    ? "message.ninjacatskies.command.fray_held"
+                                                    : "message.ninjacatskies.command.fray_state",
+                                            Math.round(closed * 100F)), false);
+                                    return 1;
+                                })
+                                .then(Commands.literal("off").requires(source -> source.hasPermission(2))
+                                        .executes(ctx -> {
+                                            TensionEffects.setFrayOverride(-1F);
+                                            ctx.getSource().sendSuccess(() -> NinjacatText.tealKey("message.ninjacatskies.command.fray_off"), true);
+                                            return 1;
+                                        }))
+                                .then(Commands.argument("closed", FloatArgumentType.floatArg(0F, 1F))
+                                        .requires(source -> source.hasPermission(2))
+                                        .executes(ctx -> {
+                                            float closed = FloatArgumentType.getFloat(ctx, "closed");
+                                            TensionEffects.setFrayOverride(closed);
+                                            ctx.getSource().sendSuccess(() -> NinjacatText.tealKey("message.ninjacatskies.command.fray_preview",
+                                                    Math.round(closed * 100F)), true);
+                                            return 1;
+                                        })))
         );
     }
 
