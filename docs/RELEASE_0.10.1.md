@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.1 — The Fray
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Core 0.5.19 is CurseForge file **9003796**.
+Pack CurseForge client file **9003974**, server additional **9003982**. Core 0.5.19 is CurseForge file **9003796**.
 
 105 mods (101 on the server): Ninjacat Skies Core 0.5.19, Tribal Power 5.3.10, Chocobos Reborn 1.1.0, Shamanic Mounts
 0.1.3. Existing saves load as they are; no quest ids change.
