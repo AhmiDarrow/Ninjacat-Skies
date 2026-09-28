@@ -111,7 +111,7 @@
   },
   {
     "key": "Jade",
-    "name": "Jade 🔍",
+    "name": "Jade \ud83d\udd0d",
     "slug": "jade",
     "projectId": 324717,
     "fileId": 8591319,
@@ -754,10 +754,10 @@
     "name": "Ninjacat Skies Core",
     "slug": "ninjacat-skies-core",
     "projectId": 1689718,
-    "fileId": 9002736,
-    "filename": "ninjacatskies-core-0.5.18.jar",
+    "fileId": 9003796,
+    "filename": "ninjacatskies-core-0.5.19.jar",
     "releaseType": 1,
-    "sha1": "700c6159f311dd061dbe8f52bfe6451d2eee00c1"
+    "sha1": "6f61f1db769311e308706bc5993eb5bab62f493c"
   },
   {
     "key": "TribalPower",
