@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -38,12 +39,15 @@ class ExportGateTests(unittest.TestCase):
             root=Path(directory);gates=root/"tools"/"gates";gates.mkdir(parents=True)
             source=Path(__file__).parent
             shutil.copyfile(source/"Invoke-AllGates.ps1",gates/"Invoke-AllGates.ps1")
-            for name in ["SanitizedPublicSurface","PackStructure","QuestConsistency","QuestItemIds","CustomModsBuild","SmokeHarness"]:
+            # stub every gate script the runner references, so a new gate never makes this test stale:
+            # only PackStructure fails, and the export must not mask it
+            runner = (source/"Invoke-AllGates.ps1").read_text(encoding="utf-8")
+            for name in sorted(set(re.findall(r"Test-([A-Za-z]+)\.ps1", runner))):
                 (gates/f"Test-{name}.ps1").write_text("exit 1" if name=="PackStructure" else "exit 0")
-            for name in ["test_steward_caches.py", "test_pack_keybindings.py", "test_cf_distribution.py",
-                         "test_quest_preflight.py", "test_codex_book.py", "test_kubejs_rhino.py", "test_life_rewards.py"]:
+            for name in sorted(set(re.findall(r"(test_[a-z_]+\.py)", runner))):
                 (gates/name).write_text("raise SystemExit(0)")
-            (root/"tools"/"check_reachability.py").write_text("raise SystemExit(0)")
+            for name in sorted(set(re.findall(r"tools\\(check_[a-z_]+\.py)", runner))):
+                (root/"tools"/name).write_text("raise SystemExit(0)")
             (root/"tools"/"export-curseforge.ps1").write_text("exit 0")
             (gates/"test_export_archive.py").write_text("print('PASS stub export verification')")
             result=subprocess.run(["pwsh","-NoProfile","-File",str(gates/"Invoke-AllGates.ps1"),"-WithExportDryRun"],capture_output=True,text=True)

@@ -77,6 +77,11 @@ try {
     Invoke-Gate "ReachabilityWrecks" {
         python -X utf8 (Join-Path $gateDir "test_reachability_wrecks.py")
     }
+    Invoke-Gate "GateRegressions" {
+        # the gates' own regression suites: the export cannot mask a failed gate, the quest item gate rules
+        python -X utf8 (Join-Path $gateDir "test_export_gate_regressions.py")
+        if ($LASTEXITCODE -eq 0) { python -X utf8 (Join-Path $gateDir "test_quest_item_gate.py") }
+    }
     if ($WithExportDryRun) {
         Invoke-Gate "ExportDryRun" {
             pwsh -NoProfile -File (Join-Path $root "tools\export-curseforge.ps1")
