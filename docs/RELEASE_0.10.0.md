@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.0 — Loom's End
 
-Pack CurseForge client file **pending**, server additional **pending**. Core 0.5.18 is CurseForge file **9002736**.
+Pack CurseForge client file **9002877**, server additional **9002881**. Core 0.5.18 is CurseForge file **9002736**.
 
 105 mods (101 on the server): Ninjacat Skies Core 0.5.18, Tribal Power 5.3.10, Chocobos Reborn 1.1.0, Shamanic Mounts
 0.1.3. Existing saves load as they are; no quest ids change. The first visit to Clowder Hall after updating rebuilds
