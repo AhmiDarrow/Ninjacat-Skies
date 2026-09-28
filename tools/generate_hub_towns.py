@@ -1,6 +1,7 @@
 """Deterministic block-native town plans; no generated raster art."""
 import json, math, re
 from pathlib import Path
+ROOT_DIR=Path(__file__).resolve().parents[1]
 
 class Town:
     def __init__(self, name, y, warm=False, lang_ns=None):
@@ -183,7 +184,8 @@ def race():
     t.resident(-22,-85,'Saffron','cat');t.resident(29,-86,'Mochi','cat')
     return t
 
-def clowder():
+def clowder_v1():
+    '''Lanternweave Village, the hub's first revision. Kept so the Loom's End upgrade can clear exactly what it built.'''
     t=Town('Lanternweave Village',63,True,lang_ns='clowderhall');t.island(46,42)
     t.box(-11,63,-11,11,63,11,'stone_bricks')
     t.box(-3,63,-37,3,63,37,'polished_andesite')
@@ -237,13 +239,32 @@ def clowder():
     # Keep the original ceremony pad and its saved chests/ring fully untouched.
     return t
 
+def clowder(output, lang=None):
+    """Loom's End (hub revision 2, tools/hub_loomsend.py), a pack datapack file:
+    pack/overrides/kubejs/data/clowderhall/towns/clowder_town.json. Its plan also clears whatever revision 1 left."""
+    import hub_loomsend
+    v1=clowder_v1(); v1_plan=json.loads(json.dumps(dict(boxes=[{'from':o['from_'],'to':o['to'],'block':o['block']} for o in v1.ops])))
+    cv,data=hub_loomsend.plan(v1_plan)
+    Path(output).write_text(json.dumps(data,separators=(',',':'))+'\n')
+    # the keepers' posts go into the stall script, so the two never disagree
+    hub_loomsend.write_posts(ROOT_DIR/'pack/overrides/kubejs/server_scripts/dock_stalls.js', data['posts'])
+    if lang:
+        raw=Path(lang).read_bytes().decode('utf-8'); nl='\r\n' if '\r\n' in raw else '\n'; tail=raw[len(raw.rstrip()):]
+        current=json.loads(raw)
+        # the town's sign keys are regenerated whole; everything else in the file is kept as it was
+        merged={k:v for k,v in current.items() if not k.startswith('sign.ninjacatpack.hub.')}
+        merged.update(cv.lang)
+        Path(lang).write_bytes((json.dumps(merged,indent=2,ensure_ascii=False).replace('\n',nl)+tail).encode('utf-8'))
+    else: print('sign lines are lang keys; pass --lang to write their English')
+    return cv,data
+
 if __name__=='__main__':
     import argparse
     p=argparse.ArgumentParser();p.add_argument('kind',choices=['race','clowder']);p.add_argument('output')
-    p.add_argument('--lang',help='en_us.json that receives the sign English (clowder: mods/clowderhall/src/main/resources/assets/clowderhall/lang/en_us.json)')
+    p.add_argument('--lang',help='en_us.json that receives the sign English (clowder: pack/overrides/kubejs/assets/ninjacatpack/lang/en_us.json)')
     a=p.parse_args()
-    t=race() if a.kind=='race' else clowder()
-    t.save(a.output)
-    if t.lang:
-        if a.lang: t.save_lang(a.lang)
-        else: print('sign lines are lang keys; pass --lang to write their English')
+    if a.kind=='clowder':
+        cv,data=clowder(a.output,a.lang)
+        print(f"{data['name']}: {len(data['boxes'])} boxes, {len(data['signs'])} signs, {len(data['frames'])} frames, {len(data['residents'])} residents")
+    else:
+        t=race(); t.save(a.output)

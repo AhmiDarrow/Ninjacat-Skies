@@ -1,0 +1,12 @@
+{
+  "stall": "patternweavers",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 20
+  },
+  "result": {
+    "id": "minecraft:clock",
+    "count": 1
+  },
+  "max_uses": 8
+}

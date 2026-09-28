@@ -2,7 +2,7 @@
 // Spawn protection on the Dock still blocks eggs; the Hall is a void pad we raise in Java.
 // Use let inside try/for: Rhino throws "redeclaration of var" if const runs twice.
 
-const HUB_STALLS_FLAG = 'ncs_hub_stalls_v2'
+const HUB_STALLS_FLAG = 'ncs_hub_stalls_v3'
 const HUB_ESTER_FLAG = 'ncs_hub_ester_v1'
 const HUB_DIM = 'clowderhall:clowder_hall'
 const MARCH_DIM = 'tribalpower:the_march'
@@ -10,8 +10,33 @@ const MARCH_DIM = 'tribalpower:the_march'
 // The Whiskerwind guide is a Kin with no stock: a right-click is a ride to the race town.
 const GUIDE_STALL_ID = 'whiskerwind'
 
+// Keeper posts inside Loom's End: x, y, z of the cell their feet stand in (the floor is y - 1), the way they face,
+// their tribe, their name.
+// HUB_POSTS:BEGIN — written by tools/generate_hub_towns.py from the town plan; tools/gates/test_hub_town.py checks it
+const HUB_POSTS = {
+  padkeepers: [-39, 64, -13, 0, 0, 'Pad-keepers'],
+  rootbinders: [-57, 64, -13, 0, 2, 'Rootbinders'],
+  grit: [39, 64, -13, 0, 1, 'Grit'],
+  patternweavers: [57, 64, -13, 0, 5, 'Pattern-weavers'],
+  colony: [-39, 64, 13, 180, 6, 'Colony-keepers'],
+  loomstitchers: [-57, 64, 13, 180, 8, 'Loom-stitchers'],
+  spark: [39, 64, 13, 180, 4, 'Spark'],
+  edgewalkers: [57, 64, 13, 180, 3, 'Edge-walkers'],
+  sealcarvers: [-13, 64, 39, -90, 7, 'Seal-carvers'],
+  whiskerwind: [8, 64, 69, 90, 6, 'Whiskerwind Guide'],
+  esther: [-12, 64, 73, -90, 6, 'Esther'],
+  hearth: [-57, 64, -34, -90, 7, 'Hearth-keeper'],
+}
+// HUB_POSTS:END
+
 let HubModDimensions
 let DeepCacheManager
+let HubBlockPos
+let HubChunkPos
+try {
+  HubBlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  HubChunkPos = Java.loadClass('net.minecraft.world.level.ChunkPos')
+} catch (e) {}
 let RaceManager
 try {
   RaceManager = Java.loadClass('tk.darrow.chocobosreborn.race.RaceManager')
@@ -52,11 +77,20 @@ function listHubEntities(hub) {
   }
 }
 
-// The pad sits on a chunk corner, so each keeper lives in a different chunk and their
-// entities stream in at different moments. One "not found" is not proof: only respawn
-// after several misses in a row with a player standing at the pad.
+// Each keeper lives in a different chunk and their entities stream in at different moments.
+// One "not found" is not proof: only respawn after several misses in a row while the post's
+// chunk has its entities loaded (the posts reach 70+ blocks from the pad, past a low view
+// distance, so "a player at the pad" proves nothing there).
 const HUB_MISS_LIMIT = 3
 let hubMisses = {}
+
+function postEntitiesLoaded(hub, found, post) {
+  try {
+    let raw = hub.minecraftLevel ? hub.minecraftLevel : hub
+    if (HubChunkPos && raw.areEntitiesLoaded) return !!raw.areEntitiesLoaded(HubChunkPos.asLong(post[0] >> 4, post[2] >> 4))
+  } catch (e) {}
+  return playerAtPad(found)
+}
 
 function playerAtPad(found) {
   for (let entity of found) {
@@ -68,12 +102,27 @@ function playerAtPad(found) {
   return false
 }
 
-function confirmedMissing(found, key) {
-  if (!playerAtPad(found)) return false
+function confirmedMissing(hub, found, key, post) {
+  if (!postEntitiesLoaded(hub, found, post)) return false
   hubMisses[key] = (hubMisses[key] || 0) + 1
   if (hubMisses[key] < HUB_MISS_LIMIT) return false
   hubMisses[key] = 0
   return true
+}
+
+// A keeper found away from its post (an older town put the stalls round the pad) walks over: moved, re-anchored
+// so it keeps to its counter, and turned to face the street.
+function settle(entity, post) {
+  let x = post[0], y = post[1], z = post[2], yaw = post[3]
+  let dx = entity.x - (x + 0.5)
+  let dz = entity.z - (z + 0.5)
+  if (dx * dx + dz * dz <= 2.25 && Math.abs(entity.y - y) < 1.5) return
+  try { entity.teleportTo(x + 0.5, y, z + 0.5) } catch (e) {
+    try { entity.setPosition(x + 0.5, y, z + 0.5) } catch (e2) {}
+  }
+  try { if (HubBlockPos && entity.setAnchor) entity.setAnchor(new HubBlockPos(x, y, z)) } catch (e) {}
+  try { entity.setRotation(yaw, 0) } catch (e) {}
+  try { entity.setYHeadRot(yaw); entity.setYBodyRot(yaw) } catch (e) {}
 }
 
 // Keep the one nearest its post, discard the rest (cleans up earlier double-spawns).
@@ -94,8 +143,7 @@ function keepNearest(matches, x, z) {
   }
 }
 
-function hubHasStall(hub, stallId, name, x, z) {
-  let found = listHubEntities(hub)
+function hubHasStall(hub, found, stallId, name, x, z) {
   if (!found || found.length === 0) return null
   let matches = []
   for (let entity of found) {
@@ -107,13 +155,19 @@ function hubHasStall(hub, stallId, name, x, z) {
   if (matches.length > 0) {
     hubMisses[stallId] = 0
     if (matches.length > 1) keepNearest(matches, x + 0.5, z + 0.5)
+    for (let entity of matches) {
+      if (entity.isAlive && !entity.isAlive()) continue
+      // The Hall is locked down: a keeper cannot be struck (and their kin do not turn on the town over it).
+      try { entity.setInvulnerable(true) } catch (e) {}
+      settle(entity, HUB_POSTS[stallId])
+    }
     return true
   }
-  return confirmedMissing(found, stallId) ? false : null
+  return confirmedMissing(hub, found, stallId, HUB_POSTS[stallId]) ? false : null
 }
 
-function spawnStall(level, x, y, z, yaw, tribeOrdinal, stallId, name) {
-  let present = hubHasStall(level, stallId, name, x, z)
+function spawnStall(level, found, x, y, z, yaw, tribeOrdinal, stallId, name) {
+  let present = hubHasStall(level, found, stallId, name, x, z)
   if (present === true) return true
   // Unconfirmed: a set flag means they were placed before, so wait for the next check.
   if (present === null && level.persistentData.getBoolean(HUB_STALLS_FLAG)) return true
@@ -125,6 +179,7 @@ function spawnStall(level, x, y, z, yaw, tribeOrdinal, stallId, name) {
     Stall: true,
     StallId: stallId,
     PersistenceRequired: true,
+    Invulnerable: true,
     NoAI: false,
     CustomName: `{"text":"${name}"}`,
     CustomNameVisible: true,
@@ -148,14 +203,17 @@ function ensureHubStalls(server) {
   } catch (e) {
     // Pad may already exist from a prior visit.
   }
-  // Ceremony pad center is 0,63,0. Stand on the terracotta at y=64, flanking the south path
-  // the player walks (arrive 0.5,65,5.5 facing the beacon).
-  let a = spawnStall(hub, -3, 64, 2, -90, 0, 'padkeepers', 'Pad-keepers')
-  let b = spawnStall(hub, 3, 64, 2, 90, 1, 'grit', 'Grit')
-  let c = spawnStall(hub, 3, 64, -1, 90, 4, 'spark', 'Spark')
-  // South-west of the arrival point, so it is the first keeper a newcomer sees.
-  let d = spawnStall(hub, -3, 64, 5, -90, 6, GUIDE_STALL_ID, 'Whiskerwind Guide')
-  if (a && b && c && d) hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
+  // Each keeper stands behind the counter of their own shop in Loom's End; the Whiskerwind Guide keeps the
+  // gate booth at the south road. Esther is placed by ensureHubEster once the March is open.
+  // One listing serves every post (this runs every 4 s for each player in the Hall).
+  let found = listHubEntities(hub)
+  let all = true
+  for (let id in HUB_POSTS) {
+    if (id === 'esther') continue
+    let p = HUB_POSTS[id]
+    if (!spawnStall(hub, found, p[0], p[1], p[2], p[3], p[4], id, p[5])) all = false
+  }
+  if (all) hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
 }
 
 function isWhiskerwindGuide(entity) {
@@ -221,12 +279,18 @@ function esterAlreadyPresent(hub) {
     if (t.indexOf('kin_steward') >= 0) stewards.push(entity)
     else if (t.indexOf('race_master') >= 0) other = true
   }
-  if (stewards.length > 1) keepNearest(stewards, -3.5, -1.5)
+  let post = HUB_POSTS.esther
+  if (stewards.length > 1) keepNearest(stewards, post[0] + 0.5, post[2] + 0.5)
+  for (let steward of stewards) {
+    if (steward.isAlive && !steward.isAlive()) continue
+    try { steward.setInvulnerable(true) } catch (e) {}
+    settle(steward, post)
+  }
   if (stewards.length > 0 || other) {
     hubMisses.ester = 0
     return true
   }
-  return confirmedMissing(found, 'ester') ? false : null
+  return confirmedMissing(hub, found, 'ester', post) ? false : null
 }
 
 function spawnEster(hub) {
@@ -241,16 +305,18 @@ function spawnEster(hub) {
   if (!entity) return
   entity.mergeNbt({
     PersistenceRequired: true,
+    Invulnerable: true,
     NoAI: true,
     Role: 0,
     CustomName: '{"translate":"chocobosreborn.kin.steward"}',
     CustomNameVisible: true,
   })
-  // West of the pad, opposite Spark, looking east toward the shop line.
-  entity.setPosition(-3.5, 64, -1.5)
+  // Behind the counter of Esther's Roost on the Whiskerwind road, looking out at it.
+  let post = HUB_POSTS.esther
+  entity.setPosition(post[0] + 0.5, post[1], post[2] + 0.5)
   // KubeJS 2101 has no setYaw; setRotation(yaw, pitch) is EntityKJS. Head and body follow for mobs.
-  try { entity.setRotation(-90, 0) } catch (e) {}
-  try { entity.setYHeadRot(-90); entity.setYBodyRot(-90) } catch (e) {}
+  try { entity.setRotation(post[3], 0) } catch (e) {}
+  try { entity.setYHeadRot(post[3]); entity.setYBodyRot(post[3]) } catch (e) {}
   entity.spawn()
   hub.persistentData.putBoolean(HUB_ESTER_FLAG, true)
 }

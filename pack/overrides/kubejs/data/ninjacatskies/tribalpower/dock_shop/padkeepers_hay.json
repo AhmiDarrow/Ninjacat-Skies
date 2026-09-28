@@ -1,0 +1,12 @@
+{
+  "stall": "padkeepers",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 12
+  },
+  "result": {
+    "id": "minecraft:hay_block",
+    "count": 2
+  },
+  "max_uses": 16
+}

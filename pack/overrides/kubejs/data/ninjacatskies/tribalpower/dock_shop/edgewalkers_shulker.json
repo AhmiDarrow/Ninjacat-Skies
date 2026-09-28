@@ -1,0 +1,12 @@
+{
+  "stall": "edgewalkers",
+  "cost": {
+    "id": "ninjacatskies:thread_skein",
+    "count": 22
+  },
+  "result": {
+    "id": "minecraft:shulker_box",
+    "count": 1
+  },
+  "max_uses": 16
+}

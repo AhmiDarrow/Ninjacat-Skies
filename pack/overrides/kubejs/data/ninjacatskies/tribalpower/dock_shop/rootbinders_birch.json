@@ -1,0 +1,12 @@
+{
+  "stall": "rootbinders",
+  "cost": {
+    "id": "ninjacatskies:frayed_thread",
+    "count": 8
+  },
+  "result": {
+    "id": "minecraft:birch_sapling",
+    "count": 2
+  },
+  "max_uses": 16
+}

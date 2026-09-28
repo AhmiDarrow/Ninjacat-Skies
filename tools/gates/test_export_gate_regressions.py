@@ -56,4 +56,79 @@ class ExportGateTests(unittest.TestCase):
             self.assertIn("PASS stub export verification",result.stdout)
 
 
+class ServerInstallerTests(unittest.TestCase):
+    """install.sh / install.bat / install.ps1 on an update: a jar the pack installed and no longer ships moves to
+    mods-removed/, a jar the operator added stays, and a rerun changes nothing. Offline: every jar is already present and
+    NeoForge is faked. The environment is inherited on purpose: run from pwsh 7, it carries 7's PSModulePath, which
+    install.bat must clear for Windows PowerShell 5.1."""
+
+    def make_server(self, directory, record, newline="\n"):
+        import hashlib, sys
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+        import export_server_pack as esp
+        d = Path(directory); (d/"mods").mkdir(parents=True)
+        fill = lambda t: t.replace("{MC}", esp.MC).replace("{NEO}", esp.NEO)
+        files = []
+        for i, name in enumerate(["alpha-2.0.jar", "beta+1.21.1.jar"]):
+            (d/"mods"/name).write_bytes(name.encode())
+            files.append({"projectID": i + 1, "fileID": 1000 + i, "filename": name, "sha1": hashlib.sha1(name.encode()).hexdigest()})
+        (d/"server-manifest.json").write_text(json.dumps({"files": files, "bundled": []}), encoding="utf-8")
+        (d/"server-mods.txt").write_text("".join(f"{f['fileID']}|{f['filename']}|{f['sha1']}\n" for f in files), encoding="utf-8", newline="\n")
+        (d/"install.sh").write_text(fill(esp.INSTALL_SH), encoding="utf-8", newline="\n")
+        (d/"install.ps1").write_text(fill(esp.INSTALL_PS1), encoding="utf-8", newline="\r\n")
+        (d/"install.bat").write_text(esp.INSTALL_BAT, encoding="utf-8", newline="\r\n")
+        for name in ("server.properties.default", "user_jvm_args.default.txt"): (d/name).write_text("x\n")
+        (d/"eula.txt").write_text("eula=true\n")
+        lib = d/"libraries/net/neoforged/neoforge"/esp.NEO; lib.mkdir(parents=True)
+        (lib/"win_args.txt").write_text(""); (lib/"unix_args.txt").write_text("")
+        (d/"mods"/"alpha-1.0.jar").write_bytes(b"old"); (d/"mods"/"mine.jar").write_bytes(b"mine")
+        if record is not None:
+            with open(d/".installed-mods.txt", "w", newline=newline) as f: f.write("\n".join(record) + "\n")
+        return d
+
+    def run_installer(self, command):
+        return subprocess.run(command, capture_output=True, text=True, stdin=subprocess.DEVNULL, timeout=120)
+
+    def check(self, command, record, newline="\n"):
+        if not shutil.which("java"): self.skipTest("java not on PATH")
+        with tempfile.TemporaryDirectory() as directory:
+            d = self.make_server(Path(directory)/"server one", record, newline)
+            for _ in range(2):
+                r = self.run_installer(command(d))
+                self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+                self.assertEqual(sorted(p.name for p in (d/"mods").iterdir()), ["alpha-2.0.jar", "beta+1.21.1.jar"] + (["mine.jar"] if record else []))
+                self.assertIn("alpha-1.0.jar", [p.name for p in (d/"mods-removed").iterdir()])
+            lines = (d/".installed-mods.txt").read_text().split()
+            self.assertEqual(lines, ["alpha-2.0.jar", "beta+1.21.1.jar"])
+
+    def test_install_sh(self):
+        import os
+        bash = shutil.which("bash")
+        if not bash or (os.name == "nt" and "system32" in bash.lower()): self.skipTest("no bash")
+        # the CRLF record (written by install.ps1) only bites on a Linux grep; Git Bash's grep ignores the CR
+        for record, newline in [(["alpha-1.0.jar", "alpha-2.0.jar"], "\n"), (["alpha-1.0.jar", "alpha-2.0.jar"], "\r\n"), (None, "\n")]:
+            with self.subTest(record=record, newline=newline):
+                self.check(lambda d: [bash, str(d/"install.sh"), "--accept-eula"], record, newline)
+
+    def test_install_ps1(self):
+        import os
+        hosts = {}
+        if os.name == "nt" and shutil.which("powershell"):   # the operator's path: install.bat -> Windows PowerShell 5.1
+            hosts["install.bat"] = lambda d: f'cmd /c ""{d / "install.bat"}" --accept-eula"'
+        if shutil.which("pwsh"):
+            hosts["pwsh"] = lambda d: ["pwsh", "-NoProfile", "-File", str(d/"install.ps1"), "--accept-eula"]
+        if not hosts: self.skipTest("no PowerShell")
+        for host, command in hosts.items():
+            for record in (["alpha-1.0.jar", "alpha-2.0.jar"], None):
+                with self.subTest(host=host, record=record):
+                    self.check(command, record)
+            with self.subTest(host=host, folder="[brackets]"), tempfile.TemporaryDirectory() as directory:
+                # PowerShell reads [..] in a path as a wildcard; the installer must refuse before touching mods/
+                d = self.make_server(Path(directory)/"server [1]", ["alpha-1.0.jar"])
+                r = self.run_installer(command(d))
+                self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+                self.assertIn("Rename this folder", r.stdout)
+                self.assertFalse((d/"mods-removed").exists())
+
+
 if __name__=="__main__": unittest.main()

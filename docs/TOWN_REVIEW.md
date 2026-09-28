@@ -34,4 +34,4 @@ Built in the project sources and previewed in the isolated Minecraft 1.21.1 worl
 - `town-review-builds/`: unpublished local NeoForge Core bundle and ChocoCraft builds for NeoForge/Fabric. Install only the ChocoCraft variant matching the loader.
 - `town-review-evidence/`: build logs and spatial verification output.
 
-The generators and spatial checks are checked into each working tree under `tools/generate_hub_towns.py` and `tools/verify_hub_town.py`. Runtime builders consume the generated JSON block plans once per managed-hub revision.
+The generators are checked in under `tools/generate_hub_towns.py`. Since 0.10.0 the Clowder Hall town is Loom's End (`tools/hub_loomsend.py`), a pack datapack plan at `pack/overrides/kubejs/data/clowderhall/towns/clowder_town.json`; `tools/gates/test_hub_town.py` checks it. Core applies each plan revision once per world.

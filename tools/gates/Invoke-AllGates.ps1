@@ -59,6 +59,9 @@ try {
     Invoke-Gate "KubeJSRhino" {
         python -X utf8 (Join-Path $gateDir "test_kubejs_rhino.py")
     }
+    Invoke-Gate "HubTown" {
+        python -X utf8 (Join-Path $gateDir "test_hub_town.py")
+    }
     Invoke-Gate "LifeRewards" {
         python -X utf8 (Join-Path $gateDir "test_life_rewards.py")
     }
