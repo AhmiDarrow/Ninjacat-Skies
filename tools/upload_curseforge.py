@@ -12,6 +12,7 @@ import json
 import re
 import subprocess
 import sys
+import time
 import urllib.request
 import uuid
 from pathlib import Path
@@ -63,6 +64,22 @@ def hosted_refs(zip_path: Path) -> list[tuple[int, int, str]]:
     return out
 
 
+def listed_file_status(project_id: int, file_id: int, api_key: str):
+    """The single-file endpoint can stay cached on ProcessingFile after approval.
+    The project file list is the live record."""
+    req = urllib.request.Request(
+        f"https://api.curseforge.com/v1/mods/{project_id}/files?pageSize=50&t={int(time.time())}",
+        headers={"x-api-key": api_key, "Accept": "application/json", "User-Agent": UA,
+                 "Cache-Control": "no-cache", "Pragma": "no-cache"},
+    )
+    with urllib.request.urlopen(req, timeout=60) as r:
+        rows = json.loads(r.read().decode()).get("data") or []
+    for row in rows:
+        if row.get("id") == file_id:
+            return row.get("fileStatus")
+    return None
+
+
 def require_hosted_files_approved(zip_path: Path, api_key: str) -> None:
     """Pack zips that name an Under Review Core (or any other) file are rejected by CF moderation."""
     if zip_path.suffix.lower() != ".zip":
@@ -72,12 +89,15 @@ def require_hosted_files_approved(zip_path: Path, api_key: str) -> None:
     bad = []
     for pid, fid, filename in hosted_refs(zip_path):
         req = urllib.request.Request(
-            f"https://api.curseforge.com/v1/mods/{pid}/files/{fid}",
-            headers={"x-api-key": api_key, "Accept": "application/json", "User-Agent": UA},
+            f"https://api.curseforge.com/v1/mods/{pid}/files/{fid}?t={int(time.time())}",
+            headers={"x-api-key": api_key, "Accept": "application/json", "User-Agent": UA,
+                     "Cache-Control": "no-cache", "Pragma": "no-cache"},
         )
         with urllib.request.urlopen(req, timeout=60) as r:
             data = json.loads(r.read().decode())
         st = (data.get("data") or data).get("fileStatus")
+        if st not in LIVE_FILE:
+            st = listed_file_status(pid, fid, api_key) or st
         if st not in LIVE_FILE:
             bad.append(f"{filename} (project {pid} file {fid}: {FILE_STATUS.get(st, st)})")
     if bad:
