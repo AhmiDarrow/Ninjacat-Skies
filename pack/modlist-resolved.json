@@ -40,16 +40,6 @@
     "sha1": "a5e60249c850c17cb2902ec218aa146296b2969b"
   },
   {
-    "key": "FTB Library",
-    "name": "FTB Library (NeoForge)",
-    "slug": "ftb-library-forge",
-    "projectId": 404465,
-    "fileId": 8569579,
-    "filename": "ftb-library-neoforge-2101.1.35.jar",
-    "releaseType": 1,
-    "sha1": "9922fa358983120edeed22194bf02bcf9c859fbb"
-  },
-  {
     "key": "FTB Teams",
     "name": "FTB Teams (NeoForge)",
     "slug": "ftb-teams-forge",
@@ -68,26 +58,6 @@
     "filename": "ftb-chunks-neoforge-2101.1.22.jar",
     "releaseType": 1,
     "sha1": "a53f1bb7965c6954a348d4f321f03d3971ad503f"
-  },
-  {
-    "key": "FTB Quests",
-    "name": "FTB Quests (NeoForge)",
-    "slug": "ftb-quests-forge",
-    "projectId": 289412,
-    "fileId": 8730556,
-    "filename": "ftb-quests-neoforge-2101.1.34.jar",
-    "releaseType": 1,
-    "sha1": "9c6a9adc77601cc8c07a3e058bd8cc42df0afe84"
-  },
-  {
-    "key": "FTB XMod Compat",
-    "name": "FTB XMod Compat",
-    "slug": "ftb-xmod-compat",
-    "projectId": 889915,
-    "fileId": 8653466,
-    "filename": "ftb-xmod-compat-neoforge-21.1.11.jar",
-    "releaseType": 1,
-    "sha1": "06061863f24e1c0d9b2bb2646e96e07cbf0029f5"
   },
   {
     "key": "JEI",
@@ -120,16 +90,6 @@
     "sha1": "c3e5733ba4503b102589a026000fd5ce0212f6f2"
   },
   {
-    "key": "Balm",
-    "name": "Balm",
-    "slug": "balm",
-    "projectId": 531761,
-    "fileId": 8645517,
-    "filename": "balm-neoforge-1.21.1-21.0.65.jar",
-    "releaseType": 1,
-    "sha1": "69e0b3b69dd23c132e85b7e82310f45ae96b263d"
-  },
-  {
     "key": "ModernFix",
     "name": "ModernFix",
     "slug": "modernfix",
@@ -148,26 +108,6 @@
     "filename": "ferritecore-7.0.3-neoforge.jar",
     "releaseType": 1,
     "sha1": "9563692efb708b6b568df27a01ec52f6311928ef"
-  },
-  {
-    "key": "Entity Culling",
-    "name": "Entity Culling Fabric/Forge",
-    "slug": "entityculling",
-    "projectId": 448233,
-    "fileId": 8287097,
-    "filename": "entityculling-neoforge-1.10.5-mc1.21.1.jar",
-    "releaseType": 1,
-    "sha1": "420d0006dbc0a20b1c2dd0b3c7c20ddb5cc51fcf"
-  },
-  {
-    "key": "ImmediatelyFast",
-    "name": "ImmediatelyFast",
-    "slug": "immediatelyfast",
-    "projectId": 686911,
-    "fileId": 8749421,
-    "filename": "ImmediatelyFast-NeoForge-1.6.13+1.21.1.jar",
-    "releaseType": 1,
-    "sha1": "cfc87deced26f78e46143fe5f0a33597d06845a8"
   },
   {
     "key": "Jade",
@@ -230,16 +170,6 @@
     "sha1": "0e97e49837bed766e6f28a4c95b04885d6acc353"
   },
   {
-    "key": "Applied Energistics 2",
-    "name": "Applied Energistics 2",
-    "slug": "applied-energistics-2",
-    "projectId": 223794,
-    "fileId": 7027323,
-    "filename": "appliedenergistics2-19.2.17.jar",
-    "releaseType": 1,
-    "sha1": "49c18d6a4af487957d7e5a6ad5dcbf71090b8e14"
-  },
-  {
     "key": "Almost Unified",
     "name": "Almost Unified",
     "slug": "almostunified",
@@ -248,16 +178,6 @@
     "filename": "almostunified-neoforge-1.21.1-1.4.2.jar",
     "releaseType": 1,
     "sha1": "f9a58fa95780f4b045d30559c1fdaedaa7f0fba3"
-  },
-  {
-    "key": "KubeJS",
-    "name": "KubeJS",
-    "slug": "kubejs",
-    "projectId": 238086,
-    "fileId": 8715199,
-    "filename": "kubejs-neoforge-2101.7.2-build.374.jar",
-    "releaseType": 1,
-    "sha1": "d675ea2cfdf3286e996dcad5a27deba6a04bc3a2"
   },
   {
     "key": "Rhino",
@@ -288,26 +208,6 @@
     "filename": "functionalstorage-1.21.1-1.5.8.jar",
     "releaseType": 1,
     "sha1": "f5978bb49b71e94d7063502c0fad0202ebbefbcc"
-  },
-  {
-    "key": "Ars Nouveau",
-    "name": "Ars Nouveau",
-    "slug": "ars-nouveau",
-    "projectId": 401955,
-    "fileId": 8721482,
-    "filename": "ars_nouveau-1.21.1-5.13.1.jar",
-    "releaseType": 1,
-    "sha1": "02782d071ee5fab3b5c4b8ced67b7e1748277dfd"
-  },
-  {
-    "key": "Productive Bees",
-    "name": "Productive Bees",
-    "slug": "productivebees",
-    "projectId": 377897,
-    "fileId": 8022994,
-    "filename": "productivebees-1.21.1-13.13.5.jar",
-    "releaseType": 1,
-    "sha1": "31f7bb1567fdbb508db133f5b094d5d0d293030d"
   },
   {
     "key": "Konkrete",
@@ -470,26 +370,6 @@
     "sha1": "0326e609d6e8319ac48165cc9bdc708e6b0fac4c"
   },
   {
-    "key": "Sophisticated Backpacks",
-    "name": "Sophisticated Backpacks",
-    "slug": "sophisticated-backpacks",
-    "projectId": 422301,
-    "fileId": 8818204,
-    "filename": "sophisticatedbackpacks-1.21.1-3.26.1.2124.jar",
-    "releaseType": 1,
-    "sha1": "5bec3105c77928925a21709947bdea13629046bb"
-  },
-  {
-    "key": "Sophisticated Core",
-    "name": "Sophisticated Core",
-    "slug": "sophisticated-core",
-    "projectId": 618298,
-    "fileId": 8815718,
-    "filename": "sophisticatedcore-1.21.1-1.5.0.2322.jar",
-    "releaseType": 1,
-    "sha1": "d8f43b1870189894a7f377502a8e3a185411ccee"
-  },
-  {
     "key": "Patchouli",
     "name": "Patchouli",
     "slug": "patchouli",
@@ -510,16 +390,6 @@
     "sha1": "efc4cda6da4dd879f24d057ed0a6413764c9ba40"
   },
   {
-    "key": "HammerLib",
-    "name": "HammerLib",
-    "slug": "hammer-lib",
-    "projectId": 247401,
-    "fileId": 5739162,
-    "filename": "HammerLib-1.21-21.0.14.jar",
-    "releaseType": 1,
-    "sha1": "d82d3118dbe523b1ea46934583db38e158aeee8b"
-  },
-  {
     "key": "Prickle",
     "name": "Prickle",
     "slug": "prickle",
@@ -530,16 +400,6 @@
     "sha1": "5174059ecf97340a0de5ef211b938de26c4eaa36"
   },
   {
-    "key": "Iron's Lib",
-    "name": "Iron's Lib",
-    "slug": "irons-lib",
-    "projectId": 1492763,
-    "fileId": 8364894,
-    "filename": "irons_lib-1.21.1-2.1.0.jar",
-    "releaseType": 1,
-    "sha1": "70fba64d12b6ff9553580e52101d989c89297797"
-  },
-  {
     "key": "SmartBrainLib",
     "name": "SmartBrainLib (Forge/Fabric/Quilt)",
     "slug": "smartbrainlib",
@@ -548,26 +408,6 @@
     "filename": "SmartBrainLib-neoforge-1.21.1-1.16.11.jar",
     "releaseType": 1,
     "sha1": "0310135a01eeceefbc7f1ab017498a65f3ad6836"
-  },
-  {
-    "key": "GeckoLib",
-    "name": "GeckoLib",
-    "slug": "geckolib",
-    "projectId": 388172,
-    "fileId": 8350073,
-    "filename": "geckolib-neoforge-1.21.1-4.9.2.jar",
-    "releaseType": 1,
-    "sha1": "14c64013cadee7d28f3685f94350f9a4d2ec6d86"
-  },
-  {
-    "key": "GuideME",
-    "name": "GuideME",
-    "slug": "guideme",
-    "projectId": 1173950,
-    "fileId": 8420861,
-    "filename": "guideme-21.1.17.jar",
-    "releaseType": 1,
-    "sha1": "060e374f578db694a0b8f3ad409bd424cae86359"
   },
   {
     "key": "Titanium",
@@ -588,16 +428,6 @@
     "filename": "player-animation-lib-forge-2.0.4+1.21.1.jar",
     "releaseType": 2,
     "sha1": "05be8ddcc78532b9a5520c718edc6c971cd0057c"
-  },
-  {
-    "key": "Modonomicon",
-    "name": "Modonomicon",
-    "slug": "modonomicon",
-    "projectId": 538392,
-    "fileId": 8532346,
-    "filename": "modonomicon-1.21.1-neoforge-1.120.4.jar",
-    "releaseType": 1,
-    "sha1": "1377fec77ba0cb3e4adda0da9ce2f14847e21e40"
   },
   {
     "key": "Applied Energistics 2 Wireless Terminals",
@@ -680,46 +510,6 @@
     "sha1": "8a34424fc1428778be2fdbfa4da67b21b70bcbfe"
   },
   {
-    "key": "Create: Enchantment Industry",
-    "name": "Create: Enchantment Industry",
-    "slug": "create-enchantment-industry",
-    "projectId": 688768,
-    "fileId": 8762719,
-    "filename": "create-enchantment-industry-2.5.3b.jar",
-    "releaseType": 2,
-    "sha1": "f39af237b8bff853a89e8784518bdc36ba54a32e"
-  },
-  {
-    "key": "Create Crafts & Additions",
-    "name": "Create Crafts & Additions",
-    "slug": "createaddition",
-    "projectId": 439890,
-    "fileId": 8664915,
-    "filename": "createaddition-1.7.0.jar",
-    "releaseType": 2,
-    "sha1": "fd73ba9809ed6656a8c2aae81c9badb382085657"
-  },
-  {
-    "key": "Create: Dragons Plus",
-    "name": "Create: Dragons Plus",
-    "slug": "create-dragons-plus",
-    "projectId": 1216624,
-    "fileId": 8811294,
-    "filename": "CreateDragonsPlus-1.11.8b.jar",
-    "releaseType": 1,
-    "sha1": "d7afe1cf1c646d1bb5ce152af06e35afcb60b8dd"
-  },
-  {
-    "key": "FramedBlocks",
-    "name": "FramedBlocks",
-    "slug": "framedblocks",
-    "projectId": 441647,
-    "fileId": 8349218,
-    "filename": "FramedBlocks-10.6.1.jar",
-    "releaseType": 1,
-    "sha1": "3007be0007d09c0225ca33b647461f342eac0503"
-  },
-  {
     "key": "Handcrafted",
     "name": "Handcrafted",
     "slug": "handcrafted",
@@ -780,16 +570,6 @@
     "sha1": "386fcae227b6d7963ba11e9808be4bc0910079da"
   },
   {
-    "key": "Moonlight Lib",
-    "name": "Moonlight Lib",
-    "slug": "selene",
-    "projectId": 499980,
-    "fileId": 8821083,
-    "filename": "moonlight-1.21.1-3.6.3-neoforge.jar",
-    "releaseType": 1,
-    "sha1": "eaacc3191758081be86e7d0bb82b5f9572fe9360"
-  },
-  {
     "key": "Mouse Tweaks",
     "name": "Mouse Tweaks",
     "slug": "mouse-tweaks",
@@ -818,46 +598,6 @@
     "filename": "Searchables-neoforge-1.21.1-1.0.2.jar",
     "releaseType": 1,
     "sha1": "5b8a0b43a474c066371b2e16f9bfb88622552a74"
-  },
-  {
-    "key": "Supplementaries",
-    "name": "Supplementaries",
-    "slug": "supplementaries",
-    "projectId": 412082,
-    "fileId": 8821187,
-    "filename": "supplementaries-1.21.1-3.9.8-neoforge.jar",
-    "releaseType": 1,
-    "sha1": "8b9fd12e10550f54eecd6b265fedef585b915024"
-  },
-  {
-    "key": "Xaero's Minimap",
-    "name": "Xaero's Minimap",
-    "slug": "xaeros-minimap",
-    "projectId": 263420,
-    "fileId": 8449819,
-    "filename": "xaerominimap-neoforge-1.21.1-26.4.2.jar",
-    "releaseType": 1,
-    "sha1": "21b3232e62dabcbb5bf28866481e8de2c0ccb780"
-  },
-  {
-    "key": "Xaero's World Map",
-    "name": "Xaero's World Map",
-    "slug": "xaeros-world-map",
-    "projectId": 317780,
-    "fileId": 8698659,
-    "filename": "xaeroworldmap-neoforge-1.21.1-1.45.0.jar",
-    "releaseType": 1,
-    "sha1": "f243d6877ab32333f27bf27ad1e9eb600361e6aa"
-  },
-  {
-    "key": "Sophisticated Storage",
-    "name": "Sophisticated Storage",
-    "slug": "sophisticated-storage",
-    "projectId": 619320,
-    "fileId": 8687896,
-    "filename": "sophisticatedstorage-1.21.1-1.5.91.2127.jar",
-    "releaseType": 1,
-    "sha1": "74d5c0a411edfdd521c800fd8813f53c0f9a6f30"
   },
   {
     "key": "TrashSlot",
@@ -1010,16 +750,6 @@
     "sha1": "e5b9c7e6a7856302c6b078255e6b90b5cc1ec0b0"
   },
   {
-    "key": "Chocobos Reborn",
-    "name": "Chocobos Reborn",
-    "slug": "chocobos-reborn",
-    "projectId": 1699008,
-    "fileId": 8996621,
-    "filename": "chocobosreborn-1.0.19.jar",
-    "releaseType": 1,
-    "sha1": "11bc0b08ecde5f7ffe55e06002e1faa50eaad200"
-  },
-  {
     "key": "Ninjacat Skies Core",
     "name": "Ninjacat Skies Core",
     "slug": "ninjacat-skies-core",
@@ -1038,5 +768,285 @@
     "filename": "tribalpower-5.3.10.jar",
     "releaseType": 1,
     "sha1": "128e4634f71c8f7f4f01e36a7ddd54c167bc8abf"
+  },
+  {
+    "key": "Applied Energistics 2",
+    "name": "Applied Energistics 2",
+    "slug": "applied-energistics-2",
+    "projectId": 223794,
+    "fileId": 8992605,
+    "filename": "appliedenergistics2-19.2.18.jar",
+    "releaseType": 1,
+    "sha1": "bcd04bc7f181b2ffa314625f284c8eca6fee7fe4"
+  },
+  {
+    "key": "Balm",
+    "name": "Balm",
+    "slug": "balm",
+    "projectId": 531761,
+    "fileId": 8969738,
+    "filename": "balm-neoforge-1.21.1-21.0.66.jar",
+    "releaseType": 1,
+    "sha1": "dd3606a349f4a3c8fb5bd0ab22905675c02b0d74"
+  },
+  {
+    "key": "Chocobos Reborn",
+    "name": "Chocobos Reborn",
+    "slug": "chocobos-reborn",
+    "projectId": 1699008,
+    "fileId": 8999472,
+    "filename": "chocobosreborn-1.1.0.jar",
+    "releaseType": 1,
+    "sha1": "01f8d42c12e2028d132782ae7adbc23ddab5ef6c"
+  },
+  {
+    "key": "Create: Enchantment Industry",
+    "name": "Create: Enchantment Industry",
+    "slug": "create-enchantment-industry",
+    "projectId": 688768,
+    "fileId": 8900719,
+    "filename": "create-enchantment-industry-2.5.4.jar",
+    "releaseType": 2,
+    "sha1": "929a1ff0329f0033329f8c22bef785b2a8c4e776"
+  },
+  {
+    "key": "Create Crafts & Additions",
+    "name": "Create Crafts & Additions",
+    "slug": "createaddition",
+    "projectId": 439890,
+    "fileId": 8887653,
+    "filename": "createaddition-1.7.1.jar",
+    "releaseType": 2,
+    "sha1": "779c49416643a6c5f176d5d500bf1bcbe75a5d18"
+  },
+  {
+    "key": "Create: Dragons Plus",
+    "name": "Create: Dragons Plus",
+    "slug": "create-dragons-plus",
+    "projectId": 1216624,
+    "fileId": 8900055,
+    "filename": "CreateDragonsPlus-1.11.9.jar",
+    "releaseType": 1,
+    "sha1": "67ffcb61207a7dbc6b1e70f0473ddbacb19d44eb"
+  },
+  {
+    "key": "Entity Culling Fabric/Forge",
+    "name": "Entity Culling Fabric/Forge",
+    "slug": "entityculling",
+    "projectId": 448233,
+    "fileId": 8942303,
+    "filename": "entityculling-neoforge-1.11.2-mc1.21.1.jar",
+    "releaseType": 1,
+    "sha1": "2f723582d44b60b41d701a797846eaa45a3fef58"
+  },
+  {
+    "key": "FramedBlocks",
+    "name": "FramedBlocks",
+    "slug": "framedblocks",
+    "projectId": 441647,
+    "fileId": 8780141,
+    "filename": "FramedBlocks-10.6.2.jar",
+    "releaseType": 1,
+    "sha1": "c86d546e57a6161e77f4acd651e6939b2d6136d5"
+  },
+  {
+    "key": "FTB Library (NeoForge)",
+    "name": "FTB Library (NeoForge)",
+    "slug": "ftb-library-forge",
+    "projectId": 404465,
+    "fileId": 8858846,
+    "filename": "ftb-library-neoforge-2101.1.36.jar",
+    "releaseType": 1,
+    "sha1": "07b5bf1c6ac5160a6cfe1b39ed8c1465dc151b00"
+  },
+  {
+    "key": "FTB Quests (NeoForge)",
+    "name": "FTB Quests (NeoForge)",
+    "slug": "ftb-quests-forge",
+    "projectId": 289412,
+    "fileId": 8885017,
+    "filename": "ftb-quests-neoforge-2101.1.36.jar",
+    "releaseType": 1,
+    "sha1": "b2ede29b98a3022c22065fbe9b1761e385a28683"
+  },
+  {
+    "key": "GeckoLib",
+    "name": "GeckoLib",
+    "slug": "geckolib",
+    "projectId": 388172,
+    "fileId": 8893490,
+    "filename": "geckolib-neoforge-1.21.1-4.9.3.jar",
+    "releaseType": 1,
+    "sha1": "5cfe835472a5c5457ae9ac192d9d7b317454d5ac"
+  },
+  {
+    "key": "GuideME",
+    "name": "GuideME",
+    "slug": "guideme",
+    "projectId": 1173950,
+    "fileId": 8897145,
+    "filename": "guideme-21.1.19.jar",
+    "releaseType": 1,
+    "sha1": "e85cd4c266f974dd360c46e8dad7ecf4c7ee96c6"
+  },
+  {
+    "key": "HammerLib",
+    "name": "HammerLib",
+    "slug": "hammer-lib",
+    "projectId": 247401,
+    "fileId": 8888364,
+    "filename": "HammerLib-1.21-21.0.16.jar",
+    "releaseType": 1,
+    "sha1": "017c7ecd40fbb1d6822b0c9815ac620db2f1fd70"
+  },
+  {
+    "key": "ImmediatelyFast",
+    "name": "ImmediatelyFast",
+    "slug": "immediatelyfast",
+    "projectId": 686911,
+    "fileId": 8875640,
+    "filename": "ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar",
+    "releaseType": 1,
+    "sha1": "fee59af2f39c66d09c4c09f441c799e76af70f97"
+  },
+  {
+    "key": "Iron's Lib",
+    "name": "Iron's Lib",
+    "slug": "irons-lib",
+    "projectId": 1492763,
+    "fileId": 8973642,
+    "filename": "irons_lib-1.21.1-2.2.0.jar",
+    "releaseType": 1,
+    "sha1": "33ca1a58dc0b384a6de26171f34b3bf608aaeeb2"
+  },
+  {
+    "key": "KubeJS",
+    "name": "KubeJS",
+    "slug": "kubejs",
+    "projectId": 238086,
+    "fileId": 8843626,
+    "filename": "kubejs-neoforge-2101.7.2-build.377.jar",
+    "releaseType": 1,
+    "sha1": "150c5d6efc09b969ac350ea205128dff832e0850"
+  },
+  {
+    "key": "Modonomicon",
+    "name": "Modonomicon",
+    "slug": "modonomicon",
+    "projectId": 538392,
+    "fileId": 8970913,
+    "filename": "modonomicon-1.21.1-neoforge-1.120.7.jar",
+    "releaseType": 1,
+    "sha1": "dc06fd2fa4d539f74fcb46be867b99b03a863962"
+  },
+  {
+    "key": "Productive Bees",
+    "name": "Productive Bees",
+    "slug": "productivebees",
+    "projectId": 377897,
+    "fileId": 8987967,
+    "filename": "productivebees-1.21.1-13.14.0.jar",
+    "releaseType": 1,
+    "sha1": "55cd26599e128242da4863c7396116ae7eadbfaa"
+  },
+  {
+    "key": "Shamanic Mounts",
+    "name": "Shamanic Mounts",
+    "slug": "shamanic-mounts",
+    "projectId": 1711650,
+    "fileId": 8978477,
+    "filename": "shamanicmounts-0.1.3.jar",
+    "releaseType": 1,
+    "sha1": "319177344bb4ef9a958123d9803ef7371afa0d7b"
+  },
+  {
+    "key": "Sophisticated Backpacks",
+    "name": "Sophisticated Backpacks",
+    "slug": "sophisticated-backpacks",
+    "projectId": 422301,
+    "fileId": 8992926,
+    "filename": "sophisticatedbackpacks-1.21.1-3.26.5.2171.jar",
+    "releaseType": 1,
+    "sha1": "dbe77825620ff12169800cc222993ed99c11964d"
+  },
+  {
+    "key": "Sophisticated Core",
+    "name": "Sophisticated Core",
+    "slug": "sophisticated-core",
+    "projectId": 618298,
+    "fileId": 8985869,
+    "filename": "sophisticatedcore-1.21.1-1.5.2.2343.jar",
+    "releaseType": 1,
+    "sha1": "b6267d5268062392c44b67541d0a623b5fc4b21e"
+  },
+  {
+    "key": "Sophisticated Storage",
+    "name": "Sophisticated Storage",
+    "slug": "sophisticated-storage",
+    "projectId": 619320,
+    "fileId": 8985962,
+    "filename": "sophisticatedstorage-1.21.1-1.6.0.2136.jar",
+    "releaseType": 1,
+    "sha1": "e5b839fbc6a99d229116b19ba79bd716d385170a"
+  },
+  {
+    "key": "Supplementaries",
+    "name": "Supplementaries",
+    "slug": "supplementaries",
+    "projectId": 412082,
+    "fileId": 8852720,
+    "filename": "supplementaries-1.21.1-3.9.9-neoforge.jar",
+    "releaseType": 1,
+    "sha1": "06ed05381a5653d90398dc6ebf3ad1154add6374"
+  },
+  {
+    "key": "Xaero's Minimap",
+    "name": "Xaero's Minimap",
+    "slug": "xaeros-minimap",
+    "projectId": 263420,
+    "fileId": 8849842,
+    "filename": "xaerominimap-neoforge-1.21.1-26.5.0.jar",
+    "releaseType": 1,
+    "sha1": "7553dddbe478d1c8c15198090217e723d27f79c4"
+  },
+  {
+    "key": "Xaero's World Map",
+    "name": "Xaero's World Map",
+    "slug": "xaeros-world-map",
+    "projectId": 317780,
+    "fileId": 8849973,
+    "filename": "xaeroworldmap-neoforge-1.21.1-1.46.0.jar",
+    "releaseType": 1,
+    "sha1": "82b4ae6c0f2e13f02cbdc1325342909ed083fc24"
+  },
+  {
+    "key": "Ars Nouveau",
+    "name": "Ars Nouveau",
+    "slug": "ars-nouveau",
+    "projectId": 401955,
+    "fileId": 8993194,
+    "filename": "ars_nouveau-1.21.1-5.13.2.jar",
+    "releaseType": 1,
+    "sha1": "28a8e7e35e7709e21469fd952ea8dd5091d7d7d1"
+  },
+  {
+    "key": "Moonlight Lib",
+    "name": "Moonlight Lib",
+    "slug": "selene",
+    "projectId": 499980,
+    "fileId": 8981395,
+    "filename": "moonlight-1.21.1-3.7.0-neoforge.jar",
+    "releaseType": 1,
+    "sha1": "3e909f886ffca21bbe03cce510c68da2e7165580"
+  },
+  {
+    "key": "FTB XMod Compat",
+    "name": "FTB XMod Compat",
+    "slug": "ftb-xmod-compat",
+    "projectId": 889915,
+    "fileId": 8653466,
+    "filename": "ftb-xmod-compat-neoforge-21.1.11.jar",
+    "releaseType": 1,
+    "sha1": "06061863f24e1c0d9b2bb2646e96e07cbf0029f5"
   }
 ]
