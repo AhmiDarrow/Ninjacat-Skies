@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.9.0 — The Spirit Herd and a Full Grid
 
-Pack CurseForge client file **(pending)**, server additional **(pending)**.
+Pack CurseForge client file **8999724**, server additional **8999726**.
 
 Shamanic Mounts joins the pack, Chocobos Reborn moves to 1.1.0, and 25 other mods take their latest 1.21.1
 NeoForge release. Ninjacat Skies Core stays 0.5.17 and Tribal Power stays 5.3.10. Existing saves load as they
