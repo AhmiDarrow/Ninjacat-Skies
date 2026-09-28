@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.9.1 — Server installer fixes
 
-Pack CurseForge client file **(pending)**, server additional **(pending)**.
+Pack CurseForge client file **9000014**, server additional **9000024**.
 
 Same 105 mods as 0.9.0 (101 on the server): Ninjacat Skies Core 0.5.17, Tribal Power 5.3.10, Chocobos Reborn 1.1.0,
 Shamanic Mounts 0.1.3. Existing saves load as they are; no quest ids change. Only the dedicated-server installer changes.
