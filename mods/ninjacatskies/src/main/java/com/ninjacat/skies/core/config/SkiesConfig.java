@@ -13,6 +13,7 @@ public final class SkiesConfig {
     public static final ModConfigSpec.IntValue FRAY_X;
     public static final ModConfigSpec.IntValue FRAY_Y;
     public static final ModConfigSpec.IntValue FRAY_Z;
+    public static final ModConfigSpec.ConfigValue<String> FRAY_DIMENSION;
     public static final ModConfigSpec.BooleanValue SKY_TINT;
     public static final ModConfigSpec.BooleanValue SUNDERED_SKY;
     public static final ModConfigSpec.BooleanValue SHORT_NIGHTS;
@@ -34,11 +35,12 @@ public final class SkiesConfig {
 
         builder.push("loom");
         FRAY_ENABLED = builder
-                .comment("Show the Fray: a slow dark column over the Dock that thins as Clowders seat Strands.")   // lang-exempt: config file comment for server operators
+                .comment("Show the Fray: the cut in the sky at Loom's End, rooted in the void below the Hall and rising past the end of the broken gate-path, drawn on every client. It thins as Clowders seat Strands and turns to lit thread once every Clowder online has rewoven.")   // lang-exempt: config file comment for server operators
                 .define("frayEnabled", true);
-        FRAY_X = builder.comment("Fray column X (overworld).").defineInRange("frayX", 0, -30000000, 30000000);   // lang-exempt: config file comment for server operators
-        FRAY_Y = builder.comment("Fray column base Y.").defineInRange("frayY", 66, -64, 320);   // lang-exempt: config file comment for server operators
-        FRAY_Z = builder.comment("Fray column Z (overworld).").defineInRange("frayZ", 0, -30000000, 30000000);   // lang-exempt: config file comment for server operators
+        FRAY_X = builder.comment("Fray X, in the Fray's dimension: the cut stands over this block.").defineInRange("frayX", 0, -30000000, 30000000);   // lang-exempt: config file comment for server operators
+        FRAY_Y = builder.comment("Fray Y: the ground the cut passes; it is rooted 260 blocks below, in the void, and frays 200 blocks above.").defineInRange("frayY", 63, -64, 320);   // lang-exempt: config file comment for server operators
+        FRAY_Z = builder.comment("Fray Z, in the Fray's dimension: the cut stands over this block.").defineInRange("frayZ", -140, -30000000, 30000000);   // lang-exempt: config file comment for server operators
+        FRAY_DIMENSION = builder.comment("The dimension the Fray stands in: Loom's End (the Clowder Hall) by default.").define("frayDimension", "clowderhall:clowder_hall");   // lang-exempt: config file comment for server operators
         SKY_TINT = builder
                 .comment("Client: warm the horizon a little as your Clowder's Loom Tension rises.")   // lang-exempt: config file comment for server operators
                 .define("skyTint", true);

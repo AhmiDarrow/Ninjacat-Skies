@@ -166,17 +166,20 @@ public final class LoomTension {
         }
     }
 
-    /** Fraction of every Clowder's Strands that are seated, 0..1 — the server-wide state of the cut. */
+    /**
+     * Fraction of every online Clowder's Loom Tension that is closed, 0..1 — the server-wide state of the cut. Each
+     * Clowder counts its nine Strands and its Reweave, so the Fray only lights once every Clowder online has rewoven.
+     */
     public static float serverProgress(MinecraftServer server) {
         List<Clowder> all = allClowders(server);
-        int seated = 0;
+        int closed = 0;
         int possible = 0;
         for (Clowder c : all) {
             if (c.onlineMembers().isEmpty()) continue;
-            seated += Integer.bitCount(strandBits(c));
-            possible += Strand.ALL.length;
+            closed += tension(c);
+            possible += Strand.ALL.length + 1;
         }
-        return possible == 0 ? 0.0F : (float) seated / possible;
+        return possible == 0 ? 0.0F : (float) closed / possible;
     }
 
     // ---------------------------------------------------------------- ceremony

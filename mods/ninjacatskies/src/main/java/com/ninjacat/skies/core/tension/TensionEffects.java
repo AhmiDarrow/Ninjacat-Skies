@@ -2,6 +2,7 @@ package com.ninjacat.skies.core.tension;
 
 import com.ninjacat.skies.core.NinjacatSkies;
 import com.ninjacat.skies.core.config.SkiesConfig;
+import com.ninjacat.skies.core.network.FraySyncPayload;
 import com.ninjacat.skies.core.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
@@ -20,6 +21,7 @@ import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import org.joml.Vector3f;
 
@@ -29,13 +31,12 @@ import java.util.List;
 
 /**
  * Everything the Loom does to the world once Strands are seated:
- * thread helixes at ceremony, the Reweave finale, the Fray column over the Dock, and the Post's aura.
+ * thread helixes at ceremony, the Reweave finale, the Fray over the Dock (drawn on every client), and the Post's aura.
  */
 public final class TensionEffects {
     private static final List<Scripted> SCRIPTS = new ArrayList<>();
     /** Frames scheduled while SCRIPTS is being iterated (the finale spawns helixes). */
     private static final List<Scripted> PENDING = new ArrayList<>();
-    private static final DustParticleOptions FRAY_DUST = new DustParticleOptions(new Vector3f(0.16F, 0.17F, 0.28F), 1.4F);
     private static final DustParticleOptions FRAY_LIT = new DustParticleOptions(new Vector3f(0.83F, 0.66F, 0.29F), 1.0F);
 
     /** Aura radius around a Clowder's Tension Post, in blocks. */
@@ -153,47 +154,60 @@ public final class TensionEffects {
             }
         }
 
-        if (server.getTickCount() % 4 == 0 && SkiesConfig.FRAY_ENABLED.get()) {
-            fray(server);
+        if (server.getTickCount() % 40 == 0) {
+            broadcastFray(server);
         }
     }
 
+    // ---------------------------------------------------------------- the Fray
+
+    /** An operator's preview (`/skybound fray <closed>`), or -1 for the server's true reweave. */
+    private static float frayOverride = -1F;
+    private static float lastFray = -1F;
+    private static boolean frayDirty;
+
     /**
-     * The Fray: the cut itself, standing over the Dock as a slow dark column. It thins as the server reweaves
-     * and turns to lit thread once every Clowder online has closed their Strand.
+     * How far the whole server has rewoven, 0 open .. 1 closed: the state of the cut over the Dock. Every client
+     * draws the Fray from this, so it thins as any Clowder seats a Strand and turns to lit thread only once every
+     * Clowder online has rewoven.
      */
-    private static void fray(MinecraftServer server) {
-        ServerLevel overworld = server.overworld();
-        double x = SkiesConfig.FRAY_X.get() + 0.5;
-        double z = SkiesConfig.FRAY_Z.get() + 0.5;
-        double y0 = SkiesConfig.FRAY_Y.get();
-        boolean anyoneNear = false;
-        for (ServerPlayer p : overworld.players()) {
-            if (p.distanceToSqr(x, p.getY(), z) < 96 * 96) {
-                anyoneNear = true;
-                break;
-            }
-        }
-        if (!anyoneNear) {
+    public static float frayProgress(MinecraftServer server) {
+        return frayOverride >= 0F ? frayOverride : LoomTension.serverProgress(server);
+    }
+
+    public static float frayOverride() {
+        return frayOverride;
+    }
+
+    /** Operators can hold the Fray at a value to see it; -1 lets it follow the server again. */
+    public static void setFrayOverride(float closed) {
+        frayOverride = closed < 0F ? -1F : Math.clamp(closed, 0F, 1F);
+        frayDirty = true;
+    }
+
+    private static FraySyncPayload frayPayload(MinecraftServer server) {
+        return new FraySyncPayload(SkiesConfig.FRAY_ENABLED.get(), SkiesConfig.FRAY_DIMENSION.get(),
+                SkiesConfig.FRAY_X.get(), SkiesConfig.FRAY_Y.get(), SkiesConfig.FRAY_Z.get(), frayProgress(server));
+    }
+
+    /** Every two seconds: if the cut changed (a seat, a Reweave, a Clowder coming or going), tell every client. */
+    private static void broadcastFray(MinecraftServer server) {
+        float progress = frayProgress(server);
+        if (!frayDirty && Math.abs(progress - lastFray) < 0.0005F) {
             return;
         }
-        float progress = LoomTension.serverProgress(server);
-        int strands = Math.max(1, Math.round(6 * (1.0F - progress)));
-        boolean lit = progress >= 0.999F;
-        for (int i = 0; i < strands; i++) {
-            double y = y0 + overworld.random.nextDouble() * 40.0;
-            double jitter = lit ? 0.15 : 0.8 * (1.0 - progress) + 0.2;
-            overworld.sendParticles(
-                    lit ? FRAY_LIT : FRAY_DUST,
-                    x + (overworld.random.nextDouble() - 0.5) * jitter,
-                    y,
-                    z + (overworld.random.nextDouble() - 0.5) * jitter,
-                    1, 0, 0.03, 0, 0
-            );
+        lastFray = progress;
+        frayDirty = false;
+        FraySyncPayload payload = frayPayload(server);
+        for (ServerPlayer player : server.getPlayerList().getPlayers()) {
+            sendFray(player, payload);
         }
-        if (lit && server.getTickCount() % 8 == 0) {
-            overworld.sendParticles(ParticleTypes.END_ROD, x, y0 + overworld.random.nextDouble() * 40.0, z, 1, 0, 0.01, 0, 0);
-        }
+    }
+
+    private static void sendFray(ServerPlayer player, FraySyncPayload payload) {
+        // A connection that never negotiated the channel (a GameTest mock player) cannot take it: sending would throw.
+        if (!player.connection.hasChannel(FraySyncPayload.TYPE)) return;
+        PacketDistributor.sendToPlayer(player, payload);
     }
 
     // ---------------------------------------------------------------- player: aura, footing, sync
@@ -266,6 +280,10 @@ public final class TensionEffects {
     public void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
         if (event.getEntity() instanceof ServerPlayer player) {
             LoomTension.onClowderChanged(player);   // also grants advancements earned while offline
+            // The newcomer sees the cut at once; everyone else follows on the next broadcast, since a Clowder
+            // coming online can change the server's count.
+            sendFray(player, frayPayload(player.server));
+            frayDirty = true;
         }
     }
 
@@ -273,6 +291,8 @@ public final class TensionEffects {
     public void onServerStopping(net.neoforged.neoforge.event.server.ServerStoppingEvent event) {
         SCRIPTS.clear();
         PENDING.clear();
+        frayOverride = -1F;
+        lastFray = -1F;
     }
 
     @SubscribeEvent
