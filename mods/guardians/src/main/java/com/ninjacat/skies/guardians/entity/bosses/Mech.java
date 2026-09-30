@@ -44,7 +44,7 @@ import java.util.function.Predicate;
 final class Mech {
     private Mech() {}
 
-    static final String TAG_PREFIX = "guardians_minion:";
+    static final String TAG_PREFIX = GuardianEntity.MINION_TAG_PREFIX;
     static final DustParticleOptions GOLD = new DustParticleOptions(new Vector3f(0.83F, 0.66F, 0.29F), 1.4F);
     static final DustParticleOptions TEAL = new DustParticleOptions(new Vector3f(0.24F, 0.48F, 0.48F), 1.4F);
     static final DustParticleOptions VIOLET = new DustParticleOptions(new Vector3f(0.54F, 0.37F, 0.72F), 1.4F);

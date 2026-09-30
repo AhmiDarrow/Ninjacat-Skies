@@ -30,9 +30,6 @@ public enum WreckModifier {
     /** The modifier's name ("Haunted"). */
     public MutableComponent title() { return Component.translatable("wreck.driftwrecks.modifier." + id + ".title"); }
 
-    /** A label short enough for an Atlas stamp cell. */
-    public MutableComponent shortTitle() { return Component.translatable("wreck.driftwrecks.modifier." + id + ".short"); }
-
     @Nullable
     public static WreckModifier byId(String id) {
         for (WreckModifier m : ALL) if (m.id.equals(id)) return m;

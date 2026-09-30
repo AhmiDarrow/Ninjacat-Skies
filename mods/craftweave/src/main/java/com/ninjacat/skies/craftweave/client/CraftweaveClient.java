@@ -67,7 +67,10 @@ public final class CraftweaveClient {
     }
 
     private static AbstractContainerScreen<?> table(Screen screen) {
-        return screen instanceof AbstractContainerScreen<?> acs && CraftTables.isTable(acs.getMenu()) ? acs : null;
+        if (!(screen instanceof AbstractContainerScreen<?> acs) || !CraftTables.isTable(acs.getMenu())) return null;
+        // the payloads are optional: on a server without Craftweave sending one throws, so the table stays plain there
+        var connection = Minecraft.getInstance().getConnection();
+        return connection != null && connection.hasChannel(Craftweave.Craft.TYPE) ? acs : null;
     }
 
     // ---- bookmarks, kept per player on this machine ---------------------------------------------------------------

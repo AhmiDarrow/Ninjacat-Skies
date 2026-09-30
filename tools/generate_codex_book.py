@@ -130,8 +130,9 @@ entry("the_cut", "cut", "The Cut", "Something severed the Loom.", "minecraft:she
          "Guardians snapped in their arenas. Songs kept playing with nobody to hear them. Gate-paths stayed "
          "open into nowhere.\n\nThe Cut was not a war. It was a knot coming undone."),
     text("The Fray",
-         "Above the Dock stands a slow dark column. That is the cut itself — the **Fray** — standing over "
-         "the place the sky used to knot.\n\nIt thins as Clowders tension Strands. When every Clowder has "
+         "Past the broken end of the gate-path at Loom's End, dark threads stand in the sky, rooted in the "
+         "void below and fraying upward. That is the cut itself — the **Fray** — standing over the place "
+         "the sky used to knot.\n\nIt thins as Clowders tension Strands. When every Clowder has "
          "rewoven, it turns to lit thread. Go look at it now and then. It is the only clock this campaign has."),
 ], parents=["loom"])
 
@@ -202,10 +203,10 @@ entry("the_cut", "thread", "Frayed Thread", "Currency, string, and Hall stalls."
     text("Earning Thread back",
          "**Goal:** turn a mined stockpile into spendable Thread.\n\n"
          "You need blocks of copper, iron, gold, amethyst, emerald or diamond, or a netherite ingot.\n\n"
-         "**Grit** in Clowder Hall takes them across the counter for Thread. The rate is bad on purpose "
+         "The **Grit-singers** in Clowder Hall take them across the counter for Thread. The rate is bad on purpose "
          "— a whole diamond block comes back as 24 Thread, and the Seal-carvers sell two diamonds for 81 — so it "
          "is a way to spend a surplus, never a loop to farm. Stock returns each Minecraft day.\n\n"
-         "**Check:** you can price one life at the Spark stall (four Shards, 44 Thread Skeins each) and say "
+         "**Check:** you can price one life at the Drumhearts' stall (four Shards, 44 Thread Skeins each) and say "
          "how many blocks that is before you start digging."),
     text("Codex Pages",
          "**Goal:** read a margin note without spending the page.\n\n"
@@ -500,7 +501,7 @@ entry("memory", "what_mending_means", "What mending means", "Nine agreeing, agai
          "the share is public.\n\nA seated Fragment is a Clowder saying, in front of the Dock: we kept nine "
          "promises. The next Clowder still has nine to keep."),
     text("The Fray is the clock",
-         "The column over the Dock is not scenery. It is the only honest clock this campaign has. It thins "
+         "The Fray at Loom's End is not scenery. It is the only honest clock this campaign has. It thins "
          "when a Clowder reweaves. It turns to lit thread when every Clowder has done the same. Go look at "
          "it. If it is still dark, the work is not finished — not because you failed, but because someone "
          "else has not had their hour yet."),
@@ -524,7 +525,7 @@ entry("memory", "how_the_sky_holds", "How the sky learns to hold", "Nine agreeme
          "to stay taut where everyone can see them."),
     text("Public, or it does not count",
          "A private mend is a secret. Secrets do not hold weather. The Tension Post hums for the whole "
-         "Clowder. The Fray thins for the whole Dock. The lit thread, when it comes, is a server-wide "
+         "Clowder. The Fray thins for the whole of Loom's End. The lit thread, when it comes, is a server-wide "
          "fact.\n\nKeep the work in the open. That is how the old sky held, and it is the only method "
          "the new one will accept."),
     text("What you are not doing",
@@ -585,8 +586,8 @@ for eid, name, strand, icon, x, y, parent, body in BRAID:
 
 entry("braid", "living_lattice", "The Living Lattice", "Workshops, rites and paths.", "tribalpower:resonant_core", 8, 5, [
     text("The camp answers",
-         "Tribal Weave is the workshop beside the nine Strands. Rhythm, landscape and reusable Echo catalysts "
-         "make Pulse.\n\n"
+         "Tribal Weave is the workshop beside the nine Strands. Rhythm, landscape and Echo catalysts "
+         "make Pulse. A catalyst wears out as it sings; keep spares.\n\n"
          "Open the **Spirit Codex** for every generator, station, relay, Kiln, Voice Ring and rite. Sneak-use "
          "it on a silent machine. This book does not copy those manuals."),
     text("What the pack needs",
@@ -691,13 +692,13 @@ TRIBES = [
 ]
 # 3.0: every tribe keeps a camp in the March — where it stands, what its hearth favours, what its Elder trades.
 CAMPS = {
-    "soil": ("the March steppe", "dirt and moss blocks, bread, Echo Shards", "Earth", "hearths and caches"),
+    "soil": ("the March steppe", "dirt and moss blocks, bread, Echo Shards", "Earth", "Echo, a Stone Font and caches"),
     "stone": ("the March highlands", "raw ores, grits, Attuned Echo", "Earth", "Echo Shards for raw ore, Attuned Echo for grit"),
-    "sprout": ("the March steppe", "saplings, seeds, Mossback Scale", "Water", "March saplings and Spirit Reed"),
+    "sprout": ("the March steppe", "saplings, seeds, Mossback Scale", "Water", "Spirit Reed, March logs and a Wave Drum"),
     "claw": ("the March highlands", "leather, iron, Rift Tooth", "Fire", "Spiritgear and footholds"),
     "spark": ("the March steppe", "copper, charged Pulse Cells, Bone Chimes", "Fire", "Bone Chimes and Pulse Cells"),
     "clock": ("the March crystal fields", "redstone, clocks, Storm Wing", "Air", "timed songs and automation"),
-    "swarm": ("the March steppe", "honey, flowers, Lantern Down", "Air", "hives and March flowers"),
+    "swarm": ("the March steppe", "honey, flowers, Lantern Down", "Air", "March flowers, Lantern Down and a Ley Collector"),
     "sigil": ("the March highlands", "blank and element seals, Spirit Shards", "Spirit", "the tribe's Seal, Blank Seals and rite tablets"),
     "spindle": ("the March crystal fields, at the Crystal Spire", "March Crystal, Loom Thread, compasses", "Loom", "Loom Thread and a Waystone Compass at Friend, a Loom Anchor and a Loom Seal at Kin"),
 }
@@ -706,7 +707,7 @@ for sid, tribe, x, y, lore, margin in TRIBES:
     entry("tribes", sid, tribe, f"Keepers of the {sid.title()} Strand.", f"{NS}:strand_token_{sid}", x, y, [
         text(tribe, lore),
         spotlight(f"{NS}:strand_token_{sid}", f"{sid.title()} Strand", f"*{margin}*\n\nSeated. The {tribe} answer when this Post hums."),
-        text("Their camp", f"The {tribe} keep a camp in {where}: huts, a fire, a Tribe Hearth, a {voice} totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours {favours}. Their Elder talks: ask, and they trade {trades}, hand you the day's work, or tell the tribe's story. At Voice standing, or every third request you finish for them, they press the tribe's Mark into your hand."),
+        text("Their camp", f"The {tribe} keep a camp in {where}: huts, a fire, a Tribe Hearth, {'an' if voice[0] in 'AEIOU' else 'a'} {voice} totem, a banner and four Kin — an Elder, a Drummer, a Hunter and a Weaver.\n\nTheir hearth favours {favours}. Their Elder talks: ask, and they trade {trades}, hand you the day's work, or tell the tribe's story. At Voice standing, or every third request you finish for them, they press the tribe's Mark into your hand."),
     ], condition=advancement(f"strand/{sid}"), hide=False)
 
 entry("tribes", "camps", "The Nine Camps", "Standing, offerings, marks.", "tribalpower:tribe_hearth", -4, 0, [
@@ -717,13 +718,13 @@ entry("tribes", "camps", "The Nine Camps", "Standing, offerings, marks.", "triba
 
 entry("tribes", "the_unsung", "The Unsung", "What the March remembers.", "tribalpower:silent_drum", 4, 2, [
     text("The halls that kept time", "Sunken Ancestor Halls stand in the March steppe and highlands: three rooms, four Lore Tablets in each hall, chests of Loom Thread and Echoes, Hollow Sentinels on guard. Read every tablet. The Crystal Spire in the crystal fields is the Loom-stitchers' waystation."),
-    text("The Drum Circle", "Twelve pillars around a Silent Drum in the March highlands. With the circle's candles lit and open sky above the drum, strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double.\n\nIts fall is the Loom-stitchers' trial; the other eight tribes' trials end at the guardians of the March."),
+    text("The Drum Circle", "Twelve pillars around a Silent Drum in the March highlands. With the circle's candles lit and clear air above the drum, strike it four times, a breath apart, and The Unsung rises: an ancestor spirit shaped like a hollow standing drum.\n\nBeat: brace by sneaking against its shockwaves. Chorus: cut down the Echo Weavers it calls. Silence: it cannot be hurt until you strike the drum with the same four beats — then it is stunned and takes double.\n\nIts fall is the Loom-stitchers' trial; the other eight tribes' trials end at the guardians of the March."),
     spotlight("tribalpower:unsung_heart", "Unsung Heart", "One per kill, with Loom Thread and Resonant Cores. It crafts the Resonance Totem (Loom), the sixth voice, and with the eight guardian cores the tablet of the Ninth Agreement."),
 ], condition={"type": "modonomicon:advancement", "advancement_id": "tribalpower:march/ancestor_hall"}, hide=False)
 
 entry("tribes", "reweave", "Reweave", "The cut, closed.", f"{NS}:spindle_loom_fragment", 0, 0, [
     text("Reweave",
-         "Nine tribes, one thread. Your Clowder closed its Strand of the sky.\n\nThe Fray over the Dock is "
+         "Nine tribes, one thread. Your Clowder closed its Strand of the sky.\n\nThe Fray at Loom's End is "
          "thinner for it. When every Clowder has done the same, it turns to lit thread and stays that way.\n\n"
          "Go and see what the March kept for you. Tell it we are sorry it took so long."),
 ], condition=advancement("reweave"), hide=True)
@@ -1071,7 +1072,7 @@ w(PACK_BOOK / "entries" / "the_work" / "old_world.json", {
         text("What fixing means",
              "You are not rebuilding the hanging continents. You are teaching nine Strands to agree again, one pad "
              "at a time. A seated token is a promise kept. A Clowder that seats the Fragment closes its Strand of "
-             "the Fray. When every Clowder has done the same, the column over the Dock turns to lit thread.\n\n"
+             "the Fray. When every Clowder has done the same, the Fray at Loom's End turns to lit thread.\n\n"
              "The world does not snap back. It learns to hold. Honest hammocks last longer than floors that lie."),
         text("The Old Sky chapter",
              "**The Old Sky** is the rest of this story, written as the tribes would tell it. It does not open all "

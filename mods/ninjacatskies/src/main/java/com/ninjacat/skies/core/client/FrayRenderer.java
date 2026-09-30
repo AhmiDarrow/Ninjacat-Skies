@@ -234,5 +234,7 @@ public final class FrayRenderer {
     @SubscribeEvent
     public void onLogout(ClientPlayerNetworkEvent.LoggingOut event) {
         ClientFray.reset();
+        ClientServerRules.reset();
+        ClientTension.reset();
     }
 }

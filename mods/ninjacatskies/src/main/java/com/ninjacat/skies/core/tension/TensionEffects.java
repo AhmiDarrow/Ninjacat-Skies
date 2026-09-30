@@ -185,6 +185,11 @@ public final class TensionEffects {
         frayDirty = true;
     }
 
+    /** The Fray's config changed: send it to every client on the next broadcast even if the progress did not. */
+    public static void markFrayDirty() {
+        frayDirty = true;
+    }
+
     private static FraySyncPayload frayPayload(MinecraftServer server) {
         return new FraySyncPayload(SkiesConfig.FRAY_ENABLED.get(), SkiesConfig.FRAY_DIMENSION.get(),
                 SkiesConfig.FRAY_X.get(), SkiesConfig.FRAY_Y.get(), SkiesConfig.FRAY_Z.get(), frayProgress(server));

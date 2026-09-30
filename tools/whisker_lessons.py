@@ -174,7 +174,7 @@ def build_lessons(book, write, text, entry, category):
                  'You need a **Pulse Resonator**, an **Echo Shard**, and **Earth and Fire Resonance Totems**.'),
             text('Starter generator',
                  '1. Place the Resonator.\n'
-                 '2. Right-click it with the shard to install the reusable catalyst.\n'
+                 '2. Right-click it with the shard to install the catalyst. It wears out as it sings; keep spares.\n'
                  '3. Place the two different totems within 8 blocks. The diagram shows a compact example.\n'
                  '4. Wait a second and inspect the generator. Stored Pulse should rise.'),
             text('Power budget',
@@ -243,7 +243,7 @@ def build_lessons(book, write, text, entry, category):
                  '2. Right-click the Post again, this time holding the Fragment, to reweave your team\'s sky.\n\n'
                  'These are world interactions, not crafting-table recipes.'),
             text('Check',
-                 '**Check:** nine notches are lit, then the Fragment seats and the Fray over the Dock is thinner for your Clowder. If nothing happens, read the Post message. Other teams have their own progress.')]),
+                 '**Check:** nine notches are lit, then the Fragment seats and the Fray at Loom\'s End is thinner for your Clowder. If nothing happens, read the Post message. Other teams have their own progress.')]),
         ('stuck', 'When progress stops', 'minecraft:book', [
             text('Quest checks',
                  '**Goal:** unstick one blocked task without rebuilding the pad.\n\n'
@@ -261,7 +261,7 @@ def build_lessons(book, write, text, entry, category):
             text('Shared lives',
                  'When shared lives are on (default), each Clowder mate adds **three** lives to one team pool. A survival death spends one. Food and potions do not put it back. At zero, affected players become spectators.\n\n'
                  '`/skybound lives` prints the pool. Six quest rewards named **Thread of Return** each add one life when claimed, once per Clowder.\n\n'
-                 'After those, a **Thread of Return** is an item: four **Thread Shards** stitched around a Braid Cord, right-clicked for one more shared life, as often as you can pay for it. Cut a Shard from diamonds, Void Yarn and a Rift Shard, or buy one from Spark at `/clowder hub`.\n\n'
+                 'After those, a **Thread of Return** is an item: four **Thread Shards** stitched around a Braid Cord, right-clicked for one more shared life, as often as you can pay for it. Cut a Shard from diamonds, Void Yarn and a Rift Shard, or buy one from the Drumhearts at `/clowder hub`.\n\n'
                  'Keep one in a pocket **before** the pool empties: at zero you are already a spectator and cannot use anything. Operators run `/skybound revive`. Plan trips together.'),
             text('Common traps',
                  'A Sky Stone Tank that you just moved is empty unless you bucketed first. Use a Spirit Cistern to carry liquids.\n\n'

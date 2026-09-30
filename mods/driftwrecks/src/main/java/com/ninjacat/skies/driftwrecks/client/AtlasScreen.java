@@ -34,7 +34,12 @@ public class AtlasScreen extends Screen {
         CompoundTag atlas = t.getCompound("atlas");
         int cols = Strand.ALL.length, rows = WreckCore.ALL.length;
         int gridW = cols * (CELL + GAP), gridH = rows * (CELL + GAP);
-        int left = 70, panelW = left + gridW + 16, panelH = 34 + gridH + 96;
+        // modifier stamps carry their full names: boxes as wide as the longest, as many to a row as the panel holds
+        int stampW = 34;
+        for (WreckModifier m : WreckModifier.ALL) stampW = Math.max(stampW, font.width(m.title()) + 4);
+        int perRow = Math.max(1, Math.min(WreckModifier.ALL.length, (gridW + 12) / (stampW + 4)));
+        int stampRows = (WreckModifier.ALL.length + perRow - 1) / perRow;
+        int left = 70, panelW = left + gridW + 16, panelH = 34 + gridH + 96 + (stampRows - 1) * 14;
         int x0 = (width - panelW) / 2, y0 = Math.max(4, (height - panelH) / 2);
         g.fill(x0 - 2, y0 - 2, x0 + panelW + 2, y0 + panelH + 2, INK);
         g.fill(x0, y0, x0 + panelW, y0 + panelH, PAPER);
@@ -86,12 +91,12 @@ public class AtlasScreen extends Screen {
         g.drawString(font, Component.translatable("gui.driftwrecks.atlas.stamps"), x0 + 8, sy, INK, false);
         int mods = t.getInt("modStamps");
         for (int i = 0; i < WreckModifier.ALL.length; i++) {
-            int bx = x0 + left + i * 38;
+            int bx = x0 + left + (i % perRow) * (stampW + 4), by = sy + (i / perRow) * 14;
             boolean on = (mods & (1 << i)) != 0;
-            g.fill(bx, sy - 2, bx + 34, sy + 10, on ? TEAL : PAPER_DARK);
-            g.drawString(font, WreckModifier.ALL[i].shortTitle(), bx + 2, sy, on ? PAPER : FADED, false);
+            g.fill(bx, by - 2, bx + stampW, by + 10, on ? TEAL : PAPER_DARK);
+            g.drawString(font, WreckModifier.ALL[i].title(), bx + 2, by, on ? PAPER : FADED, false);
         }
-        int ry = sy + 16;
+        int ry = sy + 16 + (stampRows - 1) * 14;
         g.drawString(font, Component.translatable("gui.driftwrecks.atlas.remnants"), x0 + 8, ry, INK, false);
         int rem = t.getInt("remnants");
         for (int i = 0; i < Strand.ALL.length; i++) {

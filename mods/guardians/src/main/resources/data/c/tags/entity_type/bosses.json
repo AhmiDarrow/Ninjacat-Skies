@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "guardians:beddown",
+    "guardians:grindmaw",
+    "guardians:thornmother",
+    "guardians:edgewalker",
+    "guardians:drumheart",
+    "guardians:cogwright",
+    "guardians:hivemind",
+    "guardians:sealbreaker",
+    "guardians:unwoven",
+    "guardians:lintgolem",
+    "guardians:tangle",
+    "guardians:firstcut",
+    "guardians:overweaver"
+  ]
+}

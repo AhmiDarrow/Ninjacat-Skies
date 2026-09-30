@@ -18,6 +18,12 @@ public final class ClientTension {
         });
     }
 
+    /** On leaving a server: the next one tells us its own Tension. */
+    public static void reset() {
+        strandBits = 0;
+        rewoven = false;
+    }
+
     public static int strandBits() {
         return strandBits;
     }

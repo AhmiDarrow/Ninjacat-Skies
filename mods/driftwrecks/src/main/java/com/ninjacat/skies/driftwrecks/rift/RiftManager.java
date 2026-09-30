@@ -218,9 +218,8 @@ public final class RiftManager extends SavedData {
             for (UUID u : r.party) {
                 ServerPlayer p = server.getPlayerList().getPlayer(u);
                 if (p == null || p.isSpectator() || !p.isAlive()) continue;
-                if (p.level() != arena) continue;
+                if (!within(p, arena, r)) continue;
                 double dx = p.getX() - r.origin.getX() - 0.5, dz = p.getZ() - r.origin.getZ() - 0.5;
-                if (Math.abs(dx) > SPACING / 4.0 || Math.abs(dz) > SPACING / 4.0) continue;
                 inside.add(p);
                 if (Math.sqrt(dx * dx + dz * dz) > RADIUS + 3 || p.getY() < r.origin.getY() - 8) {
                     teleport(p, arena, r.origin.getX() + 0.5 + 6, r.origin.getY(), r.origin.getZ() + 0.5);
@@ -232,7 +231,7 @@ public final class RiftManager extends SavedData {
                 if (inside.isEmpty() && r.ticks > 100) { if (++r.emptyTicks > 100) lose(server, r); }
                 else r.emptyTicks = 0;
             } else if (r.ticks > END_DELAY) {
-                for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null && hasReturn(p)) returnHome(p); }
+                for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null) endFor(p, arena, r); }
                 rescueDrops(server, arena, r);
                 clear(arena, r.origin);
                 forceChunks(arena, r.origin, false);
@@ -295,7 +294,7 @@ public final class RiftManager extends SavedData {
 
     // ------------------------------------------------------------------ return points
 
-    private static void storeReturn(ServerPlayer p) {
+    static void storeReturn(ServerPlayer p) {
         CompoundTag persisted = p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
         CompoundTag ret = new CompoundTag();
         ret.putString("dim", p.level().dimension().location().toString());
@@ -327,11 +326,34 @@ public final class RiftManager extends SavedData {
 
     public static boolean hasReturn(ServerPlayer p) { return p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG).contains(RETURN); }
 
-    /** Log in inside a finished rift (or with a stale return point): go home. */
+    /** The rift is over: a member still in the chamber goes back to the wreck; one who died and respawned at home stays there. */
+    static void endFor(ServerPlayer p, ServerLevel arena, Rift r) {
+        if (!hasReturn(p)) return;
+        if (p.isAlive() && within(p, arena, r)) returnHome(p);
+        else dropReturn(p);
+    }
+
+    /** Forget the return point without moving the player (they already left the rift another way). */
+    static void dropReturn(ServerPlayer p) {
+        CompoundTag persisted = p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+        persisted.remove(RETURN);
+        p.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
+    }
+
+    /** Whether the player stands in this rift's chamber (its quarter of the rift row in the arena dimension). */
+    static boolean within(ServerPlayer p, ServerLevel arena, Rift r) {
+        if (p.level() != arena) return false;
+        double dx = p.getX() - r.origin.getX() - 0.5, dz = p.getZ() - r.origin.getZ() - 0.5;
+        return Math.abs(dx) <= SPACING / 4.0 && Math.abs(dz) <= SPACING / 4.0;
+    }
+
+    /** Log in inside a finished rift (or with a stale return point): go home, if still in the rift row. */
     public void onLogin(ServerPlayer p) {
         if (!hasReturn(p)) return;
         for (Rift r : rifts.values()) if (r.party.contains(p.getUUID()) && r.state == 0) return;
-        returnHome(p);
+        ServerLevel arena = ArenaManager.arenaLevel(p.server);
+        if (arena != null && p.level() == arena && !ArenaManager.inGuardianSlots(p.getX())) returnHome(p);
+        else dropReturn(p);   // already home (a death in the rift respawns you there): the old return point is stale
     }
 
     private static void teleport(ServerPlayer p, ServerLevel level, double x, double y, double z) {

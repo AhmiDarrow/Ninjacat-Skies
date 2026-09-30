@@ -202,7 +202,7 @@ final class StrandRelics {
             @Override public boolean activate(ServerPlayer p, ItemStack s) {
                 ServerLevel l = p.serverLevel();
                 for (LivingEntity m : RelicUtil.mobsAround(p, 7)) {
-                    RelicTimers.stun(m, 40);                                       // 2 s (Guardians exempt)
+                    RelicTimers.stun(m, 40);                                       // 2 s (bosses exempt)
                     m.knockback(1.5, p.getX() - m.getX(), p.getZ() - m.getZ());
                     m.hurtMarked = true;
                 }

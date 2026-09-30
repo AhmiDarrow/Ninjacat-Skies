@@ -41,4 +41,26 @@ public class ShortNightGameTests {
         }
         h.succeed();
     }
+
+    /** The client steps its clock by the server's shortNights (and hides the dismount hint by its sneakDismounts), not its own config. */
+    @GameTest(template = "empty")
+    public static void serverRulesReachTheClient(GameTestHelper h) {
+        var now = com.ninjacat.skies.core.network.ServerRulesPayload.current();
+        h.assertTrue(now.shortNights() == com.ninjacat.skies.core.config.SkiesConfig.SHORT_NIGHTS.get()
+                && now.sneakDismounts() == com.ninjacat.skies.core.config.SkiesConfig.SNEAK_DISMOUNTS.get(), "The payload carries the server's config");
+        for (boolean nights : new boolean[] {true, false}) for (boolean sneak : new boolean[] {true, false}) {
+            var sent = new com.ninjacat.skies.core.network.ServerRulesPayload(nights, sneak);
+            io.netty.buffer.ByteBuf buf = io.netty.buffer.Unpooled.buffer();
+            com.ninjacat.skies.core.network.ServerRulesPayload.STREAM_CODEC.encode(buf, sent);
+            var got = com.ninjacat.skies.core.network.ServerRulesPayload.STREAM_CODEC.decode(buf);
+            h.assertTrue(sent.equals(got), "The payload survives the wire: " + sent);
+            com.ninjacat.skies.core.client.ClientServerRules.apply(got);
+            h.assertTrue(com.ninjacat.skies.core.client.ClientServerRules.shortNights() == nights
+                    && com.ninjacat.skies.core.client.ClientServerRules.sneakDismounts() == sneak, "The client takes the server's rules");
+        }
+        com.ninjacat.skies.core.client.ClientServerRules.reset();
+        h.assertTrue(!com.ninjacat.skies.core.client.ClientServerRules.shortNights() && com.ninjacat.skies.core.client.ClientServerRules.sneakDismounts(),
+                "Off a server the client assumes vanilla");
+        h.succeed();
+    }
 }

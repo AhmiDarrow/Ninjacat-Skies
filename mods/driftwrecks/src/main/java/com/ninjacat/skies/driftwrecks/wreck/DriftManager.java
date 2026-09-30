@@ -60,6 +60,8 @@ public final class DriftManager extends SavedData {
     private static final int RETRY_TICKS = 20 * 60 * 5;
     private final Map<Integer, Wreck> wrecks = new TreeMap<>();
     private final Map<UUID, Long> retryAt = new HashMap<>();
+    /** Pressure arrivals rolled and looking for clear sky (not saved: a restart simply rolls again). */
+    private final Map<UUID, Arrival> searching = new LinkedHashMap<>();
     private int nextId = 1;
     private final RandomSource rng = RandomSource.create();
 
@@ -112,6 +114,8 @@ public final class DriftManager extends SavedData {
         }
         for (int id : finished) wrecks.remove(id);
         if (!finished.isEmpty()) setDirty();
+        if (!enabled) searching.clear();
+        else if (!searching.isEmpty()) stepSearch(server, level);
         if (slow && enabled) tickPressure(server, level);
     }
 
@@ -129,17 +133,54 @@ public final class DriftManager extends SavedData {
             t.dirty();
             if (p >= target) {
                 long now = level.getGameTime();
-                if (now < retryAt.getOrDefault(c.id(), 0L)) continue;
-                Wreck w;
+                if (now < retryAt.getOrDefault(c.id(), 0L) || searching.containsKey(c.id())) continue;
+                Prepared prep;
                 try {
-                    w = arrive(server, c, null);
-                } catch (RuntimeException e) {                  // a bad plan or placement must not take the server tick down
+                    prep = prepare(server, c, null);
+                } catch (RuntimeException e) {                  // a bad plan must not take the server tick down
                     Driftwrecks.LOGGER.error("Driftwreck arrival failed for {}", c.id(), e);
-                    w = null;
+                    prep = null;
                 }
-                if (w != null) { t.resetCycle(); t.dirty(); retryAt.remove(c.id()); }
-                else retryAt.put(c.id(), now + RETRY_TICKS);   // no clear sky: try again in a few minutes, not every second
+                if (prep == null) retryAt.put(c.id(), now + RETRY_TICKS);
+                else searching.put(c.id(), new Arrival(prep, new Placement.Search(prep.post().pos(), prep.plan(), c.id())));
             }
+        }
+    }
+
+    private record Arrival(Prepared prepared, Placement.Search search) {}
+
+    /**
+     * The first pressure arrival in line tries its next spots, at most one chunk-loading block scan per tick (see
+     * {@link Placement.Search}); the same spots {@link #arrive} would try at once, so wrecks land where they always could.
+     */
+    private void stepSearch(MinecraftServer server, ServerLevel level) {
+        Iterator<Map.Entry<UUID, Arrival>> it = searching.entrySet().iterator();
+        Map.Entry<UUID, Arrival> e = it.next();
+        UUID id = e.getKey();
+        Arrival a = e.getValue();
+        Optional<Clowder> c = LoomTension.clowderById(server, id);
+        GlobalPos post = c.map(LoomTension::postOf).orElse(null);
+        // a wreck arrived another way, the Clowder went, or its Post moved: drop this search, pressure starts a fresh one
+        if (c.isEmpty() || byTeam(id) != null || post == null || !post.equals(a.prepared().post())) { it.remove(); return; }
+        Wreck w = null;
+        try {
+            BlockPos origin = a.search().step(level, rng, wrecks.values(), LoomTension.allClowders(server), 1);
+            if (origin != null) w = land(server, c.get(), a.prepared(), origin);
+        } catch (RuntimeException ex) {
+            Driftwrecks.LOGGER.error("Driftwreck arrival failed for {}", id, ex);
+            it.remove();
+            retryAt.put(id, level.getGameTime() + RETRY_TICKS);
+            return;
+        }
+        if (w != null) {
+            it.remove();
+            TeamDrift t = TeamDrift.of(c.get());
+            t.resetCycle(); t.dirty();
+            retryAt.remove(id);
+        } else if (a.search().exhausted()) {
+            it.remove();
+            Driftwrecks.LOGGER.info("No clear sky for {}'s driftwreck this cycle", c.get().name().getString());
+            retryAt.put(id, level.getGameTime() + RETRY_TICKS);   // try again in a few minutes, not every second
         }
     }
 
@@ -154,11 +195,30 @@ public final class DriftManager extends SavedData {
     /** Roll and start building a wreck for this Clowder. Returns null if no spot was found or rules forbid it. */
     @Nullable
     public Wreck arrive(MinecraftServer server, Clowder c, @Nullable Roll fixed) {
+        Prepared p = prepare(server, c, fixed);
+        if (p == null) return null;
+        BlockPos origin = p.roll().origin();
+        if (origin == null) {
+            origin = Placement.find(level(server), p.post().pos(), p.plan(), rng, c.id(), wrecks.values(), LoomTension.allClowders(server));
+            if (origin == null) {
+                Driftwrecks.LOGGER.info("No clear sky for {}'s driftwreck this cycle", c.name().getString());
+                return null;
+            }
+        }
+        return land(server, c, p, origin);
+    }
+
+    /** Everything an arrival rolls before it has a place (the plan decides how much sky it needs). Changes nothing. */
+    private record Prepared(Roll roll, boolean fixed, boolean heart, WreckTier tier, Strand skin, @Nullable WreckCore core,
+                            WreckModifier mod, WreckObjective obj, long seed, WreckComposer.Layout plan, String planId, @Nullable GlobalPos post) {}
+
+    @Nullable
+    private Prepared prepare(MinecraftServer server, Clowder c, @Nullable Roll fixed) {
         if (byTeam(c.id()) != null) return null;
         ServerLevel level = level(server);
         GlobalPos post = LoomTension.postOf(c);
         Roll r = fixed == null ? Roll.random() : fixed;
-        if (post == null && r.origin() == null) return null;
+        if ((post == null || !post.dimension().equals(level.dimension())) && r.origin() == null) return null;
         TeamDrift team = TeamDrift.of(c);
         int seated = Integer.bitCount(LoomTension.strandBits(c));
         List<Strand> open = new ArrayList<>();
@@ -178,15 +238,15 @@ public final class DriftManager extends SavedData {
             plan = heart ? WreckComposer.Layout.of(WreckPlan.get(server, "heartwreck")) : WreckComposer.compose(server, core, tier, seed);
         } catch (IllegalStateException e) { Driftwrecks.LOGGER.error("{}", e.getMessage()); return null; }
         String planId = heart ? "heartwreck" : plan.description.split(" ")[0];
+        return new Prepared(r, fixed != null, heart, tier, skin, core, mod, obj, seed, plan, planId, post);
+    }
 
-        BlockPos origin = r.origin();
-        if (origin == null) {
-            origin = Placement.find(level, post.pos(), plan, rng, c.id(), wrecks.values(), LoomTension.allClowders(server));
-            if (origin == null) {
-                Driftwrecks.LOGGER.info("No clear sky for {}'s driftwreck this cycle", c.name().getString());
-                return null;
-            }
-        }
+    /** Start building a prepared arrival at {@code origin}. */
+    private Wreck land(MinecraftServer server, Clowder c, Prepared p, BlockPos origin) {
+        ServerLevel level = level(server);
+        TeamDrift team = TeamDrift.of(c);
+        boolean heart = p.heart(); WreckTier tier = p.tier(); Strand skin = p.skin(); WreckCore core = p.core();
+        WreckModifier mod = p.mod(); WreckObjective obj = p.obj(); long seed = p.seed(); WreckComposer.Layout plan = p.plan(); String planId = p.planId();
         boolean hidden = core != null && team.hiddenRoomOpen(core);
         Wreck w = new Wreck(nextId++, c.id(), planId, core, tier, skin, mod, obj, heart, origin, hidden);
         w.seed = seed; w.layout = plan.description; w.fill = plan.fill; w.markers.addAll(plan.markers);
@@ -195,7 +255,7 @@ public final class DriftManager extends SavedData {
         float life = tier.lifetimeTicks * mod.lifetime * team.lifetimeBonus() * DriftConfig.LIFETIME_MULTIPLIER.get().floatValue();
         w.lifetime = Math.max(20 * 60, Math.round(life));
         if (heart) { team.setHeartwreck(2); team.dirty(); }
-        if (fixed == null) {
+        if (!p.fixed()) {
             if (team.lureStrand() != null) team.setLureStrand(null);
             if (team.scrollPending()) team.setScrollPending(false);
             team.dirty();
@@ -445,21 +505,32 @@ public final class DriftManager extends SavedData {
     private void crumble(ServerLevel level, Wreck w) {
         BuildQueue q = w.placed;
         if (q == null) return;
-        BlockPos c = w.center();
-        // walk from the end of a far-first ordering, computed lazily as a sort of indices by distance
-        int[] order = rimOrder(w);
-        while (w.crumbleCursor < order.length) {
-            int i = order[w.crumbleCursor++];
-            BlockPos p = q.posAt(i);
-            BlockState want = q.stateAt(i);
+        // walk a far-first ordering, computed lazily as a sort of indices by distance
+        int i = nextCrumble(rimOrder(w), w, k -> {
+            BlockPos p = q.posAt(k);
             BlockState now = level.getBlockState(p);
-            if (!now.is(want.getBlock()) || level.getBlockEntity(p) != null || p.getY() < w.origin.getY()) continue;
-            if (!level.getBlockState(p.below()).isAir()) continue;   // only overhangs drop; the core stays walkable longest
-            FallingBlockEntity.fall(level, p, now);
-            level.playSound(null, p, DwRegistries.sound("driftwreck.crumble"), SoundSource.BLOCKS, 0.6F, 0.9F + rng.nextFloat() * 0.2F);
-            setDirty();
-            return;
+            if (!now.is(q.stateAt(k).getBlock()) || level.getBlockEntity(p) != null || p.getY() < w.origin.getY()) return false;
+            return level.getBlockState(p.below()).isAir();   // only overhangs drop; the core stays walkable longest
+        });
+        if (i < 0) return;
+        BlockPos p = q.posAt(i);
+        FallingBlockEntity.fall(level, p, level.getBlockState(p));
+        level.playSound(null, p, DwRegistries.sound("driftwreck.crumble"), SoundSource.BLOCKS, 0.6F, 0.9F + rng.nextFloat() * 0.2F);
+        setDirty();
+    }
+
+    /**
+     * The next block of {@code order} (from {@code w.crumbleCursor}) that can fall, or -1 when none can. The walk wraps
+     * round once: a block passed over while still propped up overhangs once what held it has fallen, and must drop
+     * on a later pass rather than hang there for good.
+     */
+    public static int nextCrumble(int[] order, Wreck w, java.util.function.IntPredicate falls) {
+        for (int n = 0; n < order.length; n++) {
+            if (w.crumbleCursor >= order.length || w.crumbleCursor < 0) w.crumbleCursor = 0;
+            int i = order[w.crumbleCursor++];
+            if (falls.test(i)) return i;
         }
+        return -1;
     }
 
     private final Map<Integer, int[]> rimCache = new HashMap<>();
@@ -468,8 +539,14 @@ public final class DriftManager extends SavedData {
             BuildQueue q = w.placed;
             BlockPos c = w.center();
             Integer[] idx = new Integer[q.size()];
-            for (int i = 0; i < idx.length; i++) idx[i] = i;
-            Arrays.sort(idx, Comparator.comparingDouble((Integer i) -> -q.posAt(i).distSqr(new BlockPos(c.getX(), q.posAt(i).getY(), c.getZ()))));
+            double[] far = new double[idx.length];
+            for (int i = 0; i < idx.length; i++) {
+                idx[i] = i;
+                BlockPos p = q.posAt(i);
+                double dx = p.getX() - c.getX(), dz = p.getZ() - c.getZ();
+                far[i] = dx * dx + dz * dz;
+            }
+            Arrays.sort(idx, Comparator.comparingDouble((Integer i) -> -far[i]));
             int[] out = new int[idx.length];
             for (int i = 0; i < idx.length; i++) out[i] = idx[i];
             return out;
@@ -499,7 +576,7 @@ public final class DriftManager extends SavedData {
         Optional<Clowder> c = LoomTension.clowderById(server, w.team);
         BlockPos home = homeFor(server, w);
         if (w.pendingComplete && !w.objectiveDone) completeObjective(level, w);   // a win held for the Clowder to log in is still a win
-        if (w.heartwreck && !w.objectiveDone && !w.pendingComplete) c.ifPresent(cl -> { TeamDrift t = TeamDrift.of(cl); t.setHeartwreck(1); t.dirty(); });   // it comes back
+        if (w.heartwreck && !w.objectiveDone) c.ifPresent(cl -> { TeamDrift t = TeamDrift.of(cl); t.setHeartwreck(1); t.dirty(); });   // it comes back
         // 1. nobody falls
         for (ServerPlayer p : level.players()) {
             if (p.isSpectator()) continue;

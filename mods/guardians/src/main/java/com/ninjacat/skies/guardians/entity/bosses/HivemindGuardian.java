@@ -17,9 +17,12 @@ import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
+import net.minecraft.util.Mth;
+
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Swarm · the Hivemind — QUEEN AND DRONES. The tower is fragile but hides its royal chamber: it is immune until
@@ -29,6 +32,7 @@ import java.util.List;
  */
 public class HivemindGuardian extends GuardianEntity {
     private static final int CELLS = 6, CELL_R = 34, WAVE = 400, SEAL_TICKS = 600, EXPOSE = 200;
+    private static final double DRONE_R = 28, DRONE_JITTER = 0.5;
     private final int[] sealedUntil = new int[CELLS];
     private final BlockPos[] fire = new BlockPos[CELLS];
     private final Mech.Ledger comb = new Mech.Ledger();
@@ -40,7 +44,39 @@ public class HivemindGuardian extends GuardianEntity {
     @Override protected boolean mobile() { return false; }
     @Override protected MutableComponent immuneMessage() { return Component.translatable("message.guardians.hivemind.royal_chamber_shut_smoke_all"); }
     /** Drone cell k: arena_factory puts the six at 30° + 60°k on the wall (r 33); the plan mirrors y into -z. */
-    private Vec3 cell(int k) { Vec3 o = origin(); return Mech.polar(o, CELL_R, -(Math.PI / 3 * k + Math.PI / 6), o.y); }
+    private Vec3 cell(int k) { Vec3 o = origin(); return Mech.polar(o, CELL_R, cellAngle(k), o.y); }
+    private static double cellAngle(int k) { return -(Math.PI / 3 * k + Math.PI / 6); }
+
+    /**
+     * Where cell k's drones come out: open air in front of the cell. The cell itself (r 34) sits inside the solid
+     * amber wall (r 31-35, y 1-4), so drones spawned there suffocated. Tries r 28 inward to r 26 on the cell's axis
+     * and stands on the highest solid block of that column (a wax ledge, honey pillar or risen comb lifts the spawn
+     * onto it), taking the first spot whose whole jittered spawn volume is free. {@code solid} tests absolute block
+     * positions. GuardianGameTests#hivemindDroneMouthsOpen checks every mouth against the shipped arena plan.
+     */
+    public static Vec3 droneMouth(Vec3 o, int k, Predicate<BlockPos> solid) {
+        Vec3 first = null;
+        int base = Mth.floor(o.y);
+        for (double r = DRONE_R; r >= DRONE_R - 2; r -= 0.5) {
+            Vec3 p = Mech.polar(o, r, cellAngle(k), o.y);
+            int bx = Mth.floor(p.x), bz = Mth.floor(p.z), feet = base - 1;
+            for (int y = base + 5; y >= base - 2; y--) if (solid.test(new BlockPos(bx, y, bz))) { feet = y + 1; break; }
+            Vec3 at = new Vec3(p.x, feet, p.z);
+            if (first == null) first = at;
+            if (droneRoom(at, solid)) return at;
+        }
+        return first;      // players walled the mouth in: the drones still come
+    }
+    /** Every block a drone (0.7 wide, 0.6 tall) can touch when it spawns at {@code at} with the wave jitter is free. */
+    public static boolean droneRoom(Vec3 at, Predicate<BlockPos> solid) {
+        double w = DRONE_JITTER + 0.35;
+        int y0 = Mth.floor(at.y);
+        for (int x = Mth.floor(at.x - w); x <= Mth.floor(at.x + w); x++)
+            for (int z = Mth.floor(at.z - w); z <= Mth.floor(at.z + w); z++)
+                for (int y = y0; y <= y0 + 1; y++) if (solid.test(new BlockPos(x, y, z))) return false;
+        return true;
+    }
+    private Vec3 droneMouth(int k) { Level l = level(); return droneMouth(origin(), k, p -> !l.getBlockState(p).getCollisionShape(l, p).isEmpty()); }
     private int droneCap() { return 6 + 3 * partySize(); }
 
     @Override
@@ -87,14 +123,14 @@ public class HivemindGuardian extends GuardianEntity {
         int alive = Mech.countMinions(this), per = 1 + (partySize() + 1) / 2 + (phase() == 3 ? 1 : 0);
         for (int k = 0; k < CELLS; k++) {
             if (sealedUntil[k] > tickCount) continue;
-            Vec3 c = cell(k);
+            Vec3 c = droneMouth(k);
             for (int i = 0; i < per && alive < droneCap(); i++, alive++) {
-                Bee b = Mech.spawn(this, EntityType.BEE, c.add(random.nextDouble() * 2 - 1, 2 + random.nextDouble(), random.nextDouble() * 2 - 1), "message.guardians.minion.drone", 12, 3);
+                Bee b = Mech.spawn(this, EntityType.BEE, c.add((random.nextDouble() * 2 - 1) * DRONE_JITTER, random.nextDouble() * 0.4, (random.nextDouble() * 2 - 1) * DRONE_JITTER), "message.guardians.minion.drone", 12, 3);
                 if (b == null) continue;
                 ServerPlayer t = Mech.randomPlayer(this);
                 if (t != null) { b.setPersistentAngerTarget(t.getUUID()); b.setRemainingPersistentAngerTime(2400); b.setTarget(t); }
             }
-            Mech.burst(serverLevel(), ParticleTypes.FALLING_HONEY, c.add(0, 2, 0), 8, 1);
+            Mech.burst(serverLevel(), ParticleTypes.FALLING_HONEY, c.add(0, 1, 0), 8, 1);
         }
         sound(SoundEvents.BEE_LOOP_AGGRESSIVE, 2F, 0.6F); say("message.guardians.hivemind.cells_pour_drones");
     }

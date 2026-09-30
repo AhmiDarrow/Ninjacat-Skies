@@ -19,6 +19,8 @@ public final class DriftClient {
     public static void init(IEventBus modBus) {
         modBus.addListener(DriftClient::renderers);
         modBus.addListener(DriftClient::setup);
+        net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(
+                (net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent.LoggingOut e) -> ClientAtlas.set(null));
     }
 
     private static void renderers(EntityRenderersEvent.RegisterRenderers e) {

@@ -32,8 +32,7 @@ public final class ClientFray {
     /** Once a client tick. */
     public static void tick() {
         if (displayed < 0F) {
-            displayed = target;
-            return;
+            return;   // nothing from the server yet: the first sync sets it outright
         }
         displayed += (target - displayed) * 0.02F;
         if (Math.abs(target - displayed) < 0.0005F) {

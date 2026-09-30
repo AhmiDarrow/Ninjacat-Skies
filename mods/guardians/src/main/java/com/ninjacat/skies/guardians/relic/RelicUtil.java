@@ -147,15 +147,26 @@ final class RelicUtil {
         if (magic) e.setAmount(e.getAmount() * factor);
     }
 
-    /** Bees never hurt the wearer. */
+    /** Bees never hurt the wearer, except the bees of a guardian fight ({@link #fightBee}). */
     static void beeImmune(LivingIncomingDamageEvent e) {
-        if (e.getSource().getEntity() instanceof Bee) e.setCanceled(true);
+        if (e.getSource().getEntity() instanceof Bee b && !fightBee(b)) e.setCanceled(true);
     }
 
-    /** Calm any bee that has decided the wearer is the problem (call every 20 ticks). */
+    /**
+     * A bee that belongs to a guardian fight: a boss's drone (the Hivemind's cells, the Unwoven's swarm) or any other bee
+     * in the guardian arenas that is not a relic's own summon. Hivecall and the Shuttle leave these alone, or wearing
+     * one would switch the Hivemind's drones off.
+     */
+    static boolean fightBee(Bee b) {
+        if (com.ninjacat.skies.guardians.entity.GuardianEntity.isFightMinion(b)) return true;
+        return !b.getTags().contains(BEE_TAG) && com.ninjacat.skies.guardians.arena.ArenaManager.inGuardianSlots(b.level(), b.blockPosition());
+    }
+
+    /** Calm any bee that has decided the wearer is the problem (call every 20 ticks); a guardian fight's bees stay angry. */
     static void calmBees(ServerPlayer p) {
         if (p.tickCount % 20 != 0) return;
         for (Bee b : p.serverLevel().getEntitiesOfClass(Bee.class, p.getBoundingBox().inflate(8))) {
+            if (fightBee(b)) continue;
             if (b.getTarget() == p || p.getUUID().equals(b.getPersistentAngerTarget())) {
                 b.setTarget(null); b.setPersistentAngerTarget(null); b.setRemainingPersistentAngerTime(0);
             }

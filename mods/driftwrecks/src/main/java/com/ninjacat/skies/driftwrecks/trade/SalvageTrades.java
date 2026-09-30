@@ -32,12 +32,19 @@ import java.util.Optional;
 public final class SalvageTrades implements Merchant {
     private final ServerPlayer player;
     private final MerchantOffers offers;
+    /** The Frame being used: the trade screen closes once it is broken or the player walks away. */
+    private final net.minecraft.world.level.Level level;
+    private final net.minecraft.core.BlockPos pos;
+    private boolean closed;
 
-    private SalvageTrades(ServerPlayer player, MerchantOffers offers) { this.player = player; this.offers = offers; }
+    private SalvageTrades(ServerPlayer player, MerchantOffers offers, net.minecraft.core.BlockPos pos) {
+        this.player = player; this.offers = offers; this.level = player.level(); this.pos = pos.immutable();
+    }
 
-    public static void open(ServerPlayer p) {
-        SalvageTrades t = new SalvageTrades(p, build(p));
+    public static SalvageTrades open(ServerPlayer p, net.minecraft.core.BlockPos frame) {
+        SalvageTrades t = new SalvageTrades(p, build(p), frame);
         t.openTradingScreen(p, Component.translatable("container.driftwrecks.salvagers_frame"), 0);
+        return t;
     }
 
     public static MerchantOffers build(ServerPlayer p) {
@@ -98,8 +105,15 @@ public final class SalvageTrades implements Merchant {
         return new MerchantOffer(a, b, out, Integer.MAX_VALUE, 0, 0F);
     }
 
-    @Override public void setTradingPlayer(@Nullable Player p) {}
-    @Nullable @Override public Player getTradingPlayer() { return player; }
+    @Override public void setTradingPlayer(@Nullable Player p) { if (p == null) closed = true; }
+    /** The trade menu stays valid (MerchantMenu#stillValid) only while this is the player: the Frame stands and is in reach. */
+    @Nullable @Override public Player getTradingPlayer() { return !closed && stillValid() ? player : null; }
+
+    /** The Frame still stands where it was used and the player is within reach of it, as for any container block. */
+    public boolean stillValid() {
+        return player.level() == level && level.getBlockState(pos).getBlock() instanceof com.ninjacat.skies.driftwrecks.block.SalvagersFrameBlock
+                && player.canInteractWithBlock(pos, 4.0);
+    }
     @Override public MerchantOffers getOffers() { return offers; }
     @Override public void overrideOffers(MerchantOffers o) {}
     @Override public void notifyTrade(MerchantOffer offer) { offer.increaseUses(); }

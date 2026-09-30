@@ -28,22 +28,63 @@ public final class Placement {
 
     private Placement() {}
 
+    /** Every try at once: admin summons and tests, which need the answer now. Pressure arrivals use a {@link Search}. */
     @Nullable
     public static BlockPos find(ServerLevel level, BlockPos post, WreckComposer.Layout plan, RandomSource rng, UUID self, Collection<Wreck> others, List<Clowder> clowders) {
-        int min = DriftConfig.MIN_DISTANCE.get(), max = Math.max(min, DriftConfig.MAX_DISTANCE.get());
-        for (int attempt = 0; attempt < TRIES; attempt++) {
-            double ang = rng.nextDouble() * Math.PI * 2;
-            int dist = min + rng.nextInt(max - min + 1);
-            int dy = rng.nextInt(41) - 20;
-            BlockPos origin = new BlockPos(post.getX() + Mth.floor(Math.cos(ang) * dist), post.getY() + dy, post.getZ() + Mth.floor(Math.sin(ang) * dist));
-            if (fits(level, origin, plan, self, others, clowders)) return origin;
+        return new Search(post, plan, self).step(level, rng, others, clowders, Integer.MAX_VALUE);
+    }
+
+    /**
+     * The same {@link #TRIES} random spots as {@link #find}, spread over ticks. Each spot that gets as far as the block
+     * scan loads (in the void, generates) every chunk under the wreck and its margin, some 70 chunks, so a tick runs
+     * at most {@code scans} of those. The cheap rejections (build height, border, Dock, pads, other wrecks) are free.
+     */
+    public static final class Search {
+        private final BlockPos post;
+        private final WreckComposer.Layout plan;
+        private final UUID self;
+        private int attempt, scanned;
+
+        public Search(BlockPos post, WreckComposer.Layout plan, UUID self) { this.post = post; this.plan = plan; this.self = self; }
+
+        public BlockPos post() { return post; }
+        public WreckComposer.Layout plan() { return plan; }
+        public boolean exhausted() { return attempt >= TRIES; }
+        /** Block scans run so far (each may load or generate chunks). */
+        public int scanned() { return scanned; }
+
+        /** The spot that fits, or null: out of tries ({@link #exhausted}) or out of block scans for this tick. */
+        @Nullable
+        public BlockPos step(ServerLevel level, RandomSource rng, Collection<Wreck> others, List<Clowder> clowders, int scans) {
+            int min = DriftConfig.MIN_DISTANCE.get(), max = Math.max(min, DriftConfig.MAX_DISTANCE.get());
+            while (attempt < TRIES && scans > 0) {
+                attempt++;
+                double ang = rng.nextDouble() * Math.PI * 2;
+                int dist = min + rng.nextInt(max - min + 1);
+                int dy = rng.nextInt(41) - 20;
+                BlockPos origin = new BlockPos(post.getX() + Mth.floor(Math.cos(ang) * dist), post.getY() + dy, post.getZ() + Mth.floor(Math.sin(ang) * dist));
+                if (!clearOfOthers(level, origin, plan, self, others, clowders)) continue;
+                scanned++;
+                if (empty(level, wide(origin, plan))) return origin;
+                scans--;
+            }
+            return null;
         }
-        return null;
     }
 
     public static boolean fits(ServerLevel level, BlockPos origin, WreckComposer.Layout plan, UUID self, Collection<Wreck> others, List<Clowder> clowders) {
-        AABB box = new AABB(origin.getX() + plan.minX, origin.getY() + plan.minY, origin.getZ() + plan.minZ,
+        return clearOfOthers(level, origin, plan, self, others, clowders) && empty(level, wide(origin, plan));
+    }
+
+    private static AABB box(BlockPos origin, WreckComposer.Layout plan) {
+        return new AABB(origin.getX() + plan.minX, origin.getY() + plan.minY, origin.getZ() + plan.minZ,
                 origin.getX() + plan.maxX + 1, origin.getY() + plan.maxY + 1, origin.getZ() + plan.maxZ + 1);
+    }
+    private static AABB wide(BlockPos origin, WreckComposer.Layout plan) { return box(origin, plan).inflate(MARGIN); }
+
+    /** Every rule but the block scan: build height, world border, the Dock, other Clowders' pads and other wrecks. Loads nothing. */
+    private static boolean clearOfOthers(ServerLevel level, BlockPos origin, WreckComposer.Layout plan, UUID self, Collection<Wreck> others, List<Clowder> clowders) {
+        AABB box = box(origin, plan);
         AABB wide = box.inflate(MARGIN);
         if (wide.minY < level.getMinBuildHeight() + 4 || wide.maxY > level.getMaxBuildHeight() - 4) {
             // keep the keel above the void floor and the roof under the build limit; the margin may clip
@@ -60,7 +101,7 @@ public final class Placement {
             if (p != null && p.dimension().equals(level.dimension()) && horizontalDistance(box, p.pos()) < neighbour) return false;
         }
         for (Wreck w : others) if (w.box().inflate(MARGIN).intersects(wide)) return false;
-        return empty(level, wide);
+        return true;
     }
 
     private static double horizontalDistance(AABB box, BlockPos p) {

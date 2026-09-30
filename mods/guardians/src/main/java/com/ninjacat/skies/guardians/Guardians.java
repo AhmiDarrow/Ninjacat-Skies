@@ -31,6 +31,7 @@ public final class Guardians {
         ModItems.ITEMS.register(modBus);
         ModItems.TABS.register(modBus);
         modBus.addListener(ModEntities::attributes);
+        modBus.addListener(this::onRegisterPayloads);
         NeoForge.EVENT_BUS.register(new RelicEvents());
         NeoForge.EVENT_BUS.addListener(this::onServerTick);
         NeoForge.EVENT_BUS.addListener(this::onLogin);
@@ -45,6 +46,11 @@ public final class Guardians {
         NeoForge.EVENT_BUS.addListener(this::onCommands);
         NeoForge.EVENT_BUS.addListener((AddReloadListenerEvent e) -> ArenaData.clearCache());
         LOGGER.info("Snapped Guardians: thirteen arenas woven");
+    }
+
+    private void onRegisterPayloads(net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent e) {
+        e.registrar("1").playToClient(com.ninjacat.skies.guardians.network.GuardianMusicPayload.TYPE,
+                com.ninjacat.skies.guardians.network.GuardianMusicPayload.STREAM_CODEC, com.ninjacat.skies.guardians.client.ClientGuardianMusic::handle);
     }
 
     private void onServerTick(ServerTickEvent.Post e) { ArenaManager.get(e.getServer()).tick(e.getServer()); }
