@@ -240,7 +240,7 @@ def clowder_v1():
     return t
 
 def clowder(output, lang=None):
-    """Loom's End (hub revision 2, tools/hub_loomsend.py), a pack datapack file:
+    """Loom's End (hub revision 3, tools/hub_loomsend.py), a pack datapack file:
     pack/overrides/kubejs/data/clowderhall/towns/clowder_town.json. Its plan also clears whatever revision 1 left."""
     import hub_loomsend
     v1=clowder_v1(); v1_plan=json.loads(json.dumps(dict(boxes=[{'from':o['from_'],'to':o['to'],'block':o['block']} for o in v1.ops])))

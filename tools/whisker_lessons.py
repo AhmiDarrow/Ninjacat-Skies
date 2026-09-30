@@ -229,8 +229,8 @@ def build_lessons(book, write, text, entry, category):
                  'You need greens to train, nuts to mate, and the **Chocobo Almanac** to read the bird.\n\n'
                  '1. Train an adult on greens until it is sated on each kind. Gysahl is the only green in the wild; Krakka is two gysahl and bone meal.\n'
                  '2. Mate with nuts. Talent follows the nut. Colour follows the parents unless Carob or Zeio is involved.\n'
-                 '3. **Carob** (Bilo at Whiskerwind, or Class A races): two Good-or-better Yellows hatch Green or Blue. Each parent needs 1 first-place race; 4 combined firsts make the colour certain.\n'
-                 '4. Green plus Blue hatch Black (a miss is White) — 2 firsts each, 9 combined for a sure roll. **Zeio** (Bilo, rare at Class S): Black plus a Wonderful Yellow hatch Gold — 3 firsts each, 12 combined.\n'
+                 '3. **Carob** (Bilo at Whiskerwind, or Class A races): two Good-or-better Yellows hatch Green or Blue. Each parent needs 5 first places won in Class C; 16 combined make the colour certain.\n'
+                 '4. A Great Green plus a Great Blue hatch Black (a miss is White) — 8 Class B firsts each, 24 combined for a sure roll. **Zeio** (Bilo, rare at Class S): a Wonderful Black plus a Wonderful Yellow hatch Gold — 10 Class A firsts each, 32 combined.\n'
                  '5. There are no Pink or Red birds. The Fair stall does not sell those dyes. Purple is End; Flame is Ember Wastes; Gold flies.\n\n'
                  '**Check:** the Almanac shows colour, grade, class, race wins and the last nut. Recipes stay in JEI.')]),
         ('finish', 'Prepare the final reweave', 'ninjacatskies:spindle_loom_fragment', [
