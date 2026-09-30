@@ -63,7 +63,7 @@ public class BeddownGuardian extends GuardianEntity {
 
     private void startBurial() {
         Vec3 o = origin();
-        if (arena() == null) { say("message.guardians.beddown.no_arena_soil_stays_still"); return; }
+        if (arena() == null) return;                                            // a shade or a /summon: no pit to flood
         // pick the seam that surfaces this time and plant the core on the pit floor before the dirt covers it
         double a = -(Math.PI * 2 * random.nextInt(SEAMS) / SEAMS);            // seams at 2πk/7 in arena_factory, mirrored into -z by the plan
         core = BlockPos.containing(Mech.polar(o, 6, a, o.y));
@@ -129,5 +129,6 @@ public class BeddownGuardian extends GuardianEntity {
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         layer.load(tag, "Layer", level());
+        if (layer.size() > 0) sinking = layer.size();   // core and immunity are not saved: let the old flood sink back
     }
 }

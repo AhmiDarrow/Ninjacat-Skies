@@ -96,6 +96,8 @@ public final class CraftTables {
      */
     public static void applyPick(AbstractContainerMenu menu, Player player) {
         if (!(player instanceof ServerPlayer server) || !isTable(menu)) return;
+        // a player who never picked has nothing to apply: skip the scan of every crafting recipe on each grid change
+        if (!PICKS.containsKey(server.getUUID())) return;
         List<RecipeHolder<CraftingRecipe>> matches = matches(server.level(), input(menu));
         if (matches.size() < 2) return;
         RecipeHolder<CraftingRecipe> pick = chosen(server, matches);

@@ -301,6 +301,14 @@ public abstract class GuardianEntity extends Monster {
     @Override public void setCustomName(@Nullable Component name) { super.setCustomName(name); bossEvent.setName(getDisplayName()); }
     /** Additive spawns (the Overweaver's shades, tagged {@code guardians_add}) fight without a boss bar of their own. */
     public boolean showsBossBar() { return !getTags().contains("guardians_add"); }
+
+    /** Minions carry {@code guardians_minion:<boss uuid>} (the Hivemind's drones, the Unwoven's swarm, ...). */
+    public static final String MINION_TAG_PREFIX = "guardians_minion:";
+    /** Whether {@code e} was spawned by a guardian for its fight. */
+    public static boolean isFightMinion(net.minecraft.world.entity.Entity e) {
+        for (String t : e.getTags()) if (t.startsWith(MINION_TAG_PREFIX)) return true;
+        return false;
+    }
     @Override public void startSeenByPlayer(ServerPlayer p) { super.startSeenByPlayer(p); if (showsBossBar()) bossEvent.addPlayer(p); }
     @Override public void stopSeenByPlayer(ServerPlayer p) { super.stopSeenByPlayer(p); bossEvent.removePlayer(p); }
 

@@ -224,4 +224,23 @@ class CodexBookTests(unittest.TestCase):
         self.assertIn('You need', bblob)
         self.assertIn('**Check:**', bblob)
 
+    def test_only_core_opens_the_codex(self):
+        """Core's WhiskerCodexItem sends Modonomicon's open packet on use; a client script opening the same book on the
+        same right-click would open it twice."""
+        for path in (ROOT/'pack/overrides/kubejs/client_scripts').glob('*.js'):
+            text = path.read_text(encoding='utf-8')
+            self.assertNotIn('BookGuiManager', text, path.name)
+            self.assertNotIn("rightClicked('ninjacatskies:whisker_codex'", text, path.name)
+        item = (ROOT/'mods/ninjacatskies/src/main/java/com/ninjacat/skies/core/item/CodexBookHook.java').read_text(encoding='utf-8')
+        self.assertIn('OpenBookOnClientMessage', item)
+
+    def test_saddle_prices_name_their_shop(self):
+        """Two economies sell saddles: the Pad-keepers' stall at Loom's End (a diamond block) and Whiskerwind's exchange
+        (Chocobos Reborn's own GP shop). A page that quotes a saddle price must say which one it means."""
+        import re
+        quoted = re.compile(r'saddle[^.]*?(?:\bGP\b|diamond|Thread|\bgil\b)|(?:\bGP\b|diamond|Thread|\bgil\b)[^.]*?saddle', re.I)
+        for key, text in LANG.items():
+            if quoted.search(text):
+                self.assertRegex(text, r'Pad-keepers|Whiskerwind', key)
+
 if __name__=='__main__':unittest.main()

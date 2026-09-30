@@ -119,6 +119,7 @@ public class OverweaverGuardian extends GuardianEntity {
         for (int k = 0; k < 9; k++) {
             if (shade[k] == null) continue;
             Entity e = serverLevel().getEntity(shade[k]);
+            if (e == null && tickCount < 200) continue;                        // just loaded: the shade's own chunk may not be back yet
             if (e instanceof GuardianEntity g && g.isAlive() && g.clip() != CLIP_DEATH) continue;
             shade[k] = null; tautUntil[k] = tickCount + TAUT; lightLine(k);
             shout("message.guardians.overweaver.shade_unravels", STRANDS[k].titleComponent());

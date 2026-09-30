@@ -39,7 +39,6 @@
   "item.guardians.frayed_totem_overweaver": "Frayed Totem (the Overweaver)",
   "item.guardians.relic_overweaver_shuttle": "Overweaver's Shuttle",
   "entity.guardians.overweaver": "The Overweaver",
-  "commands.guardians.leave": "Leave the arena (counts as a wipe).",
   "message.guardians.arena.guardian_did_not_answer_totem": "The guardian did not answer. The totem is spent.",
   "message.guardians.arena.nobody_stands_totem_spent": "Nobody stands. The totem is spent.",
   "message.guardians.arena.stage_stood_empty_too_long": "The stage stood empty too long. The totem is spent.",

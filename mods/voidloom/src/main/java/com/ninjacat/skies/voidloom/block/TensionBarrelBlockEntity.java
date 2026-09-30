@@ -20,7 +20,6 @@ import net.minecraft.world.Clearable;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -33,7 +32,6 @@ import org.joml.Vector3f;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Tension Barrel — a slow, wet transform station with no GUI.
@@ -449,10 +447,5 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
     @Override
     public Packet<ClientGamePacketListener> getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
-    }
-
-    @SuppressWarnings("unused")
-    private static Optional<Item> porcelainEmpty() {
-        return BuiltInRegistries.ITEM.getOptional(PORCELAIN_BUCKET);
     }
 }

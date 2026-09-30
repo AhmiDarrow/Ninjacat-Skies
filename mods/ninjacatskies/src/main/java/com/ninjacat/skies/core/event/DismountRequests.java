@@ -24,6 +24,8 @@ public final class DismountRequests {
     /** True once per request, if it is still fresh. */
     public static boolean take(ServerPlayer player) {
         Long at = PENDING.remove(player.getUUID());
-        return at != null && player.serverLevel().getGameTime() - at <= FRESH_TICKS;
+        if (at == null) return false;
+        long age = player.serverLevel().getGameTime() - at;
+        return age >= 0 && age <= FRESH_TICKS;
     }
 }

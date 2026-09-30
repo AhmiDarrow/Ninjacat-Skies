@@ -151,6 +151,121 @@ public class DriftwreckGameTests {
         else h.succeed();
     }
 
+    /** A pressure arrival's search runs at most one chunk-loading block scan per tick, tries the same spots as the
+     *  all-at-once {@link Placement#find}, and still gives up after {@link Placement#TRIES}. */
+    @GameTest(template = "empty", timeoutTicks = 400)
+    public static void placementSearchSpreadsScans(GameTestHelper h) {
+        ServerLevel level = h.getLevel();
+        var min = com.ninjacat.skies.driftwrecks.DriftConfig.MIN_DISTANCE; var max = com.ninjacat.skies.driftwrecks.DriftConfig.MAX_DISTANCE;
+        int minWas = min.get(), maxWas = max.get();
+        BlockPos post = lane(h);
+        List<BlockPos> ring = new ArrayList<>();
+        try {
+            min.set(48); max.set(64);
+            WreckComposer.Layout plan = WreckComposer.compose(level.getServer(), WreckCore.SHRINE, WreckTier.RAFT, 7L);
+            // a ring of stone every few blocks at r 56: every spot 48-64 out has one inside its 32-block margin
+            for (int i = 0; i < 64; i++) {
+                double a = Math.PI * 2 * i / 64;
+                BlockPos p = post.offset((int) Math.round(Math.cos(a) * 56), 0, (int) Math.round(Math.sin(a) * 56));
+                level.setBlock(p, Blocks.STONE.defaultBlockState(), 2); ring.add(p);
+            }
+            UUID self = UUID.nameUUIDFromBytes("driftwrecks-search".getBytes());
+            Placement.Search s = new Placement.Search(post, plan, self);
+            net.minecraft.util.RandomSource rng = net.minecraft.util.RandomSource.create(42L);
+            int steps = 0;
+            while (!s.exhausted()) {
+                int before = s.scanned();
+                if (s.step(level, rng, List.of(), List.of(), 1) != null) { h.fail("a spot fit inside the stone ring"); return; }
+                if (s.scanned() - before > 1) { h.fail("one step ran " + (s.scanned() - before) + " block scans"); return; }
+                if (++steps > Placement.TRIES) { h.fail("the search never ran out of tries"); return; }
+            }
+            if (s.scanned() != Placement.TRIES) { h.fail("expected " + Placement.TRIES + " scans, ran " + s.scanned()); return; }
+            if (Placement.find(level, post, plan, net.minecraft.util.RandomSource.create(42L), self, List.of(), List.of()) != null) { h.fail("find() fit where the search did not"); return; }
+            // open sky: the stepped search lands exactly where find() does for the same roll
+            for (BlockPos p : ring) level.setBlock(p, Blocks.AIR.defaultBlockState(), 2);
+            BlockPos at = new Placement.Search(post, plan, self).step(level, net.minecraft.util.RandomSource.create(9L), List.of(), List.of(), 1);
+            BlockPos all = Placement.find(level, post, plan, net.minecraft.util.RandomSource.create(9L), self, List.of(), List.of());
+            if (at == null || !at.equals(all)) { h.fail("stepped search landed at " + at + ", find() at " + all); return; }
+        } finally {
+            for (BlockPos p : ring) level.setBlock(p, Blocks.AIR.defaultBlockState(), 2);
+            min.set(minWas); max.set(maxWas);
+        }
+        h.succeed();
+    }
+
+    /** The Salvager's Frame trade screen closes when the player walks away or the Frame is broken. */
+    @GameTest(template = "empty")
+    public static void salvagerFrameTradeNeedsTheFrame(GameTestHelper h) {
+        ServerLevel level = h.getLevel();
+        BlockPos frame = h.absolutePos(new BlockPos(2, 2, 2));
+        level.setBlock(frame, com.ninjacat.skies.driftwrecks.registry.DwBlocks.SALVAGERS_FRAME.get().defaultBlockState(), 3);
+        ServerPlayer p = FakePlayerFactory.get(level, new GameProfile(UUID.nameUUIDFromBytes("driftwrecks-frame".getBytes()), "FrameTrader"));
+        p.moveTo(frame.getX() + 0.5, frame.getY(), frame.getZ() + 2.5, 0, 0);
+        var trades = com.ninjacat.skies.driftwrecks.trade.SalvageTrades.open(p, frame);
+        if (trades.getTradingPlayer() != p) { h.fail("the trade is not valid at the Frame"); return; }
+        p.moveTo(frame.getX() + 30.5, frame.getY(), frame.getZ() + 0.5, 0, 0);
+        if (trades.getTradingPlayer() != null) { h.fail("the trade stayed valid 30 blocks from the Frame"); return; }
+        p.moveTo(frame.getX() + 0.5, frame.getY(), frame.getZ() + 2.5, 0, 0);
+        if (trades.getTradingPlayer() != p) { h.fail("the trade did not come back in reach"); return; }
+        level.removeBlock(frame, false);
+        if (trades.getTradingPlayer() != null) { h.fail("the trade stayed valid with the Frame broken"); return; }
+        p.closeContainer();
+        h.succeed();
+    }
+
+    /** Crumble drops a hanging column whole: blocks passed over while propped up fall once what held them is gone. */
+    @GameTest(template = "empty")
+    public static void crumbleCatchesLaterOverhangs(GameTestHelper h) {
+        // a three-block column hanging in the void, walked top first: only the bottom can fall on the first pass
+        boolean[] standing = {true, true, true};          // 0 top, 1 middle, 2 bottom
+        java.util.function.IntPredicate falls = i -> standing[i] && (i == 2 || !standing[i + 1]);
+        Wreck w = new Wreck(0, UUID.randomUUID(), "test", WreckCore.SHRINE, WreckTier.RAFT, Strand.SOIL, WreckModifier.UNSTABLE, WreckObjective.SALVAGE, false, BlockPos.ZERO, false);
+        int[] order = {0, 1, 2};
+        List<Integer> dropped = new ArrayList<>();
+        for (int call = 0; call < 3; call++) {
+            int i = DriftManager.nextCrumble(order, w, falls);
+            if (i < 0) { h.fail("crumble stopped after " + dropped + " with blocks still hanging"); return; }
+            standing[i] = false; dropped.add(i);
+        }
+        if (!dropped.equals(List.of(2, 1, 0))) { h.fail("column fell in the wrong order: " + dropped); return; }
+        if (DriftManager.nextCrumble(order, w, falls) != -1) { h.fail("crumble found a block after the column was gone"); return; }
+        h.succeed();
+    }
+
+    /** A Burning wreck still burns on every skin, and no fire can spread: orange fire only on netherrack with nothing
+     *  flammable in reach, soul fire on soul soil everywhere else. */
+    @GameTest(template = "empty", timeoutTicks = 1200)
+    public static void burningWreckFiresCannotSpread(GameTestHelper h) {
+        var server = h.getLevel().getServer();
+        int fires = 0, soul = 0;
+        for (Strand s : Strand.ALL) for (WreckCore c : WreckCore.ALL) for (int i = 0; i < 3; i++) {
+            long seed = s.ordinal() * 1_000_003L + c.ordinal() * 7919L + i;
+            WreckComposer.Layout l = WreckComposer.compose(server, c, WreckTier.HOLD, seed);
+            Wreck w = new Wreck(0, UUID.randomUUID(), c.id, c, WreckTier.HOLD, s, WreckModifier.BURNING, WreckObjective.SALVAGE, false, BlockPos.ZERO, false);
+            java.util.Map<BlockPos, BlockState> out = WreckBuilder.build(l, w, net.minecraft.util.RandomSource.create(seed));
+            for (var e : out.entrySet()) {
+                BlockPos p = e.getKey();
+                BlockState below = out.get(p.below());
+                if (e.getValue().is(Blocks.FIRE)) {
+                    fires++;
+                    if (below == null || !below.is(Blocks.NETHERRACK)) { h.fail(s.id() + " " + c.id + " fire off netherrack at " + p); return; }
+                    for (int dx = -2; dx <= 2; dx++) for (int dz = -2; dz <= 2; dz++) for (int dy = -2; dy <= 5; dy++) {
+                        BlockState n = out.get(p.offset(dx, dy, dz));
+                        if (n != null && (n.getFlammability(net.minecraft.world.level.EmptyBlockGetter.INSTANCE, p, net.minecraft.core.Direction.UP) > 0
+                                || n.getFireSpreadSpeed(net.minecraft.world.level.EmptyBlockGetter.INSTANCE, p, net.minecraft.core.Direction.UP) > 0)) {
+                            h.fail(s.id() + " " + c.id + " fire at " + p + " can reach " + n + " at " + p.offset(dx, dy, dz)); return;
+                        }
+                    }
+                } else if (e.getValue().is(Blocks.SOUL_FIRE)) {
+                    soul++;
+                    if (below == null || !below.is(Blocks.SOUL_SOIL)) { h.fail(s.id() + " " + c.id + " soul fire off soul soil at " + p); return; }
+                }
+            }
+        }
+        if (fires + soul == 0) { h.fail("no Burning wreck had a fire"); return; }
+        h.succeed();
+    }
+
     // ------------------------------------------------------------------ build and unravel
 
     @GameTest(template = "empty", timeoutTicks = 2400)

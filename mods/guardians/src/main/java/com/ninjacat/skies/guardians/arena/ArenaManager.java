@@ -301,6 +301,7 @@ public final class ArenaManager extends SavedData {
 
     // ------------------------------------------------------------------ ticking
     public void tick(MinecraftServer server) {
+        if (server.getTickCount() % MUSIC_EVERY == 0 && (!active.isEmpty() || !music.isEmpty())) syncMusic(server);
         if (active.isEmpty()) return;
         ServerLevel arena = arenaLevel(server); if (arena == null) return;
         if (!ticketsRestored) {
@@ -406,7 +407,9 @@ public final class ArenaManager extends SavedData {
         inst.winners.clear();
         inst.winners.addAll(inst.party);
         for (ServerPlayer p : present) {
-            p.sendSystemMessage(NinjacatText.goldKey("message.guardians.arena.answers_for_cut", inst.kind.titleComponent()).append(NinjacatText.tealKey("message.guardians.arena.strand_retensions")));
+            var won = NinjacatText.goldKey("message.guardians.arena.answers_for_cut", inst.kind.titleComponent());
+            if (inst.kind.strand != null) won.append(NinjacatText.tealKey("message.guardians.arena.strand_retensions"));
+            p.sendSystemMessage(won);
             p.displayClientMessage(NinjacatText.goldKey("message.guardians.arena.worthy_gate_opens"), true);
             p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG); // ensure exists
             recordDefeat(p, inst.kind);
@@ -450,6 +453,7 @@ public final class ArenaManager extends SavedData {
 
     /** A player who logs in inside the arena dimension with no running fight is sent home. */
     public void onLogin(ServerPlayer p) {
+        music.remove(p.getUUID());   // a fresh client knows no track: the next sync tells it again
         ArenaInstance inst = instanceOf(p);
         // a disconnect mid-fight puts you back on your pad; a death does not (respawn routes here too)
         if (inst != null && inst.state == ArenaInstance.State.FIGHT && !inArena(p) && !inst.fallen.contains(p.getUUID())) {
@@ -492,12 +496,43 @@ public final class ArenaManager extends SavedData {
             if (!relic.isEmpty()) LoomTension.giveOrDrop(p, relic);
             a.winners.remove(p.getUUID());
             a.party.remove(p.getUUID());
-            returnHome(p);
+            if (inArena(p)) returnHome(p);
             setDirty();
             return;
         }
-        a.party.remove(p.getUUID()); returnHome(p); setDirty();
+        a.party.remove(p.getUUID()); if (inArena(p)) returnHome(p); setDirty();
         if (a.onlinePlayers().isEmpty()) wipe(p.server, a, "message.guardians.arena.clowder_withdrew_totem_spent");
+    }
+
+    // ------------------------------------------------------------------ boss music
+    private static final int MUSIC_EVERY = 5;
+    /** The track each online player was last sent ("" or absent: none). Not saved: a login re-sends it. */
+    private final Map<UUID, String> music = new HashMap<>();
+
+    /** The track a party member standing in this fight hears, or "" once it is won or wiped. */
+    public static String musicOf(ArenaInstance inst) {
+        net.minecraft.resources.ResourceLocation track = inst.kind.music();
+        return inst.state == ArenaInstance.State.FIGHT && track != null ? track.toString() : "";
+    }
+
+    /**
+     * Every party member standing in a running fight hears its guardian's track; everyone else hears none, so the
+     * track stops on a win, a wipe, /guardians leave or a death. Only changes are sent.
+     */
+    private void syncMusic(MinecraftServer server) {
+        Map<UUID, String> want = new HashMap<>();
+        for (ArenaInstance inst : active.values()) {
+            String track = musicOf(inst);
+            if (!track.isEmpty()) for (ServerPlayer p : inst.onlinePlayers()) want.put(p.getUUID(), track);
+        }
+        for (ServerPlayer p : server.getPlayerList().getPlayers()) {
+            String track = want.getOrDefault(p.getUUID(), "");
+            if (track.equals(music.getOrDefault(p.getUUID(), ""))) continue;
+            if (p.connection == null || !p.connection.hasChannel(com.ninjacat.skies.guardians.network.GuardianMusicPayload.TYPE)) continue;
+            net.neoforged.neoforge.network.PacketDistributor.sendToPlayer(p, new com.ninjacat.skies.guardians.network.GuardianMusicPayload(track));
+            if (track.isEmpty()) music.remove(p.getUUID()); else music.put(p.getUUID(), track);
+        }
+        music.keySet().removeIf(id -> server.getPlayerList().getPlayer(id) == null);
     }
 
     // ------------------------------------------------------------------ saved data

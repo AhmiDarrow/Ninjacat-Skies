@@ -43,6 +43,7 @@ public final class NinjacatSkies {
         NeoForge.EVENT_BUS.register(new TensionEffects());
         NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.SleepRule());
         NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.ShortNights());
+        NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.ServerRules());
         NeoForge.EVENT_BUS.register(new com.ninjacat.skies.core.event.DeathBasket());
         com.ninjacat.skies.core.tension.LoomTension.init();
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
@@ -59,6 +60,10 @@ public final class NinjacatSkies {
         }
 
         container.registerConfig(ModConfig.Type.COMMON, SkiesConfig.SPEC);
+        modBus.addListener((net.neoforged.fml.event.config.ModConfigEvent.Reloading event) -> {
+            TensionEffects.markFrayDirty();
+            com.ninjacat.skies.core.event.ServerRules.markDirty();
+        });
     }
 
     private void onRegisterPayloads(RegisterPayloadHandlersEvent event) {
@@ -66,6 +71,8 @@ public final class NinjacatSkies {
         registrar.playToClient(TensionSyncPayload.TYPE, TensionSyncPayload.STREAM_CODEC, ClientTension::handle);
         registrar.playToClient(com.ninjacat.skies.core.network.FraySyncPayload.TYPE,
                 com.ninjacat.skies.core.network.FraySyncPayload.STREAM_CODEC, com.ninjacat.skies.core.client.ClientFray::handle);
+        registrar.playToClient(com.ninjacat.skies.core.network.ServerRulesPayload.TYPE,
+                com.ninjacat.skies.core.network.ServerRulesPayload.STREAM_CODEC, com.ninjacat.skies.core.client.ClientServerRules::handle);
         registrar.playToServer(com.ninjacat.skies.core.network.DismountPayload.TYPE,
                 com.ninjacat.skies.core.network.DismountPayload.STREAM_CODEC, com.ninjacat.skies.core.network.DismountPayload::handle);
     }

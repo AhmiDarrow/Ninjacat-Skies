@@ -26,6 +26,7 @@ public final class GuardianModel {
         public final byte[] rgb, emit;                   // 3 per vertex
         public final short[] bone;                       // 4 per vertex
         public final int[] tri;                          // 3 per triangle
+        byte anyEmit;                                    // 0 not yet known, 1 some vertex glows, -1 none (MeshPose)
         Part(String name, boolean textured, int nv, int nt) {
             this.name = name; this.textured = textured; vertexCount = nv; triCount = nt;
             pos = new float[nv*3]; normal = new float[nv*3]; uv = new float[nv*2]; weight = new float[nv*4]; rgb = new byte[nv*3]; emit = new byte[nv*3]; bone = new short[nv*4]; tri = new int[nt*3];

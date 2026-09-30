@@ -29,7 +29,8 @@ public final class DismountKey {
         if (player == null) return;
         boolean riding = player.isPassenger();
         // Vanilla's "Press Shift to dismount" is no longer true: name the key that is.
-        if (riding && !wasRiding) {
+        // A server that turned sneak dismounting back on ignores the key: the vanilla hint is true there.
+        if (riding && !wasRiding && !ClientServerRules.sneakDismounts()) {
             mc.gui.setOverlayMessage(Component.translatable("message.ninjacatskies.dismount_hint", KEY.getTranslatedKeyMessage()), false);
         }
         wasRiding = riding;

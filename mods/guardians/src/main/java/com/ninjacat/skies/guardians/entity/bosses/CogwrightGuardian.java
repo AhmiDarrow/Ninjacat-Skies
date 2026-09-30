@@ -78,7 +78,10 @@ public class CogwrightGuardian extends GuardianEntity {
 
     private void wind() {
         sequence.clear(); int n = 3 + phase();
-        for (int i = 0; i < n; i++) { int r = random.nextInt(4); sequence.add(new int[]{r, random.nextInt(COUNT[r])}); }
+        while (sequence.size() < n) {                                   // no tile twice: standing on a done tile must never read as a wrong step
+            int r = random.nextInt(4), ix = random.nextInt(COUNT[r]);
+            if (sequence.stream().noneMatch(s -> s[0] == r && s[1] == ix)) sequence.add(new int[]{r, ix});
+        }
         progress = 0; setStage(Stage.WIND); sound(SoundEvents.NOTE_BLOCK_CHIME.value(), 2F, 0.5F);
         say("message.guardians.cogwright.cogwright_winds_watch_tiles");
     }

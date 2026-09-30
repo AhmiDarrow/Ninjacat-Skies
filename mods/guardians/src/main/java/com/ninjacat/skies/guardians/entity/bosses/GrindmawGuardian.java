@@ -90,6 +90,7 @@ public class GrindmawGuardian extends GuardianEntity {
             Vec3 c = Vec3.atCenterOf(p); double r = Mech.horiz(c, o), a = Mech.angleOf(o, c);
             BlockPos np = p;
             for (int k = 1; k <= 3 && np.equals(p); k++) np = BlockPos.containing(Mech.polar(o, r, a + dir * k * 0.8 / r, c.y));
+            if (!np.equals(p) && !level().getBlockState(np).isAir()) continue;   // blocked (usually by the grit ahead): wait
             level().setBlock(p, Blocks.AIR.defaultBlockState(), 3);
             if (level().getBlockState(np).isAir()) { level().setBlock(np, Blocks.GRAVEL.defaultBlockState(), 3); serverLevel().playSound(null, np, SoundEvents.GRAVEL_STEP, net.minecraft.sounds.SoundSource.BLOCKS, 1F, 0.6F); }
             if (planGrit.contains(p) || planGrit.contains(np)) { planGrit.remove(p); planGrit.add(np); continue; }   // the quarry's own rubble rides the ring but feeds nothing

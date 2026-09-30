@@ -54,7 +54,35 @@ public final class WreckBuilder {
         for (WreckPlan.Marker m : layout.markers) reserved.add(m.pos());
         dress(out, roles, reserved, w, rng);
         furnish(out, layout.markers, w, rng);
+        if (w.modifier == WreckModifier.BURNING) tameFires(out);
         return out;
+    }
+
+    /**
+     * A Burning wreck's fires burn for its whole life and must never spread: fire on netherrack only where nothing
+     * within its spread reach (the 3x6x3 it can jump to, and their neighbours) can burn; anywhere else, on a wooden
+     * skin, the flame is soul fire on soul soil, which never spreads at all.
+     */
+    static void tameFires(Map<BlockPos, BlockState> out) {
+        List<BlockPos> fires = new java.util.ArrayList<>();
+        for (Map.Entry<BlockPos, BlockState> e : out.entrySet()) if (e.getValue().is(Blocks.FIRE)) fires.add(e.getKey());
+        for (BlockPos f : fires) {
+            if (fireSafe(out, f) && out.get(f.below()) != null && out.get(f.below()).is(Blocks.NETHERRACK)) continue;
+            out.put(f.below(), Blocks.SOUL_SOIL.defaultBlockState());
+            out.put(f, Blocks.SOUL_FIRE.defaultBlockState());
+        }
+    }
+
+    /** Nothing a fire at {@code f} could burn or spread to: FireBlock reaches x/z +-1, y -1..+4, and reads their neighbours. */
+    static boolean fireSafe(Map<BlockPos, BlockState> out, BlockPos f) {
+        BlockPos.MutableBlockPos m = new BlockPos.MutableBlockPos();
+        for (int dx = -2; dx <= 2; dx++) for (int dz = -2; dz <= 2; dz++) for (int dy = -2; dy <= 5; dy++) {
+            BlockState s = out.get(m.setWithOffset(f, dx, dy, dz));
+            if (s == null) continue;
+            if (s.getFlammability(net.minecraft.world.level.EmptyBlockGetter.INSTANCE, m, Direction.UP) > 0
+                    || s.getFireSpreadSpeed(net.minecraft.world.level.EmptyBlockGetter.INSTANCE, m, Direction.UP) > 0) return false;
+        }
+        return true;
     }
 
     // ------------------------------------------------------------------ modifiers

@@ -59,7 +59,9 @@ public class YarnBasketBlock extends BaseEntityBlock {
 
     @Override
     protected float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
-        if (level.getBlockEntity(pos) instanceof YarnBasketBlockEntity basket && !mayOpen(player, basket)) return 0.0F;
+        // only the server knows whose basket it is (the owner is not synced); it re-checks the break before it lands
+        if (!player.level().isClientSide && level.getBlockEntity(pos) instanceof YarnBasketBlockEntity basket
+                && !mayOpen(player, basket)) return 0.0F;
         return super.getDestroyProgress(state, player, level, pos);
     }
 

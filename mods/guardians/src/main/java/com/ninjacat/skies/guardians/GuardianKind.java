@@ -47,6 +47,18 @@ public enum GuardianKind {
     public ResourceLocation texture() { return ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "textures/guardian/" + id + ".png"); }
     public ResourceLocation emissive() { return ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "textures/guardian/" + id + "_emit.png"); }
     public ResourceLocation arenaFile() { return ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "arena/" + id + ".ncga"); }
+    /**
+     * This guardian's fight track, a sound event of assets/guardians/sounds.json ({@code guardians:music.<id>}; Tribal
+     * Power's Songkeeper plays the same ids). The First Cut has no track of its own.
+     */
+    @Nullable
+    public ResourceLocation music() {
+        return switch (this) {
+            case FIRSTCUT -> null;
+            case LINTGOLEM -> ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "music.lint_golem");
+            default -> ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, "music." + id);
+        };
+    }
     public String totemId() { return "frayed_totem_" + id; }
     public ResourceLocation totemRecipeId() { return ResourceLocation.fromNamespaceAndPath(Guardians.MOD_ID, totemId()); }
 

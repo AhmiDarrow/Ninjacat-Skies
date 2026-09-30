@@ -37,7 +37,13 @@ public final class MeshPose {
         }
     }
 
-    private static boolean hasEmit(GuardianModel.Part p) { for (byte b : p.emit) if (b != 0) return true; return false; }
+    private static boolean hasEmit(GuardianModel.Part p) {
+        if (p.anyEmit == 0) {
+            p.anyEmit = -1;
+            for (byte b : p.emit) if (b != 0) { p.anyEmit = 1; break; }
+        }
+        return p.anyEmit > 0;
+    }
 
     private void skin(GuardianModel.Part p) {
         int nv = p.vertexCount;

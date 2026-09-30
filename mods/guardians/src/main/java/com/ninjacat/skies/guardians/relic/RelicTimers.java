@@ -94,14 +94,24 @@ final class RelicTimers {
 
     static void later(ServerPlayer p, int delay, Runnable r) { TASKS.add(new Task(RelicUtil.now(p) + delay, r)); }
 
-    /** Mobs lose AI for {@code ticks}; Guardians are never stunned (their fight logic is not goal-based). */
+    /** Mobs lose AI for {@code ticks}. Bosses are never stunned (see {@link #boss}). */
     static void stun(LivingEntity e, int ticks) {
-        if (!(e instanceof Mob m) || e instanceof GuardianEntity) return;
+        if (!(e instanceof Mob m) || boss(e)) return;
         long until = clock(e) + ticks;
         if (!m.isNoAi()) m.setNoAi(true);
         else if (!STUNNED.containsKey(m)) return; // was NoAI before us: leave it alone
         STUNNED.merge(m, until, Math::max);
         m.getPersistentData().putLong(STUN_TAG, STUNNED.get(m));                     // survives unload/restart: restored in onJoin
+    }
+
+    /**
+     * A boss no relic may switch off: a Guardian (its fight logic is not goal-based), anything in the {@code c:bosses}
+     * entity tag (other mods' bosses; the Guardians and the Driftwreck Remnant are tagged too) and the vanilla Wither
+     * and Ender Dragon, should a pack strip them from the tag.
+     */
+    static boolean boss(net.minecraft.world.entity.Entity e) {
+        return e instanceof GuardianEntity || e.getType().is(net.neoforged.neoforge.common.Tags.EntityTypes.BOSSES)
+                || e instanceof net.minecraft.world.entity.boss.wither.WitherBoss || e instanceof net.minecraft.world.entity.boss.enderdragon.EnderDragon;
     }
 
     static void timedModifier(LivingEntity e, Holder<Attribute> attr, ResourceLocation id, double amount, AttributeModifier.Operation op, int ticks) {

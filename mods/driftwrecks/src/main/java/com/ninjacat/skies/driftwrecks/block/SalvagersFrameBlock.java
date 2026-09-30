@@ -43,7 +43,7 @@ public class SalvagersFrameBlock extends Block {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.isClientSide) return InteractionResult.SUCCESS;
-        if (player instanceof ServerPlayer sp) SalvageTrades.open(sp);
+        if (player instanceof ServerPlayer sp) SalvageTrades.open(sp, pos);
         return InteractionResult.CONSUME;
     }
 }
