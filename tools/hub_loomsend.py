@@ -1404,8 +1404,9 @@ def drum_circle(cv, reserved):
         for z in range(cz - 4, cz):
             if math.hypot(x - cx, (z - cz) * 1.3) <= 4.6:
                 cv.set(x, Y + 1, z, 'tribalpower:moss_agate_bricks')
+    # side by side, as a duelling pair must be: two apart left the mat between them equally near both drums
     cv.set(cx - 1, Y + 2, cz - 2, 'tribalpower:songkeeper_drum')
-    cv.set(cx + 1, Y + 2, cz - 2, 'tribalpower:songkeeper_drum')
+    cv.set(cx, Y + 2, cz - 2, 'tribalpower:songkeeper_drum')
     for x in range(cx - 2, cx + 3):
         cv.set(x, Y + 2, cz - 1, 'tribalpower:woven_mat')
     # Drumhearts and braziers behind, a Drumheart banner, a rain chime to keep time
@@ -2123,7 +2124,7 @@ def loomsend():
     # hunters in the grove and at the Cut, a Colony-keeper by the hives, a Pattern-weaver in the yard
     dx, dz = DRUM
     for name, tribe, role, x, y, z in (('Drumheart Tam', 4, 'DRUMMER', dx - 2, Y + 2, dz - 2),
-                                       ('Drumheart Oda', 4, 'DRUMMER', dx + 2, Y + 2, dz - 2),
+                                       ('Drumheart Oda', 4, 'DRUMMER', dx + 1, Y + 2, dz - 2),
                                        ('Loom-stitcher Wynn', 8, 'WEAVER', 41, Y + 1, -36),
                                        ('Rootbinder Ash', 2, 'HUNTER', -60, Y + 1, -50),
                                        ('Edge-walker Kest', 3, 'HUNTER', 0, Y + 1, -60),
@@ -2220,5 +2221,5 @@ def plan(v1_town):
     for b in boxes:
         f, t = b['from'], b['to']
         assert -160 <= f[0] and t[0] <= 160 and -160 <= f[2] and t[2] <= 160 and f[1] >= 0 and t[1] <= 128, b
-    return cv, dict(name="Loom's End", revision=2, boxes=boxes, keep=sorted(list(p) for p in cv.keep),
+    return cv, dict(name="Loom's End", revision=3, boxes=boxes, keep=sorted(list(p) for p in cv.keep),
                     signs=cv.signs, frames=cv.frames, residents=cv.residents, posts=cv.posts)

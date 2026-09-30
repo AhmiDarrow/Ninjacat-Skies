@@ -41,7 +41,7 @@ class HubTownTests(unittest.TestCase):
                              + ' --lang ' + LANG.relative_to(ROOT).as_posix())
 
     def test_revision_and_bounds(self):
-        self.assertEqual(self.plan['revision'], 2, 'a new town revision needs its marker below 0,59,0 in ModDimensions')
+        self.assertEqual(self.plan['revision'], 3, 'a new town revision needs its marker below 0,59,0 in ModDimensions')
         for box in self.plan['boxes']:
             f, t = box['from'], box['to']
             self.assertTrue(-160 <= f[0] <= t[0] <= 160 and -160 <= f[2] <= t[2] <= 160 and 0 <= f[1] <= t[1] <= 128, box)

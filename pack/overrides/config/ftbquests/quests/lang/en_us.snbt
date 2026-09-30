@@ -8439,7 +8439,7 @@
 	]
 	quest.42000000002805E9.title: "Gysahl Seeds"
 	quest.42000000002805EA.quest_desc: [
-		"Feed a Carob Nut to two adults of opposite sex. Two Good-or-better Yellows plus Carob can hatch Green or Blue. Each parent needs at least one first-place finish; four combined firsts make the colour certain.",
+		"Feed a Carob Nut to two adults of opposite sex. Two Good-or-better Yellows plus Carob can hatch Green or Blue. Each parent needs five first places won in Class C; sixteen combined make the colour certain. A Great Green and a Great Blue, each with eight Class B firsts, hatch Black (White on a miss; twenty-four combined for a sure roll).",
 		"How: Bilo the Nutkeeper at Whiskerwind sells Carob. Class A races also pay it out."
 	]
 	quest.42000000002805EA.title: "Carob Nut"
@@ -8454,7 +8454,7 @@
 	]
 	quest.42000000002805EC.title: "Sylkis Green"
 	quest.42000000002805ED.quest_desc: [
-		"Gold never hatches without Zeio. Black plus a Wonderful yellow plus three firsts each (twelve combined for a sure roll).",
+		"Gold never hatches without Zeio. A Wonderful Black plus a Wonderful Yellow, each with ten first places won in Class A (thirty-two combined for a sure roll).",
 		"How: Bilo the Nutkeeper at Whiskerwind sells Zeio. Class S races rarely pay it out."
 	]
 	quest.42000000002805ED.title: "Zeio Nut"
