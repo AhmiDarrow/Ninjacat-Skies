@@ -7,7 +7,8 @@ ServerEvents.recipes(event => {
   const sieve = (input, mesh, result, p, compressed) => {
     event.custom({
       type: compressed ? 'exdeorum:compressed_sieve' : 'exdeorum:sieve',
-      // Compressed sieves take the compressed block (Ex Deorum tag) and roll 9x — same shape as Ex Deorum's own tables.
+      // Compressed sieves take the compressed block (Ex Deorum tag) and roll n = 9, deliberately above Ex Deorum's own
+      // compressed tables (n = 7): a compressed block holds nine, and live worlds already sieve at this rate.
       ingredient: compressed ? { tag: 'exdeorum:compressed/' + input.split(':')[1] } : { item: input },
       mesh: { item: mesh },
       result: { id: result, count: 1 },
@@ -39,30 +40,9 @@ ServerEvents.recipes(event => {
     'voidloom:loom_lint', 'voidloom:loom_lint', 'voidloom:loom_lint', 'voidloom:loom_lint'
   ]).id('ninjacatskies:void_yarn_from_lint')
 
-  // Catch any datapack Ex Deorum item-meshes still left, then clone datapack dirt tables onto March soil.
+  // Clone datapack dirt tables onto March soil. voidloom_recipes.js (earlier in load order) has already rewritten
+  // their Ex Deorum meshes to the tier tags on the same recipe objects, so the copies share thread meshes too.
   // (forEachRecipe does not see recipes added by scripts in this event; those write tags and March rows themselves.)
-  const meshTags = {
-    'exdeorum:string_mesh': 'ninjacatskies:meshes/string',
-    'exdeorum:flint_mesh': 'ninjacatskies:meshes/flint',
-    'exdeorum:iron_mesh': 'ninjacatskies:meshes/iron',
-  }
-  let rewritten = 0
-  for (let type of ['exdeorum:sieve', 'exdeorum:compressed_sieve']) {
-    event.forEachRecipe({ type: type }, r => {
-      try {
-        let mesh = r.json.get('mesh')
-        if (!mesh || !mesh.isJsonObject() || !mesh.getAsJsonObject().has('item')) return
-        let tag = meshTags[String(mesh.getAsJsonObject().get('item').getAsString())]
-        if (!tag) return
-        r.merge({ mesh: { tag: tag } })
-        rewritten++
-      } catch (err) {
-        console.warn('[Ninjacat Skies] late mesh alias skipped for ' + r.getId() + ': ' + err)
-      }
-    })
-  }
-  if (rewritten) console.info('[Ninjacat Skies] late mesh alias rewrote ' + rewritten + ' leftover sieve tables')
-
   if (Platform.isLoaded('tribalpower')) {
     let cloned = 0
     event.forEachRecipe({ type: 'exdeorum:sieve' }, r => {

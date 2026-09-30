@@ -573,6 +573,7 @@
 				}
 			]
 			dependencies: ["42000000001A03D9"]
+			optional: true
 			shape: "loom"
 		}
 		{

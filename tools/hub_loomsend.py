@@ -833,7 +833,7 @@ def listing_items(stall):
         if e['stall'] != stall:
             continue
         item = e['result']['id']
-        if item == 'ninjacatskies:frayed_thread':     # Grit's buy-backs: show what they take
+        if item == 'ninjacatskies:frayed_thread':     # the Grit-singers' buy-backs: show what they take
             item = e['cost']['id']
         if item not in items:
             items.append(item)
@@ -865,10 +865,14 @@ SHOPS = [   # stall id, face, front x, front z, people, sign title, sign line
     ('edgewalkers', 'N', 62, 6, 'claw', 'EDGE-WALKERS', 'Rope & Road'),
     ('sealcarvers', 'E', -6, 44, 'sigil', 'SEAL-CARVERS', 'Pages & Gems'),
 ]
-STALL_NAMES = {'padkeepers': 'Pad-keepers', 'rootbinders': 'Rootbinders', 'grit': 'Grit', 'patternweavers': 'Pattern-weavers',
-               'colony': 'Colony-keepers', 'loomstitchers': 'Loom-stitchers', 'spark': 'Spark', 'edgewalkers': 'Edge-walkers',
+# A tribe's keeper goes by the tribe's own name (TRIBE_NAMES); the stall ids stay as they were, so keepers already
+# standing in a world are still found (they keep the name they were spawned with).
+STALL_NAMES = {'padkeepers': 'Pad-keepers', 'rootbinders': 'Rootbinders', 'grit': 'Grit-singers', 'patternweavers': 'Pattern-weavers',
+               'colony': 'Colony-keepers', 'loomstitchers': 'Loom-stitchers', 'spark': 'Drumhearts', 'edgewalkers': 'Edge-walkers',
                'sealcarvers': 'Seal-carvers', 'hearth': 'Hearth-keeper', 'whiskerwind': 'Whiskerwind Guide',
                'esther': 'Esther'}
+# Tribal Power's order (soil 0 .. spindle 8). The Whiskerwind Guide and the Hearth-keeper belong to no tribe: they only
+# borrow a tribe's look, and dock_stalls.js answers their right-click itself so neither speaks for that tribe.
 STALL_TRIBE = {'padkeepers': 0, 'grit': 1, 'rootbinders': 2, 'edgewalkers': 3, 'spark': 4, 'patternweavers': 5,
                'colony': 6, 'whiskerwind': 6, 'sealcarvers': 7, 'hearth': 7, 'loomstitchers': 8, 'esther': 6}
 SHOP_DRESS = {   # what each keeper keeps on the shop floor (u 1 and 9, v 1..4), the porch and the back shelves

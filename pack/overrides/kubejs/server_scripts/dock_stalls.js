@@ -16,11 +16,11 @@ const GUIDE_STALL_ID = 'whiskerwind'
 const HUB_POSTS = {
   padkeepers: [-39, 64, -13, 0, 0, 'Pad-keepers'],
   rootbinders: [-57, 64, -13, 0, 2, 'Rootbinders'],
-  grit: [39, 64, -13, 0, 1, 'Grit'],
+  grit: [39, 64, -13, 0, 1, 'Grit-singers'],
   patternweavers: [57, 64, -13, 0, 5, 'Pattern-weavers'],
   colony: [-39, 64, 13, 180, 6, 'Colony-keepers'],
   loomstitchers: [-57, 64, 13, 180, 8, 'Loom-stitchers'],
-  spark: [39, 64, 13, 180, 4, 'Spark'],
+  spark: [39, 64, 13, 180, 4, 'Drumhearts'],
   edgewalkers: [57, 64, 13, 180, 3, 'Edge-walkers'],
   sealcarvers: [-13, 64, 39, -90, 7, 'Seal-carvers'],
   whiskerwind: [8, 64, 69, 90, 6, 'Whiskerwind Guide'],
@@ -216,12 +216,41 @@ function ensureHubStalls(server) {
   if (all) hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
 }
 
-function isWhiskerwindGuide(entity) {
+function isKeeper(entity, stallId) {
   try {
     if (String(entity.type || '').indexOf('tribal_kin') < 0) return false
-    return entityLabel(entity) === GUIDE_STALL_ID
+    return entityLabel(entity) === stallId
   } catch (e) {
     return false
+  }
+}
+
+function isWhiskerwindGuide(entity) {
+  return isKeeper(entity, GUIDE_STALL_ID)
+}
+
+// The Hearth-keeper keeps the Purring Hearth's kitchen, not a tribe's stall. It only wears a tribe's look (see
+// HUB_POSTS), and Tribal Power would greet in that tribe's name ("The Seal-carvers keep a stall"), so the inn's own
+// counter is opened here: its own greeting and title, the same stock and daily restock (stallOffers is Tribal Power's).
+const HEARTH_STALL_ID = 'hearth'
+
+function openHearth(player, keeper) {
+  let raw = player.minecraftPlayer ? player.minecraftPlayer : player
+  try {
+    // Another customer still at the counter keeps it (as a tribe's stall does).
+    let other = keeper.getTradingPlayer()
+    if (other && String(other.getStringUUID()) !== String(raw.getStringUUID()) && other.isAlive()
+        && other.containerMenu && other.containerMenu.getOffers && keeper.distanceToSqr(other) <= 64) return
+    raw.sendSystemMessage(Text.translate('message.ninjacatpack.hub.hearth_line1'))
+    raw.sendSystemMessage(Text.translate('message.ninjacatpack.hub.hearth_line2'))
+    if (keeper.stallOffers().isEmpty()) {
+      raw.displayClientMessage(Text.translate('message.tribalpower.kin.stall.empty'), true)
+      return
+    }
+    keeper.setTradingPlayer(raw)
+    keeper.openTradingScreen(raw, Text.translate('container.ninjacatpack.hub.hearth'), 0)
+  } catch (e) {
+    console.warn('[Ninjacat Skies] Purring Hearth counter failed to open: ' + e)
   }
 }
 
@@ -229,7 +258,7 @@ function isWhiskerwindGuide(entity) {
 // the Hall as the way home.
 function sendToWhiskerwind(player) {
   if (!RaceManager) {
-    player.tell('The road to Whiskerwind is closed.')
+    player.tell(Text.translate('message.ninjacatpack.hub.whiskerwind_closed'))
     return
   }
   let raw = player.minecraftPlayer ? player.minecraftPlayer : player
@@ -243,10 +272,15 @@ function sendToWhiskerwind(player) {
 }
 
 ItemEvents.entityInteracted(event => {
-  if (!isWhiskerwindGuide(event.target)) return
-  // Cancel both hands so the empty stall screen never opens; travel once.
-  if (String(event.hand) === 'MAIN_HAND') sendToWhiskerwind(event.player)
-  event.cancel()
+  if (isWhiskerwindGuide(event.target)) {
+    // Cancel both hands so the empty stall screen never opens; travel once.
+    if (String(event.hand) === 'MAIN_HAND') sendToWhiskerwind(event.player)
+    event.cancel()
+  } else if (isKeeper(event.target, HEARTH_STALL_ID)) {
+    // Both hands again, so Tribal Power never greets for the tribe; the counter opens once.
+    if (String(event.hand) === 'MAIN_HAND') openHearth(event.player, event.target)
+    event.cancel()
+  }
 })
 
 function playerVisitedMarch(player) {
@@ -273,11 +307,8 @@ function esterAlreadyPresent(hub) {
   let found = listHubEntities(hub)
   if (!found || found.length === 0) return null
   let stewards = []
-  let other = false
   for (let entity of found) {
-    let t = String(entity.type || '')
-    if (t.indexOf('kin_steward') >= 0) stewards.push(entity)
-    else if (t.indexOf('race_master') >= 0) other = true
+    if (String(entity.type || '').indexOf('kin_steward') >= 0) stewards.push(entity)
   }
   let post = HUB_POSTS.esther
   if (stewards.length > 1) keepNearest(stewards, post[0] + 0.5, post[2] + 0.5)
@@ -286,7 +317,7 @@ function esterAlreadyPresent(hub) {
     try { steward.setInvulnerable(true) } catch (e) {}
     settle(steward, post)
   }
-  if (stewards.length > 0 || other) {
+  if (stewards.length > 0) {
     hubMisses.ester = 0
     return true
   }
@@ -346,12 +377,31 @@ PlayerEvents.loggedIn(event => {
   ensureHubEster(event.server)
 })
 
+// Each check lists every entity in the Hall, so it runs once per 80 server ticks however many players are in the
+// Hall or the March (each player's own tickCount would otherwise start one scan per player per window).
+const HUB_CHECK_TICKS = 80
+let hubStallsLast = -HUB_CHECK_TICKS
+let hubEsterLast = -HUB_CHECK_TICKS
+
+function hubCheckDue(server, last) {
+  let now = Number(server.getTickCount())
+  return now - last >= HUB_CHECK_TICKS || now < last ? now : -1
+}
+
 PlayerEvents.tick(event => {
-  if (event.player.tickCount % 80 !== 0) return
+  if (event.player.tickCount % HUB_CHECK_TICKS !== 0) return
   let dim = String(event.player.level.dimension)
   if (dim === MARCH_DIM) markMarchVisit(event.player)
-  if (dim === HUB_DIM) ensureHubStalls(event.server)
-  if (dim === MARCH_DIM || dim === HUB_DIM) ensureHubEster(event.server)
+  if (dim !== MARCH_DIM && dim !== HUB_DIM) return
+  let due
+  if (dim === HUB_DIM && (due = hubCheckDue(event.server, hubStallsLast)) >= 0) {
+    hubStallsLast = due
+    ensureHubStalls(event.server)
+  }
+  if ((due = hubCheckDue(event.server, hubEsterLast)) >= 0) {
+    hubEsterLast = due
+    ensureHubEster(event.server)
+  }
 })
 
 LevelEvents.loaded(event => {
