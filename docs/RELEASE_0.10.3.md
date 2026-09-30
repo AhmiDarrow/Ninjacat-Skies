@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.3 — The Full Bestiary, Chicobos and a Steady Herd
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Ninjacat Skies Core 0.5.20 is CurseForge file **9018084**;
+Pack CurseForge client file **9018441**, server additional **9018447**. Ninjacat Skies Core 0.5.20 is CurseForge file **9018084**;
 Tribal Power 5.3.12 is **9018037**; Chocobos Reborn 1.1.2 is **9018068**; Shamanic Mounts 0.1.4 is **9018208**.
 
 105 mods (101 on the server): Ninjacat Skies Core 0.5.20, Tribal Power 5.3.12, Chocobos Reborn 1.1.2, Shamanic Mounts
