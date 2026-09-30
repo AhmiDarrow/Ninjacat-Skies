@@ -249,8 +249,11 @@ STALL_OPTIONAL = {
     "minecraft:saddle": "Optional — the Pad-keepers in Clowder Hall sell one.",
     "minecraft:name_tag": "Optional — the Seal-carvers in Clowder Hall sell one.",
     "minecraft:shulker_box": "Optional — the Edge-walkers in Clowder Hall sell one.",
+    "minecraft:totem_of_undying": "Optional — no raids reach the pad, so the pack crafts one instead.",
+    "minecraft:shulker_shell": "Optional — no shulkers here, so the pack crafts shells instead.",
 }
-FORCE_OPTIONAL = {"minecraft:recovery_compass", "minecraft:elytra", "minecraft:totem_of_undying", "minecraft:trident",
+FORCE_OPTIONAL = {"pipez:infinity_upgrade", "productivebees:sturdy_bee_cage",  # creative-only / village loot only
+                  "minecraft:recovery_compass", "minecraft:elytra", "minecraft:totem_of_undying", "minecraft:trident",
                   "minecraft:echo_shard", "minecraft:music_disc_cat", "minecraft:sponge", "minecraft:saddle",
                   "minecraft:nautilus_shell", "minecraft:conduit", "minecraft:rabbit_foot", "minecraft:name_tag",
                   "minecraft:shulker_shell", "minecraft:shulker_box", "minecraft:glow_ink_sac",
@@ -349,7 +352,7 @@ LORE = {
     "Raw Iron": ["Chunks to raw. Smelt onward."],
     "Iron Ingot": ["Recover pays out. Sixteen bars the void did not want you to have."],
     "Copper Ingot": ["Wire and bulbs, and Tribal resonators later."],
-    "Gold Ingot": ["Gilded tools, and gold plates for the pattern-weavers."],
+    "Gold Ingot": ["Gilded tools, and gold plates for the Pattern-weavers."],
     "Flint Mesh": ["Sharper catch. Flint meshes shake Frayed Thread out of grit."],
     "Iron Mesh": ["Metal thread for heavier dust. Iron meshes are where Strand Filament falls."],
     "Crucible": ["Melt and drip. Cobble to lava, given time."],
@@ -377,7 +380,7 @@ LORE = {
     "Dirt Seeds": ["Grow more pad."],
     "Wood Seeds": ["Grow canopy without the axe."],
     "Stone Seeds": ["Grow grit."],
-    "Iron Seeds": ["Metal from leaves. Recover's second engine."],
+    "Iron Seeds": ["Metal from a crop. Recover's second engine."],
     "Water Seeds": ["Bottled rain from a crop."],
     "Botany Pot": ["Compact growth for a small pad."],
     "Hopper Pot": ["The pot that harvests itself."],
@@ -421,7 +424,7 @@ LORE = {
     "Hum: Drumheart": ["Strike it. Hold a Pulse. Listen before you wire anything.", "Two Chimes, a Shard, two leather, four planks — the Pad-keepers at /clowder hub sell leather."],
     "Hum: Pulse Cell": ["Carry Pulse between drum and lattice."],
     "Hum: Ley Collector": ["Draw ambient ley into beats under open sky. Totem voices add; a Drumheart is not required."],
-    "Hum: Pulse Resonator": ["Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony."],
+    "Hum: Pulse Resonator": ["Seat an Echo catalyst (it wears down as it works) and two different elemental totems. The camp sings its own power; redstone pauses the harmony."],
     "Powah Starter Cell": ["A buffer for Forge Energy — the bridge from Pulse to wire, if you want one."],
     "Powah Furnator": ["Burn fuel for Forge Energy."],
     "Powah Cable": ["Move energy along."],
@@ -440,7 +443,7 @@ LORE = {
     "Encased Fan": ["Washing, drying, and gravel into sand."],
     "Deployer": ["A hand on a shaft."],
     "Precision Mechanism": ["Clockwork heart. Wants a Binding Knot at its centre.", "The Loom, asking to be included."],
-    "Sequenced Gearshift": ["Programmed spin. The pattern-weavers' song, written down."],
+    "Sequenced Gearshift": ["Programmed spin. The Pattern-weavers' song, written down."],
     # Swarm
     "Honeycomb": ["Colonies in the wind. The Colony-keepers' stall at /clowder hub sells comb if none drift by."],
     "Beehive": ["A home for workers."],
@@ -1143,7 +1146,7 @@ def build_spark() -> list[dict]:
     ], origin=(-4.0, 7.5), cols=6)
     finale = knot_finale(s, "spark", main, 12.0, -2.0)
     bridge = item_quest(s, title="Hum becomes current", item="tribalpower:pulse_adapter",
-                        desc=["Follow Tribal Weave through Echo refinement to a Resonant Core. The Pulse Adapter turns the camp's reusable harmony into FE for this chapter's machines. Unranked conversion is 20 Pulse a second; rank it at Echo stations for more. It cannot receive FE. Redstone pauses both conversion and export."],
+                        desc=["Follow Tribal Weave through Echo refinement to a Resonant Core. The Harmonic Energizer turns the camp's harmony into FE for this chapter's machines. Unranked conversion is 60 Pulse a second; rank it at Echo stations for more. It cannot receive FE. Redstone pauses both conversion and export."],
                         deps=[main[10]['id']], x=12.0, y=11.0, optional=True, reward_count=4)
     return main + side + finale + ([bridge] if bridge else [])
 
@@ -1307,12 +1310,12 @@ def build_sigil() -> list[dict]:
     ])
     side = grid_optional(s, [
         ("Golden Sacrificial Bowl", "occultism:golden_sacrificial_bowl", 1, "Summon focus — Bind braid is already on the main path."),
-        ("Nature Altar", "naturesaura:nature_altar", 1, "Aura craft."),
-        ("Gold Fiber", "naturesaura:gold_fiber", 8, "Infused plants."),
+        ("Natural Altar", "naturesaura:nature_altar", 1, "Aura craft."),
+        ("Brilliant Fiber", "naturesaura:gold_fiber", 8, "Infused plants."),
         ("Gold Leaf", "naturesaura:gold_leaf", 8, "Aura material."),
         ("Infused Iron", "naturesaura:infused_iron", 8, "Aura metal."),
         ("Eye", "naturesaura:eye", 1, "See aura."),
-        ("Token Joy", "naturesaura:token_joy", 1, "Aura token."),
+        ("Token of Joy", "naturesaura:token_joy", 1, "Aura token."),
         ("Spell Parchment", "ars_nouveau:spell_parchment", 4, "Spell parchment stock."),
         ("Warp Scroll", "ars_nouveau:warp_scroll", 2, "Teleport note."),
         ("Magebloom Crop", "ars_nouveau:magebloom_crop", 4, "Plant magic."),
@@ -1429,7 +1432,7 @@ def build_exdeorum_side() -> list[dict]:
         ("Diamond Mesh", "exdeorum:diamond_mesh", 1, "Diamond tier mesh."),
         ("Netherite Mesh", "exdeorum:netherite_mesh", 1, "Top mesh."),
         ("Porcelain Clay", "exdeorum:porcelain_clay_ball", 16, "Clay refined."),
-        ("Unfired Crucible", "exdeorum:unfired_porcelain_crucible", 1, "Fuel a furnace generator."),
+        ("Unfired Crucible", "exdeorum:unfired_porcelain_crucible", 1, "Porcelain clay shaped into a crucible. Fire it in a furnace."),
         ("Porcelain Crucible", "exdeorum:porcelain_crucible", 1, "Hot safe."),
         ("Watering Can Wood", "exdeorum:wooden_watering_can", 1, "Splash growth."),
         ("Watering Can Iron", "exdeorum:iron_watering_can", 1, "Bigger splash."),
@@ -1455,7 +1458,7 @@ def _sophisticated_storage_rows():
         ("Storage Controller", "sophisticatedstorage:controller", 1, "Link a wall of barrels into one network you reach from a single face."),
         ("Copper Barrel", "sophisticatedstorage:copper_barrel", 2, "A barrel that upgrades: filters, hoppers, magnets, void."),
         ("Iron Barrel", "sophisticatedstorage:iron_barrel", 1, "More slots, more upgrade rows."),
-        ("Stack Upgrade", "sophisticatedstorage:advanced_magnet_upgrade", 1, "Pull dropped items straight into the barrel from across the pad."),
+        ("Advanced Magnet Upgrade", "sophisticatedstorage:advanced_magnet_upgrade", 1, "Pull dropped items straight into the barrel from across the pad."),
         ("Hopper Upgrade", "sophisticatedstorage:hopper_upgrade", 1, "In one side, out the other, no hopper block needed."),
         ("Void Upgrade", "sophisticatedstorage:advanced_void_upgrade", 1, "Throw away the overflow the sieve keeps making."),
         ("Pickup Upgrade", "sophisticatedstorage:advanced_pickup_upgrade", 1, "The barrel grabs what it is filtered for, automatically."),
@@ -1612,32 +1615,32 @@ def build_aura_side() -> list[dict]:
     s = 17
     return chain(s, [
         ("Eye", "naturesaura:eye", 1, "See the aura."),
-        ("Gold Fiber", "naturesaura:gold_fiber", 16, "Infuse plants."),
+        ("Brilliant Fiber", "naturesaura:gold_fiber", 16, "Infuse plants."),
         ("Gold Leaf", "naturesaura:gold_leaf", 16, "Aura material."),
         ("Golden Leaves", "naturesaura:golden_leaves", 8, "Glow canopy."),
-        ("Wood Stand", "naturesaura:wood_stand", 1, "Offering stand."),
-        ("Nature Altar", "naturesaura:nature_altar", 1, "Aura crafts."),
+        ("Wooden Stand", "naturesaura:wood_stand", 1, "Offering stand."),
+        ("Natural Altar", "naturesaura:nature_altar", 1, "Aura crafts."),
         ("Infused Iron", "naturesaura:infused_iron", 16, "Aura metal."),
         ("Ancient Bark", "naturesaura:ancient_bark", 8, "Old wood."),
-        ("Token Joy", "naturesaura:token_joy", 1, "Joy token."),
-        ("Token Fear", "naturesaura:token_fear", 1, "Fear token."),
-        ("Token Anger", "naturesaura:token_anger", 1, "Anger token."),
-        ("Token Sorrow", "naturesaura:token_sorrow", 1, "Sorrow token."),
-        ("Calling Spirit", "naturesaura:calling_spirit", 1, "Aura spirit for rituals."),
-        ("Birth Spirit", "naturesaura:birth_spirit", 1, "Birth spirit for aura rites."),
-        ("Aura Troves", "naturesaura:aura_trove", 1, "Store aura."),
-        ("Generator Puzzle", "naturesaura:generator_limit_remover", 1, "If present — late."),
-        ("Environmental Eye", "naturesaura:eye_improved", 1, "Better sight."),
-        ("Crushing Catalyst", "naturesaura:crushing_catalyst", 1, "Crush with aura."),
-        ("Conversion Catalyst", "naturesaura:conversion_catalyst", 1, "Conversion catalyst."),
-        ("Depths Powder", "naturesaura:depth_ingot", 4, "Deep metal."),
+        ("Token of Joy", "naturesaura:token_joy", 1, "Joy token."),
+        ("Token of Fear", "naturesaura:token_fear", 1, "Fear token."),
+        ("Token of Anger", "naturesaura:token_anger", 1, "Anger token."),
+        ("Token of Sorrow", "naturesaura:token_sorrow", 1, "Sorrow token."),
+        ("Spirit of Calling", "naturesaura:calling_spirit", 1, "Aura spirit for rituals."),
+        ("Spirit of Birthing", "naturesaura:birth_spirit", 1, "Birth spirit for aura rites."),
+        ("Aura Trove", "naturesaura:aura_trove", 1, "Store aura."),
+        ("Creational Catalyst", "naturesaura:generator_limit_remover", 1, "If present — late."),
+        ("Environmental Ocular", "naturesaura:eye_improved", 1, "Better sight."),
+        ("Crumbling Catalyst", "naturesaura:crushing_catalyst", 1, "Crush with aura."),
+        ("Transmutation Catalyst", "naturesaura:conversion_catalyst", 1, "Conversion catalyst."),
+        ("Ingot of the Depths", "naturesaura:depth_ingot", 4, "Deep metal."),
     ]) + grid_optional(s, [
         ("Farming Stencil", "naturesaura:farming_stencil", 1, "Farm aura patterns."),
-        ("Projectile Generator", "naturesaura:projectile_generator", 1, "Aura from shots."),
-        ("Flower Generator", "naturesaura:flower_generator", 1, "Aura from flowers."),
-        ("Oak Generator", "naturesaura:oak_generator", 1, "Aura from oaks."),
-        ("End Flower", "naturesaura:end_flower", 1, "End flora."),
-        ("Spawn Lamp", "naturesaura:spawn_lamp", 1, "Light spawns."),
+        ("Shooting Mark", "naturesaura:projectile_generator", 1, "Aura from shots."),
+        ("Herbivorous Absorber", "naturesaura:flower_generator", 1, "Aura from flowers."),
+        ("Canopy Diminisher", "naturesaura:oak_generator", 1, "Aura from oaks."),
+        ("Rose of Oblivion", "naturesaura:end_flower", 1, "End flora."),
+        ("Lamp of Sanctuary", "naturesaura:spawn_lamp", 1, "Light spawns."),
     ], origin=(0.0, 7.5), cols=6)
 
 
@@ -1779,7 +1782,7 @@ def build_decor_side() -> list[dict]:
         ("Observer Spare", "minecraft:observer", 2, "Watch more."),
         ("Redstone Block", "minecraft:redstone_block", 4, "Dense signal."),
         ("Target Spare", "minecraft:target", 2, "Signal catch."),
-        ("Note Block Spare", "minecraft:note_block", 2, "Jukebox for pad morale."),
+        ("Note Block Spare", "minecraft:note_block", 2, "Plays one note when struck or powered. Tune it by hand."),
         ("Jukebox Spare", "minecraft:jukebox", 1, "Jukebox for discs."),
         ("Bell Spare", "minecraft:bell", 1, "Bell marks the Clowder."),
         ("Respawn Anchor", "minecraft:respawn_anchor", 1, "Nether bed."),
@@ -2047,7 +2050,7 @@ def build_pipes_side() -> list[dict]:
         ("Gas Pipe", "pipez:gas_pipe", 8, "Move chemicals."),
         ("Universal Pipe", "pipez:universal_pipe", 8, "One pipe, many jobs."),
         ("Pipe Wrench", "pipez:wrench", 1, "Configure."),
-        ("Basic Upgrade", "pipez:basic_upgrade", 4, "Speed upgrade for machines."),
+        ("Basic Upgrade", "pipez:basic_upgrade", 4, "Speed upgrade for a pipe."),
         ("Improved Upgrade", "pipez:improved_upgrade", 4, "Faster still."),
         ("Advanced Upgrade", "pipez:advanced_upgrade", 2, "Serious speed."),
         ("Ultimate Upgrade", "pipez:ultimate_upgrade", 1, "Top Pipez throughput tier."),
@@ -2146,7 +2149,7 @@ def build_factory_side() -> list[dict]:
         ("Blaze Burner", "create:blaze_burner", 2, "Hot craft."),
         ("Basin", "create:basin", 2, "Mix bowl."),
         ("Mechanical Mixer", "create:mechanical_mixer", 1, "Mix bulk recipes fast."),
-        ("Mechanical Press", "create:mechanical_press", 1, "Smash blocks for grit."),
+        ("Mechanical Press", "create:mechanical_press", 1, "Presses ingots into sheets and packs a basin tight."),
         ("Millstone", "create:millstone", 1, "Grindstone or mill work."),
         ("Crushing Wheel", "create:crushing_wheel", 2, "Pair crush."),
         ("Encased Fan", "create:encased_fan", 2, "Fan for washing and drying."),
@@ -2218,7 +2221,7 @@ def build_network_side() -> list[dict]:
         ("Fluix Covered", "ae2:fluix_covered_cable", 16, "Covered net."),
         ("Fluix Smart", "ae2:fluix_smart_cable", 16, "Smart net."),
         ("Energy Acceptor", "ae2:energy_acceptor", 1, "Power in."),
-        ("Energy Cell", "ae2:energy_cell", 2, "Buffer energy or items."),
+        ("Energy Cell", "ae2:energy_cell", 2, "Buffers power for the network."),
         ("Dense Energy", "ae2:dense_energy_cell", 1, "Big buffer."),
         ("Controller", "ae2:controller", 1, "Network heart."),
         ("Drive", "ae2:drive", 2, "Cell bay."),
@@ -2461,7 +2464,7 @@ def build_tribal_side() -> list[dict]:
         ("Spirit Codex", "tribalpower:spirit_codex", 1, "Nine tribes hummed once — needs a spare Chime + Shard."),
         ("Ley Collector", "tribalpower:ley_collector", 1, "Draw ley into beats."),
         ("Pulse Cell", "tribalpower:pulse_cell", 4, "Carry Pulse for tools, spells and travel. Fill it at a Drumheart."),
-        ("Pulse Resonator", "tribalpower:pulse_resonator", 1, "Seat a reusable Echo catalyst; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it."),
+        ("Pulse Resonator", "tribalpower:pulse_resonator", 1, "Seat an Echo catalyst, which wears down as it works; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it."),
         ("Earth Totem", "tribalpower:resonance_totem_earth", 1, "Tribe of stone answers."),
         ("Fire Totem", "tribalpower:resonance_totem_fire", 1, "Tribe of flame answers."),
         ("Water Totem", "tribalpower:resonance_totem_water", 1, "Tribe of tide answers."),
@@ -2512,7 +2515,7 @@ def build_tribal_side() -> list[dict]:
         ('fluid_relay', 'A path for rain', 'spirit_cistern', 'Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
         ('longreach_item_relay', 'Across the workshop', 'item_relay', 'Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
         ('longreach_fluid_relay', 'Across the waterworks', 'fluid_relay', 'Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.'),
-        ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 20 Pulse a second (2,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.'),
+        ('pulse_adapter', 'The beat becomes current', 'resonant_core', 'Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 60 Pulse a second (6,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.'),
         ('spirit_staff', 'Six voices in one hand', 'resonant_core', 'The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost.'),
         ('resonance_maul', 'Stone yields a doorway', 'resonant_core', 'Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.'),
         ('spiritweave_hood', 'Eyes in the quiet', 'spiritweave', 'The hood lends night sight while charged cells sustain it. Unlinked pieces draw 2 Pulse every four seconds; a bound voice costs 3.'),
@@ -2633,7 +2636,7 @@ def tribal_nine_tribes(s: int, before: list[dict], existing: dict) -> list[dict]
          'An Unsung Heart between Loom Thread and March Crystal, on March Planks. Loom joins Earth, Fire, Water, Air and Spirit: a distinct voice for the Pulse Resonator and the attunement the Echo Unweave and Ley Binding ask for.',
          ['unsung_heart', 'march_crystal'], 13.5, 44.2, reward='tribalpower:loom_thread', reward_count=2)
     item('loom_seal', 'A seal of tension',
-         'Blank Seal, Loom Thread and a Spirit Shard. Seated in a Ritual Brazier the Loom Seal blesses Tension: every two seconds it refills two Pulse into the carried cells of everyone in range, and lends Luck.',
+         'A Blank Seal and Loom Thread. Seated in a Ritual Brazier the Loom Seal blesses Tension: every two seconds it refills two Pulse into the carried cells of everyone in range, and lends Luck.',
          ['loom_thread', 'blank_seal'], 2.7, 44.2)
     item('echo_unweave', 'The lattice, reversed',
          'Loom Thread and Copper Resonators on March Stone. Under a Loom voice the Echo Unweave runs the lattice backwards: a Manifested Ingot to two Bound Echo, Bound to two Attuned, Attuned to two Shards, Spiritweave to two Wool, a Resonant Core to three Manifested Ingots, and any worn Spiritgear tool to one Manifested Ingot.',
@@ -2807,7 +2810,7 @@ def tribal_five(s: int, before: list[dict], existing: dict) -> list[dict]:
          'A Manifested Ingot, a Bone Chime and a stick on the diagonal. Seven damage, reach plus one and a half, and a sprinting thrust hits 35 percent harder. Underneath it is a Blade: it ranks at the Echo stations, spends Pulse on echo strikes and takes a totem voice. It keeps a Rift Hound at arm\'s length.',
          ['spiritgear_blade', 'manifested_ingot'], 0, 94)
     item('spiritgear_greatsword', 'The widest sweep',
-         'Three Manifested Ingots in a T over a Bone Chime. Ten damage, reach plus half, heavy — it slows your walk while it is in hand — and the widest, strongest sweep of the family. The halberd, battle axe, warhammer, dagger, scythe and trident are made the same way; each trades reach, speed and weight against the others.',
+         'Four Manifested Ingots in a T over a Bone Chime. Ten damage, reach plus half, heavy — it slows your walk while it is in hand — and the widest, strongest sweep of the family. The halberd, battle axe, warhammer, dagger, scythe and trident are made the same way; each trades reach, speed and weight against the others.',
          ['spiritgear_blade', 'manifested_ingot'], 2.7, 94)
     item('pulse_bow', 'A bow that sings',
          'String and Copper Resonators around a Bone Chime. It fires sonic bolts on Pulse from the cells you carry and takes verse arrows. Quick to loose again, and a half draw when you are in a hurry.',
@@ -2830,7 +2833,7 @@ def tribal_five(s: int, before: list[dict], existing: dict) -> list[dict]:
          'Leather over planks around a note block. The Gate Rite as a game with no portal at the end: every track in the pack, played on A, S, D, F as the beats reach the line. It keeps your best score per track and a board of the server\'s five best. Practise here before a real Gate Drum.',
          ['drumheart'], 5.4, 97)
     item('lantern_charm', 'A light you wear',
-         'Spiritweave, a Manifested Ingot and a Spirit Seal, shapeless. Use it to wear it; sneak-use to open the three charm slots. The Lantern charm carries the Spirit voice: night sight, and any voice blessing on you lasts half again as long. Worn charms cost 2 Pulse per voice every two seconds from a carried cell.',
+         'Four glowstone round a Spirit Seal, two Manifested Ingots, a golden carrot and Spiritweave. Use it to wear it; sneak-use to open the three charm slots. The Lantern charm carries the Spirit voice: night sight, and any voice blessing on you lasts half again as long. Worn charms cost 2 Pulse per voice every two seconds from a carried cell.',
          ['spiritweave', 'manifested_ingot', 'spirit_seal'], 8.1, 97)
 
     # ---- Tribes that talk: Elders, requests, stories, relics
@@ -2937,7 +2940,7 @@ def build_chocobo() -> list[dict]:
         ("Saraha Nut", "chocobosreborn:saraha_nut", 1, "A mid nut. Optional."),
         ("Lasan Nut", "chocobosreborn:lasan_nut", 1, "A mid nut. Optional."),
         ("Pram Nut", "chocobosreborn:pram_nut", 1, "A mid-late mating nut. Optional. Bilo the Nutkeeper sells it."),
-        ("Fair Fireworks", "minecraft:firework_rocket", 1, "The Fair stall no longer sells Pink or Red dyes. Those colours are gone. Buy fireworks, a lead, or a Chocobo Almanac for GP."),
+        ("Fair Fireworks", "minecraft:firework_rocket", 1, "The Fair stall at Whiskerwind sells fireworks, leads, pocketwatches and the Chocobo Almanac for GP."),
         ("Porov Nut", "chocobosreborn:porov_nut", 1, "A late mating nut. Optional."),
     ]
     out += grid_optional(s, extra, origin=(0.0, 9.0), cols=5)
@@ -3026,14 +3029,14 @@ def build_harvestcraft() -> list[dict]:
         ("Peppercorn Tree", "pamhc2trees:peppercorn_sapling", 1, "Pepper for the grinder. Optional."),
         ("Cooking Oil", "pamhc2foodcore:cookingoilitem", 8, "Fryer fat. Optional staple."),
         ("Butter", "pamhc2foodcore:butteritem", 8, "Milk and salt. Optional staple."),
-        ("Mayonnaise", "pamhc2foodcore:mayonaiseitem", 4, "Eggs and oil. Optional."),
-        ("Fruit Salad", "pamhc2foodcore:fruitsaladitem", 4, "Mixing bowl, mixed fruit. Optional."),
+        ("Mayonnaise", "pamhc2foodcore:mayonaiseitem", 4, "An egg through the juicer. Optional."),
+        ("Fruit Salad", "pamhc2foodcore:fruitsaladitem", 4, "Cutting board, mixed fruit. Optional."),
         ("Spaghetti Dinner", "pamhc2foodextended:spaghettidinneritem", 1, "Pasta night. Optional."),
         ("Bacon Pancakes", "pamhc2foodextended:baconpancakesitem", 2, "Breakfast flex. Optional."),
         ("Avocado Toast", "pamhc2foodextended:avocadotoastitem", 2, "Iron-mesh dirt for an avocado sapling, then skillet, toast, salt, garlic, spiceleaf."),
         ("Onion Burger", "pamhc2foodextended:onionhamburgeritem", 2, "Not the Delight hamburger. Optional."),
         ("Apple Juice", "pamhc2foodcore:applejuiceitem", 4, "Juicer, apples. Optional."),
-        ("Toast Slice", "pamhc2foodcore:toastitem", 8, "Bakeware leftover bread. Optional."),
+        ("Toast Slice", "pamhc2foodcore:toastitem", 8, "Skillet, bread and butter. Optional."),
     ]
     return main + grid_optional(s, extra, origin=(0.0, 9.0), cols=7)
 

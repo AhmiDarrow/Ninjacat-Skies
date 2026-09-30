@@ -19,8 +19,18 @@ UNREACHABLE = {
     "minecraft:wolf_armor",           # no armadillos
     "minecraft:sponge",               # ocean monuments
     "minecraft:music_disc_cat",       # dungeon chests / creeper luck
-    "minecraft:totem_of_undying",     # evokers only
+    "pipez:infinity_upgrade",         # creative-only: Pipez ships no survival recipe
+    "productivebees:sturdy_bee_cage", # village chests / hero-of-the-village gifts only
 }
+# Structure/raid-only items the pack makes craftable in kubejs/server_scripts/quest_reachability.js. Each must keep
+# its recipe there, stay off UNREACHABLE, and every quest asking for it must name the pack recipe in its How line.
+PACK_CRAFTED = {
+    "minecraft:shulker_shell",        # Packaged Auto Distributor / Crafting Proxy
+    "minecraft:totem_of_undying",     # Ars Nouveau Archmage Spell Book
+    "irons_spellbooks:ruined_book",   # Iron's Spells Ancient Codex (netherite book)
+    "irons_spellbooks:magehunter",    # Magehunter Vindicators spawn in evoker forts only
+}
+REACH_JS = (ROOT / "pack/overrides/kubejs/server_scripts/quest_reachability.js").read_text(encoding="utf-8")
 
 CHAPTERS = ROOT / "pack/overrides/config/ftbquests/quests/chapters"
 LANG = (ROOT / "pack/overrides/config/ftbquests/quests/lang/en_us.snbt").read_text(encoding="utf-8")
@@ -41,6 +51,7 @@ def ok(i: str) -> bool:
 
 miss = [i for i in items if not ok(i)]
 dead = []
+unnamed = []
 for chapter in sorted(CHAPTERS.glob("*.snbt")):
     body = chapter.read_text(encoding="utf-8")
     for quest in re.split(r"\n\t\t\{\n", body)[1:]:
@@ -50,10 +61,20 @@ for chapter in sorted(CHAPTERS.glob("*.snbt")):
             continue
         if task.group(1) in UNREACHABLE and "optional: true" not in quest:
             dead.append((chapter.name, titles.get(qid.group(1), qid.group(1)), task.group(1)))
+        if task.group(1) in PACK_CRAFTED:
+            desc = re.search(r"quest\." + qid.group(1) + r"\.quest_desc: \[(.*?)\n\t\]", LANG, re.S)
+            if not desc or "pack recipe" not in desc.group(1):
+                unnamed.append((chapter.name, titles.get(qid.group(1), qid.group(1)), task.group(1)))
 
-print(f"quest_items={len(items)} missing={len(miss)} dead_ends={len(dead)}")
+lost = sorted(i for i in PACK_CRAFTED if f"event.shaped('{i}'" not in REACH_JS or i in UNREACHABLE)
+print(f"quest_items={len(items)} missing={len(miss)} dead_ends={len(dead)} pack_crafted_lost={len(lost)} "
+      f"how_without_pack_recipe={len(unnamed)}")
 for i in miss:
     print("MISS", i)
 for chapter, title, item in dead:
     print("DEAD", chapter, title, item)
-sys.exit(1 if (miss or dead) else 0)
+for i in lost:
+    print("LOST", i, "has no shaped recipe in quest_reachability.js (or is back on UNREACHABLE)")
+for chapter, title, item in unnamed:
+    print("HOW", chapter, title, item, "- How line does not name the pack recipe")
+sys.exit(1 if (miss or dead or lost or unnamed) else 0)

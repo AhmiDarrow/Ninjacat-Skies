@@ -15,7 +15,8 @@ ServerEvents.recipes(event => {
   const sieve = (input, mesh, result, p, compressed) => {
     event.custom({
       type: compressed ? 'exdeorum:compressed_sieve' : 'exdeorum:sieve',
-      // Compressed sieves take the compressed block (Ex Deorum tag) and roll 9x — same shape as Ex Deorum's own tables.
+      // Compressed sieves take the compressed block (Ex Deorum tag) and roll n = 9, deliberately above Ex Deorum's own
+      // compressed tables (n = 7): a compressed block holds nine, and live worlds already sieve at this rate.
       ingredient: compressed ? { tag: 'exdeorum:compressed/' + input.split(':')[1] } : { item: input },
       mesh: meshTier[mesh] ? { tag: meshTier[mesh] } : { item: mesh },
       result: { id: result, count: 1 },

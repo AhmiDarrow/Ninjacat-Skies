@@ -160,7 +160,7 @@
 	quest.420000000001000A.quest_desc: [
 		"Ice and lava make stone where there was none.",
 		"Normal and Hard pads ship both. The Pad-keepers at /clowder hub sell a bucket.",
-		"How: lava next to water (or ice melt). Hammer stone. /clowder hub Grit stall sells a bundle."
+		"How: lava next to water (or ice melt). Hammer stone. /clowder hub Grit-singers' stall sells a bundle."
 	]
 	quest.420000000001000A.title: "Cobble Cache"
 	quest.420000000001000B.quest_desc: [
@@ -204,7 +204,7 @@
 	quest.4200000000010011.title: "Ladder Down"
 	quest.4200000000010012.quest_desc: [
 		"Spider silk saved for later meshes. Every strand gets used eventually.",
-		"How: unravel Frayed Thread (1 → 3). Spiders. Sieve. Yarn reverse sink."
+		"How: unravel Frayed Thread (1 → 3). Spiders. Loom Lint at an Echo Bind. Yarn reverse sink."
 	]
 	quest.4200000000010012.title: "String Cache"
 	quest.4200000000010013.quest_desc: [
@@ -470,7 +470,7 @@
 	quest.4200000000020045.title: "Spindle Hammer"
 	quest.4200000000020046.quest_desc: [
 		"String around yarn. It catches what the Loom dropped — and combs Loom Lint out of dirt.",
-		"How: string around yarn. Grit stall sells one."
+		"How: string around yarn. The Grit-singers' stall sells one."
 	]
 	quest.4200000000020046.title: "Thread the Mesh"
 	quest.4200000000020047.quest_desc: [
@@ -491,7 +491,7 @@
 	quest.4200000000020049.title: "Porcelain Clay"
 	quest.420000000002004A.quest_desc: [
 		"Smelt it. Porcelain carries lava where iron is still a rumour.",
-		"How: smelt porcelain clay."
+		"How: shape porcelain clay into an unfired bucket, then smelt it."
 	]
 	quest.420000000002004A.title: "Porcelain Tool"
 	quest.420000000002004B.quest_desc: [
@@ -507,7 +507,7 @@
 	quest.420000000002004C.title: "Wooden Hammer"
 	quest.420000000002004D.quest_desc: [
 		"Matter from grit. Sixty-four stones that were dust an hour ago.",
-		"How: lava next to water (or ice melt). Hammer stone. /clowder hub Grit stall sells a bundle."
+		"How: lava next to water (or ice melt). Hammer stone. /clowder hub Grit-singers' stall sells a bundle."
 	]
 	quest.420000000002004D.title: "Pebbles"
 	quest.420000000002004E.quest_desc: [
@@ -554,12 +554,12 @@
 	quest.4200000000020055.title: "Gold Ore Chunk"
 	quest.4200000000020056.quest_desc: [
 		"Fuel the line.",
-		"How: sieve dirt/gravel, or coal ore through Echo Shatter then furnace."
+		"How: sieve gravel, or smelt coal ore."
 	]
 	quest.4200000000020056.title: "Coal"
 	quest.4200000000020057.quest_desc: [
 		"Chunks to raw. Smelt onward.",
-		"How: sieve gravel (flint mesh and up) or smelt iron grit from Echo Shatter."
+		"How: sieve gravel for iron ore chunks; four make an iron ore block, and mining it drops raw iron."
 	]
 	quest.4200000000020057.title: "Raw Iron"
 	quest.4200000000020058.quest_desc: [
@@ -573,7 +573,7 @@
 	]
 	quest.4200000000020059.title: "Copper Ingot"
 	quest.420000000002005A.quest_desc: [
-		"Gilded tools, and gold plates for the pattern-weavers.",
+		"Gilded tools, and gold plates for the Pattern-weavers.",
 		"How: smelt raw gold / gold grit. Rarer sieve catch."
 	]
 	quest.420000000002005A.title: "Gold Ingot"
@@ -644,7 +644,7 @@
 	quest.4200000000020067.title: "Flint"
 	quest.4200000000020068.quest_desc: [
 		"Made from grit and dust, not looted from a creeper. Handle it carefully.",
-		"How: creepers on the pad at night. Keep edges lit after you have some."
+		"How: sieve dust or soul sand, or creepers on the pad at night. Keep edges lit after you have some."
 	]
 	quest.4200000000020068.title: "Gunpowder"
 	quest.4200000000020069.quest_desc: [
@@ -689,12 +689,12 @@
 	quest.4200000000020070.title: "Glowstone Dust"
 	quest.4200000000020071.quest_desc: [
 		"Strips leaves off a tree without swinging an axe at the trunk.",
-		"How: four sticks. Grit stall sells one."
+		"How: four sticks. The Grit-singers' stall sells one."
 	]
 	quest.4200000000020071.title: "Crook"
 	quest.4200000000020072.quest_desc: [
 		"Pulled from the sieve in growing piles. Never quite enough for every mesh.",
-		"How: unravel Frayed Thread (1 → 3). Spiders. Sieve. Yarn reverse sink."
+		"How: unravel Frayed Thread (1 → 3). Spiders. Loom Lint at an Echo Bind. Yarn reverse sink."
 	]
 	quest.4200000000020072.title: "String"
 	quest.4200000000020073.quest_desc: [
@@ -817,7 +817,7 @@
 	]
 	quest.4200000000030089.title: "Stone Seeds"
 	quest.420000000003008A.quest_desc: [
-		"Metal from leaves. Recover's second engine.",
+		"Metal from a crop. Recover's second engine.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000003008A.title: "Iron Seeds"
@@ -827,7 +827,7 @@
 	]
 	quest.420000000003008B.title: "Copper Seeds"
 	quest.420000000003008C.quest_desc: [
-		"Gilded leaves that grow gold essence right on the pad.",
+		"A gilded crop that grows gold essence right on the pad.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000003008C.title: "Gold Seeds"
@@ -873,7 +873,7 @@
 	quest.4200000000030094.title: "Hay Silo"
 	quest.4200000000030095.quest_desc: [
 		"Better farmland. Rootbinders would approve.",
-		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
+		"How: place Organic Compost and wait; it slowly matures into Rich Soil."
 	]
 	quest.4200000000030095.title: "Rich Soil"
 	quest.4200000000030096.quest_desc: [
@@ -1220,7 +1220,7 @@
 	]
 	quest.42000000000500D7.title: "Hum: Ley Collector"
 	quest.42000000000500D8.quest_desc: [
-		"Seat a reusable Echo catalyst and two different elemental totems. The camp sings its own power; redstone pauses the harmony.",
+		"Seat an Echo catalyst (it wears down as it works) and two different elemental totems. The camp sings its own power; redstone pauses the harmony.",
 		"How: seat an Echo catalyst, two different totems within 8. Redstone pauses it."
 	]
 	quest.42000000000500D8.title: "Hum: Pulse Resonator"
@@ -1396,7 +1396,7 @@
 	quest.42000000000500FA.title: "Detector Rail"
 	quest.42000000000500FB.quest_desc: [
 		"Alt solar craft.",
-		"How: Solar Flux mirror plus iron/glass. Cell 1 is the first panel craft."
+		"How: three glass, three lapis and three Mirrors, a row of each."
 	]
 	quest.42000000000500FB.title: "Solar Flux Cell"
 	quest.42000000000500FC.quest_desc: [
@@ -1406,7 +1406,7 @@
 	quest.42000000000500FC.title: "Pipez Item"
 	quest.42000000000500FD.quest_desc: [
 		"Simple fluid pipes.",
-		"How: iron + buckets + redstone. Wrench for face and filter."
+		"How: iron + buckets + redstone. Sneak-use the wrench on a side to extract; right-click that side for filters."
 	]
 	quest.42000000000500FD.title: "Pipez Fluid"
 	quest.42000000000500FE.quest_desc: [
@@ -1415,13 +1415,13 @@
 	]
 	quest.42000000000500FE.title: "Pipez Energy"
 	quest.42000000000500FF.quest_desc: [
-		"Sets a pipe's filter and direction without breaking it off the wall.",
-		"How: iron + redstone. Sneak-use a pipe to set direction without breaking it."
+		"Sets which pipe sides pull from a machine, or cuts a side off, without breaking the pipe.",
+		"How: two flint and two sticks. Sneak-use a pipe side at a machine to make it extract, again to cut it off; right-click an extracting side for filters."
 	]
 	quest.42000000000500FF.title: "Pipez Wrench"
 	quest.4200000000050100.quest_desc: [
 		"Mark lattice lines — needs a Spirit Shard.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two bone meal, lapis and a Spirit Shard, shapeless. Yields four."
 	]
 	quest.4200000000050100.title: "Ritual Chalk"
 	quest.4200000000050101.quest_desc: [
@@ -1438,8 +1438,8 @@
 	]
 	quest.4200000000050102.title: "Seat Spark"
 	quest.4200000000050103.quest_desc: [
-		"Follow Tribal Weave through Echo refinement to a Resonant Core. The Pulse Adapter turns the camp's reusable harmony into FE for this chapter's machines. Unranked conversion is 20 Pulse a second; rank it at Echo stations for more. It cannot receive FE. Redstone pauses both conversion and export.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"Follow Tribal Weave through Echo refinement to a Resonant Core. The Harmonic Energizer turns the camp's harmony into FE for this chapter's machines. Unranked conversion is 60 Pulse a second; rank it at Echo stations for more. It cannot receive FE. Redstone pauses both conversion and export.",
+		"How: five copper ingots, three redstone and a Resonant Core."
 	]
 	quest.4200000000050103.title: "Hum becomes current"
 	quest.4200000000050104.quest_desc: [
@@ -1475,7 +1475,7 @@
 	quest.4200000000060109.title: "Andesite Casing"
 	quest.420000000006010A.quest_desc: [
 		"A river in the sky, turning.",
-		"How: shafts + planks + slabs. Needs a water flow beside it."
+		"How: eight planks around a shaft. Needs a water flow beside it."
 	]
 	quest.420000000006010A.title: "Water Wheel"
 	quest.420000000006010B.quest_desc: [
@@ -1605,7 +1605,7 @@
 	]
 	quest.4200000000060123.title: "Gearshift"
 	quest.4200000000060124.quest_desc: [
-		"Programmed spin. The pattern-weavers' song, written down.",
+		"Programmed spin. The Pattern-weavers' song, written down.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.4200000000060124.title: "Sequenced Gearshift"
@@ -1723,7 +1723,7 @@
 	quest.4200000000070139.title: "A Flower to Argue Over"
 	quest.420000000007013A.quest_desc: [
 		"Planks and flowers — a home a wild bee will move into.",
-		"How: oak log ring around a small flower; wait for wings. Swarm names the nest."
+		"How: three small flowers between two rows of planks. Swarm names the nest."
 	]
 	quest.420000000007013A.title: "Bee Nest"
 	quest.420000000007013B.quest_desc: [
@@ -1832,7 +1832,7 @@
 	]
 	quest.420000000007014F.title: "Lapis Seeds"
 	quest.4200000000070150.quest_desc: [
-		"Quartz grown on leaves instead of dug from Nether caves.",
+		"Quartz grown on a crop instead of dug from Nether caves.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000070150.title: "Nether Quartz Seeds"
@@ -1842,7 +1842,7 @@
 	]
 	quest.4200000000070151.title: "Glowstone Seeds"
 	quest.4200000000070152.quest_desc: [
-		"Hardened leaves that yield obsidian essence without a lava bucket in sight.",
+		"A hardened crop that yields obsidian essence without a lava bucket in sight.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000070152.title: "Obsidian Seeds"
@@ -2031,8 +2031,8 @@
 	quest.4200000000080175.title: "Dragon Breath"
 	quest.4200000000080176.quest_desc: [
 		"One more chance.",
-		"Optional — the void may never offer one.",
-		"How: raids and evokers do not happen on the pad. Optional."
+		"Optional — no raids reach the pad, so the pack crafts one instead.",
+		"How: pack recipe, four gold blocks and four emeralds around a golden apple. Raids and evokers never come to the pad. Optional."
 	]
 	quest.4200000000080176.title: "Totem"
 	quest.4200000000080177.quest_desc: [
@@ -2082,7 +2082,7 @@
 	quest.420000000008017F.title: "Source Jar"
 	quest.4200000000080180.quest_desc: [
 		"Call spirits by their names.",
-		"How: book + purple dye (JEI). Read it; Spirit Fire is next."
+		"How: a book and Demon's Dream Seeds, shapeless. Read it; Spirit Fire is next."
 	]
 	quest.4200000000080180.title: "Occultism Dictionary"
 	quest.4200000000080181.quest_desc: [
@@ -2097,22 +2097,22 @@
 	quest.4200000000080182.title: "Golden Sacrificial Bowl"
 	quest.4200000000080183.quest_desc: [
 		"The heart of aura-based crafting, tuned to the land around it.",
-		"How: wood + gold leaf. Heart of the Aura line."
+		"How: Ritual of the Forest (JEI): three stone, a Gold Leaf, a gold ingot and a Token of Joy. Heart of the Aura line."
 	]
-	quest.4200000000080183.title: "Nature Altar"
+	quest.4200000000080183.title: "Natural Altar"
 	quest.4200000000080184.quest_desc: [
 		"A plant infused by high aura, spun into something rarer.",
-		"How: seeds + gold nuggets, plant on grass in aura. Aura chapter starts here."
+		"How: four leaves and four gold nuggets around short grass make four Brilliant Fiber. Place it in the crown of a tree; its leaves turn golden with time."
 	]
-	quest.4200000000080184.title: "Gold Fiber"
+	quest.4200000000080184.title: "Brilliant Fiber"
 	quest.4200000000080185.quest_desc: [
 		"Aura-touched material, more valuable than it looks lying on the ground.",
-		"How: break golden leaves grown from Gold Fiber."
+		"How: break golden leaves grown from Brilliant Fiber."
 	]
 	quest.4200000000080185.title: "Gold Leaf"
 	quest.4200000000080186.quest_desc: [
 		"Iron that's soaked up ambient aura until it's worth more than the ore.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
 	quest.4200000000080186.title: "Infused Iron"
 	quest.4200000000080187.quest_desc: [
@@ -2121,10 +2121,10 @@
 	]
 	quest.4200000000080187.title: "Eye"
 	quest.4200000000080188.quest_desc: [
-		"Raises the aura of the area it's placed in.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"A token of joy. The Natural Altar and Herbivorous Absorber are built on one.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000080188.title: "Token Joy"
+	quest.4200000000080188.title: "Token of Joy"
 	quest.4200000000080189.quest_desc: [
 		"Spell parchment stock.",
 		"How: Arcane Side — archwood and sourceberry from moss, then the cascade."
@@ -2147,7 +2147,7 @@
 	quest.420000000008018C.title: "Blank Glyph"
 	quest.420000000008018D.quest_desc: [
 		"Casts combat spells without ever touching a wand.",
-		"How: iron + paper + arcane essence. Spells chapter names ink."
+		"How: three chains, four leather and two paper. Spells chapter names ink."
 	]
 	quest.420000000008018D.title: "Iron's Spell Book"
 	quest.420000000008018E.quest_desc: [
@@ -2484,7 +2484,7 @@
 	quest.42000000000901CC.title: "Reweave"
 	quest.42000000000901CD.quest_desc: [
 		"A wither, on a pad, in the sky. The Loom-stitchers would have been impressed and then furious.",
-		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Drumhearts' stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.42000000000901CD.title: "A Star, Somehow"
 	quest.42000000000A01CE.quest_desc: [
@@ -2500,7 +2500,7 @@
 	quest.42000000000A01CF.title: "Bone Crook"
 	quest.42000000000A01D0.quest_desc: [
 		"The plainest mesh. Everything you sieve starts by passing through this.",
-		"How: nine string in a 3x3. The Grit stall sells the Voidloom string thread mesh, which sieves the same."
+		"How: nine string in a 3x3. The Grit-singers' stall sells the Voidloom string thread mesh, which sieves the same."
 	]
 	quest.42000000000A01D0.title: "String Mesh"
 	quest.42000000000A01D1.quest_desc: [
@@ -2534,7 +2534,7 @@
 	]
 	quest.42000000000A01D6.title: "Porcelain Clay (Sieve)"
 	quest.42000000000A01D7.quest_desc: [
-		"Fuel a furnace generator.",
+		"Porcelain clay shaped into a crucible. Fire it in a furnace.",
 		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
 	]
 	quest.42000000000A01D7.title: "Unfired Crucible"
@@ -2555,12 +2555,12 @@
 	quest.42000000000A01DA.title: "Watering Can Iron"
 	quest.42000000000A01DB.quest_desc: [
 		"Set loose on leaves, it spins silk while it feeds.",
-		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
+		"How: break leaves with a crook; silkworms drop now and then."
 	]
 	quest.42000000000A01DB.title: "Silkworm"
 	quest.42000000000A01DC.quest_desc: [
 		"Strange water that nudges saplings and seeds toward stranger crops.",
-		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
+		"How: a barrel of water on mycelium turns to witch water; fill a bucket from it. Mycelium spores sieve from dirt."
 	]
 	quest.42000000000A01DC.title: "Witch Water Bucket"
 	quest.42000000000A01DD.quest_desc: [
@@ -2579,12 +2579,12 @@
 	]
 	quest.42000000000A01DF.title: "Stone Pebble"
 	quest.42000000000A01E0.quest_desc: [
-		"Nine pebbles packed tight into storage stone for a growing pad.",
+		"Nine cobblestone packed tight into storage stone for a growing pad.",
 		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
 	]
 	quest.42000000000A01E0.title: "Compressed Cobble"
 	quest.42000000000A01E1.quest_desc: [
-		"Breaks cobble into pebbles faster than any hammer before it.",
+		"Breaks cobble into gravel faster than any hammer before it.",
 		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
 	]
 	quest.42000000000A01E1.title: "Netherite Hammer"
@@ -2619,9 +2619,9 @@
 	]
 	quest.42000000000A01E7.title: "Sponge"
 	quest.42000000000B01E8.quest_desc: [
-		"Links every drawer on the pad into one searchable network.",
+		"Links the storage around it into one searchable network.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
-		"How: barrel + iron/redstone in JEI. Links nearby Sophisticated barrels."
+		"How: a wooden barrel or chest, two comparators, planks and stone. Links nearby Sophisticated barrels."
 	]
 	quest.42000000000B01E8.title: "Storage Controller"
 	quest.42000000000B01E9.quest_desc: [
@@ -2638,7 +2638,7 @@
 		"Pull dropped items straight into the barrel from across the pad.",
 		"How: barrels and upgrades in JEI. Controller ties a wall of barrels together."
 	]
-	quest.42000000000B01EB.title: "Stack Upgrade"
+	quest.42000000000B01EB.title: "Advanced Magnet Upgrade"
 	quest.42000000000B01EC.quest_desc: [
 		"In one side, out the other, no hopper block needed.",
 		"How: barrels and upgrades in JEI. Controller ties a wall of barrels together."
@@ -2650,7 +2650,7 @@
 	]
 	quest.42000000000B01ED.title: "Void Upgrade"
 	quest.42000000000B01EE.quest_desc: [
-		"Sucks nearby drops straight into the backpack as you walk.",
+		"Pulls nearby drops straight into the storage it is fitted to.",
 		"How: barrels and upgrades in JEI. Controller ties a wall of barrels together."
 	]
 	quest.42000000000B01EE.title: "Pickup Upgrade"
@@ -2675,7 +2675,7 @@
 	]
 	quest.42000000000B01F2.title: "Compacting Drawer"
 	quest.42000000000B01F3.quest_desc: [
-		"Links every drawer on the pad into one searchable network.",
+		"Links the storage around it into one searchable network.",
 		"How: oak drawers 1x1 / 1x2 / 2x2, then compacting drawer and controller. JEI names the craft."
 	]
 	quest.42000000000B01F3.title: "Storage Controller (Storage)"
@@ -2720,7 +2720,7 @@
 	]
 	quest.42000000000B01FB.title: "Diamond Backpack"
 	quest.42000000000B01FC.quest_desc: [
-		"Sucks nearby drops straight into the backpack as you walk.",
+		"Pulls nearby drops straight into the storage it is fitted to.",
 		"How: leather backpack, then iron/gold/diamond upgrades in JEI."
 	]
 	quest.42000000000B01FC.title: "Pickup Upgrade (Storage)"
@@ -2989,7 +2989,7 @@
 	quest.42000000000E0230.title: "Apprentice Spell Book"
 	quest.42000000000E0231.quest_desc: [
 		"The largest spell book, room enough for a full arsenal of glyphs.",
-		"How: Arcane Side — archwood and sourceberry from moss, then the cascade."
+		"How: Mage's Spell Book, three ender pearls, two emeralds, a Totem of Undying, a nether star and a Wilden Tribute, shapeless. Totem: pack recipe, four gold blocks and four emeralds around a golden apple."
 	]
 	quest.42000000000E0231.title: "Archmage Spell Book"
 	quest.42000000000E0232.quest_desc: [
@@ -3206,129 +3206,129 @@
 	quest.4200000000110278.title: "Eye (Aura)"
 	quest.4200000000110279.quest_desc: [
 		"Woven from gold, used to infuse plants with concentrated aura.",
-		"How: seeds + gold nuggets, plant on grass in aura. Aura chapter starts here."
+		"How: four leaves and four gold nuggets around short grass make four Brilliant Fiber. Place it in the crown of a tree; its leaves turn golden with time."
 	]
-	quest.4200000000110279.title: "Gold Fiber (Aura)"
+	quest.4200000000110279.title: "Brilliant Fiber (Aura)"
 	quest.420000000011027A.quest_desc: [
 		"A refined material used in the altar's higher tier recipes.",
-		"How: break golden leaves grown from Gold Fiber."
+		"How: break golden leaves grown from Brilliant Fiber."
 	]
 	quest.420000000011027A.title: "Gold Leaf (Aura)"
 	quest.420000000011027B.quest_desc: [
 		"Leaves that hold a soft golden glow year round.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
 	quest.420000000011027B.title: "Golden Leaves"
 	quest.420000000011027C.quest_desc: [
-		"Holds an offering for the nature altar to consume.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"Holds an ingredient for the Ritual of the Forest, set around a sapling.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.420000000011027C.title: "Wood Stand"
+	quest.420000000011027C.title: "Wooden Stand"
 	quest.420000000011027D.quest_desc: [
 		"The altar where aura powers stronger crafting recipes.",
-		"How: wood + gold leaf. Heart of the Aura line."
+		"How: Ritual of the Forest (JEI): three stone, a Gold Leaf, a gold ingot and a Token of Joy. Heart of the Aura line."
 	]
-	quest.420000000011027D.title: "Nature Altar (Aura)"
+	quest.420000000011027D.title: "Natural Altar (Aura)"
 	quest.420000000011027E.quest_desc: [
-		"Iron charged with aura, a step toward the depths powder.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"Iron charged with aura, a step toward the Ingot of the Depths.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
 	quest.420000000011027E.title: "Infused Iron (Aura)"
 	quest.420000000011027F.quest_desc: [
 		"Bark stripped from ancient trees, useful in aura recipes.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
 	quest.420000000011027F.title: "Ancient Bark"
 	quest.4200000000110280.quest_desc: [
-		"Charges an area with joy, boosting nearby crop growth.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"A token of joy. The Natural Altar and Herbivorous Absorber are built on one.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110280.title: "Token Joy (Aura)"
+	quest.4200000000110280.title: "Token of Joy (Aura)"
 	quest.4200000000110281.quest_desc: [
-		"Charges an area with fear, driving hostile mobs away.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"A token of fear. The Canopy Diminisher and Lingering Absorber are built on one.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110281.title: "Token Fear"
+	quest.4200000000110281.title: "Token of Fear"
 	quest.4200000000110282.quest_desc: [
-		"Charges an area with anger, provoking nearby mobs to fight.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"A token of anger. The Crumbling Catalyst and Shooting Mark need one.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110282.title: "Token Anger"
+	quest.4200000000110282.title: "Token of Anger"
 	quest.4200000000110283.quest_desc: [
-		"Charges an area with sorrow, slowing mobs that wander through.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"A token of sorrow. The Offering Table and Disentangler of Mortals need one.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110283.title: "Token Sorrow"
+	quest.4200000000110283.title: "Token of Sorrow"
 	quest.4200000000110284.quest_desc: [
 		"Aura spirit for rituals.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110284.title: "Calling Spirit"
+	quest.4200000000110284.title: "Spirit of Calling"
 	quest.4200000000110285.quest_desc: [
 		"Birth spirit for aura rites.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110285.title: "Birth Spirit"
+	quest.4200000000110285.title: "Spirit of Birthing"
 	quest.4200000000110286.quest_desc: [
 		"Stores a reserve of aura for when the land runs thin.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110286.title: "Aura Troves"
+	quest.4200000000110286.title: "Aura Trove"
 	quest.4200000000110287.quest_desc: [
 		"Late. Only if the Aura wants it.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110287.title: "Generator Puzzle"
+	quest.4200000000110287.title: "Creational Catalyst"
 	quest.4200000000110288.quest_desc: [
 		"Reveals aura and spawn conditions over a wider stretch of land.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110288.title: "Environmental Eye"
+	quest.4200000000110288.title: "Environmental Ocular"
 	quest.4200000000110289.quest_desc: [
-		"Uses ambient aura to crush ores dropped nearby, no machine needed.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"Set beside the Natural Altar, it opens the altar's crushing recipes.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110289.title: "Crushing Catalyst"
+	quest.4200000000110289.title: "Crumbling Catalyst"
 	quest.420000000011028A.quest_desc: [
-		"Converts items dropped nearby using stored aura, no crafting table needed.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"Set beside the Natural Altar, it opens the altar's transmutation recipes.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.420000000011028A.title: "Conversion Catalyst"
+	quest.420000000011028A.title: "Transmutation Catalyst"
 	quest.420000000011028B.quest_desc: [
-		"A refined powder pulled from aura deep underground.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"Sky ingots, tainted gold and netherite scrap, pressed into the Ingot of the Depths.",
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.420000000011028B.title: "Depths Powder"
+	quest.420000000011028B.title: "Ingot of the Depths"
 	quest.420000000011028C.quest_desc: [
 		"Marks a farm layout that draws aura into faster crop growth.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
 	quest.420000000011028C.title: "Farming Stencil"
 	quest.420000000011028D.quest_desc: [
 		"Generates aura whenever a projectile lands nearby.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.420000000011028D.title: "Projectile Generator"
+	quest.420000000011028D.title: "Shooting Mark"
 	quest.420000000011028E.quest_desc: [
 		"Generates aura slowly from flowers blooming nearby.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.420000000011028E.title: "Flower Generator"
+	quest.420000000011028E.title: "Herbivorous Absorber"
 	quest.420000000011028F.quest_desc: [
 		"Generates aura slowly from oak trees growing nearby.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.420000000011028F.title: "Oak Generator"
+	quest.420000000011028F.title: "Canopy Diminisher"
 	quest.4200000000110290.quest_desc: [
 		"A flower from the end, oddly at home on a floating pad.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110290.title: "End Flower"
+	quest.4200000000110290.title: "Rose of Oblivion"
 	quest.4200000000110291.quest_desc: [
 		"Lights an area to keep hostile mobs from spawning there.",
-		"How: Gold Fiber on trees → Gold Leaf → Nature Altar. Aura chapter names tokens and generators."
+		"How: Brilliant Fiber on trees → Gold Leaf → Natural Altar. Aura chapter names tokens and generators."
 	]
-	quest.4200000000110291.title: "Spawn Lamp"
+	quest.4200000000110291.title: "Lamp of Sanctuary"
 	quest.4200000000120292.quest_desc: [
 		"Cooks stew-type meals that feed more than one plate at once.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
@@ -3367,7 +3367,7 @@
 	quest.4200000000120298.title: "Safety Net"
 	quest.4200000000120299.quest_desc: [
 		"Boosts nearby crop growth once it's tilled and planted.",
-		"How: Farmer's Delight craft in JEI (crafting table, cutting board or cooking pot). Crop seeds come from sieving dirt."
+		"How: place Organic Compost and wait; it slowly matures into Rich Soil."
 	]
 	quest.4200000000120299.title: "Rich Soil (Kitchen)"
 	quest.420000000012029A.quest_desc: [
@@ -3453,7 +3453,7 @@
 	quest.42000000001302AA.quest_desc: [
 		"The first book that lets you cast spells in a real fight.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
-		"How: iron + paper + arcane essence. Spells chapter names ink."
+		"How: three chains, four leather and two paper. Spells chapter names ink."
 	]
 	quest.42000000001302AA.title: "Iron Spell Book"
 	quest.42000000001302AB.quest_desc: [
@@ -3528,7 +3528,7 @@
 	quest.42000000001302B8.title: "Graybeard Staff"
 	quest.42000000001302B9.quest_desc: [
 		"A blade that punishes spellcasters, cutting through their defenses.",
-		"How: Arcane Essence and ink, then a spellbook. Spells chapter names the ladder."
+		"How: pack recipe, two Arcane Ingots up the diagonal with a chain either side and a diamond at the hilt. Its only wild carrier lives in evoker forts, which the pad never has."
 	]
 	quest.42000000001302B9.title: "Magehunter"
 	quest.42000000001302BA.quest_desc: [
@@ -3538,7 +3538,7 @@
 	quest.42000000001302BA.title: "Copper Spell Book"
 	quest.42000000001302BB.quest_desc: [
 		"The strongest spell book, holding the most spell slots of all.",
-		"How: Arcane Essence and ink, then a spellbook. Spells chapter names the ladder."
+		"How: four Arcane Cloth, two Blood Vials, a netherite ingot, a Bottle o' Lightning and a Ruined Book (pack recipe). JEI names it Ancient Codex."
 	]
 	quest.42000000001302BB.title: "Netherite Spell Book"
 	quest.42000000001302BC.quest_desc: [
@@ -3548,98 +3548,98 @@
 	quest.42000000001302BC.title: "Arcane Ingot"
 	quest.42000000001302BD.quest_desc: [
 		"A damaged book that can be pieced back into knowledge.",
-		"How: Arcane Essence and ink, then a spellbook. Spells chapter names the ladder."
+		"How: pack recipe, an enchanted book ringed by four Arcane Essence and four soul sand. JEI names it Ruined Book."
 	]
 	quest.42000000001302BD.title: "Ruined Codex"
 	quest.42000000001402BE.quest_desc: [
-		"Redirects sunlight toward a solar tower for a bigger yield.",
+		"The first Solar Flux part. Cells, coatings and the Blank Upgrade are built from it.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
-		"How: glass and iron in JEI. First Solar Flux part."
+		"How: three glass over an iron ingot makes three Mirrors."
 	]
 	quest.42000000001402BE.title: "Mirror"
 	quest.42000000001402BF.quest_desc: [
 		"The first tier of solar cell, weak but cheap to stack.",
-		"How: Solar Flux mirror plus iron/glass. Cell 1 is the first panel craft."
+		"How: three glass, three lapis and three Mirrors, a row of each."
 	]
 	quest.42000000001402BF.title: "Photovoltaic Cell 1"
 	quest.42000000001402C0.quest_desc: [
 		"A stronger solar cell, a step up from the last tier.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: three clay balls, three lapis, two Mirrors and a Photovoltaic Cell I."
 	]
 	quest.42000000001402C0.title: "Photovoltaic Cell 2"
 	quest.42000000001402C1.quest_desc: [
 		"Mid tier solar cell, noticeably more output per panel.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: three glass, three glowstone dust, two obsidian and a Photovoltaic Cell II."
 	]
 	quest.42000000001402C1.title: "Photovoltaic Cell 3"
 	quest.42000000001402C2.quest_desc: [
 		"A high tier solar cell for a panel built to scale.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: three Blazing Coating, two glowstone dust, a diamond, two quartz blocks and a Photovoltaic Cell III."
 	]
 	quest.42000000001402C2.title: "Photovoltaic Cell 4"
 	quest.42000000001402C3.quest_desc: [
 		"Near the top tier, this cell pulls serious power from daylight.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: three Emerald Glass, two glowstone blocks, a diamond block, a quartz block and two Photovoltaic Cell IV. Makes two."
 	]
 	quest.42000000001402C3.title: "Photovoltaic Cell 5"
 	quest.42000000001402C4.quest_desc: [
 		"The strongest solar cell made, the ceiling for a single panel.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: three Ender Glass, two glowstone blocks, an emerald block, a quartz block and two Photovoltaic Cell V. Makes two."
 	]
 	quest.42000000001402C4.title: "Photovoltaic Cell 6"
 	quest.42000000001402C5.quest_desc: [
 		"Lets a solar panel hold a larger reserve of stored power.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: five redstone blocks, a diamond block and a Blank Upgrade."
 	]
 	quest.42000000001402C5.title: "Capacity Upgrade"
 	quest.42000000001402C6.quest_desc: [
 		"Squeezes more power out of the same sunlight.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: three Mirrors, a Blank Upgrade and a Photovoltaic Cell I."
 	]
 	quest.42000000001402C6.title: "Efficiency Upgrade"
 	quest.42000000001402C7.quest_desc: [
 		"Lets a solar panel send power out faster.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: six redstone and two gold ingots around a Blank Upgrade."
 	]
 	quest.42000000001402C7.title: "Transfer Upgrade"
 	quest.42000000001402C8.quest_desc: [
-		"Lets the panel track the sun's path for steadier output.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"Passes power on to the machines connected to the panel, within a few blocks.",
+		"How: four iron ingots, two pistons and two redstone around a Blank Upgrade."
 	]
 	quest.42000000001402C8.title: "Traversal Upgrade"
 	quest.42000000001402C9.quest_desc: [
-		"Spreads charge across nearby machines instead of one output line.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"Sends power to players standing near the panel.",
+		"How: four glowstone dust and four Eyes of Ender around a Blank Upgrade."
 	]
 	quest.42000000001402C9.title: "Dispersive Upgrade"
 	quest.42000000001402CA.quest_desc: [
-		"Lets the panel charge chargeable blocks placed against it directly.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"Sends power to one linked block within range, no cable needed.",
+		"How: four ender pearls and four redstone blocks around a Dispersive Upgrade."
 	]
 	quest.42000000001402CA.title: "Block Charging Upgrade"
 	quest.42000000001402CB.quest_desc: [
 		"Lets the panel smelt items using stored sunlight instead of fuel.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: five coal, a furnace and two Blazing Coating around a Blank Upgrade."
 	]
 	quest.42000000001402CB.title: "Furnace Upgrade"
 	quest.42000000001402CC.quest_desc: [
-		"Colored glass panel for solar builds, mostly decorative shading.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"Mirror glass set with an emerald. Ender Glass and Photovoltaic Cell V are built on it.",
+		"How: an emerald between two Mirrors in a column makes two."
 	]
 	quest.42000000001402CC.title: "Emerald Glass"
 	quest.42000000001402CD.quest_desc: [
-		"A dark, void-toned glass panel for a solar tower's frame.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"Emerald Glass charged with pearls and an eye. Photovoltaic Cell VI is built on it.",
+		"How: three Emerald Glass over an Eye of Ender between two ender pearls makes three."
 	]
 	quest.42000000001402CD.title: "Ender Glass"
 	quest.42000000001402CE.quest_desc: [
-		"A coating that helps the panel handle intense heat.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"A blaze-dusted Mirror finish. Photovoltaic Cell IV and the Furnace Upgrade use it.",
+		"How: blaze powder between two Mirrors in a column makes two."
 	]
 	quest.42000000001402CE.title: "Blazing Coating"
 	quest.42000000001402CF.quest_desc: [
 		"An uncommitted upgrade item, crafted into any upgrade type.",
-		"How: Solar Flux — glass + iron mirror, then photovoltaic cells 1–6. Spark has a starter cell."
+		"How: four cobblestone around a Mirror."
 	]
 	quest.42000000001402CF.title: "Blank Upgrade"
 	quest.42000000001502D0.quest_desc: [
@@ -3690,12 +3690,12 @@
 	quest.42000000001502D8.title: "Bricks"
 	quest.42000000001502D9.quest_desc: [
 		"Pale, packed mud shaped into building trim.",
-		"How: four packed mud. Mud is dirt plus a water bottle."
+		"How: four packed mud. Mud is dirt plus a water bottle; mud and wheat make packed mud."
 	]
 	quest.42000000001502D9.title: "Mud Bricks"
 	quest.42000000001502DA.quest_desc: [
 		"Dark stone bricks pulled from the deep.",
-		"How: polished deepslate in a square, or the stonecutter. Deepslate from Echo Shatter or the Nether."
+		"How: polished deepslate in a square, or the stonecutter. Four deepslate pebbles (sieve dirt) make cobbled deepslate."
 	]
 	quest.42000000001502DA.title: "Deepslate Bricks"
 	quest.42000000001502DB.quest_desc: [
@@ -3919,7 +3919,7 @@
 	]
 	quest.4200000000150306.title: "Target Spare"
 	quest.4200000000150307.quest_desc: [
-		"Jukebox for pad morale.",
+		"Plays one note when struck or powered. Tune it by hand.",
 		"How: craft, smelt, sieve, or mob-drop this. JEI lists every source on the pad."
 	]
 	quest.4200000000150307.title: "Note Block Spare"
@@ -3955,7 +3955,7 @@
 	quest.420000000015030D.title: "Ender Chest"
 	quest.420000000015030E.quest_desc: [
 		"Crafts into a shulker box for stackable, safe storage.",
-		"How: End cities are gone from the main island. Optional."
+		"How: pack recipe, six purpur blocks, two ender pearls and a Binding Knot. Shulkers never spawn here. Optional."
 	]
 	quest.420000000015030E.title: "Shulker Shell"
 	quest.420000000016030F.quest_desc: [
@@ -4111,7 +4111,8 @@
 	quest.420000000016032C.title: "Fire Charge"
 	quest.4200000000178001.quest_desc: [
 		"Twelve portal frames are not a pad craft, so the End is a bite away instead.",
-		"Eat it to stand on the End's obsidian pad; eat the half that is left to come home to the spot you ate from."
+		"Eat it to stand on the End's obsidian pad; eat the half that is left to come home to the spot you ate from.",
+		"How: five ender pearls, two bones and two blaze powder at a crafting table."
 	]
 	quest.4200000000178001.title: "End Apple"
 	quest.420000000017032D.quest_desc: [
@@ -4179,14 +4180,14 @@
 	quest.4200000000170338.title: "Elytra Show"
 	quest.4200000000170339.quest_desc: [
 		"Shulker shells for boxes.",
-		"Optional — the void may never offer one.",
-		"How: End cities are gone from the main island. Optional."
+		"Optional — no shulkers here, so the pack crafts shells instead.",
+		"How: pack recipe, six purpur blocks, two ender pearls and a Binding Knot. Shulkers never spawn here. Optional."
 	]
 	quest.4200000000170339.title: "Shulker Shell Stock"
 	quest.420000000017033A.quest_desc: [
 		"A portable chest that keeps its contents when you break it.",
 		"Optional — the Edge-walkers in Clowder Hall sell one.",
-		"How: the Edge-walkers' stall at /clowder hub sells one for 22 Thread Skeins (198 Thread); shells never drop here. Optional."
+		"How: two Shulker Shells around a chest (shells are a pack recipe), or the Edge-walkers' stall at /clowder hub for 22 Thread Skeins (198 Thread). Optional."
 	]
 	quest.420000000017033A.title: "Shulker Box Show"
 	quest.420000000017033B.quest_desc: [
@@ -4236,12 +4237,12 @@
 	quest.4200000000170343.title: "Respawn Anchor Show"
 	quest.4200000000170344.quest_desc: [
 		"Held in the off-hand, it cancels one otherwise fatal hit.",
-		"How: raids and evokers do not happen on the pad. Optional."
+		"How: pack recipe, four gold blocks and four emeralds around a golden apple. Raids and evokers never come to the pad. Optional."
 	]
 	quest.4200000000170344.title: "Totem Show"
 	quest.4200000000170345.quest_desc: [
 		"The wither's only drop. A beacon needs one to light up.",
-		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Drumhearts' stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.4200000000170345.title: "Nether Star Show"
 	quest.4200000000170346.quest_desc: [
@@ -4403,12 +4404,12 @@
 	]
 	quest.4200000000180364.title: "Fertilized Essence"
 	quest.4200000000180365.quest_desc: [
-		"Ground from soulium ingots. A component for hostile seeds.",
+		"The dust soulium ingots are made from. A component for hostile seeds.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180365.title: "Soulium Dust"
 	quest.4200000000180366.quest_desc: [
-		"Smelted from soulium dust, dark and a little cold.",
+		"Soulium dust bound to a prosperity ingot, dark and a little cold.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180366.title: "Soulium Ingot"
@@ -4608,32 +4609,32 @@
 	]
 	quest.420000000018038D.title: "Creeper Seeds"
 	quest.420000000018038E.quest_desc: [
-		"Grows on a mystical tree instead of underground.",
+		"Grows on a mystical crop instead of underground.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038E.title: "Iron Essence"
 	quest.420000000018038F.quest_desc: [
-		"A gilded leaf that drops gold instead of apples.",
+		"A gilded crop that drops gold essence instead of grain.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.420000000018038F.title: "Gold Essence"
 	quest.4200000000180390.quest_desc: [
-		"The hardest leaf on the tree, quite literally.",
+		"The hardest crop on the farm, quite literally.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180390.title: "Diamond Essence"
 	quest.4200000000180391.quest_desc: [
-		"Grows fuel on a tree instead of in a seam.",
+		"Grows fuel on a crop instead of in a seam.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180391.title: "Coal Essence"
 	quest.4200000000180392.quest_desc: [
-		"Grows copper on a tree instead of a vein.",
+		"Grows copper on a crop instead of a vein.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180392.title: "Copper Essence"
 	quest.4200000000180393.quest_desc: [
-		"Grows dust on a tree instead of underground.",
+		"Grows dust on a crop instead of underground.",
 		"How: Mystical Agriculture craft in JEI. Inferium and Prosperity come from the sieve; seeds are infused on the Infusion Altar."
 	]
 	quest.4200000000180393.title: "Redstone Essence"
@@ -4710,7 +4711,7 @@
 	quest.42000000001903A1.title: "Bee Cage (Apiary)"
 	quest.42000000001903A2.quest_desc: [
 		"Holds a bee safely for transport between pads.",
-		"How: Productive Bees craft in JEI. Swarm names the hive, centrifuge and breeding steps."
+		"How: village chests only, and the void has no villages. Optional."
 	]
 	quest.42000000001903A2.title: "Sturdy Cage"
 	quest.42000000001903A3.quest_desc: [
@@ -4794,7 +4795,7 @@
 	]
 	quest.42000000001903B2.title: "Gene Bottle"
 	quest.42000000001903B3.quest_desc: [
-		"Six combs pressed solid, mostly for building with.",
+		"Four combs pressed solid, mostly for building with.",
 		"How: four honeycomb."
 	]
 	quest.42000000001903B3.title: "Honeycomb Block"
@@ -4911,7 +4912,7 @@
 	quest.42000000001A03CA.quest_desc: [
 		"One block that moves items where you tell it — the pad's nervous system.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
-		"How: iron + chest + paper in JEI. Modules go in the router."
+		"How: iron ingots and iron bars around a blank module; yields four. Modules go in the router."
 	]
 	quest.42000000001A03CA.title: "Modular Router"
 	quest.42000000001A03CB.quest_desc: [
@@ -4951,7 +4952,7 @@
 	quest.42000000001A03D1.title: "Item Pipe"
 	quest.42000000001A03D2.quest_desc: [
 		"Carries liquids between tanks and machines without a bucket run.",
-		"How: iron + buckets + redstone. Wrench for face and filter."
+		"How: iron + buckets + redstone. Sneak-use the wrench on a side to extract; right-click that side for filters."
 	]
 	quest.42000000001A03D2.title: "Fluid Pipe"
 	quest.42000000001A03D3.quest_desc: [
@@ -4961,47 +4962,47 @@
 	quest.42000000001A03D3.title: "Energy Pipe"
 	quest.42000000001A03D4.quest_desc: [
 		"Carries chemicals between machines that handle them.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"How: iron + redstone pipes in JEI. Sneak-use the wrench to set extracting sides; right-click one for filters. Pipes chapter is the full ladder."
 	]
 	quest.42000000001A03D4.title: "Gas Pipe"
 	quest.42000000001A03D5.quest_desc: [
 		"One pipe, many jobs.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"How: iron + redstone pipes in JEI. Sneak-use the wrench to set extracting sides; right-click one for filters. Pipes chapter is the full ladder."
 	]
 	quest.42000000001A03D5.title: "Universal Pipe"
 	quest.42000000001A03D6.quest_desc: [
-		"Right-click a pipe to set its direction and filters.",
-		"How: iron + redstone. Sneak-use a pipe to set direction without breaking it."
+		"Sneak-use a pipe side to make it pull from a machine, or to cut it off.",
+		"How: two flint and two sticks. Sneak-use a pipe side at a machine to make it extract, again to cut it off; right-click an extracting side for filters."
 	]
 	quest.42000000001A03D6.title: "Pipe Wrench"
 	quest.42000000001A03D7.quest_desc: [
-		"Speed upgrade for machines.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"Speed upgrade for a pipe.",
+		"How: iron + redstone pipes in JEI. Sneak-use the wrench to set extracting sides; right-click one for filters. Pipes chapter is the full ladder."
 	]
 	quest.42000000001A03D7.title: "Basic Upgrade"
 	quest.42000000001A03D8.quest_desc: [
 		"Slot into a pipe to move more per tick.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"How: iron + redstone pipes in JEI. Sneak-use the wrench to set extracting sides; right-click one for filters. Pipes chapter is the full ladder."
 	]
 	quest.42000000001A03D8.title: "Improved Upgrade"
 	quest.42000000001A03D9.quest_desc: [
 		"The stronger upgrade, for a line under heavy load.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"How: iron + redstone pipes in JEI. Sneak-use the wrench to set extracting sides; right-click one for filters. Pipes chapter is the full ladder."
 	]
 	quest.42000000001A03D9.title: "Advanced Upgrade"
 	quest.42000000001A03DA.quest_desc: [
 		"Top Pipez throughput tier.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"How: iron + redstone pipes in JEI. Sneak-use the wrench to set extracting sides; right-click one for filters. Pipes chapter is the full ladder."
 	]
 	quest.42000000001A03DA.title: "Ultimate Upgrade"
 	quest.42000000001A03DB.quest_desc: [
 		"Remove Pipez rate caps.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"How: creative-only; Pipez has no survival recipe for it. Optional."
 	]
 	quest.42000000001A03DB.title: "Infinity Upgrade"
 	quest.42000000001A03DC.quest_desc: [
 		"Sets which items a pipe end will accept or ignore.",
-		"How: iron + redstone pipes in JEI. Wrench sets filter and face. Pipes chapter is the full ladder."
+		"How: iron + redstone pipes in JEI. Sneak-use the wrench to set extracting sides; right-click one for filters. Pipes chapter is the full ladder."
 	]
 	quest.42000000001A03DC.title: "Filter Tool"
 	quest.42000000001A03DD.quest_desc: [
@@ -5122,7 +5123,7 @@
 	quest.42000000001B03F4.quest_desc: [
 		"Lists every spirit you can bind and what it needs.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
-		"How: book + purple dye (JEI). Read it; Spirit Fire is next."
+		"How: a book and Demon's Dream Seeds, shapeless. Read it; Spirit Fire is next."
 	]
 	quest.42000000001B03F4.title: "Dictionary of Spirits"
 	quest.42000000001B03F5.quest_desc: [
@@ -5348,7 +5349,7 @@
 	quest.42000000001C0420.title: "Adj Chain"
 	quest.42000000001C0421.quest_desc: [
 		"Spins from falling water, slow but steady.",
-		"How: shafts + planks + slabs. Needs a water flow beside it."
+		"How: eight planks around a shaft. Needs a water flow beside it."
 	]
 	quest.42000000001C0421.title: "Water Wheel (Clockworks)"
 	quest.42000000001C0422.quest_desc: [
@@ -5383,7 +5384,7 @@
 	quest.42000000001C0427.title: "Steam Whistle"
 	quest.42000000001C0428.quest_desc: [
 		"Heats basins hot enough for blasting and brewing.",
-		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
+		"How: craft an Empty Blaze Burner, then use it on a blaze from a Nether fortress after Claw obsidian."
 	]
 	quest.42000000001C0428.title: "Blaze Burner"
 	quest.42000000001C0429.quest_desc: [
@@ -5397,7 +5398,7 @@
 	]
 	quest.42000000001C042A.title: "Mechanical Mixer (Clockworks)"
 	quest.42000000001C042B.quest_desc: [
-		"Smash blocks for grit.",
+		"Presses ingots into sheets and packs a basin tight.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C042B.title: "Mechanical Press (Clockworks)"
@@ -5512,7 +5513,7 @@
 	]
 	quest.42000000001C0441.title: "Precision Mech"
 	quest.42000000001C0442.quest_desc: [
-		"Lights up brighter the faster it spins.",
+		"Polished rose quartz on an iron sheet, the signal part of brass machines.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C0442.title: "Electron Tube"
@@ -5572,12 +5573,12 @@
 	]
 	quest.42000000001C044D.title: "Packager"
 	quest.42000000001C044E.quest_desc: [
-		"Turns a stack back into a labeled storage drawer.",
+		"Gathers split packages back into whole orders.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044E.title: "Repackager"
 	quest.42000000001C044F.quest_desc: [
-		"Requests items from storage with a lever pull.",
+		"Requests items from a linked stock network.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001C044F.title: "Stock Ticker"
@@ -5723,7 +5724,7 @@
 	]
 	quest.42000000001D046B.title: "Energy Acceptor (Network)"
 	quest.42000000001D046C.quest_desc: [
-		"Buffer energy or items.",
+		"Buffers power for the network.",
 		"How: Spindle Network — certus from sand, controller wants a Knot."
 	]
 	quest.42000000001D046C.title: "Energy Cell"
@@ -5933,7 +5934,7 @@
 	]
 	quest.42000000001D0495.title: "Quartz Vibrant"
 	quest.42000000001D0496.quest_desc: [
-		"A solid storage block, nine crystals condensed into one.",
+		"A solid storage block, four crystals condensed into one.",
 		"How: Spindle Network — certus from sand, controller wants a Knot."
 	]
 	quest.42000000001D0496.title: "Fluix Block"
@@ -5943,14 +5944,14 @@
 	]
 	quest.42000000001D0497.title: "Cell Workbench"
 	quest.42000000001E0498.quest_desc: [
-		"Fired clay, a step toward porcelain tools.",
+		"Clay and bone meal, a step toward porcelain tools.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
 		"How: clay ball + bone meal, shapeless. Clay comes from the Tension Barrel."
 	]
 	quest.42000000001E0498.title: "Porcelain Clay (Voidcraft)"
 	quest.42000000001E0499.quest_desc: [
 		"A lighter bucket, easier on an early grit budget.",
-		"How: smelt porcelain clay."
+		"How: shape porcelain clay into an unfired bucket, then smelt it."
 	]
 	quest.42000000001E0499.title: "Porcelain Bucket"
 	quest.42000000001E049A.quest_desc: [
@@ -5960,7 +5961,7 @@
 	quest.42000000001E049A.title: "Porcelain Crucible (Voidcraft)"
 	quest.42000000001E049B.quest_desc: [
 		"The first sieve mesh; slow but it works.",
-		"How: nine string in a 3x3. The Grit stall sells the Voidloom string thread mesh, which sieves the same."
+		"How: nine string in a 3x3. The Grit-singers' stall sells the Voidloom string thread mesh, which sieves the same."
 	]
 	quest.42000000001E049B.title: "String Mesh (Voidcraft)"
 	quest.42000000001E049C.quest_desc: [
@@ -5989,18 +5990,18 @@
 	]
 	quest.42000000001E04A0.title: "Netherite Mesh (Voidcraft)"
 	quest.42000000001E04A1.quest_desc: [
-		"Spun from Strand thread, the pack's own currency fiber.",
+		"Spun from string, the Loom's own fiber.",
 		"How: four string → two yarn. Tension Barrel: string + pearl. Four Loom Lint."
 	]
 	quest.42000000001E04A1.title: "Void Yarn Stock"
 	quest.42000000001E04A2.quest_desc: [
-		"Knots that hold a path open between distant pads.",
+		"The Loom's soft gate: posts, presses and controllers all want one.",
 		"How: Void Yarn ring around a slime ball."
 	]
 	quest.42000000001E04A2.title: "Binding Knot Stock"
 	quest.42000000001E04A3.quest_desc: [
 		"A void-loom take on the basic sieve mesh.",
-		"How: string around yarn. Grit stall sells one."
+		"How: string around yarn. The Grit-singers' stall sells one."
 	]
 	quest.42000000001E04A3.title: "Thread Mesh String"
 	quest.42000000001E04A4.quest_desc: [
@@ -6014,22 +6015,22 @@
 	]
 	quest.42000000001E04A5.title: "Thread Mesh Iron"
 	quest.42000000001E04A6.quest_desc: [
-		"Crushes compressed blocks back down to dust.",
+		"Breaks grit a step finer: cobble to gravel, gravel to sand, sand to dust.",
 		"How: cobble + sticks. Break grit into gravel, sand, dust."
 	]
 	quest.42000000001E04A6.title: "Spindle Hammer (Voidcraft)"
 	quest.42000000001E04A7.quest_desc: [
-		"Pulls thread and knots without breaking stride.",
-		"How: four sticks. Grit stall sells one."
+		"Strips leaves for saplings and silkworms.",
+		"How: four sticks. The Grit-singers' stall sells one."
 	]
 	quest.42000000001E04A7.title: "Spindle Crook"
 	quest.42000000001E04A8.quest_desc: [
-		"Marks a void-loom crafting station.",
+		"The Loom's sieve frame: stretch a mesh on it and feed it grit.",
 		"How: planks around a Binding Knot. Stretch a mesh, hopper grit in, sit it on a hopper."
 	]
 	quest.42000000001E04A8.title: "Loomframe"
 	quest.42000000001E04A9.quest_desc: [
-		"Holds strain so a sieve line doesn't snap under load.",
+		"Water and dirt become clay; string and a pearl become yarn.",
 		"How: planks, string, and Void Yarn. Pour water (bucket returns), add dirt → clay."
 	]
 	quest.42000000001E04A9.title: "Tension Barrel (Voidcraft)"
@@ -6044,7 +6045,7 @@
 	]
 	quest.42000000001E04AB.title: "Compressed Cobble (Voidcraft)"
 	quest.42000000001E04AC.quest_desc: [
-		"Nine gravel compacted for storage, not for sieving.",
+		"Nine gravel compacted; a compressed sieve takes it whole.",
 		"How: Ex Deorum sieve, hammer, crucible, or barrel. Match the mesh to the grit."
 	]
 	quest.42000000001E04AC.title: "Compressed Gravel"
@@ -6121,7 +6122,7 @@
 	quest.42000000001F04BB.quest_desc: [
 		"The paper inside a package, before it's sealed shut.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
-		"How: iron + AE2/processor parts in JEI. First Packaged Auto craft."
+		"How: gold ingots and planks around an Eye of Ender. First Packaged Auto craft."
 	]
 	quest.42000000001F04BB.title: "Package Component"
 	quest.42000000001F04BC.quest_desc: [
@@ -6156,7 +6157,7 @@
 	quest.42000000001F04C1.title: "Crafter"
 	quest.42000000001F04C2.quest_desc: [
 		"Routes packages toward whichever address matches.",
-		"How: package component, then Packager / Encoder. Needs an AE2 network for the ME piece."
+		"How: Distributor Marker, Packaging Component, two Shulker Shells, four ender pearls and an iron block. Shells: pack recipe, six purpur blocks, two ender pearls and a Binding Knot."
 	]
 	quest.42000000001F04C2.title: "Distributor"
 	quest.42000000001F04C3.quest_desc: [
@@ -6171,7 +6172,7 @@
 	quest.42000000001F04C4.title: "Packaging Provider"
 	quest.42000000001F04C5.quest_desc: [
 		"Lets a distant crafter request through this block instead.",
-		"How: package component, then Packager / Encoder. Needs an AE2 network for the ME piece."
+		"How: Proxy Marker, Packaging Component, two Shulker Shells, two ender pearls, two crying obsidian and an iron block. Shells: pack recipe, six purpur blocks, two ender pearls and a Binding Knot."
 	]
 	quest.42000000001F04C5.title: "Crafting Proxy"
 	quest.42000000001F04C6.quest_desc: [
@@ -6235,12 +6236,12 @@
 	]
 	quest.42000000001F04D1.title: "Create Packager"
 	quest.42000000001F04D2.quest_desc: [
-		"Turns packages back into a labeled drawer.",
+		"Gathers split packages back into whole orders.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001F04D2.title: "Create Repackager"
 	quest.42000000001F04D3.quest_desc: [
-		"Requests packaged items with a lever pull.",
+		"Requests packaged items from a linked stock network.",
 		"How: Create craft in JEI (crafting table, press, mixer or deployer). Andesite alloy and a water wheel start the line."
 	]
 	quest.42000000001F04D3.title: "Stock Ticker (Packaged)"
@@ -6509,12 +6510,12 @@
 	quest.4200000000210507.title: "Bone Stock"
 	quest.4200000000210508.quest_desc: [
 		"Creepers pay this out, sometimes explosively.",
-		"How: creepers on the pad at night. Keep edges lit after you have some."
+		"How: sieve dust or soul sand, or creepers on the pad at night. Keep edges lit after you have some."
 	]
 	quest.4200000000210508.title: "Gunpowder Stock"
 	quest.4200000000210509.quest_desc: [
 		"Spiders drop it, and a sieve never will.",
-		"How: unravel Frayed Thread (1 → 3). Spiders. Sieve. Yarn reverse sink."
+		"How: unravel Frayed Thread (1 → 3). Spiders. Loom Lint at an Echo Bind. Yarn reverse sink."
 	]
 	quest.4200000000210509.title: "String Stock"
 	quest.420000000021050A.quest_desc: [
@@ -6554,13 +6555,13 @@
 	quest.4200000000210510.title: "Wither Skull"
 	quest.4200000000210511.quest_desc: [
 		"The wither's own tax, rare and heavy with power.",
-		"How: Wither (three skulls on soul sand), or the Spark stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
+		"How: Wither (three skulls on soul sand), or the Drumhearts' stall at /clowder hub once, for 12 Thread Bolts (972 Thread). Optional trophy — it does not gate End or Mob Farm 100%."
 	]
 	quest.4200000000210511.title: "Nether Star"
 	quest.4200000000210512.quest_desc: [
 		"Crafts a shulker box, storage that survives death.",
-		"Optional — the void may never offer one.",
-		"How: End cities are gone from the main island. Optional."
+		"Optional — no shulkers here, so the pack crafts shells instead.",
+		"How: pack recipe, six purpur blocks, two ender pearls and a Binding Knot. Shulkers never spawn here. Optional."
 	]
 	quest.4200000000210512.title: "Shulker Shell Farm"
 	quest.4200000000210513.quest_desc: [
@@ -6596,7 +6597,7 @@
 	quest.4200000000210518.title: "Nautilus Shell (Hunt)"
 	quest.4200000000210519.quest_desc: [
 		"Cheats death once, then it's gone.",
-		"How: raids and evokers do not happen on the pad. Optional."
+		"How: pack recipe, four gold blocks and four emeralds around a golden apple. Raids and evokers never come to the pad. Optional."
 	]
 	quest.4200000000210519.title: "Totem (Hunt)"
 	quest.420000000021051A.quest_desc: [
@@ -6725,7 +6726,7 @@
 	quest.4200000000220531.title: "Copper Resonator"
 	quest.4200000000220532.quest_desc: [
 		"Mark the lattice lines — chalk needs a Shard.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two bone meal, lapis and a Spirit Shard, shapeless. Yields four."
 	]
 	quest.4200000000220532.title: "Ritual Chalk (Tribal)"
 	quest.4200000000220533.quest_desc: [
@@ -6749,33 +6750,33 @@
 	]
 	quest.4200000000220536.title: "Pulse Cell"
 	quest.4200000000220537.quest_desc: [
-		"Seat a reusable Echo catalyst; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it.",
+		"Seat an Echo catalyst, which wears down as it works; add two different totem voices within eight blocks. More voices strengthen the song. Redstone pauses it.",
 		"How: seat an Echo catalyst, two different totems within 8. Redstone pauses it."
 	]
 	quest.4200000000220537.title: "Pulse Resonator"
 	quest.4200000000220538.quest_desc: [
 		"Tribe of stone answers.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Bone Chime, two logs, dirt and a Copper Resonator."
 	]
 	quest.4200000000220538.title: "Earth Totem"
 	quest.4200000000220539.quest_desc: [
 		"Tribe of flame answers.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Bone Chime, two logs, charcoal and a Copper Resonator."
 	]
 	quest.4200000000220539.title: "Fire Totem"
 	quest.420000000022053A.quest_desc: [
 		"Tribe of tide answers.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Bone Chime, two logs, a water bucket (or porcelain water bucket) and a Copper Resonator."
 	]
 	quest.420000000022053A.title: "Water Totem"
 	quest.420000000022053B.quest_desc: [
 		"Tribe of wind answers.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Bone Chime, two logs, a feather and a Copper Resonator."
 	]
 	quest.420000000022053B.title: "Air Totem"
 	quest.420000000022053C.quest_desc: [
 		"Fifth tribe — steward core.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Bone Chime, two logs, a Spirit Shard and a Copper Resonator."
 	]
 	quest.420000000022053C.title: "Spirit Totem"
 	quest.420000000022053D.quest_desc: [
@@ -6785,7 +6786,7 @@
 	quest.420000000022053D.title: "Song Bench"
 	quest.420000000022053E.quest_desc: [
 		"Route harmonics between totems.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four Copper Resonators around redstone. Makes four."
 	]
 	quest.420000000022053E.title: "Lattice Conductor"
 	quest.420000000022053F.quest_desc: [
@@ -6800,7 +6801,7 @@
 	quest.4200000000220540.title: "Echo Shard (Tribal)"
 	quest.4200000000220541.quest_desc: [
 		"Hum stage two — attune.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: seven stone, a Spirit Shard and a Copper Resonator."
 	]
 	quest.4200000000220541.title: "Echo Attune"
 	quest.4200000000220542.quest_desc: [
@@ -6810,7 +6811,7 @@
 	quest.4200000000220542.title: "Attuned Echo"
 	quest.4200000000220543.quest_desc: [
 		"Bind stage — knot spirit to metal.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: seven stone, an amethyst shard and a Copper Resonator."
 	]
 	quest.4200000000220543.title: "Echo Bind"
 	quest.4200000000220544.quest_desc: [
@@ -6820,7 +6821,7 @@
 	quest.4200000000220544.title: "Bound Echo"
 	quest.4200000000220545.quest_desc: [
 		"Reweave stage — call the ingot.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: five stone, a gold ingot, two Copper Resonators and a Spirit Shard."
 	]
 	quest.4200000000220545.title: "Echo Manifest"
 	quest.4200000000220546.quest_desc: [
@@ -6830,47 +6831,47 @@
 	quest.4200000000220546.title: "Manifested Ingot"
 	quest.4200000000220547.quest_desc: [
 		"Keep what the tribes left.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: seven planks, a chest and a Bone Chime."
 	]
 	quest.4200000000220547.title: "Ancestral Cache"
 	quest.4200000000220548.quest_desc: [
 		"Vault linked toward The March.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: an Ancestral Cache, four iron ingots, a Spirit Shard, two Copper Resonators and a Pulse Cell."
 	]
 	quest.4200000000220548.title: "Deep Cache"
 	quest.4200000000220549.quest_desc: [
 		"An unwritten seal, waiting for a rite to fill it.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: seven paper, a Spirit Shard and a Bone Chime. Makes two."
 	]
 	quest.4200000000220549.title: "Blank Seal"
 	quest.420000000022054A.quest_desc: [
 		"Seal of the stone tribe.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Blank Seal and dirt, shapeless."
 	]
 	quest.420000000022054A.title: "Earth Seal"
 	quest.420000000022054B.quest_desc: [
 		"Seal of the flame tribe.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Blank Seal and charcoal, shapeless."
 	]
 	quest.420000000022054B.title: "Fire Seal"
 	quest.420000000022054C.quest_desc: [
 		"Seal of the tide tribe.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Blank Seal and a water bucket (or porcelain water bucket), shapeless."
 	]
 	quest.420000000022054C.title: "Water Seal"
 	quest.420000000022054D.quest_desc: [
 		"Seal of the wind tribe.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Blank Seal and a feather, shapeless."
 	]
 	quest.420000000022054D.title: "Air Seal"
 	quest.420000000022054E.quest_desc: [
 		"Seal of the steward tribe.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Blank Seal and a Spirit Shard, shapeless."
 	]
 	quest.420000000022054E.title: "Spirit Seal"
 	quest.420000000022054F.quest_desc: [
 		"Offer seals. Ask the Loom.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: five stone, an amethyst shard and a Bone Chime."
 	]
 	quest.420000000022054F.title: "Rite Pedestal"
 	quest.4200000000220550.quest_desc: [
@@ -6880,17 +6881,17 @@
 	quest.4200000000220550.title: "Gate Drum (Tribal)"
 	quest.4200000000220551.quest_desc: [
 		"Dress your camp's threshold with a carved spirit frame. Compasses and the Gate Drum perform travel.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four iron ingots, two Spirit Shards, two Copper Resonators and an amethyst shard."
 	]
 	quest.4200000000220551.title: "Spirit Door"
 	quest.4200000000220552.quest_desc: [
 		"Tool that spends Pulse.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: three Manifested Ingots, a Bone Chime and a stick."
 	]
 	quest.4200000000220552.title: "Spiritgear Pick"
 	quest.4200000000220553.quest_desc: [
 		"Edge that spends Pulse.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two Manifested Ingots, a Bone Chime and a stick."
 	]
 	quest.4200000000220553.title: "Spiritgear Blade"
 	quest.4200000000220554.quest_desc: [
@@ -6940,7 +6941,7 @@
 	quest.420000000022055C.title: "The living heart"
 	quest.420000000022055D.quest_desc: [
 		"Carry 4,800 Pulse in one Greater Cell, or 19,200 in a Grand. Charge it at a Drumheart or Resonator before setting out.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Pulse Cell, two Resonant Cores and two Manifested Ingots."
 	]
 	quest.420000000022055D.title: "A longer song"
 	quest.420000000022055E.quest_desc: [
@@ -6950,77 +6951,77 @@
 	quest.420000000022055E.title: "Rain held in copper"
 	quest.420000000022055F.quest_desc: [
 		"Mark a machine face with the tuner, then use it on a relay plate. Use it on another machine to replace the mark. Do not mark the plate.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Spirit Shard over two Copper Resonators."
 	]
 	quest.420000000022055F.title: "Name the far end"
 	quest.4200000000220560.quest_desc: [
 		"Snap the plate onto a chest or machine face. Pair two plates with the same unique Bond item, or tuner-bind a destination. Local cargo reaches 32 blocks, 16 items a second for 8 Pulse. Redstone pauses it. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a hopper, a Copper Resonator, two Ritual Chalk and a Manifested Ingot."
 	]
 	quest.4200000000220560.title: "A path for supplies"
 	quest.4200000000220561.quest_desc: [
 		"Snap the plate onto a tank face. Pair two plates or tuner-bind a destination. Local fluid reaches 32 blocks: 250 mB a second for 8 Pulse. Both ends must be loaded. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Spirit Cistern, a Copper Resonator, two Ritual Chalk and a Manifested Ingot."
 	]
 	quest.4200000000220561.title: "A path for rain"
 	quest.4200000000220562.quest_desc: [
 		"Longreach carries items up to 128 blocks for 16 Pulse per successful beat. Use standard inventories from any compatible mod. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: an Item Relay, two Resonant Cores and two ender pearls."
 	]
 	quest.4200000000220562.title: "Across the workshop"
 	quest.4200000000220563.quest_desc: [
 		"Longreach carries fluids up to 128 blocks for 16 Pulse per beat. Full receivers pause safely; redstone can lock the receiving cistern. Since 5.0 the plate wants a kept Air Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Fluid Relay, two Resonant Cores and two ender pearls."
 	]
 	quest.4200000000220563.title: "Across the waterworks"
 	quest.4200000000220564.quest_desc: [
-		"Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 20 Pulse a second (2,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"Bridge Tribal Power into Mekanism, Powah or AE2 energy acceptors. Each Pulse becomes 100 FE. Unranked conversion is 60 Pulse a second (6,000 FE/s); rank the adapter at Echo stations and empty-hand status names the live rate. It still cannot receive FE. Redstone stops conversion and export.",
+		"How: five copper ingots, three redstone and a Resonant Core."
 	]
 	quest.4200000000220564.title: "The beat becomes current"
 	quest.4200000000220565.quest_desc: [
 		"The Sixfold Staff. Sneak-use to cycle Earth, Fire, Water, Air, Spirit and Loom. Use to cast; the Loom voice is Tether, pulling a target eight blocks toward you, and a sneak-cast with no target is Stitch, a six-block blink. Carry charged cells; the Spirit Codex explains each spell and its cost.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Spirit Seal, a Resonant Core, a Manifested Ingot and two logs."
 	]
 	quest.4200000000220565.title: "Six voices in one hand"
 	quest.4200000000220566.quest_desc: [
 		"Main hand, sneak-use a stone face: a deliberate three-by-three cut at 8 Pulse per block. Normal breaking protection and tool requirements still apply.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two Manifested Ingots, a Resonant Core and two Copper Resonators."
 	]
 	quest.4200000000220566.title: "Stone yields a doorway"
 	quest.4200000000220567.quest_desc: [
 		"The hood lends night sight while charged cells sustain it. Unlinked pieces draw 2 Pulse every four seconds; a bound voice costs 3.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: five Spiritweave, helmet-shaped. A Ley Lens on it later lets it see the ley."
 	]
 	quest.4200000000220567.title: "Eyes in the quiet"
 	quest.4200000000220568.quest_desc: [
 		"The robe grants resistance. Wear it into the work and keep your cells charged.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: seven Spiritweave and a Resonant Core."
 	]
 	quest.4200000000220568.title: "A woven shelter"
 	quest.4200000000220569.quest_desc: [
 		"Woven leggings lend speed. Their Pulse cost is separate from the other pieces.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: six Spiritweave and a Resonant Core."
 	]
 	quest.4200000000220569.title: "The camp keeps pace"
 	quest.420000000022056A.quest_desc: [
 		"Boots can lend slow falling during descent while Pulse remains. A bound return path is still worth carrying.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four Spiritweave, boot-shaped."
 	]
 	quest.420000000022056A.title: "A gentler descent"
 	quest.420000000022056B.quest_desc: [
 		"Seat a reusable seal beside its matching totem. A six-block blessing costs 8 Pulse every two seconds. High redstone pauses it; sneak empty-handed to recover the seal.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two Manifested Ingots, two copper ingots, a Resonant Core and three stone."
 	]
 	quest.420000000022056B.title: "A blessing that stays"
 	quest.420000000022056C.quest_desc: [
 		"Sneak-use the top of a solid floor to bind it. Return within 128 blocks in the same world for 20 Pulse. Power the landing floor to lock arrivals.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a compass inside four Manifested Ingots."
 	]
 	quest.420000000022056C.title: "The first return path"
 	quest.420000000022056D.quest_desc: [
 		"Return across any distance within one dimension for 40 Pulse. Leave a dry landing with two clear blocks above it.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Waystone Compass inside four Resonant Cores."
 	]
 	quest.420000000022056D.title: "Beyond the horizon"
 	quest.420000000022056E.quest_desc: [
@@ -7030,22 +7031,22 @@
 	quest.420000000022056E.title: "A voice beyond the veil"
 	quest.420000000022056F.quest_desc: [
 		"The final compass crosses dimensions for 100 Pulse. Bind a safe return before exploring. Travel waits five seconds between uses.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Horizon Compass, two Spirit Seals and two March Crystals."
 	]
 	quest.420000000022056F.title: "A path between worlds"
 	quest.4200000000220570.quest_desc: [
 		"Astral cargo crosses dimensions without a distance limit. Each successful beat costs 32 Pulse. The receiver must already be loaded; no hidden chunk loading. Since 5.0 the plate wants a kept Loom Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Longreach Item Relay, two Spirit Seals and two March Crystals."
 	]
 	quest.4200000000220570.title: "Supplies cross the veil"
 	quest.4200000000220571.quest_desc: [
 		"Astral fluid follows the same dimensional tier as players and items. Keep the destination tank loaded. A full tank or unloaded world pauses without consuming cargo. Since 5.0 the plate wants a kept Loom Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Longreach Fluid Relay, two Spirit Seals and two March Crystals."
 	]
 	quest.4200000000220571.title: "Rain crosses the veil"
 	quest.4200000000220572.quest_desc: [
 		"Open your personal 54-slot Deep Cache from the road. This is the same vault, shared between your caches and satchel. March attunement removes its opening cost.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: six Spiritweave, two Resonant Cores and a Deep Cache."
 	]
 	quest.4200000000220572.title: "The camp in your keeping"
 	quest.4200000000220573.quest_desc: [
@@ -7056,79 +7057,79 @@
 	quest.4200000000220574.quest_desc: [
 		"A dawn grazer that carries the old forest song in its antlers. Breed with wheat; brush adults for Dawn Velvet.",
 		"Seek it in Overworld forests and the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: brush an adult Dawn Stag. Breed them with wheat."
 	]
 	quest.4200000000220574.title: "Dawn Stag: a song returned"
 	quest.4200000000220575.quest_desc: [
 		"A shy dusk forager whose tail marks safe paths. Breed with sweet berries; brush adults for Lantern Down.",
 		"Seek it in Overworld forests and the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: brush an adult Lantern Fox. Breed them with sweet berries."
 	]
 	quest.4200000000220575.title: "Lantern Fox: a song returned"
 	quest.4200000000220576.quest_desc: [
 		"A patient wetland gardener with a living shell. Breed with seagrass; brush adults for a naturally shed Mossback Scale.",
 		"Seek it in Overworld swamps and the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: brush an adult Mossback. Breed them with seagrass."
 	]
 	quest.4200000000220576.title: "Mossback: a song returned"
 	quest.4200000000220577.quest_desc: [
 		"The remains of a broken fire rite. Its melee strikes briefly ignite; keep water close.",
 		"Seek it in Overworld forests and the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Ashbound. Hostile spirits need darkness."
 	]
 	quest.4200000000220577.title: "Ashbound: a song returned"
 	quest.4200000000220578.quest_desc: [
 		"A grove guardian twisted by a severed ley line. Slow but sturdy; its blows root travellers briefly.",
 		"Seek it in Overworld forests and the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Rootbound. Hostile spirits need darkness."
 	]
 	quest.4200000000220578.title: "Rootbound: a song returned"
 	quest.4200000000220579.quest_desc: [
 		"A marsh hunter concealed among spirit reeds. Fast strikes carry a short poison.",
 		"Seek it in Overworld swamps and the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Reed Stalker. Hostile spirits need darkness."
 	]
 	quest.4200000000220579.title: "Reed Stalker: a song returned"
 	quest.420000000022057A.quest_desc: [
 		"A crystal-field scavenger armored in singing stone. Keep your distance from its heavy shove.",
 		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Shardback. Hostile spirits need darkness."
 	]
 	quest.420000000022057A.title: "Shardback: a song returned"
 	quest.420000000022057B.quest_desc: [
 		"An empty watchman that still guards the ancient roads. Its touch weakens the grip of attackers.",
 		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Hollow Sentinel. Hostile spirits need darkness."
 	]
 	quest.420000000022057B.title: "Hollow Sentinel: a song returned"
 	quest.420000000022057C.quest_desc: [
 		"A storm-fed spirit with vast veil wings. A bright gathering of motes warns of its gust; cover breaks the attack.",
 		"Seek it in the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Storm Moth. Hostile spirits need darkness."
 	]
 	quest.420000000022057C.title: "Storm Moth: a song returned"
 	quest.420000000022057D.quest_desc: [
 		"A nimble ember spirit. It gathers sparks before a burning bolt; the spell never ignites terrain.",
 		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Cinder Imp. Hostile spirits need darkness."
 	]
 	quest.420000000022057D.title: "Cinder Imp: a song returned"
 	quest.420000000022057E.quest_desc: [
 		"A floating relic that remembers the lost tribes. Its telegraphed chime slows; shelter interrupts the song.",
 		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Mourning Bell. Hostile spirits need darkness."
 	]
 	quest.420000000022057E.title: "Mourning Bell: a song returned"
 	quest.420000000022057F.quest_desc: [
 		"A hunter drawn to tears in the lattice. It closes distance quickly but cannot cross worlds by itself.",
 		"Seek it in the March. Return its reagent to Echo Attune under Spirit for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Rift Hound. Hostile spirits need darkness."
 	]
 	quest.420000000022057F.title: "Rift Hound: a song returned"
 	quest.4200000000220580.quest_desc: [
 		"An eight-legged keeper of broken songs. Its bite slows prey without placing webs or damaging the camp.",
 		"Seek it in the March. Return its reagent to Echo Bind under Water for a useful material. Build lighted paths; hostile spirits require darkness.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: drops from the Echo Weaver. Hostile spirits need darkness."
 	]
 	quest.4200000000220580.title: "Echo Weaver: a song returned"
 	quest.4200000000220581.quest_desc: [
@@ -7139,42 +7140,42 @@
 	quest.4200000000220581.title: "Thirteen voices, one sky"
 	quest.4200000000220582.quest_desc: [
 		"Hang the camp's song in copper. A Spirit Lantern gives full light without fuel; redstone dims it. Mark safe paths back from the dark.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: three copper ingots, a Spirit Shard and a plank."
 	]
 	quest.4200000000220582.title: "A light for the returning"
 	quest.4200000000220583.quest_desc: [
 		"The chime is both ornament and instrument. Its comparator gives 0 in clear skies, 8 in rain and 15 in thunder. Redstone silences it.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: three planks, three copper ingots and a Bone Chime."
 	]
 	quest.4200000000220583.title: "Listen to the weather"
 	quest.4200000000220584.quest_desc: [
 		"A carved table holds 27 stacks. Standard item pipes and relays can share its offerings; comparators read fullness and redstone locks access.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a chest, a Bound Echo, two planks and two stone."
 	]
 	quest.4200000000220584.title: "A place at the hearth"
 	quest.4200000000220585.quest_desc: [
 		"Place the tender at crop height in a 9-by-9 bed. Put seeds in the first row; harvests fill the lower two rows. Planting costs 4 Pulse, harvest and replant costs 12. Supply power within eight blocks. A full output preserves the crop; redstone pauses the work. Since 5.0 it wants a kept Earth Resonance Totem within eight blocks, or it stands idle and says which voice it is missing. Keep a Water totem near it as well and it waters every furrow of the bed.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: an iron hoe, an Earth Seal, a Bound Echo, two copper ingots and two planks."
 	]
 	quest.4200000000220585.title: "The garden keeps singing"
 	quest.4200000000220586.quest_desc: [
 		"Eight Pulse each second wards hostile spawning within 24 blocks. Existing creatures remain. The ward also prevents hostile cradle summons, so keep your summoning ground outside it. Redstone immediately silences the ward. Since 5.0 it wants a kept Spirit Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Spirit Seal, two Bound Echoes, an Echo Shard and three March Planks."
 	]
 	quest.4200000000220586.title: "Quiet at the camp edge"
 	quest.4200000000220587.quest_desc: [
 		"The Wayanchor holds its own chunk awake for 16 Pulse each second. Place one at a distant relay receiver and sustain its local power supply. At most 32 anchors may run in one dimension. Redstone or an empty buffer releases the chunk. Since 5.0 it wants a kept Earth Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two March Crystals, an Eye of Ender, two Manifested Ingots, a Resonant Core and three March Stone."
 	]
 	quest.4200000000220587.title: "A camp that remembers"
 	quest.4200000000220588.quest_desc: [
 		"Sneak-use an uncharged effigy on a supported creature to take a harmless imprint. The effigy remembers the species. Bosses cannot be bound; the Codex explains compatible spirits and renewal.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Bone Chime, two Spiritweave, a Resonant Core and a Bound Echo."
 	]
 	quest.4200000000220588.title: "Borrow a living voice"
 	quest.4200000000220589.quest_desc: [
 		"Seat an awakened effigy in the first slot and Spiritweave in the second. Each successful summon uses 80 Pulse, one Spiritweave and one binding thread. Leave safe flooring within three blocks. Eight nearby mobs pause the cradle; redstone pauses all work and automation. Since 5.0 it wants a kept Spirit Resonance Totem within eight blocks, or it stands idle and says which voice it is missing.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two Manifested Ingots, a March Crystal, two Bound Echoes, a Resonant Core and three March Planks."
 	]
 	quest.4200000000220589.title: "A hearth for borrowed life"
 	quest.420000000022058A.quest_desc: [
@@ -7199,12 +7200,12 @@
 	quest.4200000000228002.title: "A strand of the thread itself"
 	quest.4200000000228003.quest_desc: [
 		"Eight March Stone around an Echo Shard makes two Lore Tablets. Placed, a tablet shows a fragment of the nine tribes; a Creative sneak-use cycles which one. Line your own hall with them.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: eight March Stone around an Echo Shard. Makes two."
 	]
 	quest.4200000000228003.title: "Carve what you read"
 	quest.4200000000228004.quest_desc: [
 		"Leather over March Planks around a Resonant Core. The Drum Circle in the March highlands holds one already; this is yours to seat at home. Strike it four times, a breath apart, and something old rises.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: three leather, five March Planks and a Resonant Core."
 	]
 	quest.4200000000228004.title: "A drum that will not sound"
 	quest.4200000000228005.quest_desc: [
@@ -7219,17 +7220,17 @@
 	quest.4200000000228006.title: "The stilled drum"
 	quest.4200000000228007.quest_desc: [
 		"An Unsung Heart between Loom Thread and March Crystal, on March Planks. Loom joins Earth, Fire, Water, Air and Spirit: a distinct voice for the Pulse Resonator and the attunement the Echo Unweave and Ley Binding ask for.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: an Unsung Heart, four March Crystals, two Loom Thread and two March Planks."
 	]
 	quest.4200000000228007.title: "The sixth voice"
 	quest.4200000000228008.quest_desc: [
-		"Blank Seal, Loom Thread and a Spirit Shard. Seated in a Ritual Brazier the Loom Seal blesses Tension: every two seconds it refills two Pulse into the carried cells of everyone in range, and lends Luck.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"A Blank Seal and Loom Thread. Seated in a Ritual Brazier the Loom Seal blesses Tension: every two seconds it refills two Pulse into the carried cells of everyone in range, and lends Luck.",
+		"How: a Blank Seal and Loom Thread, shapeless."
 	]
 	quest.4200000000228008.title: "A seal of tension"
 	quest.4200000000228009.quest_desc: [
 		"Loom Thread and Copper Resonators on March Stone. Under a Loom voice the Echo Unweave runs the lattice backwards: a Manifested Ingot to two Bound Echo, Bound to two Attuned, Attuned to two Shards, Spiritweave to two Wool, a Resonant Core to three Manifested Ingots, and any worn Spiritgear tool to one Manifested Ingot.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: five March Stone, Loom Thread, two Copper Resonators and a Spirit Shard."
 	]
 	quest.4200000000228009.title: "The lattice, reversed"
 	quest.420000000022800A.quest_desc: [
@@ -7259,7 +7260,7 @@
 	quest.420000000022800E.title: "Mark of the tribe"
 	quest.420000000022800F.quest_desc: [
 		"A Tribe Mark, the Resonance Totem of that tribe's attunement and two Spiritweave. A Kinship Totem counts as an extra distinct voice for the Pulse Resonator and lends its tribe's attunement to stations, so nine tribes can carry the camp's song to fifteen voices.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Tribe Mark, that tribe's Resonance Totem and two Spiritweave in a crafting grid."
 	]
 	quest.420000000022800F.title: "A voice that is not a voice"
 	quest.4200000000228010.quest_desc: [
@@ -7269,32 +7270,32 @@
 	quest.4200000000228010.title: "The camp keeps the beat"
 	quest.4200000000228011.quest_desc: [
 		"Two stone and the reagent around the seal; the seal is handed back. Knotted Root beside an Earth Seal; 600 Pulse. For twenty minutes crops, saplings and stems in the nine chunks around the brazier grow faster. Sneak-use the tablet on a Ritual Brazier with that seal seated, inside its Rite Circle (four pedestals on the diagonals, chalk joining them); the Pulse is drawn from the lattice within eight blocks.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two stone, a Knotted Root and an Earth Seal, shapeless; the seal comes back."
 	]
 	quest.4200000000228011.title: "Rite Tablet: Green Blessing"
 	quest.4200000000228012.quest_desc: [
 		"Two stone and the reagent around the seal; the seal is handed back. Reed Fang beside a Water Seal; 400 Pulse. Twenty minutes of rain, for the cisterns and the crops. Sneak-use the tablet on a Ritual Brazier with that seal seated, inside its Rite Circle (four pedestals on the diagonals, chalk joining them); the Pulse is drawn from the lattice within eight blocks.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two stone, a Reed Fang and a Water Seal, shapeless; the seal comes back."
 	]
 	quest.4200000000228012.title: "Rite Tablet: Rain Calling"
 	quest.4200000000228013.quest_desc: [
 		"Two stone and the reagent around the seal; the seal is handed back. Storm Wing beside an Air Seal; 400 Pulse. Forty minutes of clear sky. Sneak-use the tablet on a Ritual Brazier with that seal seated, inside its Rite Circle (four pedestals on the diagonals, chalk joining them); the Pulse is drawn from the lattice within eight blocks.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two stone, a Storm Wing and an Air Seal, shapeless; the seal comes back."
 	]
 	quest.4200000000228013.title: "Rite Tablet: Sky Clearing"
 	quest.4200000000228014.quest_desc: [
 		"Two stone and the reagent around the seal; the seal is handed back. Ember Heart beside a Fire Seal; 800 Pulse. Hurries the night to the next sunrise for the whole world. Sneak-use the tablet on a Ritual Brazier with that seal seated, inside its Rite Circle (four pedestals on the diagonals, chalk joining them); the Pulse is drawn from the lattice within eight blocks.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two stone, an Ember Heart and a Fire Seal, shapeless; the seal comes back."
 	]
 	quest.4200000000228014.title: "Rite Tablet: Dawn Calling"
 	quest.4200000000228015.quest_desc: [
 		"Two stone and the reagent around the seal; the seal is handed back. Sentinel Sigil beside a Spirit Seal; 600 Pulse. Fifteen minutes without hostile spawns within sixty-four blocks. Sneak-use the tablet on a Ritual Brazier with that seal seated, inside its Rite Circle (four pedestals on the diagonals, chalk joining them); the Pulse is drawn from the lattice within eight blocks.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two stone, a Sentinel Sigil and a Spirit Seal, shapeless; the seal comes back."
 	]
 	quest.4200000000228015.title: "Rite Tablet: Still Night"
 	quest.4200000000228016.quest_desc: [
 		"Two stone and the reagent around the seal; the seal is handed back. Loom Thread beside a Loom Seal; 1,200 Pulse. Joins the nearest totem to another within sixty-four blocks with a thirty-minute ley line that routes Pulse between them. Sneak-use the tablet on a Ritual Brazier with that seal seated, inside its Rite Circle (four pedestals on the diagonals, chalk joining them); the Pulse is drawn from the lattice within eight blocks.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two stone, Loom Thread and a Loom Seal, shapeless; the seal comes back."
 	]
 	quest.4200000000228016.title: "Rite Tablet: Ley Binding"
 	quest.4200000000228017.quest_desc: [
@@ -7304,7 +7305,7 @@
 	quest.4200000000228017.title: "First Rite"
 	quest.4200000000228018.quest_desc: [
 		"Two Spiritweave, a Spirit Shard and the reagent of the species. Use it on an adult familiar. Animals: sixty percent, charm kept on failure. Remnants want Voice with their tribe, forty percent, charm spent on failure.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two Spiritweave, a Spirit Shard and one familiar reagent (Dawn Velvet, Lantern Down, Storm Wing and the like)."
 	]
 	quest.4200000000228018.title: "A charm for a wild thing"
 	quest.4200000000228019.quest_desc: [
@@ -7314,7 +7315,7 @@
 	quest.4200000000228019.title: "A friend in the dark"
 	quest.420000000022801A.quest_desc: [
 		"Paper, Spiritweave and a Spirit Shard. Use the charter on a player to invite them to your camp, or in the air to see it. `/tribalpower camp` creates, invites, joins, leaves, kicks, renames.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: paper, Spiritweave and a Spirit Shard, shapeless."
 	]
 	quest.420000000022801A.title: "A camp of many voices"
 	quest.420000000022801B.quest_desc: [
@@ -7324,17 +7325,17 @@
 	quest.420000000022801B.title: "One vault, one budget"
 	quest.420000000022801C.quest_desc: [
 		"A glass pane over a Copper Resonator and a Spirit Shard. Held, the lens shows the ley strength where you stand and paints it on the ground around you; sneak-use it on a Ley Collector, or a familiar, for its numbers.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a glass pane, a Copper Resonator and a Spirit Shard in a column."
 	]
 	quest.420000000022801C.title: "See the ley"
 	quest.420000000022801D.quest_desc: [
 		"Quartz over redstone and a Copper Resonator on March Stone. Faced at any Pulse holder it puts out redstone 0 to 15 in proportion to what is stored.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: quartz, two redstone, a Copper Resonator and March Stone."
 	]
 	quest.420000000022801D.title: "A needle for Pulse"
 	quest.420000000022801E.quest_desc: [
 		"A redstone torch over redstone and a Copper Resonator on March Stone. It emits when the faced holder is at or above its threshold; right-click cycles 25, 50, 75 and 100 percent. The pieces of a Pulse-driven automation.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a redstone torch, two redstone, a Copper Resonator and March Stone."
 	]
 	quest.420000000022801E.title: "A line in the song"
 	quest.420000000022801F.quest_desc: [
@@ -7345,7 +7346,7 @@
 
 	quest.4200000000228020.quest_desc: [
 		"Ask a Stone Font for cobble. Stone is not made; stone is asked to stay. Cobble needs only the shape and Pulse; an Earth totem within eight lets it ask for stone.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: five cobblestone, an Echo Shard and a Drumheart."
 	]
 	quest.4200000000228020.title: "A font of stone"
 	quest.4200000000228021.quest_desc: [
@@ -7370,12 +7371,12 @@
 	quest.4200000000228024.title: "A cell at the font"
 	quest.4200000000228025.quest_desc: [
 		"The mesh does not find the ore; the mesh gives the ore somewhere to land. Seat it over a Listening Pit.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four March Stone, two Attuned Echoes, two Spiritweave and a Copper Resonator."
 	]
 	quest.4200000000228025.title: "A mesh that listens"
 	quest.4200000000228026.quest_desc: [
 		"Four Anchor Stones hold the pit's corners. Without them the mesh has nowhere to stand.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four March Stone over an Echo Shard. Makes four."
 	]
 	quest.4200000000228026.title: "Four anchors"
 	quest.4200000000228027.quest_desc: [
@@ -7395,12 +7396,12 @@
 	quest.4200000000228029.title: "The pit keeps time"
 	quest.420000000022802A.quest_desc: [
 		"Eleven Gate Frames and the keystone ring the way. A missing frame is a missing step.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: six March Stone, two copper ingots and an Echo Shard. Makes four."
 	]
 	quest.420000000022802A.title: "A frame for the way"
 	quest.420000000022802B.quest_desc: [
 		"The keystone is the twelfth stone. Without it the ring is only a pattern.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four Gate Frames, a Resonant Core, a Spirit Shard and a Pulse Cell."
 	]
 	quest.420000000022802B.title: "The keystone"
 	quest.420000000022802C.quest_desc: [
@@ -7410,7 +7411,7 @@
 	quest.420000000022802C.title: "Open the way"
 	quest.420000000022802D.quest_desc: [
 		"Sneak-use the sigil on a keystone to write it down. Use it on a second keystone to tie the two together.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Blank Seal, Loom Thread and a Spirit Shard, shapeless."
 	]
 	quest.420000000022802D.title: "Write the destination"
 	quest.420000000022802E.quest_desc: [
@@ -7420,32 +7421,32 @@
 	quest.420000000022802E.title: "The long thread"
 	quest.420000000022802F.quest_desc: [
 		"The fire's generator. Seat it near its totem; a hand Drumheart cannot run this voice.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: three copper ingots, a Cinder Knot, a Fire Seal and two March Planks."
 	]
 	quest.420000000022802F.title: "The fire's voice"
 	quest.4200000000228030.quest_desc: [
 		"The wind's generator. Seat it near its totem so the six can hear each other.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four Spiritweave, a Storm Wing, an Air Seal and two March Planks."
 	]
 	quest.4200000000228030.title: "The wind's voice"
 	quest.4200000000228031.quest_desc: [
 		"The water's generator. Seat it near its totem; cisterns and springs listen to this voice.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: two leather, three March Planks, a Knotted Root and a Water Seal."
 	]
 	quest.4200000000228031.title: "The water's voice"
 	quest.4200000000228032.quest_desc: [
 		"The wake-bell is spirit's long tone. Seat it near its totem with the other five.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: a Bell Fragment, four copper ingots, a Spirit Seal and a Spirit Shard."
 	]
 	quest.4200000000228032.title: "The earth's wake"
 	quest.4200000000228033.quest_desc: [
 		"The sixth generator. Loom voice needs Loom Thread; the Unsung and the stitcher Elders keep it.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: four March Crystals, two Loom Thread, two Spiritweave and a Resonant Core."
 	]
 	quest.4200000000228033.title: "The sixth generator"
 	quest.4200000000228034.quest_desc: [
 		"A cairn stores Pulse in the field so six voices can share a buffer.",
-		"How: Spirit Codex + Tribal Weave. Station, totem, and Pulse cost are on the Codex page."
+		"How: six March Stone, two Bound Echoes and a Pulse Cell."
 	]
 	quest.4200000000228034.title: "A cairn of Pulse"
 	quest.4200000000228035.quest_desc: [
@@ -7494,8 +7495,8 @@
 	]
 	quest.420000000022803D.title: "A pump for the cistern"
 	quest.420000000022803E.quest_desc: [
-		"Each Pulse still becomes 100 FE. Unranked conversion is 20 Pulse a second. Rank the adapter at Echo Attune, Bind, then Manifest and empty-hand status names the live rate. It still cannot receive FE.",
-		"How: sneak-use a Pulse Adapter on Echo Attune, then Bind, then Manifest. Tick when diagnose names a rate above 20."
+		"Each Pulse still becomes 100 FE. Unranked conversion is 60 Pulse a second. Rank the adapter at Echo Attune, Bind, then Manifest and empty-hand status names the live rate. It still cannot receive FE.",
+		"How: sneak-use a Harmonic Energizer on Echo Attune, then Bind, then Manifest. Tick when diagnose names a rate above 60."
 	]
 	quest.420000000022803E.title: "Rank the current"
 	quest.420000000022803F.quest_desc: [
@@ -7619,8 +7620,8 @@
 	]
 	quest.4200000000228056.title: "Reach first"
 	quest.4200000000228057.quest_desc: [
-		"Three Manifested Ingots in a T over a Bone Chime. Ten damage, reach plus half, heavy — it slows your walk while it is in hand — and the widest, strongest sweep of the family. The halberd, battle axe, warhammer, dagger, scythe and trident are made the same way; each trades reach, speed and weight against the others.",
-		"How: three Manifested Ingots in a T over a Bone Chime. Heavy; the widest sweep."
+		"Four Manifested Ingots in a T over a Bone Chime. Ten damage, reach plus half, heavy — it slows your walk while it is in hand — and the widest, strongest sweep of the family. The halberd, battle axe, warhammer, dagger, scythe and trident are made the same way; each trades reach, speed and weight against the others.",
+		"How: four Manifested Ingots in a T over a Bone Chime. Heavy; the widest sweep."
 	]
 	quest.4200000000228057.title: "The widest sweep"
 	quest.4200000000228058.quest_desc: [
@@ -7654,8 +7655,8 @@
 	]
 	quest.420000000022805D.title: "Drum for the joy of it"
 	quest.420000000022805E.quest_desc: [
-		"Spiritweave, a Manifested Ingot and a Spirit Seal, shapeless. Use it to wear it; sneak-use to open the three charm slots. The Lantern charm carries the Spirit voice: night sight, and any voice blessing on you lasts half again as long. Worn charms cost 2 Pulse per voice every two seconds from a carried cell.",
-		"How: Spiritweave, a Manifested Ingot and a Spirit Seal, shapeless. Use it to wear it; sneak-use opens the slots."
+		"Four glowstone round a Spirit Seal, two Manifested Ingots, a golden carrot and Spiritweave. Use it to wear it; sneak-use to open the three charm slots. The Lantern charm carries the Spirit voice: night sight, and any voice blessing on you lasts half again as long. Worn charms cost 2 Pulse per voice every two seconds from a carried cell.",
+		"How: four glowstone round a Spirit Seal, two Manifested Ingots, a golden carrot and Spiritweave. Use it to wear it; sneak-use opens the slots."
 	]
 	quest.420000000022805E.title: "A light you wear"
 	quest.420000000022805F.quest_desc: [
@@ -7888,7 +7889,7 @@
 	quest.420000000024059F.title: "A Nightstand"
 	quest.42000000002405A0.quest_desc: [
 		"Cut a frame, then dress it in any block. One shape, every skin.",
-		"How: iron + planks. Cuts framed blocks."
+		"How: an iron ingot over three framed cubes. Cuts framed blocks."
 	]
 	quest.42000000002405A0.title: "Framing Saw"
 	quest.42000000002405A1.quest_desc: [
@@ -8029,7 +8030,7 @@
 	quest.42000000002505BB.title: "Hammock"
 	quest.42000000002505BC.quest_desc: [
 		"Hang the hammock between two posts, over the drop, and dare it.",
-		"How: iron nuggets + string. Place two, then hang the hammock."
+		"How: string and an iron ingot. Place two, then hang the hammock."
 	]
 	quest.42000000002505BC.title: "Rope and Nail"
 	quest.42000000002505BD.quest_desc: [
@@ -8065,7 +8066,7 @@
 	quest.42000000002605C3.quest_desc: [
 		"The first wire. The pulse the Drumhearts kept now has somewhere to go.",
 		"The Nine Tribes left provisions for the next Clowder. Use a Steward Cache to unwrap random supplies, or craft four small caches into a medium and three mediums into a large. Larger seals hold more rolls and a broader supply pool; opening separately gives more basic supplies. No machines or progression tokens hide inside, but every seal has a small chance of a Thread Shard and a very small chance of a whole Thread of Return; bigger seals have better odds.",
-		"How: rolling mill (or JEI) from copper ingots. Current chapter starts here."
+		"How: roll copper sheets in a rolling mill. Current chapter starts here."
 	]
 	quest.42000000002605C3.title: "Copper Wire"
 	quest.42000000002605C4.quest_desc: [
@@ -8513,7 +8514,7 @@
 	]
 	quest.42000000002805F8.title: "Pram Nut"
 	quest.42000000002805F9.quest_desc: [
-		"The Fair stall no longer sells Pink or Red dyes. Those colours are gone. Buy fireworks, a lead, or a Chocobo Almanac for GP.",
+		"The Fair stall at Whiskerwind sells fireworks, leads, pocketwatches and the Chocobo Almanac for GP.",
 		"How: paper plus gunpowder. Optional burst."
 	]
 	quest.42000000002805F9.title: "Fair Fireworks"
@@ -8729,13 +8730,13 @@
 	]
 	quest.4200000000290623.title: "Butter"
 	quest.4200000000290624.quest_desc: [
-		"Eggs and oil. Optional.",
-		"How: eggs (or silken tofu) and oil. Optional."
+		"An egg through the juicer. Optional.",
+		"How: juicer and an egg (silken tofu counts). Optional."
 	]
 	quest.4200000000290624.title: "Mayonnaise"
 	quest.4200000000290625.quest_desc: [
-		"Mixing bowl, mixed fruit. Optional.",
-		"How: mixing bowl and mixed fruit. Optional."
+		"Cutting board, mixed fruit. Optional.",
+		"How: cutting board and mixed fruit. Optional."
 	]
 	quest.4200000000290625.title: "Fruit Salad"
 	quest.4200000000290626.quest_desc: [
@@ -8764,8 +8765,8 @@
 	]
 	quest.420000000029062A.title: "Apple Juice"
 	quest.420000000029062B.quest_desc: [
-		"Bakeware leftover bread. Optional.",
-		"How: bakeware leftover bread. Optional."
+		"Skillet, bread and butter. Optional.",
+		"How: skillet, bread and butter. Optional."
 	]
 	quest.420000000029062B.title: "Toast Slice"
 	quest.42000000002A062C.quest_desc: [
@@ -8813,7 +8814,7 @@
 	quest.42000000002A0633.title: "Seed Bag"
 	quest.42000000002A0634.quest_desc: [
 		"Sturdier sticks. Same planting rules, less fuss when you bump them.",
-		"How: iron rods in the same square as wood. JEI names the craft."
+		"How: two iron nuggets in a column make eight."
 	]
 	quest.42000000002A0634.title: "Iron Crop Sticks"
 	quest.42000000002A0635.quest_desc: [
@@ -8833,7 +8834,7 @@
 	quest.42000000002A0637.title: "Irrigation Channel"
 	quest.42000000002A0638.quest_desc: [
 		"Stop and start a line without breaking the tank.",
-		"How: craft onto a channel. Stop and start a line without breaking the tank."
+		"How: iron bars, red dye and an iron ingot. Stop and start a line without breaking the tank."
 	]
 	quest.42000000002A0638.title: "Channel Valve"
 	quest.42000000002A0639.quest_desc: [
@@ -8853,7 +8854,7 @@
 	quest.42000000002A063B.title: "Greenhouse Monitor"
 	quest.42000000002A063C.quest_desc: [
 		"Late sticks. Fireproof, stubborn, for the plants that ask too much of wood. Two neighbouring mature crops can cross-breed.",
-		"How: obsidian in the stick square. Two neighbouring mature crops can cross-breed."
+		"How: two obsidian in a column make eight. Two neighbouring mature crops can cross-breed."
 	]
 	quest.42000000002A063C.title: "Obsidian Crop Sticks"
 	quest.42000000002A063D.quest_desc: [

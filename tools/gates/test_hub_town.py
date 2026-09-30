@@ -76,8 +76,32 @@ class HubTownTests(unittest.TestCase):
             for line in sign['lines']:
                 if line:
                     self.assertIn(line, self.lang, sign)
-        for key in re.findall(r"'(message\.ninjacatpack\.hub\.\w+)'", LIFE.read_text(encoding='utf-8')):
-            self.assertIn(key, self.lang)
+        for script in (LIFE, STALLS):
+            for key in re.findall(r"'((?:message|container)\.ninjacatpack\.hub\.\w+)'", script.read_text(encoding='utf-8')):
+                self.assertIn(key, self.lang, script.name)
+
+    def test_tribe_keepers_go_by_their_tribes_name(self):
+        """A tribe's keeper is named for the tribe (Tribal Power greets and titles the stall with that name too)."""
+        import hub_loomsend
+        for stall, _face, _x, _z, tribe, _title, _line in hub_loomsend.SHOPS:
+            self.assertEqual(hub_loomsend.STALL_NAMES[stall], hub_loomsend.TRIBE_NAMES[tribe], stall)
+            self.assertEqual(hub_loomsend.STALL_TRIBE[stall], hub_loomsend.TRIBES.index(tribe), stall)
+
+    def test_hearth_keeper_speaks_for_the_inn(self):
+        """The Hearth-keeper borrows a tribe's look; its right-click must open the inn's counter, not greet as that tribe."""
+        js = STALLS.read_text(encoding='utf-8')
+        self.assertIn("const HEARTH_STALL_ID = 'hearth'", js)
+        self.assertIn('hearth', self.plan['posts'])
+        hook = js[js.index('ItemEvents.entityInteracted('):]
+        hook = hook[:hook.index('\n})')]
+        self.assertIn('isKeeper(event.target, HEARTH_STALL_ID)', hook)
+        self.assertIn('openHearth(', hook)
+        self.assertEqual(hook.count('event.cancel()'), 2, 'both keepers without a tribe stall cancel Tribal Power')
+        opener = js[js.index('function openHearth('):]
+        opener = opener[:opener.index('\n}')]
+        for key in ('hearth_line1', 'hearth_line2', 'container.ninjacatpack.hub.hearth'):
+            self.assertIn(key, opener)
+        self.assertNotIn('kin.stall.line1', opener)
 
     def test_one_bed_per_townsperson(self):
         """A villager with a spare bed breeds; the town's crowd must stay the size it was built."""
