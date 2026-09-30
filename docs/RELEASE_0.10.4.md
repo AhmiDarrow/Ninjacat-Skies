@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.4 — Mended and Measured, Earned in Class and Drums Side by Side
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Ninjacat Skies Core 0.5.20 is CurseForge file **9018084**
+Pack CurseForge client file **9022662**, server additional **9022665**. Ninjacat Skies Core 0.5.20 is CurseForge file **9018084**
 (unchanged); Tribal Power 5.3.13 is **9022118**; Chocobos Reborn 1.1.4 is **9022598**; Shamanic Mounts 0.1.4 is
 **9018208** (unchanged).
 
