@@ -1034,19 +1034,19 @@
     "name": "Shamanic Mounts",
     "slug": "shamanic-mounts",
     "projectId": 1711650,
-    "fileId": 9025439,
-    "filename": "shamanicmounts-0.1.7.jar",
+    "fileId": 9029022,
+    "filename": "shamanicmounts-0.1.8.jar",
     "releaseType": 1,
-    "sha1": "75ef404af43e78de404fb141873642ab34d544aa"
+    "sha1": "88fbffe72cc50574853e662885e13c5e155faa3e"
   },
   {
     "key": "TribalPower",
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 9025414,
-    "filename": "tribalpower-5.3.15.jar",
+    "fileId": 9029023,
+    "filename": "tribalpower-5.3.16.jar",
     "releaseType": 1,
-    "sha1": "f49040f404767dc6a19ee641c5b56fd350024c11"
+    "sha1": "ffe9646ccec48005d1ecd6866e75219b0671db76"
   }
 ]
