@@ -2,9 +2,9 @@
 """Publish CurseForge store pages (summary + description) from each project's store-description files.
 
     python tools/render_store_html.py                    # pack + Core HTML (Tribal Power / Chocobos render their own)
-    python tools/cf_update_store_pages.py [pack core tribalpower chocobos]   # default: all four
+    python tools/cf_update_store_pages.py [pack core tribalpower chocobos shamanic]   # default: all five
 
-Sources: docs/public (modpack), docs/core (Ninjacat Skies Core), ../tribal-power/docs/public, ../chocobos-reborn/docs/public.
+Sources: docs/public (modpack), docs/core (Ninjacat Skies Core), ../tribal-power/docs/public, ../chocobos-reborn/docs/public, ../shamanic-mounts/docs/public.
 The summary is the "CurseForge summary (one line)" line of the .md; that paragraph is dropped from the published body.
 Uses the saved Chrome profile that holds the Authors Console login; if it has expired, sign in in the window that
 opens and the script waits.
@@ -26,6 +26,7 @@ PAGES = {
     "core": (1689718, ROOT / "docs/core"),
     "tribalpower": (1684851, ROOT.parent / "tribal-power/docs/public"),
     "chocobos": (1699008, ROOT.parent / "chocobos-reborn/docs/public"),
+    "shamanic": (1711650, ROOT.parent / "shamanic-mounts/docs/public"),
 }
 SUMMARY_RE = re.compile(r"\*\*CurseForge summary \(one line\):\*\*\s*(.+)", re.I)
 SUMMARY_P = re.compile(r"<p><strong>CurseForge summary \(one line\):</strong>.*?</p>\n?", re.I | re.S)
