@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.5 — Wildlife Returns and Wild Herds Stay
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Ninjacat Skies Core 0.5.20 is CurseForge file **9018084**
+Pack CurseForge client file **9023790**, server additional **9023791**. Ninjacat Skies Core 0.5.20 is CurseForge file **9018084**
 (unchanged); Tribal Power 5.3.14 is **9023760**; Chocobos Reborn 1.1.4 is **9022598** (unchanged); Shamanic Mounts
 0.1.5 is **9023646**.
 
