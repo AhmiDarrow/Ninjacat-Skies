@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.7 — Stone and Lit Glass, Breaking a Bronco
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Ninjacat Skies Core 0.5.21 is CurseForge file
+Pack CurseForge client file **9029111**, server additional **9029114**. Ninjacat Skies Core 0.5.21 is CurseForge file
 **9025453**; Tribal Power 5.3.16 is **9029023**; Chocobos Reborn 1.1.5 is **9025422**; Shamanic Mounts 0.1.8 is
 **9029022**.
 
