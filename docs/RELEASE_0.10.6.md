@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.6 — Hearth and Wire, Close at Heel, Lighter Everywhere
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Ninjacat Skies Core 0.5.21 is CurseForge file
+Pack CurseForge client file **9025478**, server additional **9025480**. Ninjacat Skies Core 0.5.21 is CurseForge file
 **9025453**; Tribal Power 5.3.15 is **9025414**; Chocobos Reborn 1.1.5 is **9025422**; Shamanic Mounts 0.1.7 is
 **9025439**.
 
