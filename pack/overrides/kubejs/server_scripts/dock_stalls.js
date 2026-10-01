@@ -64,14 +64,44 @@ function entityLabel(entity) {
   return ''
 }
 
-function listHubEntities(hub) {
+// The keepers' kinds, matched the same way everywhere below (an id containing these).
+const HUB_KIN_TYPE = 'tribalpower:tribal_kin'
+const HUB_STEWARD_TYPE = 'chocobosreborn:kin_steward'
+
+function isTypeOf(entity, part) {
+  try {
+    return String(entity.type || '').indexOf(part) >= 0
+  } catch (e) {
+    return false
+  }
+}
+
+function hubKindList(all, typeId, part) {
+  let out = []
+  try {
+    for (let entity of all.filterType(typeId)) if (isTypeOf(entity, part)) out.push(entity)
+    return out
+  } catch (e) {}
+  // No filter on this list: walk it here instead.
+  out = []
+  for (let entity of all) if (isTypeOf(entity, part)) out.push(entity)
+  return out
+}
+
+// One listing per check. The town holds a few hundred entities, so the level's list is filtered by kind in Java and
+// only the keepers' kinds come back to the script; the full list is only walked again in the rare fallback below.
+function hubCensus(hub) {
   try {
     if (!hub.getEntities) return null
-    let found = hub.getEntities()
-    if (!found) return null
-    let out = []
-    for (let entity of found) out.push(entity)
-    return out
+    let all = hub.getEntities()
+    if (!all) return null
+    return {
+      all: all,
+      size: Number(all.size()),
+      kin: hubKindList(all, HUB_KIN_TYPE, 'tribal_kin'),
+      labels: null,
+      stewards: hubKindList(all, HUB_STEWARD_TYPE, 'kin_steward'),
+    }
   } catch (e) {
     return null
   }
@@ -84,12 +114,12 @@ function listHubEntities(hub) {
 const HUB_MISS_LIMIT = 3
 let hubMisses = {}
 
-function postEntitiesLoaded(hub, found, post) {
+function postEntitiesLoaded(hub, census, post) {
   try {
     let raw = hub.minecraftLevel ? hub.minecraftLevel : hub
     if (HubChunkPos && raw.areEntitiesLoaded) return !!raw.areEntitiesLoaded(HubChunkPos.asLong(post[0] >> 4, post[2] >> 4))
   } catch (e) {}
-  return playerAtPad(found)
+  return playerAtPad(census.all)
 }
 
 function playerAtPad(found) {
@@ -102,8 +132,8 @@ function playerAtPad(found) {
   return false
 }
 
-function confirmedMissing(hub, found, key, post) {
-  if (!postEntitiesLoaded(hub, found, post)) return false
+function confirmedMissing(hub, census, key, post) {
+  if (!postEntitiesLoaded(hub, census, post)) return false
   hubMisses[key] = (hubMisses[key] || 0) + 1
   if (hubMisses[key] < HUB_MISS_LIMIT) return false
   hubMisses[key] = 0
@@ -143,13 +173,17 @@ function keepNearest(matches, x, z) {
   }
 }
 
-function hubHasStall(hub, found, stallId, name, x, z) {
-  if (!found || found.length === 0) return null
+function hubHasStall(hub, census, stallId, name, x, z) {
+  if (!census || census.size === 0) return null
+  // Each Kin's stall label is read once per check, not once per post.
+  if (!census.labels) {
+    census.labels = []
+    for (let entity of census.kin) census.labels.push(entityLabel(entity))
+  }
   let matches = []
-  for (let entity of found) {
-    let t = String(entity.type || '')
-    if (t.indexOf('tribal_kin') < 0) continue
-    let label = entityLabel(entity)
+  for (let i = 0; i < census.kin.length; i++) {
+    let entity = census.kin[i]
+    let label = census.labels[i]
     if (label === stallId || (name && label.indexOf(name) >= 0)) matches.push(entity)
   }
   if (matches.length > 0) {
@@ -163,11 +197,11 @@ function hubHasStall(hub, found, stallId, name, x, z) {
     }
     return true
   }
-  return confirmedMissing(hub, found, stallId, HUB_POSTS[stallId]) ? false : null
+  return confirmedMissing(hub, census, stallId, HUB_POSTS[stallId]) ? false : null
 }
 
-function spawnStall(level, found, x, y, z, yaw, tribeOrdinal, stallId, name) {
-  let present = hubHasStall(level, found, stallId, name, x, z)
+function spawnStall(level, census, x, y, z, yaw, tribeOrdinal, stallId, name) {
+  let present = hubHasStall(level, census, stallId, name, x, z)
   if (present === true) return true
   // Unconfirmed: a set flag means they were placed before, so wait for the next check.
   if (present === null && level.persistentData.getBoolean(HUB_STALLS_FLAG)) return true
@@ -206,12 +240,12 @@ function ensureHubStalls(server) {
   // Each keeper stands behind the counter of their own shop in Loom's End; the Whiskerwind Guide keeps the
   // gate booth at the south road. Esther is placed by ensureHubEster once the March is open.
   // One listing serves every post (this runs every 4 s for each player in the Hall).
-  let found = listHubEntities(hub)
+  let census = hubCensus(hub)
   let all = true
   for (let id in HUB_POSTS) {
     if (id === 'esther') continue
     let p = HUB_POSTS[id]
-    if (!spawnStall(hub, found, p[0], p[1], p[2], p[3], p[4], id, p[5])) all = false
+    if (!spawnStall(hub, census, p[0], p[1], p[2], p[3], p[4], id, p[5])) all = false
   }
   if (all) hub.persistentData.putBoolean(HUB_STALLS_FLAG, true)
 }
@@ -304,12 +338,9 @@ function markMarchVisit(player) {
 }
 
 function esterAlreadyPresent(hub) {
-  let found = listHubEntities(hub)
-  if (!found || found.length === 0) return null
-  let stewards = []
-  for (let entity of found) {
-    if (String(entity.type || '').indexOf('kin_steward') >= 0) stewards.push(entity)
-  }
+  let census = hubCensus(hub)
+  if (!census || census.size === 0) return null
+  let stewards = census.stewards
   let post = HUB_POSTS.esther
   if (stewards.length > 1) keepNearest(stewards, post[0] + 0.5, post[2] + 0.5)
   for (let steward of stewards) {
@@ -321,7 +352,7 @@ function esterAlreadyPresent(hub) {
     hubMisses.ester = 0
     return true
   }
-  return confirmedMissing(hub, found, 'ester', post) ? false : null
+  return confirmedMissing(hub, census, 'ester', post) ? false : null
 }
 
 function spawnEster(hub) {
