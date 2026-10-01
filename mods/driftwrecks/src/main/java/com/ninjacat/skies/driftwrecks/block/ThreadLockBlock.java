@@ -37,15 +37,17 @@ public class ThreadLockBlock extends Block {
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource rng) {
-        int plates = 0, pressed = 0;
+        int plates = 0;
+        boolean allPressed = true;
         for (BlockPos p : BlockPos.betweenClosed(pos.offset(-REACH, -REACH, -REACH), pos.offset(REACH, REACH, REACH))) {
             BlockState s = level.getBlockState(p);
             if (s.getBlock() instanceof PressurePlateBlock) {
                 plates++;
-                if (s.getValue(PressurePlateBlock.POWERED)) pressed++;
+                // one plate up keeps the lock shut: no need to read the rest of the 7x7x7 (every lock block, twice a second)
+                if (!s.getValue(PressurePlateBlock.POWERED)) { allPressed = false; break; }
             }
         }
-        if (plates >= 2 && pressed == plates) {
+        if (plates >= 2 && allPressed) {
             unravel(level, pos);
             return;
         }

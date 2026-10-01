@@ -2,6 +2,7 @@ package com.ninjacat.skies.driftwrecks.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import com.ninjacat.skies.core.tension.Strand;
 import com.ninjacat.skies.driftwrecks.Driftwrecks;
 import com.ninjacat.skies.driftwrecks.entity.RemnantEntity;
 import com.ninjacat.skies.guardians.client.GuardianModel;
@@ -25,12 +26,24 @@ public class RemnantRenderer extends EntityRenderer<RemnantEntity> {
 
     private static ResourceLocation rl(String p) { return ResourceLocation.fromNamespaceAndPath(Driftwrecks.MOD_ID, p); }
 
+    /** Each Strand's mesh, texture and emission map, built once rather than three new ids every frame. */
+    private static final ResourceLocation[] MESH = new ResourceLocation[Strand.ALL.length], TEXTURE = new ResourceLocation[Strand.ALL.length],
+            EMIT = new ResourceLocation[Strand.ALL.length];
+
+    static {
+        for (Strand s : Strand.ALL) {
+            MESH[s.ordinal()] = rl("remnant/" + s.id() + ".ncgb");
+            TEXTURE[s.ordinal()] = rl("textures/remnant/" + s.id() + ".png");
+            EMIT[s.ordinal()] = rl("textures/remnant/" + s.id() + "_emit.png");
+        }
+    }
+
     @Override
-    public ResourceLocation getTextureLocation(RemnantEntity e) { return rl("textures/remnant/" + e.strand().id() + ".png"); }
+    public ResourceLocation getTextureLocation(RemnantEntity e) { return TEXTURE[e.strand().ordinal()]; }
 
     @Override
     public void render(RemnantEntity e, float yaw, float partial, PoseStack ps, MultiBufferSource buf, int light) {
-        GuardianModel m = GuardianModel.load(rl("remnant/" + e.strand().id() + ".ncgb"));
+        GuardianModel m = GuardianModel.load(MESH[e.strand().ordinal()]);
         if (m != null && m.clips.length > 0) {
             GuardianModel.Clip clip = m.clip(e.clip());
             if (clip == null) clip = m.clips[0];
@@ -42,7 +55,7 @@ public class RemnantRenderer extends EntityRenderer<RemnantEntity> {
                 mesh.pose(clip, f0, f1, f - f0);
                 ps.pushPose();
                 ps.mulPose(Axis.YP.rotationDegrees(-Mth.rotLerp(partial, e.yBodyRotO, e.yBodyRot)));
-                mesh.draw(m, ps.last(), buf, getTextureLocation(e), rl("textures/remnant/" + e.strand().id() + "_emit.png"), light, OverlayTexture.pack(0, e.hurtTime > 0));
+                mesh.draw(m, ps.last(), buf, getTextureLocation(e), EMIT[e.strand().ordinal()], light, OverlayTexture.pack(0, e.hurtTime > 0));
                 ps.popPose();
             }
         }

@@ -213,8 +213,17 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
     }
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, TensionBarrelBlockEntity be) {
+        // Idle (no progress, nothing to make): powered or not, nothing below would change, so skip the redstone read
+        // (up to 42 block lookups) every idle barrel would otherwise pay each tick.
+        Recipe recipe = null;
+        boolean matched = false;
+        if (be.progress == 0 && be.progressTotal == 0) {
+            recipe = be.match();
+            if (recipe == null) return;
+            matched = true;
+        }
         if (level.hasNeighborSignal(pos)) return;
-        Recipe recipe = be.match();
+        if (!matched) recipe = be.match();
         if (recipe == null) {
             if (be.progress != 0) {
                 be.progress = 0;

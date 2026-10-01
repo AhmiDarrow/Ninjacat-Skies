@@ -90,6 +90,12 @@ public final class CraftTables {
         PICKS.remove(player);
     }
 
+    /** Server stopped: no player's picks outlive the world they were made in. */
+    public static void forgetAll() {
+        PICKS.clear();
+        OWNERS.clear();
+    }
+
     /**
      * After the table has made its own result: if this player picked a different one of the matching recipes, put
      * that one's output in the result slot instead.

@@ -135,20 +135,47 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         // With a mesh in, only take what that mesh can work — anything else jams the single input slot.
         if (!mesh.isEmpty()) return processableWithMesh(stack);
         if (isSiftable(stack)) return true;
-        return level != null && ModList.get().isLoaded("exdeorum") && ExDeorumSieveBridge.isSiftable(level, stack);
+        return level != null && Sieves.LOADED && ExDeorumSieveBridge.isSiftable(level, stack);
     }
 
     private boolean canProcess() {
         return isMeshItem(mesh) && !input.isEmpty() && processableWithMesh(input);
     }
 
+    /** Whether the sieve mod is present: the mod list is fixed once the game has loaded, so it is read once. */
+    private static final class Sieves {
+        static final boolean LOADED = ModList.get().isLoaded("exdeorum");
+    }
+
+    // The last answer of processableWithMesh on the server. A hopper offers the same grit over and over, and the
+    // answer only depends on the mesh's item, the grit's item and the recipe set, so a repeat is answered from here.
+    // A recipe reload makes a new recipe manager on the server, which misses this memo and asks again.
+    @Nullable
+    private Object siftMemoRecipes;
+    @Nullable
+    private Item siftMemoMesh, siftMemoInput;
+    private boolean siftMemoResult;
+
     private boolean processableWithMesh(ItemStack stack) {
-        if (level != null && ModList.get().isLoaded("exdeorum")) {
-            if (ExDeorumSieveBridge.hasRecipes(level, mesh, stack)) return true;
-            return stack.is(Items.DIRT) || stack.is(Items.COARSE_DIRT) || stack.is(Items.ROOTED_DIRT)
-                    || stack.is(Items.GRAVEL);
+        if (level != null && Sieves.LOADED) {
+            if (level.isClientSide) return siftsWithMesh(stack);
+            Object recipes = level.getRecipeManager();
+            Item meshItem = mesh.getItem(), inputItem = stack.getItem();
+            if (recipes != siftMemoRecipes || meshItem != siftMemoMesh || inputItem != siftMemoInput) {
+                siftMemoResult = siftsWithMesh(stack);
+                siftMemoRecipes = recipes;
+                siftMemoMesh = meshItem;
+                siftMemoInput = inputItem;
+            }
+            return siftMemoResult;
         }
         return isSiftable(stack);
+    }
+
+    private boolean siftsWithMesh(ItemStack stack) {
+        if (ExDeorumSieveBridge.hasRecipes(level, mesh, stack)) return true;
+        return stack.is(Items.DIRT) || stack.is(Items.COARSE_DIRT) || stack.is(Items.ROOTED_DIRT)
+                || stack.is(Items.GRAVEL);
     }
 
     public ItemStack getInput() {
@@ -229,6 +256,11 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
         return out;
     }
 
+    private boolean pendingEmpty() {
+        for (ItemStack stack : pending) if (!stack.isEmpty()) return false;
+        return true;
+    }
+
     private boolean flushPending() {
         boolean blocked = false;
         boolean changed = false;
@@ -253,6 +285,9 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     // ------------------------------------------------------------ the sift
 
     public static void serverTick(Level level, BlockPos pos, BlockState state, LoomframeBlockEntity be) {
+        // Idle (no mesh or grit, nothing waiting, no progress): powered or not, nothing below would change, so skip
+        // the redstone read (up to 42 block lookups) every idle Loomframe would otherwise pay each tick.
+        if (be.progress == 0 && (be.input.isEmpty() || !isMeshItem(be.mesh)) && be.pendingEmpty()) return;
         if (level.hasNeighborSignal(pos)) return;
         if (!be.flushPending()) return;
         if (!be.canProcess()) {
@@ -309,7 +344,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
     /** Ex Deorum sieve table at automated yield when present; otherwise the built-in scrap table. */
     private List<ItemStack> roll(Level level, ItemStack in, ItemStack meshStack) {
-        if (level instanceof ServerLevel sl && ModList.get().isLoaded("exdeorum")
+        if (level instanceof ServerLevel sl && Sieves.LOADED
                 && ExDeorumSieveBridge.hasRecipes(sl, meshStack, in)) {
             return ExDeorumSieveBridge.roll(sl, meshStack, in, sl.random);
         }

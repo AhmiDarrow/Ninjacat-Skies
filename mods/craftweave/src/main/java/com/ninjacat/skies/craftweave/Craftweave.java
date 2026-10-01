@@ -29,6 +29,8 @@ public final class Craftweave {
                 CraftTables.applyPick(event.getContainer(), player);
             }
         });
+        // picks are kept per player for the session; a closed world takes them with it (they never reach the next one)
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.server.ServerStoppedEvent event) -> CraftTables.forgetAll());
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.RegisterCommandsEvent event) -> com.ninjacat.skies.craftweave.verification.SelfTest.register(event.getDispatcher()));
         if (FMLEnvironment.dist.isClient()) com.ninjacat.skies.craftweave.client.CraftweaveClient.init(modBus);
     }

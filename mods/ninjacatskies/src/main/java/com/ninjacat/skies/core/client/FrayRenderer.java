@@ -43,8 +43,26 @@ public final class FrayRenderer {
     private static final DustParticleOptions LIT = new DustParticleOptions(new Vector3f(0.83F, 0.66F, 0.29F), 1.0F);
 
     private final float[] offset = new float[2];
-    private final float[] prev = new float[7];   // x y z  sideX sideY sideZ  halfWidth
-    private final float[] cur = new float[7];
+    /**
+     * Each thread's points for this frame, already turned by the view: the point on the dome and its sideways step,
+     * per segment, plus its distance from the camera. Up to thirty ribbons a frame share nine paths, so each path is
+     * worked out and turned once per frame, when first drawn, not per ribbon or per vertex. The view turn has no
+     * shift, so a ribbon's edges are the turned point plus or minus the turned sideways step times the half-width.
+     */
+    private final float[][] pointX = new float[FrayMath.STRANDS][FrayMath.SEGMENTS + 1], pointY = new float[FrayMath.STRANDS][FrayMath.SEGMENTS + 1],
+            pointZ = new float[FrayMath.STRANDS][FrayMath.SEGMENTS + 1], stepX = new float[FrayMath.STRANDS][FrayMath.SEGMENTS + 1],
+            stepY = new float[FrayMath.STRANDS][FrayMath.SEGMENTS + 1], stepZ = new float[FrayMath.STRANDS][FrayMath.SEGMENTS + 1];
+    private final double[][] distance = new double[FrayMath.STRANDS][FrayMath.SEGMENTS + 1];
+    private final boolean[] pathReady = new boolean[FrayMath.STRANDS];
+    private final Vector3f turned = new Vector3f();
+    /** Height fade per segment: the same for every thread and every frame. */
+    private static final float[] HEIGHT_FADE = new float[FrayMath.SEGMENTS + 1];
+
+    static {
+        for (int i = 0; i <= FrayMath.SEGMENTS; i++) {
+            HEIGHT_FADE[i] = FrayMath.heightFade(i / (float) FrayMath.SEGMENTS);
+        }
+    }
 
     // ---------------------------------------------------------------- the cut in the sky
 
@@ -71,6 +89,7 @@ public final class FrayRenderer {
         // The violet rim is what shows the cut against the night; by day the dark threads carry it, so the rim fades.
         float rim = 0.3F + 0.7F * (1F - SunderedSkyMath.dayness(mc.level.getDayTime(), partial));
         Matrix4f matrix = new Matrix4f(event.getModelViewMatrix()).m30(0).m31(0).m32(0);
+        java.util.Arrays.fill(pathReady, false);
 
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
@@ -141,20 +160,60 @@ public final class FrayRenderer {
      */
     private void ribbon(BufferBuilder buffer, Matrix4f matrix, Vec3 cam, double bx, double by, double bz, int k,
                         float progress, float seconds, float widthScale, float r, float g, float b, float alpha) {
+        int path = Math.max(k, 0);   // the cut follows the spine's path
+        if (!pathReady[path]) {
+            path(path, matrix, cam, bx, by, bz, progress, seconds);
+        }
+        // The colour bytes exactly as the float colour call would round them.
+        int ri = (int) (r * 255.0F), gi = (int) (g * 255.0F), bi = (int) (b * 255.0F);
+        float threadHalf = k < 0 ? 0F : FrayMath.halfWidth(k, progress) * widthScale;
+        float[] px = pointX[path], py = pointY[path], pz = pointZ[path], sx = stepX[path], sy = stepY[path], sz = stepZ[path];
+        double[] dists = distance[path];
         boolean any = false;
-        float prevAlpha = 0F;
+        int prev = 0;
+        float prevHalf = 0F;
+        int prevAlpha = 0;
         for (int i = 0; i <= FrayMath.SEGMENTS; i++) {
-            float t = i / (float) FrayMath.SEGMENTS;   // 0 the root in the void, DOCK the Dock, 1 the top
-            FrayMath.offset(Math.max(k, 0), t, seconds, progress, offset);
-            double wx = bx + offset[0] - cam.x, wy = by - FrayMath.BELOW + t * FrayMath.SPAN - cam.y, wz = bz + offset[1] - cam.z;
-            double dist = Math.sqrt(wx * wx + wy * wy + wz * wz);
+            double dist = dists[i];
             if (dist < 0.5) {
                 any = false;   // the camera is inside the thread: start again above it
                 continue;
             }
+            float halfBlocks = k < 0 ? FrayMath.cutHalfWidth(i / (float) FrayMath.SEGMENTS, progress) * widthScale : threadHalf;
+            float half = Math.clamp((float) (halfBlocks / dist), MIN_HALF_ANGLE, MAX_HALF_ANGLE) * DOME;
+            int a = (int) (alpha * HEIGHT_FADE[i] * 255.0F);
+            if (any) {
+                // left half, then right half
+                for (int side = -1; side <= 1; side += 2) {
+                    float ps = prevHalf * side, cs = half * side;
+                    buffer.addVertex(px[prev] + sx[prev] * ps, py[prev] + sy[prev] * ps, pz[prev] + sz[prev] * ps).setColor(ri, gi, bi, 0);
+                    buffer.addVertex(px[prev], py[prev], pz[prev]).setColor(ri, gi, bi, prevAlpha);
+                    buffer.addVertex(px[i], py[i], pz[i]).setColor(ri, gi, bi, a);
+                    buffer.addVertex(px[i] + sx[i] * cs, py[i] + sy[i] * cs, pz[i] + sz[i] * cs).setColor(ri, gi, bi, 0);
+                }
+            }
+            prev = i;
+            prevHalf = half;
+            prevAlpha = a;
+            any = true;
+        }
+    }
+
+    /**
+     * Thread k's points this frame: where each segment lies on the dome from the camera and its sideways step, both
+     * turned by the view once here so the ribbons only add and scale.
+     */
+    private void path(int k, Matrix4f matrix, Vec3 cam, double bx, double by, double bz, float progress, float seconds) {
+        for (int i = 0; i <= FrayMath.SEGMENTS; i++) {
+            float t = i / (float) FrayMath.SEGMENTS;   // 0 the root in the void, DOCK the Dock, 1 the top
+            FrayMath.offset(k, t, seconds, progress, offset);
+            double wx = bx + offset[0] - cam.x, wy = by - FrayMath.BELOW + t * FrayMath.SPAN - cam.y, wz = bz + offset[1] - cam.z;
+            double dist = Math.sqrt(wx * wx + wy * wy + wz * wz);
+            distance[k][i] = dist;
+            if (dist < 0.5) {
+                continue;
+            }
             float dx = (float) (wx / dist), dy = (float) (wy / dist), dz = (float) (wz / dist);
-            float halfBlocks = (k < 0 ? FrayMath.cutHalfWidth(t, progress) : FrayMath.halfWidth(k, progress)) * widthScale;
-            float halfAngle = Math.clamp((float) (halfBlocks / dist), MIN_HALF_ANGLE, MAX_HALF_ANGLE);
             // Sideways on the dome: horizontal and perpendicular to the view direction (straight overhead: east).
             float sx = -dz, sz = dx;
             float sl = (float) Math.sqrt(sx * sx + sz * sz);
@@ -165,32 +224,16 @@ public final class FrayRenderer {
                 sx /= sl;
                 sz /= sl;
             }
-            cur[0] = dx * DOME;
-            cur[1] = dy * DOME;
-            cur[2] = dz * DOME;
-            cur[3] = sx;
-            cur[4] = 0F;
-            cur[5] = sz;
-            cur[6] = halfAngle * DOME;
-            float a = alpha * FrayMath.heightFade(t);
-            if (any) {
-                // left half, then right half
-                for (int side = -1; side <= 1; side += 2) {
-                    vertex(buffer, matrix, prev, side, r, g, b, 0F);
-                    vertex(buffer, matrix, prev, 0, r, g, b, prevAlpha);
-                    vertex(buffer, matrix, cur, 0, r, g, b, a);
-                    vertex(buffer, matrix, cur, side, r, g, b, 0F);
-                }
-            }
-            System.arraycopy(cur, 0, prev, 0, 7);
-            prevAlpha = a;
-            any = true;
+            matrix.transformPosition(dx * DOME, dy * DOME, dz * DOME, turned);
+            pointX[k][i] = turned.x;
+            pointY[k][i] = turned.y;
+            pointZ[k][i] = turned.z;
+            matrix.transformDirection(sx, 0F, sz, turned);
+            stepX[k][i] = turned.x;
+            stepY[k][i] = turned.y;
+            stepZ[k][i] = turned.z;
         }
-    }
-
-    private static void vertex(BufferBuilder buffer, Matrix4f matrix, float[] p, int side, float r, float g, float b, float a) {
-        buffer.addVertex(matrix, p[0] + p[3] * p[6] * side, p[1] + p[4] * p[6] * side, p[2] + p[5] * p[6] * side)
-                .setColor(r, g, b, a);
+        pathReady[k] = true;
     }
 
     // ---------------------------------------------------------------- lint under the cut

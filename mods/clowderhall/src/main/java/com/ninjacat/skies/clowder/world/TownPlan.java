@@ -5,6 +5,7 @@ import com.google.gson.JsonParser;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.ninjacat.skies.clowder.ClowderHall;
 import com.ninjacat.skies.core.block.YarnBasketBlockEntity;
+import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -105,6 +106,8 @@ public final class TownPlan {
         // (and counted), so one missing mod never costs the whole town.
         var fills = new ArrayList<Fill>();
         var missing = new HashSet<String>();
+        // ~62k boxes share a few hundred block specs: parse each spec once (Optional.empty() = not installed)
+        var states = new HashMap<String, Optional<BlockState>>();
         for (var entry : plan.getAsJsonArray("boxes")) {
             var box = entry.getAsJsonObject();
             BlockPos from = pos(box, "from"), to = pos(box, "to");
@@ -113,12 +116,12 @@ public final class TownPlan {
                     || Math.abs(from.getZ())>BOUND || Math.abs(to.getZ())>BOUND
                     || from.getY()<0 || to.getY()>128) throw new IllegalArgumentException("Town bounds");
             String spec = box.get("block").getAsString();
-            BlockState state = state(spec);
+            BlockState state = states.computeIfAbsent(spec, s -> Optional.ofNullable(state(s))).orElse(null);
             if (state == null) { missing.add(spec.split("\\[", 2)[0]); continue; }
             fills.add(new Fill(from, to, state));
         }
         // Cells the Java ceremony owns (chest, lectern, beacon, reweave ring, markers): the plan never touches them.
-        var keep = new HashSet<Long>();
+        var keep = new LongOpenHashSet();
         if (plan.has("keep")) for (var entry : plan.getAsJsonArray("keep")) {
             var a = entry.getAsJsonArray();
             keep.add(BlockPos.asLong(a.get(0).getAsInt(), a.get(1).getAsInt(), a.get(2).getAsInt()));
@@ -126,6 +129,8 @@ public final class TownPlan {
         for (var fill : fills) {
             for (BlockPos p : BlockPos.betweenClosed(fill.from(), fill.to())) {
                 if (keep.contains(p.asLong())) continue;
+                // already right (most of a town on a revision rebuild): setBlock would change nothing either
+                if (level.getBlockState(p) == fill.state()) continue;
                 if (holdsSomething(level.getBlockEntity(p))) continue;
                 level.setBlock(p, fill.state(), 2);
             }

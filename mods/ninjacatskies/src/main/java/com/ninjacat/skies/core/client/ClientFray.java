@@ -1,12 +1,14 @@
 package com.ninjacat.skies.core.client;
 
 import com.ninjacat.skies.core.network.FraySyncPayload;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 /** Client-side view of the Fray: where it stands and how far the server has rewoven. Safe to load on a dedicated server. */
 public final class ClientFray {
     private static boolean shown;
-    private static String dimension = "";
+    /** Parsed once per sync, so the per-frame check compares ids instead of building a string; null never matches. */
+    private static ResourceLocation dimension;
     private static int x, y, z;
     /** The server's value. */
     private static float target;
@@ -18,7 +20,7 @@ public final class ClientFray {
     public static void handle(FraySyncPayload payload, IPayloadContext context) {
         context.enqueueWork(() -> {
             shown = payload.shown();
-            dimension = payload.dimension();
+            dimension = ResourceLocation.tryParse(payload.dimension());
             x = payload.x();
             y = payload.y();
             z = payload.z();
@@ -53,7 +55,7 @@ public final class ClientFray {
 
     /** Whether the Fray stands in this level: it belongs to Loom's End, and nowhere else. */
     public static boolean standsIn(net.minecraft.world.level.Level level) {
-        return shown && level != null && level.dimension().location().toString().equals(dimension);
+        return shown && level != null && level.dimension().location().equals(dimension);
     }
 
     public static int x() {
