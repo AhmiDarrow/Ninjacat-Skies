@@ -1014,39 +1014,39 @@
     "name": "Chocobos Reborn",
     "slug": "chocobos-reborn",
     "projectId": 1699008,
-    "fileId": 9022598,
-    "filename": "chocobosreborn-1.1.4.jar",
+    "fileId": 9025422,
+    "filename": "chocobosreborn-1.1.5.jar",
     "releaseType": 1,
-    "sha1": "f69f9117c0b92b95947e286a4bc623a2592dc17e"
+    "sha1": "cc20d770dc81c655f78ad82b91ef9ed0c05fabb6"
   },
   {
     "key": "Ninjacat Skies Core",
     "name": "Ninjacat Skies Core",
     "slug": "ninjacat-skies-core",
     "projectId": 1689718,
-    "fileId": 9018084,
-    "filename": "ninjacatskies-core-0.5.20.jar",
+    "fileId": 9025453,
+    "filename": "ninjacatskies-core-0.5.21.jar",
     "releaseType": 1,
-    "sha1": "11adf48cb55474e4ad9f6e21c92d9c7fe8153543"
+    "sha1": "cddfd7d85e84b4912fae41bdbad6a420e84f3acc"
   },
   {
     "key": "Shamanic Mounts",
     "name": "Shamanic Mounts",
     "slug": "shamanic-mounts",
     "projectId": 1711650,
-    "fileId": 9023646,
-    "filename": "shamanicmounts-0.1.5.jar",
+    "fileId": 9025439,
+    "filename": "shamanicmounts-0.1.7.jar",
     "releaseType": 1,
-    "sha1": "2b0505458abf9e7735a1fe1c0a56dcc89f7779ab"
+    "sha1": "75ef404af43e78de404fb141873642ab34d544aa"
   },
   {
     "key": "TribalPower",
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 9023760,
-    "filename": "tribalpower-5.3.14.jar",
+    "fileId": 9025414,
+    "filename": "tribalpower-5.3.15.jar",
     "releaseType": 1,
-    "sha1": "a46a776014b97686c914512a523e375460d1f222"
+    "sha1": "f49040f404767dc6a19ee641c5b56fd350024c11"
   }
 ]

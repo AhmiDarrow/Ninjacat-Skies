@@ -10,9 +10,11 @@ const RESIDENT_RESCUE = [0, 64, 12]
 
 let LifeComponent
 let LifeBlockPos
+let LifeAABB
 try {
   LifeComponent = Java.loadClass('net.minecraft.network.chat.Component')
   LifeBlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  LifeAABB = Java.loadClass('net.minecraft.world.phys.AABB')
 } catch (e) {}
 
 function lifeTell(player, key) {
@@ -100,29 +102,75 @@ function rescueFallen(entity) {
 
 // Once a second while someone is in the Hall (the town's chunks only tick then anyway). The sweep follows the
 // Hall's clock, not each player's, so five visitors still mean one sweep a second, not five.
-let lifeLastSweep = -1
+// This handler runs for every player on every tick in every dimension, so it does almost nothing on most calls: one
+// field read paces it to each player's twentieth tick, then only a player standing in the Hall looks any further.
+// The sweep itself never walks the town's few hundred entities: Sunfeather is remembered once found, and only what
+// is already below the rim is looked at.
+const LIFE_SWEEP_TICKS = 20
+const LIFE_SEARCH_TICKS = 200
+const LIFE_RIM_Y = 50
+const LIFE_REACH = 1024
+let lifeLastSweep = -LIFE_SWEEP_TICKS
+let lifeSunfeather = null
+let lifeSunfeatherSearch = -1
+let lifeBelowRimBox = null
+
+// Still the same living bird in the Hall: an unloaded chunk or a death leaves a stale entity that reports not alive.
+function lifeStillHere(entity) {
+  try {
+    return entity.isAlive() && inLifeHub(entity.level)
+  } catch (e) {
+    return false
+  }
+}
+
+// The full walk, only when Sunfeather is not yet known (or was lost): at most once per LIFE_SEARCH_TICKS.
+function lifeFindSunfeather(hub) {
+  try {
+    for (let entity of hub.getAllEntities()) {
+      if (lifeHas(entity, 'ncs_hub_sunfeather')) return entity
+    }
+  } catch (e) {}
+  return null
+}
+
+// Everything under the rim, anywhere near the town: the level answers from its own entity sections.
+function lifeBelowRim(hub) {
+  try {
+    if (!lifeBelowRimBox && LifeAABB) {
+      lifeBelowRimBox = new LifeAABB(-LIFE_REACH, -4096, -LIFE_REACH, LIFE_REACH, LIFE_RIM_Y, LIFE_REACH)
+    }
+    if (lifeBelowRimBox) return hub.getEntitiesWithin(lifeBelowRimBox)
+  } catch (e) {}
+  return []
+}
+
+function lifeSweep(hub, now) {
+  let bird = lifeSunfeather
+  if (bird && !lifeStillHere(bird)) bird = lifeSunfeather = null
+  if (!bird && (now >= lifeSunfeatherSearch || now < lifeSunfeatherSearch - LIFE_SEARCH_TICKS)) {
+    lifeSunfeatherSearch = now + LIFE_SEARCH_TICKS
+    bird = lifeSunfeather = lifeFindSunfeather(hub)
+  }
+  if (bird) keepSunfeather(bird)
+  for (let entity of lifeBelowRim(hub)) {
+    if (lifeHas(entity, 'ncs_hub_resident')) rescueFallen(entity)
+  }
+}
 
 PlayerEvents.tick(event => {
-  let hub = event.player.level
+  if (event.player.tickCount % LIFE_SWEEP_TICKS !== 0) return
+  let hub = event.level
+  if (!inLifeHub(hub)) return
+  // Server ticks, not level.getGameTime(): scripts see that one renamed (level.time), and the call threw every tick.
   let now
   try {
-    now = Number(hub.getGameTime())
+    now = Number(event.server.tickCount)
   } catch (e) {
     return
   }
-  if (now % 20 !== 0 || now === lifeLastSweep) return
-  if (!inLifeHub(hub)) return
+  // A restarted server counts from 0 again; anything below the last sweep starts a fresh window.
+  if (now - lifeLastSweep < LIFE_SWEEP_TICKS && now >= lifeLastSweep) return
   lifeLastSweep = now
-  let found
-  try {
-    found = hub.getEntities()
-  } catch (e) {
-    return
-  }
-  if (!found) return
-  for (let entity of found) {
-    if (!lifeHas(entity, 'ncs_hub_resident')) continue
-    if (lifeHas(entity, 'ncs_hub_sunfeather')) keepSunfeather(entity)
-    rescueFallen(entity)
-  }
+  lifeSweep(hub, now)
 })
