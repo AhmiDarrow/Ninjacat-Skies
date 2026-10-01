@@ -19,13 +19,24 @@ public final class RelicSlots {
     /** The relics in effect: one stack per relic kind (a second copy of the same relic adds nothing), Curios slot first, then off-hand, then hotbar. */
     public static List<ItemStack> worn(ServerPlayer p) {
         if (p.isSpectator()) return List.of();
-        List<ItemStack> found = new ArrayList<>();
+        // Runs for every player every tick; most wear nothing, so nothing is allocated until a relic turns up.
+        Found found = new Found();
         if (CURIOS) { try { CuriosBridge.collect(p, found); } catch (Throwable ignored) {} }
-        ItemStack off = p.getOffhandItem(); if (off.getItem() instanceof RelicItem) found.add(off);
-        for (int i = 0; i < 9; i++) { ItemStack s = p.getInventory().getItem(i); if (s.getItem() instanceof RelicItem) found.add(s); }
-        List<ItemStack> out = new ArrayList<>();
-        outer: for (ItemStack s : found) { for (ItemStack o : out) if (o.getItem() == s.getItem()) continue outer; out.add(s); }
-        return out;
+        found.add(p.getOffhandItem());
+        for (int i = 0; i < 9; i++) found.add(p.getInventory().getItem(i));
+        return found.out == null ? List.of() : found.out;
+    }
+
+    /** The first stack of each relic kind, in the order offered. */
+    private static final class Found {
+        List<ItemStack> out;
+
+        void add(ItemStack s) {
+            if (!(s.getItem() instanceof RelicItem)) return;
+            if (out == null) out = new ArrayList<>(2);
+            for (ItemStack o : out) if (o.getItem() == s.getItem()) return;
+            out.add(s);
+        }
     }
 
     public static boolean wearing(ServerPlayer p, RelicItem item) {
@@ -35,13 +46,13 @@ public final class RelicSlots {
 
     /** Only touched when Curios is loaded. */
     private static final class CuriosBridge {
-        static void collect(ServerPlayer p, List<ItemStack> out) {
-            top.theillusivec4.curios.api.CuriosApi.getCuriosInventory(p).ifPresent(inv -> {
-                for (var entry : inv.getCurios().entrySet()) {
-                    var stacks = entry.getValue().getStacks();
-                    for (int i = 0; i < stacks.getSlots(); i++) { ItemStack s = stacks.getStackInSlot(i); if (s.getItem() instanceof RelicItem) out.add(s); }
-                }
-            });
+        static void collect(ServerPlayer p, Found out) {
+            var inv = top.theillusivec4.curios.api.CuriosApi.getCuriosInventory(p).orElse(null);
+            if (inv == null) return;
+            for (var handler : inv.getCurios().values()) {
+                var stacks = handler.getStacks();
+                for (int i = 0; i < stacks.getSlots(); i++) out.add(stacks.getStackInSlot(i));
+            }
         }
     }
 }

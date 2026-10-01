@@ -60,17 +60,12 @@ public final class ClowderLives {
         var contributors = data.getCompound(CONTRIBUTORS);
         boolean changed = saved != lives || !data.contains(KEY);
         // members who have spent a Clowder's last life bring no fresh lives with them: leaving a party and joining
-        // another (or falling back to a solo team) must not be a revive
-        java.util.Set<UUID> exhausted = new java.util.HashSet<>();
-        var savedExhausted = data.getCompound(EXHAUSTED_MEMBERS);
-        for (String k : savedExhausted.getAllKeys()) {
-            if (savedExhausted.getBoolean(k)) {
-                try { exhausted.add(UUID.fromString(k)); } catch (IllegalArgumentException ignored) {}
-            }
-        }
-        for (var online : team.onlineMembers()) if (online.getPersistentData().getBoolean(EXHAUSTED_FLAG)) exhausted.add(online.getUUID());
+        // another (or falling back to a solo team) must not be a revive. Only needed for a member not yet counted,
+        // so the set is built then, not on every call (lives are enforced once a second per player).
+        java.util.Set<UUID> exhausted = null;
         for (var member : team.memberIds()) {
             if (!contributors.getBoolean(member.toString())) {
+                if (exhausted == null) exhausted = exhausted(team, data);
                 if (!exhausted.contains(member)) lives = (int) Math.min(MAX_LIVES, (long) lives + Math.max(1, Math.min(99, startingLives)));
                 contributors.putBoolean(member.toString(), true);
                 changed = true;
@@ -82,6 +77,19 @@ public final class ClowderLives {
             team.markDirty();
         }
         return lives;
+    }
+
+    /** Members marked spent in the pool, plus online members still carrying the spectator flag. */
+    private static java.util.Set<UUID> exhausted(Clowder team, CompoundTag data) {
+        java.util.Set<UUID> exhausted = new java.util.HashSet<>();
+        var savedExhausted = data.getCompound(EXHAUSTED_MEMBERS);
+        for (String k : savedExhausted.getAllKeys()) {
+            if (savedExhausted.getBoolean(k)) {
+                try { exhausted.add(UUID.fromString(k)); } catch (IllegalArgumentException ignored) {}
+            }
+        }
+        for (var online : team.onlineMembers()) if (online.getPersistentData().getBoolean(EXHAUSTED_FLAG)) exhausted.add(online.getUUID());
+        return exhausted;
     }
 
     public static int spend(Clowder team, int startingLives) {

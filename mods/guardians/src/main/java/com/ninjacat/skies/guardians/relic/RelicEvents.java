@@ -12,6 +12,7 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -27,12 +28,14 @@ public final class RelicEvents {
             stripWorn(p);
             return;
         }
+        List<ItemStack> worn = RelicSlots.worn(p);
+        Set<RelicItem> before = lastWorn.getOrDefault(p.getUUID(), Set.of());
+        if (worn.isEmpty() && before.isEmpty()) return;   // most players, most ticks: nothing worn now or before
         Set<RelicItem> now = new HashSet<>();
-        for (ItemStack s : RelicSlots.worn(p)) {
+        for (ItemStack s : worn) {
             RelicItem r = (RelicItem) s.getItem(); now.add(r);
             r.power.tickWorn(p, s);
         }
-        Set<RelicItem> before = lastWorn.getOrDefault(p.getUUID(), Set.of());
         for (RelicItem r : now) if (!before.contains(r)) r.power.onWorn(p, true);
         for (RelicItem r : before) if (!now.contains(r)) r.power.onWorn(p, false);
         if (now.isEmpty()) lastWorn.remove(p.getUUID()); else lastWorn.put(p.getUUID(), now);

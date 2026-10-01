@@ -13,10 +13,11 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
+import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
+import it.unimi.dsi.fastutil.longs.LongSet;
+
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Places or removes a large set of blocks a slice at a time, so a 25k-block structure never lands in one tick.
@@ -36,7 +37,7 @@ public final class BuildQueue {
     private final List<BlockState> palette = new ArrayList<>();
     private int[] ops = new int[0];     // x, y, z, paletteIndex
     private int count, cursor;
-    private final Set<Long> ticketed = new HashSet<>();
+    private final LongSet ticketed = new LongOpenHashSet();
 
     public BuildQueue(Mode mode, long ticketKey) { this.mode = mode; this.ticketKey = ticketKey; }
 
@@ -84,8 +85,9 @@ public final class BuildQueue {
     }
 
     private void hold(ServerLevel level, BlockPos p) {
-        ChunkPos c = new ChunkPos(p);
-        if (ticketed.add(c.toLong())) level.getChunkSource().addRegionTicket(TICKET, c, 1, ticketKey);
+        // once per block placed: key on the packed chunk and only build a ChunkPos for a chunk not yet held
+        long chunk = ChunkPos.asLong(p.getX() >> 4, p.getZ() >> 4);
+        if (ticketed.add(chunk)) level.getChunkSource().addRegionTicket(TICKET, new ChunkPos(chunk), 1, ticketKey);
     }
 
     /** Drop every chunk ticket this queue took. Safe to call more than once. */

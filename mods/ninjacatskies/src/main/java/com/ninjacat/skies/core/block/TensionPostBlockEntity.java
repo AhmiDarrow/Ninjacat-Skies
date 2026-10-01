@@ -23,6 +23,15 @@ import java.util.UUID;
 /** Holds which Clowder raised this Post and runs the client-side hum and thread particles. */
 public class TensionPostBlockEntity extends BlockEntity {
     private static final int HUM_EVERY = 90;
+    /** One dust colour per Strand, built once instead of per particle. */
+    private static final DustParticleOptions[] DUST = new DustParticleOptions[Strand.ALL.length];
+
+    static {
+        for (Strand s : Strand.ALL) {
+            int c = s.color();
+            DUST[s.ordinal()] = new DustParticleOptions(new Vector3f(((c >> 16) & 0xFF) / 255F, ((c >> 8) & 0xFF) / 255F, (c & 0xFF) / 255F), 0.7F);
+        }
+    }
     @Nullable
     private UUID clowder;
 
@@ -66,9 +75,7 @@ public class TensionPostBlockEntity extends BlockEntity {
                 case 2 -> oz = 0.42;
                 default -> ox = -0.42;
             }
-            int c = s.color();
-            level.addParticle(new DustParticleOptions(new Vector3f(((c >> 16) & 0xFF) / 255F, ((c >> 8) & 0xFF) / 255F, (c & 0xFF) / 255F), 0.7F),
-                    cx + ox, y, cz + oz, 0, 0.02, 0);
+            level.addParticle(DUST[i], cx + ox, y, cz + oz, 0, 0.02, 0);
         }
 
         if (state.getValue(TensionPostBlock.REWOVEN) && rand.nextInt(6) == 0) {

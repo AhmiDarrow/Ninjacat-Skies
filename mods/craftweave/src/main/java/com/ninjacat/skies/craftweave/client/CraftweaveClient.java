@@ -8,6 +8,7 @@ import com.ninjacat.skies.craftweave.Craftweave;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -55,6 +56,10 @@ public final class CraftweaveClient {
         List<RecipeHolder<CraftingRecipe>> matches = List.of();
         boolean tabOpen;
         int scroll;
+        /** How many each shown recipe can make, kept while the pack (its change counter) and the grid stay the same. */
+        final Map<RecipeHolder<CraftingRecipe>, Integer> can = new HashMap<>();
+        int canInventory = Integer.MIN_VALUE;
+        List<ItemStack> canGrid;
     }
 
     public static void init(IEventBus modBus) {
@@ -167,15 +172,32 @@ public final class CraftweaveClient {
     private static List<RecipeHolder<CraftingRecipe>> matches(AbstractContainerScreen<?> s, State state) {
         var level = Minecraft.getInstance().level;
         if (level == null) return List.of();
-        List<ItemStack> now = new ArrayList<>(9);
-        for (int i = 1; i <= 9; i++) now.add(s.getMenu().getSlot(i).getItem().copy());
-        boolean same = now.size() == state.grid.size();
-        for (int i = 0; same && i < now.size(); i++) same = ItemStack.matches(now.get(i), state.grid.get(i));
+        // read every frame: compare the grid in place and copy it only when it changed
+        boolean same = state.grid.size() == 9;
+        for (int i = 0; same && i < 9; i++) same = ItemStack.matches(s.getMenu().getSlot(i + 1).getItem(), state.grid.get(i));
         if (!same) {
+            List<ItemStack> now = new ArrayList<>(9);
+            for (int i = 1; i <= 9; i++) now.add(s.getMenu().getSlot(i).getItem().copy());
             state.grid = now;
             state.matches = CraftTables.matches(level, CraftTables.input(s.getMenu()));
         }
         return state.matches;
+    }
+
+    /**
+     * How many items of the recipe the pack and grid can make. Drawn every frame for the shown recipe and each
+     * bookmark, but it only changes with the pack or the grid, so it is worked out again only then (the change
+     * counter the recipe book itself watches, and the grid {@link #matches} keeps). Call after {@link #matches}.
+     */
+    private static int canMake(AbstractContainerScreen<?> s, State state, RecipeHolder<CraftingRecipe> recipe) {
+        var player = Minecraft.getInstance().player;
+        int inventory = player.getInventory().getTimesChanged();
+        if (inventory != state.canInventory || state.canGrid != state.grid) {
+            state.can.clear();
+            state.canInventory = inventory;
+            state.canGrid = state.grid;
+        }
+        return state.can.computeIfAbsent(recipe, r -> CraftTables.canMake(player, s.getMenu(), r));
     }
 
     /** The recipe the result slot is showing, when one can be told apart. */
@@ -183,6 +205,11 @@ public final class CraftweaveClient {
         var list = matches(s, state);
         if (list.isEmpty() || s.getMenu().getSlot(0).getItem().isEmpty()) return null;
         return list.get(CraftTables.index(Minecraft.getInstance().level, s.getMenu(), list));
+    }
+
+    /** {@link #current} from matches and an index already worked out this frame. */
+    private static RecipeHolder<CraftingRecipe> current(AbstractContainerScreen<?> s, List<RecipeHolder<CraftingRecipe>> list, int index) {
+        return list.isEmpty() || s.getMenu().getSlot(0).getItem().isEmpty() ? null : list.get(index);
     }
 
     // ---- events ---------------------------------------------------------------------------------------------------
@@ -228,9 +255,13 @@ public final class CraftweaveClient {
         g.fill(qx, qy, qx + 24, qy + 11, 0xB0101418);
         g.renderOutline(qx, qy, 24, 11, state.quantity != null && state.quantity.isFocused() ? GOLD : RIM);
         if (state.quantity != null) state.quantity.render(g, mx, my, event.getPartialTick());
-        RecipeHolder<CraftingRecipe> made = current(s, state);
+        // nothing on the table changes while one frame draws: match the grid and find the shown recipe once
+        // (index assembles every matching recipe; with one match it is always 0)
+        var list = matches(s, state);
+        int index = list.size() > 1 ? CraftTables.index(Minecraft.getInstance().level, s.getMenu(), list) : 0;
+        RecipeHolder<CraftingRecipe> made = current(s, list, index);
         if (made != null) {
-            int can = CraftTables.canMake(Minecraft.getInstance().player, s.getMenu(), made);
+            int can = canMake(s, state, made);
             String max = Component.translatable("craftweave.max", can).getString();
             g.pose().pushPose();
             g.pose().translate(qx + 26, qy + 3, 0);
@@ -245,13 +276,12 @@ public final class CraftweaveClient {
             if (hot) g.renderTooltip(font, Component.translatable("craftweave.clear"), mx, my);
         }
 
-        var list = matches(s, state);
         if (list.size() > 1) {
             int[] c = cycleBox(s);
             boolean hot = inside(c, mx, my);
             g.fill(c[0], c[1], c[0] + c[2], c[1] + c[3], hot ? 0xF0203038 : INK);
             g.renderOutline(c[0], c[1], c[2], c[3], hot ? GOLD : RIM);
-            int at = CraftTables.index(Minecraft.getInstance().level, s.getMenu(), list) + 1;
+            int at = index + 1;
             String label = at + "/" + list.size();
             g.pose().pushPose();
             g.pose().translate(c[0] + c[2] / 2F, c[1] + 2, 0);
@@ -263,7 +293,7 @@ public final class CraftweaveClient {
                     Component.translatable("craftweave.cycle.tip").withStyle(ChatFormatting.GRAY)), mx, my);
         }
 
-        RecipeHolder<CraftingRecipe> showing = current(s, state);
+        RecipeHolder<CraftingRecipe> showing = made;
         if (showing != null) {
             int[] b = starBox(s);
             boolean marked = bookmarks().contains(showing.id()), hot = inside(b, mx, my);
@@ -300,7 +330,7 @@ public final class CraftweaveClient {
                     ItemStack out = holder.value().getResultItem(Minecraft.getInstance().level.registryAccess());
                     g.renderItem(out, ix + 1, iy + 1);
                     g.renderItemDecorations(font, out, ix + 1, iy + 1);
-                    int can = CraftTables.canMake(Minecraft.getInstance().player, s.getMenu(), holder);
+                    int can = canMake(s, state, holder);
                     if (can == 0) g.fill(ix + 1, iy + 1, ix + 17, iy + 17, 0x80400000);
                     if (hot) g.renderComponentTooltip(font, List.of(out.getHoverName().copy().withStyle(ChatFormatting.WHITE),
                             can > 0 ? Component.translatable("craftweave.bookmark.can", can).withStyle(ChatFormatting.GREEN)
