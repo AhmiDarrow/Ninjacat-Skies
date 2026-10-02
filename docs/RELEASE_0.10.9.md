@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.9 — Two Heats in Three
 
-Pack CurseForge client file **pending**, server additional **pending**. Chocobos Reborn 1.1.8 is CurseForge file
+Pack CurseForge client file **9038543**, server additional **9038547**. Chocobos Reborn 1.1.8 is CurseForge file
 **9038410**; Ninjacat Skies Core 0.5.21 (9025453), Tribal Power 5.3.17 (9034294) and Shamanic Mounts 0.1.9 (9034426)
 are unchanged.
 
