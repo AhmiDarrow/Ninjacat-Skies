@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.8 — Flat Glass, Flute and Post, Every Other Heat
 
-Pack CurseForge client file **PENDING**, server additional **PENDING**. Ninjacat Skies Core 0.5.21 is CurseForge file
+Pack CurseForge client file **9034877**, server additional **9034879**. Ninjacat Skies Core 0.5.21 is CurseForge file
 **9025453**; Tribal Power 5.3.17 is **9034294**; Chocobos Reborn 1.1.7 is **9034590**; Shamanic Mounts 0.1.9 is
 **9034426**.
 
