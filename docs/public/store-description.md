@@ -61,7 +61,7 @@ The hub at the edge of the cut world, raised by the nine tribes and every craft 
 - **Bees on a void pad**: craft a nest from a ring of logs or grit around a flower and wait for wings; every Productive Bees line starts there
 - Voidloom stations: a Loomframe that sifts on its own, a Tension Barrel that batches — the pad's first machines
 - FancyMenu branded title (void sky, paw logo, indigo/teal buttons)
-- Tribal Power **5.3.16** as a core pack pillar (also playable standalone): Elders that talk, nine tribe stories, eight March guardians and the Ninth Agreement, a March with its own weather, festivals and music
+- Tribal Power **5.3.17** as a core pack pillar (also playable standalone): Elders that talk, nine tribe stories, eight March guardians and the Ninth Agreement, a March with its own weather, festivals and music
 - Create, Mystical Agriculture, Productive Bees, AE2, Mekanism, Occultism, and more — woven into original quests
 
 ## Driftwrecks
