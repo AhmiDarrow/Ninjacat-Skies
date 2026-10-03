@@ -1014,10 +1014,10 @@
     "name": "Chocobos Reborn",
     "slug": "chocobos-reborn",
     "projectId": 1699008,
-    "fileId": 9038410,
-    "filename": "chocobosreborn-1.1.8.jar",
+    "fileId": 9043833,
+    "filename": "chocobosreborn-1.1.9.jar",
     "releaseType": 1,
-    "sha1": "c84525f5b557730dd223c407b2bdc15ac65c5572"
+    "sha1": "9b7e383118932925725433850eabf6c2a4020da6"
   },
   {
     "key": "Ninjacat Skies Core",
@@ -1048,5 +1048,15 @@
     "filename": "tribalpower-5.3.17.jar",
     "releaseType": 1,
     "sha1": "bcf499d0cbd055a915bf794b5ff62681f8c29ae5"
+  },
+  {
+    "key": "Lithium",
+    "name": "Lithium (Fabric/NeoForge)",
+    "slug": "lithium",
+    "projectId": 360438,
+    "fileId": 8330365,
+    "filename": "lithium-neoforge-0.15.4+mc1.21.1.jar",
+    "releaseType": 1,
+    "sha1": "97212e45c963730bbfc7c44780df99317814c21b"
   }
 ]
