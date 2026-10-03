@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.11 — Smooth Riding, a Cooler March, Small Foals
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Chocobos Reborn 1.1.10 is CurseForge file
+Pack CurseForge client file **9051145**, server additional **9051151**. Chocobos Reborn 1.1.10 is CurseForge file
 **9050926**; Tribal Power 5.3.18 is **9048526**; Shamanic Mounts 0.1.11 is **9050339** (0.1.10, 9049935, was never
 pinned). Ninjacat Skies Core 0.5.21 (9025453) and Lithium 0.15.4 (8330365) are unchanged.
 
