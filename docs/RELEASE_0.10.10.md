@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.10 — In Their Element, and Lithium
 
-Pack CurseForge client file **pending**, server additional **pending**. Chocobos Reborn 1.1.9 is CurseForge file
+Pack CurseForge client file **9043976**, server additional **9043980**. Chocobos Reborn 1.1.9 is CurseForge file
 **9043833**; Lithium 0.15.4 is project 360438 file **8330365**. Ninjacat Skies Core 0.5.21 (9025453), Tribal Power
 5.3.17 (9034294) and Shamanic Mounts 0.1.9 (9034426) are unchanged.
 
