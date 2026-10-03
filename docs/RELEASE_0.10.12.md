@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.12 — Whistle Calls and Flute Songs
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Chocobos Reborn 1.1.11 is CurseForge file
+Pack CurseForge client file **9052105**, server additional **9052109**. Chocobos Reborn 1.1.11 is CurseForge file
 **9051920**; Shamanic Mounts 0.1.12 is **9051936**. Tribal Power 5.3.18 (9048526), Ninjacat Skies Core 0.5.21
 (9025453) and Lithium 0.15.4 (8330365) are unchanged.
 
