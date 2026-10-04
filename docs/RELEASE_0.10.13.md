@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.13 — Filtered Relays and Only Followers
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Tribal Power 5.3.19 is CurseForge file **9053012**;
+Pack CurseForge client file **9053181**, server additional **9053185**. Tribal Power 5.3.19 is CurseForge file **9053012**;
 Chocobos Reborn 1.1.12 is **9053026**; Shamanic Mounts 0.1.13 is **9053028**. Ninjacat Skies Core 0.5.21 (9025453)
 and Lithium 0.15.4 (8330365) are unchanged.
 
