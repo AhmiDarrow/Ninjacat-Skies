@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.14 — The March Remade
 
-Pack CurseForge client file **pending**, server additional **pending**. Tribal Power 5.4.0 is CurseForge file **9065115**.
+Pack CurseForge client file **9065260**, server additional **9065271**. Tribal Power 5.4.0 is CurseForge file **9065115**.
 Chocobos Reborn 1.1.12 (9053026), Shamanic Mounts 0.1.13 (9053028), Ninjacat Skies Core 0.5.21 (9025453) and Lithium
 0.15.4 (8330365) are unchanged.
 
