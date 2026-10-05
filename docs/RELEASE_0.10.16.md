@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.16 — The Woven Lattice
 
-Pack CurseForge client file **pending**, server additional **pending**. Tribal Power 5.6.0 is CurseForge file **9066393**. Chocobos Reborn 1.1.12 (9053026), Shamanic Mounts 0.1.13 (9053028), Ninjacat Skies Core 0.5.21 (9025453) and Lithium 0.15.4 (8330365) are unchanged.
+Pack CurseForge client file **9066491**, server additional **9066501**. Tribal Power 5.6.0 is CurseForge file **9066393**. Chocobos Reborn 1.1.12 (9053026), Shamanic Mounts 0.1.13 (9053028), Ninjacat Skies Core 0.5.21 (9025453) and Lithium 0.15.4 (8330365) are unchanged.
 
 106 mods (102 on the server). Existing saves load; Tribal Power bases need a Lattice Conductor to run again (hard switch, announced in game once per player).
 
