@@ -1,12 +1,14 @@
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
+issueTrackerURL="https://github.com/AhmiDarrow/Ninjacat-Skies/issues"
 
 [[mods]]
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 authors="${mod_authors}"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/ninjacat-skies-core"
 description='''${mod_description}'''
 
 [[mixins]]
