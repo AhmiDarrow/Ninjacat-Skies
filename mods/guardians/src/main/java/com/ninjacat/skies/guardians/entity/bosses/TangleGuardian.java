@@ -93,6 +93,8 @@ public class TangleGuardian extends GuardianEntity {
     }
     /** Knots the party cut are forgotten; old ones rot away. */
     private void rotWebs() {
+        // webs/webBorn are not saved: after a reload, adopt the cobwebs the base ledger still holds so they rot as usual
+        if (webs.isEmpty() && !tempBlocks.isEmpty()) for (BlockPos p : tempBlocks) if (level().getBlockState(p).is(Blocks.COBWEB)) { webs.add(p); webBorn.add(tickCount); }
         for (int i = webs.size() - 1; i >= 0; i--) {
             BlockPos p = webs.get(i);
             boolean gone = !level().getBlockState(p).is(Blocks.COBWEB);

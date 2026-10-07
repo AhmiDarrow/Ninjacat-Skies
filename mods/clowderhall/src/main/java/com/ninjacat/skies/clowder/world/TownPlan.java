@@ -65,6 +65,13 @@ public final class TownPlan {
     /** A plan that failed to apply is not retried (and re-read, 4 MB) on every visit until the next reload. */
     private static ResourceManager failedFor;
 
+    /** Server stopped: drop the references to its resource manager so a closed world's pack tree can be collected. */
+    public static void reset() {
+        cachedFor = null;
+        failedFor = null;
+        cachedRevision = 0;
+    }
+
     /** The plan's revision, read once per resource reload; 0 when no plan is installed. */
     public static int revision(ServerLevel level) {
         ResourceManager resources = level.getServer().getResourceManager();
@@ -130,8 +137,10 @@ public final class TownPlan {
             for (BlockPos p : BlockPos.betweenClosed(fill.from(), fill.to())) {
                 if (keep.contains(p.asLong())) continue;
                 // already right (most of a town on a revision rebuild): setBlock would change nothing either
-                if (level.getBlockState(p) == fill.state()) continue;
-                if (holdsSomething(level.getBlockEntity(p))) continue;
+                BlockState cur = level.getBlockState(p);
+                if (cur == fill.state()) continue;
+                // only a block that can hold a block entity needs the second chunk lookup
+                if (cur.hasBlockEntity() && holdsSomething(level.getBlockEntity(p))) continue;
                 level.setBlock(p, fill.state(), 2);
             }
         }
@@ -294,8 +303,8 @@ public final class TownPlan {
     /** The block state for a spec like {@code minecraft:oak_stairs[facing=east]}; null when the block is not installed. */
     private static BlockState state(String spec) {
         String[] parts=spec.split("\\[",2);
-        var id=ResourceLocation.parse(parts[0]);
-        if (!BuiltInRegistries.BLOCK.containsKey(id)) return null;
+        var id=ResourceLocation.tryParse(parts[0]);   // a malformed id is skipped and counted like a missing mod, never fatal
+        if (id==null || !BuiltInRegistries.BLOCK.containsKey(id)) return null;
         BlockState state=BuiltInRegistries.BLOCK.get(id).defaultBlockState();
         // A property or value another mod version renamed is dropped (the block keeps its default there), never fatal.
         if (parts.length==2) for (String pair:parts[1].replace("]","").split(",")) {

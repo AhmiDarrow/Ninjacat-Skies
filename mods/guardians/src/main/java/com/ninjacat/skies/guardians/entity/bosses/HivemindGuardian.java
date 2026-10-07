@@ -97,6 +97,7 @@ public class HivemindGuardian extends GuardianEntity {
     /** A campfire (lit) within 3.5 blocks of a cell mouth seals it; after 30 s the smoke gutters and the fire goes out. */
     private void tickSeals() {
         int sealed = 0;
+        int newly = -1;   // the cell smoked this tick; its line is said after the loop so the count is the true total
         for (int k = 0; k < CELLS; k++) {
             if (sealedUntil[k] > tickCount) {
                 sealed++;
@@ -105,8 +106,9 @@ public class HivemindGuardian extends GuardianEntity {
             }
             if (fire[k] != null) { BlockState s = level().getBlockState(fire[k]); if (isLitCampfire(s)) level().setBlock(fire[k], s.setValue(CampfireBlock.LIT, false), 3); fire[k] = null; Mech.burst(serverLevel(), ParticleTypes.LARGE_SMOKE, cell(k).add(0, 1, 0), 10, 1); }
             BlockPos f = findCampfire(cell(k));
-            if (f != null) { fire[k] = f; sealedUntil[k] = tickCount + SEAL_TICKS; sealed++; say("message.guardians.hivemind.cell_smoked", sealed, CELLS); Mech.soundAt(serverLevel(), cell(k), SoundEvents.FIRE_EXTINGUISH, 1.5F, 0.6F); }
+            if (f != null) { fire[k] = f; sealedUntil[k] = tickCount + SEAL_TICKS; sealed++; newly = k; Mech.soundAt(serverLevel(), cell(k), SoundEvents.FIRE_EXTINGUISH, 1.5F, 0.6F); }
         }
+        if (newly >= 0) say("message.guardians.hivemind.cell_smoked", sealed, CELLS);
         if (sealed == CELLS) { if (armed) { armed = false; exposed = EXPOSE; shout("message.guardians.hivemind.all_six_cells_are_smoked"); sound(SoundEvents.BEEHIVE_SHEAR, 2F, 0.5F); Mech.burst(serverLevel(), ParticleTypes.FALLING_HONEY, position().add(0, kind.height * 0.4, 0), 40, 3); } }
         else armed = true;
     }

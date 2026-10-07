@@ -60,6 +60,10 @@ public final class CraftweaveClient {
         final Map<RecipeHolder<CraftingRecipe>, Integer> can = new HashMap<>();
         int canInventory = Integer.MIN_VALUE;
         List<ItemStack> canGrid;
+        /** Which match the result slot showed last time it was worked out, and the result and grid that answer was for. */
+        int index;
+        ItemStack indexShown = ItemStack.EMPTY;
+        List<ItemStack> indexGrid;
     }
 
     public static void init(IEventBus modBus) {
@@ -200,11 +204,26 @@ public final class CraftweaveClient {
         return state.can.computeIfAbsent(recipe, r -> CraftTables.canMake(player, s.getMenu(), r));
     }
 
+    /**
+     * Which of the matches the result slot shows. Drawn every frame; it only changes with the result slot or the grid,
+     * so the assembly of every match is done again only then. Call after {@link #matches}.
+     */
+    private static int index(AbstractContainerScreen<?> s, State state, List<RecipeHolder<CraftingRecipe>> list) {
+        if (list.size() < 2) return 0;
+        ItemStack shown = s.getMenu().getSlot(0).getItem();
+        if (state.indexGrid != state.grid || !ItemStack.matches(shown, state.indexShown)) {
+            state.index = CraftTables.index(Minecraft.getInstance().level, s.getMenu(), list);
+            state.indexShown = shown.copy();
+            state.indexGrid = state.grid;
+        }
+        return Math.min(state.index, list.size() - 1);
+    }
+
     /** The recipe the result slot is showing, when one can be told apart. */
     private static RecipeHolder<CraftingRecipe> current(AbstractContainerScreen<?> s, State state) {
         var list = matches(s, state);
         if (list.isEmpty() || s.getMenu().getSlot(0).getItem().isEmpty()) return null;
-        return list.get(CraftTables.index(Minecraft.getInstance().level, s.getMenu(), list));
+        return list.get(index(s, state, list));
     }
 
     /** {@link #current} from matches and an index already worked out this frame. */
@@ -258,7 +277,7 @@ public final class CraftweaveClient {
         // nothing on the table changes while one frame draws: match the grid and find the shown recipe once
         // (index assembles every matching recipe; with one match it is always 0)
         var list = matches(s, state);
-        int index = list.size() > 1 ? CraftTables.index(Minecraft.getInstance().level, s.getMenu(), list) : 0;
+        int index = index(s, state, list);
         RecipeHolder<CraftingRecipe> made = current(s, list, index);
         if (made != null) {
             int can = canMake(s, state, made);

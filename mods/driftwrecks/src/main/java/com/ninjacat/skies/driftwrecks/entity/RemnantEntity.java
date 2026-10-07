@@ -212,7 +212,14 @@ public class RemnantEntity extends Monster {
         }
         if (!isOpen() && timer % 10 == 0) {
             List<ItemEntity> near = sl.getEntitiesOfClass(ItemEntity.class, getBoundingBox().inflate(1.5), e -> e.getItem().is(Items.GRAVEL));
-            if (!near.isEmpty()) { near.get(0).getItem().shrink(1); if (near.get(0).getItem().isEmpty()) near.get(0).discard(); open(160, com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.stone_jammed")); }
+            if (!near.isEmpty()) {
+                // setItem re-syncs the entity's stack; shrinking the synched stack in place leaves clients showing the old count
+                ItemEntity grit = near.get(0);
+                ItemStack rest = grit.getItem().copy();
+                rest.shrink(1);
+                if (rest.isEmpty()) grit.discard(); else grit.setItem(rest);
+                open(160, com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.remnant.stone_jammed"));
+            }
         }
     }
 

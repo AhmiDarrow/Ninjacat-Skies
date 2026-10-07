@@ -53,6 +53,8 @@ public final class WreckObjectives {
     public static void touchPillar(DriftManager m, ServerLevel level, Wreck w, int index, BlockPos at, ServerPlayer p) {
         if (w.objectiveDone || w.pillarOrder.length == 0) return;
         if (w.objective != WreckObjective.RETHREAD && !w.heartwreck) return;
+        // every pillar lit but the completion deferred (no owning member online): nothing left to touch
+        if (w.pillarStep >= w.pillarOrder.length) return;
         int want = w.pillarOrder[w.pillarStep];
         if (index == want) {
             level.setBlock(at, level.getBlockState(at).setValue(ThreadPillarBlock.LIT, true), 3);

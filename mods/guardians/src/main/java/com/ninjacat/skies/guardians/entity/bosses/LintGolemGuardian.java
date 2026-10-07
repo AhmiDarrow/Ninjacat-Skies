@@ -103,6 +103,7 @@ public class LintGolemGuardian extends GuardianEntity {
             if (b.ball.isAlive() && b.ball.tickCount < 100) continue;
             balls.remove(i);
             Vec3 at = b.ball.position();
+            if (b.ball.isAlive()) b.ball.discard();   // still flying after 100 ticks (fell past the stage): nothing left for onDefeated to clean
             for (ServerPlayer p : party()) if (p.isAlive() && p.distanceToSqr(at) < 2.5 * 2.5) {
                 p.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0));
                 p.displayClientMessage(NinjacatText.tealKey("message.guardians.lintgolem.lint_in_eyes"), true);

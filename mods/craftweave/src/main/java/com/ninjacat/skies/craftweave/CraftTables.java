@@ -67,17 +67,6 @@ public final class CraftTables {
         return out;
     }
 
-    /** The recipe a player gets from these matches: their latest pick among them, else the table's own choice. */
-    public static RecipeHolder<CraftingRecipe> chosen(Player player, List<RecipeHolder<CraftingRecipe>> matches) {
-        Set<ResourceLocation> picks = PICKS.get(player.getUUID());
-        if (picks != null) {
-            List<ResourceLocation> order = new ArrayList<>(picks);
-            for (int i = order.size() - 1; i >= 0; i--)
-                for (RecipeHolder<CraftingRecipe> holder : matches) if (holder.id().equals(order.get(i))) return holder;
-        }
-        return null;
-    }
-
     /** Remember that the player chose this recipe over the others it met. */
     public static void pick(Player player, RecipeHolder<CraftingRecipe> recipe, List<RecipeHolder<CraftingRecipe>> among) {
         LinkedHashSet<ResourceLocation> picks = PICKS.computeIfAbsent(player.getUUID(), id -> new LinkedHashSet<>());
@@ -103,13 +92,25 @@ public final class CraftTables {
     public static void applyPick(AbstractContainerMenu menu, Player player) {
         if (!(player instanceof ServerPlayer server) || !isTable(menu)) return;
         // a player who never picked has nothing to apply: skip the scan of every crafting recipe on each grid change
-        if (!PICKS.containsKey(server.getUUID())) return;
-        List<RecipeHolder<CraftingRecipe>> matches = matches(server.level(), input(menu));
-        if (matches.size() < 2) return;
-        RecipeHolder<CraftingRecipe> pick = chosen(server, matches);
+        Set<ResourceLocation> picks = PICKS.get(server.getUUID());
+        if (picks == null || picks.isEmpty()) return;
+        CraftingInput input = input(menu);
+        if (input.isEmpty()) return;
+        // This runs on every grid change (and once per craft of a quantity): test the player's few picks against the
+        // grid, most recent first, instead of matching every crafting recipe in the pack. A pick that matches when the
+        // table made something else means at least two recipes match, which is the only case a pick applies to.
+        RecipeHolder<CraftingRecipe> pick = null;
+        List<ResourceLocation> order = new ArrayList<>(picks);
+        for (int i = order.size() - 1; i >= 0 && pick == null; i--) {
+            var holder = server.level().getRecipeManager().byKey(order.get(i)).orElse(null);
+            if (holder != null && holder.value() instanceof CraftingRecipe recipe && recipe.matches(input, server.level())) {
+                @SuppressWarnings("unchecked") RecipeHolder<CraftingRecipe> crafting = (RecipeHolder<CraftingRecipe>) holder;
+                pick = crafting;
+            }
+        }
         if (pick == null) return;
         Slot result = menu.getSlot(0);
-        ItemStack output = pick.value().assemble(input(menu), server.level().registryAccess());
+        ItemStack output = pick.value().assemble(input, server.level().registryAccess());
         if (ItemStack.isSameItemSameComponents(output, result.getItem()) && output.getCount() == result.getItem().getCount()) return;
         if (result.container instanceof ResultContainer container) container.setRecipeUsed(pick);
         result.set(output);

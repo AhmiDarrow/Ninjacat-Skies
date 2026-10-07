@@ -68,7 +68,9 @@ public final class DriftEvents {
 
     @SubscribeEvent
     public void onDeath(net.neoforged.neoforge.event.entity.living.LivingDeathEvent e) {
-        if (e.getEntity().level() instanceof net.minecraft.server.level.ServerLevel sl && DriftManager.isWreckMob(e.getEntity()))
+        // every death on the server lands here; only wreck mobs (always Mobs) matter, and isWreckMob's getPersistentData
+        // would allocate a tag on every other entity that has none
+        if (e.getEntity() instanceof net.minecraft.world.entity.Mob && e.getEntity().level() instanceof net.minecraft.server.level.ServerLevel sl && DriftManager.isWreckMob(e.getEntity()))
             DriftManager.get(sl.getServer()).mobGone(e.getEntity());
     }
 

@@ -153,6 +153,8 @@ public final class WreckRewards {
     }
 
     public static void sync(ServerPlayer p, TeamDrift t) {
+        // the channel is optional (vanilla clients may join): a connection that never negotiated it cannot take the payload
+        if (p.connection == null || !p.connection.hasChannel(AtlasSyncPayload.TYPE)) return;
         PacketDistributor.sendToPlayer(p, new AtlasSyncPayload(t.snapshot()));
     }
 
