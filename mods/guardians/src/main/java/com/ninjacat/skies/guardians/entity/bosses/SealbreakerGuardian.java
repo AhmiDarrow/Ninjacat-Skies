@@ -84,7 +84,9 @@ public class SealbreakerGuardian extends GuardianEntity {
         sound(SoundEvents.BEACON_ACTIVATE, 2F, 0.6F);
     }
     private void clearGlyphs() {
-        for (int k = 0; k < PILLARS; k++) if (glyph[k] != null) { if (level().getBlockState(glyph[k]).is(Blocks.TINTED_GLASS)) level().setBlock(glyph[k], Blocks.AIR.defaultBlockState(), 3); tempBlocks.remove(glyph[k]); glyph[k] = null; }
+        // glyph[] is not saved but the base ledger is: reverting through it also clears ward-glass left by a reloaded fight
+        revertTempBlocks();   // the ward-glass is this guardian's only temp block
+        java.util.Arrays.fill(glyph, null);
     }
 
     private void showPeg(int i) {

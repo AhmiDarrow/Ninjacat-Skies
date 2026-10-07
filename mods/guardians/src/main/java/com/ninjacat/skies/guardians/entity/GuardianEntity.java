@@ -205,7 +205,7 @@ public abstract class GuardianEntity extends Monster {
         // a bound guardian dropped off its stage (broken bridge, a leap over a gap) is put back, never killed by the void
         if (src.is(net.minecraft.world.damagesource.DamageTypes.FELL_OUT_OF_WORLD) && arena() != null) { returnToOrigin(); return false; }
         if (src.is(net.minecraft.tags.DamageTypeTags.IS_FALL) || src.is(net.minecraft.tags.DamageTypeTags.IS_DROWNING) || src.is(net.minecraft.tags.DamageTypeTags.IS_FIRE)) return false;
-        if (src.is(net.minecraft.tags.DamageTypeTags.IS_FALL) || src.is(net.minecraft.world.damagesource.DamageTypes.IN_WALL) || src.is(net.minecraft.world.damagesource.DamageTypes.CRAMMING)) return false;
+        if (src.is(net.minecraft.world.damagesource.DamageTypes.IN_WALL) || src.is(net.minecraft.world.damagesource.DamageTypes.CRAMMING)) return false;
         if (isImmune() && !src.is(net.minecraft.tags.DamageTypeTags.BYPASSES_INVULNERABILITY)) {
             if (src.getEntity() != null) {                                       // a real blow: tell the striker (throttled) and clang
                 if (src.getEntity() instanceof ServerPlayer p && p.tickCount % 10 == 0) p.displayClientMessage(immuneMessage().withStyle(st -> st.withColor(NinjacatText.TEAL)), true);

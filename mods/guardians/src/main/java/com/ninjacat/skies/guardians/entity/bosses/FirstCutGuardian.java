@@ -36,6 +36,8 @@ public class FirstCutGuardian extends GuardianEntity {
     private final Mech.Ledger gap = new Mech.Ledger(), split = new Mech.Ledger();
     private final List<BlockPos> rubble = new ArrayList<>(); private final List<Integer> rubbleBorn = new ArrayList<>();
     private final List<BlockPos> splitQueue = new ArrayList<>();
+    /** Mirror of splitQueue for membership: the queue grows to thousands of blocks, and a list lookup per candidate was O(n^2). */
+    private final java.util.Set<BlockPos> splitQueued = new java.util.HashSet<>();
     private int severTell = -1, gapTimer = 0, beamTell = -1, crushTell = -1, pullTell = -1, splitHalf = 0, widenClock = 0;
     @Nullable private Vec3 severAt, severDir, crushAt, pullDir;
 
@@ -96,7 +98,7 @@ public class FirstCutGuardian extends GuardianEntity {
         for (int t = -SHARD_R; t <= SHARD_R; t++) for (int w = 0; w < 2; w++) {
             Vec3 q = severAt.add(severDir.scale(t)).add(perp.scale(w));
             if (Mech.horiz(q, o) > SHARD_R || Mech.horiz(q, position()) < BOSS_KEEP) continue;
-            for (int dy = 0; dy >= -2; dy--) { BlockPos b = BlockPos.containing(q.x, o.y + dy, q.z); if (!level().getBlockState(b).isAir() && !split.has(b) && !splitQueue.contains(b)) gap.clear(level(), b); }
+            for (int dy = 0; dy >= -2; dy--) { BlockPos b = BlockPos.containing(q.x, o.y + dy, q.z); if (!level().getBlockState(b).isAir() && !split.has(b) && !splitQueued.contains(b)) gap.clear(level(), b); }
         }
         gapTimer = GAP_LIFE;
         Mech.line(serverLevel(), ParticleTypes.SWEEP_ATTACK, severAt.add(severDir.scale(-SHARD_R)).add(0, 1, 0), severAt.add(severDir.scale(SHARD_R)).add(0, 1, 0), 30);
@@ -158,11 +160,11 @@ public class FirstCutGuardian extends GuardianEntity {
         for (int t = -SHARD_R - 2; t <= SHARD_R + 2; t++) for (int w = -splitHalf; w <= splitHalf; w++) {
             Vec3 q = o.add(SEAM_DIR.scale(t)).add(perp.scale(w));
             if (Mech.horiz(q, o) > SHARD_R + 1 || Mech.horiz(q, position()) < BOSS_KEEP) continue;
-            for (int dy = 0; dy >= -3; dy--) { BlockPos b = BlockPos.containing(q.x, o.y + dy, q.z); if (!level().getBlockState(b).isAir() && !split.has(b) && !splitQueue.contains(b)) splitQueue.add(b); }
+            for (int dy = 0; dy >= -3; dy--) { BlockPos b = BlockPos.containing(q.x, o.y + dy, q.z); if (!level().getBlockState(b).isAir() && !split.has(b) && splitQueued.add(b)) splitQueue.add(b); }
         }
     }
     private void tickSplit(Vec3 o) {
-        for (int i = 0; i < 120 && !splitQueue.isEmpty(); i++) { BlockPos b = splitQueue.remove(splitQueue.size() - 1); if (!gap.has(b)) split.clear(level(), b); }
+        for (int i = 0; i < 120 && !splitQueue.isEmpty(); i++) { BlockPos b = splitQueue.remove(splitQueue.size() - 1); splitQueued.remove(b); if (!gap.has(b)) split.clear(level(), b); }
         if (!splitQueue.isEmpty() && tickCount % 5 == 0) sound(SoundEvents.DEEPSLATE_BREAK, 2F, 0.3F);
         if (++widenClock >= 200 && splitHalf < MAX_SPLIT) { widenClock = 0; splitHalf++; queueSplit(o); say("message.guardians.firstcut.halves_drift_further_apart"); }
         if (tickCount % 6 == 0) Mech.line(serverLevel(), ParticleTypes.PORTAL, o.add(SEAM_DIR.scale(-SHARD_R)).add(0, -1, 0), o.add(SEAM_DIR.scale(SHARD_R)).add(0, -1, 0), 40);
@@ -171,7 +173,7 @@ public class FirstCutGuardian extends GuardianEntity {
     @Override
     protected void onDefeated() {
         super.onDefeated();
-        gap.restoreAll(level()); split.restoreAll(level()); splitQueue.clear(); rubble.clear(); rubbleBorn.clear(); gapTimer = 0;
+        gap.restoreAll(level()); split.restoreAll(level()); splitQueue.clear(); splitQueued.clear(); rubble.clear(); rubbleBorn.clear(); gapTimer = 0;
     }
 
     @Override
@@ -183,5 +185,7 @@ public class FirstCutGuardian extends GuardianEntity {
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         gap.load(tag, "Gap", level()); split.load(tag, "Split", level());
+        // the timer is not saved: a severed strip that came back from disk mends after a full life instead of never
+        if (gap.size() > 0 && gapTimer <= 0) gapTimer = GAP_LIFE;
     }
 }

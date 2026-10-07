@@ -297,8 +297,11 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
             }
             return;
         }
-        be.progress++;
-        be.setChanged();
+        // Holds at SIFT_TICKS while a finished roll waits for room below (progressPercent stays at 100).
+        if (be.progress < SIFT_TICKS) be.progress++;
+        // The counter is cosmetic (clamped on load) and the comparator reads the output, not the progress; setChanged
+        // also notifies neighbours for the output signal, so saving it every tick is a chunk mark plus six block reads.
+        if (be.progress % 10 == 0) be.setChanged();
         if (be.progress < SIFT_TICKS) {
             if (be.progress % 10 == 0 && level instanceof ServerLevel sl) {
                 Block grit = Block.byItem(be.input.getItem());
@@ -452,10 +455,11 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
-            if (level != null && level.hasNeighborSignal(worldPosition)) return stack;
             if (slot != 0 || stack.isEmpty()) {
                 return stack;
             }
+            // after the slot check: a hopper tries every slot, and the redstone read is up to 42 block lookups
+            if (level != null && level.hasNeighborSignal(worldPosition)) return stack;
             int taken = insertInput(stack, simulate);
             if (taken <= 0) {
                 return stack;
@@ -465,7 +469,6 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack extractItem(int slot, int amount, boolean simulate) {
-            if (level != null && level.hasNeighborSignal(worldPosition)) return ItemStack.EMPTY;
             if (slot == 0 || amount <= 0) {
                 return ItemStack.EMPTY;
             }
@@ -473,6 +476,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
             if (s.isEmpty()) {
                 return ItemStack.EMPTY;
             }
+            if (level != null && level.hasNeighborSignal(worldPosition)) return ItemStack.EMPTY;
             int take = Math.min(amount, s.getCount());
             ItemStack out = s.copyWithCount(take);
             if (!simulate) {
@@ -499,8 +503,7 @@ public class LoomframeBlockEntity extends BlockEntity implements Clearable {
     // ------------------------------------------------------------ plumbing
 
     private void sync() {
-        if (level != null) level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
-        setChanged();
+        setChanged();   // also notifies neighbours for the output signal
         if (level != null && !level.isClientSide) {
             level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
         }

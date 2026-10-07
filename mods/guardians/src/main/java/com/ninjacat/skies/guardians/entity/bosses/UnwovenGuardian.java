@@ -98,7 +98,7 @@ public class UnwovenGuardian extends GuardianEntity {
                 for (ServerPlayer p : party()) { double r = Mech.horiz(p.position(), o); if (r >= 3.5 && r <= 8.9 && p.getY() < o.y + 3) { if (p.isPassenger()) p.stopRiding(); if (p.isVehicle()) p.ejectPassengers(); p.teleportTo(serverLevel(), p.getX(), o.y + 3.1, p.getZ(), p.getYRot(), p.getXRot()); } }   // the heave lifts, never traps
                 say("message.guardians.unwoven.soil_heaves_around_unwoven_dig");
             }
-            case GRIT -> { for (int k = 0; k < 4; k++) { Vec3 at = Mech.polar(o, 10, Math.PI / 2 * k, o.y + 3); serverLevel().addFreshEntity(new net.minecraft.world.entity.item.ItemEntity(level(), at.x, at.y, at.z, new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.GRAVEL))); } say("message.guardians.unwoven.grit_rattles_down_place_gravel"); }
+            case GRIT -> { for (int k = 0; k < 4; k++) { Vec3 at = Mech.polar(o, 10, Math.PI / 2 * k, o.y + 3); var grit = new net.minecraft.world.entity.item.ItemEntity(level(), at.x, at.y, at.z, new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.GRAVEL)); grit.addTag(Mech.tag(this)); serverLevel().addFreshEntity(grit); } say("message.guardians.unwoven.grit_rattles_down_place_gravel"); }   // tagged like Grindmaw's grit so a wipe or defeat clears it
             case PRUNE -> say("message.guardians.unwoven.thorns_creep_cut_them_or");
             case POUNCE -> say("message.guardians.unwoven.lashes_like_edgewalker_leave_gold");
             case BEAT -> say("message.guardians.unwoven.beats_like_drumheart_strike_fourth");

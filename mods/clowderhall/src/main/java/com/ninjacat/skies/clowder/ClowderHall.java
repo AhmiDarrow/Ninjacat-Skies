@@ -28,6 +28,7 @@ public final class ClowderHall {
         NeoForge.EVENT_BUS.addListener(this::onRegisterCommands);
         NeoForge.EVENT_BUS.addListener(this::onSetSpawn);
         NeoForge.EVENT_BUS.addListener(this::onLevelTick);
+        NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.server.ServerStoppedEvent event) -> com.ninjacat.skies.clowder.world.TownPlan.reset());
         ClowderSync.register(NeoForge.EVENT_BUS);
     }
 

@@ -211,7 +211,7 @@ public final class TensionEffects {
 
     private static void sendFray(ServerPlayer player, FraySyncPayload payload) {
         // A connection that never negotiated the channel (a GameTest mock player) cannot take it: sending would throw.
-        if (!player.connection.hasChannel(FraySyncPayload.TYPE)) return;
+        if (player.connection == null || !player.connection.hasChannel(FraySyncPayload.TYPE)) return;
         PacketDistributor.sendToPlayer(player, payload);
     }
 

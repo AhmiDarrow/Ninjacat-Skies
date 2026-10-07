@@ -245,7 +245,10 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
         if (be.progress >= recipe.time) {
             be.finish(level, pos, recipe);
         }
-        be.setChanged();
+        // The counter is cosmetic (clamped on load) and the comparator reads the output, not the progress; setChanged
+        // also notifies neighbours for the output signal, so saving it every tick is a chunk mark plus six block reads.
+        // finish() resets progress to 0, so a completed batch is always saved.
+        if (be.progress % 10 == 0) be.setChanged();
     }
 
     private void finish(Level level, BlockPos pos, Recipe recipe) {
@@ -336,10 +339,11 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
-            if (level != null && level.hasNeighborSignal(worldPosition)) return stack;
             if (slot != 0 || stack.isEmpty()) {
                 return stack;
             }
+            // after the slot check: a hopper tries every slot, and the redstone read is up to 42 block lookups
+            if (level != null && level.hasNeighborSignal(worldPosition)) return stack;
             if (isWaterCarrier(stack)) {
                 if (water + WATER_PER_BUCKET > WATER_MAX) return stack;
                 if (!canStore(emptyWaterCarrier(stack))) return stack;
@@ -358,7 +362,6 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
 
         @Override
         public ItemStack extractItem(int slot, int amount, boolean simulate) {
-            if (level != null && level.hasNeighborSignal(worldPosition)) return ItemStack.EMPTY;
             if (slot == 0 || amount <= 0) {
                 return ItemStack.EMPTY;
             }
@@ -366,6 +369,7 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
             if (s.isEmpty()) {
                 return ItemStack.EMPTY;
             }
+            if (level != null && level.hasNeighborSignal(worldPosition)) return ItemStack.EMPTY;
             int take = Math.min(amount, s.getCount());
             ItemStack out = s.copyWithCount(take);
             if (!simulate) {
@@ -392,8 +396,7 @@ public class TensionBarrelBlockEntity extends BlockEntity implements Clearable {
     // ------------------------------------------------------------ plumbing
 
     private void sync() {
-        if (level != null) level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
-        setChanged();
+        setChanged();   // also notifies neighbours for the output signal
         if (level != null && !level.isClientSide) {
             level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
         }

@@ -52,8 +52,11 @@ public final class ArenaManager extends SavedData {
     private final Map<UUID, String> pendingRelics = new HashMap<>();    // offline win: kind id delivered on login
     private boolean ticketsRestored;
 
+    /** Built once: get() runs every server tick and on every block drop or placement inside the arena dimension. */
+    private static final Factory<ArenaManager> FACTORY = new Factory<>(ArenaManager::new, ArenaManager::load);
+
     public static ArenaManager get(MinecraftServer server) {
-        return server.overworld().getDataStorage().computeIfAbsent(new Factory<>(ArenaManager::new, ArenaManager::load), "guardians_arenas");
+        return server.overworld().getDataStorage().computeIfAbsent(FACTORY, "guardians_arenas");
     }
 
     @Nullable public ArenaInstance instance(int slot) { return active.get(slot); }

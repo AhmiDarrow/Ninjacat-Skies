@@ -65,8 +65,11 @@ public final class DriftManager extends SavedData {
     private int nextId = 1;
     private final RandomSource rng = RandomSource.create();
 
+    /** Built once: get() runs several times per server tick (events, tethers, block entities, entities). */
+    private static final Factory<DriftManager> FACTORY = new Factory<>(DriftManager::new, DriftManager::load);
+
     public static DriftManager get(MinecraftServer server) {
-        return server.overworld().getDataStorage().computeIfAbsent(new Factory<>(DriftManager::new, DriftManager::load), "driftwrecks");
+        return server.overworld().getDataStorage().computeIfAbsent(FACTORY, "driftwrecks");
     }
 
     public Collection<Wreck> wrecks() { return wrecks.values(); }

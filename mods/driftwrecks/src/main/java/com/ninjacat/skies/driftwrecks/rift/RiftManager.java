@@ -90,8 +90,11 @@ public final class RiftManager extends SavedData {
     private final Map<Integer, Rift> rifts = new TreeMap<>();
     private boolean ticketsRestored;
 
+    /** Built once: get() runs every server tick. */
+    private static final Factory<RiftManager> FACTORY = new Factory<>(RiftManager::new, RiftManager::load);
+
     public static RiftManager get(MinecraftServer server) {
-        return server.overworld().getDataStorage().computeIfAbsent(new Factory<>(RiftManager::new, RiftManager::load), "driftwrecks_rifts");
+        return server.overworld().getDataStorage().computeIfAbsent(FACTORY, "driftwrecks_rifts");
     }
 
     public Collection<Rift> rifts() { return rifts.values(); }

@@ -87,8 +87,10 @@ public class CogwrightGuardian extends GuardianEntity {
     }
 
     private void tickWind(Vec3 o) {
-        int step = stageTicks / SHOW_GAP;
-        if (stageTicks % SHOW_GAP == 0 && step < sequence.size()) {
+        // stageTicks is already 1 on the first WIND tick (the stage is set after the tick's increment), so count
+        // from that tick or the first tile of the sequence is never shown
+        int shown = stageTicks - 1, step = shown / SHOW_GAP;
+        if (shown >= 0 && shown % SHOW_GAP == 0 && step < sequence.size()) {
             unlightAll(); BlockPos t = tile(o, sequence.get(step)[0], sequence.get(step)[1]);
             light(t, Blocks.OCHRE_FROGLIGHT.defaultBlockState());
             Mech.column(serverLevel(), Mech.GOLD, Vec3.atCenterOf(t).add(0, 0.6, 0), 4, 8);
