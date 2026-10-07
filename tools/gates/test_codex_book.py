@@ -61,11 +61,12 @@ class CodexBookTests(unittest.TestCase):
 
     def test_codex_item_tooltip_points_at_start_here(self):
         core = json.loads((ROOT/'mods/ninjacatskies/src/main/resources/assets/ninjacatskies/lang/en_us.json').read_text(encoding='utf-8'))
-        pack = json.loads((ROOT/'pack/overrides/kubejs/assets/ninjacatskies/lang/en_us.json').read_text(encoding='utf-8'))
         for key in ('tooltip.ninjacatskies.codex.book', 'tooltip.ninjacatskies.codex.quests'):
             self.assertIn('Start here', core[key], key)
             self.assertNotIn('story and what to do', core[key].lower())
-            self.assertEqual(core[key], pack[key], key)
+        # Core owns these lines; a pack lang override of its namespace would only drift from them again
+        self.assertFalse((ROOT/'pack/overrides/kubejs/assets/ninjacatskies/lang/en_us.json').exists(),
+                         'pack lang override of ninjacatskies: Core is the single source of these tooltips')
         tips = (ROOT/'pack/overrides/kubejs/client_scripts/voidloom_tooltips.js').read_text(encoding='utf-8')
         controls = (ROOT/'pack/overrides/CONTROLS.md').read_text(encoding='utf-8')
         self.assertNotIn('story and what to do', tips)

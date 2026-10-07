@@ -25,7 +25,10 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MODS = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "pack/mods"
+# Overridden from argv only under __main__: when this module is imported by the unittest gate, sys.argv[1] is
+# unittest's own "discover" (or a test name), and reading it here left MODS pointing at nothing, so no jar was
+# scanned and every jar-recipe item was reported as unreachable.
+MODS = ROOT / "pack/mods"
 QUESTS = ROOT / "pack/overrides/config/ftbquests/quests"
 KUBEJS = ROOT / "pack/overrides/kubejs"
 
@@ -138,7 +141,7 @@ def scan_overrides_datapacks(producible: set):
         pass
     dp = ROOT / "pack/overrides"
     for p in dp.rglob("*.json"):
-        s = str(p)
+        s = p.as_posix()  # str(p) is backslash-joined on Windows and never matched
         if "/recipe" in s or "/loot_table" in s:
             try:
                 j = json.loads(p.read_text(encoding="utf-8"))
@@ -229,4 +232,6 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        MODS = Path(sys.argv[1])
     sys.exit(main())
