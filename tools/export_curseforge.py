@@ -21,8 +21,16 @@ from cf_distribution import is_owned_jar, manifest_entries
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MC = "1.21.1"
-NEO = "21.1.249"
+
+
+def _toml_version(key: str, default: str) -> str:
+    """[versions] entry from pack/pack.toml, so the manifest's loader string cannot drift from the pack metadata."""
+    m = re.search(rf'(?m)^{key}\s*=\s*"([^"]+)"', (ROOT / "pack/pack.toml").read_text(encoding="utf-8"))
+    return m.group(1) if m else default
+
+
+MC = _toml_version("minecraft", "1.21.1")
+NEO = _toml_version("neoforge", "21.1.249")
 
 
 def pack_version() -> str:

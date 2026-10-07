@@ -28,8 +28,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from cf_distribution import is_owned_jar, is_local_owned, is_client_only, manifest_entries  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-MC = "1.21.1"
-NEO = "21.1.249"
+
+
+def _toml_version(key: str, default: str) -> str:
+    """[versions] entry from pack/pack.toml: the installer scripts fetch exactly the NeoForge the client manifest names."""
+    m = re.search(rf'(?m)^{key}\s*=\s*"([^"]+)"', (ROOT / "pack/pack.toml").read_text(encoding="utf-8"))
+    return m.group(1) if m else default
+
+
+MC = _toml_version("minecraft", "1.21.1")
+NEO = _toml_version("neoforge", "21.1.249")
 # server-side overrides; resource packs and the FancyMenu client config stay out
 OVERRIDE_DIRS = ["config", "kubejs", "structures", "defaultconfigs"]
 CLIENT_ONLY = {"config/fancymenu"}
