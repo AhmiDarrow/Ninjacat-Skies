@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.19 — Said Once
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Tribal Power 5.6.3 is CurseForge file **9091537**, Shamanic Mounts 0.1.15 is **9091546**, Chocobos Reborn 1.1.14 is **9091543** and Ninjacat Skies Core 0.5.23 is **9091550**. Lithium 0.15.4 (8330365) is unchanged.
+Pack CurseForge client file **9091686**, server additional **9091687**. Tribal Power 5.6.3 is CurseForge file **9091537**, Shamanic Mounts 0.1.15 is **9091546**, Chocobos Reborn 1.1.14 is **9091543** and Ninjacat Skies Core 0.5.23 is **9091550**. Lithium 0.15.4 (8330365) is unchanged.
 
 106 mods (102 on the server). Existing saves load as they are.
 
