@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.10.20 — Beans and Dirt
 
-Pack CurseForge client file **pending**, server additional **pending**. Tribal Power 5.6.4 is CurseForge file **9095217** and Ninjacat Skies Core 0.5.24 is **9095225**. Shamanic Mounts 0.1.15 (9091546), Chocobos Reborn 1.1.14 (9091543) and Lithium 0.15.4 (8330365) are unchanged.
+Pack CurseForge client file **9095393**, server additional **9095397**. Tribal Power 5.6.4 is CurseForge file **9095217** and Ninjacat Skies Core 0.5.24 is **9095225**. Shamanic Mounts 0.1.15 (9091546), Chocobos Reborn 1.1.14 (9091543) and Lithium 0.15.4 (8330365) are unchanged.
 
 106 mods (102 on the server). Existing saves load as they are.
 
