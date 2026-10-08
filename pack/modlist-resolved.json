@@ -1034,20 +1034,20 @@
     "name": "Shamanic Mounts",
     "slug": "shamanic-mounts",
     "projectId": 1711650,
-    "fileId": 9091546,
-    "filename": "shamanicmounts-0.1.15.jar",
+    "fileId": 9096218,
+    "filename": "shamanicmounts-0.1.16.jar",
     "releaseType": 1,
-    "sha1": "60f66758fa235cf22dacc4eb90033bfa9d449d91"
+    "sha1": "25647c8b891c7f0c61f8bd1b0e8fa0192510732e"
   },
   {
     "key": "TribalPower",
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 9095217,
-    "filename": "tribalpower-5.6.4.jar",
+    "fileId": 9096231,
+    "filename": "tribalpower-5.6.5.jar",
     "releaseType": 1,
-    "sha1": "9e7256c4d44b686907445a004ea94690a7b120d3"
+    "sha1": "f0f66fb1be121fe4ab82851adb66b7283e5ee807"
   },
   {
     "key": "Lithium",
