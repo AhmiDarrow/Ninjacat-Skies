@@ -61,7 +61,7 @@ The hub at the edge of the cut world, raised by the nine tribes and every craft 
 - **Bees on a void pad**: craft a nest from a ring of logs or grit around a flower and wait for wings; every Productive Bees line starts there
 - Voidloom stations: a Loomframe that sifts on its own, a Tension Barrel that batches — the pad's first machines
 - FancyMenu branded title (void sky, paw logo, indigo/teal buttons)
-- Tribal Power **5.3.17** as a core pack pillar (also playable standalone): Elders that talk, nine tribe stories, eight March guardians and the Ninth Agreement, a March with its own weather, festivals and music
+- Tribal Power **6.0.0** as a core pack pillar (also playable standalone): a March of fifty-nine lands in six climate bands, Elders that talk, nine tribe stories, eight March guardians and the Ninth Agreement, weather, festivals and music of its own
 - Create, Mystical Agriculture, Productive Bees, AE2, Mekanism, Occultism, and more — woven into original quests
 
 ## Driftwrecks
@@ -80,9 +80,9 @@ Chocobos roam the March. Tame a wild Yellow with Gysahl, train it on the eight g
 
 ## The living March
 
-The March, beyond the Gate Drum, is a world of its own. Beat out the **Gate Rite** — one of six drumming songs, struck in time on four drums — and the gate carries you through. Terraced mesas, deep caves and canyons, the vanilla ores in March slate, 27 structures with guarded vaults, six trees of its own (the Weeping Colossus stands over a hundred blocks tall), meres full of glowing water life, and spirits that walk by day and grow stronger after dark. Tame its creatures like wolves, read their stats, and breed toward the Exalted tier.
+The March, beyond the Gate Drum, is a world of its own. Beat out the **Gate Rite** — one of six drumming songs, struck in time on four drums — and the gate carries you through. Fifty-nine lands in six climate bands, from rime spires and frozen meres through songmaple woods, bloom meadows and drumpalm savannas to salt flats and kiln mesas, with four kinds of cave beneath; fifteen trees of its own (the Weeping Colossus stands over a hundred blocks tall), floating crag clusters moored to the land by climbable roots, a tribe camp in every band and five kinds of tribal village, 27 ruins with guarded vaults, meres full of glowing water life, and spirits that walk by day and grow stronger after dark. Tame its creatures like wolves, read their stats, and breed toward the Exalted tier.
 
-The March acts on its own now. Four countries have weather of their own making — Ashfall, Glimmer Storm, Whiteout, Fen Mist — each feeding one voice's generators and choking another's; ley surges run one voice's threads bright and double every collector on them, and punish anyone standing on a bare crossing; every tribe keeps a festival day; a warm light drifts near you now and then with a line of its country's story and a gift. Storms and surges are called two minutes ahead. Eight guardians keep the eight countries, one at the end of each tribe's story, each rising from its own altar; and sixteen fragments of the Loom's history, carved into the ruins, assemble in the Codex into the **Chronicle**.
+The March acts on its own now. Seven countries have weather of their own making — Ashfall, Glimmer Storm, Whiteout, Fen Mist, Rime Fog, Dust Storm, Spore Drift — each feeding one voice's generators and choking another's; ley surges run one voice's threads bright and double every collector on them, and punish anyone standing on a bare crossing; every tribe keeps a festival day; a warm light drifts near you now and then with a line of its country's story and a gift. Storms and surges are called two minutes ahead. Eight guardians keep their countries, one at the end of each tribe's story, each rising from its own altar; and sixteen fragments of the Loom's history, carved into the ruins, assemble in the Codex into the **Chronicle**.
 
 ## Snapped Guardians
 
@@ -100,7 +100,7 @@ Tribal Power brings an illustrated, animated Spirit Codex written in plain langu
 
 ## Mods
 
-105 mods, all woven into the questline — Create, Mekanism, AE2, Powah, Mystical Agriculture, Productive Bees, Ars Nouveau, Occultism, Nature's Aura, Iron's Spellbooks, Farmer's Delight, Pam's HarvestCraft, Tribal Power, Chocobos Reborn, Shamanic Mounts, plus a deep decoration set (Chipped, Supplementaries, Handcrafted, Macaw's, FramedBlocks), storage (Sophisticated, Functional, AE2 wireless), logistics (Modular Routers, Pipez), and quality-of-life (Xaero's maps, JEI/JER/JEP, Clumps). Companion systems ship as **Ninjacat Skies Core** (Voidloom, Clowder Hall, Whisker Codex, Guardians, Driftwrecks, Craftweave).
+106 mods, all woven into the questline — Create, Mekanism, AE2, Powah, Mystical Agriculture, Productive Bees, Ars Nouveau, Occultism, Nature's Aura, Iron's Spellbooks, Farmer's Delight, Pam's HarvestCraft, Tribal Power, Chocobos Reborn, Shamanic Mounts, plus a deep decoration set (Chipped, Supplementaries, Handcrafted, Macaw's, FramedBlocks), storage (Sophisticated, Functional, AE2 wireless), logistics (Modular Routers, Pipez), and quality-of-life (Xaero's maps, JEI/JER/JEP, Clumps). Companion systems ship as **Ninjacat Skies Core** (Voidloom, Clowder Hall, Whisker Codex, Guardians, Driftwrecks, Craftweave).
 
 ## Multiplayer
 
