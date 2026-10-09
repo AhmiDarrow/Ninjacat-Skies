@@ -80,7 +80,7 @@ def render(md: str) -> str:
             flush()
             m = re.match(r"!\[([^\]]*)\]\(([^)]+)\)", line)
             if m:
-                out.append(f'<p><img src="{m.group(2)}" alt="{html.escape(m.group(1))}"></p>')
+                out.append(f'<p><img src="{m.group(2)}" alt="{html.escape(m.group(1))}" width="720"></p>')
         elif line.strip() == "":
             flush()
         else:
