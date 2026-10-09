@@ -9,7 +9,7 @@ The Loom of Worlds was cut. Only frayed pads of earth remain in the void, under 
 
 Follow the **Whisker Codex** through nine Strands — Soil, Stone, Sprout, Claw, Spark, Clock, Swarm, Sigil, and Spindle — while **Tribal Power** shamanic technomancy (Spirit Pulse, Song Bench Echo, and the Gate Rite into The March) braids into Hum / Bind / Reweave. When a Strand is seated, its **Snapped Guardian** can be called. Pieces of the old world drift up to your pad as **Driftwrecks**, a race town waits in the void for your chocobos, and the spirit herd breeds true in your paddock. Between it all stands **Loom's End**, the last town at the edge of the world.
 
-<p><img src="https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/loomsend-knot.jpg" alt="Loom's End: the Knot and the Cut Loom" width="720"></p>
+![Loom's End: the Knot and the Cut Loom](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/loomsend-knot.jpg)
 
 ## Requirements
 
@@ -40,7 +40,7 @@ The hub at the edge of the cut world, raised by the nine tribes and every craft 
 - **Built by every craft.** Tribe homes in each people's wood, stone and colour; the Purring Hearth inn; the Stitchers' Chapel with the thirteen Woven Relics on its walls; the Leaf Archive; the Pattern-weavers' clock tower; the Artificers' Yard of Create, Mekanism, AE2 and Powah; the Old Grove of Nature's Aura, Ars Nouveau and Occultism; an apiary, a paddock, a garden, and the Windward Mill on its own islet across a rope bridge.
 - **A shared town.** Nothing in the Hall can be broken or taken, and none of its creatures tamed; only your team's drop chest and your own Yarn Basket open. When nobody is there, it sleeps.
 
-<p><img src="https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/loomsend-market.jpg" alt="Market Street in Loom's End" width="720"></p>
+![Market Street in Loom's End](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/loomsend-market.jpg)
 
 ## Features
 
@@ -70,13 +70,19 @@ Once your Clowder has tensioned Soil, pieces of the old world drift up to your p
 
 Throw a **Tether Spool** bridge across the void (the thread catches you if you fall), then do what the wreck asks: open its heart chest, break its spawners, re-thread its pillars in order, walk a lost Steward echo home, or hold the seam through three waves. Every chest rolls separately for each player, and whatever you leave behind comes home in a Salvage Bundle. Fill the **Wreck Atlas** with lore from all nine tribes, collect 54 **Keepsakes**, open sealed rifts to fight nine **Remnants**, and one day meet the Heartwreck.
 
+![A Hold-tier Driftwreck and its tethered islets](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/driftwreck-hold.jpg)
+
 ## Pad-runners and Whiskerwind
 
 Chocobos roam the March. Tame a wild Yellow with Gysahl, train it on the eight greens, breed the farm line through Green, Blue and Black to Gold, and give it orders: Follow, Stay, or Wander. Then take it to **Whiskerwind**, a race town floating in the void, through the guide at Loom's End — ranked heats and duels over **48** courses, sprints and grands prix of three to five laps, a bookie, and stalls that trade in race winnings.
 
+![Six plumages on the starting grid at Whiskerwind](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/whiskerwind-grid.jpg)
+
 ## The Spirit Herd
 
 **Shamanic Mounts** breed with real genes: ten founder lines from harts and elks to rocs, serpents and bears, each with pelts, sizes and gifts that pass to their foals. Keep track of your lines in the Herd Book, fit saddle bags and horse armour, and find them roaming the March. A saddle is sold by the Pad-keepers at Loom's End.
+
+![Founder lines of the spirit herd on a March meadow](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/spirit-herd.jpg)
 
 ## The living March
 
@@ -84,9 +90,13 @@ The March, beyond the Gate Drum, is a world of its own. Beat out the **Gate Rite
 
 The March acts on its own now. Seven countries have weather of their own making — Ashfall, Glimmer Storm, Whiteout, Fen Mist, Rime Fog, Dust Storm, Spore Drift — each feeding one voice's generators and choking another's; ley surges run one voice's threads bright and double every collector on them, and punish anyone standing on a bare crossing; every tribe keeps a festival day; a warm light drifts near you now and then with a line of its country's story and a gift. Storms and surges are called two minutes ahead. Eight guardians keep their countries, one at the end of each tribe's story, each rising from its own altar; and sixteen fragments of the Loom's history, carved into the ruins, assemble in the Codex into the **Chronicle**.
 
+![A Weeping Colossus and moored crags in the March](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/march-colossus.jpg)
+
 ## Snapped Guardians
 
 Thirteen keepers the Cut left feral — nine Strand guardians, two optional fights, and two insane stages after the Reweave. Craft a Frayed Totem, use it outside an arena, and you and nearby Clowder mates are pulled onto a dedicated stage. Win and every member present takes that guardian's **Woven Relic**: a trophy with a worn passive and a right-click power.
+
+![Fighting the Drumheart, guardian of the Spark Strand](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/guardian-drumheart.jpg)
 
 ## The Returning Song
 
@@ -106,7 +116,7 @@ Tribal Power brings an illustrated, animated Spirit Codex written in plain langu
 
 Form a Clowder, claim an island together, and progress as a team. Skyblock Builder + FTB Teams power shared pads, quest credit and each Clowder's own Driftwrecks, and everyone meets at Loom's End. Dedicated-server zips are uploaded beside the client pack; the hub costs nothing while nobody is in it.
 
-<p><img src="https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/loomsend-aerial.jpg" alt="Loom's End from the air" width="720"></p>
+![Loom's End from the air](https://raw.githubusercontent.com/AhmiDarrow/Ninjacat-Skies/master/docs/public/loomsend-aerial.jpg)
 
 ## Credits
 
