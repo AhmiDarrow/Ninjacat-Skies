@@ -1,0 +1,18 @@
+# 0.11.0 — The Wide March
+
+Tribal Power 6.0.0: the March grows from eight lands to fifty-nine. Nothing else in the pack moves. 106 mods.
+
+**Your March starts over, and we recommend letting it.** The climate and layout of the whole dimension have changed, so old chunks beside new ones would keep their old biomes with a seam at the frontier. Carry anything you want to keep back through the gate to the Overworld first. The next time your save starts, Tribal Power sets the old March aside on its own (its chunks are moved to `tribalpower_backups` inside the save, nothing is deleted) and the dimension regenerates with the new lands as you explore. The Overworld, your Whisker Codex progress, quests, chocobos and tribe standing are untouched; the camps, altars and ruins you had found in the March will need finding again. To keep your explored March exactly as it was, turn **retrogenMarch** off in the Tribal Power config before starting.
+
+**Tribal Power 6.0.0**
+
+- **Fifty-nine lands in six bands.** The March now runs cold to hot across the map the way the Overworld does: frozen, cold, temperate, warm and hot, each split by wet and dry, high and low, and the strange ground of high weirdness, with rivers, beaches, stony shores, five temperatures of sea and four kinds of cave underneath.
+- **Nine new trees, each with its own wood.** Rimebirch, Thornfir and the Elder Thornfir, Songmaple, Veilwood, Chimeblossom, Drumpalm, Tanglewood hung with climbable vines, Sunbark and the Gloomcap, a giant cave fungus that roots on stone. Four Hearthoak saplings grow an Elder Hearthoak.
+- **New ground and growth.** Rime Ice, Frost Shale, Scree, Hoarmoss, Pale Sand, Spore Turf, Salt Crust and Salt Pillars, Ochre Sand, four tones of Kiln Clay, Glass Sand, Glowmoss, Silence Weave and the Resonant Spikes of the Singing Caves, with thirteen new plants from Icebloom to Spirit Cane.
+- **Three new weathers.** Rime Fog on the Frost Shore, Dust Storms over the Salt Flats and Spore Drift in the Glowcap Mire, with the same shelter rules and generator effects as the four you know.
+- **A lived-in March.** Every tribe keeps a camp in every band, built from that band's own wood and ground: forty-five camps. Five kinds of tribal village, one per band, grown the way the Overworld's villages are, with a plaza, Kin, workshop, granary, shrine, watchtower and pens. Villages and camps keep stocked stores.
+- **Pieces of the old world.** Floating mountains hang over every land and over many a Weeping Colossus, dressed as the land under them, in ten shapes a band: glacier shelves and icicle crowns in the north, hanging gardens and chains in the temperate heart, palm tables and atolls in the warm south, buttes and hoodoos over the salt. Their roots run taut to the ground and their strand curtains are climbable, so a root is a ladder to the sky.
+- **Every creature has a voice of its own.** No March beast, Tribal Kin, guardian or the Unsung borrows a vanilla animal's sound any more.
+- **Spiritgear tooltips tell the truth.** Every piece shows what it pays and does at its own rank and voice, with the live numbers, and the attack and armour figures at the top are the ranked ones.
+- **No more boon flags.** Standing boons no longer wear an icon in the corner of the screen; dish boons still do.
+- **Smaller things.** A break another mod refuses no longer costs a Spiritgear tool its Pulse, and a death another mod handles no longer loses your charms. Flyers flee monsters instead of finishing their flight. The "hushed" warning shows once. Forty-six more balance numbers are in the config. Hoppers, screens, HUD and creature models do less work per tick and per frame.
