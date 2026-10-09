@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.11.0 — The Wide March
 
-Pack CurseForge client file **TBD**, server additional **TBD**. Tribal Power 6.0.0 is CurseForge file **9107861**. Ninjacat Skies Core 0.5.24 (9095225), Chocobos Reborn 1.1.14 (9091543), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
+Pack CurseForge client file **9108066**, server additional **9108077**. Tribal Power 6.0.0 is CurseForge file **9107861**. Ninjacat Skies Core 0.5.24 (9095225), Chocobos Reborn 1.1.14 (9091543), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
 
 106 mods (102 on the server). Existing saves load; the March regenerates on the next start (Tribal Power sets the old March chunks aside under `tribalpower_backups` inside the save, worldgen marker 4), the Overworld, Codex, quests and tribe standing are untouched.
 
