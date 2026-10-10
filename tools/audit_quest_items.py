@@ -11,6 +11,7 @@ known = set((ROOT / "INTERNAL/known_item_ids.txt").read_text(encoding="utf-8").s
 # Loot-only / structure-only / mob-only items with no pack recipe, sieve drop, or seed. Keep in sync with
 # generate_quests.py REMOVE_ITEMS / FORCE_OPTIONAL. Anything here on a non-optional quest is a dead end.
 UNREACHABLE = {
+    "minecraft:totem_of_undying",     # raids / mansions only; the pack hands them out as quest rewards, no recipe
     "minecraft:heart_of_the_sea",     # buried treasure only
     "minecraft:recovery_compass",     # echo shards: ancient city (crushed end stone + netherite mesh is the only out)
     "minecraft:elytra",               # end cities — custom End keeps the main island only
@@ -26,7 +27,6 @@ UNREACHABLE = {
 # its recipe there, stay off UNREACHABLE, and every quest asking for it must name the pack recipe in its How line.
 PACK_CRAFTED = {
     "minecraft:shulker_shell",        # Packaged Auto Distributor / Crafting Proxy
-    "minecraft:totem_of_undying",     # Ars Nouveau Archmage Spell Book
     "irons_spellbooks:ruined_book",   # Iron's Spells Ancient Codex (netherite book)
     "irons_spellbooks:magehunter",    # Magehunter Vindicators spawn in evoker forts only
 }

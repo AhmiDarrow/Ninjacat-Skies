@@ -1,13 +1,12 @@
 {
 	id: "7100000000000002"
-	title: "Steward Cache: Grit-singers"
+	title: "Gift of the Grit-singers"
 	icon: {
 		id: "voidloom:void_yarn"
 	}
 	loot_size: 1
 	hide_tooltip: false
 	use_title: true
-	loot_table_id: "ninjacatskies:steward_cache/stone"
 	loot_crate: {
 		string_id: "steward_stone"
 		item_name: "Steward Cache (Grit-singers)"
@@ -19,5 +18,51 @@
 			boss: 0
 		}
 	}
-	rewards: [ ]
+	rewards: [
+		{
+			id: "7200000000000201"
+			type: "item"
+			item: {
+				id: "ninjacatskies:thread_of_return"
+				count: 1
+			}
+		}
+		{
+			id: "7200000000000202"
+			type: "command"
+			command: "function ninjacatskies:knot_provisions/stone"
+			silent: true
+			elevate_perms: true
+			icon: {
+				id: "voidloom:void_yarn"
+			}
+		}
+		{
+			id: "7200000000000203"
+			type: "item"
+			item: {
+				id: "ninjacatskies:medium_steward_cache"
+				count: 1
+			}
+			count: 8
+		}
+		{
+			id: "7200000000000204"
+			type: "item"
+			item: {
+				id: "ninjacatskies:thread_skein"
+				count: 1
+			}
+			count: 16
+		}
+		{
+			id: "7200000000000205"
+			type: "item"
+			item: {
+				id: "minecraft:diamond"
+				count: 1
+			}
+			count: 16
+		}
+	]
 }

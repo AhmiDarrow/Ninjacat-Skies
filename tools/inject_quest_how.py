@@ -298,7 +298,7 @@ HOW_ITEM = {
     "minecraft:end_stone_bricks": "How: four End Stone in a square, or the stonecutter. End Stone is the Knot craft.",
     "minecraft:snowball": "How: one ice (kit / ice gen) shapeless into four snowballs.",
     "minecraft:elytra": "How: End cities are gone. Optional.",
-    "minecraft:totem_of_undying": "How: pack recipe, four gold blocks and four emeralds around a golden apple. Raids and evokers never come to the pad. Optional.",
+    "minecraft:totem_of_undying": "How: quest rewards only. Seat Clock and Seat Sigil give one each, and the late Strand Knot gifts offer more. Raids and evokers never come to the pad. Optional.",
     "ae2:silicon_press": "How: iron block, Binding Knot, iron, and quartz. AE2 only duplicates a press you already have.",
     "ae2:logic_processor_press": "How: iron block, Binding Knot, iron, and gold. First copy is the Knot craft.",
     "ae2:calculation_processor_press": "How: iron block, Binding Knot, iron, and certus (sieve sand). First copy is the Knot craft.",
