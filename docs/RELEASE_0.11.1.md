@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.11.1 — Gifts of the Knot
 
-Pack CurseForge client file **pending**, server additional **pending**. Tribal Power 6.1.0 is CurseForge file **9115266**. Ninjacat Skies Core 0.5.24 (9095225), Chocobos Reborn 1.1.14 (9091543), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
+Pack CurseForge client file **9115274**, server additional **9115277**. Tribal Power 6.1.0 is CurseForge file **9115266**. Ninjacat Skies Core 0.5.24 (9095225), Chocobos Reborn 1.1.14 (9091543), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
 
 106 mods (102 on the server). Existing saves load; no March reset this time.
 
