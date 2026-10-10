@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.11.2 — Smooth Heats
 
-Pack CurseForge client file **pending**, server additional **pending**. Chocobos Reborn 1.1.15 is CurseForge file **9118527**. Ninjacat Skies Core 0.5.24 (9095225), Tribal Power 6.1.0 (9115266), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
+Pack CurseForge client file **9119949**, server additional **9119954**. Chocobos Reborn 1.1.15 is CurseForge file **9118527**. Ninjacat Skies Core 0.5.24 (9095225), Tribal Power 6.1.0 (9115266), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
 
 106 mods (102 on the server). Existing saves load; no March reset. Whiskerwind relays each course once on its first heat after the update, and the race village once.
 
