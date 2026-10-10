@@ -1675,7 +1675,7 @@
 					id: "62000000000901C9"
 				}
 				{
-					type: "loot"
+					type: "choice"
 					table_id: "7100000000000009"
 					id: "62000000010901C9"
 				}
@@ -1769,7 +1769,7 @@
 			]
 			rewards: [
 				{
-					type: "loot"
+					type: "choice"
 					table_id: "710000000000000A"
 					id: "62000000000901CC"
 				}

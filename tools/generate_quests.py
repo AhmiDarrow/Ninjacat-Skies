@@ -249,7 +249,7 @@ STALL_OPTIONAL = {
     "minecraft:saddle": "Optional — the Pad-keepers in Clowder Hall sell one.",
     "minecraft:name_tag": "Optional — the Seal-carvers in Clowder Hall sell one.",
     "minecraft:shulker_box": "Optional — the Edge-walkers in Clowder Hall sell one.",
-    "minecraft:totem_of_undying": "Optional — no raids reach the pad, so the pack crafts one instead.",
+    "minecraft:totem_of_undying": "Optional — no raids reach the pad, and the pack does not craft one.",
     "minecraft:shulker_shell": "Optional — no shulkers here, so the pack crafts shells instead.",
 }
 FORCE_OPTIONAL = {"pipez:infinity_upgrade", "productivebees:sturdy_bee_cage",  # creative-only / village loot only
@@ -540,8 +540,31 @@ REWARD_TABLE_IDS = {name: hid(0xF100000000000000 + i + 1) for i, name in enumera
 
 
 def reward_crate(name):
-    """A Steward Cache loot crate — FTB Quests reward table backed by the mod's vanilla loot table."""
-    return {"type": "loot", "table_id": REWARD_TABLE_IDS[name]}
+    """The tribe's gift: a choice from its FTB Quests reward table (see write_reward_tables).
+
+    FTB Quests never rolls a reward table's loot_table_id, so a 'loot' reward on an empty table handed out
+    nothing and showed a blank bag. The table now lists its gifts itself, and the player picks one."""
+    return {"type": "choice", "table_id": REWARD_TABLE_IDS[name]}
+
+
+# What each Knot offers, by how far into the campaign it sits. The tribe's own provisions (its themed loot
+# table, rolled several times by a function) are always one option; every Knot but the Reweave also offers a Thread of
+# Return, the same item the Steward Cache rare draw and the Shard recipe give. The Reweave already credits a
+# life directly, so it offers no second one.
+KNOT_GIFT_BAND = {"soil": "early", "stone": "early", "sprout": "early", "claw": "mid", "spark": "mid", "clock": "mid",
+                  "swarm": "late", "sigil": "late", "spindle": "late", "reweave": "finale"}
+KNOT_GIFTS = {
+    "early": [("ninjacatskies:medium_steward_cache", 8), ("ninjacatskies:thread_skein", 16), ("minecraft:diamond", 16)],
+    "mid": [("ninjacatskies:large_steward_cache", 4), ("ninjacatskies:thread_bolt", 4), ("minecraft:diamond", 32)],
+    "late": [("ninjacatskies:large_steward_cache", 8), ("ninjacatskies:thread_bolt", 8), ("minecraft:netherite_ingot", 8),
+             ("minecraft:totem_of_undying", 4)],
+    "finale": [("ninjacatskies:large_steward_cache", 12), ("ninjacatskies:thread_bolt", 16), ("minecraft:nether_star", 4),
+               ("minecraft:totem_of_undying", 4)],
+}
+# The tribe's provisions roll its themed loot table this many times, through a function (one command per reward).
+KNOT_PROVISION_ROLLS = 4
+KNOT_PROVISIONS = ROOT / "pack/overrides/kubejs/data/ninjacatskies/function/knot_provisions"
+KNOT_GIFT_LINE = "Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies."
 
 
 def write_reward_tables():
@@ -554,15 +577,39 @@ def write_reward_tables():
              "sigil": "minecraft:amethyst_shard", "spindle": "ae2:fluix_crystal", "reweave": "ninjacatskies:spindle_loom_fragment"}
     colors = {"soil": 0x6B8E3A, "stone": 0x8A8580, "sprout": 0x5AAF5A, "claw": 0x8C8C96, "spark": 0xD4A84B, "clock": 0xC87A3A,
               "swarm": 0xE6C478, "sigil": 0x8A5FB8, "spindle": 0x3D7A7A, "reweave": 0xE8E0D5}
-    for name, tid in REWARD_TABLE_IDS.items():
+    for n, (name, tid) in enumerate(REWARD_TABLE_IDS.items(), start=1):
+        # FTB Quests 2101 reads titles from the lang file only; an inline title is ignored.
+        title = f"Gift of the {tribes[name]}"
+        lang[f"reward_table.{tid}.title"] = title
+        rewards = []
+
+        def gift(entry, label=None):
+            entry = {"id": hid(0xF200000000000000 + n * 0x100 + len(rewards) + 1), **entry}
+            if label:
+                lang[f"reward.{entry['id']}.title"] = label
+            rewards.append(entry)
+
+        band = KNOT_GIFT_BAND[name]
+        if band != "finale":
+            gift(reward_item("ninjacatskies:thread_of_return", 1), "Thread of Return: +1 Clowder life (right-click to spend)")
+        KNOT_PROVISIONS.mkdir(parents=True, exist_ok=True)
+        (KNOT_PROVISIONS / f"{name}.mcfunction").write_text(
+            f"# {tribes[name]}' provisions: the Knot gift rolls the tribe's themed pool {KNOT_PROVISION_ROLLS} times.\n"
+            + f"loot give @s loot ninjacatskies:steward_cache/{name}\n" * KNOT_PROVISION_ROLLS, encoding="utf-8", newline="\n")
+        gift({"type": "command", "command": f"function ninjacatskies:knot_provisions/{name}",
+              "silent": True, "elevate_perms": True, "icon": {"id": icons[name]}},
+             f"{tribes[name]}' provisions (four rolls)")
+        for item, count in KNOT_GIFTS[band]:
+            # Reward-level count with a one-item stack: FTB Quests hands it out in max-stack chunks, so a count
+            # above the stack size (four Totems of Undying, sixteen caches) arrives whole.
+            gift({"type": "item", "item": {"id": item, "count": 1}, "count": count})
         body = {
             "id": tid,
-            "title": f"Steward Cache: {tribes[name]}",
+            "title": title,
             "icon": {"id": icons[name]},
             "loot_size": 1,
             "hide_tooltip": False,
             "use_title": True,
-            "loot_table_id": f"ninjacatskies:steward_cache/{name}",
             "loot_crate": {
                 "string_id": f"steward_{name}",
                 "item_name": f"Steward Cache ({tribes[name]})",
@@ -570,7 +617,7 @@ def write_reward_tables():
                 "glow": True,
                 "drops": {"passive": 0, "monster": 0, "boss": 0},
             },
-            "rewards": [],
+            "rewards": rewards,
         }
         (folder / f"steward_cache_{name}.snbt").write_text(to_snbt(body) + "\n", encoding="utf-8")
 
@@ -584,8 +631,9 @@ TOKEN_QUESTS: dict[str, str] = {}   # strand id -> the "Seat <Strand>" quest id 
 
 
 def knot_finale(strand_i, token, main, x, y):
-    """Checkmark Knot quest (token + cache + levels) and a Seat quest that clears when the Post takes it."""
+    """Checkmark Knot quest (token + the tribe's gift + levels) and a Seat quest that clears when the Post takes it."""
     title, phase, desc = KNOT_TEXT[token]
+    desc = desc + [KNOT_GIFT_LINE]
     by_title = {lang.get(f"quest.{q['id']}.title"): q["id"] for q in main}
     deps = [by_title[t] for t in KNOT_BEATS[token] if t in by_title]
     if not deps and main:

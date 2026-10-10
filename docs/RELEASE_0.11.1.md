@@ -1,0 +1,11 @@
+# Ninjacat Skies 0.11.1 — Gifts of the Knot
+
+Pack CurseForge client file **pending**, server additional **pending**. Tribal Power 6.1.0 is CurseForge file **9115266**. Ninjacat Skies Core 0.5.24 (9095225), Chocobos Reborn 1.1.14 (9091543), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
+
+106 mods (102 on the server). Existing saves load; no March reset this time.
+
+See `docs/cf-changelog-0.11.1.md` for the player-facing notes.
+
+- **Strand Knot gifts**: the nine Knot quests and the Reweave pointed their second reward at empty reward tables (`7100000000000001`–`…0A`) whose `loot_table_id` FTB Quests 2101.1.36 stores but never rolls, so the bag showed a blank option. They are now `choice` rewards over filled tables (`72…01xx`–`…0Axx`): a Thread of Return (+1 Clowder life, not on the Reweave, which already grants its milestone life), the tribe's provisions (a `knot_provisions/<tribe>` function rolling `ninjacatskies:steward_cache/<tribe>` four times), and supplies at least four times the first draft (Steward Caches, Thread Skeins/Bolts, diamonds, netherite, Totems of Undying, Nether Stars by Knot tier). Item counts sit on the reward so stacks and unstackables split correctly. Table titles live in the lang file. Reward ids are unchanged, so saved progress carries over. `generate_quests.py` writes the same.
+- **Totem of Undying**: the `ninjacatskies:reachability/totem_of_undying` recipe is removed from `quest_reachability.js`. Totems come from quest rewards only (Seat Clock, Seat Sigil, the late Knots, Dragon Egg Show, Ultimate Cube, Thirteen voices). The three optional quests that ask for one (Totem, Totem Show, Totem (Hunt)) name those rewards in their How lines; `audit_quest_items.py` lists the totem as UNREACHABLE (optional quests only) instead of PACK_CRAFTED.
+- **Tribal Power 6.1.0** (sha1 `94ef53b9cbb39c84a65eac74d1abc5262043ad59`): stairs, slabs and walls for eight more March stones, recipes for every building block, the March sands as vanilla sand, Spiritgear shears that count as shears, unlinked Spiritweave as plain armour with bound pieces glinting, and an optimization and bug pass. Verified: 549 GameTests and a fresh March survey.

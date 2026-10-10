@@ -1044,10 +1044,10 @@
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 9107861,
-    "filename": "tribalpower-6.0.0.jar",
+    "fileId": 9115266,
+    "filename": "tribalpower-6.1.0.jar",
     "releaseType": 1,
-    "sha1": "323aa021b339aad5587f56ca6dbe2434460e5059"
+    "sha1": "94ef53b9cbb39c84a65eac74d1abc5262043ad59"
   },
   {
     "key": "Lithium",

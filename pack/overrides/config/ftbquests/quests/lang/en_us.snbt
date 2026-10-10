@@ -440,6 +440,7 @@
 	quest.4200000000010041.quest_desc: [
 		"Bench, sapling, hearth, water, Codex. The pad holds.",
 		"Tension the Strand: the Pad-keepers answer, and the token is yours to seat.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000010041.quest_subtitle: "Wake"
@@ -715,6 +716,7 @@
 	quest.4200000000020076.quest_desc: [
 		"Yarn, porcelain, a Loomframe working, iron in the chest.",
 		"Tension the Strand: the Grit-singers answer.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000020076.quest_subtitle: "Recover"
@@ -959,6 +961,7 @@
 	quest.42000000000300A6.quest_desc: [
 		"A field, a kitchen, essence rising.",
 		"Tension the Strand: the Rootbinders answer.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.42000000000300A6.quest_subtitle: "Root"
@@ -1151,6 +1154,7 @@
 	quest.42000000000400CB.quest_desc: [
 		"Plans, iron on your back, a door out.",
 		"Tension the Strand: the Edge-walkers answer. The braid opens.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.42000000000400CB.quest_subtitle: "Edge"
@@ -1427,6 +1431,7 @@
 	quest.4200000000050101.quest_desc: [
 		"A drum struck, a Pulse held, a Resonator seated.",
 		"Tension the Strand: the Drumhearts answer.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000050101.quest_subtitle: "Hum"
@@ -1687,6 +1692,7 @@
 	quest.4200000000060134.quest_desc: [
 		"A wheel, a press, a mixer, a fan, a clockwork heart.",
 		"Tension the Strand: the Pattern-weavers answer.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000060134.quest_subtitle: "Pattern"
@@ -1941,6 +1947,7 @@
 	quest.4200000000070165.quest_desc: [
 		"A nest you built, a hive you moved, a centrifuge, an incubator, essence fields.",
 		"Tension the Strand: the Colony-keepers answer.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000070165.quest_subtitle: "Colony"
@@ -2031,8 +2038,8 @@
 	quest.4200000000080175.title: "Dragon Breath"
 	quest.4200000000080176.quest_desc: [
 		"One more chance.",
-		"Optional — no raids reach the pad, so the pack crafts one instead.",
-		"How: pack recipe, four gold blocks and four emeralds around a golden apple. Raids and evokers never come to the pad. Optional."
+		"Optional — no raids reach the pad, and the pack does not craft one.",
+		"How: quest rewards only. Seat Clock and Seat Sigil give one each, and the late Strand Knot gifts offer more. Raids and evokers never come to the pad. Optional."
 	]
 	quest.4200000000080176.title: "Totem"
 	quest.4200000000080177.quest_desc: [
@@ -2174,6 +2181,7 @@
 	quest.4200000000080192.quest_desc: [
 		"A braid spun, potions bottled, spells and spirits called.",
 		"Tension the Strand: the Seal-carvers answer.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.4200000000080192.quest_subtitle: "Bind"
@@ -2457,6 +2465,7 @@
 	quest.42000000000901C9.quest_desc: [
 		"A braid, a digital loom, a gate, a stone from the March.",
 		"Tension the ninth Strand. Then the Fragment, then the Post.",
+		"Claim it and choose one gift from the tribe: a Thread of Return for one more shared life, or supplies.",
 		"How: finish the quests linked to this one, then claim it for the Strand token. Seat the token at your Tension Post."
 	]
 	quest.42000000000901C9.quest_subtitle: "Reweave"
@@ -4237,7 +4246,7 @@
 	quest.4200000000170343.title: "Respawn Anchor Show"
 	quest.4200000000170344.quest_desc: [
 		"Held in the off-hand, it cancels one otherwise fatal hit.",
-		"How: pack recipe, four gold blocks and four emeralds around a golden apple. Raids and evokers never come to the pad. Optional."
+		"How: quest rewards only. Seat Clock and Seat Sigil give one each, and the late Strand Knot gifts offer more. Raids and evokers never come to the pad. Optional."
 	]
 	quest.4200000000170344.title: "Totem Show"
 	quest.4200000000170345.quest_desc: [
@@ -6597,7 +6606,7 @@
 	quest.4200000000210518.title: "Nautilus Shell (Hunt)"
 	quest.4200000000210519.quest_desc: [
 		"Cheats death once, then it's gone.",
-		"How: pack recipe, four gold blocks and four emeralds around a golden apple. Raids and evokers never come to the pad. Optional."
+		"How: quest rewards only. Seat Clock and Seat Sigil give one each, and the late Strand Knot gifts offer more. Raids and evokers never come to the pad. Optional."
 	]
 	quest.4200000000210519.title: "Totem (Hunt)"
 	quest.420000000021051A.quest_desc: [
@@ -8903,6 +8912,35 @@
 	reward.5000000000170337.title: "Thread of Return: +1 Clowder life"
 	reward.50000000002004DD.title: "Thread of Return: +1 Clowder life"
 	reward.5000000000220581.title: "Thread of Return: +1 Clowder life"
+	reward.7200000000000101.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000102.title: "Pad-keepers' provisions (four rolls)"
+	reward.7200000000000201.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000202.title: "Grit-singers' provisions (four rolls)"
+	reward.7200000000000301.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000302.title: "Rootbinders' provisions (four rolls)"
+	reward.7200000000000401.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000402.title: "Edge-walkers' provisions (four rolls)"
+	reward.7200000000000501.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000502.title: "Drumhearts' provisions (four rolls)"
+	reward.7200000000000601.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000602.title: "Pattern-weavers' provisions (four rolls)"
+	reward.7200000000000701.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000702.title: "Colony-keepers' provisions (four rolls)"
+	reward.7200000000000801.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000802.title: "Seal-carvers' provisions (four rolls)"
+	reward.7200000000000901.title: "Thread of Return: +1 Clowder life (right-click to spend)"
+	reward.7200000000000902.title: "Loom-stitchers' provisions (four rolls)"
+	reward.7200000000000A01.title: "Nine Tribes' provisions (four rolls)"
+	reward_table.7100000000000001.title: "Gift of the Pad-keepers"
+	reward_table.7100000000000002.title: "Gift of the Grit-singers"
+	reward_table.7100000000000003.title: "Gift of the Rootbinders"
+	reward_table.7100000000000004.title: "Gift of the Edge-walkers"
+	reward_table.7100000000000005.title: "Gift of the Drumhearts"
+	reward_table.7100000000000006.title: "Gift of the Pattern-weavers"
+	reward_table.7100000000000007.title: "Gift of the Colony-keepers"
+	reward_table.7100000000000008.title: "Gift of the Seal-carvers"
+	reward_table.7100000000000009.title: "Gift of the Loom-stitchers"
+	reward_table.710000000000000A.title: "Gift of the Nine Tribes"
 	chapter.310000000000002B.chapter_subtitle: [
 		"Pieces of the old world drift up to your pad. Reach them before they unravel."
 	]

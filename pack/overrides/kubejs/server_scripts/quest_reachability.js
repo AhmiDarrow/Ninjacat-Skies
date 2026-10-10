@@ -16,18 +16,6 @@ ServerEvents.recipes(event => {
     K: 'voidloom:binding_knot'
   }).id('ninjacatskies:reachability/shulker_shell')
 
-  // Totem of Undying: evokers only come with raids and woodland mansions. Ars Nouveau's Archmage Spell Book
-  // needs one. Priced near a Thread Shard: a death saved is worth about a life.
-  event.shaped('minecraft:totem_of_undying', [
-    'GEG',
-    'EAE',
-    'GEG'
-  ], {
-    G: 'minecraft:gold_block',
-    E: 'minecraft:emerald',
-    A: 'minecraft:golden_apple'
-  }).id('ninjacatskies:reachability/totem_of_undying')
-
   if (Platform.isLoaded('irons_spellbooks')) {
     // Ruined Codex: citadel and ancient-city loot only. The Netherite Spell Book needs one.
     event.shaped('irons_spellbooks:ruined_book', [
