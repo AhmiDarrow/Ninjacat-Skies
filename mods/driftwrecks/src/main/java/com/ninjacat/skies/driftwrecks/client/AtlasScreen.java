@@ -39,14 +39,22 @@ public class AtlasScreen extends Screen {
         for (WreckModifier m : WreckModifier.ALL) stampW = Math.max(stampW, font.width(m.title()) + 4);
         int perRow = Math.max(1, Math.min(WreckModifier.ALL.length, (gridW + 12) / (stampW + 4)));
         int stampRows = (WreckModifier.ALL.length + perRow - 1) / perRow;
-        int left = 70, panelW = left + gridW + 16, panelH = 34 + gridH + 96 + (stampRows - 1) * 14;
+        // Row labels are translated. German and other long names need more than the English 70px gutter.
+        int left = 70;
+        for (WreckCore core : WreckCore.ALL) left = Math.max(left, font.width(core.title()) + 12);
+        int cells = 0;
+        for (Strand s : Strand.ALL) cells += Integer.bitCount(atlas.getInt(s.id()));
+        String count = cells + " / " + (cols * rows);
+        int panelW = left + gridW + 16;
+        int titleSpan = 8 + font.width(title) + 12 + font.width(count) + 8;
+        if (titleSpan > panelW) panelW = titleSpan;
+        int panelH = 34 + gridH + 96 + (stampRows - 1) * 14;
         int x0 = (width - panelW) / 2, y0 = Math.max(4, (height - panelH) / 2);
         g.fill(x0 - 2, y0 - 2, x0 + panelW + 2, y0 + panelH + 2, INK);
         g.fill(x0, y0, x0 + panelW, y0 + panelH, PAPER);
-        int cells = 0;
-        for (Strand s : Strand.ALL) cells += Integer.bitCount(atlas.getInt(s.id()));
+        // Longer translations (German perk lines, CJK) stay on the paper instead of painting over the world.
+        g.enableScissor(x0, y0, x0 + panelW, y0 + panelH);
         g.drawString(font, title, x0 + 8, y0 + 6, INK, false);
-        String count = cells + " / " + (cols * rows);
         g.drawString(font, count, x0 + panelW - 8 - font.width(count), y0 + 6, TEAL, false);
         int gx = x0 + left, gy = y0 + 30;
         List<Component> tip = new ArrayList<>();
@@ -112,6 +120,7 @@ public class AtlasScreen extends Screen {
         for (int i = 0; i < perks.size() && i < 4; i++) g.drawString(font, perks.get(i), x0 + left, py + i * 10, TEAL, false);
         int hw = t.getInt("heartwreck");
         if (hw > 0) g.drawString(font, Component.translatable("gui.driftwrecks.atlas.heart." + Math.min(3, hw)), x0 + 8, y0 + panelH - 12, GOLD, false);
+        g.disableScissor();
         if (!tip.isEmpty()) g.renderComponentTooltip(font, tip, mx, my);
     }
 

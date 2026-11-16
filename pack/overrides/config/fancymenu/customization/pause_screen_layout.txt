@@ -40,13 +40,13 @@ layout_action_executable_blocks {
 
 element {
   interactable = false
-  source = §8Whisker Codex · hush between Strands
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.pause_codex"}}
   source_mode = direct
   shadow = true
   scale = 1.0
   base_color = #8A8580FF
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   parse_markdown = false
   element_type = text_v2
   instance_identifier = ncs-pause-footer-001
@@ -63,9 +63,9 @@ element {
   sticky_anchor = false
   anchor_point = bottom-left
   x = 6
-  y = -18
-  width = 280
-  height = 14
+  y = -22
+  width = 480
+  height = 20
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
