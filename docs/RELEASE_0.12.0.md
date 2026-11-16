@@ -1,6 +1,6 @@
 # Ninjacat Skies 0.12.0 — Ten Languages
 
-Pack CurseForge client file **pending**, server additional **pending**. Ninjacat Skies Core 0.6.0 is CurseForge file **9642286**. Tribal Power 6.1.0 (9115266), Chocobos Reborn 1.1.15 (9118527), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
+Pack CurseForge client file **9642613**, server additional **9642614**. Ninjacat Skies Core 0.6.0 is CurseForge file **9642286**. Tribal Power 6.1.0 (9115266), Chocobos Reborn 1.1.15 (9118527), Shamanic Mounts 0.1.16 (9096218) and Lithium 0.15.4 (8330365) are unchanged.
 
 106 mods (102 on the server). Existing saves load; no March reset.
 
