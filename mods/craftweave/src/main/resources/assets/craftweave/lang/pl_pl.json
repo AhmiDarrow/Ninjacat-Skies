@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "Ile wytworzyć",
+  "craftweave.quantity.tip": "Ile zrobić. Wpisz liczbę (albo kółkiem; Shift na stos), potem kliknij wynik lub naciśnij Enter. Gdy siatka się wyczerpie, ten sam przepis układa się znów z twojego plecaka. Pusto albo 1 to stół jak zwykle.",
+  "craftweave.cycle": "Przepis %s z %s dla tej siatki",
+  "craftweave.cycle.tip": "Kliknij po następny, prawy przycisk po poprzedni. Twój wybór zostaje zapamiętany.",
+  "craftweave.bookmark": "Zakładka do tego przepisu",
+  "craftweave.unbookmark": "Usuń zakładkę",
+  "craftweave.bookmark.place": "Kliknij, by ułożyć z plecaka (Shift: ile się zmieści)",
+  "craftweave.bookmark.remove": "Prawy przycisk, by usunąć",
+  "craftweave.max": "maks. %s",
+  "craftweave.clear": "Włóż wszystko z siatki z powrotem do plecaka",
+  "craftweave.bookmark.can": "Możesz zrobić %s",
+  "craftweave.bookmark.short": "Za mało w twoim plecaku"
+}

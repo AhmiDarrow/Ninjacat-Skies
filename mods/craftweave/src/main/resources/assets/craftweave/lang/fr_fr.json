@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "Combien en fabriquer",
+  "craftweave.quantity.tip": "Combien en faire. Tape un nombre (ou la molette ; Maj pour une pile), puis clique le résultat ou appuie sur Entrée. Quand la grille se vide, la même recette se repose depuis ton sac. Vide ou 1, la table comme d'habitude.",
+  "craftweave.cycle": "Recette %s sur %s pour cette grille",
+  "craftweave.cycle.tip": "Clique pour la suivante, clic droit pour la précédente. Ton choix est retenu.",
+  "craftweave.bookmark": "Marque cette recette",
+  "craftweave.unbookmark": "Retire le signet",
+  "craftweave.bookmark.place": "Clique pour la poser depuis ton sac (Maj : autant que possible)",
+  "craftweave.bookmark.remove": "Clic droit pour retirer",
+  "craftweave.max": "max %s",
+  "craftweave.clear": "Remets tout ce qui est sur la grille dans ton sac",
+  "craftweave.bookmark.can": "Tu peux en faire %s",
+  "craftweave.bookmark.short": "Pas assez dans ton sac"
+}

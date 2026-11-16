@@ -72,7 +72,7 @@ element {
   nine_slice_custom_background = true
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = Field Guide  ·  How to Start
+  label = {"placeholder":"local","values":{"key":"ninjacatskies.menu.field_guide"}}
   navigatable = true
   widget_active_state_requirement_container_identifier = ncs-title-guide-active-001
   [loading_requirement_container_meta:ncs-title-guide-active-001] = [groups:][instances:]
@@ -102,9 +102,9 @@ element {
   auto_sizing_base_screen_height = 1080
   sticky_anchor = false
   anchor_point = top-centered
-  x = -100
+  x = -120
   y = 238
-  width = 200
+  width = 240
   height = 22
   stretch_x = false
   stretch_y = false
@@ -168,7 +168,7 @@ element {
 
 element {
   interactable = false
-  source = §6NINJACAT SKIES
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.title_name"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -215,7 +215,7 @@ element {
 
 element {
   interactable = false
-  source = §7Nine tribes. One thread. A sky to reweave.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.tagline"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -241,10 +241,10 @@ element {
   auto_sizing_base_screen_height = 1080
   sticky_anchor = false
   anchor_point = top-centered
-  x = -101
+  x = -210
   y = 73
-  width = 250
-  height = 15
+  width = 420
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -262,13 +262,13 @@ element {
 
 element {
   interactable = false
-  source = §7THE RETURNING SONG  §8·  §7Skybound adventures
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.footer"}}
   source_mode = direct
   shadow = true
   scale = 0.8
   base_color = #8A8580FF
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   parse_markdown = false
   element_type = text_v2
   instance_identifier = ncs-title-footer-001
@@ -285,9 +285,9 @@ element {
   sticky_anchor = false
   anchor_point = bottom-left
   x = 12
-  y = -22
-  width = 340
-  height = 12
+  y = -28
+  width = 520
+  height = 24
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -625,9 +625,9 @@ vanilla_button {
   auto_sizing_base_screen_height = 0
   sticky_anchor = false
   anchor_point = top-centered
-  x = -100
+  x = -120
   y = 115
-  width = 200
+  width = 240
   height = 22
   stretch_x = false
   stretch_y = false
@@ -647,7 +647,7 @@ vanilla_button {
   backgroundnormal = [source:local]/config/fancymenu/assets/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/button_hover.png
   backgroundinactive = [source:local]/config/fancymenu/assets/button_inactive.png
-  label = Begin Your Strand
+  label = {"placeholder":"local","values":{"key":"ninjacatskies.menu.begin"}}
 }
 
 
@@ -687,9 +687,9 @@ vanilla_button {
   auto_sizing_base_screen_height = 0
   sticky_anchor = false
   anchor_point = top-centered
-  x = -100
+  x = -120
   y = 144
-  width = 200
+  width = 240
   height = 22
   stretch_x = false
   stretch_y = false
@@ -709,7 +709,7 @@ vanilla_button {
   backgroundnormal = [source:local]/config/fancymenu/assets/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/button_hover.png
   backgroundinactive = [source:local]/config/fancymenu/assets/button_inactive.png
-  label = Join a Clowder
+  label = {"placeholder":"local","values":{"key":"ninjacatskies.menu.join"}}
 }
 
 
@@ -771,7 +771,7 @@ vanilla_button {
   backgroundnormal = [source:local]/config/fancymenu/assets/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/button_hover.png
   backgroundinactive = [source:local]/config/fancymenu/assets/button_inactive.png
-  label = Mods
+  label = {"placeholder":"local","values":{"key":"ninjacatskies.menu.mods"}}
 }
 
 
@@ -833,7 +833,7 @@ vanilla_button {
   backgroundnormal = [source:local]/config/fancymenu/assets/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/button_hover.png
   backgroundinactive = [source:local]/config/fancymenu/assets/button_inactive.png
-  label = Options
+  label = {"placeholder":"local","values":{"key":"ninjacatskies.menu.options"}}
 }
 
 
@@ -895,7 +895,7 @@ vanilla_button {
   backgroundnormal = [source:local]/config/fancymenu/assets/button_normal.png
   backgroundhovered = [source:local]/config/fancymenu/assets/button_hover.png
   backgroundinactive = [source:local]/config/fancymenu/assets/button_inactive.png
-  label = Quit Game
+  label = {"placeholder":"local","values":{"key":"ninjacatskies.menu.quit"}}
 }
 
 

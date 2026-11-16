@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "Cuántos fabricar",
+  "craftweave.quantity.tip": "Cuántos hacer. Escribe un número (o gira la rueda; Mayús para una pila), luego haz clic en el resultado o pulsa Intro. Si la rejilla se vacía, la misma receta se vuelve a colocar desde tu mochila. Vacío o 1 es la mesa de siempre.",
+  "craftweave.cycle": "Receta %s de %s para esta rejilla",
+  "craftweave.cycle.tip": "Clic para la siguiente, clic derecho para la anterior. Tu elección se recuerda.",
+  "craftweave.bookmark": "Marca esta receta",
+  "craftweave.unbookmark": "Quita el marcador",
+  "craftweave.bookmark.place": "Clic para colocarla desde tu mochila (Mayús: tantas como quepan)",
+  "craftweave.bookmark.remove": "Clic derecho para quitar",
+  "craftweave.max": "máx %s",
+  "craftweave.clear": "Devuelve todo lo de la rejilla a tu mochila",
+  "craftweave.bookmark.can": "Puedes hacer %s",
+  "craftweave.bookmark.short": "No hay bastante en tu mochila"
+}

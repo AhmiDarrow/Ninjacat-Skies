@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "Сколько создать",
+  "craftweave.quantity.tip": "Сколько сделать. Введи число (или прокрути колёсико; Shift для стака), затем кликни по результату или нажми Enter. Когда сетка пустеет, тот же рецепт снова выкладывается из твоей сумки. Пусто или 1 — стол как обычно.",
+  "craftweave.cycle": "Рецепт %s из %s для этой сетки",
+  "craftweave.cycle.tip": "Клик — следующий, ПКМ — предыдущий. Твой выбор запоминается.",
+  "craftweave.bookmark": "Закладка на этот рецепт",
+  "craftweave.unbookmark": "Убери закладку",
+  "craftweave.bookmark.place": "Клик, чтобы выложить из твоей сумки (Shift: сколько влезет)",
+  "craftweave.bookmark.remove": "ПКМ, чтобы убрать",
+  "craftweave.max": "макс. %s",
+  "craftweave.clear": "Верни всё с сетки в свою сумку",
+  "craftweave.bookmark.can": "Ты можешь сделать %s",
+  "craftweave.bookmark.short": "В твоей сумке не хватает"
+}

@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "制作多少",
+  "craftweave.quantity.tip": "做多少。输入数字（或滚动；Shift 为一组），然后点击成品或按回车。合成格用尽时，同一配方会从背包再次摆上。空着或填 1，就是平时的工作台。",
+  "craftweave.cycle": "此合成格的配方 %s / %s",
+  "craftweave.cycle.tip": "点击看下一个，右键看上一个。你的选择会被记住。",
+  "craftweave.bookmark": "收藏此配方",
+  "craftweave.unbookmark": "移除书签",
+  "craftweave.bookmark.place": "点击从背包摆上（Shift：能放多少放多少）",
+  "craftweave.bookmark.remove": "右键移除",
+  "craftweave.max": "最多 %s",
+  "craftweave.clear": "把合成格上的东西全部放回背包",
+  "craftweave.bookmark.can": "你可以制作 %s",
+  "craftweave.bookmark.short": "背包里不够"
+}
