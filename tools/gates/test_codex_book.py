@@ -74,7 +74,9 @@ class CodexBookTests(unittest.TestCase):
         self.assertIn('Start here', controls)
         welcome = (ROOT/'pack/overrides/config/fancymenu/customization/ninjacat_skies_welcome_layout.txt').read_text(encoding='utf-8')
         self.assertNotIn('Open FTB Quests', welcome)
-        self.assertIn('Start here', welcome)
+        # The welcome screen stores a lang key so the game language switches the sentence.
+        self.assertIn('ninjacatskies.menu.guide_02a', welcome)
+        self.assertIn('Start here', core['ninjacatskies.menu.guide_02a'])
         import gzip
         islands = ROOT/'pack/overrides/config/skyblockbuilder/templates/islands'
         for path in islands.glob('*.nbt'):

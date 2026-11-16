@@ -128,7 +128,7 @@ element {
 
 element {
   interactable = false
-  source = FIELD GUIDE  /  YOUR FIRST STRAND
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_title"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -137,7 +137,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -154,10 +154,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 82
-  width = 460
-  height = 14
+  x = -260
+  y = 78
+  width = 520
+  height = 18
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -175,7 +175,7 @@ element {
 
 element {
   interactable = false
-  source = Spoiler-free essentials. Discover the story as you play.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_sub"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -184,7 +184,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -201,10 +201,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 105
-  width = 460
-  height = 14
+  x = -260
+  y = 102
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -222,7 +222,7 @@ element {
 
 element {
   interactable = false
-  source = 01  CLAIM A PLACE IN THE SKY
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_01"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -231,7 +231,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -248,10 +248,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 135
-  width = 460
-  height = 14
+  x = -260
+  y = 136
+  width = 520
+  height = 18
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -269,7 +269,7 @@ element {
 
 element {
   interactable = false
-  source = At Clowder Dock, right-click your Island Charter.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_01a"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -278,7 +278,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -295,10 +295,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 153
-  width = 460
-  height = 14
+  x = -260
+  y = 158
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -316,7 +316,7 @@ element {
 
 element {
   interactable = false
-  source = Choose Create Team, then give your Clowder a name.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_01b"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -325,7 +325,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -342,10 +342,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 168
-  width = 460
-  height = 14
+  x = -260
+  y = 190
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -363,7 +363,7 @@ element {
 
 element {
   interactable = false
-  source = Choose a pad: Ninjacat = Normal | Dojo = Easy | Frayed = Hard.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_01c"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -372,7 +372,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -389,10 +389,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 183
-  width = 460
-  height = 14
+  x = -260
+  y = 222
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -410,7 +410,7 @@ element {
 
 element {
   interactable = false
-  source = Select Create to travel to your island.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_01d"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -419,7 +419,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -436,10 +436,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 198
-  width = 460
-  height = 14
+  x = -260
+  y = 254
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -457,7 +457,7 @@ element {
 
 element {
   interactable = false
-  source = 02  FOLLOW THE WHISKER CODEX
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_02"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -466,7 +466,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -483,10 +483,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 222
-  width = 460
-  height = 14
+  x = -260
+  y = 288
+  width = 520
+  height = 18
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -504,7 +504,7 @@ element {
 
 element {
   interactable = false
-  source = Right-click the Whisker Codex. Open Start here. Grave (`): quests. Soil is first.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_02a"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -513,7 +513,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -530,10 +530,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 240
-  width = 460
-  height = 14
+  x = -260
+  y = 310
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -551,7 +551,7 @@ element {
 
 element {
   interactable = false
-  source = Your team shares lives: 3 per member. Deaths spend from the pool.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_02b"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -560,7 +560,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -577,10 +577,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 255
-  width = 460
-  height = 14
+  x = -260
+  y = 342
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -598,7 +598,7 @@ element {
 
 element {
   interactable = false
-  source = Rare story milestones grant extra lives. Check with /skybound lives.
+  source = {"placeholder":"local","values":{"key":"ninjacatskies.menu.guide_02c"}}
   source_mode = direct
   shadow = true
   case_mode = normal
@@ -607,7 +607,7 @@ element {
   text_border = 0
   line_spacing = 1
   enable_scrolling = false
-  auto_line_wrapping = false
+  auto_line_wrapping = true
   remove_html_breaks = true
   parse_markdown = false
   element_type = text_v2
@@ -624,10 +624,10 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -230
-  y = 270
-  width = 460
-  height = 14
+  x = -260
+  y = 374
+  width = 520
+  height = 28
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -655,7 +655,7 @@ element {
   nine_slice_custom_background = true
   nine_slice_border_x = 5
   nine_slice_border_y = 5
-  label = Back
+  label = {"placeholder":"local","values":{"key":"ninjacatskies.menu.back"}}
   navigatable = true
   widget_active_state_requirement_container_identifier = ncs-welcome-go-active-001
   [loading_requirement_container_meta:ncs-welcome-go-active-001] = [groups:][instances:]
@@ -685,9 +685,9 @@ element {
   auto_sizing_base_screen_height = 720
   sticky_anchor = false
   anchor_point = top-centered
-  x = -90
-  y = 308
-  width = 180
+  x = -110
+  y = 416
+  width = 220
   height = 22
   stretch_x = false
   stretch_y = false
