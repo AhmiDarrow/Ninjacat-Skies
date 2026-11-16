@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "Wie viele herstellen",
+  "craftweave.quantity.tip": "Wie viele du herstellst. Gib eine Zahl ein (oder scrolle; Umschalt für einen Stapel), dann klicke das Ergebnis oder drücke Enter. Wenn das Gitter leer wird, liegt dasselbe Rezept wieder aus deinem Beutel. Leer oder 1 ist der Tisch wie immer.",
+  "craftweave.cycle": "Rezept %s von %s für dieses Gitter",
+  "craftweave.cycle.tip": "Klick für das nächste, Rechtsklick für das vorige. Deine Wahl wird gemerkt.",
+  "craftweave.bookmark": "Dieses Rezept merken",
+  "craftweave.unbookmark": "Lesezeichen entfernen",
+  "craftweave.bookmark.place": "Klick, um sie aus deinem Beutel zu legen (Umschalt: so viele wie passen)",
+  "craftweave.bookmark.remove": "Rechtsklick zum Entfernen",
+  "craftweave.max": "max. %s",
+  "craftweave.clear": "Leg alles vom Gitter zurück in deinen Beutel",
+  "craftweave.bookmark.can": "Du kannst %s herstellen",
+  "craftweave.bookmark.short": "Nicht genug in deinem Beutel"
+}

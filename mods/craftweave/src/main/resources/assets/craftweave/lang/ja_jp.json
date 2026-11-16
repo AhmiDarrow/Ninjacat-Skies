@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "いくつ作るか",
+  "craftweave.quantity.tip": "いくつ作るか。数字を入れる（またはスクロール、Shift でスタック）、それから完成品をクリックするか Enter を押す。グリッドが尽きると、同じレシピが所持品から再び並ぶ。空か1なら、作業台はいつも通り。",
+  "craftweave.cycle": "このグリッドのレシピ %s / %s",
+  "craftweave.cycle.tip": "クリックで次、右クリックで前。選んだものは覚えておく。",
+  "craftweave.bookmark": "このレシピをしおりする",
+  "craftweave.unbookmark": "しおりを外す",
+  "craftweave.bookmark.place": "クリックで所持品から並べる（Shift：入るだけ）",
+  "craftweave.bookmark.remove": "右クリックで外す",
+  "craftweave.max": "最大 %s",
+  "craftweave.clear": "グリッドのものをすべて所持品に戻す",
+  "craftweave.bookmark.can": "%s 作れる",
+  "craftweave.bookmark.short": "所持品が足りない"
+}

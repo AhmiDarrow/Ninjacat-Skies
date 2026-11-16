@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "Quanti crearne",
+  "craftweave.quantity.tip": "Quanti farne. Scrivi un numero (o scorri; Maiusc per una pila), poi clicca il risultato o premi Invio. Quando la griglia si svuota, la stessa ricetta si dispone di nuovo dal tuo zaino. Vuoto o 1 è il tavolo come al solito.",
+  "craftweave.cycle": "Ricetta %s di %s per questa griglia",
+  "craftweave.cycle.tip": "Clic per la successiva, clic destro per la precedente. La tua scelta viene ricordata.",
+  "craftweave.bookmark": "Segna questa ricetta",
+  "craftweave.unbookmark": "Togli il segnalibro",
+  "craftweave.bookmark.place": "Clic per disporla dal tuo zaino (Maiusc: quante ci stanno)",
+  "craftweave.bookmark.remove": "Clic destro per togliere",
+  "craftweave.max": "max %s",
+  "craftweave.clear": "Rimetti tutto ciò che è sulla griglia nello zaino",
+  "craftweave.bookmark.can": "Puoi farne %s",
+  "craftweave.bookmark.short": "Non basta nel tuo zaino"
+}

@@ -1,0 +1,14 @@
+{
+  "craftweave.quantity": "Quantos fabricar",
+  "craftweave.quantity.tip": "Quantos fazer. Digite um número (ou role a roda; Shift para uma pilha), depois clique no resultado ou pressione Enter. Quando a grade esvazia, a mesma receita é montada de novo da sua mochila. Vazio ou 1 é a mesa de sempre.",
+  "craftweave.cycle": "Receita %s de %s para esta grade",
+  "craftweave.cycle.tip": "Clique para a próxima, clique direito para a anterior. A sua escolha fica salva.",
+  "craftweave.bookmark": "Marque esta receita",
+  "craftweave.unbookmark": "Remova o marcador",
+  "craftweave.bookmark.place": "Clique para montá-la da sua mochila (Shift: quantas couberem)",
+  "craftweave.bookmark.remove": "Clique direito para remover",
+  "craftweave.max": "máx %s",
+  "craftweave.clear": "Devolva tudo da grade para a sua mochila",
+  "craftweave.bookmark.can": "Você pode fazer %s",
+  "craftweave.bookmark.short": "Não há o bastante na sua mochila"
+}

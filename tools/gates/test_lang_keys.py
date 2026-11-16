@@ -23,6 +23,10 @@ LITERAL_CALL = re.compile(r'(Component\.literal|NinjacatText\.(?:teal|gold|indig
 KEY_USE = re.compile(r'(?:Component\.translatable|translatable|(?:teal|gold|indigo)Key)\(\s*"([a-z0-9_.\-]+)"(?!\s*\+)')
 BOOK_FIELDS = ('title', 'text', 'name', 'description')
 KEY_SHAPE = re.compile(r'^[a-z0-9_.\-]+$')
+LOCALES = ('es_es', 'fr_fr', 'de_de', 'pt_br', 'it_it', 'ru_ru', 'pl_pl', 'ja_jp', 'ko_kr', 'zh_cn', 'es_mx')
+PLACEHOLDERS = re.compile(r'%(?:\d+\$)?[sdif]|%%|\{\d+\}')
+ITEM_IDS = re.compile(r'\b[a-z][a-z0-9_]*:[a-z0-9_./]+\b')
+QUEST_LANG = ROOT / 'pack/overrides/config/ftbquests/quests/lang'
 
 
 def lang_keys():
@@ -143,6 +147,205 @@ def kubejs_problems(keys):
     return bad
 
 
+def text_markers(text):
+    """Tokens a translation must keep: format args, percents, markdown, breaks, commands, colour codes, item ids."""
+    return (
+        tuple(PLACEHOLDERS.findall(text)),
+        text.count('%'),
+        text.count('**'),
+        text.count('\n'),
+        text.count('\\.'),
+        tuple(re.findall(r'`([^`]*)`', text)),
+        tuple(re.findall(r'§.', text)),
+        tuple(ITEM_IDS.findall(text)),
+    )
+
+
+def en_lang_files():
+    return list(MODS.glob('*/src/main/resources/assets/*/lang/en_us.json')) + \
+        list((ROOT / 'pack/overrides/kubejs/assets').glob('*/lang/en_us.json'))
+
+
+def parse_snbt(text):
+    """FTB Quests lang files: a compound of strings and string arrays, no commas between keys."""
+    i = 0
+    n = len(text)
+
+    def skip():
+        nonlocal i
+        while i < n and text[i] in ' \t\r\n':
+            i += 1
+
+    def parse_string():
+        nonlocal i
+        if text[i] != '"':
+            raise ValueError(f'expected string at {i}')
+        i += 1
+        buf = []
+        simple = {'"': '"', '\\': '\\', 'n': '\n', 't': '\t', 'r': '\r', '/': '/', 'b': '\b', 'f': '\f'}
+        while i < n:
+            c = text[i]
+            if c == '\\':
+                i += 1
+                if i >= n:
+                    break
+                e = text[i]
+                i += 1
+                if e == 'u' and i + 4 <= n:
+                    buf.append(chr(int(text[i:i + 4], 16)))
+                    i += 4
+                elif e in simple:
+                    buf.append(simple[e])
+                else:
+                    # SNBT escapes characters JSON does not, such as \& for a literal ampersand.
+                    buf.append(e)
+                continue
+            if c == '"':
+                i += 1
+                return ''.join(buf)
+            buf.append(c)
+            i += 1
+        raise ValueError('unterminated string')
+
+    def parse_value():
+        nonlocal i
+        skip()
+        if i >= n:
+            raise ValueError('truncated value')
+        if text[i] == '"':
+            return parse_string()
+        if text[i] == '[':
+            i += 1
+            arr = []
+            while True:
+                skip()
+                if i < n and text[i] == ']':
+                    i += 1
+                    return arr
+                arr.append(parse_value())
+                skip()
+                if i < n and text[i] == ',':
+                    i += 1
+            return arr
+        if text[i] == '{':
+            return parse_compound()
+        start = i
+        while i < n and text[i] not in ' \t\r\n,}]':
+            i += 1
+        return text[start:i]
+
+    def parse_compound():
+        nonlocal i
+        skip()
+        if i >= n or text[i] != '{':
+            raise ValueError(f'expected compound at {i}')
+        i += 1
+        obj = {}
+        while True:
+            skip()
+            if i < n and text[i] == '}':
+                i += 1
+                return obj
+            start = i
+            while i < n and text[i] != ':':
+                i += 1
+            key = text[start:i].strip()
+            if not key or i >= n or text[i] != ':':
+                raise ValueError(f'bad key at {start}')
+            i += 1
+            obj[key] = parse_value()
+        return obj
+
+    return parse_compound()
+
+
+def marker_problems(where, en, translated):
+    bad = []
+    if not isinstance(en, str) or not isinstance(translated, str):
+        return [f'{where}: type {type(en).__name__} vs {type(translated).__name__}']
+    if text_markers(en) != text_markers(translated):
+        bad.append(f'{where}: placeholders or markup differ')
+    if translated.strip() == '' and en.strip() != '':
+        bad.append(f'{where}: blank translation')
+    return bad
+
+
+def locale_json_problems():
+    bad = []
+    for path in en_lang_files():
+        english = json.loads(path.read_text(encoding='utf-8'))
+        if not english:
+            continue
+        en_keys = list(english)
+        for locale in LOCALES:
+            loc_path = path.with_name(locale + '.json')
+            if not loc_path.is_file():
+                bad.append(f'missing {loc_path.relative_to(ROOT).as_posix()}')
+                continue
+            try:
+                translated = json.loads(loc_path.read_text(encoding='utf-8'))
+            except json.JSONDecodeError as exc:
+                bad.append(f'{loc_path.relative_to(ROOT).as_posix()}: {exc}')
+                continue
+            if list(translated) != en_keys:
+                missing = [k for k in en_keys if k not in translated]
+                extra = [k for k in translated if k not in english]
+                bad.append(
+                    f'{loc_path.relative_to(ROOT).as_posix()}: key set differs '
+                    f'(missing {len(missing)}, extra {len(extra)})')
+            for key, en_val in english.items():
+                if key not in translated:
+                    continue
+                bad.extend(marker_problems(
+                    f'{loc_path.relative_to(ROOT).as_posix()}:{key}', en_val, translated[key]))
+        es_es = path.with_name('es_es.json')
+        es_mx = path.with_name('es_mx.json')
+        if es_es.is_file() and es_mx.is_file() and es_es.read_bytes() != es_mx.read_bytes():
+            bad.append(f'{es_mx.relative_to(ROOT).as_posix()}: expected a copy of es_es.json')
+    return bad
+
+
+def locale_quest_problems():
+    bad = []
+    english_path = QUEST_LANG / 'en_us.snbt'
+    if not english_path.is_file():
+        return ['missing quest lang en_us.snbt']
+    english = parse_snbt(english_path.read_text(encoding='utf-8'))
+    for locale in LOCALES:
+        loc_path = QUEST_LANG / f'{locale}.snbt'
+        if not loc_path.is_file():
+            bad.append(f'missing {loc_path.relative_to(ROOT).as_posix()}')
+            continue
+        try:
+            translated = parse_snbt(loc_path.read_text(encoding='utf-8'))
+        except ValueError as exc:
+            bad.append(f'{loc_path.relative_to(ROOT).as_posix()}: {exc}')
+            continue
+        if list(translated) != list(english):
+            missing = [k for k in english if k not in translated]
+            extra = [k for k in translated if k not in english]
+            bad.append(
+                f'{loc_path.relative_to(ROOT).as_posix()}: key set differs '
+                f'(missing {len(missing)}, extra {len(extra)})')
+        for key, en_val in english.items():
+            if key not in translated:
+                continue
+            tr = translated[key]
+            if isinstance(en_val, list):
+                if not isinstance(tr, list) or len(tr) != len(en_val):
+                    bad.append(f'{loc_path.name}:{key}: line count {len(en_val)} vs {len(tr) if isinstance(tr, list) else type(tr).__name__}')
+                    continue
+                for n, (a, b) in enumerate(zip(en_val, tr)):
+                    bad.extend(marker_problems(f'{loc_path.name}:{key}[{n}]', a, b))
+            else:
+                bad.extend(marker_problems(f'{loc_path.name}:{key}', en_val, tr))
+    es_es = QUEST_LANG / 'es_es.snbt'
+    es_mx = QUEST_LANG / 'es_mx.snbt'
+    if es_es.is_file() and es_mx.is_file() and es_es.read_bytes() != es_mx.read_bytes():
+        bad.append('quests/lang/es_mx.snbt: expected a copy of es_es.snbt')
+    return bad
+
+
 class LangKeyTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -168,6 +371,14 @@ class LangKeyTests(unittest.TestCase):
     def test_kubejs_tooltips_are_keyed(self):
         bad = kubejs_problems(self.keys)
         self.assertEqual(bad, [], f'{len(bad)} tooltip lines:\n' + '\n'.join(bad[:40]))
+
+    def test_locale_files_match_english(self):
+        bad = locale_json_problems()
+        self.assertEqual(bad, [], f'{len(bad)} locale problems:\n' + '\n'.join(bad[:40]))
+
+    def test_quest_locales_match_english(self):
+        bad = locale_quest_problems()
+        self.assertEqual(bad, [], f'{len(bad)} quest locale problems:\n' + '\n'.join(bad[:40]))
 
 
 if __name__ == '__main__':
