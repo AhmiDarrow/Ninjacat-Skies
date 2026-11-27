@@ -41,6 +41,21 @@ public final class CraftweaveGameTests {
         return menu;
     }
 
+    /** The Tribal Bench patch is optional, so a miss would be silent. Passes trivially without Tribal Power. */
+    @GameTest(template = "empty")
+    public static void theTribalBenchPatchAttaches(GameTestHelper h) {
+        if (net.neoforged.fml.ModList.get().isLoaded("tribalpower")) {
+            try {
+                boolean patched = java.util.Arrays.stream(Class.forName("tk.darrow.tribalpower.bench.BenchMenu").getDeclaredMethods())
+                        .anyMatch(m -> m.getName().contains("craftweave$keepPick"));
+                h.assertTrue(patched, "BenchMenu carries Craftweave's refreshResult patch");
+            } catch (ClassNotFoundException e) {
+                h.fail("Tribal Power is loaded but its bench menu is gone");
+            }
+        }
+        h.succeed();
+    }
+
     @GameTest(template = "empty")
     public static void aTypedQuantityCraftsThatMany(GameTestHelper h) {
         ServerPlayer player = player(h);

@@ -419,10 +419,10 @@ def watchtower(t: int, seed: int, v: int = 0, module: bool = False) -> Plan:
             if i % 2 == 1:
                 y += 1
         i += 1
-    # collapsed crown: cracked beacon cap
+    # collapsed crown (a real beacon here could be mined and kept)
     p.box(-tr, top_y + 1, -tr, tr, top_y + 1, tr, "roof")
     p.box(-tr + 1, top_y + 1, -tr + 1, tr - 1, top_y + 1, tr - 1, "floor")
-    p.set(0, top_y + 2, 0, "mc:beacon" if t == 3 else "accent")
+    p.set(0, top_y + 2, 0, "accent")
     # the broken spiral never reaches the crown: a ladder up the stair-well corner, out through the crown floor
     for yy in range(1, top_y + 2):
         p.set(-tr + 1, yy, -tr + 1, "mc:ladder[facing=south]")

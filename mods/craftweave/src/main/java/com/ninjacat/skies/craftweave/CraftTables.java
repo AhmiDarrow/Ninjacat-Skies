@@ -111,8 +111,8 @@ public final class CraftTables {
         if (pick == null) return;
         Slot result = menu.getSlot(0);
         ItemStack output = pick.value().assemble(input, server.level().registryAccess());
-        if (ItemStack.isSameItemSameComponents(output, result.getItem()) && output.getCount() == result.getItem().getCount()) return;
         if (result.container instanceof ResultContainer container) container.setRecipeUsed(pick);
+        if (ItemStack.isSameItemSameComponents(output, result.getItem()) && output.getCount() == result.getItem().getCount()) return;
         result.set(output);
         menu.broadcastChanges();
     }
@@ -133,6 +133,13 @@ public final class CraftTables {
     public static int index(Level level, AbstractContainerMenu menu, List<RecipeHolder<CraftingRecipe>> matches) {
         ItemStack shown = menu.getSlot(0).getItem();
         CraftingInput input = input(menu);
+        // server only (the client is never told): the recipe the table says made this result, if it still makes it
+        if (menu.getSlot(0).container instanceof ResultContainer container && container.getRecipeUsed() != null) {
+            for (int i = 0; i < matches.size(); i++)
+                if (matches.get(i).id().equals(container.getRecipeUsed().id())
+                        && ItemStack.isSameItemSameComponents(matches.get(i).value().assemble(input, level.registryAccess()), shown))
+                    return i;
+        }
         for (int i = 0; i < matches.size(); i++) {
             ItemStack output = matches.get(i).value().assemble(input, level.registryAccess());
             if (ItemStack.isSameItemSameComponents(output, shown)) return i;
@@ -161,13 +168,14 @@ public final class CraftTables {
         Placer placer = new Placer(menu);
         int made = 0;
         while (made < wanted) {
-            if (menu.getSlot(0).getItem().isEmpty()) {
+            // a part-used grid can come to match something else: never craft anything but what was asked for
+            if (menu.getSlot(0).getItem().isEmpty() || !recipe.value().matches(input(menu), player.level())) {
                 // the grid is spent: lay the same recipe out again from the pack, and keep to it if others match too
                 if (!placer.place(player, recipe, true)) break;
                 List<RecipeHolder<CraftingRecipe>> matches = matches(player.level(), input(menu));
                 if (matches.size() > 1) pick(player, recipe, matches);
                 applyPick(menu, player);
-                if (menu.getSlot(0).getItem().isEmpty()) break;
+                if (menu.getSlot(0).getItem().isEmpty() || !recipe.value().matches(input(menu), player.level())) break;
             }
             ItemStack moved = menu.quickMoveStack(player, 0);
             if (moved.isEmpty()) break;          // the pack is full

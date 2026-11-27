@@ -162,12 +162,12 @@ final class StrandRelics {
             @Override public void tickWorn(ServerPlayer p, ItemStack s) {
                 RelicUtil.modifier(p, Attributes.SAFE_FALL_DISTANCE, "edgestep_landing", 9.0, AttributeModifier.Operation.ADD_VALUE, true);
                 CompoundTag t = RelicUtil.tag(p);
-                if (t.getBoolean(EDGE_CLEAR)) { t.remove(EDGE_CLEAR); p.getCooldowns().removeCooldown(s.getItem()); }
+                if (t.getBoolean(EDGE_CLEAR)) { t.remove(EDGE_CLEAR); com.ninjacat.skies.guardians.item.RelicItem.clearCooldown(p, s.getItem()); }
                 int charges = t.contains(EDGE_CHARGES) ? t.getInt(EDGE_CHARGES) : EDGE_MAX;
                 long now = RelicUtil.now(p);
                 if (charges < EDGE_MAX && t.getLong(EDGE_RECHARGE) <= now) {
                     t.putInt(EDGE_CHARGES, ++charges); t.putLong(EDGE_RECHARGE, now + EDGE_CD);
-                    p.getCooldowns().removeCooldown(s.getItem());
+                    com.ninjacat.skies.guardians.item.RelicItem.clearCooldown(p, s.getItem());
                 }
             }
             @Override public void onWearerHurt(ServerPlayer p, ItemStack s, LivingIncomingDamageEvent e) {
@@ -228,7 +228,7 @@ final class StrandRelics {
             @Override public void onWorn(ServerPlayer p, boolean worn) { if (!worn) RelicTimers.clearTrail(p); }
             @Override public boolean activate(ServerPlayer p, ItemStack s) {
                 for (ItemStack other : RelicSlots.worn(p)) {
-                    if (other.getItem() != s.getItem()) p.getCooldowns().removeCooldown(other.getItem());
+                    if (other.getItem() != s.getItem()) com.ninjacat.skies.guardians.item.RelicItem.clearCooldown(p, other.getItem());
                 }
                 refillEdgestep(p);
                 ServerLevel l = p.serverLevel();

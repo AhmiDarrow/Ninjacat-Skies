@@ -72,6 +72,10 @@ public class WreckChestBlockEntity extends BlockEntity {
             p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.chest.still_drifting"), true);
             return;
         }
+        if (!DriftManager.isMember(p, owner)) {
+            p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.not_your_wreck"), true);
+            return;
+        }
         NonNullList<ItemStack> items = rolls.computeIfAbsent(p.getUUID(), u -> roll(level, u, p));
         setChanged();
         // built from the roll directly: filling a view slot by slot would write the still-empty slots back over it

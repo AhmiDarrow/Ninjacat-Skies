@@ -86,7 +86,7 @@ public final class WreckRewards {
             if (team.rowComplete(w.core)) {
                 for (ServerPlayer p : all) {
                     award(p, "row");
-                    p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rewards.row_whole", w.core.titleInline()));
+                    p.sendSystemMessage(NinjacatText.goldKey("message.driftwrecks.rewards.row_whole", w.core.title()));
                 }
             }
             int cells = team.cellCount();

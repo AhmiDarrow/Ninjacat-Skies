@@ -111,6 +111,18 @@ public abstract class GuardianEntity extends Monster {
 
     // ------------------------------------------------------------------ arena link
     public void bindArena(int slot, @Nullable UUID party) { this.arenaSlot = slot; this.partyId = party; }
+
+    /** The health the fight is designed around. Vanilla caps MAX_HEALTH at 1024; the excess is taken as damage reduction. */
+    private double fightHealth;
+    public void setFightHealth(double health) {
+        fightHealth = health;
+        getAttribute(Attributes.MAX_HEALTH).setBaseValue(health); setHealth(getMaxHealth());
+    }
+    @Override
+    protected float getDamageAfterMagicAbsorb(DamageSource src, float amount) {
+        float after = super.getDamageAfterMagicAbsorb(src, amount);
+        return fightHealth > getMaxHealth() ? (float) (after * getMaxHealth() / fightHealth) : after;
+    }
     public int arenaSlot() { return arenaSlot; }
     @Nullable public UUID partyId() { return partyId; }
     @Nullable
@@ -273,6 +285,7 @@ public abstract class GuardianEntity extends Monster {
         super.addAdditionalSaveData(tag);
         tag.putInt("ArenaSlot", arenaSlot); if (partyId != null) tag.putUUID("Party", partyId);
         tag.putInt("FightAge", ageInFight);
+        tag.putDouble("FightHealth", fightHealth);
         tag.putInt("Phase", lastPhase);
         tag.putInt("DeathTimer", deathTimer);
         ListTag temps = new ListTag();
@@ -287,6 +300,7 @@ public abstract class GuardianEntity extends Monster {
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         arenaSlot = tag.getInt("ArenaSlot"); partyId = tag.hasUUID("Party") ? tag.getUUID("Party") : null; ageInFight = tag.getInt("FightAge");
+        fightHealth = tag.getDouble("FightHealth");
         deathTimer = tag.contains("DeathTimer") ? tag.getInt("DeathTimer") : -1;
         // a reload must not replay phase changes the fight already went through (slams, waves, reshuffles)
         lastPhase = tag.contains("Phase") ? tag.getInt("Phase") : healthPhase(); entityData.set(PHASE, lastPhase);

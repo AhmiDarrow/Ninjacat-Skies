@@ -295,11 +295,7 @@ public class TensionPostBlock extends BaseEntityBlock {
             be.setClowder(mine.get().id());
             return true;
         }
-        if (LoomTension.clowderById(level.getServer(), be.getClowder()).isPresent()) return false;
-        // Unknown id: a disbanded party (reclaimable) — but never a solo player who is merely offline. A solo Clowder's id is the
-        // player's own UUID, so a saved player file settles it (the profile cache alone forgets players after a month away).
-        if (java.nio.file.Files.exists(level.getServer().getWorldPath(net.minecraft.world.level.storage.LevelResource.PLAYER_DATA_DIR).resolve(be.getClowder() + ".dat"))) return false;
-        return level.getServer().getProfileCache() == null || level.getServer().getProfileCache().get(be.getClowder()).isEmpty();
+        return LoomTension.isGone(level.getServer(), be.getClowder());
     }
 
     /** Re-read the Clowder's state into the blockstate (covers posts placed before a seat elsewhere). */

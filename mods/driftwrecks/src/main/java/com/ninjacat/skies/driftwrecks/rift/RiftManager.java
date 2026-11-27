@@ -55,7 +55,7 @@ import java.util.*;
  * guardian arena. Win: a guaranteed Keepsake of the Strand, a rare roll, the Remnant stamp. Lose: back to the wreck.
  */
 public final class RiftManager extends SavedData {
-    public static final int SPACING = 4096, FLOOR_Y = 120, RADIUS = 12, PULL = 8, END_DELAY = 80;
+    public static final int SPACING = 4096, FLOOR_Y = 120, RADIUS = 12, PULL = 8, END_DELAY = 80, AWAY_TICKS = 20 * 60 * 5;
     private static final String RETURN = "driftwrecks_rift_return";
 
     public static final class Rift {
@@ -106,6 +106,7 @@ public final class RiftManager extends SavedData {
         DriftManager dm = DriftManager.get(server);
         Wreck w = dm.at(tear, 0);
         if (w == null || w.phase != Wreck.Phase.ACTIVE || w.tier != WreckTier.HOLD) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.no_answer"), true); return; }
+        if (!DriftManager.isMember(opener, w)) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.not_your_wreck"), true); return; }
         if (w.riftOpened) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.already_walked"), true); return; }
         Strand ks = DriftlureItem.strandOf(key);
         if (ks != w.skin) { opener.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.rift.wrong_key", w.skin.title()), true); return; }
@@ -184,7 +185,7 @@ public final class RiftManager extends SavedData {
     /** Before the chamber is cleared: everything dropped in it (gear from a fall, rewards from a full bag) goes home. */
     private static void rescueDrops(MinecraftServer server, ServerLevel arena, Rift r) {
         ServerPlayer to = null;
-        for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null) { to = p; break; } }
+        for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null && p.isAlive()) { to = p; break; } }
         AABB box = new AABB(r.origin).inflate(RADIUS + 8, 16, RADIUS + 8);
         for (net.minecraft.world.entity.item.ItemEntity ie : arena.getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class, box)) {
             ItemStack s = ie.getItem().copy();
@@ -231,7 +232,9 @@ public final class RiftManager extends SavedData {
                 }
             }
             if (r.state == 0) {
-                if (inside.isEmpty() && r.ticks > 100) { if (++r.emptyTicks > 100) lose(server, r); }
+                // a member who is offline may be coming back (a disconnect, a restart): wait for them, but not for ever
+                boolean away = r.party.stream().anyMatch(u -> server.getPlayerList().getPlayer(u) == null);
+                if (inside.isEmpty() && r.ticks > 100) { if (++r.emptyTicks > (away ? AWAY_TICKS : 100)) lose(server, r); }
                 else r.emptyTicks = 0;
             } else if (r.ticks > END_DELAY) {
                 for (UUID u : r.party) { ServerPlayer p = server.getPlayerList().getPlayer(u); if (p != null) endFor(p, arena, r); }

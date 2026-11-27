@@ -45,7 +45,9 @@ public class ThreadPillarBlock extends Block {
         Wreck w = m.at(pos, 0);
         if (w == null || w.phase != Wreck.Phase.ACTIVE) return InteractionResult.CONSUME;
         int index = markerIndex(sl, w, pos);
-        if (index >= 0) WreckObjectives.touchPillar(m, sl, w, index, pos, sp);
+        if (index < 0) return InteractionResult.CONSUME;
+        if (!DriftManager.isMember(sp, w)) sp.displayClientMessage(com.ninjacat.skies.lib.NinjacatText.tealKey("message.driftwrecks.not_your_wreck"), true);
+        else WreckObjectives.touchPillar(m, sl, w, index, pos, sp);
         return InteractionResult.CONSUME;
     }
 

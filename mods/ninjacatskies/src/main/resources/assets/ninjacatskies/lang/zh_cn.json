@@ -47,7 +47,7 @@
   "tooltip.ninjacatskies.cache_small": "4份：2份物资（有时是铜、铁或丝线），1份来自园中（树苗、种子、作物、花，也许还有农场动物的蛋），以及1份装饰。",
   "tooltip.ninjacatskies.cache_medium": "8份：5份物资（常常是锭、红石和丝线），2份来自园中，动物蛋的种类更多，以及1份装饰。",
   "tooltip.ninjacatskies.cache_large": "17份：12份物资（锭、书、经验，有机会得到钻石、绿宝石、珍珠或一束丝线），3份来自园中，以及2份装饰。",
-  "tooltip.ninjacatskies.cache_open": "用来拆开。物资可以重复。没有机器。小概率得到丝线碎片，得到归途丝线的概率极小。",
+  "tooltip.ninjacatskies.cache_open": "用来拆开。物资可以重复。没有机器。小概率得到丝线碎片，得到回归丝线的概率极小。",
   "tooltip.ninjacatskies.cache_combine": "合成4个小型 → 1个中型；3个中型 → 1个大型。",
   "message.ninjacatskies.cache_empty": "储藏无法打开。物资表是空的；封缄仍在。",
   "message.ninjacatskies.post_locked": "张力柱被红石锁住了。",

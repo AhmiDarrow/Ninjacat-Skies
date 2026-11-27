@@ -48,7 +48,10 @@ public class AtlasScreen extends Screen {
         int panelW = left + gridW + 16;
         int titleSpan = 8 + font.width(title) + 12 + font.width(count) + 8;
         if (titleSpan > panelW) panelW = titleSpan;
-        int panelH = 34 + gridH + 96 + (stampRows - 1) * 14;
+        List<net.minecraft.util.FormattedCharSequence> perks = new ArrayList<>();
+        for (Component perk : perks(t, atlas, t.getInt("modStamps"), t.getInt("remnants")).stream().limit(4).toList())
+            perks.addAll(font.split(perk, panelW - left - 8));
+        int panelH = 34 + gridH + 96 + (stampRows - 1) * 14 + Math.max(0, perks.size() - 4) * 10;
         int x0 = (width - panelW) / 2, y0 = Math.max(4, (height - panelH) / 2);
         g.fill(x0 - 2, y0 - 2, x0 + panelW + 2, y0 + panelH + 2, INK);
         g.fill(x0, y0, x0 + panelW, y0 + panelH, PAPER);
@@ -114,10 +117,9 @@ public class AtlasScreen extends Screen {
         }
         // perks
         int py = ry + 16;
-        List<Component> perks = perks(t, atlas, mods, rem);
         g.drawString(font, Component.translatable("gui.driftwrecks.atlas.perks"), x0 + 8, py, INK, false);
         if (perks.isEmpty()) g.drawString(font, Component.translatable("gui.driftwrecks.atlas.no_perks"), x0 + left, py, FADED, false);
-        for (int i = 0; i < perks.size() && i < 4; i++) g.drawString(font, perks.get(i), x0 + left, py + i * 10, TEAL, false);
+        for (int i = 0; i < perks.size(); i++) g.drawString(font, perks.get(i), x0 + left, py + i * 10, TEAL, false);
         int hw = t.getInt("heartwreck");
         if (hw > 0) g.drawString(font, Component.translatable("gui.driftwrecks.atlas.heart." + Math.min(3, hw)), x0 + 8, y0 + panelH - 12, GOLD, false);
         g.disableScissor();

@@ -39,6 +39,12 @@ public final class DriftEvents {
         if (!(e.getEntity() instanceof ServerPlayer p)) return;
         WreckRewards.onJoin(p);
         RiftManager.get(p.server).onLogin(p);
+        DriftManager.get(p.server).returnFromLogout(p);
+    }
+
+    @SubscribeEvent
+    public void onLogout(PlayerEvent.PlayerLoggedOutEvent e) {
+        if (e.getEntity() instanceof ServerPlayer p) DriftManager.get(p.server).rememberLogout(p);
     }
 
     @SubscribeEvent

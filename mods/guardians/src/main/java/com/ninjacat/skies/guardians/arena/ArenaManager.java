@@ -30,6 +30,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.portal.DimensionTransition;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.phys.AABB;
@@ -117,7 +118,7 @@ public final class ArenaManager extends SavedData {
             boss.moveTo(origin.getX() + 0.5, origin.getY(), origin.getZ() + 0.5, 180, 0);
             boss.bindArena(slot, inst.clowderId);
             double scale = 0.6 + 0.4 * party.size();
-            boss.getAttribute(Attributes.MAX_HEALTH).setBaseValue(kind.baseHealth * scale); boss.setHealth(boss.getMaxHealth());
+            boss.setFightHealth(kind.baseHealth * scale);
             boss.finalizeSpawn(arena, arena.getCurrentDifficultyAt(origin), MobSpawnType.EVENT, null);
             arena.addFreshEntity(boss); inst.boss = boss.getUUID();
             arena.playSound(null, origin, SoundEvents.WITHER_SPAWN, SoundSource.HOSTILE, 3.0F, 0.6F);
@@ -149,25 +150,33 @@ public final class ArenaManager extends SavedData {
     private static int slotAt(int x) { return Math.floorDiv(x + SLOT_SPACING / 2, SLOT_SPACING); }
 
     // ------------------------------------------------------------------ player blocks and drops
-    private final Map<Integer, Set<Long>> placed = new HashMap<>();   // slot -> player-placed positions, cleared before reuse
+    private final Map<Integer, Map<Long, String>> placed = new HashMap<>();   // slot -> player-placed position -> block id, cleared before reuse
     private static final String DEATH_STASH = "death_stash";
 
     /** A player set a block on a stage: remember it so the next fight in that slot does not inherit it. */
-    public void onPlayerPlaced(BlockPos pos) {
-        if (placed.computeIfAbsent(slotAt(pos.getX()), k -> new HashSet<>()).add(pos.asLong())) setDirty();
+    public void onPlayerPlaced(BlockPos pos, BlockState state) {
+        String id = blockId(state);
+        if (!id.equals(placed.computeIfAbsent(slotAt(pos.getX()), k -> new HashMap<>()).put(pos.asLong(), id))) setDirty();
+    }
+    private static String blockId(BlockState state) {
+        return net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(state.getBlock()).toString();
     }
 
-    /** A block is broken on a stage: true (and forgotten) if a player placed it there, so it drops like anywhere else. */
-    public boolean takePlaced(BlockPos pos) {
-        Set<Long> s = placed.get(slotAt(pos.getX()));
-        if (s == null || !s.remove(pos.asLong())) return false;
+    /**
+     * A block is broken on a stage: true (and forgotten) if a player placed this block there, so it drops like anywhere
+     * else. The block must match: a position alone would pay out whatever a piston put there later.
+     */
+    public boolean takePlaced(BlockPos pos, BlockState state) {
+        Map<Long, String> s = placed.get(slotAt(pos.getX()));
+        if (s == null || !s.remove(pos.asLong(), blockId(state))) return false;
         setDirty();
         return true;
     }
 
     /** Dying on a stage: the slot is torn down before you can walk back, so the drops wait for you at home. */
     public static boolean stashDeathDrops(ServerPlayer p, Collection<net.minecraft.world.entity.item.ItemEntity> drops) {
-        if (!inArena(p) || drops.isEmpty()) return false;
+        // the whole dimension, not only guardian slots: Driftwreck rift chambers share it and are wiped just the same
+        if (!(inArena(p) || p.level().dimension().equals(ARENA_LEVEL)) || drops.isEmpty()) return false;
         CompoundTag persisted = p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
         CompoundTag root = persisted.getCompound(PERSIST_ROOT);
         ListTag stash = root.getList(DEATH_STASH, Tag.TAG_COMPOUND);
@@ -208,8 +217,8 @@ public final class ArenaManager extends SavedData {
     }
 
     private void clearSlot(ServerLevel level, int slot, BlockPos origin) {
-        Set<Long> mine = placed.remove(slot);
-        if (mine != null) { for (long l : mine) level.setBlock(BlockPos.of(l), Blocks.AIR.defaultBlockState(), 2 | 16); setDirty(); }
+        Map<Long, String> mine = placed.remove(slot);
+        if (mine != null) { for (long l : mine.keySet()) level.setBlock(BlockPos.of(l), Blocks.AIR.defaultBlockState(), 2 | 16); setDirty(); }
         String prev = lastKind.get(slot); if (prev == null) return;
         GuardianKind k = GuardianKind.byId(prev); if (k == null) return;
         ArenaData old = ArenaData.get(level.getServer(), k);
@@ -550,7 +559,9 @@ public final class ArenaManager extends SavedData {
         }
         CompoundTag pl = tag.getCompound("Placed");
         for (String k : pl.getAllKeys()) {
-            Set<Long> s = new HashSet<>(); for (long l : pl.getLongArray(k)) s.add(l);
+            // saves from before block ids were kept: those positions are still cleared on reuse but match no block
+            long[] at = pl.getLongArray(k); ListTag ids = tag.getCompound("PlacedIds").getList(k, Tag.TAG_STRING);
+            Map<Long, String> s = new HashMap<>(); for (int i = 0; i < at.length; i++) s.put(at[i], ids.getString(i));
             try { m.placed.put(Integer.parseInt(k), s); } catch (NumberFormatException ignored) {}
         }
         return m;
@@ -560,9 +571,13 @@ public final class ArenaManager extends SavedData {
         ListTag l = new ListTag(); for (ArenaInstance a : active.values()) l.add(a.save()); tag.put("Active", l);
         CompoundTag lk = new CompoundTag(); for (var e : lastKind.entrySet()) lk.putString(String.valueOf(e.getKey()), e.getValue()); tag.put("LastKind", lk);
         CompoundTag pr = new CompoundTag(); for (var e : pendingRelics.entrySet()) pr.putString(e.getKey().toString(), e.getValue()); tag.put("PendingRelics", pr);
-        CompoundTag pl = new CompoundTag();
-        for (var e : placed.entrySet()) pl.putLongArray(String.valueOf(e.getKey()), e.getValue().stream().mapToLong(Long::longValue).toArray());
-        tag.put("Placed", pl);
+        CompoundTag pl = new CompoundTag(), plIds = new CompoundTag();
+        for (var e : placed.entrySet()) {
+            long[] at = new long[e.getValue().size()]; ListTag ids = new ListTag(); int i = 0;
+            for (var b : e.getValue().entrySet()) { at[i++] = b.getKey(); ids.add(net.minecraft.nbt.StringTag.valueOf(b.getValue())); }
+            pl.putLongArray(String.valueOf(e.getKey()), at); plIds.put(String.valueOf(e.getKey()), ids);
+        }
+        tag.put("Placed", pl); tag.put("PlacedIds", plIds);
         return tag;
     }
 }

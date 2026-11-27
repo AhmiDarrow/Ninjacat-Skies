@@ -329,8 +329,9 @@ public final class LoomTension {
 
     public static void giveOrDrop(ServerPlayer player, ItemStack stack) {
         if (stack.isEmpty()) return;
-        if (player.addItem(stack)) return;
-        if (!player.isSpectator()) {
+        boolean dead = !player.isAlive();   // a dead player's inventory is thrown away on respawn: hold it for later
+        if (!dead && player.addItem(stack)) return;
+        if (!dead && !player.isSpectator()) {
             player.drop(stack, false);
             return;
         }
@@ -342,9 +343,20 @@ public final class LoomTension {
         player.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
     }
 
+    /**
+     * No such Clowder any more (a disbanded party), as opposed to a solo player who is merely offline. A solo Clowder's
+     * id is the player's own UUID, so a saved player file settles it (the profile cache alone forgets players after a
+     * month away).
+     */
+    public static boolean isGone(net.minecraft.server.MinecraftServer server, java.util.UUID id) {
+        if (clowderById(server, id).isPresent()) return false;
+        if (java.nio.file.Files.exists(server.getWorldPath(net.minecraft.world.level.storage.LevelResource.PLAYER_DATA_DIR).resolve(id + ".dat"))) return false;
+        return server.getProfileCache() == null || server.getProfileCache().get(id).isEmpty();
+    }
+
     /** Spectator leftovers from giveOrDrop. Call once they are survival again. */
     public static void deliverPending(ServerPlayer player) {
-        if (player.isSpectator()) return;
+        if (player.isSpectator() || !player.isAlive()) return;
         CompoundTag persisted = player.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
         ListTag pending = persisted.getList(PENDING_ITEMS, Tag.TAG_COMPOUND);
         if (pending.isEmpty()) return;

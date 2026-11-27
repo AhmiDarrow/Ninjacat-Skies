@@ -455,7 +455,7 @@ public final class DriftManager extends SavedData {
         Optional<Clowder> c = LoomTension.clowderById(server, w.team);
         if (c.isEmpty()) return;
         BlockPos at = w.center();
-        Component what = w.heartwreck ? Component.translatable("message.driftwrecks.drift.arrival_heartwreck") : Component.translatable("message.driftwrecks.drift.arrival_wreck", w.skin.tribe(), w.core.titleInline());
+        Component what = w.heartwreck ? Component.translatable("message.driftwrecks.drift.arrival_heartwreck") : Component.translatable("message.driftwrecks.drift.arrival_wreck", w.skin.tribe(), w.core.title());
         String waypoint = "xaero-waypoint:Driftwreck:D:" + at.getX() + ":" + at.getY() + ":" + at.getZ() + ":11:false:0:Internal-overworld-waypoints";
         for (ServerPlayer p : c.get().onlineMembers()) {
             p.sendSystemMessage(w.heartwreck
@@ -476,7 +476,12 @@ public final class DriftManager extends SavedData {
         MinecraftServer server = level.getServer();
         Optional<Clowder> c = LoomTension.clowderById(server, w.team);
         boolean online = c.isPresent() && !c.get().onlineMembers().isEmpty();
-        if (!online) return;                              // an offline Clowder never loses a wreck
+        if (!online) {
+            // a disbanded party never comes back for it (only FTB parties can be disbanded)
+            if (c.isEmpty() && net.neoforged.fml.ModList.get().isLoaded("ftbteams") && server.getTickCount() % 1200 < SLOW
+                    && LoomTension.isGone(server, w.team)) beginUnravel(level, w, false);
+            return;                                       // an offline Clowder never loses a wreck
+        }
         if (w.heartwreck && w.visitors.isEmpty()) return; // no timer until someone sets foot on it
         w.age += SLOW;
         setDirty();
@@ -640,6 +645,41 @@ public final class DriftManager extends SavedData {
         setDirty();
         if (q.done()) { q.release(level); w.phase = Wreck.Phase.DONE; return true; }
         return false;
+    }
+
+    /** A member of the Clowder the wreck drifted in for (creative players pass, for admins and builders). */
+    public static boolean isMember(ServerPlayer p, Wreck w) {
+        return p.isCreative() || LoomTension.clowderOf(p).map(c -> c.id().equals(w.team)).orElse(false);
+    }
+
+    // ---- 5. logging out on a wreck that is gone by the time you come back
+
+    private static final String LOGOUT = "driftwrecks_logout";
+
+    public void rememberLogout(ServerPlayer p) {
+        if (p.level() != level(p.server)) return;
+        for (Wreck w : wrecks.values()) {
+            if (w.phase != Wreck.Phase.ACTIVE || !(w.contains(p.blockPosition(), 3) || nearTether(w, p.position(), 3))) continue;
+            net.minecraft.nbt.CompoundTag t = new net.minecraft.nbt.CompoundTag();
+            t.putInt("wreck", w.id);
+            t.putLong("home", homeFor(p.server, w).asLong());
+            p.getPersistentData().put(LOGOUT, t);
+            return;
+        }
+    }
+
+    public void returnFromLogout(ServerPlayer p) {
+        if (!p.getPersistentData().contains(LOGOUT)) return;
+        net.minecraft.nbt.CompoundTag t = p.getPersistentData().getCompound(LOGOUT);
+        p.getPersistentData().remove(LOGOUT);
+        Wreck w = byId(t.getInt("wreck"));
+        if (p.isSpectator() || p.level() != level(p.server) || (w != null && w.phase == Wreck.Phase.ACTIVE)) return;
+        BlockPos home = BlockPos.of(t.getLong("home"));
+        p.teleportTo(level(p.server), home.getX() + 0.5, home.getY(), home.getZ() + 0.5, p.getYRot(), p.getXRot());
+        p.setDeltaMovement(Vec3.ZERO);
+        p.fallDistance = 0;
+        p.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 120, 0, false, false, true));
+        p.displayClientMessage(NinjacatText.tealKey("message.driftwrecks.drift.thread_snaps"), true);
     }
 
     public static boolean nearTether(Wreck w, Vec3 pos, double r) {

@@ -47,7 +47,7 @@
   "tooltip.ninjacatskies.cache_small": "4 paquetes: 2 suministros (a veces cobre, hierro o Hilo), 1 del huerto (retoños, semillas, cultivos, flores, quizá un huevo de animal de granja) y 1 decoración.",
   "tooltip.ninjacatskies.cache_medium": "8 paquetes: 5 suministros (a menudo lingotes, redstone y Hilo), 2 del huerto con más variedad de huevos de animales, y 1 decoración.",
   "tooltip.ninjacatskies.cache_large": "17 paquetes: 12 suministros (lingotes, libros, experiencia, una posibilidad de diamantes, esmeraldas, perlas o una Madeja de Hilo), 3 del huerto y 2 decoraciones.",
-  "tooltip.ninjacatskies.cache_open": "Úsalo para desenvolverlo. Los suministros pueden repetirse. Nada de máquinas. Una probabilidad pequeña de un Fragmento de Hilo, y una muy pequeña de un Hilo de regreso.",
+  "tooltip.ninjacatskies.cache_open": "Úsalo para desenvolverlo. Los suministros pueden repetirse. Nada de máquinas. Una probabilidad pequeña de un Fragmento de Hilo, y una muy pequeña de un Hilo de retorno.",
   "tooltip.ninjacatskies.cache_combine": "Fabrica 4 pequeños → 1 mediano; 3 medianos → 1 grande.",
   "message.ninjacatskies.cache_empty": "El alijo no ha podido abrirse. Su tabla de suministros está vacía; el precinto se mantiene.",
   "message.ninjacatskies.post_locked": "El Poste está bloqueado por redstone.",

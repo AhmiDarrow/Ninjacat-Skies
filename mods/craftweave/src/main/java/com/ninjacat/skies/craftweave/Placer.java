@@ -5,9 +5,13 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.RecipeBookMenu;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Lays a recipe out on a table from the player's pack: the recipe book's own placement (it returns what is on the
@@ -27,14 +31,39 @@ public final class Placer extends ServerPlaceRecipe<CraftingInput, CraftingRecip
         inventory.fillStackedContents(stackedContents);
         menu.fillCraftSlotsStackedContents(stackedContents);
         if (!stackedContents.canCraft(recipe.value(), null)) return false;
+        // placing clears the grid first, and vanilla's clear throws whatever the pack cannot take onto the ground
+        if (!menu.recipeMatches(recipe) && !gridFits(player)) return false;
         handleRecipeClicked(recipe, all);
         inventory.setChanged();
         return true;
     }
 
-    /** Everything on the grid back into the pack (what will not fit stays on the grid). */
+    /** Whether everything on the grid fits back into the pack at once. */
+    private boolean gridFits(ServerPlayer player) {
+        List<ItemStack> pack = new ArrayList<>();
+        for (ItemStack s : player.getInventory().items) pack.add(s.copy());
+        for (int slot = 1; slot <= 9; slot++) {
+            ItemStack rest = menu.getSlot(slot).getItem().copy();
+            for (ItemStack into : pack) {
+                if (rest.isEmpty()) break;
+                if (into.isEmpty() || !ItemStack.isSameItemSameComponents(into, rest)) continue;
+                int move = Math.max(0, Math.min(rest.getCount(), into.getMaxStackSize() - into.getCount()));
+                into.grow(move);
+                rest.shrink(move);
+            }
+            if (rest.isEmpty()) continue;
+            int free = -1;
+            for (int i = 0; i < pack.size() && free < 0; i++) if (pack.get(i).isEmpty()) free = i;
+            if (free < 0) return false;
+            pack.set(free, rest);
+        }
+        return true;
+    }
+
+    /** Everything on the grid back into the pack. If it does not all fit, it all stays on the grid. */
     public void clear(ServerPlayer player) {
         this.inventory = player.getInventory();
+        if (!gridFits(player)) return;
         clearGrid();
         inventory.setChanged();
     }

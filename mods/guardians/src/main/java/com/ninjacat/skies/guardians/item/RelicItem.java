@@ -5,6 +5,7 @@ import com.ninjacat.skies.guardians.relic.RelicPower;
 import com.ninjacat.skies.lib.NinjacatText;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -37,11 +38,31 @@ public class RelicItem extends Item {
         if (!(player instanceof ServerPlayer sp)) return InteractionResultHolder.sidedSuccess(stack, true);
         if (sp.isSpectator()) return InteractionResultHolder.fail(stack);
         if (sp.getCooldowns().isOnCooldown(this)) return InteractionResultHolder.fail(stack);
+        // vanilla forgets item cooldowns on relog and death, so the ready time is also kept in the player's saved data
+        long now = sp.server.overworld().getGameTime(), left = savedCooldowns(sp).getLong(key()) - now;
+        if (left > 0 && left <= power.cooldownTicks()) {
+            sp.getCooldowns().addCooldown(this, (int) left);
+            return InteractionResultHolder.fail(stack);
+        }
         if (power.activate(sp, stack)) {
             sp.getCooldowns().addCooldown(this, power.cooldownTicks());
+            CompoundTag saved = savedCooldowns(sp); saved.putLong(key(), now + power.cooldownTicks());
+            CompoundTag persisted = sp.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG);
+            persisted.put(COOLDOWNS, saved); sp.getPersistentData().put(Player.PERSISTED_NBT_TAG, persisted);
             return InteractionResultHolder.consume(stack);
         }
         return InteractionResultHolder.fail(stack);
+    }
+
+    private static final String COOLDOWNS = "guardians_relic_cooldowns";
+    private static CompoundTag savedCooldowns(ServerPlayer p) {
+        return p.getPersistentData().getCompound(Player.PERSISTED_NBT_TAG).getCompound(COOLDOWNS);
+    }
+    private String key() { return "relic_" + kind.id; }
+    /** Ends a relic's cooldown early (Edgestep's charges, Cogloop's reset): both the visible one and the saved one. */
+    public static void clearCooldown(ServerPlayer p, Item item) {
+        p.getCooldowns().removeCooldown(item);
+        if (item instanceof RelicItem relic) savedCooldowns(p).remove(relic.key());
     }
 
     @Override
