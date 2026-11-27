@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "NORTE",
   "sign.ninjacatpack.hub.north.2": "O Tear do Corte",
   "sign.ninjacatpack.hub.north.3": "Lareira ronronante",
-  "sign.ninjacatpack.hub.north.4": "Capela dos Costureiros do tear"
+  "sign.ninjacatpack.hub.north.4": "Capela dos Costureiros do tear",
+  "book.ninjacatpack.howto.campaign": "A CAMPANHA\n\nCódice dos Bigodes: comece por “Start here”.\nCrase (`): missões.\n\nCada Trama termina num NÓ que dá uma ficha. Encaixe-a num Poste de tensão.\n\nSolo, Pedra, Broto, Garra, DUAS entre Relógio / Enxame / Centelha, Selo, Fuso.",
+  "book.ninjacatpack.howto.post": "POSTE DE TENSÃO\n\nTroncos em volta de um Nó vinculante, Fio em cima.\nClique direito com uma ficha para encaixar.\n\nCordão de trança: 16 Filamentos de Trama.\nFragmento do tear: pedra da Marcha, com as nove no lugar. Encaixe-o para retecer.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] Não foi possível entregar “Como começar”. Leia a cópia no baú do cais ou no atril.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Leia “Como começar” antes de reivindicar uma plataforma.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] Clique direito na Carta da ilha (ou aperte K) → Criar equipe → escolha uma plataforma."
 }

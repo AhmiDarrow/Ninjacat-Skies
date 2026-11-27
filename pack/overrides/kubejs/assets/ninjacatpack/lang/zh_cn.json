@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "北",
   "sign.ninjacatpack.hub.north.2": "那一刀织机",
   "sign.ninjacatpack.hub.north.3": "呼噜炉火",
-  "sign.ninjacatpack.hub.north.4": "织机缝匠礼拜堂"
+  "sign.ninjacatpack.hub.north.4": "织机缝匠礼拜堂",
+  "book.ninjacatpack.howto.campaign": "主线\n\n胡须抄本：先看“Start here”。\n` 键：任务。\n\n每条丝缕以一个结收尾并给出信物。把它嵌入张力柱。\n\n土壤、石、萌芽、爪，时钟／群／火花任选两条，印记，纺锤。",
+  "book.ninjacatpack.howto.post": "张力柱\n\n原木围住缚结，上方放丝线。\n手持信物右键即可嵌入。\n\n辫绳：16 根丝缕细丝。\n织机碎片：九条全部嵌入后用远征之石制作。嵌入碎片即可重织。",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] 无法给你《入门指南》。请阅读码头箱子里或讲台上的那一本。",
+  "message.ninjacatpack.howto.read_first": "[Skybound] 认领平台前请先阅读《入门指南》。",
+  "message.ninjacatpack.howto.create_team": "[Skybound] 右键岛屿宪章（或按 K）→ 创建队伍 → 选择平台。"
 }

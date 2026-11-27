@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "СЕВЕР",
   "sign.ninjacatpack.hub.north.2": "Ткацкий стан Разреза",
   "sign.ninjacatpack.hub.north.3": "Мурлыкающий очаг",
-  "sign.ninjacatpack.hub.north.4": "Часовня Швецов стана"
+  "sign.ninjacatpack.hub.north.4": "Часовня Швецов стана",
+  "book.ninjacatpack.howto.campaign": "КАМПАНИЯ\n\nКодекс Усов: сначала «Start here».\nКлавиша ` : задания.\n\nКаждая Прядь кончается УЗЛОМ с жетоном. Вставь его в Столб натяжения.\n\nПочва, Камень, Росток, Коготь, ДВЕ из: Часы / Рой / Искра, Печать, Веретено.",
+  "book.ninjacatpack.howto.post": "СТОЛБ НАТЯЖЕНИЯ\n\nБрёвна вокруг Связующего узла, Нить сверху.\nПКМ жетоном, чтобы вставить.\n\nШнур косы: 16 Волокон Пряди.\nФрагмент стана: камень Марша, когда вставлены все девять. Вставь его, чтобы переткать.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] Не удалось выдать «С чего начать». Прочти копию в сундуке на пристани или на кафедре.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Прочти «С чего начать», прежде чем занять площадку.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] ПКМ по Хартии острова (или клавиша K) → Создать команду → выбери площадку."
 }

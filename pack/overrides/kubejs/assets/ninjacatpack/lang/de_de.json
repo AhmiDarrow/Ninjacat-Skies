@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "NORD",
   "sign.ninjacatpack.hub.north.2": "Der Schnittwebstuhl",
   "sign.ninjacatpack.hub.north.3": "Schnurrende Feuerstelle",
-  "sign.ninjacatpack.hub.north.4": "Kapelle der Webstuhlnäher"
+  "sign.ninjacatpack.hub.north.4": "Kapelle der Webstuhlnäher",
+  "book.ninjacatpack.howto.campaign": "DIE KAMPAGNE\n\nSchnurrhaar-Kodex: zuerst „Start here“.\nGravis (`): Quests.\n\nJeder Strang endet in einem KNOTEN, der eine Marke gibt. Setz sie in einen Spannungspfosten.\n\nErde, Stein, Spross, Klaue, ZWEI aus Uhr / Schwarm / Funke, Siegel, Spindel.",
+  "book.ninjacatpack.howto.post": "SPANNUNGSPFOSTEN\n\nStämme um einen Bindungsknoten, Faden oben.\nMit einer Marke rechtsklicken, um sie zu setzen.\n\nZopfkordel: 16 Strangfilamente.\nWebstuhlfragment: Marschstein, wenn alle neun sitzen. Setz es ein, um neu zu weben.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] „So fängst du an“ ließ sich nicht geben. Lies die Kopie in der Dock-Truhe oder am Lesepult.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Lies „So fängst du an“, bevor du eine Plattform beanspruchst.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] Rechtsklick auf die Inselurkunde (oder K) → Gruppe erstellen → Plattform wählen."
 }

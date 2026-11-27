@@ -505,7 +505,7 @@
 		"Ein Satz Schläge in Reserve.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.420000000002004C.title: "Holzhammer"
+	quest.420000000002004C.title: "Wooden Hammer"
 	quest.420000000002004D.quest_desc: [
 		"Stoff aus Grus. Vierundsechzig Steine, die vor einer Stunde noch Staub waren.",
 		"So: Lava neben Wasser (oder schmelzendes Eis). Hämmere Stein. Der Stand der Splittsänger bei /clowder hub verkauft ein Bündel."
@@ -542,17 +542,17 @@
 		"Eisen ist tief und geduldig. Acht Brocken aus dem Netz.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.4200000000020053.title: "Eisenerzbrocken"
+	quest.4200000000020053.title: "Iron Ore Chunk"
 	quest.4200000000020054.quest_desc: [
 		"Aus Kies gesiebt, Stück für Stück. Das Netz findet Kupfer, bevor deine Augen es tun.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.4200000000020054.title: "Kupfererzbrocken"
+	quest.4200000000020054.title: "Copper Ore Chunk"
 	quest.4200000000020055.quest_desc: [
 		"Gold macht sich kaum die Mühe zu antworten. Vier reichen.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.4200000000020055.title: "Golderzbrocken"
+	quest.4200000000020055.title: "Gold Ore Chunk"
 	quest.4200000000020056.quest_desc: [
 		"Füttere die Linie.",
 		"So: siebe Kies, oder schmilz Kohleerz."
@@ -602,12 +602,12 @@
 		"Härtere Schläge, längeres Leben.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.420000000002005F.title: "Steinhammer"
+	quest.420000000002005F.title: "Stone Hammer"
 	quest.4200000000020060.quest_desc: [
 		"Zerkleinert Erz zu Kies und Grus, der laute Trick hinter dem Sieb.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.4200000000020060.title: "Eisenhammer"
+	quest.4200000000020060.title: "Iron Hammer"
 	quest.4200000000020061.quest_desc: [
 		"Weiteres Netz, neun auf einmal.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -772,7 +772,7 @@
 		"Wächst in ordentlichen Köpfen, besser zu etwas gekocht als roh gegessen.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
 	]
-	quest.4200000000030080.title: "Kohl"
+	quest.4200000000030080.title: "Weißkohl"
 	quest.4200000000030081.quest_desc: [
 		"Klettert am eigenen Spalier hoch und reift rot. Die Sauce fängt hier an.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -802,7 +802,7 @@
 		"Vier um den Altar.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000030086.title: "Infusionspodest"
+	quest.4200000000030086.title: "Infusionssockel"
 	quest.4200000000030087.quest_desc: [
 		"Zieh mehr Plattform.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
@@ -877,7 +877,7 @@
 		"Besseres Ackerland. Die Wurzelbinder würden zustimmen.",
 		"So: platziere Organischen Kompost und warte; er reift langsam zu Reicher Erde."
 	]
-	quest.4200000000030095.title: "Reiche Erde"
+	quest.4200000000030095.title: "Reichhaltige Erde"
 	quest.4200000000030096.quest_desc: [
 		"Füttere die Erde, die dich füttert.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -983,13 +983,13 @@
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: vier Papier und ein blauer Farbstoff, formlos. Ergibt vier Bögen."
 	]
-	quest.42000000000400A9.title: "Blaupausenpapier"
+	quest.42000000000400A9.title: "Blaues Papier"
 	quest.42000000000400AA.quest_desc: [
 		"Pläne in einer Kiste.",
 		"Vier Blaupausenpapier, formlos — eine Plattform zu beanspruchen löscht das Beitrittsgeschenk von Silent Gear. Rechtsklick, um die Startpläne auszupacken.",
 		"So: vier Blaupausenpapier, formlos. Rechtsklick, um die Startpläne auszupacken. Eine Plattform zu beanspruchen löscht das Beitrittsgeschenk von Silent Gear."
 	]
-	quest.42000000000400AA.title: "Blaupausenpaket"
+	quest.42000000000400AA.title: "Blaupausenbündel"
 	quest.42000000000400AB.quest_desc: [
 		"Die Vorlage, mit der ein modulares Werkzeug anfängt, bevor du die Teile ansetzt.",
 		"So: packe das Blaupausenpaket aus, oder JEI. Klaue benennt die Werkzeuglinie."
@@ -1019,7 +1019,7 @@
 		"Platz zum Wachsen.",
 		"So: JEI nach dem Blaupausenpapier. Klaue benennt die Aufwertungslinie."
 	]
-	quest.42000000000400B0.title: "Aufwertungsbasis"
+	quest.42000000000400B0.title: "Upgrade-Basis"
 	quest.42000000000400B1.quest_desc: [
 		"Zweiunddreißig Barren Material für Teile.",
 		"So: schmelze Roheisen / Eisengrus (Ofen oder Glutofen). Siebe Kies nach Brocken."
@@ -1257,7 +1257,7 @@
 		"Lädt Gegenstände in einem Ring aus Stäben.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
 	]
-	quest.42000000000500DE.title: "Energieorb"
+	quest.42000000000500DE.title: "Energizing Orb"
 	quest.42000000000500DF.quest_desc: [
 		"Füttere den Orb.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
@@ -1272,7 +1272,7 @@
 		"Dreht Maschinen an Ort und Stelle, statt sie abzubauen und neu zu setzen.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
 	]
-	quest.42000000000500E1.title: "Schraubenschlüssel"
+	quest.42000000000500E1.title: "Wrench"
 	quest.42000000000500E2.quest_desc: [
 		"Schmilzt Erz doppelt so schnell wie ein normaler Ofen, nur Erz.",
 		"So: fertige, schmelze, siebe oder lass es ein Monster fallen. JEI listet jede Quelle auf der Plattform."
@@ -1507,12 +1507,12 @@
 		"Rezepte in Menge, schnell.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.420000000006010F.title: "Mechanischer Mischer"
+	quest.420000000006010F.title: "Mechanischer Mixer"
 	quest.4200000000060110.quest_desc: [
 		"Eine flache Fläche, die einen Gegenstand stillhält, für das Band oder die Presse.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060110.title: "Ablage"
+	quest.4200000000060110.title: "Depot"
 	quest.4200000000060111.quest_desc: [
 		"Bänder bewegen Gegenstände die Wellen entlang.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -1522,17 +1522,17 @@
 		"Lässt Gegenstände senkrecht zwischen Maschinen fallen, kein Band nötig.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060112.title: "Rutsche"
+	quest.4200000000060112.title: "Schacht"
 	quest.4200000000060113.quest_desc: [
 		"Waschen, Trocknen und Kies zu Sand.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060113.title: "Gekapselter Ventilator"
+	quest.4200000000060113.title: "Ummantelter Lüfter"
 	quest.4200000000060114.quest_desc: [
 		"Eine Hand an einer Welle.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060114.title: "Platzierer"
+	quest.4200000000060114.title: "Einsatzgerät"
 	quest.4200000000060115.quest_desc: [
 		"Schneidet Stämme zu Brettern oder Bäume zu Bauholz, wenn genug Rotation da ist.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -1547,12 +1547,12 @@
 		"Schneide Feldfrüchte in einem drehenden Bogen.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060117.title: "Mechanischer Ernter"
+	quest.4200000000060117.title: "Mechanische Erntemaschine"
 	quest.4200000000060118.quest_desc: [
 		"Lädt die Fracht eines stehenden Zugs oder leert sie, ohne dass du eine einzige Kiste hebst.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060118.title: "Tragbare Speicherschnittstelle"
+	quest.4200000000060118.title: "Portable Lagerschnittstelle"
 	quest.4200000000060119.quest_desc: [
 		"Stapelt den Stauraum von neun Kisten in einen großen Block.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -1572,28 +1572,28 @@
 		"Pumpe Fluide aus einer Quelle.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.420000000006011C.title: "Schlauchwinde"
+	quest.420000000006011C.title: "Schlauchrolle"
 	quest.420000000006011D.quest_desc: [
 		"Markiert die Fluidseite eines Baus, der feinere Vetter des Andesits.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.420000000006011D.title: "Kupfergehäuse"
+	quest.420000000006011D.title: "Kupferrahmen"
 	quest.420000000006011E.quest_desc: [
 		"Verkleidet die präzisen Maschinen, die Drehung allein nicht zufriedenstellt.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.420000000006011E.title: "Messinggehäuse"
+	quest.420000000006011E.title: "Messingrahmen"
 	quest.420000000006011F.quest_desc: [
 		"Uhrwerkherz. Will einen Bindungsknoten in seiner Mitte.",
 		"Der Webstuhl, der bittet, einbezogen zu werden.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.420000000006011F.title: "Präzisionsmechanismus"
+	quest.420000000006011F.title: "Präzisionsgetriebe"
 	quest.4200000000060120.quest_desc: [
 		"Steuere die Drehzahl.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060120.title: "Drehzahlregler"
+	quest.4200000000060120.title: "Rotationsgeschwindigkeitsregler"
 	quest.4200000000060121.quest_desc: [
 		"Bieg um die Ecke.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -1608,17 +1608,17 @@
 		"Die Schaltung kehrt die Drehung um.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060123.title: "Schaltung"
+	quest.4200000000060123.title: "Gangschaltung"
 	quest.4200000000060124.quest_desc: [
 		"Programmiertes Drehen. Das Lied der Musterweber, aufgeschrieben.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060124.title: "Sequenzschaltung"
+	quest.4200000000060124.title: "Sequenzielle Gangschaltung"
 	quest.4200000000060125.quest_desc: [
 		"Mischt Zutaten in einem Becken, wenn es schnell genug dreht.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060125.title: "Schneebesen"
+	quest.4200000000060125.title: "Rührstab"
 	quest.4200000000060126.quest_desc: [
 		"Dreht auf einer Welle und schiebt Luft oder ein Boot, je nachdem, wo du es anbringst.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -1673,7 +1673,7 @@
 		"Zeigt eine Zahl von anderswo auf einem Block, den du wirklich siehst.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060130.title: "Anzeigeverknüpfung"
+	quest.4200000000060130.title: "Anzeige-Link"
 	quest.4200000000060131.quest_desc: [
 		"Die Anzeigetafel zeigt Daten.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -1688,7 +1688,7 @@
 		"Erreicht und bricht Blöcke weiter weg, als dein Arm reicht.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.4200000000060133.title: "Greifarm"
+	quest.4200000000060133.title: "Extendo Griff"
 	quest.4200000000060134.quest_desc: [
 		"Ein Rad, eine Presse, ein Mischer, ein Lüfter, ein Uhrwerkherz.",
 		"Setze den Strang unter Spannung: die Antwort der Musterweber.",
@@ -1751,7 +1751,7 @@
 		"Ein Happen, der eine aufgeregte Biene beruhigt, bevor du in den Stock greifst.",
 		"So: Honigwabe plus eine Honigflasche, formlos."
 	]
-	quest.420000000007013E.title: "Honigleckerei"
+	quest.420000000007013E.title: "Honey Treat"
 	quest.420000000007013F.quest_desc: [
 		"Kies um eine Blume. Minenbienen und Gräber mögen den Staub.",
 		"So: Ring aus dem Nestmaterial um eine kleine Blume. Setze ihn, dann Rechtsklick mit einer kleinen Blume, um ihn zu wecken; die Bienen kommen nach einer Weile heraus."
@@ -1781,27 +1781,27 @@
 		"Füllt den Ertrag ab, ohne dass du die Hand dranlegst.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.4200000000070144.title: "Abfüller"
+	quest.4200000000070144.title: "Bottler"
 	quest.4200000000070145.quest_desc: [
 		"Schleudere die Waben in alles, was sie verbergen.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.4200000000070145.title: "Zentrifuge"
+	quest.4200000000070145.title: "Centrifuge"
 	quest.4200000000070146.quest_desc: [
 		"Dasselbe, schneller, mit Energie.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.4200000000070146.title: "Energiezentrifuge"
+	quest.4200000000070146.title: "Powered Centrifuge"
 	quest.4200000000070147.quest_desc: [
 		"Holt eine Biene mit dem Netz aus der Luft, ohne einen einzigen Stich.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.4200000000070147.title: "Fänger"
+	quest.4200000000070147.title: "Catcher"
 	quest.4200000000070148.quest_desc: [
 		"Trag eine Biene wie eine Laterne.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.4200000000070148.title: "Bienenkäfig"
+	quest.4200000000070148.title: "Bee Cage"
 	quest.4200000000070149.quest_desc: [
 		"Brüte die Gene aus, die du willst.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
@@ -1811,12 +1811,12 @@
 		"Paare zwei Kolonien absichtlich.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.420000000007014A.title: "Zuchtkammer"
+	quest.420000000007014A.title: "Breeding Chamber"
 	quest.420000000007014B.quest_desc: [
 		"Sortiere Merkmale wie Saatgut.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.420000000007014B.title: "Genindex"
+	quest.420000000007014B.title: "Gene Indexer"
 	quest.420000000007014C.quest_desc: [
 		"Ein Stapel Leckereien: der Lohn der Kolonie.",
 		"So: Honigwabe plus eine Honigflasche, formlos."
@@ -1903,7 +1903,7 @@
 		"Verbrennt Honig zu Energie. Ein Stock im Doppeldienst.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.420000000007015C.title: "Honiggenerator"
+	quest.420000000007015C.title: "Honey Generator"
 	quest.420000000007015D.quest_desc: [
 		"Zeigt eine Biene, samt Flügeln, ohne angebauten Stock.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
@@ -2046,7 +2046,7 @@
 		"Speichert Quelle, den Brennstoff, den Zauber verbrauchen.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.4200000000080177.title: "Quellengemme"
+	quest.4200000000080177.title: "Quelljuwel"
 	quest.4200000000080178.quest_desc: [
 		"Gewachsen, nicht gefunden. Holz für Zauberwerkzeuge und Zaubersockel.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
@@ -2056,22 +2056,22 @@
 		"Erste Zauber. Magie auf Augenhöhe, wenn du sie neben den Riten willst.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.4200000000080179.title: "Novizen-Zauberbuch"
+	quest.4200000000080179.title: "Zauberbuch für Anfänger"
 	quest.420000000008017A.quest_desc: [
 		"Eine arkane Feldfrucht, gezogen ebenso für ihren Stoff wie für ihre Magie.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.420000000008017A.title: "Magierblüte"
+	quest.420000000008017A.title: "Magebloom"
 	quest.420000000008017B.quest_desc: [
 		"Feuerschale für Ritualarbeit.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.420000000008017B.title: "Ritualfeuerschale"
+	quest.420000000008017B.title: "Ritual-Kohlenbecken"
 	quest.420000000008017C.quest_desc: [
 		"Zeigt ein Reagenz und speist es in das Ritual, das es braucht.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.420000000008017C.title: "Arkanpodest"
+	quest.420000000008017C.title: "Arkanes Podest"
 	quest.420000000008017D.quest_desc: [
 		"Schreibe Zauber und Seiten.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
@@ -2081,12 +2081,12 @@
 		"Imprägniere Reagenzien mit Quelle.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.420000000008017E.title: "Imprägnierkammer"
+	quest.420000000008017E.title: "Imbuement-Kammer"
 	quest.420000000008017F.quest_desc: [
 		"Speichert extra Quelle, damit ein Zauber mitten im Spruch nicht versiegt.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.420000000008017F.title: "Quellenkrug"
+	quest.420000000008017F.title: "Quellglas"
 	quest.4200000000080180.quest_desc: [
 		"Ruf die Geister bei ihren Namen.",
 		"So: ein Buch und Dämonentraum-Samen, formlos. Lies es; Geisterfeuer ist als Nächstes dran."
@@ -2106,17 +2106,17 @@
 		"Das Herz der Aura-Fertigung, abgestimmt auf das Land drumherum.",
 		"So: Ritual des Waldes (JEI): drei Stein, ein Goldblatt, ein Goldbarren und eine Freudenmarke. Linie Herz der Aura."
 	]
-	quest.4200000000080183.title: "Natürlicher Altar"
+	quest.4200000000080183.title: "Natural Altar"
 	quest.4200000000080184.quest_desc: [
 		"Eine Pflanze, von hoher Aura durchdrungen und zu etwas Seltenerem gesponnen.",
 		"So: vier Blätter und vier Goldklumpen um kurzes Gras ergeben vier Brillante Fasern. Setze sie in die Krone eines Baums; seine Blätter werden mit der Zeit golden."
 	]
-	quest.4200000000080184.title: "Brillante Faser"
+	quest.4200000000080184.title: "Brilliant Fiber"
 	quest.4200000000080185.quest_desc: [
 		"Von Aura berührtes Material, wertvoller, als es auf dem Boden liegend aussieht.",
 		"So: brich goldene Blätter, die aus Brillanter Faser gewachsen sind."
 	]
-	quest.4200000000080185.title: "Goldblatt"
+	quest.4200000000080185.title: "Gold Leaf"
 	quest.4200000000080186.quest_desc: [
 		"Eisen, das Umgebungs-Aura aufgesogen hat, bis es mehr wert ist als das Erz.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
@@ -2131,7 +2131,7 @@
 		"Eine Freudenmarke. Der Natürliche Altar und der Pflanzenfresser-Absorber werden auf einer gebaut.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000080188.title: "Freudenmarke"
+	quest.4200000000080188.title: "Token of Joy"
 	quest.4200000000080189.quest_desc: [
 		"Vorrat an Zauberpergament.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
@@ -2141,7 +2141,7 @@
 		"Markiert einen Ort, zu dem du mit einem Wort zurückkehrst, nicht zu Fuß.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.420000000008018A.title: "Transpositionsrolle"
+	quest.420000000008018A.title: "Warp-Schriftrolle"
 	quest.420000000008018B.quest_desc: [
 		"Pflanze sie, pflege sie und ernte Tuch, das in niedriger Magie getränkt ist.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
@@ -2161,7 +2161,7 @@
 		"Der Brennstoff, den Zauberwirker verbrauchen, Zauber um Zauber.",
 		"So: töte Wirker oder fertige, was JEI listet. Brennstoff für Tinte und Bücher."
 	]
-	quest.420000000008018E.title: "Arkane Essenz"
+	quest.420000000008018E.title: "Arcane Essence"
 	quest.420000000008018F.quest_desc: [
 		"Schreibt einen Zauber in ein Buch, eine Stufe nach der anderen.",
 		"So: Flasche + Essenz + Farbstoff. Erste Einschreibtinte."
@@ -2250,7 +2250,7 @@
 		"Prägt eine Siliziumplatte, so wie der Webstuhl Tuch presst.",
 		"So: Eisenblock, Bindungsknoten, Eisen und Quarz. AE2 dupliziert nur eine Presse, die du schon hast."
 	]
-	quest.420000000009019E.title: "Inscriptor-Siliziumpresse"
+	quest.420000000009019E.title: "Gravur-Siliziumdruck"
 	quest.420000000009019F.quest_desc: [
 		"Prägt die Stanze für einen Logikprozessor, eine Pressung nach der anderen.",
 		"So: Eisenblock, Bindungsknoten, Eisen und Gold. Die erste Kopie ist die Knotenfertigung."
@@ -2275,12 +2275,12 @@
 		"Ein Bauteil in Selbstfertigungsmustern, aus Silizium und Certusquarz.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000000901A3.title: "Berechnungsprozessor"
+	quest.42000000000901A3.title: "Kalkulationsprozessor"
 	quest.42000000000901A4.quest_desc: [
 		"Ein dichterer Prozessor, nötig für die anspruchsvolleren Teile des Netzwerks.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000000901A4.title: "Ingenieursprozessor"
+	quest.42000000000901A4.title: "Konstruktionsprozessor"
 	quest.42000000000901A5.quest_desc: [
 		"Beherbergt die Zellen, die alles halten, woran sich das Netzwerk erinnert.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -2300,7 +2300,7 @@
 		"Sieh das Netz.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000000901A8.title: "ME-Terminal"
+	quest.42000000000901A8.title: "ME-Konsole"
 	quest.42000000000901A9.quest_desc: [
 		"Lässt dich direkt aus dem herstellen, was das Netzwerk schon hält.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -2321,7 +2321,7 @@
 		"Halt von jenseits des Tores. Bring einen mit nach Hause.",
 		"So: schmelze Bruchstein der Mark. Baue ihn in der Mark ab, durch eine Tortrommel."
 	]
-	quest.42000000000901AC.title: "Stein der Mark"
+	quest.42000000000901AC.title: "Marschstein"
 	quest.42000000000901AD.quest_desc: [
 		"Trägt die Kanäle des Netzwerks von einer Maschine zur nächsten.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -2351,7 +2351,7 @@
 		"Lässt mehr Fertigungsaufträge zugleich laufen.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000000901B2.title: "Fertigungs-Koprozessoreinheit"
+	quest.42000000000901B2.title: "Fertigungs-Prozessoreinheit"
 	quest.42000000000901B3.quest_desc: [
 		"Hält Muster bereit, aus denen das Netzwerk schöpft, während es herstellt.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -2371,7 +2371,7 @@
 		"Ein leeres Muster, das darauf wartet, mit einem Rezept beschrieben zu werden.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000000901B6.title: "Leeres Muster"
+	quest.42000000000901B6.title: "Leere Schablone"
 	quest.42000000000901B7.quest_desc: [
 		"Speise Energie in den digitalen Webstuhl.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -2436,7 +2436,7 @@
 		"Erreicht das Netzwerk von überall in Reichweite, kein Kabel unter den Füßen.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000000901C3.title: "Drahtlosterminal"
+	quest.42000000000901C3.title: "Drahtlose Zugangskonsole"
 	quest.42000000000901C4.quest_desc: [
 		"Kopiert die Einstellungen einer Maschine auf eine andere, ohne sie neu zu tippen.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -2446,7 +2446,7 @@
 		"Netzwerkwerkzeug für AE2.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000000901C5.title: "Netzwerkwerkzeug"
+	quest.42000000000901C5.title: "Netzwerksonde"
 	quest.42000000000901C6.quest_desc: [
 		"Lädt Certusquarz, bis er für feinere Arbeit bereit ist.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -2461,7 +2461,7 @@
 		"Beweis für das Blätterdach der Mark — optionales Andenken ans Neuweben.",
 		"So: wächst wild in der Mark, liegt in Schilfwehr-Kisten, und ein Ältester der Wurzelbinder handelt damit."
 	]
-	quest.42000000000901C8.title: "Geisterrohr"
+	quest.42000000000901C8.title: "Geistrohr"
 	quest.42000000000901C9.quest_desc: [
 		"Ein Zopf, ein digitaler Webstuhl, ein Tor, ein Stein der Mark.",
 		"Spanne den neunten Strang. Dann das Fragment, dann den Pfosten.",
@@ -2506,12 +2506,12 @@
 		"Siebt schneller als der hölzerne Krummstab, und hält viel länger.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01CF.title: "Knochenkrummstab"
+	quest.42000000000A01CF.title: "Bone Crook"
 	quest.42000000000A01D0.quest_desc: [
 		"Das schlichteste Netz. Alles, was du siebst, geht zuerst hier durch.",
 		"So: neun Schnur im 3x3. Der Stand der Splittsänger verkauft das Fadennetz (Schnur) des Leerenwebstuhls, das genauso siebt."
 	]
-	quest.42000000000A01D0.title: "Schnurnetz"
+	quest.42000000000A01D0.title: "String Mesh"
 	quest.42000000000A01D1.quest_desc: [
 		"Fängt feinere Splitter als Schnur. Weniger Reste rutschen durch das Gewebe.",
 		"So: vier Feuerstein und fünf Schnur im Schachbrettmuster. Feuerstein kommt aus Kies, oder Faden + Kies."
@@ -2526,17 +2526,17 @@
 		"Netz der Goldstufe. Die Chancen rücken zu den Erzen, die zählen.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01D3.title: "Goldnetz"
+	quest.42000000000A01D3.title: "Golden Mesh"
 	quest.42000000000A01D4.quest_desc: [
 		"Siebe Kies damit, und Diamanten tauchen weit öfter auf.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01D4.title: "Diamantnetz"
+	quest.42000000000A01D4.title: "Diamond Mesh"
 	quest.42000000000A01D5.quest_desc: [
 		"Das feinste Netz, das es gibt. Nichts siebt besser als Netheritfaden.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01D5.title: "Netheritnetz"
+	quest.42000000000A01D5.title: "Netherite Mesh"
 	quest.42000000000A01D6.quest_desc: [
 		"Glatt verfeinerter Ton, bereit zum Brennen in einen Schmelztiegel, der echte Hitze hält.",
 		"So: Tonklumpen + Knochenmehl, formlos. Ton kommt aus dem Spannungsfass."
@@ -2551,7 +2551,7 @@
 		"Hält Schmelzhitze aus, ohne zu reißen. Schmelze, was das Sieb hergab.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01D8.title: "Porzellan-Schmelztiegel"
+	quest.42000000000A01D8.title: "Porcelain Crucible"
 	quest.42000000000A01D9.quest_desc: [
 		"Spritzt Wasser über die Pflanzen, ohne die Reihen zu zertrampeln.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -2566,27 +2566,27 @@
 		"Auf Laub gesetzt spinnt sie Seide, während sie frisst.",
 		"So: brich Laub mit einem Krummstab; Seidenraupen fallen ab und zu."
 	]
-	quest.42000000000A01DB.title: "Seidenraupe"
+	quest.42000000000A01DB.title: "Silkworm"
 	quest.42000000000A01DC.quest_desc: [
 		"Seltsames Wasser, das Setzlinge und Samen zu seltsameren Kulturen schiebt.",
 		"So: ein Fass Wasser auf Myzel wird zu Hexenwasser; füll einen Eimer daraus. Myzelsporen siebst du aus Erde."
 	]
-	quest.42000000000A01DC.title: "Hexenwassereimer"
+	quest.42000000000A01DC.title: "Witch Water Bucket"
 	quest.42000000000A01DD.quest_desc: [
 		"Streu sie, und Myzel kriecht nach außen, Block für geduldigen Block.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01DD.title: "Myzelsporen"
+	quest.42000000000A01DD.title: "Mycelium Spores"
 	quest.42000000000A01DE.quest_desc: [
 		"Wirf sie auf Erde, und Gras breitet sich aus, ohne auf den Regen zu warten.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01DE.title: "Grassamen"
+	quest.42000000000A01DE.title: "Grass Seeds"
 	quest.42000000000A01DF.quest_desc: [
 		"Grus als Ersatz für Bruchstein. Gib ihn wieder in den Hammer, für mehr.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01DF.title: "Steinkiesel"
+	quest.42000000000A01DF.title: "Stone Pebble"
 	quest.42000000000A01E0.quest_desc: [
 		"Neun Bruchstein, fest zu Lagerstein gepackt, für eine wachsende Plattform.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -2596,17 +2596,17 @@
 		"Bricht Bruchstein schneller zu Kies als jeder Hammer davor.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01E1.title: "Netherithammer"
+	quest.42000000000A01E1.title: "Netherite Hammer"
 	quest.42000000000A01E2.quest_desc: [
 		"Netherstein, fein zerkleinert. Basalt und Schwarzstein fangen beide hier an.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01E2.title: "Schwarzsteinkiesel"
+	quest.42000000000A01E2.title: "Blackstone Pebble"
 	quest.42000000000A01E3.quest_desc: [
 		"Tiefenschiefer zu Grus zerkleinert, wieder bereit fürs Sieb.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000000A01E3.title: "Tiefenschieferkiesel"
+	quest.42000000000A01E3.title: "Deepslate Pebble"
 	quest.42000000000A01E4.quest_desc: [
 		"Blasser Stein aus tiefem Sieben, vor allem gut zum Bauen.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -2632,7 +2632,7 @@
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: ein Holzfass oder eine Truhe, zwei Komparatoren, Bretter und Stein. Verknüpft nahe Sophisticated-Fässer."
 	]
-	quest.42000000000B01E8.title: "Speichercontroller"
+	quest.42000000000B01E8.title: "Lagerkern"
 	quest.42000000000B01E9.quest_desc: [
 		"Ein Fass zum Aufrüsten: Filter, Trichter, Magnete, Leere.",
 		"So: rüste ein Fass mit Kupfer auf. JEI nennt das Rezept."
@@ -2647,12 +2647,12 @@
 		"Zieht fallengelassene Gegenstände quer über die Plattform direkt ins Fass.",
 		"So: Fässer und Verbesserungen in JEI. Der Controller bindet eine Wand aus Fässern zusammen."
 	]
-	quest.42000000000B01EB.title: "Erweiterte Magnetverbesserung"
+	quest.42000000000B01EB.title: "Erweitertes Magnet-Upgrade"
 	quest.42000000000B01EC.quest_desc: [
 		"Rein auf einer Seite, raus auf der anderen, kein Trichterblock nötig.",
 		"So: Fässer und Verbesserungen in JEI. Der Controller bindet eine Wand aus Fässern zusammen."
 	]
-	quest.42000000000B01EC.title: "Trichterverbesserung"
+	quest.42000000000B01EC.title: "Trichter-Upgrade"
 	quest.42000000000B01ED.quest_desc: [
 		"Löscht alles über der Kapazität, damit die Schublade nie klemmt.",
 		"So: Fässer und Verbesserungen in JEI. Der Controller bindet eine Wand aus Fässern zusammen."
@@ -2682,7 +2682,7 @@
 		"Verdichtet von selbst, was es hält, zu Blöcken, während es sich füllt.",
 		"So: Eichenschubladen 1x1 / 1x2 / 2x2, dann Kompaktierschublade und Controller. JEI nennt das Rezept."
 	]
-	quest.42000000000B01F2.title: "Kompaktierschublade"
+	quest.42000000000B01F2.title: "Compacting Drawer"
 	quest.42000000000B01F3.quest_desc: [
 		"Verknüpft den Speicher ringsum zu einem durchsuchbaren Netz.",
 		"So: Eichenschubladen 1x1 / 1x2 / 2x2, dann Kompaktierschublade und Controller. JEI nennt das Rezept."
@@ -2692,17 +2692,17 @@
 		"Zieht nahe Gegenstände direkt in die Schublade.",
 		"So: Eichenschubladen 1x1 / 1x2 / 2x2, dann Kompaktierschublade und Controller. JEI nennt das Rezept."
 	]
-	quest.42000000000B01F4.title: "Sammlerverbesserung"
+	quest.42000000000B01F4.title: "Collector Upgrade"
 	quest.42000000000B01F5.quest_desc: [
 		"Zieht Gegenstände aus der Truhe oder Maschine daneben.",
 		"So: Eichenschubladen 1x1 / 1x2 / 2x2, dann Kompaktierschublade und Controller. JEI nennt das Rezept."
 	]
-	quest.42000000000B01F5.title: "Ziehverbesserung"
+	quest.42000000000B01F5.title: "Puller Upgrade"
 	quest.42000000000B01F6.quest_desc: [
 		"Schiebt gelagerte Gegenstände in das Inventar daneben.",
 		"So: Eichenschubladen 1x1 / 1x2 / 2x2, dann Kompaktierschublade und Controller. JEI nennt das Rezept."
 	]
-	quest.42000000000B01F6.title: "Schiebeverbesserung"
+	quest.42000000000B01F6.title: "Pusher Upgrade"
 	quest.42000000000B01F7.quest_desc: [
 		"Löscht alles über der Kapazität, damit die Schublade nie klemmt.",
 		"So: Eichenschubladen 1x1 / 1x2 / 2x2, dann Kompaktierschublade und Controller. JEI nennt das Rezept."
@@ -2717,12 +2717,12 @@
 		"Mehr Plätze als der schlichte Rucksack, und ein Platz, um ihn zu verbessern.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B01F9.title: "Eisenrucksack"
+	quest.42000000000B01F9.title: "Eiserner Rucksack"
 	quest.42000000000B01FA.quest_desc: [
 		"Noch geräumiger, mit Plätzen übrig für nützliche Verbesserungen.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B01FA.title: "Goldrucksack"
+	quest.42000000000B01FA.title: "Goldener Rucksack"
 	quest.42000000000B01FB.quest_desc: [
 		"Die tiefsten Taschen, bevor die Verzauberung das Lager noch weiter treibt.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
@@ -2737,32 +2737,32 @@
 		"Filtert, was in die Rucksäcke kommt.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B01FD.title: "Filterverbesserung"
+	quest.42000000000B01FD.title: "Filter-Upgrade"
 	quest.42000000000B01FE.quest_desc: [
 		"Lässt den Rucksack aus dem herstellen, was er schon lagert.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B01FE.title: "Fertigungsverbesserung"
+	quest.42000000000B01FE.title: "Werkbank-Upgrade"
 	quest.42000000000B01FF.quest_desc: [
 		"Speist dich automatisch aus ihrem Vorrat, wenn der Hunger sinkt.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B01FF.title: "Essensverbesserung"
+	quest.42000000000B01FF.title: "Futter-Upgrade"
 	quest.42000000000B0200.quest_desc: [
 		"Tauscht ein kaputtes Werkzeug gegen ein frisches aus dem Rucksack.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B0200.title: "Nachfüllverbesserung"
+	quest.42000000000B0200.title: "Auffüll-Upgrade"
 	quest.42000000000B0201.quest_desc: [
 		"Leert den Rucksack in nahe Truhen, wenn du herankommst.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B0201.title: "Einlagerungsverbesserung"
+	quest.42000000000B0201.title: "Lager-Upgrade"
 	quest.42000000000B0202.quest_desc: [
 		"Fügt einen Fluidtank im Rucksack hinzu, um Flüssigkeiten zu schleppen.",
 		"So: Lederrucksack, dann Eisen-/Gold-/Diamantverbesserungen in JEI."
 	]
-	quest.42000000000B0202.title: "Tankverbesserung"
+	quest.42000000000B0202.title: "Tank-Upgrade"
 	quest.42000000000C0203.quest_desc: [
 		"Das Grundmetall der meisten Maschinen und Gehäuse dieser Linie.",
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
@@ -2783,22 +2783,22 @@
 		"Die einfachste Logikplatine. Die meisten frühen Maschinen brauchen ein paar davon.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0206.title: "Basis-Steuerkreis"
+	quest.42000000000C0206.title: "Einfacher Steuerschaltkreis"
 	quest.42000000000C0207.quest_desc: [
 		"Eine schärfere Logikplatine für die Maschinen eine Stufe höher in der Linie.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0207.title: "Fortgeschrittener Steuerkreis"
+	quest.42000000000C0207.title: "Fortschrittlicher Steuerschaltkreis"
 	quest.42000000000C0208.quest_desc: [
 		"Die schärfste Logikplatine, reserviert für die Spitzenmaschinen der Linie.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0208.title: "Elite-Steuerkreis"
+	quest.42000000000C0208.title: "Elitärer Steuerschaltkreis"
 	quest.42000000000C0209.quest_desc: [
 		"Tränkt Metalle vor dem Schmelzen mit Kohlenstoff, Redstone oder Diamantstaub.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0209.title: "Metallurgischer Infusor"
+	quest.42000000000C0209.title: "Metallurgische Infusionsanlage"
 	quest.42000000000C020A.quest_desc: [
 		"Verdoppelt die meisten Roherze zu zwei Stäuben statt einem.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -2813,12 +2813,12 @@
 		"Schmilzt Erze mit Energie statt Brennstoff, und ein wenig schneller dazu.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C020C.title: "Energieschmelze"
+	quest.42000000000C020C.title: "Energiegeladener Schmelzer"
 	quest.42000000000C020D.quest_desc: [
 		"Reinigt angereichertes Erz mit Sauerstoff für eine dritte Ausbeute, manchmal mehr.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C020D.title: "Reinigungskammer"
+	quest.42000000000C020D.title: "Klärkammer"
 	quest.42000000000C020E.quest_desc: [
 		"Spritzt Gas ins Erz für die reichste Ausbeute der Linie.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -2833,32 +2833,32 @@
 		"Ein einzelner Stapelplatz, der weit mehr fasst als eine Kiste.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0210.title: "Basis-Behälter"
+	quest.42000000000C0210.title: "Einfache Tonne"
 	quest.42000000000C0211.quest_desc: [
 		"Speichert einen tiefen Vorrat eines einzigen Fluids in einem Block.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0211.title: "Basis-Fluidtank"
+	quest.42000000000C0211.title: "Einfacher Flüssigkeitsbehälter"
 	quest.42000000000C0212.quest_desc: [
 		"Puffert Energie zwischen den Maschinen, damit Stöße die Linie nicht stoppen.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0212.title: "Basis-Energiewürfel"
+	quest.42000000000C0212.title: "Einfacher Energie-Würfel"
 	quest.42000000000C0213.quest_desc: [
 		"Trägt Energie zu den Maschinen. Das üblichste Kabel auf der Plattform.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0213.title: "Basis-Universalkabel"
+	quest.42000000000C0213.title: "Einfaches Universalkabel"
 	quest.42000000000C0214.quest_desc: [
 		"Bewegt Fluide zwischen Tanks und Maschinen entlang der Plattform.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0214.title: "Basis-Mechanikrohr"
+	quest.42000000000C0214.title: "Einfache Rohrleitung"
 	quest.42000000000C0215.quest_desc: [
 		"Bewegt Gegenstände automatisch zwischen verbundenen Inventaren.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0215.title: "Basis-Logistiktransporter"
+	quest.42000000000C0215.title: "Einfacher Logistiktransporter"
 	quest.42000000000C0216.quest_desc: [
 		"Dreht, schraubt und stellt die Seiten der Maschinen mit einem Werkzeug neu ein.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -2868,17 +2868,17 @@
 		"Mek-Raketenrucksack — Auftrieb nach Wahl.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0217.title: "Raketenrucksack"
+	quest.42000000000C0217.title: "Jetpack"
 	quest.42000000000C0218.quest_desc: [
 		"Mildert Fallschaden und kauft dir eine Sekunde, bevor die Leere dich holt.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0218.title: "Freilaufschuhe"
+	quest.42000000000C0218.title: "Freiläufer"
 	quest.42000000000C0219.quest_desc: [
 		"Ein Werkzeug, das abbaut, schneidet und kämpft, mit jeder Aufwertung schärfer.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C0219.title: "Atomarer Zerleger"
+	quest.42000000000C0219.title: "Atomic Disassembler"
 	quest.42000000000C021A.quest_desc: [
 		"Der Strukturrahmen, um den die meisten Multiblock-Maschinen gebaut werden.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -2893,13 +2893,13 @@
 		"Gräbt von selbst einen weiten Umkreis ab und sortiert die Ausbeute für dich.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000000C021C.title: "Digitaler Bergmann"
+	quest.42000000000C021C.title: "Digitales Abbaugerät"
 	quest.42000000000D021D.quest_desc: [
 		"Eine klebrige Grundzutat, auf der die meisten Maschinen des Netzes aufbauen.",
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
 	]
-	quest.42000000000D021D.title: "Dielektrische Paste"
+	quest.42000000000D021D.title: "Dielectric Paste"
 	quest.42000000000D021E.quest_desc: [
 		"Speicher ein Maß an Energie.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
@@ -2964,17 +2964,17 @@
 		"Die erste Kristallstufe für die Zellenkammer des Energiestabs.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
 	]
-	quest.42000000000D022A.title: "Niotischer Kristall"
+	quest.42000000000D022A.title: "Niotic Crystal"
 	quest.42000000000D022B.quest_desc: [
 		"Eine stärkere Kristallstufe, weiter im Aufbau der Energiekammer.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
 	]
-	quest.42000000000D022B.title: "Geistkristall"
+	quest.42000000000D022B.title: "Spirited Crystal"
 	quest.42000000000D022C.quest_desc: [
 		"Die stärkste Kristallstufe, die die Energiekammer fassen kann.",
 		"So: Kapitel Powah-Netz — Energieorb und Kabel, sobald Funke-Puls da ist."
 	]
-	quest.42000000000D022C.title: "Nitrokristall"
+	quest.42000000000D022C.title: "Nitro Crystal"
 	quest.42000000000E022D.quest_desc: [
 		"Aus Magierblüte gesponnen und zu Roben und Zauberausrüstung gewebt.",
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
@@ -2985,12 +2985,12 @@
 		"Eine Blume, die nach der Ernte ihre Faser am Stängel nachwachsen lässt.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E022E.title: "Magierblüte"
+	quest.42000000000E022E.title: "Magebloom"
 	quest.42000000000E022F.quest_desc: [
 		"Speichert ein dichtes Becken voller Quelle, den Treibstoff hinter jedem Zauber.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E022F.title: "Quellenedelsteinblock"
+	quest.42000000000E022F.title: "Quelledelsteinblock"
 	quest.42000000000E0230.quest_desc: [
 		"Hält mehr Glyphen, als das Startbuch erlaubt.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
@@ -3015,7 +3015,7 @@
 		"Das Herzstück zum Fertigen von Zauberbüchern, Stäben und anderer arkaner Ausrüstung.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E0234.title: "Verzauberungsapparat"
+	quest.42000000000E0234.title: "Bezaubernder Apparat"
 	quest.42000000000E0235.quest_desc: [
 		"Sitzt im Verzauberungsapparat und treibt seine Rezepte an.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
@@ -3035,42 +3035,42 @@
 		"Wandelt das Wachstum naher Feldfrüchte in ein langsames Rinnsal Quelle.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E0238.title: "Agrar-Quellenverbindung"
+	quest.42000000000E0238.title: "Agronomischer Quellenlink"
 	quest.42000000000E0239.quest_desc: [
 		"Wandelt die Hitze naher Lava in ein stetiges Rinnsal Quelle.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E0239.title: "Vulkan-Quellenverbindung"
+	quest.42000000000E0239.title: "Vulkanischer Quelllink"
 	quest.42000000000E023A.quest_desc: [
 		"Beschwört eine Wixie, die für dich Rezepte fertigt, während du woanders arbeitest.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E023A.title: "Wixie-Talisman"
+	quest.42000000000E023A.title: "Wixie-Charme"
 	quest.42000000000E023B.quest_desc: [
 		"Beschwört einen Starbuncle, der auf Befehl Gegenstände aus dem Lager holt.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E023B.title: "Starbuncle-Talisman"
+	quest.42000000000E023B.title: "Sternbunkel-Charme"
 	quest.42000000000E023C.quest_desc: [
 		"Beschwört einen Drygmy, der in der Nähe langsam eine gewählte Ressource erzeugt.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E023C.title: "Drygmy-Talisman"
+	quest.42000000000E023C.title: "Trockener Charme"
 	quest.42000000000E023D.quest_desc: [
 		"Beschwört einen Whirlisprig, der Feldfrüchte allein pflegt und wachsen lässt.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E023D.title: "Whirlisprig-Talisman"
+	quest.42000000000E023D.title: "Wirbelzweig-Charme"
 	quest.42000000000E023E.quest_desc: [
 		"Beschwört einen Golem, der Amethystknospen erntet, ohne eine Spitzhacke zu heben.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E023E.title: "Amethystgolem-Talisman"
+	quest.42000000000E023E.title: "Amethyst-Golem-Anhänger"
 	quest.42000000000E023F.quest_desc: [
 		"Hebt Blöcke auf und setzt sie aus der Ferne, und verdrahtet Maschinen über die Distanz.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
 	]
-	quest.42000000000E023F.title: "Herrschaftsstab"
+	quest.42000000000E023F.title: "Dominion-Zauberstab"
 	quest.42000000000E0240.quest_desc: [
 		"Markiert einen Gegenstand als erlaubt, sobald er in einem Filter steckt.",
 		"So: Arkane Seite — Arkanholz und Quellenbeere aus Moos, dann die Kaskade."
@@ -3090,7 +3090,7 @@
 	quest.42000000000F0242.title: "Errichte den Pfosten"
 	quest.42000000000F0243.quest_desc: [
 		"Nexusschlüssel in der Hand, oder /clowder hub. Jeder Clowder auf dem Server trifft sich hier.",
-		"/clowder return brings you home.",
+		"/clowder return bringt dich nach Hause.",
 		"So: Nexusschlüssel oder `/clowder hub`. `/clowder return` kommt nach Hause."
 	]
 	quest.42000000000F0243.title: "Betritt die Halle"
@@ -3227,12 +3227,12 @@
 		"Blätter, die das ganze Jahr über einen sanften Goldglanz halten.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011027B.title: "Goldene Blätter"
+	quest.420000000011027B.title: "Golden Leaves"
 	quest.420000000011027C.quest_desc: [
 		"Hält eine Zutat für das Ritual des Waldes, um einen Setzling herum gestellt.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011027C.title: "Holzgestell"
+	quest.420000000011027C.title: "Wooden Stand"
 	quest.420000000011027D.quest_desc: [
 		"Der Altar, an dem die Aura stärkere Fertigungsrezepte antreibt.",
 		"So: Ritual des Waldes (JEI): drei Stein, ein Goldblatt, ein Goldbarren und eine Freudenmarke. Linie Herz der Aura."
@@ -3247,7 +3247,7 @@
 		"Von uralten Bäumen abgezogene Rinde, nützlich in Aura-Rezepten.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011027F.title: "Uralte Rinde"
+	quest.420000000011027F.title: "Ancient Bark"
 	quest.4200000000110280.quest_desc: [
 		"Eine Freudenmarke. Der Natürliche Altar und der Pflanzenfresser-Absorber werden auf einer gebaut.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
@@ -3257,87 +3257,87 @@
 		"Eine Marke der Furcht. Kronenminderer und Verweilabsorber werden auf einer gebaut.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110281.title: "Marke der Furcht"
+	quest.4200000000110281.title: "Token of Fear"
 	quest.4200000000110282.quest_desc: [
 		"Eine Marke des Zorns. Bröckelkatalysator und Schussmarke brauchen eine.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110282.title: "Marke des Zorns"
+	quest.4200000000110282.title: "Token of Anger"
 	quest.4200000000110283.quest_desc: [
 		"Eine Marke der Trauer. Opfertisch und Entwirrer der Sterblichen brauchen eine.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110283.title: "Marke der Trauer"
+	quest.4200000000110283.title: "Token of Sorrow"
 	quest.4200000000110284.quest_desc: [
 		"Aurageist für Rituale.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110284.title: "Geist des Rufes"
+	quest.4200000000110284.title: "Spirit of Calling"
 	quest.4200000000110285.quest_desc: [
 		"Geburtsgeist für Aura-Riten.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110285.title: "Geist der Geburt"
+	quest.4200000000110285.title: "Spirit of Birthing"
 	quest.4200000000110286.quest_desc: [
 		"Speichert eine Reserve an Aura für die Zeit, in der das Land dünn wird.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110286.title: "Aura-Schatz"
+	quest.4200000000110286.title: "Aura Trove"
 	quest.4200000000110287.quest_desc: [
 		"Spät. Nur wenn die Aura es will.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110287.title: "Schöpfungskatalysator"
+	quest.4200000000110287.title: "Creational Catalyst"
 	quest.4200000000110288.quest_desc: [
 		"Zeigt Aura und Erscheinungsbedingungen über ein weiteres Stück Land.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110288.title: "Umgebungsokular"
+	quest.4200000000110288.title: "Environmental Ocular"
 	quest.4200000000110289.quest_desc: [
 		"Neben den Natürlichen Altar gestellt, öffnet er die Zerkleinerungsrezepte des Altars.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110289.title: "Bröckelkatalysator"
+	quest.4200000000110289.title: "Crumbling Catalyst"
 	quest.420000000011028A.quest_desc: [
 		"Neben den Natürlichen Altar gestellt, öffnet er die Transmutationsrezepte des Altars.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011028A.title: "Transmutationskatalysator"
+	quest.420000000011028A.title: "Transmutation Catalyst"
 	quest.420000000011028B.quest_desc: [
 		"Himmelsbarren, besudeltes Gold und Netheritschrott, zum Barren der Tiefen gepresst.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011028B.title: "Barren der Tiefen"
+	quest.420000000011028B.title: "Ingot of the Depths"
 	quest.420000000011028C.quest_desc: [
 		"Markiert ein Feldmuster, das Aura in schnelleres Wachstum der Ernte zieht.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011028C.title: "Ackerschablone"
+	quest.420000000011028C.title: "Farming Stencil"
 	quest.420000000011028D.quest_desc: [
 		"Erzeugt Aura, sobald ein Geschoss in der Nähe landet.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011028D.title: "Schussmarke"
+	quest.420000000011028D.title: "Shooting Mark"
 	quest.420000000011028E.quest_desc: [
 		"Erzeugt langsam Aura aus Blumen, die in der Nähe blühen.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011028E.title: "Pflanzenfresser-Absorber"
+	quest.420000000011028E.title: "Herbivorous Absorber"
 	quest.420000000011028F.quest_desc: [
 		"Erzeugt langsam Aura aus Eichen, die in der Nähe wachsen.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.420000000011028F.title: "Kronenminderer"
+	quest.420000000011028F.title: "Canopy Diminisher"
 	quest.4200000000110290.quest_desc: [
 		"Eine Blume aus dem Ende, seltsam heimisch auf einer Plattform.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110290.title: "Rose des Vergessens"
+	quest.4200000000110290.title: "Rose of Oblivion"
 	quest.4200000000110291.quest_desc: [
 		"Leuchtet ein Gebiet aus, damit dort keine feindlichen Kreaturen erscheinen.",
 		"So: Brillante Faser an Bäumen → Goldblatt → Natürlicher Altar. Das Aura-Kapitel nennt Marken und Generatoren."
 	]
-	quest.4200000000110291.title: "Lampe der Zuflucht"
+	quest.4200000000110291.title: "Lamp of Sanctuary"
 	quest.4200000000120292.quest_desc: [
 		"Kocht Eintopfgerichte, die mehr als einen Teller auf einmal füllen.",
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
@@ -3348,7 +3348,7 @@
 		"Die Pfanne brät die Gerichte.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
 	]
-	quest.4200000000120293.title: "Pfanne"
+	quest.4200000000120293.title: "Bratpfanne"
 	quest.4200000000120294.quest_desc: [
 		"Herd für Farmer's Delight.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -3368,7 +3368,7 @@
 		"Du kletterst daran wie an einer Ranke, und mehrere Küchenrezepte brauchen sie.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
 	]
-	quest.4200000000120297.title: "Seil"
+	quest.4200000000120297.title: "Strohseil"
 	quest.4200000000120298.quest_desc: [
 		"Fängt einen langen Sturz ab und wirft dich unverletzt wieder nach oben.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -3388,7 +3388,7 @@
 		"Eine herzhafte Mahlzeit, in Kohl gewickelt, füllt ein gutes Stück Hunger.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
 	]
-	quest.420000000012029B.title: "Kohlrouladen"
+	quest.420000000012029B.title: "Salatrollen"
 	quest.420000000012029C.quest_desc: [
 		"Schnell gekocht, schnell gegessen, ordentlich Hunger für den Aufwand.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -3408,7 +3408,7 @@
 		"Rindereintopf macht richtig satt.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
 	]
-	quest.420000000012029F.title: "Rindereintopf"
+	quest.420000000012029F.title: "Rindfleischeintopf"
 	quest.42000000001202A0.quest_desc: [
 		"Nudeln und Brühe, sättigend genug für einen ganzen Arbeitstag.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -3443,7 +3443,7 @@
 		"Ein warmes Getränk aus Kakaobohnen und Milch.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
 	]
-	quest.42000000001202A6.title: "Heißer Kakao"
+	quest.42000000001202A6.title: "Heiße Schokolade"
 	quest.42000000001202A7.quest_desc: [
 		"Ein kühles Getränk, aus Melone gepresst, füllt schnell ein wenig Hunger.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -3453,7 +3453,7 @@
 		"Gewebter Stoff für mehrere Küchen- und Dekorezepte.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
 	]
-	quest.42000000001202A8.title: "Leinwand"
+	quest.42000000001202A8.title: "Leinenstofffetzen"
 	quest.42000000001202A9.quest_desc: [
 		"Weicher gewebter Boden, eine andere Textur als schlichtes Holz.",
 		"So: Farmer's Delight-Rezept in JEI (Werkbank, Schneidebrett oder Kochtopf). Saatgut kommt vom Sieben von Erde."
@@ -3484,32 +3484,32 @@
 		"Schreibe Zauber und Seiten.",
 		"So: Flasche + Essenz + Farbstoff. Erste Einschreibtinte."
 	]
-	quest.42000000001302AE.title: "Gewöhnliche Tinte"
+	quest.42000000001302AE.title: "Common Ink"
 	quest.42000000001302AF.quest_desc: [
 		"Schreibt Zauber und Schriftrollen der Stufe Ungewöhnlich in ein Buch.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302AF.title: "Ungewöhnliche Tinte"
+	quest.42000000001302AF.title: "Uncommon Ink"
 	quest.42000000001302B0.quest_desc: [
 		"Schreibt Zauber und Schriftrollen der Stufe Selten in ein Buch.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302B0.title: "Seltene Tinte"
+	quest.42000000001302B0.title: "Rare Ink"
 	quest.42000000001302B1.quest_desc: [
 		"Schreibt Zauber und Schriftrollen der Stufe Episch in ein Buch.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302B1.title: "Epische Tinte"
+	quest.42000000001302B1.title: "Epic Ink"
 	quest.42000000001302B2.quest_desc: [
 		"Schreibt die seltensten, stärksten Zauber, die ein Buch fassen kann.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302B2.title: "Legendäre Tinte"
+	quest.42000000001302B2.title: "Legendary Ink"
 	quest.42000000001302B3.quest_desc: [
 		"Wirkt einen Zauber einmal, ohne ihn in einem Buch gelernt zu haben.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302B3.title: "Schriftrolle"
+	quest.42000000001302B3.title: "Scroll"
 	quest.42000000001302B4.quest_desc: [
 		"Magischer Stoff für Roben.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
@@ -3529,17 +3529,17 @@
 		"Ein Stab, der Feuerzauber mit zusätzlicher Kraft leitet.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302B7.title: "Pyriumstab"
+	quest.42000000001302B7.title: "Pyrium Staff"
 	quest.42000000001302B8.quest_desc: [
 		"Ein bescheidener Stab für einen Zauberer am Anfang.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302B8.title: "Graubartstab"
+	quest.42000000001302B8.title: "Graybeard Staff"
 	quest.42000000001302B9.quest_desc: [
 		"Eine Klinge, die Zaubernde bestraft und ihre Abwehr durchschneidet.",
 		"So: Pack-Rezept, zwei Arkane Barren auf der Diagonale, je eine Kette an der Seite und ein Diamant am Griff. Sein einziger wilder Träger lebt in Magierfestungen, und die Plattform hat nie welche."
 	]
-	quest.42000000001302B9.title: "Zauberjäger"
+	quest.42000000001302B9.title: "Magehunter"
 	quest.42000000001302BA.quest_desc: [
 		"Das früheste Zauberbuch, knapp an Plätzen, aber leicht zu erreichen.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
@@ -3554,7 +3554,7 @@
 		"Veredeltes Metall für das obere Ende der Zauberausrüstung.",
 		"So: Arkane Essenz und Tinte, dann ein Zauberbuch. Das Kapitel Zauber nennt die Leiter."
 	]
-	quest.42000000001302BC.title: "Arkaner Barren"
+	quest.42000000001302BC.title: "Arcane Ingot"
 	quest.42000000001302BD.quest_desc: [
 		"Ein beschädigtes Buch, das sich wieder zu Wissen zusammensetzen lässt.",
 		"So: Pack-Rezept, ein verzaubertes Buch, umringt von vier Arkanen Essenzen und vier Seelensand. JEI nennt es Ruiniertes Buch."
@@ -4326,7 +4326,7 @@
 		"Umringle den Altar damit, um die Erweckung zu vollenden.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180353.title: "Erweckungspodest"
+	quest.4200000000180353.title: "Erweckungssockel"
 	quest.4200000000180354.quest_desc: [
 		"Ein Infusionskristall, dem nie die Ladungen ausgehen.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
@@ -4336,12 +4336,12 @@
 		"Lagert Essenz in Menge, damit die Maschinen nie trockengehen.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180355.title: "Essenzgefäß"
+	quest.4200000000180355.title: "Essenzurne"
 	quest.4200000000180356.quest_desc: [
 		"Das Grundteil jeder Maschine, die mit Essenz läuft.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180356.title: "Maschinenrahmen"
+	quest.4200000000180356.title: "Maschinengehäuse"
 	quest.4200000000180357.quest_desc: [
 		"Passt auf Pflanzen in der Nähe auf und bricht sie, sobald sie reif sind.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
@@ -4351,7 +4351,7 @@
 		"Macht aus übrigem Samen wieder Essenz, statt Gerümpel.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180358.title: "Samenaufbereiter"
+	quest.4200000000180358.title: "Samenrecycler"
 	quest.4200000000180359.quest_desc: [
 		"Beschleunigt Pflanzen in der Nähe mit Inferium-Essenz.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
@@ -4411,27 +4411,27 @@
 		"Beschleunigt das Wachstum, wenn du sie auf gesetzte Pflanzen wirfst.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180364.title: "Gedüngte Essenz"
+	quest.4200000000180364.title: "Düngeressenz"
 	quest.4200000000180365.quest_desc: [
 		"Der Staub, aus dem Souliumbarren werden. Ein Bestandteil für feindliche Samen.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180365.title: "Soulium-Staub"
+	quest.4200000000180365.title: "Seelenstaub"
 	quest.4200000000180366.quest_desc: [
 		"Soulium-Staub, an einen Prosperity-Barren gebunden, dunkel und ein wenig kalt.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180366.title: "Souliumbarren"
+	quest.4200000000180366.title: "Seelenbarren"
 	quest.4200000000180367.quest_desc: [
 		"Aus Soulium gefertigt. Fügt feindlichen Kreaturen zusätzlichen Schaden zu.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180367.title: "Souliumdolch"
+	quest.4200000000180367.title: "Seelendolch"
 	quest.4200000000180368.quest_desc: [
 		"Der unfertige Samen, um feindliche Kreaturen zu züchten.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
 	]
-	quest.4200000000180368.title: "Soulium-Samenbasis"
+	quest.4200000000180368.title: "Seelensamenbasis"
 	quest.4200000000180369.quest_desc: [
 		"Zieh Redstone-Staub, statt ihn abzubauen.",
 		"So: Mystical Agriculture-Rezept in JEI. Inferium und Prosperity kommen aus dem Sieb; Samen werden am Infusionsaltar infundiert."
@@ -4652,7 +4652,7 @@
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.4200000000190394.title: "Nestorter"
+	quest.4200000000190394.title: "Nest Locator"
 	quest.4200000000190395.quest_desc: [
 		"Birkenstämme um eine Blume: Holzbienen in einer anderen Farbe.",
 		"So: Ring aus dem Nestmaterial um eine kleine Blume. Setze ihn, dann Rechtsklick mit einer kleinen Blume, um ihn zu wecken; die Bienen kommen nach einer Weile heraus."
@@ -4752,7 +4752,7 @@
 		"Dreht schneller, wenn eine Hitzequelle sie speist.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.42000000001903A8.title: "Beheizte Zentrifuge"
+	quest.42000000001903A8.title: "Heated Centrifuge"
 	quest.42000000001903A9.quest_desc: [
 		"Lässt Bienenlarven zu neuen Bienen mit nützlichen Merkmalen schlüpfen.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
@@ -4782,7 +4782,7 @@
 		"Ein voller Eimer Honig, bereit zum Ausgießen oder Verbrennen.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.42000000001903AE.title: "Honigeimer"
+	quest.42000000001903AE.title: "Honey Bucket"
 	quest.42000000001903AF.quest_desc: [
 		"Schmilzt für Kerzen, oder versiegelt den Rahmen eines Stocks.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
@@ -4797,7 +4797,7 @@
 		"Die Merkmale einer Biene, entnommen und bereit zum Abfüllen.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
 	]
-	quest.42000000001903B1.title: "Genprobe"
+	quest.42000000001903B1.title: "Gene Sample"
 	quest.42000000001903B2.quest_desc: [
 		"Die Genetik einer Biene, gelagert für spätere Zucht.",
 		"So: Productive Bees-Rezepte in JEI. Schwarm benennt den Stock, die Zentrifuge und die Zuchtschritte."
@@ -4923,12 +4923,12 @@
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: Eisenbarren und Eisenstangen um ein leeres Modul; ergibt vier. Die Module kommen in den Router."
 	]
-	quest.42000000001A03CA.title: "Modularer Router"
+	quest.42000000001A03CA.title: "Modular Router"
 	quest.42000000001A03CB.quest_desc: [
 		"Die Karte, auf die jedes Verhalten des Routers geschrieben wird.",
 		"So: Modularer Router plus leere Module in JEI. Zieher/Sender/Brecher sitzen im Router."
 	]
-	quest.42000000001A03CB.title: "Leeres Modul"
+	quest.42000000001A03CB.title: "Blank Module"
 	quest.42000000001A03CC.quest_desc: [
 		"Zieht Gegenstände aus einem Nachbarn in den Router.",
 		"So: Modularer Router plus leere Module in JEI. Zieher/Sender/Brecher sitzen im Router."
@@ -4943,22 +4943,22 @@
 		"Brich einen Block vor dem Router und behalte, was fällt.",
 		"So: Modularer Router plus leere Module in JEI. Zieher/Sender/Brecher sitzen im Router."
 	]
-	quest.42000000001A03CE.title: "Brechmodul"
+	quest.42000000001A03CE.title: "Breaker Module"
 	quest.42000000001A03CF.quest_desc: [
 		"Setz einen Block, wohin der Router zeigt.",
 		"So: Modularer Router plus leere Module in JEI. Zieher/Sender/Brecher sitzen im Router."
 	]
-	quest.42000000001A03CF.title: "Setzmodul"
+	quest.42000000001A03CF.title: "Placer Module"
 	quest.42000000001A03D0.quest_desc: [
 		"Gib Redstone ab, wenn der Inhalt des Routers eine Schwelle überschreitet.",
 		"So: Modularer Router plus leere Module in JEI. Zieher/Sender/Brecher sitzen im Router."
 	]
-	quest.42000000001A03D0.title: "Detektormodul"
+	quest.42000000001A03D0.title: "Detector Module"
 	quest.42000000001A03D1.quest_desc: [
 		"Trägt Gegenstände zwischen Truhen, Maschinen und Plattformen.",
 		"So: Eisen + Redstone. Richte die Seiten mit dem Pipez-Schraubenschlüssel."
 	]
-	quest.42000000001A03D1.title: "Gegenstandsrohr"
+	quest.42000000001A03D1.title: "Item Rohr"
 	quest.42000000001A03D2.quest_desc: [
 		"Trägt Flüssigkeiten zwischen Tanks und Maschinen, ohne Eimerlauf.",
 		"So: Eisen + Eimer + Redstone. Schleich-Benutzung des Schraubenschlüssels auf einer Seite zum Abziehen; Rechtsklick auf diese Seite für Filter."
@@ -4968,7 +4968,7 @@
 		"Trägt Energie zwischen Maschinen, die sie erzeugen, und Maschinen, die sie brauchen.",
 		"So: Eisen + Redstone. Trägt FE zwischen Maschinen."
 	]
-	quest.42000000001A03D3.title: "Energierohr"
+	quest.42000000001A03D3.title: "Strom Rohr"
 	quest.42000000001A03D4.quest_desc: [
 		"Trägt Chemikalien zwischen Maschinen, die damit umgehen.",
 		"So: Eisen- + Redstone-Rohre in JEI. Schleich-Benutzung des Schraubenschlüssels setzt abziehende Seiten; Rechtsklick auf eine für Filter. Das Kapitel der Rohre ist die ganze Leiter."
@@ -4978,12 +4978,12 @@
 		"Ein Rohr, viele Aufgaben.",
 		"So: Eisen- + Redstone-Rohre in JEI. Schleich-Benutzung des Schraubenschlüssels setzt abziehende Seiten; Rechtsklick auf eine für Filter. Das Kapitel der Rohre ist die ganze Leiter."
 	]
-	quest.42000000001A03D5.title: "Universalrohr"
+	quest.42000000001A03D5.title: "Universelles Rohr"
 	quest.42000000001A03D6.quest_desc: [
 		"Benutze eine Rohrseite schleichend, damit sie aus einer Maschine zieht, oder um sie abzuklemmen.",
 		"So: zwei Feuersteine und zwei Stöcke. Schleich-Benutzung einer Rohrseite an einer Maschine, damit sie abzieht, noch einmal, um sie zu kappen; Rechtsklick auf eine abziehende Seite für Filter."
 	]
-	quest.42000000001A03D6.title: "Rohr-Schraubenschlüssel"
+	quest.42000000001A03D6.title: "Schraubenschlüssel"
 	quest.42000000001A03D7.quest_desc: [
 		"Geschwindigkeitsverbesserung für ein Rohr.",
 		"So: Eisen- + Redstone-Rohre in JEI. Schleich-Benutzung des Schraubenschlüssels setzt abziehende Seiten; Rechtsklick auf eine für Filter. Das Kapitel der Rohre ist die ganze Leiter."
@@ -5078,7 +5078,7 @@
 		"Ein Trichter, der filtern kann, was er bewegt.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001A03E9.title: "Messingtrichter"
+	quest.42000000001A03E9.title: "Messingschleuse"
 	quest.42000000001A03EA.quest_desc: [
 		"Wirft Gegenstände gerade nach unten, zwischen den Etagen.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5088,7 +5088,7 @@
 		"Eine Rutsche, die Gegenstände filtern und zurückhalten kann.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001A03EB.title: "Intelligente Rutsche"
+	quest.42000000001A03EB.title: "Schlauer Schacht"
 	quest.42000000001A03EC.quest_desc: [
 		"Sortiert und bewegt Gegenstände, mit einstellbarer Priorität je Seite.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -5144,7 +5144,7 @@
 		"Zeigt auf vergrabenes Erz oder verborgene Bauwerke in der Nähe.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B03F6.title: "Wünschelrute"
+	quest.42000000001B03F6.title: "Divination Rod"
 	quest.42000000001B03F7.quest_desc: [
 		"Wischt die Ritualkreide vom Boden, wenn du fertig bist.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
@@ -5154,17 +5154,17 @@
 		"Wächst zu einem Baum, der nicht in diese Welt gehört.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B03F8.title: "Anderswelt-Setzling"
+	quest.42000000001B03F8.title: "Otherworld Sapling"
 	quest.42000000001B03F9.quest_desc: [
 		"Holz von einem fremden Baum, für Bindungsrituale.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B03F9.title: "Anderswelt-Stamm"
+	quest.42000000001B03F9.title: "Otherworld Log"
 	quest.42000000001B03FA.quest_desc: [
 		"Hält eine Gabe, solange ein Bindungsritual läuft.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B03FA.title: "Opferschale"
+	quest.42000000001B03FA.title: "Sacrificial Bowl"
 	quest.42000000001B03FB.quest_desc: [
 		"Eine vergoldete Schale, die das Ritual beschleunigt, in dem sie steht.",
 		"So: Gold um eine Opferschale. Das Wörterbuch nennt das Ritual."
@@ -5199,22 +5199,22 @@
 		"Ein Fokus, der einem Ritual hilft, seine Form zu halten.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B0401.title: "Geistergestimmter Edelstein"
+	quest.42000000001B0401.title: "Spirit Attuned Gem"
 	quest.42000000001B0402.quest_desc: [
 		"Erz von jenseits dieser Welt, verhüttet zu Iesnium.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B0402.title: "Rohes Iesnium"
+	quest.42000000001B0402.title: "Raw Iesnium"
 	quest.42000000001B0403.quest_desc: [
 		"Ein Metall, das es nur auf der anderen Seite gibt.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B0403.title: "Iesniumbarren"
+	quest.42000000001B0403.title: "Iesnium Ingot"
 	quest.42000000001B0404.quest_desc: [
 		"Schickt gebundene Geisterbergleute in die Anderswelt zum Graben.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B0404.title: "Dimensionsschacht"
+	quest.42000000001B0404.title: "Dimensional Mineshaft"
 	quest.42000000001B0405.quest_desc: [
 		"Der schwächste Geist, unter Tage zum Graben abgestellt.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
@@ -5304,7 +5304,7 @@
 		"Eine Aderprobe, die sich zu schmelzen lohnt, sobald du mehr findest.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
 	]
-	quest.42000000001B0416.title: "Iesniumerz"
+	quest.42000000001B0416.title: "Iesnium Ore"
 	quest.42000000001B0417.quest_desc: [
 		"Ein Afrit, tief hinabgeschickt, um dort zu graben, wohin geringere Geister nicht gehen.",
 		"So: Wörterbuch der Geister, dann Geisterfeuer und Schalen. Das Kapitel Anderswelt nennt die Riten."
@@ -5420,7 +5420,7 @@
 		"Zwei Räder drehen gegeneinander, Erz läuft dazwischen.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C042D.title: "Brechrad"
+	quest.42000000001C042D.title: "Mahlwerkrad"
 	quest.42000000001C042E.quest_desc: [
 		"Lüfter zum Waschen und Trocknen.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5450,7 +5450,7 @@
 		"Belädt ein Band oder leert es, immer nur in eine Richtung.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C0433.title: "Andesittrichter"
+	quest.42000000001C0433.title: "Andesitschleuse"
 	quest.42000000001C0434.quest_desc: [
 		"Filtert, was er bewegt, nach Gegenstand und nach Anzahl.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5475,7 +5475,7 @@
 		"Filtert, welche Flüssigkeit durchkommt.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C0438.title: "Intelligentes Flüssigkeitsrohr"
+	quest.42000000001C0438.title: "Schlaues Flüssigkeitsrohr"
 	quest.42000000001C0439.quest_desc: [
 		"Schiebt Flüssigkeit in eine Richtung durch Rohre.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5495,7 +5495,7 @@
 		"Leert Flüssigkeit aus gefüllten Behältern.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C043C.title: "Gegenstandsabfluss"
+	quest.42000000001C043C.title: "Abfluss"
 	quest.42000000001C043D.quest_desc: [
 		"Speichert viel Flüssigkeit in einem Block.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5550,7 +5550,7 @@
 		"Sendet ein Redstone-Signal ohne Draht zwischen Plattformen.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C0447.title: "Redstone-Verknüpfung"
+	quest.42000000001C0447.title: "Redstone-Verbindung"
 	quest.42000000001C0448.quest_desc: [
 		"Gibt Redstone, sobald ein Inventar eine Schwelle überschreitet.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5585,12 +5585,12 @@
 		"Sammelt geteilte Pakete wieder zu ganzen Bestellungen.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C044E.title: "Neuverpacker"
+	quest.42000000001C044E.title: "Umpacker"
 	quest.42000000001C044F.quest_desc: [
 		"Fordert Gegenstände aus einem verbundenen Bestandsnetz.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C044F.title: "Bestandsticker"
+	quest.42000000001C044F.title: "Lagerticker"
 	quest.42000000001C0450.quest_desc: [
 		"Leg es hin, und eine Lore hat wohin sie fahren kann.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5615,22 +5615,22 @@
 		"Eine Antriebsschiene mit feinerer Steuerung der Geschwindigkeit.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C0454.title: "Kontrollschiene"
+	quest.42000000001C0454.title: "Steuerungsschiene"
 	quest.42000000001C0455.quest_desc: [
 		"Seilrolle für senkrechte Bewegung.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C0455.title: "Seilrolle"
+	quest.42000000001C0455.title: "Flaschenzug"
 	quest.42000000001C0456.quest_desc: [
 		"Hebt eine ganze Plattform zwischen markierten Etagen.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C0456.title: "Aufzugsrolle"
+	quest.42000000001C0456.title: "Aufzug-Seilrolle"
 	quest.42000000001C0457.quest_desc: [
 		"Trägt einen Portalkranwagen entlang seiner Länge.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
 	]
-	quest.42000000001C0457.title: "Portalkranwelle"
+	quest.42000000001C0457.title: "Portalkranachse"
 	quest.42000000001C0458.quest_desc: [
 		"Fährt auf einer Portalkranwelle und zieht das Bauwerk mit sich.",
 		"So: Create-Fertigung in JEI (Werkbank, Presse, Mischer oder Platzierer). Andesitlegierung und ein Wasserrad starten die Linie."
@@ -5951,7 +5951,7 @@
 		"Teilt eine Speicherzelle in mehrere kleinere Pools.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
 	]
-	quest.42000000001D0497.title: "Zellenwerkbank"
+	quest.42000000001D0497.title: "Speicherzellenwerkbank"
 	quest.42000000001E0498.quest_desc: [
 		"Ton und Knochenmehl, ein Schritt zu Porzellanwerkzeugen.",
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
@@ -5962,7 +5962,7 @@
 		"Ein leichterer Eimer, schonender für ein frühes Kiesbudget.",
 		"So: forme Porzellan-Ton zu einem ungebrannten Eimer, dann schmilz ihn."
 	]
-	quest.42000000001E0499.title: "Porzellaneimer"
+	quest.42000000001E0499.title: "Porcelain Bucket"
 	quest.42000000001E049A.quest_desc: [
 		"Schmilzt Blöcke über einem Feuer zu Flüssigkeit.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -6047,7 +6047,7 @@
 		"Neun Erdblöcke zu einem gefaltet, für den Weg nach oben.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04AA.title: "Komprimierte Erde"
+	quest.42000000001E04AA.title: "Compressed Dirt"
 	quest.42000000001E04AB.quest_desc: [
 		"Neun Bruchstein fest gepackt, billig und endlos.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -6057,32 +6057,32 @@
 		"Neun Kies verdichtet; ein komprimiertes Sieb nimmt ihn im Ganzen.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04AC.title: "Komprimierter Kies"
+	quest.42000000001E04AC.title: "Compressed Gravel"
 	quest.42000000001E04AD.quest_desc: [
 		"Neun Sandblöcke zu einem gepresst, zum Schleppen.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04AD.title: "Komprimierter Sand"
+	quest.42000000001E04AD.title: "Compressed Sand"
 	quest.42000000001E04AE.quest_desc: [
 		"Neun Staubblöcke gepresst, aus demselben Grund.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04AE.title: "Komprimierter Staub"
+	quest.42000000001E04AE.title: "Compressed Dust"
 	quest.42000000001E04AF.quest_desc: [
 		"Netherstein verdichtet, für ein leichteres Inventar.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04AF.title: "Komprimierter Netherrack"
+	quest.42000000001E04AF.title: "Compressed Netherrack"
 	quest.42000000001E04B0.quest_desc: [
 		"Endstein verdichtet, nützlich, sobald die Leere Futter braucht.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04B0.title: "Komprimierter Endstein"
+	quest.42000000001E04B0.title: "Compressed End Stone"
 	quest.42000000001E04B1.quest_desc: [
 		"Tiefenschiefer verdichtet, neun zu eins, und doch nur Stein.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04B1.title: "Komprimierter Tiefenschiefer"
+	quest.42000000001E04B1.title: "Compressed Deepslate"
 	quest.42000000001E04B2.quest_desc: [
 		"Zerschlägt auf einmal einen ganzen Stapel komprimierter Blöcke.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -6092,7 +6092,7 @@
 		"Ein schwächerer Hammer, um komprimierte Blöcke zu brechen.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04B3.title: "Komprimierter Eisenhammer"
+	quest.42000000001E04B3.title: "Compressed Iron Hammer"
 	quest.42000000001E04B4.quest_desc: [
 		"Ein breites Sieb, mehrere Kieshaufen auf einmal.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
@@ -6102,17 +6102,17 @@
 		"Siebt wie Eiche, nur eine andere Maserung.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04B5.title: "Birkensieb"
+	quest.42000000001E04B5.title: "Birch Sieve"
 	quest.42000000001E04B6.quest_desc: [
 		"Gärt wie jedes andere Fass.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04B6.title: "Birkenfass"
+	quest.42000000001E04B6.title: "Birch Barrel"
 	quest.42000000001E04B7.quest_desc: [
 		"Schmilzt Blöcke wie jeder andere Schmelztiegel.",
 		"So: Sieb, Hammer, Schmelztiegel oder Fass von Ex Deorum. Pass das Netz an den Grus an."
 	]
-	quest.42000000001E04B7.title: "Birkenschmelztiegel"
+	quest.42000000001E04B7.title: "Birch Crucible"
 	quest.42000000001E04B8.quest_desc: [
 		"Die Währung des Strangs: verdiene sie, gib sie aus, verschwende sie nie.",
 		"So: Aufgabenbelohnungen, Erde mit Feuersteinnetz auf einem Webrahmen, Hütervorräte."
@@ -6153,7 +6153,7 @@
 		"Öffnet ein Paket wieder zu losen Gegenständen.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
 	]
-	quest.42000000001F04BF.title: "Entpacker"
+	quest.42000000001F04BF.title: "Unpackager"
 	quest.42000000001F04C0.quest_desc: [
 		"Schreibt ein Fertigungsrezept auf ein Paketmuster.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
@@ -6173,7 +6173,7 @@
 		"Markiert ein Ziel, wohin ein Verteiler Pakete schicken kann.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
 	]
-	quest.42000000001F04C3.title: "Verteilermarkierer"
+	quest.42000000001F04C3.title: "Distributor Marker"
 	quest.42000000001F04C4.quest_desc: [
 		"Speist fertige Pakete in die Linie, zum Abholen.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
@@ -6198,7 +6198,7 @@
 		"Füllt ein Paket mit Flüssigkeit statt mit Gegenständen.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
 	]
-	quest.42000000001F04C8.title: "Fluidpaketfüller"
+	quest.42000000001F04C8.title: "Fluid Package Filler"
 	quest.42000000001F04C9.quest_desc: [
 		"Ein versiegeltes Bündel aus Gegenständen, bereit zum Bewegen oder Lagern.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
@@ -6208,12 +6208,12 @@
 		"Packt weit mehr in ein Paket als die einfache Sorte.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
 	]
-	quest.42000000001F04CA.title: "Volumenpaket"
+	quest.42000000001F04CA.title: "Volume Package"
 	quest.42000000001F04CB.quest_desc: [
 		"Markiert, wohin ein Fertigungsstellvertreter reichen soll.",
 		"So: Paketkomponente, dann Verpacker / Kodierer. Braucht ein AE2-Netz für das ME-Teil."
 	]
-	quest.42000000001F04CB.title: "Stellvertretermarkierer"
+	quest.42000000001F04CB.title: "Proxy Marker"
 	quest.42000000001F04CC.quest_desc: [
 		"Verbindet die Verpackungslinie mit dem digitalen Webstuhl.",
 		"So: Spindelnetz — Certus aus Sand, der Controller will einen Bindungsknoten."
@@ -6284,12 +6284,12 @@
 		"Hält mehrere Quantenscheiben in einem Gehäuse.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000002004D9.title: "QIO-Laufwerksarray"
+	quest.42000000002004D9.title: "QIO Laufwerk Reihe"
 	quest.42000000002004DA.quest_desc: [
 		"Durchsuche alles, was das QIO-Netz speichert.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000002004DA.title: "QIO-Übersicht"
+	quest.42000000002004DA.title: "QIO-Dashboard"
 	quest.42000000002004DB.quest_desc: [
 		"Trägt die QIO-Übersicht in deiner Tasche.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -6310,7 +6310,7 @@
 		"Hält einen riesigen Stapel eines einzigen Gegenstands.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000002004DE.title: "Ultimativ-Behälter"
+	quest.42000000002004DE.title: "Ultimative Tonne"
 	quest.42000000002004DF.quest_desc: [
 		"Schmilzt mehrere Stapel auf einmal, so schnell, wie Mekanism nur kann.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -6360,12 +6360,12 @@
 		"Speist Chemikalien ein und zieht Antimaterie aus dem Reaktor.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000002004E8.title: "SPS-Anschluss"
+	quest.42000000002004E8.title: "SPS-Port"
 	quest.42000000002004E9.quest_desc: [
 		"Beschleunigt den Ausstoß eines Antimateriereaktors.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000002004E9.title: "Hochgeladene Spule"
+	quest.42000000002004E9.title: "Hochaufgeladene Spule"
 	quest.42000000002004EA.quest_desc: [
 		"Schleudert Isotope auseinander, für die späte Chemie.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -6395,7 +6395,7 @@
 		"Wandelt Energie direkt in Wärme für einen Kessel um.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000002004EF.title: "Widerstandsheizer"
+	quest.42000000002004EF.title: "Widerstandsfähiger Heizer"
 	quest.42000000002004F0.quest_desc: [
 		"Verbrennt Holz für Wärme statt für Energie.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -6440,7 +6440,7 @@
 		"Speichert eine große Menge Energie.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.42000000002004F8.title: "Elite-Energiewürfel"
+	quest.42000000002004F8.title: "Elitärer Energiekubus"
 	quest.42000000002004F9.quest_desc: [
 		"Speichert eine mittlere Menge Energie.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -6485,7 +6485,7 @@
 		"Vereint zwei Chemikalien zu einer neuen.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
 	]
-	quest.4200000000200501.title: "Chemischer Infusor"
+	quest.4200000000200501.title: "Chemischer Injektor"
 	quest.4200000000200502.quest_desc: [
 		"Reinige Fluide oder Erze.",
 		"So: Kapitel Mekanism-Werke — Erzbrocken aus dem Sieb, dann die Fabriklinie."
@@ -6727,7 +6727,7 @@
 		"Scherbe alten Stammesgesangs — braucht einen Knochenklang.",
 		"So: Knochenklang, Amethyst und Redstone, formlos. Ergibt zwei."
 	]
-	quest.4200000000220530.title: "Geisterscherbe"
+	quest.4200000000220530.title: "Geistscherbe"
 	quest.4200000000220531.quest_desc: [
 		"Stimm Metall auf Geist — Kupfer um einen Knochenklang.",
 		"So: Kupfer um einen Knochenklang. Ergibt zwei."
@@ -6792,17 +6792,17 @@
 		"Starte das Lied des Gitters. Es wartet auf Stein oder einen Gegenstand der Echo-Stufe; Rohmetall ist Grus im Echobrecher.",
 		"So: Geisterkodex + Stammesweben. Setze Stein oder einen Gegenstand der Echo-Stufe ein. Rohmetall gehört in den Echobrecher."
 	]
-	quest.420000000022053D.title: "Gesangsbank"
+	quest.420000000022053D.title: "Liedbank"
 	quest.420000000022053E.quest_desc: [
 		"Leite Harmonien zwischen Totems.",
 		"So: vier Kupferresonatoren um Redstone. Ergibt vier."
 	]
-	quest.420000000022053E.title: "Gitterleiter"
+	quest.420000000022053E.title: "Gitterkonduktor"
 	quest.420000000022053F.quest_desc: [
 		"Summ Stufe eins — brich das Erz. Stein wird Scherben; Bruchstein wird Kies; Rohmetall wird Grus. Grusbruch dauert 4 Sekunden bei 40 Puls/s.",
 		"So: Stein + Knochenklang + Kupferresonator. Erd-Totem innerhalb von 8. Stein → Scherben; Bruchstein → Kies; Rohmetall → Grus. Vier Sekunden bei 40 Puls/s."
 	]
-	quest.420000000022053F.title: "Echobrecher"
+	quest.420000000022053F.title: "Echozermalmer"
 	quest.4200000000220540.quest_desc: [
 		"Scherbe, die den Bruch gehört hat.",
 		"So: Stein im Echobrecher (nicht Bruchstein). Stein der Quell-Stufe, oder mit Behutsamkeit berührter Stein."
@@ -6812,7 +6812,7 @@
 		"Summ Stufe zwei — stimm ein.",
 		"So: sieben Stein, eine Geisterscherbe und ein Kupferresonator."
 	]
-	quest.4200000000220541.title: "Echoabstimmung"
+	quest.4200000000220541.title: "Echoabstimmer"
 	quest.4200000000220542.quest_desc: [
 		"Echo, das einen Schlüssel fand.",
 		"So: Geisterkodex + Stammesweben. Station, Totem und Pulskosten stehen auf der Kodexseite."
@@ -6822,7 +6822,7 @@
 		"Bindestufe — knote den Geist ans Metall.",
 		"So: sieben Stein, eine Amethystscherbe und ein Kupferresonator."
 	]
-	quest.4200000000220543.title: "Echobindung"
+	quest.4200000000220543.title: "Echobinder"
 	quest.4200000000220544.quest_desc: [
 		"Echo, das nicht abrutscht.",
 		"So: Geisterkodex + Stammesweben. Station, Totem und Pulskosten stehen auf der Kodexseite."
@@ -6832,7 +6832,7 @@
 		"Neuwebestufe — ruf den Barren.",
 		"So: fünf Stein, ein Goldbarren, zwei Kupferresonatoren und eine Geisterscherbe."
 	]
-	quest.4200000000220545.title: "Echomanifest"
+	quest.4200000000220545.title: "Echomanifestierer"
 	quest.4200000000220546.quest_desc: [
 		"Metall, vom Geisterpuls ins Sein gewollt, nicht von einem Ofen.",
 		"So: Geisterkodex + Stammesweben. Station, Totem und Pulskosten stehen auf der Kodexseite."
@@ -6842,17 +6842,17 @@
 		"Behalte, was die Stämme hinterließen.",
 		"So: sieben Bretter, eine Truhe und ein Knochenklang."
 	]
-	quest.4200000000220547.title: "Ahnenversteck"
+	quest.4200000000220547.title: "Ahnenspeicher"
 	quest.4200000000220548.quest_desc: [
 		"Gewölbe, zur Mark hin verknüpft.",
 		"So: ein Ahnenversteck, vier Eisenbarren, eine Geisterscherbe, zwei Kupferresonatoren und eine Pulszelle."
 	]
-	quest.4200000000220548.title: "Tiefenversteck"
+	quest.4200000000220548.title: "Tiefspeicher"
 	quest.4200000000220549.quest_desc: [
 		"Ein ungeschriebenes Siegel, das auf einen Ritus wartet, der es füllt.",
 		"So: sieben Papier, eine Geisterscherbe und ein Knochenklang. Ergibt zwei."
 	]
-	quest.4200000000220549.title: "Leeres Siegel"
+	quest.4200000000220549.title: "Leersiegel"
 	quest.420000000022054A.quest_desc: [
 		"Siegel des Stamms des Steins.",
 		"So: ein Leeres Siegel und Erde, formlos."
@@ -6882,7 +6882,7 @@
 		"Biete Siegel an. Frag den Webstuhl.",
 		"So: fünf Stein, eine Amethystscherbe und ein Knochenklang."
 	]
-	quest.420000000022054F.title: "Ritenpodest"
+	quest.420000000022054F.title: "Ritussockel"
 	quest.4200000000220550.quest_desc: [
 		"Benutze sie mit leeren Händen und spiele den Torritus: triff die fallenden Schläge auf A, S, D, F. Erreiche 60% und sie öffnet sich; kein Puls nötig.",
 		"So: benutze die Tortrommel mit leeren Händen und spiele den Torritus: triff die fallenden Schläge auf A, S, D, F. Erreiche 60% und sie öffnet sich; kein Puls nötig. Binde zuerst einen Rückkehrkompass."
@@ -6902,7 +6902,7 @@
 		"Schneide, die Puls verbraucht.",
 		"So: zwei Manifestierte Barren, ein Knochenklang und ein Stock."
 	]
-	quest.4200000000220553.title: "Klinge der Geisterausrüstung"
+	quest.4200000000220553.title: "Geistergerätklinge"
 	quest.4200000000220554.quest_desc: [
 		"Stein aus der Mark, unter den Füßen, an einem Ort, den es nicht geben dürfte.",
 		"So: schmelze Bruchstein der Mark. Baue ihn in der Mark ab, durch eine Tortrommel."
@@ -6912,22 +6912,22 @@
 		"Geröll aus der Mark, schlicht, aber reichlich.",
 		"So: Baue Stein der Mark in der Mark ab, durch eine Tortrommel."
 	]
-	quest.4200000000220555.title: "Bruchstein der Mark"
+	quest.4200000000220555.title: "Marschbruchstein"
 	quest.4200000000220556.quest_desc: [
 		"Holz, gewachsen, wo die Sonne nicht hinkommt.",
 		"So: Fälle Bäume der Mark, durch eine Tortrommel."
 	]
-	quest.4200000000220556.title: "Stamm der Mark"
+	quest.4200000000220556.title: "Marsch-Stamm"
 	quest.4200000000220557.quest_desc: [
 		"Gesägtes Holz aus der Mark, standfest trotz seiner Herkunft.",
 		"So: Ein Stamm der Mark ergibt vier Bretter."
 	]
-	quest.4200000000220557.title: "Bretter der Mark"
+	quest.4200000000220557.title: "Marsch-Bretter"
 	quest.4200000000220558.quest_desc: [
 		"Blätter, die murmeln, auch ganz ohne Wind.",
 		"So: Bäume der Mark, durch eine Tortrommel. Schere oder Behutsamkeit behalten die Blätter."
 	]
-	quest.4200000000220558.title: "Blatt der Mark"
+	quest.4200000000220558.title: "Marschblatt"
 	quest.4200000000220559.quest_desc: [
 		"Ein Rohr, das von übrigem Geisterpuls summt.",
 		"So: wächst wild in der Mark, liegt in Schilfwehr-Kisten, und ein Ältester der Wurzelbinder handelt damit."
@@ -7281,32 +7281,32 @@
 		"Zwei Stein und das Reagenz um das Siegel; das Siegel wird zurückgegeben. Knotenwurzel neben einem Erdsiegel; 600 Puls. Zwanzig Minuten lang wachsen Feldfrüchte, Setzlinge und Stiele in den neun Chunks um das Becken schneller. Benutze die Ritustafel schleichend auf einem Ritualbecken mit diesem Siegel eingesetzt, in seinem Rituskreis (vier Sockel auf den Diagonalen, Kreide verbindet sie); der Puls wird aus dem Gitter im Umkreis von acht Blöcken gezogen.",
 		"So: zwei Stein, eine Knotenwurzel und ein Erdsiegel, formlos; das Siegel kommt zurück."
 	]
-	quest.4200000000228011.title: "Ritustafel: Grüner Segen"
+	quest.4200000000228011.title: "Ritentafel: Grüner Segen"
 	quest.4200000000228012.quest_desc: [
 		"Zwei Stein und das Reagenz um das Siegel; das Siegel wird zurückgegeben. Schilfzahn neben einem Wassersiegel; 400 Puls. Zwanzig Minuten Regen, für die Zisternen und die Feldfrüchte. Benutze die Ritustafel schleichend auf einem Ritualbecken mit diesem Siegel eingesetzt, in seinem Rituskreis (vier Sockel auf den Diagonalen, Kreide verbindet sie); der Puls wird aus dem Gitter im Umkreis von acht Blöcken gezogen.",
 		"So: zwei Stein, ein Schilfzahn und ein Wassersiegel, formlos; das Siegel kommt zurück."
 	]
-	quest.4200000000228012.title: "Ritustafel: Regenruf"
+	quest.4200000000228012.title: "Ritentafel: Regenruf"
 	quest.4200000000228013.quest_desc: [
 		"Zwei Stein und das Reagenz um das Siegel; das Siegel wird dir zurückgegeben. Sturmflügel neben einem Luftsiegel; 400 Puls. Vierzig Minuten klarer Himmel. Benutze die Tafel schleichend auf einer Ritualfeuerschale, in der dieses Siegel sitzt, in ihrem Rituskreis (vier Sockel auf den Diagonalen, Kreide verbindet sie); der Puls wird aus dem Gitter innerhalb von acht Blöcken gezogen.",
 		"So: zwei Stein, ein Sturmflügel und ein Luftsiegel, formlos; das Siegel kommt zurück."
 	]
-	quest.4200000000228013.title: "Ritustafel: Klarhimmel"
+	quest.4200000000228013.title: "Ritentafel: Aufklaren des Himmels"
 	quest.4200000000228014.quest_desc: [
 		"Zwei Stein und das Reagenz um das Siegel; das Siegel wird dir zurückgegeben. Glutherz neben einem Feuersiegel; 800 Puls. Treibt die Nacht zum nächsten Sonnenaufgang, für die ganze Welt. Benutze die Tafel schleichend auf einer Ritualfeuerschale, in der dieses Siegel sitzt, in ihrem Rituskreis (vier Sockel auf den Diagonalen, Kreide verbindet sie); der Puls wird aus dem Gitter innerhalb von acht Blöcken gezogen.",
 		"So: zwei Stein, ein Glutherz und ein Feuersiegel, formlos; das Siegel kommt zurück."
 	]
-	quest.4200000000228014.title: "Ritustafel: Morgenruf"
+	quest.4200000000228014.title: "Ritentafel: Morgenruf"
 	quest.4200000000228015.quest_desc: [
 		"Zwei Stein und das Reagenz um das Siegel; das Siegel wird dir zurückgegeben. Wächtersiegel neben einem Geistersiegel; 600 Puls. Fünfzehn Minuten ohne feindliche Erscheinungen innerhalb von vierundsechzig Blöcken. Benutze die Tafel schleichend auf einer Ritualfeuerschale, in der dieses Siegel sitzt, in ihrem Rituskreis (vier Sockel auf den Diagonalen, Kreide verbindet sie); der Puls wird aus dem Gitter innerhalb von acht Blöcken gezogen.",
 		"So: zwei Stein, ein Wächtersiegel und ein Geistersiegel, formlos; das Siegel kommt zurück."
 	]
-	quest.4200000000228015.title: "Ritustafel: Stille Nacht"
+	quest.4200000000228015.title: "Ritentafel: Stille Nacht"
 	quest.4200000000228016.quest_desc: [
 		"Zwei Stein und das Reagenz um das Siegel; das Siegel wird dir zurückgegeben. Webstuhlfaden neben einem Webstuhlsiegel; 1.200 Puls. Verbindet das nächste Totem mit einem anderen innerhalb von vierundsechzig Blöcken durch eine dreißigminütige Leylinie, die Puls zwischen ihnen leitet. Benutze die Tafel schleichend auf einer Ritualfeuerschale, in der dieses Siegel sitzt, in ihrem Rituskreis (vier Sockel auf den Diagonalen, Kreide verbindet sie); der Puls wird aus dem Gitter innerhalb von acht Blöcken gezogen.",
 		"So: zwei Stein, Webstuhlfaden und ein Webstuhlsiegel, formlos; das Siegel kommt zurück."
 	]
-	quest.4200000000228016.title: "Ritustafel: Leybindung"
+	quest.4200000000228016.title: "Ritentafel: Leybindung"
 	quest.4200000000228017.quest_desc: [
 		"Führe irgendeinen Ritus aus. Hält das Gitter um die Feuerschale zu wenig Puls, wird nichts verbraucht, und die Schale sagt es.",
 		"So: benutze schleichend eine beliebige Ritustafel auf einer Ritualfeuerschale in ihrem Rituskreis, mit passendem Siegel und Puls."
@@ -7521,7 +7521,7 @@
 		"Eine Wandleuchte, die Puls trinkt. Optional.",
 		"So: fertige den Echoleuchter und häng ihn auf. Optional."
 	]
-	quest.4200000000228041.title: "Echoleuchter"
+	quest.4200000000228041.title: "Echowandleuchte"
 	quest.4200000000228042.quest_desc: [
 		"Eine Schale Lagerfeuerlicht auf Puls. Optional.",
 		"So: fertige die Glutschale. Optional."
@@ -7621,7 +7621,7 @@
 		"Zwei Stein, eine Moosrückenschuppe und Geisterrohr um ein Geistersiegel; das Siegel wird zurückgegeben. Wirke es auf einer Feuerschale mit sitzendem Geistersiegel, in ihrem Rituskreis, für 500 Puls: alle innerhalb von zwölf Blöcken werden um zehn Herzen geheilt, gereinigt und gesegnet, und der Kreis bleibt zehn Minuten offen. Leg zuerst den Geisterüberrest eines gefallenen Vertrauten auf einen Sockel, dann kommt er ganz zurück.",
 		"So: zwei Stein, eine Moosrückenschuppe, Geisterrohr und ein Geistersiegel, formlos; das Siegel kommt zurück. Wirke es auf einer versiegelten Feuerschale in ihrem Rituskreis."
 	]
-	quest.4200000000228055.title: "Ritustafel: Heilkreis"
+	quest.4200000000228055.title: "Ritentafel: Heilkreis"
 	quest.4200000000228056.quest_desc: [
 		"Ein Manifestierter Barren, ein Knochenklang und ein Stock auf der Diagonale. Sieben Schaden, Reichweite plus eineinhalb, und ein Stoß im Sprint trifft 35 Prozent härter. Darunter steht Klinge: sie wird an den Echo-Stationen eingestuft, gibt Puls für Echo-Schläge aus und nimmt eine Totemstimme an. Sie hält einen Risshund auf Armeslänge.",
 		"So: Manifestierter Barren, Knochenklang und ein Stock auf der Diagonale. Wird an den Echo-Stationen eingestuft wie die Klinge."
@@ -7681,7 +7681,7 @@
 		"Das Relikt der Splittsänger. Ihre Geschichte endet bei der Prismenschlange, am Singenden Riss in den Kristallfeldern; gewinne die Prüfung, und der Älteste gibt dir das Relikt. Irgendwo im Inventar getragen, hält es ihren Segen auf dir, egal wie dein Ansehen steht: du brichst mehr aus Erz.",
 		"So: beende die Geschichte der Splittsänger mit ihrem Ältesten; die Prüfung ist die Prismenschlange in den Kristallfeldern."
 	]
-	quest.4200000000228061.title: "Klingender Stein"
+	quest.4200000000228061.title: "Klingerstein"
 	quest.4200000000228062.quest_desc: [
 		"Das Relikt der Wurzelbinder. Ihre Geschichte endet bei der Sumpfmatriarchin, an der Ertrunkenen Wurzel im Schilfmoor; gewinne die Prüfung, und der Älteste gibt dir das Relikt. Irgendwo im Inventar getragen, hält es ihren Segen auf dir, egal wie dein Ansehen steht: die Feldfrüchte beeilen sich um dich.",
 		"So: beende die Geschichte der Wurzelbinder mit ihrem Ältesten; die Prüfung ist die Sumpfmatriarchin im Schilfmoor."
@@ -7701,7 +7701,7 @@
 		"Das Relikt der Musterweber. Ihre Geschichte endet beim Gezeitentrommler, am Gezeitenstein im Flachwasser; gewinne die Prüfung, und der Älteste gibt sie dir. Irgendwo im Inventar getragen, hält sie ihren Segen auf dir, egal wie dein Ansehen steht: Echo-Stationen in deiner Nähe leisten das Doppelte.",
 		"So: beende die Geschichte der Musterweber bei ihrem Ältesten; die Prüfung ist der Gezeitentrommler im Flachwasser."
 	]
-	quest.4200000000228065.title: "Silent Gear"
+	quest.4200000000228065.title: "Stilles Zahnrad"
 	quest.4200000000228066.quest_desc: [
 		"Das Relikt der Koloniehüter. Ihre Geschichte endet beim Grabhügelgeist, am Grabhügelring auf den Schneefeldern; gewinne die Prüfung, und der Älteste gibt sie dir. Irgendwo im Inventar getragen, hält sie ihren Segen auf dir, egal wie dein Ansehen steht: du wirst nie gestochen.",
 		"So: beende die Geschichte der Koloniehüter bei ihrem Ältesten; die Prüfung ist der Grabhügelgeist auf den Schneefeldern."
@@ -7797,7 +7797,7 @@
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: Stein + Tischteile in JEI. Leg einen Block ein und wähl eine Variante."
 	]
-	quest.420000000023058C.title: "Steinmetztisch"
+	quest.420000000023058C.title: "Mason Table"
 	quest.420000000023058D.quest_desc: [
 		"Derselbe Trick für Holz — hundert Bretter aus einem.",
 		"So: Chipped-Zimmermannstisch in JEI. Dieselbe Idee wie der Steinmetztisch, für Holz."
@@ -7807,27 +7807,27 @@
 		"Sand zu Glas, dann Glas in jede Form, die das Licht annimmt.",
 		"So: Chipped-Werkbank in JEI (Steinmetz, Zimmermann, Glasbläser…). Leg den Block in den Tisch und wähl einen Schnitt."
 	]
-	quest.420000000023058E.title: "Glasbläser"
+	quest.420000000023058E.title: "Glassblower"
 	quest.420000000023058F.quest_desc: [
 		"Wolle und Tuch, neu gewebt — passend, für eine Plattform, die einen Webstuhl flickt.",
 		"So: Chipped-Werkbank in JEI (Steinmetz, Zimmermann, Glasbläser…). Leg den Block in den Tisch und wähl einen Schnitt."
 	]
-	quest.420000000023058F.title: "Webstuhltisch"
+	quest.420000000023058F.title: "Loom Table"
 	quest.4200000000230590.quest_desc: [
 		"Blätter, Setzlinge und wachsende Dinge, sortiert in ihre Varianten.",
 		"So: Chipped-Werkbank in JEI (Steinmetz, Zimmermann, Glasbläser…). Leg den Block in den Tisch und wähl einen Schnitt."
 	]
-	quest.4200000000230590.title: "Botanikerwerkbank"
+	quest.4200000000230590.title: "Botanist Workbench"
 	quest.4200000000230591.quest_desc: [
 		"Farbige Blöcke und seltsamerer Stein. Wähl eine Variante; die Werkbank hält den Rest.",
 		"So: Chipped-Werkbank in JEI (Steinmetz, Zimmermann, Glasbläser…). Leg den Block in den Tisch und wähl einen Schnitt."
 	]
-	quest.4200000000230591.title: "Alchemietisch"
+	quest.4200000000230591.title: "Alchemy Bench"
 	quest.4200000000230592.quest_desc: [
 		"Metall und Blöcke mit Maschinenfront, nach Geschmack geschnitten.",
 		"So: Chipped-Werkbank in JEI (Steinmetz, Zimmermann, Glasbläser…). Leg den Block in den Tisch und wähl einen Schnitt."
 	]
-	quest.4200000000230592.title: "Basteltisch"
+	quest.4200000000230592.title: "Tinkering Table"
 	quest.4200000000230593.quest_desc: [
 		"Gib einen Block in den Steinmetztisch und wähl aus der Wand der Varianten.",
 		"So: vier Stein im Quadrat, oder die Steinsäge."
@@ -7898,27 +7898,27 @@
 		"Schneide einen Rahmen, dann kleide ihn in jeden Block. Eine Form, jede Haut.",
 		"So: ein Eisenbarren über drei gerahmten Würfeln. Schneidet gerahmte Blöcke."
 	]
-	quest.42000000002405A0.title: "Rahmensäge"
+	quest.42000000002405A0.title: "Framing Saw"
 	quest.42000000002405A1.quest_desc: [
 		"Ein blanker Würfel, der auf einen Tarnblock wartet.",
 		"So: Rahmensäge, dann gerahmter Würfel/Stufe/Treppe. Tarnung ist Rechtsklick mit einem Block."
 	]
-	quest.42000000002405A1.title: "Gerahmter Würfel"
+	quest.42000000002405A1.title: "Framed Cube"
 	quest.42000000002405A2.quest_desc: [
 		"Ein halber Rahmen; doppelt so viele Optionen.",
 		"So: Rahmensäge, dann gerahmter Würfel/Stufe/Treppe. Tarnung ist Rechtsklick mit einem Block."
 	]
-	quest.42000000002405A2.title: "Gerahmte Stufe"
+	quest.42000000002405A2.title: "Framed Slab"
 	quest.42000000002405A3.quest_desc: [
 		"Stufen, die die Wand anziehen, in der sie sitzen.",
 		"So: Rahmensäge, dann gerahmter Würfel/Stufe/Treppe. Tarnung ist Rechtsklick mit einem Block."
 	]
-	quest.42000000002405A3.title: "Gerahmte Treppe"
+	quest.42000000002405A3.title: "Framed Stairs"
 	quest.42000000002405A4.quest_desc: [
 		"Für Dächer und Dachlinien, die dir die Leere nie gegeben hat.",
 		"So: Rahmensäge, dann gerahmter Würfel/Stufe/Treppe. Tarnung ist Rechtsklick mit einem Block."
 	]
-	quest.42000000002405A4.title: "Gerahmte Schräge"
+	quest.42000000002405A4.title: "Framed Slope"
 	quest.42000000002405A5.quest_desc: [
 		"Die Randgänger überspannten die Leere mit weniger. Erreich die nächste Plattform mit Stil.",
 		"So: Macaw-Brücken aus dem passenden Stein/Holz in JEI."
@@ -7953,17 +7953,17 @@
 		"Eine Schwelle, die in der Wand verschwindet.",
 		"So: Rahmensäge, dann gerahmter Würfel/Stufe/Treppe. Tarnung ist Rechtsklick mit einem Block."
 	]
-	quest.42000000002405AB.title: "Gerahmte Tür"
+	quest.42000000002405AB.title: "Framed Door"
 	quest.42000000002405AC.quest_desc: [
 		"Dünne Hülle; volle Tarnung.",
 		"So: Rahmensäge, dann gerahmter Würfel/Stufe/Treppe. Tarnung ist Rechtsklick mit einem Block."
 	]
-	quest.42000000002405AC.title: "Gerahmte Platte"
+	quest.42000000002405AC.title: "Framed Panel"
 	quest.42000000002405AD.quest_desc: [
 		"Ein Randgeländer, das du nach Geschmack kleidest.",
 		"So: Rahmensäge, dann gerahmter Würfel/Stufe/Treppe. Tarnung ist Rechtsklick mit einem Block."
 	]
-	quest.42000000002405AD.title: "Gerahmter Zaun"
+	quest.42000000002405AD.title: "Framed Fence"
 	quest.42000000002405AE.quest_desc: [
 		"Grau und ehrlich, wie der Splitt, aus dem sie stammt.",
 		"So: Macaw-Brücken aus dem passenden Stein/Holz in JEI."
@@ -7974,7 +7974,7 @@
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: Fackel + Eisennuggets. Erste Fertigung der Hütereien."
 	]
-	quest.42000000002505AF.title: "Wandleuchter"
+	quest.42000000002505AF.title: "Wandfackel"
 	quest.42000000002505B0.quest_desc: [
 		"Fallender Sand. Die einzige ehrliche Uhr vor dem Uhr-Strang.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
@@ -7984,7 +7984,7 @@
 		"Tropfe eine Flüssigkeit aus einem Block. Klein; seltsam befriedigend.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505B1.title: "Zapfhahn"
+	quest.42000000002505B1.title: "Wasserhahn"
 	quest.42000000002505B2.quest_desc: [
 		"Dreh sie von Hand. Die Trommelherzen haben auch irgendwo angefangen.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
@@ -7994,7 +7994,7 @@
 		"Zeig etwas her. Eine Marke, eine Seite, eine Trophäe.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505B3.title: "Gegenstandsbord"
+	quest.42000000002505B3.title: "Regal"
 	quest.42000000002505B4.quest_desc: [
 		"Ein Sack, der Säcke hält. Das Durcheinander der Bergung, aufgeräumt.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
@@ -8009,12 +8009,12 @@
 		"Heft eine Seite fest, wo der ganze Clowder sie liest.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505B6.title: "Anschlagbrett"
+	quest.42000000002505B6.title: "Schwarzes Brett"
 	quest.42000000002505B7.quest_desc: [
 		"Ein Topf mit Ambitionen. Zieh ein wenig, wo die Plattform dünn ist.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505B7.title: "Pflanzkübel"
+	quest.42000000002505B7.title: "Vase"
 	quest.42000000002505B8.quest_desc: [
 		"Heb das Spindel-Webstuhlfragment dorthin, wo man es bewundern kann.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
@@ -8039,12 +8039,12 @@
 		"Häng die Hängematte zwischen zwei Pfosten, über den Abgrund, und wag es.",
 		"So: Schnur und ein Eisenbarren. Stell zwei hin, dann häng die Hängematte auf."
 	]
-	quest.42000000002505BC.title: "Seil und Nagel"
+	quest.42000000002505BC.title: "Seil und Nägel"
 	quest.42000000002505BD.quest_desc: [
 		"Eine ruhigere Flamme für die langen Nächte der Plattform.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505BD.title: "Kerzenhalter"
+	quest.42000000002505BD.title: "Kerzenständer"
 	quest.42000000002505BE.quest_desc: [
 		"Klettere, häng dich dran oder bau eine Brücke. Die Randgänger schworen darauf.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
@@ -8054,12 +8054,12 @@
 		"Hol das Seil rauf und runter, ganz nach Redstone-Laune.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505BF.title: "Rollenblock"
+	quest.42000000002505BF.title: "Pulley Block"
 	quest.42000000002505C0.quest_desc: [
 		"Fall darauf, und die Leere vergisst, dich zu strafen.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505C0.title: "Federblock"
+	quest.42000000002505C0.title: "Feather Block"
 	quest.42000000002505C1.quest_desc: [
 		"Kreide einen Plan an, über den das ganze Clowder streiten kann.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
@@ -8069,13 +8069,13 @@
 		"Trag ein kleines Ding, das lieber nicht von dir getragen würde.",
 		"So: Supplementaries-Fertigung in JEI (Wandleuchter, Sack, Tresor, Seil…). Die Hütereien nennen die Station."
 	]
-	quest.42000000002505C2.title: "Käfig"
+	quest.42000000002505C2.title: "Mobkäfig"
 	quest.42000000002605C3.quest_desc: [
 		"Der erste Draht. Der Puls, den die Trommelherzen hielten, hat jetzt irgendwohin zu gehen.",
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: walze Kupferbleche in einem Walzwerk. Das aktuelle Kapitel beginnt hier."
 	]
-	quest.42000000002605C3.title: "Kupferdraht"
+	quest.42000000002605C3.title: "Kupferkabel"
 	quest.42000000002605C4.quest_desc: [
 		"Rotation auf der einen Seite, Forge-Energie auf der anderen. Zwei Stränge geben sich die Hand.",
 		"So: Create Crafts & Additions — Kupferdraht aus dem Walzwerk, dann Verbinder und Motor."
@@ -8105,7 +8105,7 @@
 		"Verzaubere ohne den Aberglauben des Tisches. Fütter ihn mit Erfahrung, nimm dir Absicht.",
 		"So: Create Enchantment Industry nach einem Lohenbrenner. JEI nennt den Drucker und den Erfahrungseimer."
 	]
-	quest.42000000002605C9.title: "Lohenverzauberer"
+	quest.42000000002605C9.title: "Lohen-Verzaubrerer"
 	quest.42000000002605CA.quest_desc: [
 		"Flüssige Übung, mitgenommen. Die Hüter hätten das vulgär und nützlich gefunden.",
 		"So: Create Enchantment Industry nach einem Lohenbrenner. JEI nennt den Drucker und den Erfahrungseimer."
@@ -8120,7 +8120,7 @@
 		"Lava und Hitze zu Energie. Eine Brücke, nicht das Summen selbst.",
 		"So: Osmium + Ofen + Kupfer. Der erste Mekanism-Generator."
 	]
-	quest.42000000002605CC.title: "Wärmeerzeuger"
+	quest.42000000002605CC.title: "Wärmegenerator"
 	quest.42000000002605CD.quest_desc: [
 		"Auf einer Plattform, die nur Himmel ist, ist die Sonne die eine Ressource, die niemand rationiert.",
 		"So: Mekanism-Generatoren nach der Linie Mekanism-Werke. Der Wärmeerzeuger ist das erste Rezept."
@@ -8140,7 +8140,7 @@
 		"Späte Energie für ein Clowder, das tief in Mekanism eingestiegen ist.",
 		"So: Mekanism-Generatoren nach der Linie Mekanism-Werke. Der Wärmeerzeuger ist das erste Rezept."
 	]
-	quest.42000000002605D0.title: "Gasverbrennungsgenerator"
+	quest.42000000002605D0.title: "Gasverbrennender Generator"
 	quest.42000000002605D1.quest_desc: [
 		"Der digitale Webstuhl, in deiner Tasche. Neuwebe von überall auf der Plattform.",
 		"So: Drahtlosterminal nach einem AE2-Netz und einem geladenen Drahtlos-Kit. JEI nennt das Rezept."
@@ -8155,7 +8155,7 @@
 		"Für dann, wenn der Kupferdraht nicht den ganzen Puls tragen kann.",
 		"So: Create Crafts & Additions — Kupferdraht aus dem Walzwerk, dann Verbinder und Motor."
 	]
-	quest.42000000002605D3.title: "Großer Verbinder"
+	quest.42000000002605D3.title: "Hochspannungsverbinder"
 	quest.42000000002605D4.quest_desc: [
 		"Ein Kuchen, der dich eine Stufe hebt. Sag es nicht der Küchenlinie.",
 		"So: Create Enchantment Industry nach einem Lohenbrenner. JEI nennt den Drucker und den Erfahrungseimer."
@@ -8419,37 +8419,37 @@
 		"Wildes Gysahl wächst im Schilfmoor, in der Steppe und im Hochland, am dichtesten im Moor. Beim Pflücken fallen auch Samen, und Blatt der Mark oder Gras, mit einer Hacke gebrochen, gibt mehr her. Pflanze die Samen zu Hause auf Ackerboden.",
 		"So: pflücke wildes Gysahl in der Mark (das Schilfmoor ist am dichtesten). Beim Pflücken fallen auch Samen; pflanze sie zu Hause auf Ackerboden."
 	]
-	quest.42000000002805E4.title: "Gysahl-Grün"
+	quest.42000000002805E4.title: "Gysahl Green"
 	quest.42000000002805E5.quest_desc: [
 		"Ein Buch und ein Gysahl-Blatt. Benutze ihn überall: seine Seiten listen Farbe, Grad, Klasse, Rennsiege und die letzte Nuss jedes deiner Vögel.",
 		"So: ein Buch und ein Gysahl. Benutze ihn überall; seine Seiten listen deine eigenen Vögel."
 	]
-	quest.42000000002805E5.title: "Chocobo-Almanach"
+	quest.42000000002805E5.title: "Chocobo Almanac"
 	quest.42000000002805E6.quest_desc: [
 		"Füttere Gysahl, um ein wildes Gelbes zu zähmen. Fertige einen Sattel aus Leder, Faden und Eisen, dann reite. Sprinten macht einen Satz; lass nach, um Ausdauer zu holen.",
 		"So: Leder, Faden und Eisen. Zähme ein wildes Gelbes mit Gysahl und sattle es dann."
 	]
-	quest.42000000002805E6.title: "Chocobo-Sattel"
+	quest.42000000002805E6.title: "Chocobo Saddle"
 	quest.42000000002805E7.quest_desc: [
 		"Goldklumpen um eine Uhr, mit einem Gysahl. Aufgezogen bringt sie dich zum Schnurrhaarwind und zurück. Wenn du die Mark durchwandert hast, steht Esther auch in der Clowder-Halle: reite einen gesattelten Vogel zu ihr, oder frag den Führer vom Schnurrhaarwind.",
 		"So: Goldklumpen um eine Uhr, mit einem Gysahl. Benutze sie, um dich zum Schnurrhaarwind aufzuziehen und zurück; ein gesattelter Vogel kommt mit."
 	]
-	quest.42000000002805E7.title: "Chocobo-Taschenuhr"
+	quest.42000000002805E7.title: "Chocobo Pocketwatch"
 	quest.42000000002805E8.quest_desc: [
 		"Ein Köder in der Hand lockt wilde Vögel an und zeichnet sie über ein Feld hinweg nach.",
 		"So: fertige den Köder. Halte ihn, um die Gelben der Mark zu finden."
 	]
-	quest.42000000002805E8.title: "Chocobo-Köder"
+	quest.42000000002805E8.title: "Chocobo Lure"
 	quest.42000000002805E9.quest_desc: [
 		"Pflanze Gysahl-Samen auf Ackerboden. Ein Beet zu Hause ist der Anfang der Farmlinie.",
 		"So: wildes Gysahl pflücken lässt Samen fallen, und Gras und Blatt der Mark, mit einer Hacke gebrochen, auch. Pflanze auf Ackerboden."
 	]
-	quest.42000000002805E9.title: "Gysahl-Samen"
+	quest.42000000002805E9.title: "Gysahl Seeds"
 	quest.42000000002805EA.quest_desc: [
 		"Füttere zwei Erwachsene unterschiedlichen Geschlechts mit einer Carob-Nuss. Zwei Gelbe mit Grad Gut oder besser plus Carob können als Grün oder Blau schlüpfen. Jedes Elternteil braucht 5 erste Plätze in Klasse C; 16 zusammen machen die Farbe sicher. Ein Grün mit Grad Großartig und ein Blau mit Grad Großartig, jedes mit 8 ersten Plätzen der Klasse B, schlüpfen als Schwarz (ein Fehlschlag ist Weiß; 24 zusammen für einen sicheren Wurf).",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Carob. Klasse-A-Rennen zahlen es auch aus."
 	]
-	quest.42000000002805EA.title: "Carob-Nuss"
+	quest.42000000002805EA.title: "Carob Nut"
 	quest.42000000002805EB.quest_desc: [
 		"Ein Grünzeug auf halber Leiter. Trainiere Tempo, Ausdauer, Intelligenz oder Kooperation; der Vogel wird von jeder Sorte satt.",
 		"So: Weiser Wynn am Schnurrhaarwind."
@@ -8464,7 +8464,7 @@
 		"Gold schlüpft nie ohne Zeio. Ein Schwarz mit Grad Wundervoll plus ein Gelb mit Grad Wundervoll, jedes mit 10 ersten Plätzen in Klasse A (32 zusammen für einen sicheren Wurf).",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Zeio. Klasse-S-Rennen zahlen es selten aus."
 	]
-	quest.42000000002805ED.title: "Zeio-Nuss"
+	quest.42000000002805ED.title: "Zeio Nut"
 	quest.42000000002805EE.quest_desc: [
 		"GP, gewonnen auf der Bahn. Die Stände am Platz rechnen alles in GP ab.",
 		"So: lande unter den ersten drei eines Laufs am Schnurrhaarwind. Reite einen gesattelten Vogel zu Esther, um mitzumachen."
@@ -8474,7 +8474,7 @@
 		"Die erste Paarungsnuss. Das Talent folgt der Nuss; die Farbe folgt den Eltern, außer wenn Carob oder Zeio dabei ist.",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Pepio. Ein Klasse-C-Sieg kann es auch auszahlen."
 	]
-	quest.42000000002805EF.title: "Pepio-Nuss"
+	quest.42000000002805EF.title: "Pepio Nut"
 	quest.42000000002805F0.quest_desc: [
 		"Zwei Gysahl und Knochenmehl. Die erste Stufe über dem schlichten Grünzeug.",
 		"So: formlos — zwei Gysahl und Knochenmehl."
@@ -8504,22 +8504,22 @@
 		"Eine mittlere Nuss. Freiwillig.",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Luchile."
 	]
-	quest.42000000002805F5.title: "Luchile-Nuss"
+	quest.42000000002805F5.title: "Luchile Nut"
 	quest.42000000002805F6.quest_desc: [
 		"Eine mittlere Nuss. Freiwillig.",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Saraha."
 	]
-	quest.42000000002805F6.title: "Saraha-Nuss"
+	quest.42000000002805F6.title: "Saraha Nut"
 	quest.42000000002805F7.quest_desc: [
 		"Eine mittlere Nuss. Freiwillig.",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Lasan."
 	]
-	quest.42000000002805F7.title: "Lasan-Nuss"
+	quest.42000000002805F7.title: "Lasan Nut"
 	quest.42000000002805F8.quest_desc: [
 		"Eine Paarungsnuss der mittleren Spätphase. Freiwillig. Bilo der Nusswart verkauft sie.",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Pram."
 	]
-	quest.42000000002805F8.title: "Pram-Nuss"
+	quest.42000000002805F8.title: "Pram Nut"
 	quest.42000000002805F9.quest_desc: [
 		"Der Jahrmarktsstand am Schnurrhaarwind verkauft Feuerwerk, Leinen, Taschenuhren und den Chocobo-Almanach für GP.",
 		"So: Papier plus Schießpulver. Optionaler Knall."
@@ -8529,38 +8529,38 @@
 		"Eine späte Paarungsnuss. Freiwillig.",
 		"So: Bilo der Nusswart am Schnurrhaarwind verkauft Porov."
 	]
-	quest.42000000002805FA.title: "Porov-Nuss"
+	quest.42000000002805FA.title: "Porov Nut"
 	quest.42000000002905FB.quest_desc: [
 		"Die Leere hat nie Pam's-Büsche wachsen lassen. Siebe Erde mit einem Schnurnetz. Brich den Garten für trockene Samen — Chili, Mais, Kaktusfrucht.",
 		"Die Neun Stämme haben Vorräte für den nächsten Clowder hinterlegt. Nutze einen Hütervorrat, um zufällige Vorräte auszupacken, oder fertige aus vier kleinen einen mittleren und aus drei mittleren einen großen. Größere Siegel haben mehr Würfe und einen breiteren Vorrat; getrennt öffnen gibt mehr Grundvorräte. Darin verstecken sich keine Maschinen und keine Fortschrittsmarken, aber jedes Siegel hat eine kleine Chance auf eine Fadenscherbe und eine sehr kleine auf einen ganzen Rückkehrfaden; größere Siegel haben bessere Chancen.",
 		"So: siebe Erde mit einem Schnurnetz oder besser (Ex Deorum oder Leerenwebstuhl)."
 	]
-	quest.42000000002905FB.title: "Trockener Garten"
+	quest.42000000002905FB.title: "Arid Garden"
 	quest.42000000002905FC.quest_desc: [
 		"Kaltkulturen aus derselben Erde. Brich den Busch; pflanze, was du brauchst.",
 		"So: siebe Erde mit einem Schnurnetz oder besser."
 	]
-	quest.42000000002905FC.title: "Frostgarten"
+	quest.42000000002905FC.title: "Frost Garden"
 	quest.42000000002905FD.quest_desc: [
 		"Kulturen unterm Laub. Dasselbe Sieb, anderer Busch.",
 		"So: siebe Erde mit einem Schnurnetz oder besser."
 	]
-	quest.42000000002905FD.title: "Schattengarten"
+	quest.42000000002905FD.title: "Shaded Garden"
 	quest.42000000002905FE.quest_desc: [
 		"Nasskulturen. Reis und der Rest der moorgesinnten Samen leben hier.",
 		"So: siebe Erde mit einem Schnurnetz oder besser."
 	]
-	quest.42000000002905FE.title: "Durchnässter Garten"
+	quest.42000000002905FE.title: "Soggy Garden"
 	quest.42000000002905FF.quest_desc: [
 		"Warmkulturen. Behalte einen Busch in einer Kiste; sie breiten sich trotzdem aus, wenn du sie pflanzt.",
 		"So: siebe Erde mit einem Schnurnetz oder besser."
 	]
-	quest.42000000002905FF.title: "Tropischer Garten"
+	quest.42000000002905FF.title: "Tropical Garden"
 	quest.4200000000290600.quest_desc: [
 		"Der letzte der sechs. Jede HarvestCraft-Saat auf der Plattform beginnt als einer dieser Büsche.",
 		"So: siebe Erde mit einem Schnurnetz oder besser."
 	]
-	quest.4200000000290600.title: "Windiger Garten"
+	quest.4200000000290600.title: "Windy Garden"
 	quest.4200000000290601.quest_desc: [
 		"Nicht das Schneidebrett von Farmer's Delight. Kupfer, ein Stock und ein Brett. Bereite Obst und Gemüse vor, bevor sie in den Topf kommen.",
 		"So: Kupfer, ein Stock und ein Brett. Nicht das Schneidebrett von Farmer's Delight."
@@ -8580,22 +8580,22 @@
 		"Soßen und Reduktionen. Kupfer und ein Stock. Stell ihn neben den Topf.",
 		"So: Kupfer und ein Stock."
 	]
-	quest.4200000000290604.title: "Stieltopf"
+	quest.4200000000290604.title: "Saucepan"
 	quest.4200000000290605.quest_desc: [
 		"Terrakotta-Ring. Kuchen, Brote und alles, was eine Ofenform will.",
 		"So: acht Terrakotta um eine leere Mitte."
 	]
-	quest.4200000000290605.title: "Backform"
+	quest.4200000000290605.title: "Bakeware"
 	quest.4200000000290606.quest_desc: [
 		"Bretter und ein Stock. Rührteige, Teige, Salate. Die stille Station.",
 		"So: Bretter und ein Stock."
 	]
-	quest.4200000000290606.title: "Rührschüssel"
+	quest.4200000000290606.title: "Mixing Bowl"
 	quest.4200000000290607.quest_desc: [
 		"Terrakotta. Obst rein, Saft raus. Stell ihn zu einem Baum, nicht zu einem Beet.",
 		"So: Terrakotta. Vier im T."
 	]
-	quest.4200000000290607.title: "Entsafter"
+	quest.4200000000290607.title: "Juicer"
 	quest.4200000000290608.quest_desc: [
 		"Stöcke und ein Stamm. Drück den Teig flach. Die Backform wartet.",
 		"So: Stöcke links und rechts von einem Stamm."
@@ -8605,37 +8605,37 @@
 		"Andesit-Kiesel aus einem Feuersteinsieb, dann ein Stock. Mehl, Gewürze, Pasten.",
 		"So: Andesit (Kiesel aus Erde oder Kies im Feuersteinsieb) und ein Stock."
 	]
-	quest.4200000000290609.title: "Mahlwerk"
+	quest.4200000000290609.title: "Grinder"
 	quest.420000000029060A.quest_desc: [
 		"Ein Wassereimer, geteilt in acht. Die meisten Rezepte wollen das, nicht einen Vanilla-Eimer.",
 		"So: ein Wassereimer → acht Süßwasser."
 	]
-	quest.420000000029060A.title: "Süßwasser"
+	quest.420000000029060A.title: "Fresh Water"
 	quest.420000000029060B.quest_desc: [
 		"Keine Kühe auf der Plattform. Kokosnuss (Erde mit Eisennetz) plus Süßwasser, oder teile später einen Milcheimer.",
 		"So: Kokosnuss (Erde mit Eisennetz) plus Süßwasser, oder teile einen Milcheimer."
 	]
-	quest.420000000029060B.title: "Frischmilch"
+	quest.420000000029060B.title: "Fresh Milk"
 	quest.420000000029060C.quest_desc: [
 		"Wasser in einem Topf, oder ein Mahlgang. Fast jedes herzhafte Rezept will es.",
 		"So: Topf plus Wasser oder Süßwasser. Der Topf kommt zurück."
 	]
-	quest.420000000029060C.title: "Salz"
+	quest.420000000029060C.title: "Salt"
 	quest.420000000029060D.quest_desc: [
 		"Weizen durch das Mahlwerk. Hier fängt der Teig an.",
 		"So: Mahlwerk plus Weizen (oder eine andere Mehlpflanze). Das Mahlwerk kommt zurück."
 	]
-	quest.420000000029060D.title: "Mehl"
+	quest.420000000029060D.title: "Flour"
 	quest.420000000029060E.quest_desc: [
 		"Mehl, Salz und Süßwasser. Kuchen und Brote teilen sich diesen Klumpen.",
 		"So: Rührschüssel, Mehl, Wasser, Salz."
 	]
-	quest.420000000029060E.title: "Teig"
+	quest.420000000029060E.title: "Dough"
 	quest.420000000029060F.quest_desc: [
 		"Knochen oder Gemüse im Topf. Suppen wollen eine Flasche davon, keine vage Brühe.",
 		"So: Topf plus ein Knochen (Plattformhüter verkaufen Knochen) oder Gemüsereste."
 	]
-	quest.420000000029060F.title: "Brühe"
+	quest.420000000029060F.title: "Stock"
 	quest.4200000000290610.quest_desc: [
 		"Erde mit Eisennetz. Zieh ihn auf der Plattform; die Vanilla-Eiche lässt keine Äpfel von Pam's fallen.",
 		"So: siebe Erde mit einem Eisennetz für Küchen-Setzlinge, dann zieh die Frucht."
@@ -8675,12 +8675,12 @@
 		"Entsafter plus gemischtes Obst. Ein Getränk der Plattform, das kein Melonensaft ist.",
 		"So: Entsafter und gemischtes Obst."
 	]
-	quest.4200000000290617.title: "Fruchtpunsch"
+	quest.4200000000290617.title: "Fruit Punch"
 	quest.4200000000290618.quest_desc: [
 		"Pfanne, Brot, Käse. Ein schnelles Mittagessen, während die Bäume wachsen.",
 		"So: Pfanne, Brot, Butter und Käse — alles aus Süßwasser, Kokosmilch und Mehl."
 	]
-	quest.4200000000290618.title: "Käsetoast"
+	quest.4200000000290618.title: "Grilled Cheese"
 	quest.4200000000290619.quest_desc: [
 		"Trockene Chilis, Tomate, Zwiebel, Bohne, Gewürzblatt und Fleisch oder Seidentofu. Food Extended fängt an, sich zu lohnen.",
 		"So: Topf, trockene Chili, Tomate, Zwiebel, Bohne, Gewürzblatt und Fleisch oder Seidentofu."
@@ -8695,7 +8695,7 @@
 		"Teig, Soße, Fleisch. Backform. Eine ganze HarvestCraft-Mahlzeit.",
 		"So: Backform, Teig, Tomate, Käse, Peperoni (Speck vom Schwein, oder Tofu-Speck aus Ahorn + Soja)."
 	]
-	quest.420000000029061B.title: "Peperoni-Pizza"
+	quest.420000000029061B.title: "Pepperoni Pizza"
 	quest.420000000029061C.quest_desc: [
 		"Reis aus dem Nassgarten, Karotte, Zwiebel, Erbsen und ein Ei — Seidentofu springt ein, bis es Hühner gibt.",
 		"So: Pfanne, Reis aus dem Nassgarten, Karotte, Zwiebel, Erbsen und ein Ei — Seidentofu zählt als Ei."
@@ -8705,7 +8705,7 @@
 		"Teeblatt und Gewürzblatt im Topf. Schattengarten und Nassgarten decken beides ab.",
 		"So: Topf, Teeblatt und Gewürzblatt. Der Schattengarten lässt Tee und Gewürz fallen."
 	]
-	quest.420000000029061D.title: "Grüner Tee"
+	quest.420000000029061D.title: "Green Tea"
 	quest.420000000029061E.quest_desc: [
 		"Öl und würzige Frucht. Freiwilliger Fang am Eisennetz.",
 		"So: siebe Erde mit einem Eisennetz für Küchen-Setzlinge, dann zieh die Frucht."
@@ -8730,7 +8730,7 @@
 		"Frittierfett. Freiwillige Grundzutat.",
 		"So: presse Samen oder Oliven in JEI. Freiwillige Grundzutat."
 	]
-	quest.4200000000290622.title: "Speiseöl"
+	quest.4200000000290622.title: "Cooking Oil"
 	quest.4200000000290623.quest_desc: [
 		"Milch und Salz. Freiwillige Grundzutat.",
 		"So: Topf und Milch (Kokosmilch aus Süßwasser geht)."
@@ -8745,7 +8745,7 @@
 		"Schneidebrett, gemischtes Obst. Freiwillig.",
 		"So: Schneidebrett und gemischtes Obst. Freiwillig."
 	]
-	quest.4200000000290625.title: "Obstsalat"
+	quest.4200000000290625.title: "Fruit Salad"
 	quest.4200000000290626.quest_desc: [
 		"Pasta-Abend. Freiwillig.",
 		"So: Gärten und Obstbäume liefern die Zutaten. Soja-Tofu ersetzt Fleisch und Ei. JEI nennt die Station."
@@ -8755,7 +8755,7 @@
 		"Frühstück zum Angeben. Freiwillig.",
 		"So: Gärten und Obstbäume liefern die Zutaten. Soja-Tofu ersetzt Fleisch und Ei. JEI nennt die Station."
 	]
-	quest.4200000000290627.title: "Speckpfannkuchen"
+	quest.4200000000290627.title: "Bacon Pancakes"
 	quest.4200000000290628.quest_desc: [
 		"Erde mit Eisennetz für einen Avocado-Setzling, dann Pfanne, Toast, Salz, Knoblauch, Gewürzblatt.",
 		"So: Avocado-Setzling vom Eisennetz, dann Pfanne mit Toast, Salz, Knoblauch, Gewürzblatt."
@@ -8770,7 +8770,7 @@
 		"Entsafter, Äpfel. Freiwillig.",
 		"So: Entsafter und Pam's Äpfel. Freiwillig."
 	]
-	quest.420000000029062A.title: "Apfelsaft"
+	quest.420000000029062A.title: "Apple Juice"
 	quest.420000000029062B.quest_desc: [
 		"Pfanne, Brot und Butter. Freiwillig.",
 		"So: Pfanne, Brot und Butter. Freiwillig."
@@ -8792,13 +8792,13 @@
 		"Glasscheibe und Stöcke. Schau eine Pflanze an, um Wachstum, Ertrag und Stärke zu lesen, ohne sie zu ernten.",
 		"So: Glasscheibe zwischen Stöcken, dann ein Stockgriff. Schau eine gepflanzte Pflanze an."
 	]
-	quest.42000000002A062E.title: "Lupe"
+	quest.42000000002A062E.title: "Magnifying Glass"
 	quest.42000000002A062F.quest_desc: [
 		"Glas, Steinstufe, Bretter, Stöcke. Leg einen Samen mit dem Tagebuch hinein. Die Zucht wird sichtbar.",
 		"Fruchtbarkeit ist der Wert, der die Kreuzung antreibt: ein frischer Samen steht bei 1 von 10, und jeder Punkt hebt die Chance, dass eine Pflanze als Elternteil gewählt wird. Analysiere, pflanze die besten neu, und die Kreuzungen kommen schneller.",
 		"So: Glasscheiben, Steinstufe, Bretter und Stöcke. Setze das Tagebuch ein, dann einen Samen."
 	]
-	quest.42000000002A062F.title: "Samenanalysator"
+	quest.42000000002A062F.title: "Seed Analyzer"
 	quest.42000000002A0630.quest_desc: [
 		"Unkraut ist in diesem Paket aus, aber die Harke räumt trotzdem einen Stock ab. Trag trotzdem eine bei dir.",
 		"So: Holzzaun über einem Stock. Unkraut ist aus; sie räumt trotzdem einen Stock ab."
@@ -8823,7 +8823,7 @@
 		"Stabilere Stöcke. Dieselben Pflanzregeln, weniger Ärger, wenn du sie anstößt.",
 		"So: zwei Eisenklumpen in einer Spalte ergeben acht."
 	]
-	quest.42000000002A0634.title: "Eiserne Anbaustöcke"
+	quest.42000000002A0634.title: "Iron Crop Sticks"
 	quest.42000000002A0635.quest_desc: [
 		"Die bessere Harke. Immer noch eine Gewohnheit, auch ohne Unkraut.",
 		"So: Eisengitter über einem Stock."
@@ -8833,22 +8833,22 @@
 		"Hält Wasser für die Kanäle. Eine Farm auf der Plattform, die nicht jeden Morgen Eimer schleppt.",
 		"So: Bretter. Hält Wasser für die Kanäle."
 	]
-	quest.42000000002A0636.title: "Bewässerungstank"
+	quest.42000000002A0636.title: "Irrigation Tank"
 	quest.42000000002A0637.quest_desc: [
 		"Leit das Wasser vom Tank die Reihe entlang. Die Pflanzen trinken aus dem Kanal, nicht von dir.",
 		"So: formlos aus einem Tank — ein Tank wird zu acht Kanälen."
 	]
-	quest.42000000002A0637.title: "Bewässerungskanal"
+	quest.42000000002A0637.title: "Irrigation Channel"
 	quest.42000000002A0638.quest_desc: [
 		"Stoppe und starte eine Leitung, ohne den Tank zu zerstören.",
 		"So: Eisengitter, roter Farbstoff und ein Eisenbarren. Stoppe und starte eine Leitung, ohne den Tank zu zerstören."
 	]
-	quest.42000000002A0638.title: "Kanalventil"
+	quest.42000000002A0638.title: "Channel Valve"
 	quest.42000000002A0639.quest_desc: [
 		"Regen im Quadrat. Setz ihn auf einen Kanal über den Stöcken.",
 		"So: setz ihn auf einen Kanal über den Stöcken. JEI nennt das Rezept."
 	]
-	quest.42000000002A0639.title: "Beregner"
+	quest.42000000002A0639.title: "Sprinkler"
 	quest.42000000002A063A.quest_desc: [
 		"Deck einen Kanal ab, damit du die Reihe entlanggehen kannst.",
 		"So: deck einen Kanal ab, damit du die Reihe entlanggehen kannst."
@@ -8858,12 +8858,12 @@
 		"Lies den Raum ab. Licht, Feuchte, der Grund, warum eine Pflanze stockte.",
 		"So: herstellen, dann im Raum platzieren, um Licht und Feuchte zu lesen."
 	]
-	quest.42000000002A063B.title: "Gewächshausmonitor"
+	quest.42000000002A063B.title: "Greenhouse Monitor"
 	quest.42000000002A063C.quest_desc: [
 		"Späte Stöcke. Feuerfest, stur, für Pflanzen, die dem Holz zu viel abverlangen. Zwei benachbarte reife Pflanzen können sich kreuzen.",
 		"So: zwei Obsidian in einer Spalte ergeben acht. Zwei benachbarte reife Pflanzen können sich kreuzen."
 	]
-	quest.42000000002A063C.title: "Obsidian-Anbaustöcke"
+	quest.42000000002A063C.title: "Obsidian Crop Sticks"
 	quest.42000000002A063D.quest_desc: [
 		"Ein Kanal, den du begehen kannst. Freiwillig.",
 		"So: ein Kanal, den du begehen kannst. Freiwillig."
@@ -8883,7 +8883,7 @@
 		"Brennstoff aus einer Pflanze. Freiwillig.",
 		"So: hölzerne Anbaustöcke aus Stöcken; das Tagebuch ist ein Buch und Feder plus Samen; der Analysator ist Glas und Holz. Auf Ackerboden pflanzen."
 	]
-	quest.42000000002A0640.title: "Kohlekiesel"
+	quest.42000000002A0640.title: "Coal Pebble"
 	quest.42000000002A0641.quest_desc: [
 		"Späte Erzpflanze. Freiwillig.",
 		"So: hölzerne Anbaustöcke aus Stöcken; das Tagebuch ist ein Buch und Feder plus Samen; der Analysator ist Glas und Holz. Auf Ackerboden pflanzen."
@@ -8898,12 +8898,12 @@
 		"Spitzen-Erzpflanze. Freiwillig und langsam.",
 		"So: hölzerne Anbaustöcke aus Stöcken; das Tagebuch ist ein Buch und Feder plus Samen; der Analysator ist Glas und Holz. Auf Ackerboden pflanzen."
 	]
-	quest.42000000002A0643.title: "Netheritsplitter"
+	quest.42000000002A0643.title: "Netherite Sliver"
 	quest.42000000002A0644.quest_desc: [
 		"Die eigene Blume von AgriCraft. Freiwillig.",
 		"So: hölzerne Anbaustöcke aus Stöcken; das Tagebuch ist ein Buch und Feder plus Samen; der Analysator ist Glas und Holz. Auf Ackerboden pflanzen."
 	]
-	quest.42000000002A0644.title: "Amathyllis-Blütenblatt"
+	quest.42000000002A0644.title: "Amathyllis Petal"
 	reward.5000000000060135.title: "Rückkehrfaden: +1 Clowder-Leben"
 	reward.5000000000080193.title: "Rückkehrfaden: +1 Clowder-Leben"
 	reward.50000000000901CC.title: "Rückkehrfaden: +1 Clowder-Leben"

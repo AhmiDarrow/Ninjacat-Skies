@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "북쪽",
   "sign.ninjacatpack.hub.north.2": "절단의 베틀",
   "sign.ninjacatpack.hub.north.3": "그르렁 화로",
-  "sign.ninjacatpack.hub.north.4": "베틀 바느질꾼 예배당"
+  "sign.ninjacatpack.hub.north.4": "베틀 바느질꾼 예배당",
+  "book.ninjacatpack.howto.campaign": "캠페인\n\n수염 코덱스: 먼저 'Start here'.\n` 키: 퀘스트.\n\n각 가닥은 마지막 매듭에서 증표를 줘요. 장력 기둥에 끼우세요.\n\n토양, 돌, 싹, 발톱, 시계·무리·불꽃 중 둘, 인장, 물레.",
+  "book.ninjacatpack.howto.post": "장력 기둥\n\n결속 매듭을 원목으로 두르고 위에 실.\n증표를 들고 우클릭해 끼워요.\n\n땋은 끈: 가닥 섬유 16개.\n베틀 조각: 아홉 개를 다 끼운 뒤 행진석으로. 조각을 끼우면 다시 짜요.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] '시작하는 법'을 줄 수 없었어요. 선착장 상자나 독서대의 책을 읽으세요.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] 발판을 차지하기 전에 '시작하는 법'을 읽으세요.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] 섬 헌장을 우클릭(또는 K) → 팀 만들기 → 발판 선택."
 }

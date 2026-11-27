@@ -505,7 +505,7 @@
 		"Un jeu de coups en réserve.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.420000000002004C.title: "Marteau en bois"
+	quest.420000000002004C.title: "Wooden Hammer"
 	quest.420000000002004D.quest_desc: [
 		"De la matière tirée du gravillon. Soixante-quatre pierres qui étaient poussière il y a une heure.",
 		"Comment : lave à côté de l'eau (ou glace fondue). Martèle la pierre. L'étal des Chanteurs de gravier à /clowder hub vend un lot."
@@ -542,17 +542,17 @@
 		"Le fer est grave et patient. Huit fragments de la maille.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.4200000000020053.title: "Fragment de minerai de fer"
+	quest.4200000000020053.title: "Iron Ore Chunk"
 	quest.4200000000020054.quest_desc: [
 		"Tamisé du gravier, petit à petit. La maille trouve le cuivre avant tes yeux.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.4200000000020054.title: "Fragment de minerai de cuivre"
+	quest.4200000000020054.title: "Copper Ore Chunk"
 	quest.4200000000020055.quest_desc: [
 		"L'or se donne à peine la peine de répondre. Quatre suffisent.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.4200000000020055.title: "Fragment de minerai d'or"
+	quest.4200000000020055.title: "Gold Ore Chunk"
 	quest.4200000000020056.quest_desc: [
 		"Alimente la ligne.",
 		"Comment : tamise le gravier, ou fais fondre du minerai de charbon."
@@ -602,12 +602,12 @@
 		"Des coups plus durs, une vie plus longue.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.420000000002005F.title: "Marteau de pierre"
+	quest.420000000002005F.title: "Stone Hammer"
 	quest.4200000000020060.quest_desc: [
 		"Écrase le minerai en gravier et en gravillon, l'astuce bruyante derrière le tamis.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.4200000000020060.title: "Marteau de fer"
+	quest.4200000000020060.title: "Iron Hammer"
 	quest.4200000000020061.quest_desc: [
 		"Maille plus large, neuf d'un coup.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -877,12 +877,12 @@
 		"Meilleure terre cultivable. Les Lie-racines approuveraient.",
 		"Comment : pose du Compost organique et attends ; il mûrit lentement en Terre riche."
 	]
-	quest.4200000000030095.title: "Terre riche"
+	quest.4200000000030095.title: "Terre fertile"
 	quest.4200000000030096.quest_desc: [
 		"Nourris la terre qui te nourrit.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.4200000000030096.title: "Compost organique"
+	quest.4200000000030096.title: "Composte organique"
 	quest.4200000000030097.quest_desc: [
 		"Plante un rang, nourris un cheval, ou mange-la crue.",
 		"Comment : fabrique, fais fondre, tamise, ou prends-le sur un monstre. JEI liste chaque source sur la plateforme."
@@ -983,13 +983,13 @@
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
 		"Comment : quatre papiers et une teinture bleue, sans forme. Donne quatre feuilles."
 	]
-	quest.42000000000400A9.title: "Papier de plans"
+	quest.42000000000400A9.title: "Blueprint Paper"
 	quest.42000000000400AA.quest_desc: [
 		"Des plans dans une boîte.",
 		"Quatre Papier de plans, sans forme — revendiquer une plateforme efface le cadeau d'arrivée de Silent Gear. Clic droit pour déballer les plans de départ.",
 		"Comment : quatre Papier de plans, sans forme. Clic droit pour déballer les plans de départ. Revendiquer une plateforme efface le cadeau d'arrivée de Silent Gear."
 	]
-	quest.42000000000400AA.title: "Paquet de plans"
+	quest.42000000000400AA.title: "Blueprint Package"
 	quest.42000000000400AB.quest_desc: [
 		"Le modèle dont part un outil modulaire, avant que tu y ajoutes ses pièces.",
 		"Comment : déballe le Paquet de plans, ou JEI. Griffe nomme la ligne d'outils."
@@ -1019,7 +1019,7 @@
 		"De la place pour grandir.",
 		"Comment : JEI après le Papier de plans. Griffe nomme la ligne d'améliorations."
 	]
-	quest.42000000000400B0.title: "Base d'amélioration"
+	quest.42000000000400B0.title: "Upgrade Base"
 	quest.42000000000400B1.quest_desc: [
 		"Trente-deux lingots de matériau pour les pièces.",
 		"Comment : fais fondre du fer brut / du gravillon de fer (fourneau ou Four à braises). Tamise le gravier pour des morceaux."
@@ -1257,7 +1257,7 @@
 		"Charge des objets dans un anneau de bâtons.",
 		"Comment : chapitre Réseau Powah — orbe d'énergie et câbles, une fois le Pouls d'Étincelle là."
 	]
-	quest.42000000000500DE.title: "Orbe d'énergie"
+	quest.42000000000500DE.title: "Orbe énergisant"
 	quest.42000000000500DF.quest_desc: [
 		"Nourris l'orbe.",
 		"Comment : chapitre Réseau Powah — orbe d'énergie et câbles, une fois le Pouls d'Étincelle là."
@@ -1462,7 +1462,7 @@
 		"La colonne vertébrale de la rotation.",
 		"Comment : alliage d'andésite dans une recette de découpe / de fabrication, listée dans JEI."
 	]
-	quest.4200000000060106.title: "Arbre"
+	quest.4200000000060106.title: "Rotor"
 	quest.4200000000060107.quest_desc: [
 		"Une roue dentée. Puis la même roue dentée encore.",
 		"Comment : Arbre + planches."
@@ -1477,12 +1477,12 @@
 		"L'habillage d'andésite est le cadre de Create.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060109.title: "Habillage d'andésite"
+	quest.4200000000060109.title: "Boitier d'andésite"
 	quest.420000000006010A.quest_desc: [
 		"Une rivière dans le ciel, qui tourne.",
 		"Comment : huit planches autour d'un Arbre. Il faut un courant d'eau à côté."
 	]
-	quest.420000000006010A.title: "Roue à aubes"
+	quest.420000000006010A.title: "Roue à eau"
 	quest.420000000006010B.quest_desc: [
 		"Produit la rotation à la main quand rien d'autre ne tourne encore.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1507,7 +1507,7 @@
 		"Recettes en gros, vite.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.420000000006010F.title: "Mélangeur mécanique"
+	quest.420000000006010F.title: "Mixeur mécanique"
 	quest.4200000000060110.quest_desc: [
 		"Une surface plate qui tient un objet immobile pour la bande ou la presse.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1522,12 +1522,12 @@
 		"Laisse tomber les objets tout droit entre les machines, sans avoir besoin de bande.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060112.title: "Goulotte"
+	quest.4200000000060112.title: "Chute"
 	quest.4200000000060113.quest_desc: [
 		"Lavage, séchage, et gravier en sable.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060113.title: "Ventilateur capoté"
+	quest.4200000000060113.title: "Ventilateur enchâssé"
 	quest.4200000000060114.quest_desc: [
 		"Une main sur un Arbre.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1542,12 +1542,12 @@
 		"Fore à travers les blocs de gravier.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060116.title: "Foreuse mécanique"
+	quest.4200000000060116.title: "Perceuse mécanique"
 	quest.4200000000060117.quest_desc: [
 		"Coupe les cultures en un arc tournant.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060117.title: "Moissonneur mécanique"
+	quest.4200000000060117.title: "Récolteur mécanique"
 	quest.4200000000060118.quest_desc: [
 		"Charge ou vide la cargaison d'un train à l'arrêt sans que tu soulèves un seul coffre.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1557,12 +1557,12 @@
 		"Empile l'espace de neuf coffres dans un seul grand bloc.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060119.title: "Coffre-fort d'objets"
+	quest.4200000000060119.title: "Coffre à objet renforcé"
 	quest.420000000006011A.quest_desc: [
 		"Tient du liquide en masse et se lie à ses voisins pour en tenir plus.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.420000000006011A.title: "Réservoir de fluide"
+	quest.420000000006011A.title: "Réservoir à fluide"
 	quest.420000000006011B.quest_desc: [
 		"Verse des fluides dans les bassins.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1577,12 +1577,12 @@
 		"Marque le côté d'un montage qui gère les fluides, le cousin chic de l'andésite.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.420000000006011D.title: "Habillage en cuivre"
+	quest.420000000006011D.title: "Boitier de cuivre"
 	quest.420000000006011E.quest_desc: [
 		"Couvre les machines précises, celles que la rotation seule ne peut satisfaire.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.420000000006011E.title: "Habillage en laiton"
+	quest.420000000006011E.title: "Boitier de laiton"
 	quest.420000000006011F.quest_desc: [
 		"Cœur d'horlogerie. Veut un Nœud liant en son centre.",
 		"Le Métier à tisser, qui demande à être inclus.",
@@ -1598,7 +1598,7 @@
 		"Tourne au coin.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060121.title: "Boîte de vitesses"
+	quest.4200000000060121.title: "Boîte à roues dentées"
 	quest.4200000000060122.quest_desc: [
 		"L'embrayage arrête une ligne d'arbres.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1608,12 +1608,12 @@
 		"L'inverseur renverse la rotation.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060123.title: "Inverseur"
+	quest.4200000000060123.title: "Inverseur de rotation"
 	quest.4200000000060124.quest_desc: [
 		"Rotation programmée. Le chant des Tisserands de motifs, mis par écrit.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060124.title: "Inverseur séquencé"
+	quest.4200000000060124.title: "Inverseur de rotation séquencé"
 	quest.4200000000060125.quest_desc: [
 		"Mélange les ingrédients dans un bassin quand il tourne assez vite.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1633,12 +1633,12 @@
 		"Transforme un anneau de voiles en rotation tirée tout droit du ciel.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060128.title: "Palier de moulin à vent"
+	quest.4200000000060128.title: "Support de moulin à vent"
 	quest.4200000000060129.quest_desc: [
 		"Fait tourner toute une structure autour d'un point fixe, murs et tout.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060129.title: "Palier mécanique"
+	quest.4200000000060129.title: "Roulement mécanique"
 	quest.420000000006012A.quest_desc: [
 		"Le portique glisse le long d'un rail.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1648,12 +1648,12 @@
 		"Change un montage immobile en un qui file sur les rails.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.420000000006012B.title: "Assembleur de wagonnets"
+	quest.420000000006012B.title: "Assembleur de wagonnet"
 	quest.420000000006012C.quest_desc: [
 		"Relie deux wagonnets pour qu'ils voyagent en un seul train.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.420000000006012C.title: "Attelage de wagonnet"
+	quest.420000000006012C.title: "Lien pour wagonnet"
 	quest.420000000006012D.quest_desc: [
 		"Pose le chemin qu'un wagonnet ou un engin emprunte.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -1673,22 +1673,22 @@
 		"Montre un nombre venu d'ailleurs, sur un bloc que tu vois vraiment.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060130.title: "Lien d'affichage"
+	quest.4200000000060130.title: "Liaison d'affichage"
 	quest.4200000000060131.quest_desc: [
 		"Le tableau affiche des données.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060131.title: "Tableau d'affichage"
+	quest.4200000000060131.title: "Panneau d'affichage"
 	quest.4200000000060132.quest_desc: [
 		"Tire une patate assez fort pour faire reculer quelque chose. Surtout pour rire.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060132.title: "Canon à patates"
+	quest.4200000000060132.title: "Canon à pomme de terre"
 	quest.4200000000060133.quest_desc: [
 		"Atteint et casse des blocs plus loin que ton bras ne le permet.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.4200000000060133.title: "Poignée extensible"
+	quest.4200000000060133.title: "Main extensible"
 	quest.4200000000060134.quest_desc: [
 		"Une roue, une presse, un mélangeur, un ventilateur, un cœur d'horlogerie.",
 		"Mets le Brin en tension : la réponse des Tisserands de motifs.",
@@ -1781,7 +1781,7 @@
 		"Met le rendement en bouteille sans que tu y poses la main.",
 		"Comment : les crafts de Productive Bees sont dans JEI. Essaim nomme la ruche, la centrifugeuse et les étapes d'élevage."
 	]
-	quest.4200000000070144.title: "Embouteilleur"
+	quest.4200000000070144.title: "Bottler"
 	quest.4200000000070145.quest_desc: [
 		"Fais tourner les rayons en tout ce qu'ils cachent.",
 		"Comment : les crafts de Productive Bees sont dans JEI. Essaim nomme la ruche, la centrifugeuse et les étapes d'élevage."
@@ -1791,12 +1791,12 @@
 		"Pareil, plus vite, à l'énergie.",
 		"Comment : les crafts de Productive Bees sont dans JEI. Essaim nomme la ruche, la centrifugeuse et les étapes d'élevage."
 	]
-	quest.4200000000070146.title: "Centrifugeuse à énergie"
+	quest.4200000000070146.title: "Centrifugeuse motorisée"
 	quest.4200000000070147.quest_desc: [
 		"Prend une abeille au filet dans les airs, sans une seule piqûre.",
 		"Comment : les crafts de Productive Bees sont dans JEI. Essaim nomme la ruche, la centrifugeuse et les étapes d'élevage."
 	]
-	quest.4200000000070147.title: "Attrapeur"
+	quest.4200000000070147.title: "Catcher"
 	quest.4200000000070148.quest_desc: [
 		"Porte une abeille comme une lanterne.",
 		"Comment : les crafts de Productive Bees sont dans JEI. Essaim nomme la ruche, la centrifugeuse et les étapes d'élevage."
@@ -2046,7 +2046,7 @@
 		"Stocke la Source, le carburant que les sorts brûlent.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.4200000000080177.title: "Gemme de source"
+	quest.4200000000080177.title: "Gemme source"
 	quest.4200000000080178.quest_desc: [
 		"Cultivé, pas trouvé. Du bois pour les outils d'incantation et les piédestaux de sorts.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
@@ -2056,12 +2056,12 @@
 		"Premiers sorts. Une magie du même rang, si tu la veux à côté des rites.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.4200000000080179.title: "Livre de sorts de novice"
+	quest.4200000000080179.title: "Livre de sorts novice"
 	quest.420000000008017A.quest_desc: [
 		"Une culture arcanique, cultivée autant pour son tissu que pour sa magie.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.420000000008017A.title: "Fleur de mage"
+	quest.420000000008017A.title: "Magefleur"
 	quest.420000000008017B.quest_desc: [
 		"Brasero pour le travail rituel.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
@@ -2086,7 +2086,7 @@
 		"Stocke de la Source en plus, pour qu'un sort ne tombe pas à sec en plein lancer.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.420000000008017F.title: "Jarre de source"
+	quest.420000000008017F.title: "Pot source"
 	quest.4200000000080180.quest_desc: [
 		"Appelle les esprits par leur nom.",
 		"Comment : un livre et des Graines de rêve de démon, sans forme. Lis-le ; le Feu spirituel vient ensuite."
@@ -2106,17 +2106,17 @@
 		"Le cœur de la fabrication fondée sur l'aura, accordé à la terre autour.",
 		"Comment : Rituel de la forêt (JEI) : trois pierres, une Feuille d'or, un lingot d'or et un Jeton de joie. Ligne du Cœur de l'aura."
 	]
-	quest.4200000000080183.title: "Autel naturel"
+	quest.4200000000080183.title: "Autel de la Nature"
 	quest.4200000000080184.quest_desc: [
 		"Une plante imprégnée d'une aura haute, filée en quelque chose de plus rare.",
 		"Comment : quatre feuilles et quatre pépites d'or autour d'herbe courte font quatre Fibres brillantes. Place-la dans la couronne d'un arbre ; ses feuilles deviennent dorées avec le temps."
 	]
-	quest.4200000000080184.title: "Fibre brillante"
+	quest.4200000000080184.title: "Fibres Brillantes"
 	quest.4200000000080185.quest_desc: [
 		"Matériau touché par l'aura, plus précieux qu'il n'en a l'air, posé par terre.",
 		"Comment : casse les feuilles dorées issues de la Fibre brillante."
 	]
-	quest.4200000000080185.title: "Feuille d'or"
+	quest.4200000000080185.title: "Feuilles Brillantes"
 	quest.4200000000080186.quest_desc: [
 		"Du fer qui a bu l'aura ambiante, jusqu'à valoir plus que le minerai.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
@@ -2131,7 +2131,7 @@
 		"Un jeton de joie. L'Autel naturel et l'Absorbeur herbivore se bâtissent dessus.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000080188.title: "Jeton de joie"
+	quest.4200000000080188.title: "Insigne de Joie"
 	quest.4200000000080189.quest_desc: [
 		"Stock de parchemin de sort.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
@@ -2141,7 +2141,7 @@
 		"Marque un lieu où revenir par un mot, pas par une marche.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.420000000008018A.title: "Parchemin de transposition"
+	quest.420000000008018A.title: "Parchemin de distorsion"
 	quest.420000000008018B.quest_desc: [
 		"Plante-la, soigne-la, et récolte un tissu imbibé de magie basse.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
@@ -2225,7 +2225,7 @@
 		"Le bloc coque de chaque machine du réseau, extrait des gisements de Certus.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.4200000000090199.title: "Pierre céleste"
+	quest.4200000000090199.title: "Pierre de ciel"
 	quest.420000000009019A.quest_desc: [
 		"Fluix — certus, quartz et redstone chargés dans l'eau.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -2240,7 +2240,7 @@
 		"Du silicium pour les processeurs d'AE2.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.420000000009019C.title: "Silicium"
+	quest.420000000009019C.title: "Silicone"
 	quest.420000000009019D.quest_desc: [
 		"L'inscripteur presse les circuits comme le Métier à tisser presse le tissu.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -2250,7 +2250,7 @@
 		"Estampille une plaque de silicium comme le Métier à tisser presse le tissu.",
 		"Comment : bloc de fer, Nœud liant, fer et quartz. AE2 ne duplique qu'une presse que tu as déjà."
 	]
-	quest.420000000009019E.title: "Presse de silicium de l'inscripteur"
+	quest.420000000009019E.title: "Matrice de presse de silicone"
 	quest.420000000009019F.quest_desc: [
 		"Estampille la matrice d'un processeur logique, une frappe à la fois.",
 		"Comment : bloc de fer, Nœud liant, fer et or. La première copie est l'artisanat du Nœud."
@@ -2285,7 +2285,7 @@
 		"Abrite les cellules qui gardent tout ce dont le réseau se souvient.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000000901A5.title: "Lecteur ME"
+	quest.42000000000901A5.title: "Range-disque ME"
 	quest.42000000000901A6.quest_desc: [
 		"La coque dans laquelle se construit une cellule de stockage.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -2351,12 +2351,12 @@
 		"Fait tourner plus de tâches de fabrication en même temps.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000000901B2.title: "Unité de co-traitement de fabrication"
+	quest.42000000000901B2.title: "Unité de co-traitement"
 	quest.42000000000901B3.quest_desc: [
 		"Garde des modèles où le réseau puise pendant qu'il fabrique.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000000901B3.title: "Stockage de fabrication 1k"
+	quest.42000000000901B3.title: "Disque 1k pour la fabrication"
 	quest.42000000000901B4.quest_desc: [
 		"Alimente les machines en motifs, comme un métier à tisser alimente la navette en fil.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -2371,12 +2371,12 @@
 		"Un motif vide, qui attend qu'on y encode une recette.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000000901B6.title: "Motif vierge"
+	quest.42000000000901B6.title: "Modèle vide"
 	quest.42000000000901B7.quest_desc: [
 		"Envoie de l'énergie dans le métier numérique.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000000901B7.title: "Accepteur d'énergie"
+	quest.42000000000901B7.title: "Acceptateur énergétique"
 	quest.42000000000901B8.quest_desc: [
 		"Brûle pour AE — branche d'énergie facultative.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -2446,7 +2446,7 @@
 		"Outil réseau pour AE2.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000000901C5.title: "Outil réseau"
+	quest.42000000000901C5.title: "Outil de réseau"
 	quest.42000000000901C6.quest_desc: [
 		"Charge le quartz certus jusqu'à ce qu'il soit prêt pour un ouvrage plus fin.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -2506,12 +2506,12 @@
 		"Tamise plus vite que la crosse en bois, et dure bien plus longtemps.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01CF.title: "Crosse d'os"
+	quest.42000000000A01CF.title: "Bone Crook"
 	quest.42000000000A01D0.quest_desc: [
 		"La maille la plus simple. Tout ce que tu tamises commence par passer ici.",
 		"Comment : neuf ficelles en 3x3. L'étal des Chanteurs de gravier vend la maille de Fil (ficelle) du Métier du vide, qui tamise pareil."
 	]
-	quest.42000000000A01D0.title: "Maille de ficelle"
+	quest.42000000000A01D0.title: "String Mesh"
 	quest.42000000000A01D1.quest_desc: [
 		"Attrape des éclats plus fins que la ficelle. Moins de chutes filent à travers le tissage.",
 		"Comment : quatre silex et cinq ficelles en damier. Le silex vient du gravier, ou de Fil + gravier."
@@ -2526,17 +2526,17 @@
 		"Maille de palier or. Les chances penchent vers les minerais qui comptent.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01D3.title: "Maille d'or"
+	quest.42000000000A01D3.title: "Golden Mesh"
 	quest.42000000000A01D4.quest_desc: [
 		"Tamise du gravier avec ça, et les diamants sortent bien plus souvent.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01D4.title: "Maille de diamant"
+	quest.42000000000A01D4.title: "Diamond Mesh"
 	quest.42000000000A01D5.quest_desc: [
 		"La maille la plus fine qui soit. Rien ne tamise mieux que le fil de netherite.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01D5.title: "Maille de netherite"
+	quest.42000000000A01D5.title: "Netherite Mesh"
 	quest.42000000000A01D6.quest_desc: [
 		"Argile affinée et lisse, prête à cuire en un creuset qui tient une vraie chaleur.",
 		"Comment : boule d'argile + poudre d'os, sans forme. L'argile vient du Tonneau de tension."
@@ -2551,7 +2551,7 @@
 		"Tient la chaleur de fusion sans se fendre. Fais fondre ce que le tamis a sorti.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01D8.title: "Creuset de porcelaine"
+	quest.42000000000A01D8.title: "Porcelain Crucible"
 	quest.42000000000A01D9.quest_desc: [
 		"Éclabousse les cultures d'eau sans piétiner les rangs.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -2566,27 +2566,27 @@
 		"Lâché sur les feuilles, il file de la soie en mangeant.",
 		"Comment : casse des feuilles avec une crosse ; les vers à soie tombent de temps en temps."
 	]
-	quest.42000000000A01DB.title: "Ver à soie"
+	quest.42000000000A01DB.title: "Silkworm"
 	quest.42000000000A01DC.quest_desc: [
 		"Eau étrange qui oriente les jeunes plants et les graines vers des cultures plus étranges.",
 		"Comment : un tonneau d'eau sur du mycélium devient de l'eau de sorcière ; remplis-en un seau. Les spores de mycélium se tamisent à partir de la terre."
 	]
-	quest.42000000000A01DC.title: "Seau d'eau de sorcière"
+	quest.42000000000A01DC.title: "Witch Water Bucket"
 	quest.42000000000A01DD.quest_desc: [
 		"Répands-les, et le mycélium rampe vers l'extérieur, bloc après bloc patient.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01DD.title: "Spores de mycélium"
+	quest.42000000000A01DD.title: "Mycelium Spores"
 	quest.42000000000A01DE.quest_desc: [
 		"Jette-les sur la terre, et l'herbe s'étend sans attendre la pluie.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01DE.title: "Graines d'herbe"
+	quest.42000000000A01DE.title: "Grass Seeds"
 	quest.42000000000A01DF.quest_desc: [
 		"Le gravillon qui remplace la roche. Renvoie-le au marteau pour en avoir plus.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01DF.title: "Galet de pierre"
+	quest.42000000000A01DF.title: "Stone Pebble"
 	quest.42000000000A01E0.quest_desc: [
 		"Neuf roches serrées en pierre de stockage, pour une plateforme qui grandit.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -2596,17 +2596,17 @@
 		"Brise la roche en gravier plus vite que n'importe quel marteau d'avant.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01E1.title: "Marteau de netherite"
+	quest.42000000000A01E1.title: "Netherite Hammer"
 	quest.42000000000A01E2.quest_desc: [
 		"Pierre du Nether, broyée fin. Le basalte et la pierre noire commencent tous deux ici.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01E2.title: "Galet de pierre noire"
+	quest.42000000000A01E2.title: "Blackstone Pebble"
 	quest.42000000000A01E3.quest_desc: [
 		"Ardoise des abîmes réduite en gravillon, prête à nouveau pour le tamis.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000000A01E3.title: "Galet d'ardoise des abîmes"
+	quest.42000000000A01E3.title: "Deepslate Pebble"
 	quest.42000000000A01E4.quest_desc: [
 		"Pierre pâle tirée d'un tamisage profond, surtout bonne à bâtir.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -2647,12 +2647,12 @@
 		"Aspire les objets lâchés droit dans le tonneau, de l'autre bout de la plateforme.",
 		"Comment : tonneaux et améliorations dans JEI. Le contrôleur relie un mur de tonneaux."
 	]
-	quest.42000000000B01EB.title: "Amélioration d'aimant avancée"
+	quest.42000000000B01EB.title: "Amélioration magnétique avancée"
 	quest.42000000000B01EC.quest_desc: [
 		"Entre d'un côté, sort de l'autre, sans bloc entonnoir.",
 		"Comment : tonneaux et améliorations dans JEI. Le contrôleur relie un mur de tonneaux."
 	]
-	quest.42000000000B01EC.title: "Amélioration entonnoir"
+	quest.42000000000B01EC.title: "Amélioration d'entonnoir"
 	quest.42000000000B01ED.quest_desc: [
 		"Efface tout ce qui dépasse la capacité, pour que le tiroir ne se bloque jamais.",
 		"Comment : tonneaux et améliorations dans JEI. Le contrôleur relie un mur de tonneaux."
@@ -2682,7 +2682,7 @@
 		"Compacte tout seul son contenu en blocs, au fur et à mesure qu'il se remplit.",
 		"Comment : tiroirs en chêne 1x1 / 1x2 / 2x2, puis tiroir compacteur et contrôleur. JEI nomme le craft."
 	]
-	quest.42000000000B01F2.title: "Tiroir compacteur"
+	quest.42000000000B01F2.title: "Compacting Drawer"
 	quest.42000000000B01F3.quest_desc: [
 		"Relie le stockage autour en un seul réseau consultable.",
 		"Comment : tiroirs en chêne 1x1 / 1x2 / 2x2, puis tiroir compacteur et contrôleur. JEI nomme le craft."
@@ -2692,17 +2692,17 @@
 		"Aspire les objets proches droit dans le tiroir.",
 		"Comment : tiroirs en chêne 1x1 / 1x2 / 2x2, puis tiroir compacteur et contrôleur. JEI nomme le craft."
 	]
-	quest.42000000000B01F4.title: "Amélioration collectrice"
+	quest.42000000000B01F4.title: "Collector Upgrade"
 	quest.42000000000B01F5.quest_desc: [
 		"Tire les objets du coffre ou de la machine posée à côté.",
 		"Comment : tiroirs en chêne 1x1 / 1x2 / 2x2, puis tiroir compacteur et contrôleur. JEI nomme le craft."
 	]
-	quest.42000000000B01F5.title: "Amélioration tireuse"
+	quest.42000000000B01F5.title: "Puller Upgrade"
 	quest.42000000000B01F6.quest_desc: [
 		"Pousse les objets stockés dans l'inventaire posé à côté.",
 		"Comment : tiroirs en chêne 1x1 / 1x2 / 2x2, puis tiroir compacteur et contrôleur. JEI nomme le craft."
 	]
-	quest.42000000000B01F6.title: "Amélioration pousseuse"
+	quest.42000000000B01F6.title: "Pusher Upgrade"
 	quest.42000000000B01F7.quest_desc: [
 		"Efface tout ce qui dépasse la capacité, pour que le tiroir ne se bloque jamais.",
 		"Comment : tiroirs en chêne 1x1 / 1x2 / 2x2, puis tiroir compacteur et contrôleur. JEI nomme le craft."
@@ -2737,32 +2737,32 @@
 		"Filtre ce qui entre dans les sacs.",
 		"Comment : sac en cuir, puis améliorations fer/or/diamant dans JEI."
 	]
-	quest.42000000000B01FD.title: "Amélioration de filtre"
+	quest.42000000000B01FD.title: "Module de filtre"
 	quest.42000000000B01FE.quest_desc: [
 		"Laisse le sac fabriquer à partir de ce qu'il a déjà en stock.",
 		"Comment : sac en cuir, puis améliorations fer/or/diamant dans JEI."
 	]
-	quest.42000000000B01FE.title: "Amélioration de fabrication"
+	quest.42000000000B01FE.title: "Module de l'établi"
 	quest.42000000000B01FF.quest_desc: [
 		"Te nourrit automatiquement avec ses réserves quand la faim baisse.",
 		"Comment : sac en cuir, puis améliorations fer/or/diamant dans JEI."
 	]
-	quest.42000000000B01FF.title: "Amélioration d'alimentation"
+	quest.42000000000B01FF.title: "Module de nourriture"
 	quest.42000000000B0200.quest_desc: [
 		"Échange un outil cassé contre un neuf tiré du sac.",
 		"Comment : sac en cuir, puis améliorations fer/or/diamant dans JEI."
 	]
-	quest.42000000000B0200.title: "Amélioration de réassort"
+	quest.42000000000B0200.title: "Module de restock"
 	quest.42000000000B0201.quest_desc: [
 		"Vide le sac dans les coffres proches quand tu t'approches.",
 		"Comment : sac en cuir, puis améliorations fer/or/diamant dans JEI."
 	]
-	quest.42000000000B0201.title: "Amélioration de dépôt"
+	quest.42000000000B0201.title: "Module de dépose"
 	quest.42000000000B0202.quest_desc: [
 		"Ajoute un réservoir de fluide dans le sac, pour transporter des liquides.",
 		"Comment : sac en cuir, puis améliorations fer/or/diamant dans JEI."
 	]
-	quest.42000000000B0202.title: "Amélioration de réservoir"
+	quest.42000000000B0202.title: "Module de réservoir"
 	quest.42000000000C0203.quest_desc: [
 		"Le métal de base de la plupart des machines et des carcasses de cette ligne.",
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
@@ -2783,7 +2783,7 @@
 		"La carte logique la plus simple. La plupart des premières machines en demandent quelques-unes.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0206.title: "Circuit de contrôle basique"
+	quest.42000000000C0206.title: "Circuit de contrôle de base"
 	quest.42000000000C0207.quest_desc: [
 		"Une carte logique plus affûtée, pour les machines un cran plus haut sur la ligne.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -2813,7 +2813,7 @@
 		"Fond les minerais à l'énergie plutôt qu'au combustible, et un peu plus vite.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C020C.title: "Fonderie énergisée"
+	quest.42000000000C020C.title: "Fonderie électrique"
 	quest.42000000000C020D.quest_desc: [
 		"Purifie le minerai enrichi à l'oxygène pour un troisième produit, parfois plus.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -2833,32 +2833,32 @@
 		"Un seul emplacement de pile, qui tient bien plus qu'un coffre.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0210.title: "Bac basique"
+	quest.42000000000C0210.title: "Conteneur basique"
 	quest.42000000000C0211.quest_desc: [
 		"Stocke un bassin profond d'un seul fluide dans un seul bloc.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0211.title: "Réservoir de fluide basique"
+	quest.42000000000C0211.title: "Réservoir de fluide de base"
 	quest.42000000000C0212.quest_desc: [
 		"Tamponne l'énergie entre les machines, pour que les à-coups n'arrêtent pas la ligne.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0212.title: "Cube d'énergie basique"
+	quest.42000000000C0212.title: "Cube énergétique de base"
 	quest.42000000000C0213.quest_desc: [
 		"Porte l'énergie aux machines. Le câble le plus courant de la plateforme.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0213.title: "Câble universel basique"
+	quest.42000000000C0213.title: "Câble universel de base"
 	quest.42000000000C0214.quest_desc: [
 		"Déplace les fluides entre réservoirs et machines, le long de la plateforme.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0214.title: "Tuyau mécanique basique"
+	quest.42000000000C0214.title: "Tuyau mécanique de base"
 	quest.42000000000C0215.quest_desc: [
 		"Déplace automatiquement les objets entre les inventaires reliés.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0215.title: "Transporteur logistique basique"
+	quest.42000000000C0215.title: "Transporteur logistique de base"
 	quest.42000000000C0216.quest_desc: [
 		"Tourne, sert de clé et reconfigure les faces des machines avec un seul outil.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -2868,12 +2868,12 @@
 		"Sac à réaction Mek — poussée en option.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0217.title: "Sac à réaction"
+	quest.42000000000C0217.title: "Jetpack"
 	quest.42000000000C0218.quest_desc: [
 		"Adoucit les dégâts de chute et t'achète une seconde avant que le vide te prenne.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C0218.title: "Chaussures libres"
+	quest.42000000000C0218.title: "Coureuses"
 	quest.42000000000C0219.quest_desc: [
 		"Un seul outil qui mine, coupe et se bat, plus affûté à chaque amélioration.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -2883,7 +2883,7 @@
 		"Le cadre structurel autour duquel se bâtissent la plupart des machines multiblocs.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C021A.title: "Châssis d'acier"
+	quest.42000000000C021A.title: "Boîtier en acier"
 	quest.42000000000C021B.quest_desc: [
 		"Relie deux points pour qu'en passant tu sautes le trajet entre les deux.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -2893,7 +2893,7 @@
 		"Mine un large rayon tout seul et trie la récolte pour toi.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000000C021C.title: "Mineur numérique"
+	quest.42000000000C021C.title: "Mineur digital"
 	quest.42000000000D021D.quest_desc: [
 		"Un ingrédient de base collant, à la source de la plupart des machines du réseau.",
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
@@ -2969,7 +2969,7 @@
 		"Un palier de cristal plus fort, plus loin dans la construction de la chambre d'énergie.",
 		"Comment : chapitre Réseau Powah — orbe d'énergie et câbles, une fois le Pouls d'Étincelle là."
 	]
-	quest.42000000000D022B.title: "Cristal d'esprit"
+	quest.42000000000D022B.title: "Cristal fougueux"
 	quest.42000000000D022C.quest_desc: [
 		"Le plus fort palier de cristal que la chambre d'énergie peut contenir.",
 		"Comment : chapitre Réseau Powah — orbe d'énergie et câbles, une fois le Pouls d'Étincelle là."
@@ -2985,12 +2985,12 @@
 		"Une fleur qui, après la récolte, refait sa fibre sur la tige.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E022E.title: "Fleur de mage"
+	quest.42000000000E022E.title: "Magefleur"
 	quest.42000000000E022F.quest_desc: [
 		"Stocke un bassin dense de Source, le combustible derrière chaque sort.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E022F.title: "Bloc de gemme de Source"
+	quest.42000000000E022F.title: "Bloc de gemme source"
 	quest.42000000000E0230.quest_desc: [
 		"Contient plus de glyphes que le livre de départ n'en permet.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
@@ -3010,12 +3010,12 @@
 		"Lance son sort lié sur un minuteur régulier, pas à vue.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E0233.title: "Tourelle de sorts à minuteur"
+	quest.42000000000E0233.title: "Tourelle de sorts de minuterie"
 	quest.42000000000E0234.quest_desc: [
 		"La pièce maîtresse pour fabriquer livres de sorts, baguettes et autre attirail arcanique.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E0234.title: "Appareil d'enchantement"
+	quest.42000000000E0234.title: "Appareil enchanteur"
 	quest.42000000000E0235.quest_desc: [
 		"Se loge dans l'appareil d'enchantement et fait tourner ses recettes.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
@@ -3040,37 +3040,37 @@
 		"Convertit la chaleur de la lave proche en un filet régulier de Source.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E0239.title: "Lien de Source volcanique"
+	quest.42000000000E0239.title: "Lien source volcanique"
 	quest.42000000000E023A.quest_desc: [
 		"Invoque une wixie qui fabrique des recettes pour toi pendant que tu travailles ailleurs.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E023A.title: "Charme de Wixie"
+	quest.42000000000E023A.title: "Charm Wixie"
 	quest.42000000000E023B.quest_desc: [
 		"Invoque un starbuncle qui, sur ordre, va chercher des objets dans le stockage.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E023B.title: "Charme de Starbuncle"
+	quest.42000000000E023B.title: "Charme Starbuncle"
 	quest.42000000000E023C.quest_desc: [
 		"Invoque un drygmy qui génère lentement, à proximité, une ressource choisie.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E023C.title: "Charme de Drygmy"
+	quest.42000000000E023C.title: "Charme Drygmée"
 	quest.42000000000E023D.quest_desc: [
 		"Invoque un whirlisprig qui soigne et fait pousser les cultures tout seul.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E023D.title: "Charme de Whirlisprig"
+	quest.42000000000E023D.title: "Charme Tourbillon"
 	quest.42000000000E023E.quest_desc: [
 		"Invoque un golem qui récolte les bourgeons d'améthyste sans lever de pioche.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E023E.title: "Charme de golem d'améthyste"
+	quest.42000000000E023E.title: "Charm Golem d'améthyste"
 	quest.42000000000E023F.quest_desc: [
 		"Ramasse et pose des blocs à distance, et relie les machines entre elles de loin.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
 	]
-	quest.42000000000E023F.title: "Baguette de dominion"
+	quest.42000000000E023F.title: "Baguette du Dominion"
 	quest.42000000000E0240.quest_desc: [
 		"Marque un objet comme autorisé une fois mis dans un filtre.",
 		"Comment : Côté arcanique — bois arcanique et baie de source depuis la mousse, puis la cascade."
@@ -3090,7 +3090,7 @@
 	quest.42000000000F0242.title: "Dresse le Poteau"
 	quest.42000000000F0243.quest_desc: [
 		"Clé du nexus en main, ou /clowder hub. Chaque Clowder du serveur se retrouve ici.",
-		"/clowder return brings you home.",
+		"/clowder return te ramène chez toi.",
 		"Comment : Clé du nexus ou `/clowder hub`. `/clowder return` rentre à la maison."
 	]
 	quest.42000000000F0243.title: "Entre dans la Salle"
@@ -3227,7 +3227,7 @@
 		"Des feuilles qui gardent une douce lueur dorée toute l'année.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.420000000011027B.title: "Feuilles dorées"
+	quest.420000000011027B.title: "Feuille d'Or"
 	quest.420000000011027C.quest_desc: [
 		"Tient un ingrédient pour le Rituel de la forêt, posé autour d'une pousse d'arbre.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
@@ -3247,7 +3247,7 @@
 		"Écorce ôtée d'arbres anciens, utile dans les recettes d'aura.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.420000000011027F.title: "Écorce ancienne"
+	quest.420000000011027F.title: "Ecorce Ancienne"
 	quest.4200000000110280.quest_desc: [
 		"Un jeton de joie. L'Autel naturel et l'Absorbeur herbivore se bâtissent dessus.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
@@ -3257,32 +3257,32 @@
 		"Un jeton de peur. Le Réducteur de canopée et l'Absorbeur persistant se fabriquent sur un.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110281.title: "Jeton de peur"
+	quest.4200000000110281.title: "Insigne de Peur"
 	quest.4200000000110282.quest_desc: [
 		"Un jeton de colère. Le Catalyseur d'effritement et la Marque de tir ont besoin d'un.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110282.title: "Jeton de colère"
+	quest.4200000000110282.title: "Insigne de Colère"
 	quest.4200000000110283.quest_desc: [
 		"Un jeton de chagrin. La Table d'offrande et le Démêleur des mortels ont besoin d'un.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110283.title: "Jeton de chagrin"
+	quest.4200000000110283.title: "Insigne de Chagrin"
 	quest.4200000000110284.quest_desc: [
 		"Esprit d'aura pour les rituels.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110284.title: "Esprit de l'appel"
+	quest.4200000000110284.title: "Esprit d'Appel"
 	quest.4200000000110285.quest_desc: [
 		"Esprit de naissance pour les rites d'aura.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110285.title: "Esprit de l'enfantement"
+	quest.4200000000110285.title: "Esprit de Naissance"
 	quest.4200000000110286.quest_desc: [
 		"Garde une réserve d'aura pour quand la terre s'appauvrit.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110286.title: "Trésor d'aura"
+	quest.4200000000110286.title: "Trove d'Aura"
 	quest.4200000000110287.quest_desc: [
 		"Tard. Seulement si l'Aura le veut.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
@@ -3292,12 +3292,12 @@
 		"Révèle l'aura et les conditions d'apparition sur une plus large étendue de terre.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110288.title: "Oculaire environnemental"
+	quest.4200000000110288.title: "Oculaire Environemental"
 	quest.4200000000110289.quest_desc: [
 		"Posé à côté de l'Autel naturel, il ouvre les recettes de broyage de l'autel.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110289.title: "Catalyseur d'effritement"
+	quest.4200000000110289.title: "Catalyseur en ruine"
 	quest.420000000011028A.quest_desc: [
 		"Posé à côté de l'Autel naturel, il ouvre les recettes de transmutation de l'autel.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
@@ -3307,12 +3307,12 @@
 		"Lingots du ciel, or entaché et débris de netherite, pressés en Lingot des profondeurs.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.420000000011028B.title: "Lingot des profondeurs"
+	quest.420000000011028B.title: "Ingot of the Depths"
 	quest.420000000011028C.quest_desc: [
 		"Marque un plan de ferme qui attire l'aura pour faire croître les cultures plus vite.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.420000000011028C.title: "Pochoir de culture"
+	quest.420000000011028C.title: "Pochoir Agricole"
 	quest.420000000011028D.quest_desc: [
 		"Génère de l'aura chaque fois qu'un projectile atterrit à proximité.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
@@ -3337,7 +3337,7 @@
 		"Éclaire une zone pour que les créatures hostiles n'y apparaissent pas.",
 		"Comment : Fibre brillante sur les arbres → Feuille d'or → Autel naturel. Le chapitre Aura nomme les jetons et les générateurs."
 	]
-	quest.4200000000110291.title: "Lampe du sanctuaire"
+	quest.4200000000110291.title: "Lampe de sanctuaire"
 	quest.4200000000120292.quest_desc: [
 		"Cuit des plats façon ragoût qui remplissent plus d'une assiette à la fois.",
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
@@ -3348,12 +3348,12 @@
 		"La poêle fait sauter les plats.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.4200000000120293.title: "Poêle"
+	quest.4200000000120293.title: "Poêle à frire"
 	quest.4200000000120294.quest_desc: [
 		"Cuisinière pour Farmer's Delight.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.4200000000120294.title: "Cuisinière"
+	quest.4200000000120294.title: "Four"
 	quest.4200000000120295.quest_desc: [
 		"Découpe la viande et les légumes en ingrédients que d'autres recettes réclament.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
@@ -3373,7 +3373,7 @@
 		"Arrête une longue chute et te fait rebondir vers le haut sans une égratignure.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.4200000000120298.title: "Filet de sécurité"
+	quest.4200000000120298.title: "Filet"
 	quest.4200000000120299.quest_desc: [
 		"Une fois labourée et plantée, elle accélère la pousse des cultures voisines.",
 		"Comment : pose du Compost organique et attends ; il mûrit lentement en Terre riche."
@@ -3408,7 +3408,7 @@
 		"Le ragoût de bœuf cale bien.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.420000000012029F.title: "Ragoût de bœuf"
+	quest.420000000012029F.title: "Ragoût de boeuf"
 	quest.42000000001202A0.quest_desc: [
 		"Nouilles et bouillon, assez consistant pour une journée de travail.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
@@ -3423,7 +3423,7 @@
 		"Acidulé et sucré, l'un des desserts les plus riches sur la plateforme.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.42000000001202A2.title: "Gâteau au fromage aux baies sucrées"
+	quest.42000000001202A2.title: "Cheesecake aux fruits rouges"
 	quest.42000000001202A3.quest_desc: [
 		"Riz pour la ligne de cuisine.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
@@ -3433,7 +3433,7 @@
 		"Plat réconfort de la ligne de cuisine.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.42000000001202A4.title: "Riz frit"
+	quest.42000000001202A4.title: "Riz sauté"
 	quest.42000000001202A5.quest_desc: [
 		"Petits paquets farcis, vite à cuire par fournées.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
@@ -3448,7 +3448,7 @@
 		"Une boisson fraîche pressée de la pastèque, restaure un peu de faim très vite.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
 	]
-	quest.42000000001202A7.title: "Jus de pastèque"
+	quest.42000000001202A7.title: "Jus de melon"
 	quest.42000000001202A8.quest_desc: [
 		"Tissu tissé utilisé dans plusieurs recettes de cuisine et de décoration.",
 		"Comment : fabrication Farmer's Delight dans JEI (établi, planche à découper ou marmite). Les graines de culture viennent en tamisant de la terre."
@@ -3534,12 +3534,12 @@
 		"Un bâton modeste pour un lanceur qui débute.",
 		"Comment : Essence arcanique et encre, puis un livre de sorts. Le chapitre Sorts nomme l'échelle."
 	]
-	quest.42000000001302B8.title: "Bâton barbe-grise"
+	quest.42000000001302B8.title: "Bâton de Barbe-Grise"
 	quest.42000000001302B9.quest_desc: [
 		"Une lame qui punit les lanceurs de sorts et tranche leurs défenses.",
 		"Comment : recette du pack, deux Lingots arcaniques sur la diagonale, une chaîne de chaque côté et un diamant à la poignée. Son seul porteur sauvage vit dans les forts d'évocateurs, et la plateforme n'en a jamais."
 	]
-	quest.42000000001302B9.title: "Chasse-mage"
+	quest.42000000001302B9.title: "Chasseur de Mages"
 	quest.42000000001302BA.quest_desc: [
 		"Le tout premier livre de sorts : peu d'emplacements, mais facile à atteindre.",
 		"Comment : Essence arcanique et encre, puis un livre de sorts. Le chapitre Sorts nomme l'échelle."
@@ -4291,7 +4291,7 @@
 		"Consommé une fois, il monte l'essence d'un palier.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
 	]
-	quest.420000000018034C.title: "Cristal d'infusion"
+	quest.420000000018034C.title: "Crystal d'infusion"
 	quest.420000000018034D.quest_desc: [
 		"Essence de deuxième palier, raffinée depuis des piles d'Inferium.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
@@ -4346,12 +4346,12 @@
 		"Surveille les cultures proches et les casse à l'instant où elles mûrissent.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
 	]
-	quest.4200000000180357.title: "Moissonneuse"
+	quest.4200000000180357.title: "Récolteur"
 	quest.4200000000180358.quest_desc: [
 		"Transforme les graines en trop en essence, plutôt qu'en bazar.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
 	]
-	quest.4200000000180358.title: "Reprocesseur de graines"
+	quest.4200000000180358.title: "Retransformateur de graines"
 	quest.4200000000180359.quest_desc: [
 		"Accélère les cultures proches avec de l'essence d'Inferium.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
@@ -4411,12 +4411,12 @@
 		"Accélère la pousse si tu la jettes sur des cultures déjà plantées.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
 	]
-	quest.4200000000180364.title: "Essence fertilisée"
+	quest.4200000000180364.title: "Essence Fertile"
 	quest.4200000000180365.quest_desc: [
 		"La poussière dont naissent les lingots de Soulium. Un composant pour les graines hostiles.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
 	]
-	quest.4200000000180365.title: "Poussière de Soulium"
+	quest.4200000000180365.title: "Poudre de Soulium"
 	quest.4200000000180366.quest_desc: [
 		"Poussière de Soulium liée à un lingot de Prosperity, sombre et un peu froide.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
@@ -4426,12 +4426,12 @@
 		"Façonnée en Soulium. Inflige des dégâts en plus aux monstres hostiles.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
 	]
-	quest.4200000000180367.title: "Dague de Soulium"
+	quest.4200000000180367.title: "Dague en Soulium"
 	quest.4200000000180368.quest_desc: [
 		"La graine inachevée pour cultiver des monstres hostiles.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
 	]
-	quest.4200000000180368.title: "Base de graine de Soulium"
+	quest.4200000000180368.title: "Graine de Soulium de fabrication"
 	quest.4200000000180369.quest_desc: [
 		"Fais pousser de la poudre de redstone au lieu de la miner.",
 		"Comment : fabrication Mystical Agriculture dans JEI. Inferium et Prosperity viennent du tamis ; les graines s'infusent sur l'Autel d'infusion."
@@ -4652,7 +4652,7 @@
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
 		"Comment : les crafts de Productive Bees sont dans JEI. Essaim nomme la ruche, la centrifugeuse et les étapes d'élevage."
 	]
-	quest.4200000000190394.title: "Localisateur de nids"
+	quest.4200000000190394.title: "Localisateur de nid"
 	quest.4200000000190395.quest_desc: [
 		"Bûches de bouleau autour d'une fleur : abeilles charpentières d'une autre couleur.",
 		"Comment : anneau du matériau du nid autour d'une petite fleur. Pose-le, puis clic droit avec une petite fleur pour le réveiller ; les abeilles sortent au bout d'un moment."
@@ -4943,12 +4943,12 @@
 		"Casse un bloc devant le routeur et garde ce qui tombe.",
 		"Comment : Routeur modulaire plus modules vierges dans JEI. Extracteur/émetteur/briseur se placent dans le routeur."
 	]
-	quest.42000000001A03CE.title: "Module briseur"
+	quest.42000000001A03CE.title: "Module disjoncteur"
 	quest.42000000001A03CF.quest_desc: [
 		"Place un bloc là où pointe le routeur.",
 		"Comment : Routeur modulaire plus modules vierges dans JEI. Extracteur/émetteur/briseur se placent dans le routeur."
 	]
-	quest.42000000001A03CF.title: "Module placeur"
+	quest.42000000001A03CF.title: "Module de placement"
 	quest.42000000001A03D0.quest_desc: [
 		"Émets de la redstone quand le contenu du routeur franchit un seuil.",
 		"Comment : Routeur modulaire plus modules vierges dans JEI. Extracteur/émetteur/briseur se placent dans le routeur."
@@ -4958,12 +4958,12 @@
 		"Porte les objets entre coffres, machines et plateformes.",
 		"Comment : fer + redstone. Règle les faces avec la clé Pipez."
 	]
-	quest.42000000001A03D1.title: "Tuyau d'objets"
+	quest.42000000001A03D1.title: "Tuyau d'item"
 	quest.42000000001A03D2.quest_desc: [
 		"Porte les liquides entre réservoirs et machines, sans course au seau.",
 		"Comment : fer + seaux + redstone. Utilisation accroupie de la clé sur un côté pour extraire ; clic droit sur ce côté pour les filtres."
 	]
-	quest.42000000001A03D2.title: "Tuyau de fluides"
+	quest.42000000001A03D2.title: "Tuyau de fluide"
 	quest.42000000001A03D3.quest_desc: [
 		"Porte l'énergie entre les machines qui la font et celles qui en ont besoin.",
 		"Comment : fer + redstone. Porte des FE entre les machines."
@@ -4983,7 +4983,7 @@
 		"Utilise accroupi un côté du tuyau pour qu'il tire d'une machine, ou pour le couper.",
 		"Comment : deux silex et deux bâtons. Utilisation accroupie d'un côté de tuyau sur une machine pour qu'il extraie, encore une fois pour le couper ; clic droit sur un côté qui extrait pour les filtres."
 	]
-	quest.42000000001A03D6.title: "Clé à tuyaux"
+	quest.42000000001A03D6.title: "Clé à pipe"
 	quest.42000000001A03D7.quest_desc: [
 		"Amélioration de vitesse pour un tuyau.",
 		"Comment : tuyaux de fer + redstone dans JEI. Utilisation accroupie de la clé pour régler les côtés d'extraction ; clic droit sur l'un pour les filtres. Le chapitre des tuyaux est toute l'échelle."
@@ -5078,7 +5078,7 @@
 		"Un entonnoir capable de filtrer ce qu'il déplace.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001A03E9.title: "Entonnoir en laiton"
+	quest.42000000001A03E9.title: "Entonnoir de laiton"
 	quest.42000000001A03EA.quest_desc: [
 		"Laisse tomber les objets tout droit, d'un étage à l'autre.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5088,7 +5088,7 @@
 		"Une goulotte qui peut filtrer les objets et les retenir.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001A03EB.title: "Goulotte intelligente"
+	quest.42000000001A03EB.title: "Chute intelligente"
 	quest.42000000001A03EC.quest_desc: [
 		"Trie et déplace les objets, avec une priorité réglable par face.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -5144,7 +5144,7 @@
 		"Pointe vers le minerai enfoui ou les structures cachées tout près.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
 	]
-	quest.42000000001B03F6.title: "Baguette de divination"
+	quest.42000000001B03F6.title: "Bâton de divination"
 	quest.42000000001B03F7.quest_desc: [
 		"Efface la craie rituelle du sol quand tu as fini.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
@@ -5154,12 +5154,12 @@
 		"Devient un arbre qui n'appartient pas à ce monde.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
 	]
-	quest.42000000001B03F8.title: "Pousse d'Outremonde"
+	quest.42000000001B03F8.title: "Jeune pousse de l'Autre Monde"
 	quest.42000000001B03F9.quest_desc: [
 		"Bois d'un arbre étranger, utilisé dans les rituels de liaison.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
 	]
-	quest.42000000001B03F9.title: "Bûche d'Outremonde"
+	quest.42000000001B03F9.title: "Bûche de l'Autre Monde"
 	quest.42000000001B03FA.quest_desc: [
 		"Tient une offrande le temps d'un rituel de liaison.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
@@ -5199,22 +5199,22 @@
 		"Un focus qui aide un rituel à garder sa forme.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
 	]
-	quest.42000000001B0401.title: "Gemme accordée aux esprits"
+	quest.42000000001B0401.title: "Gemme accordée à l'esprit"
 	quest.42000000001B0402.quest_desc: [
 		"Minerai d'au-delà de ce monde, fondu en Iesnium.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
 	]
-	quest.42000000001B0402.title: "Iesnium brut"
+	quest.42000000001B0402.title: "Brut Iesnium"
 	quest.42000000001B0403.quest_desc: [
 		"Un métal qui n'existe que de l'autre côté.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
 	]
-	quest.42000000001B0403.title: "Lingot d'Iesnium"
+	quest.42000000001B0403.title: "L'ingot d'Iesnium "
 	quest.42000000001B0404.quest_desc: [
 		"Envoie des mineurs spirituels liés dans l'Outremonde, pour creuser.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
 	]
-	quest.42000000001B0404.title: "Puits de mine dimensionnel"
+	quest.42000000001B0404.title: "Mineshaft dimensionnelles"
 	quest.42000000001B0405.quest_desc: [
 		"L'esprit le plus faible, mis à miner sous terre.",
 		"Comment : Dictionnaire des esprits, puis Feu des esprits et des bols. Le chapitre Outremonde nomme les rites."
@@ -5380,7 +5380,7 @@
 		"Fait tourner une structure selon un horaire, comme une aiguille d'horloge.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001C0425.title: "Support d'horlogerie"
+	quest.42000000001C0425.title: "Roulement mécanique horloger"
 	quest.42000000001C0426.quest_desc: [
 		"Convertit la vapeur de la chaudière en rotation régulière.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5395,7 +5395,7 @@
 		"Chauffe les bassins assez fort pour le haut fourneau et les potions.",
 		"Comment : fabrique un brûleur de blaze vide, puis utilise-le sur un blaze d'une forteresse du Nether, après l'obsidienne de Griffe."
 	]
-	quest.42000000001C0428.title: "Brûleur de blaze"
+	quest.42000000001C0428.title: "Brûleur à Blaze"
 	quest.42000000001C0429.quest_desc: [
 		"Attrape tout ce qui tombe dedans, pour mélanger ou presser.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5475,7 +5475,7 @@
 		"Filtre quel fluide passe.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001C0438.title: "Tuyau de fluides intelligent"
+	quest.42000000001C0438.title: "Tuyau à fluide intelligent"
 	quest.42000000001C0439.quest_desc: [
 		"Pousse le fluide dans les tuyaux, dans un seul sens.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5495,7 +5495,7 @@
 		"Vide le fluide des contenants pleins.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001C043C.title: "Drain d'objets"
+	quest.42000000001C043C.title: "Égouttoir à objets"
 	quest.42000000001C043D.quest_desc: [
 		"Stocke un grand volume de liquide dans un seul bloc.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5550,7 +5550,7 @@
 		"Envoie un signal de redstone sans fil entre les plateformes.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001C0447.title: "Lien de redstone"
+	quest.42000000001C0447.title: "Liaison de redstone"
 	quest.42000000001C0448.quest_desc: [
 		"Envoie de la redstone quand un inventaire franchit un seuil.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5615,7 +5615,7 @@
 		"Un rail de propulsion, avec un contrôle de vitesse plus fin.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001C0454.title: "Rail de contrôle"
+	quest.42000000001C0454.title: "Rails contrôleurs"
 	quest.42000000001C0455.quest_desc: [
 		"Poulie à corde pour un mouvement vertical.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5630,7 +5630,7 @@
 		"Porte un chariot de portique sur toute sa longueur.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
 	]
-	quest.42000000001C0457.title: "Arbre de portique"
+	quest.42000000001C0457.title: "Rotor de portique"
 	quest.42000000001C0458.quest_desc: [
 		"Glisse sur un Arbre de portique, en traînant la structure avec lui.",
 		"Comment : fabrication Create dans JEI (établi, presse, mélangeur ou déployeur). L'alliage d'andésite et une roue à aubes lancent la ligne."
@@ -5736,7 +5736,7 @@
 		"Met l'énergie en tampon pour le réseau.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000001D046C.title: "Cellule d'énergie"
+	quest.42000000001D046C.title: "Cellule énergétique"
 	quest.42000000001D046D.quest_desc: [
 		"Stocke une réserve profonde d'énergie pour le réseau.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -5931,7 +5931,7 @@
 		"Tire des billes de matière ; charge-le avant d'en avoir besoin.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000001D0493.title: "Canon à matière"
+	quest.42000000001D0493.title: "Cannon à matière"
 	quest.42000000001D0494.quest_desc: [
 		"Un bloc clair pour les coques de contrôleur et les lignes de câble.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -5951,7 +5951,7 @@
 		"Répartit une cellule de stockage en plusieurs réserves plus petites.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
 	]
-	quest.42000000001D0497.title: "Établi de cellules"
+	quest.42000000001D0497.title: "Etabli de cellules"
 	quest.42000000001E0498.quest_desc: [
 		"Argile et poudre d'os, un pas vers les outils de porcelaine.",
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
@@ -5962,7 +5962,7 @@
 		"Un seau plus léger, plus doux pour un budget de gravier du début.",
 		"Comment : forme l'argile de porcelaine en un seau non cuit, puis fais-le fondre."
 	]
-	quest.42000000001E0499.title: "Seau de porcelaine"
+	quest.42000000001E0499.title: "Porcelain Bucket"
 	quest.42000000001E049A.quest_desc: [
 		"Fond des blocs en liquide au-dessus d'un feu.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -6047,7 +6047,7 @@
 		"Neuf blocs de terre pliés en un seul, pour la montée.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04AA.title: "Terre compressée"
+	quest.42000000001E04AA.title: "Compressed Dirt"
 	quest.42000000001E04AB.quest_desc: [
 		"Neuf roches serrées, bon marché et sans fin.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -6057,32 +6057,32 @@
 		"Neuf graviers compactés ; un tamis compressé les prend entiers.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04AC.title: "Gravier compressé"
+	quest.42000000001E04AC.title: "Compressed Gravel"
 	quest.42000000001E04AD.quest_desc: [
 		"Neuf blocs de sable pressés en un, pour le transport.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04AD.title: "Sable compressé"
+	quest.42000000001E04AD.title: "Compressed Sand"
 	quest.42000000001E04AE.quest_desc: [
 		"Neuf blocs de poussière pressés, pour la même raison.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04AE.title: "Poussière compressée"
+	quest.42000000001E04AE.title: "Compressed Dust"
 	quest.42000000001E04AF.quest_desc: [
 		"Pierre du Nether compactée, pour un inventaire plus léger.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04AF.title: "Netherrack compressé"
+	quest.42000000001E04AF.title: "Compressed Netherrack"
 	quest.42000000001E04B0.quest_desc: [
 		"Pierre de l'End compactée, utile dès que le vide demande à manger.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04B0.title: "Pierre de l'End compressée"
+	quest.42000000001E04B0.title: "Compressed End Stone"
 	quest.42000000001E04B1.quest_desc: [
 		"Ardoise des abîmes compactée, neuf pour un, et ce n'est toujours que de la pierre.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04B1.title: "Ardoise des abîmes compressée"
+	quest.42000000001E04B1.title: "Compressed Deepslate"
 	quest.42000000001E04B2.quest_desc: [
 		"Éclate d'un coup toute une pile de blocs compressés.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -6092,7 +6092,7 @@
 		"Un marteau plus faible pour briser les blocs compressés.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04B3.title: "Marteau en fer compressé"
+	quest.42000000001E04B3.title: "Compressed Iron Hammer"
 	quest.42000000001E04B4.quest_desc: [
 		"Un large tamis, plusieurs tas de gravier à la fois.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
@@ -6102,17 +6102,17 @@
 		"Tamise comme celui en chêne, juste un autre grain.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04B5.title: "Tamis en bouleau"
+	quest.42000000001E04B5.title: "Birch Sieve"
 	quest.42000000001E04B6.quest_desc: [
 		"Fermente comme n'importe quel autre tonneau.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04B6.title: "Tonneau en bouleau"
+	quest.42000000001E04B6.title: "Birch Barrel"
 	quest.42000000001E04B7.quest_desc: [
 		"Fond les blocs comme n'importe quel autre creuset.",
 		"Comment : tamis, marteau, creuset ou tonneau d'Ex Deorum. Accorde la maille au gravillon."
 	]
-	quest.42000000001E04B7.title: "Creuset en bouleau"
+	quest.42000000001E04B7.title: "Birch Crucible"
 	quest.42000000001E04B8.quest_desc: [
 		"La monnaie du Brin : gagne-la, dépense-la, ne la gaspille jamais.",
 		"Comment : récompenses de quêtes, terre à maille de silex sur un Cadre de métier, caches de l'intendant."
@@ -6153,7 +6153,7 @@
 		"Rouvre un paquet en objets en vrac.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
 	]
-	quest.42000000001F04BF.title: "Déballeur"
+	quest.42000000001F04BF.title: "Unpackager"
 	quest.42000000001F04C0.quest_desc: [
 		"Écrit une recette de fabrication sur un motif de paquet.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
@@ -6173,7 +6173,7 @@
 		"Marque une destination où un distributeur peut envoyer des paquets.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
 	]
-	quest.42000000001F04C3.title: "Marqueur de distributeur"
+	quest.42000000001F04C3.title: "Distributor Marker"
 	quest.42000000001F04C4.quest_desc: [
 		"Pousse les paquets finis sur la ligne, pour qu'on les prenne.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
@@ -6198,7 +6198,7 @@
 		"Remplit un paquet de fluide, pas d'objets.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
 	]
-	quest.42000000001F04C8.title: "Remplisseur de paquets fluides"
+	quest.42000000001F04C8.title: "Fluid Package Filler"
 	quest.42000000001F04C9.quest_desc: [
 		"Un ballot scellé d'objets, prêt à bouger ou à ranger.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
@@ -6208,12 +6208,12 @@
 		"Entasse bien plus dans un seul paquet que le modèle de base.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
 	]
-	quest.42000000001F04CA.title: "Paquet de volume"
+	quest.42000000001F04CA.title: "Volume Package"
 	quest.42000000001F04CB.quest_desc: [
 		"Marque l'endroit qu'un relais de fabrication doit atteindre.",
 		"Comment : composant de paquet, puis Emballeur / Encodeur. Il faut un réseau AE2 pour la pièce ME."
 	]
-	quest.42000000001F04CB.title: "Marqueur de relais"
+	quest.42000000001F04CB.title: "Proxy Marker"
 	quest.42000000001F04CC.quest_desc: [
 		"Relie la ligne d'emballage au métier numérique.",
 		"Comment : Réseau du Fuseau — Certus depuis le sable, le contrôleur veut un Nœud liant."
@@ -6284,12 +6284,12 @@
 		"Tient plusieurs disques quantiques dans un seul boîtier.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004D9.title: "Baie de lecteurs QIO"
+	quest.42000000002004D9.title: "Serveur du OQO"
 	quest.42000000002004DA.quest_desc: [
 		"Parcours tout ce que stocke le réseau QIO.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004DA.title: "Tableau de bord QIO"
+	quest.42000000002004DA.title: "Tableau de bord du OQO"
 	quest.42000000002004DB.quest_desc: [
 		"Porte le tableau de bord QIO dans ta poche.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -6310,7 +6310,7 @@
 		"Tient une pile énorme d'un seul objet.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004DE.title: "Bac ultime"
+	quest.42000000002004DE.title: "Conteneur ultime"
 	quest.42000000002004DF.quest_desc: [
 		"Fond plusieurs piles d'un coup, aussi vite que Mekanism peut aller.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -6350,27 +6350,27 @@
 		"Cadre le portail qu'ouvre un téléporteur.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004E6.title: "Cadre de téléporteur"
+	quest.42000000002004E6.title: "Structure de téléporteur"
 	quest.42000000002004E7.quest_desc: [
 		"Châssis du réacteur qui produit de l'antimatière.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004E7.title: "Châssis SPS"
+	quest.42000000002004E7.title: "Structure du CPC"
 	quest.42000000002004E8.quest_desc: [
 		"Fait entrer les produits chimiques et sort l'antimatière du réacteur.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004E8.title: "Port SPS"
+	quest.42000000002004E8.title: "Port du CPC"
 	quest.42000000002004E9.quest_desc: [
 		"Accélère la production d'un réacteur à antimatière.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004E9.title: "Bobine superchargée"
+	quest.42000000002004E9.title: "Bobine surchargée"
 	quest.42000000002004EA.quest_desc: [
 		"Sépare les isotopes en tournant, pour la chimie tardive.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004EA.title: "Centrifugeuse isotopique"
+	quest.42000000002004EA.title: "Centrifuge à isotope"
 	quest.42000000002004EB.quest_desc: [
 		"Dissout le minerai en une boue chimique.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -6395,12 +6395,12 @@
 		"Change l'énergie directement en chaleur, pour une chaudière.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004EF.title: "Chauffage résistif"
+	quest.42000000002004EF.title: "Chauffeur électrique"
 	quest.42000000002004F0.quest_desc: [
 		"Brûle le bois pour la chaleur, pas pour l'énergie.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004F0.title: "Chauffage à bois"
+	quest.42000000002004F0.title: "Chauffeur à combustion"
 	quest.42000000002004F1.quest_desc: [
 		"Synthèse tardive de matériaux impossibles autrement.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -6410,7 +6410,7 @@
 		"Un seul outil modulaire pour miner, creuser et plus.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004F2.title: "Outil Meka"
+	quest.42000000002004F2.title: "Outils Meka"
 	quest.42000000002004F3.quest_desc: [
 		"Armure de combinaison pour la tête, améliorée module par module.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -6435,7 +6435,7 @@
 		"Coque pour une chaudière à vapeur.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
 	]
-	quest.42000000002004F7.title: "Châssis de chaudière"
+	quest.42000000002004F7.title: "Bloc de chaudière"
 	quest.42000000002004F8.quest_desc: [
 		"Stocke une grande quantité d'énergie.",
 		"Comment : chapitre Ateliers Mekanism — fragments de minerai du tamis, puis la ligne d'usine."
@@ -6732,7 +6732,7 @@
 		"Accorde le métal à l'esprit — du cuivre autour d'un Carillon.",
 		"Comment : du cuivre autour d'un Carillon d'os. En donne deux."
 	]
-	quest.4200000000220531.title: "Résonateur de cuivre"
+	quest.4200000000220531.title: "Résonateur en cuivre"
 	quest.4200000000220532.quest_desc: [
 		"Marque les lignes du treillis — la craie veut un Éclat.",
 		"Comment : deux poudres d'os, du lapis-lazuli et un Éclat d'esprit, sans forme. Donne quatre."
@@ -6747,7 +6747,7 @@
 		"Neuf tribus ont fredonné une fois — il faut un Carillon et un Éclat de rechange.",
 		"Comment : fabrique-le, ou prends-le en récompense d'Étincelle/Tissage tribal. Clic droit : comment marche le treillis."
 	]
-	quest.4200000000220534.title: "Codex des Esprits"
+	quest.4200000000220534.title: "Codex spirituel"
 	quest.4200000000220535.quest_desc: [
 		"Tire la ley dans les battements.",
 		"Comment : place-le sous le ciel, près d'eau/vert. Pouls lent. Échelle d'Étincelle."
@@ -6802,7 +6802,7 @@
 		"Fredonne le stade un — brise le minerai. La pierre devient des éclats ; la roche, du gravier ; le métal brut, du gravillon. Le bris de gravillon dure 4 secondes à 40 de Pulsation/s.",
 		"Comment : pierre + Carillon d'os + Résonateur de cuivre. Totem de Terre dans les 8. Pierre → éclats ; roche → gravier ; métal brut → gravillon. Quatre secondes à 40 de Pulsation/s."
 	]
-	quest.420000000022053F.title: "Bris d'écho"
+	quest.420000000022053F.title: "Broyeur d'écho"
 	quest.4200000000220540.quest_desc: [
 		"Éclat qui a entendu le bris.",
 		"Comment : pierre au Bris d'écho (pas de la roche). Pierre du rang de la Source, ou pierre au toucher de soie."
@@ -6812,7 +6812,7 @@
 		"Fredonne le stade deux — accorde.",
 		"Comment : sept pierres, un Éclat d'esprit et un Résonateur de cuivre."
 	]
-	quest.4200000000220541.title: "Accord d'écho"
+	quest.4200000000220541.title: "Accordeur d'écho"
 	quest.4200000000220542.quest_desc: [
 		"Écho qui a trouvé une clé.",
 		"Comment : Codex des Esprits + Tissage tribal. La station, le totem et le coût en Pulsation sont sur la page du Codex."
@@ -6822,7 +6822,7 @@
 		"Stade de lien — noue l'esprit au métal.",
 		"Comment : sept pierres, un éclat d'améthyste et un Résonateur de cuivre."
 	]
-	quest.4200000000220543.title: "Lien d'écho"
+	quest.4200000000220543.title: "Lieur d'écho"
 	quest.4200000000220544.quest_desc: [
 		"Écho qui ne glissera pas.",
 		"Comment : Codex des Esprits + Tissage tribal. La station, le totem et le coût en Pulsation sont sur la page du Codex."
@@ -6832,7 +6832,7 @@
 		"Stade de retissage — appelle le lingot.",
 		"Comment : cinq pierres, un lingot d'or, deux Résonateurs de cuivre et un Éclat d'esprit."
 	]
-	quest.4200000000220545.title: "Manifeste d'écho"
+	quest.4200000000220545.title: "Manifesteur d'écho"
 	quest.4200000000220546.quest_desc: [
 		"Métal voulu à l'existence par le Pouls spirituel, pas par un fourneau.",
 		"Comment : Codex des Esprits + Tissage tribal. La station, le totem et le coût en Pulsation sont sur la page du Codex."
@@ -6882,7 +6882,7 @@
 		"Offre des sceaux. Demande au Métier à tisser.",
 		"Comment : cinq pierres, un éclat d'améthyste et un Carillon d'os."
 	]
-	quest.420000000022054F.title: "Piédestal de rite"
+	quest.420000000022054F.title: "Piédestal du rite"
 	quest.4200000000220550.quest_desc: [
 		"Utilise-le à mains vides et joue le Rite de la porte : frappe les temps qui tombent sur A, S, D, F. Atteins 60% et il s'ouvre ; pas besoin de Pouls.",
 		"Comment : utilise le Tambour de porte à mains vides et joue le Rite de la porte : frappe les temps qui tombent sur A, S, D, F. Atteins 60% et il s'ouvre ; pas besoin de Pouls. Lie d'abord une boussole de retour."
@@ -6902,7 +6902,7 @@
 		"Tranchant qui dépense de la Pulsation.",
 		"Comment : deux Lingots manifestés, un Carillon d'os et un bâton."
 	]
-	quest.4200000000220553.title: "Lame de l'équipement spirituel"
+	quest.4200000000220553.title: "Lame d'Espritoutillage"
 	quest.4200000000220554.quest_desc: [
 		"Pierre de la Marche, sous les pieds, dans un lieu qui ne devrait pas exister.",
 		"Comment : fais fondre la Roche de la Marche. Mine-la dans la Marche, par un Tambour de porte."
@@ -6912,7 +6912,7 @@
 		"Gravats de la Marche, simples mais abondants.",
 		"Comment : mine de la pierre de la Marche dans la Marche, par un Tambour de porte."
 	]
-	quest.4200000000220555.title: "Roche de la Marche"
+	quest.4200000000220555.title: "Pierres de la Marche"
 	quest.4200000000220556.quest_desc: [
 		"Bois poussé là où le soleil n'arrive pas.",
 		"Comment : coupe les arbres de la Marche, par un Tambour de porte."
@@ -7291,7 +7291,7 @@
 		"Deux pierres et le réactif autour du sceau ; on te rend le sceau. Aile de tempête à côté d'un Sceau d'air ; 400 de Pouls. Quarante minutes de ciel clair. Utilise accroupi la tablette sur un Brasero rituel avec ce sceau assis, dans son Cercle de rite (quatre piédestaux sur les diagonales, la craie les relie) ; le Pouls est tiré du treillis dans un rayon de huit blocs.",
 		"Comment : deux pierres, une Aile de tempête et un Sceau d'air, sans forme ; le sceau revient."
 	]
-	quest.4200000000228013.title: "Tablette de rite : ciel clair"
+	quest.4200000000228013.title: "Tablette de rite : Dégagement du ciel"
 	quest.4200000000228014.quest_desc: [
 		"Deux pierres et le réactif autour du sceau ; on te rend le sceau. Cœur de braise à côté d'un Sceau de feu ; 800 de Pouls. Hâte la nuit jusqu'au prochain lever du soleil, pour le monde entier. Utilise accroupi la tablette sur un Brasero rituel avec ce sceau assis, dans son Cercle de rite (quatre piédestaux sur les diagonales, la craie les relie) ; le Pouls est tiré du treillis dans un rayon de huit blocs.",
 		"Comment : deux pierres, un Cœur de braise et un Sceau de feu, sans forme ; le sceau revient."
@@ -7556,7 +7556,7 @@
 		"Pousse à l'état sauvage dans le Marais aux roseaux. Cueille une touffe et plante ce que tu as cueilli ; quatre stades sur sol labouré, et les abeilles le pollinisent.",
 		"Comment : pousse à l'état sauvage dans le Marais aux roseaux, par un Tambour de porte. Plante ce que tu as cueilli sur de la terre labourée."
 	]
-	quest.4200000000228048.title: "Riz de fagne"
+	quest.4200000000228048.title: "Riz de tourbière"
 	quest.4200000000228049.quest_desc: [
 		"Des Champs de neige. Ça compte aussi comme herbe pour la Bouilloire spirituelle.",
 		"Comment : pousse à l'état sauvage dans les Champs de neige, par un Tambour de porte. Plante ce que tu as cueilli sur de la terre labourée."
@@ -7701,17 +7701,17 @@
 		"La relique des Tisserands de motifs. Leur récit s'achève au Batteur des marées, à la Pierre de la marée, dans les Bas-fonds ; gagne l'épreuve et l'Ancien te la remet. Portée n'importe où dans ton inventaire, elle garde leur bienfait sur toi, quelle que soit ton estime : les stations d'Écho près de toi travaillent au double.",
 		"Comment : finis l'histoire des Tisserands de motifs avec leur Ancien ; l'épreuve est le Batteur des marées dans les Bas-fonds."
 	]
-	quest.4200000000228065.title: "Silent Gear"
+	quest.4200000000228065.title: "Engrenage silencieux"
 	quest.4200000000228066.quest_desc: [
 		"La relique des Gardiens de la colonie. Leur récit s'achève au Spectre du cairn, à l'Anneau du cairn, sur les Champs de neige ; gagne l'épreuve et l'Ancien te la remet. Portée n'importe où dans ton inventaire, elle garde leur bienfait sur toi, quelle que soit ton estime : tu n'es jamais piqué.",
 		"Comment : finis l'histoire des Gardiens de la colonie avec leur Ancien ; l'épreuve est le Spectre du cairn sur les Champs de neige."
 	]
-	quest.4200000000228066.title: "Sceau de ruche"
+	quest.4200000000228066.title: "Sceau de la ruche"
 	quest.4200000000228067.quest_desc: [
 		"La relique des Graveurs de sceaux. Leur récit s'achève à la Sentinelle de la voûte, à la Porte scellée, sur la Crête du chatoiement ; gagne l'épreuve et l'Ancien te la remet. Portée n'importe où dans ton inventaire, elle garde leur bienfait sur toi, quelle que soit ton estime : tes charmes demandent la moitié du Pouls.",
 		"Comment : finis l'histoire des Graveurs de sceaux avec leur Ancien ; l'épreuve est la Sentinelle de la voûte sur la Crête du chatoiement."
 	]
-	quest.4200000000228067.title: "Sceau courtois"
+	quest.4200000000228067.title: "Sceau poli"
 	quest.4200000000228068.quest_desc: [
 		"La relique des Couseurs du métier. Leur récit s'achève au Non-chanté, au Tambour silencieux ; gagne l'épreuve et l'Ancien te la remet. Portée n'importe où dans ton inventaire, elle garde leur bienfait sur toi, quelle que soit ton estime : tu chantes moins cher.",
 		"Comment : finis l'histoire des Couseurs du métier avec leur Ancien ; l'épreuve est le Non-chanté au Tambour silencieux."
@@ -7797,7 +7797,7 @@
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
 		"Comment : pierre + pièces de la table dans JEI. Insère un bloc et choisis une variante."
 	]
-	quest.420000000023058C.title: "Table de maçon"
+	quest.420000000023058C.title: "Mason Table"
 	quest.420000000023058D.quest_desc: [
 		"Le même tour pour le bois — cent planches à partir d'une.",
 		"Comment : table de charpentier Chipped dans JEI. La même idée que la table de maçon, pour le bois."
@@ -7807,27 +7807,27 @@
 		"Du sable en verre, puis le verre en chaque forme que la lumière voudra.",
 		"Comment : établi Chipped dans JEI (maçon, charpentier, souffleur de verre…). Mets le bloc dans la table et choisis une coupe."
 	]
-	quest.420000000023058E.title: "Souffleur de verre"
+	quest.420000000023058E.title: "Glassblower"
 	quest.420000000023058F.quest_desc: [
 		"Laine et tissu, retissés — ça tombe bien, pour une plateforme qui raccommode un Métier à tisser.",
 		"Comment : établi Chipped dans JEI (maçon, charpentier, souffleur de verre…). Mets le bloc dans la table et choisis une coupe."
 	]
-	quest.420000000023058F.title: "Table du métier"
+	quest.420000000023058F.title: "Loom Table"
 	quest.4200000000230590.quest_desc: [
 		"Feuilles, jeunes arbres et choses qui poussent, rangés dans leurs variations.",
 		"Comment : établi Chipped dans JEI (maçon, charpentier, souffleur de verre…). Mets le bloc dans la table et choisis une coupe."
 	]
-	quest.4200000000230590.title: "Établi de botaniste"
+	quest.4200000000230590.title: "Botanist Workbench"
 	quest.4200000000230591.quest_desc: [
 		"Des blocs colorés et de la pierre plus étrange. Choisis une variante ; l'établi garde le reste.",
 		"Comment : établi Chipped dans JEI (maçon, charpentier, souffleur de verre…). Mets le bloc dans la table et choisis une coupe."
 	]
-	quest.4200000000230591.title: "Établi d'alchimie"
+	quest.4200000000230591.title: "Alchemy Bench"
 	quest.4200000000230592.quest_desc: [
 		"Métal et blocs à face de machine, coupés à ton goût.",
 		"Comment : établi Chipped dans JEI (maçon, charpentier, souffleur de verre…). Mets le bloc dans la table et choisis une coupe."
 	]
-	quest.4200000000230592.title: "Table de bricolage"
+	quest.4200000000230592.title: "Tinkering Table"
 	quest.4200000000230593.quest_desc: [
 		"Donne un bloc à la Table de maçon et choisis dans le mur de variantes.",
 		"Comment : quatre pierres en carré, ou le tailleur de pierre."
@@ -7898,27 +7898,27 @@
 		"Coupe un cadre, puis habille-le de n'importe quel bloc. Une forme, toutes les peaux.",
 		"Comment : un lingot de fer au-dessus de trois cubes encadrés. Coupe les blocs encadrés."
 	]
-	quest.42000000002405A0.title: "Scie à cadres"
+	quest.42000000002405A0.title: "Framing Saw"
 	quest.42000000002405A1.quest_desc: [
 		"Un cube vierge, qui attend un bloc de camouflage.",
 		"Comment : Scie à cadres, puis cube/dalle/escaliers encadrés. Le camouflage, c'est un clic droit avec un bloc."
 	]
-	quest.42000000002405A1.title: "Cube encadré"
+	quest.42000000002405A1.title: "Framed Cube"
 	quest.42000000002405A2.quest_desc: [
 		"Un demi-cadre ; deux fois plus d'options.",
 		"Comment : Scie à cadres, puis cube/dalle/escaliers encadrés. Le camouflage, c'est un clic droit avec un bloc."
 	]
-	quest.42000000002405A2.title: "Dalle encadrée"
+	quest.42000000002405A2.title: "Framed Slab"
 	quest.42000000002405A3.quest_desc: [
 		"Des marches qui s'habillent du mur où elles se posent.",
 		"Comment : Scie à cadres, puis cube/dalle/escaliers encadrés. Le camouflage, c'est un clic droit avec un bloc."
 	]
-	quest.42000000002405A3.title: "Escaliers encadrés"
+	quest.42000000002405A3.title: "Framed Stairs"
 	quest.42000000002405A4.quest_desc: [
 		"Pour les toits et les lignes de toit que le vide ne t'a jamais donnés.",
 		"Comment : Scie à cadres, puis cube/dalle/escaliers encadrés. Le camouflage, c'est un clic droit avec un bloc."
 	]
-	quest.42000000002405A4.title: "Pente encadrée"
+	quest.42000000002405A4.title: "Framed Slope"
 	quest.42000000002405A5.quest_desc: [
 		"Les Marche-lisières ont enjambé le vide avec moins. Atteins la prochaine plateforme avec style.",
 		"Comment : ponts Macaw à partir de la pierre/bois correspondant, dans JEI."
@@ -7953,17 +7953,17 @@
 		"Un seuil qui se cache dans le mur.",
 		"Comment : Scie à cadres, puis cube/dalle/escaliers encadrés. Le camouflage, c'est un clic droit avec un bloc."
 	]
-	quest.42000000002405AB.title: "Porte encadrée"
+	quest.42000000002405AB.title: "Framed Door"
 	quest.42000000002405AC.quest_desc: [
 		"Couverture fine ; déguisement complet.",
 		"Comment : Scie à cadres, puis cube/dalle/escaliers encadrés. Le camouflage, c'est un clic droit avec un bloc."
 	]
-	quest.42000000002405AC.title: "Panneau encadré"
+	quest.42000000002405AC.title: "Framed Panel"
 	quest.42000000002405AD.quest_desc: [
 		"Une rambarde de bord à habiller selon ton goût.",
 		"Comment : Scie à cadres, puis cube/dalle/escaliers encadrés. Le camouflage, c'est un clic droit avec un bloc."
 	]
-	quest.42000000002405AD.title: "Barrière encadrée"
+	quest.42000000002405AD.title: "Framed Fence"
 	quest.42000000002405AE.quest_desc: [
 		"Gris et franc, comme le gravier dont il est sorti.",
 		"Comment : ponts Macaw à partir de la pierre/bois correspondant, dans JEI."
@@ -7994,7 +7994,7 @@
 		"Montre un objet. Un jeton, une page, un trophée.",
 		"Comment : fabrication Supplementaries dans JEI (applique, sac, coffre-fort, corde…). Les intendances nomment la station."
 	]
-	quest.42000000002505B3.title: "Étagère d'objets"
+	quest.42000000002505B3.title: "Étagère"
 	quest.42000000002505B4.quest_desc: [
 		"Un sac qui tient des sacs. Le fouillis de Récupération, rangé.",
 		"Comment : fabrication Supplementaries dans JEI (applique, sac, coffre-fort, corde…). Les intendances nomment la station."
@@ -8054,7 +8054,7 @@
 		"Monte et descends la corde au gré de la redstone.",
 		"Comment : fabrication Supplementaries dans JEI (applique, sac, coffre-fort, corde…). Les intendances nomment la station."
 	]
-	quest.42000000002505BF.title: "Bloc de poulie"
+	quest.42000000002505BF.title: "Poulie"
 	quest.42000000002505C0.quest_desc: [
 		"Tombe dessus, et le vide oublie de te punir.",
 		"Comment : fabrication Supplementaries dans JEI (applique, sac, coffre-fort, corde…). Les intendances nomment la station."
@@ -8075,7 +8075,7 @@
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
 		"Comment : lamine des plaques de cuivre dans un laminoir. Le chapitre en cours commence ici."
 	]
-	quest.42000000002605C3.title: "Fil de cuivre"
+	quest.42000000002605C3.title: "Fil en cuivre"
 	quest.42000000002605C4.quest_desc: [
 		"Rotation d'un côté, énergie de Forge de l'autre. Deux Brins se serrent la main.",
 		"Comment : Create Crafts & Additions — fil de cuivre du laminoir, puis connecteurs et moteur."
@@ -8105,7 +8105,7 @@
 		"Enchante sans la superstition de la table. Nourris-le d'expérience, obtiens une intention.",
 		"Comment : Create Enchantment Industry après un brûleur de Blaze. JEI nomme l'imprimante et le seau d'expérience."
 	]
-	quest.42000000002605C9.title: "Enchanteur de Blaze"
+	quest.42000000002605C9.title: "Blaze Enchanteur"
 	quest.42000000002605CA.quest_desc: [
 		"Pratique liquide, emportée. Les intendants y auraient vu du vulgaire et de l'utile.",
 		"Comment : Create Enchantment Industry après un brûleur de Blaze. JEI nomme l'imprimante et le seau d'expérience."
@@ -8120,27 +8120,27 @@
 		"Lave et chaleur en énergie. Un pont, pas le Bourdon lui-même.",
 		"Comment : osmium + fourneau + cuivre. Le premier générateur Mekanism."
 	]
-	quest.42000000002605CC.title: "Générateur de chaleur"
+	quest.42000000002605CC.title: "Générateur thermique"
 	quest.42000000002605CD.quest_desc: [
 		"Sur une plateforme qui n'est que ciel, le soleil est la seule ressource que personne ne rationne.",
 		"Comment : générateurs Mekanism, après la ligne Ateliers Mekanism. Le générateur de chaleur est la première fabrication."
 	]
-	quest.42000000002605CD.title: "Générateur solaire"
+	quest.42000000002605CD.title: "Panneau solaire"
 	quest.42000000002605CE.quest_desc: [
 		"Plus la plateforme est haute, plus il tourne fort. Construis en hauteur.",
 		"Comment : générateurs Mekanism, après la ligne Ateliers Mekanism. Le générateur de chaleur est la première fabrication."
 	]
-	quest.42000000002605CE.title: "Générateur de vent"
+	quest.42000000002605CE.title: "Éolienne"
 	quest.42000000002605CF.quest_desc: [
 		"Brûle le surplus du Brin Pousse. Sur une plateforme, rien n'est un déchet.",
 		"Comment : générateurs Mekanism, après la ligne Ateliers Mekanism. Le générateur de chaleur est la première fabrication."
 	]
-	quest.42000000002605CF.title: "Générateur biologique"
+	quest.42000000002605CF.title: "Bio-Générateur"
 	quest.42000000002605D0.quest_desc: [
 		"Puissance tardive pour un Clowder qui est allé loin dans Mekanism.",
 		"Comment : générateurs Mekanism, après la ligne Ateliers Mekanism. Le générateur de chaleur est la première fabrication."
 	]
-	quest.42000000002605D0.title: "Générateur à gaz"
+	quest.42000000002605D0.title: "Générateur à combustion de gaz"
 	quest.42000000002605D1.quest_desc: [
 		"Le métier numérique, dans ta poche. Retisse depuis n'importe où sur la plateforme.",
 		"Comment : Terminal sans fil après un réseau AE2 et un kit sans fil chargé. JEI nomme la fabrication."
@@ -8419,37 +8419,37 @@
 		"Le Gysahl sauvage pousse dans le Marais aux roseaux, la Steppe et les Hautes Terres, le plus dense dans le Marais. La cueillette lâche aussi des graines, et une Feuille de la Marche ou de l'herbe cassées à la houe en donnent davantage. Plante les graines chez toi sur de la terre labourée.",
 		"Comment : cueille du Gysahl sauvage dans la Marche (le Marais aux roseaux est le plus dense). La cueillette lâche aussi des graines ; plante-les chez toi sur de la terre labourée."
 	]
-	quest.42000000002805E4.title: "Vert de Gysahl"
+	quest.42000000002805E4.title: "Gysahl Green"
 	quest.42000000002805E5.quest_desc: [
 		"Un livre et une feuille de Gysahl. Utilise-le n'importe où : ses pages listent la couleur, le grade, la classe, les victoires en course et la dernière noix de chacun de tes oiseaux.",
 		"Comment : un livre et un Gysahl. Utilise-le n'importe où ; ses pages listent tes propres oiseaux."
 	]
-	quest.42000000002805E5.title: "Almanach Chocobo"
+	quest.42000000002805E5.title: "Chocobo Almanac"
 	quest.42000000002805E6.quest_desc: [
 		"Donne du Gysahl pour apprivoiser un jaune sauvage. Fabrique une selle en cuir, ficelle et fer, puis monte. Le sprint lance une ruée ; relâche pour reprendre l'endurance.",
 		"Comment : cuir, ficelle et fer. Apprivoise un jaune sauvage avec du Gysahl, puis selle-le."
 	]
-	quest.42000000002805E6.title: "Selle Chocobo"
+	quest.42000000002805E6.title: "Chocobo Saddle"
 	quest.42000000002805E7.quest_desc: [
 		"Des pépites d'or autour d'une horloge, avec un Gysahl. En la remontant, elle t'emmène au Vent des Moustaches et au retour. Après avoir marché la Marche, Esther se tient aussi dans la Salle Clowder : monte un oiseau sellé jusqu'à elle, ou demande au Guide du Vent des Moustaches.",
 		"Comment : des pépites d'or autour d'une horloge, avec un Gysahl. Utilise-la pour te remonter jusqu'au Vent des Moustaches et au retour ; un oiseau sellé vient avec toi."
 	]
-	quest.42000000002805E7.title: "Montre de poche Chocobo"
+	quest.42000000002805E7.title: "Chocobo Pocketwatch"
 	quest.42000000002805E8.quest_desc: [
 		"Un leurre en main attire les oiseaux sauvages et trace leur contour à travers un champ.",
 		"Comment : fabrique le leurre. Tiens-le pour trouver les jaunes de la Marche."
 	]
-	quest.42000000002805E8.title: "Leurre Chocobo"
+	quest.42000000002805E8.title: "Chocobo Lure"
 	quest.42000000002805E9.quest_desc: [
 		"Plante des graines de Gysahl sur de la terre labourée. Une parcelle à la maison, c'est ainsi que commence la ligne de la ferme.",
 		"Comment : cueillir du Gysahl sauvage lâche des graines, et l'herbe et la Feuille de la Marche cassées à la houe aussi. Plante sur de la terre labourée."
 	]
-	quest.42000000002805E9.title: "Graines de Gysahl"
+	quest.42000000002805E9.title: "Gysahl Seeds"
 	quest.42000000002805EA.quest_desc: [
 		"Nourris deux adultes de sexe opposé avec une noix Carob. Deux Jaunes de grade Bon ou mieux plus Carob peuvent éclore en Vert ou en Bleu. Chaque parent a besoin de 5 premières places gagnées en Classe C ; 16 combinées rendent la couleur sûre. Un Vert de grade Excellent et un Bleu de grade Excellent, chacun avec 8 premières places de Classe B, éclosent en Noir (un raté donne Blanc ; 24 combinées pour un tirage sûr).",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Carob. Les courses de Classe A le versent aussi."
 	]
-	quest.42000000002805EA.title: "Noix Carob"
+	quest.42000000002805EA.title: "Carob Nut"
 	quest.42000000002805EB.quest_desc: [
 		"Un vert à mi-échelle. Entraîne vitesse, endurance, intelligence ou coopération ; l'oiseau se rassasie de chaque sorte.",
 		"Comment : le sage Wynn, au Vent des Moustaches."
@@ -8464,7 +8464,7 @@
 		"L'Or n'éclôt jamais sans Zeio. Un Noir de grade Merveilleux plus un Jaune de grade Merveilleux, chacun avec 10 premières places gagnées en Classe A (32 combinées pour un tirage sûr).",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Zeio. Les courses de Classe S le versent rarement."
 	]
-	quest.42000000002805ED.title: "Noix Zeio"
+	quest.42000000002805ED.title: "Zeio Nut"
 	quest.42000000002805EE.quest_desc: [
 		"Des GP gagnés sur la piste. Les étals de la Place affichent tout en GP.",
 		"Comment : place-toi dans les trois premiers d'une manche au Vent des Moustaches. Monte un oiseau sellé jusqu'à Esther pour t'inscrire."
@@ -8474,7 +8474,7 @@
 		"La première noix d'accouplement. Le talent suit la noix ; la couleur suit les parents, sauf si Carob ou Zeio entre en jeu.",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Pepio. Une victoire en Classe C peut aussi le verser."
 	]
-	quest.42000000002805EF.title: "Noix Pepio"
+	quest.42000000002805EF.title: "Pepio Nut"
 	quest.42000000002805F0.quest_desc: [
 		"Deux Gysahl et de la poudre d'os. Le premier pas au-dessus des verts ordinaires.",
 		"Comment : sans forme — deux Gysahl et de la poudre d'os."
@@ -8504,22 +8504,22 @@
 		"Une noix intermédiaire. Facultative.",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Luchile."
 	]
-	quest.42000000002805F5.title: "Noix Luchile"
+	quest.42000000002805F5.title: "Luchile Nut"
 	quest.42000000002805F6.quest_desc: [
 		"Une noix intermédiaire. Facultative.",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Saraha."
 	]
-	quest.42000000002805F6.title: "Noix Saraha"
+	quest.42000000002805F6.title: "Saraha Nut"
 	quest.42000000002805F7.quest_desc: [
 		"Une noix intermédiaire. Facultative.",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Lasan."
 	]
-	quest.42000000002805F7.title: "Noix Lasan"
+	quest.42000000002805F7.title: "Lasan Nut"
 	quest.42000000002805F8.quest_desc: [
 		"Une noix d'accouplement de milieu-fin. Facultative. Bilo le gardien des noix la vend.",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Pram."
 	]
-	quest.42000000002805F8.title: "Noix Pram"
+	quest.42000000002805F8.title: "Pram Nut"
 	quest.42000000002805F9.quest_desc: [
 		"L'étal de la Foire au Vent des Moustaches vend des feux d'artifice, des laisses, des montres de poche et l'Almanach Chocobo contre des GP.",
 		"Comment : du papier plus de la poudre à canon. Éclat optionnel."
@@ -8529,38 +8529,38 @@
 		"Une noix d'accouplement tardive. Facultative.",
 		"Comment : Bilo le gardien des noix, au Vent des Moustaches, vend Porov."
 	]
-	quest.42000000002805FA.title: "Noix Porov"
+	quest.42000000002805FA.title: "Porov Nut"
 	quest.42000000002905FB.quest_desc: [
 		"Le vide n'a jamais fait pousser les buissons de Pam's. Tamise de la terre avec une maille de ficelle. Casse le jardin pour des graines arides — piment, maïs, fruit de cactus.",
 		"Les Neuf Tribus ont laissé des provisions pour le prochain Clowder. Utilise une cache de l'intendant pour déballer des fournitures au hasard, ou fabrique quatre petites caches en une moyenne et trois moyennes en une grande. Les sceaux plus grands ont plus de tirages et une réserve plus large ; les ouvrir séparément donne plus de fournitures de base. Aucune machine ni aucun jeton de progression ne s'y cache, mais chaque sceau a une petite chance d'un Éclat de Fil et une très petite chance d'un Fil de retour entier ; les plus grands sceaux ont de meilleures chances.",
 		"Comment : tamise de la terre avec une maille de ficelle ou mieux (Ex Deorum ou le Métier du vide)."
 	]
-	quest.42000000002905FB.title: "Jardin aride"
+	quest.42000000002905FB.title: "Arid Garden"
 	quest.42000000002905FC.quest_desc: [
 		"Cultures de froid, de la même terre. Casse le buisson ; plante ce qu'il te faut.",
 		"Comment : tamise de la terre avec une maille de ficelle ou mieux."
 	]
-	quest.42000000002905FC.title: "Jardin de givre"
+	quest.42000000002905FC.title: "Frost Garden"
 	quest.42000000002905FD.quest_desc: [
 		"Cultures sous les feuilles. Même tamis, autre buisson.",
 		"Comment : tamise de la terre avec une maille de ficelle ou mieux."
 	]
-	quest.42000000002905FD.title: "Jardin ombragé"
+	quest.42000000002905FD.title: "Shaded Garden"
 	quest.42000000002905FE.quest_desc: [
 		"Cultures humides. Le riz et le reste des graines à l'esprit de marais vivent ici.",
 		"Comment : tamise de la terre avec une maille de ficelle ou mieux."
 	]
-	quest.42000000002905FE.title: "Jardin détrempé"
+	quest.42000000002905FE.title: "Soggy Garden"
 	quest.42000000002905FF.quest_desc: [
 		"Cultures chaudes. Garde un buisson dans un coffre ; ils s'étendent quand même si tu les plantes.",
 		"Comment : tamise de la terre avec une maille de ficelle ou mieux."
 	]
-	quest.42000000002905FF.title: "Jardin tropical"
+	quest.42000000002905FF.title: "Tropical Garden"
 	quest.4200000000290600.quest_desc: [
 		"Le dernier des six. Chaque graine HarvestCraft sur la plateforme commence comme l'un de ces buissons.",
 		"Comment : tamise de la terre avec une maille de ficelle ou mieux."
 	]
-	quest.4200000000290600.title: "Jardin venteux"
+	quest.4200000000290600.title: "Windy Garden"
 	quest.4200000000290601.quest_desc: [
 		"Pas la planche à découper de Farmer's Delight. Du cuivre, un bâton et une planche. Prépare fruits et légumes avant qu'ils n'aillent dans la marmite.",
 		"Comment : du cuivre, un bâton et une planche. Pas la planche à découper de Farmer's Delight."
@@ -8580,22 +8580,22 @@
 		"Sauces et réductions. Du cuivre et un bâton. Garde-le près du pot.",
 		"Comment : du cuivre et un bâton."
 	]
-	quest.4200000000290604.title: "Casserole"
+	quest.4200000000290604.title: "Saucepan"
 	quest.4200000000290605.quest_desc: [
 		"Anneau de terre cuite. Tartes, pains, et tout ce qui veut une forme de four.",
 		"Comment : huit terres cuites autour d'un centre vide."
 	]
-	quest.4200000000290605.title: "Moule"
+	quest.4200000000290605.title: "Bakeware"
 	quest.4200000000290606.quest_desc: [
 		"Planches et un bâton. Appareils, pâtes et salades. Le poste calme.",
 		"Comment : des planches et un bâton."
 	]
-	quest.4200000000290606.title: "Bol à mélanger"
+	quest.4200000000290606.title: "Mixing Bowl"
 	quest.4200000000290607.quest_desc: [
 		"Terre cuite. Fruit dedans, jus dehors. Associe-le à un arbre, pas à un potager.",
 		"Comment : terre cuite. Quatre en T."
 	]
-	quest.4200000000290607.title: "Presse-fruits"
+	quest.4200000000290607.title: "Juicer"
 	quest.4200000000290608.quest_desc: [
 		"Des bâtons et une bûche. Aplatis la pâte. Le moule attend.",
 		"Comment : des bâtons de chaque côté d'une bûche."
@@ -8605,37 +8605,37 @@
 		"Cailloux d'andésite d'un tamis de silex, puis un bâton. Farine, épices, pâtes.",
 		"Comment : andésite (cailloux de terre ou de gravier au tamis de silex) et un bâton."
 	]
-	quest.4200000000290609.title: "Broyeur"
+	quest.4200000000290609.title: "Grinder"
 	quest.420000000029060A.quest_desc: [
 		"Un seau d'eau divisé en huit. La plupart des recettes veulent ceci, pas un seau vanilla.",
 		"Comment : un seau d'eau → huit eaux douces."
 	]
-	quest.420000000029060A.title: "Eau douce"
+	quest.420000000029060A.title: "Fresh Water"
 	quest.420000000029060B.quest_desc: [
 		"Pas de vaches sur la plateforme. Noix de coco (terre à maille de fer) plus eau douce, ou divise un seau de lait plus tard.",
 		"Comment : noix de coco (terre à maille de fer) plus eau douce, ou divise un seau de lait."
 	]
-	quest.420000000029060B.title: "Lait frais"
+	quest.420000000029060B.title: "Fresh Milk"
 	quest.420000000029060C.quest_desc: [
 		"De l'eau dans un pot, ou un passage au broyeur. Presque chaque recette salée le demande.",
 		"Comment : pot plus eau ou eau douce. Le pot revient."
 	]
-	quest.420000000029060C.title: "Sel"
+	quest.420000000029060C.title: "Salt"
 	quest.420000000029060D.quest_desc: [
 		"Du blé dans le broyeur. La pâte commence ici.",
 		"Comment : broyeur plus blé (ou une autre plante à farine). Le broyeur revient."
 	]
-	quest.420000000029060D.title: "Farine"
+	quest.420000000029060D.title: "Flour"
 	quest.420000000029060E.quest_desc: [
 		"Farine, sel et eau douce. Tartes et pains partagent cette boule.",
 		"Comment : bol à mélanger, farine, eau, sel."
 	]
-	quest.420000000029060E.title: "Pâte"
+	quest.420000000029060E.title: "Dough"
 	quest.420000000029060F.quest_desc: [
 		"Des os ou des légumes dans le pot. Les soupes veulent une bouteille de ceci, pas un bouillon au jugé.",
 		"Comment : pot plus un os (les Gardiens de la plateforme vendent des os) ou des légumes de reste."
 	]
-	quest.420000000029060F.title: "Bouillon"
+	quest.420000000029060F.title: "Stock"
 	quest.4200000000290610.quest_desc: [
 		"Terre à maille de fer. Fais-le pousser sur la plateforme ; le chêne vanilla ne lâche pas les pommes de Pam's.",
 		"Comment : tamise de la terre avec une maille de fer pour des pousses de cuisine, puis fais pousser le fruit."
@@ -8675,12 +8675,12 @@
 		"Presse-fruits plus fruits mélangés. Une boisson de la plateforme qui n'est pas du jus de pastèque.",
 		"Comment : presse-fruits et fruits mélangés."
 	]
-	quest.4200000000290617.title: "Punch aux fruits"
+	quest.4200000000290617.title: "Fruit Punch"
 	quest.4200000000290618.quest_desc: [
 		"Poêle, pain, fromage. Un déjeuner vite fait pendant que les arbres poussent.",
 		"Comment : poêle, pain, beurre et fromage — le tout vient d'eau douce, de lait de coco et de farine."
 	]
-	quest.4200000000290618.title: "Fromage grillé"
+	quest.4200000000290618.title: "Grilled Cheese"
 	quest.4200000000290619.quest_desc: [
 		"Piments arides, tomate, oignon, haricot, feuille d'épice, et viande ou tofu soyeux. Food Extended commence à se rendre utile.",
 		"Comment : marmite, piment aride, tomate, oignon, haricot, feuille d'épice, et viande ou tofu soyeux."
@@ -8695,7 +8695,7 @@
 		"Pâte, sauce, viande. Moule. Un vrai repas HarvestCraft.",
 		"Comment : moule, pâte, tomate, fromage, pepperoni (bacon de porc, ou bacon de tofu à partir d'érable + soja)."
 	]
-	quest.420000000029061B.title: "Pizza au pepperoni"
+	quest.420000000029061B.title: "Pepperoni Pizza"
 	quest.420000000029061C.quest_desc: [
 		"Riz du jardin détrempé, carotte, oignon, petits pois et un œuf — le tofu soyeux prend sa place tant qu'il n'y a pas de poules.",
 		"Comment : poêle, riz du jardin détrempé, carotte, oignon, petits pois et un œuf — le tofu soyeux compte comme œuf."
@@ -8705,7 +8705,7 @@
 		"Feuille de thé et feuille d'épice dans la marmite. Le jardin ombragé et le détrempé couvrent les deux.",
 		"Comment : marmite, feuille de thé et feuille d'épice. Le jardin ombragé lâche le thé et l'épice."
 	]
-	quest.420000000029061D.title: "Thé vert"
+	quest.420000000029061D.title: "Green Tea"
 	quest.420000000029061E.quest_desc: [
 		"Huile et fruit salé. Prise facultative de la maille de fer.",
 		"Comment : tamise de la terre avec une maille de fer pour des pousses de cuisine, puis fais pousser le fruit."
@@ -8730,12 +8730,12 @@
 		"Graisse de friture. Base facultative.",
 		"Comment : presse des graines ou des olives dans JEI. Base facultative."
 	]
-	quest.4200000000290622.title: "Huile de cuisson"
+	quest.4200000000290622.title: "Cooking Oil"
 	quest.4200000000290623.quest_desc: [
 		"Lait et sel. Base facultative.",
 		"Comment : marmite et lait (le lait de coco à l'eau douce convient)."
 	]
-	quest.4200000000290623.title: "Beurre"
+	quest.4200000000290623.title: "Butter"
 	quest.4200000000290624.quest_desc: [
 		"Un œuf dans le presse-fruits. Facultatif.",
 		"Comment : presse-fruits et un œuf (le tofu soyeux compte). Facultatif."
@@ -8745,7 +8745,7 @@
 		"Planche à découper, fruits mélangés. Facultatif.",
 		"Comment : planche à découper et fruits mélangés. Facultatif."
 	]
-	quest.4200000000290625.title: "Salade de fruits"
+	quest.4200000000290625.title: "Fruit Salad"
 	quest.4200000000290626.quest_desc: [
 		"Soirée pâtes. Facultatif.",
 		"Comment : les jardins et les arbres fruitiers fournissent les ingrédients. Le tofu de soja remplace la viande et l'œuf. JEI nomme le poste."
@@ -8755,12 +8755,12 @@
 		"Petit-déjeuner pour frimer. Facultatif.",
 		"Comment : les jardins et les arbres fruitiers fournissent les ingrédients. Le tofu de soja remplace la viande et l'œuf. JEI nomme le poste."
 	]
-	quest.4200000000290627.title: "Pancakes au bacon"
+	quest.4200000000290627.title: "Bacon Pancakes"
 	quest.4200000000290628.quest_desc: [
 		"Terre à maille de fer pour un jeune avocatier, puis poêle, toast, sel, ail, feuille d'épice.",
 		"Comment : jeune avocatier de la maille de fer, puis poêle avec toast, sel, ail, feuille d'épice."
 	]
-	quest.4200000000290628.title: "Tartine d'avocat"
+	quest.4200000000290628.title: "Avocado Toast"
 	quest.4200000000290629.quest_desc: [
 		"Pas le hamburger de Delight. Facultatif.",
 		"Comment : les jardins et les arbres fruitiers fournissent les ingrédients. Le tofu de soja remplace la viande et l'œuf. JEI nomme le poste."
@@ -8770,7 +8770,7 @@
 		"Presse-fruits, pommes. Facultatif.",
 		"Comment : presse-fruits et pommes de Pam's. Facultatif."
 	]
-	quest.420000000029062A.title: "Jus de pomme"
+	quest.420000000029062A.title: "Apple Juice"
 	quest.420000000029062B.quest_desc: [
 		"Poêle, pain et beurre. Facultatif.",
 		"Comment : poêle, pain et beurre. Facultatif."
@@ -8792,13 +8792,13 @@
 		"Vitre et bâtons. Regarde une culture pour lire croissance, rendement et force sans la cueillir.",
 		"Comment : une vitre entre des bâtons, puis un manche en bâton. Regarde une culture plantée."
 	]
-	quest.42000000002A062E.title: "Loupe"
+	quest.42000000002A062E.title: "Magnifying Glass"
 	quest.42000000002A062F.quest_desc: [
 		"Verre, dalle de pierre, planches, bâtons. Mets une graine avec le journal. La reproduction devient visible.",
 		"La fertilité est la statistique qui pousse le croisement : une graine neuve est à 1 sur 10, et chaque point augmente la chance qu'une plante soit choisie comme parent. Analyse, replante les meilleures, et les croisements viennent plus vite.",
 		"Comment : vitres, dalle de pierre, planches et bâtons. Pose le journal, puis une graine."
 	]
-	quest.42000000002A062F.title: "Analyseur de graines"
+	quest.42000000002A062F.title: "Seed Analyzer"
 	quest.42000000002A0630.quest_desc: [
 		"Les mauvaises herbes sont coupées dans ce paquet, mais le râteau retire encore un bâton. Emporte-en un quand même.",
 		"Comment : une barrière en bois sur un bâton. Les mauvaises herbes sont coupées ; il retire quand même un bâton."
@@ -8823,7 +8823,7 @@
 		"Des bâtons plus solides. Mêmes règles de plantation, moins de souci si tu les bouscules.",
 		"Comment : deux pépites de fer en colonne en font huit."
 	]
-	quest.42000000002A0634.title: "Bâtons de culture en fer"
+	quest.42000000002A0634.title: "Iron Crop Sticks"
 	quest.42000000002A0635.quest_desc: [
 		"Le râteau amélioré. Encore une habitude, même sans mauvaises herbes.",
 		"Comment : des barreaux de fer sur un bâton."
@@ -8833,22 +8833,22 @@
 		"Garde de l'eau pour les canaux. Une ferme sur la plateforme qui ne porte pas de seaux chaque matin.",
 		"Comment : des planches. Garde de l'eau pour les canaux."
 	]
-	quest.42000000002A0636.title: "Réservoir d'irrigation"
+	quest.42000000002A0636.title: "Irrigation Tank"
 	quest.42000000002A0637.quest_desc: [
 		"Fais courir l'eau du réservoir le long du rang. Les cultures boivent au canal, pas à toi.",
 		"Comment : sans forme, à partir d'un réservoir — un réservoir devient huit canaux."
 	]
-	quest.42000000002A0637.title: "Canal d'irrigation"
+	quest.42000000002A0637.title: "Irrigation Channel"
 	quest.42000000002A0638.quest_desc: [
 		"Arrête et relance une ligne sans casser le réservoir.",
 		"Comment : barreaux de fer, teinture rouge et un lingot de fer. Arrête et relance une ligne sans casser le réservoir."
 	]
-	quest.42000000002A0638.title: "Vanne de canal"
+	quest.42000000002A0638.title: "Channel Valve"
 	quest.42000000002A0639.quest_desc: [
 		"De la pluie dans un carré. Pose-le sur un canal, au-dessus des bâtons.",
 		"Comment : pose-le sur un canal, au-dessus des bâtons. JEI nomme la fabrication."
 	]
-	quest.42000000002A0639.title: "Arroseur"
+	quest.42000000002A0639.title: "Sprinkler"
 	quest.42000000002A063A.quest_desc: [
 		"Couvre un canal pour pouvoir marcher le long du rang.",
 		"Comment : couvre un canal pour pouvoir marcher le long du rang."
@@ -8858,12 +8858,12 @@
 		"Lis la pièce. Lumière, humidité, la raison pour laquelle une culture a calé.",
 		"Comment : fabrique-le, puis place-le dans la pièce pour lire lumière et humidité."
 	]
-	quest.42000000002A063B.title: "Moniteur de serre"
+	quest.42000000002A063B.title: "Greenhouse Monitor"
 	quest.42000000002A063C.quest_desc: [
 		"Bâtons tardifs. Ignifuges, têtus, pour les plantes qui demandent trop au bois. Deux cultures mûres voisines peuvent se croiser.",
 		"Comment : deux obsidiennes en colonne en font huit. Deux cultures mûres voisines peuvent se croiser."
 	]
-	quest.42000000002A063C.title: "Bâtons de culture en obsidienne"
+	quest.42000000002A063C.title: "Obsidian Crop Sticks"
 	quest.42000000002A063D.quest_desc: [
 		"Un canal sur lequel tu peux marcher. Facultatif.",
 		"Comment : un canal sur lequel tu peux marcher. Facultatif."
@@ -8883,7 +8883,7 @@
 		"Du combustible d'une culture. Facultatif.",
 		"Comment : bâtons de culture en bois à partir de bâtons ; le journal est un livre et plume plus des graines ; l'analyseur est verre et bois. Plante sur de la terre labourée."
 	]
-	quest.42000000002A0640.title: "Galet de charbon"
+	quest.42000000002A0640.title: "Coal Pebble"
 	quest.42000000002A0641.quest_desc: [
 		"Culture de minerai tardive. Facultatif.",
 		"Comment : bâtons de culture en bois à partir de bâtons ; le journal est un livre et plume plus des graines ; l'analyseur est verre et bois. Plante sur de la terre labourée."
@@ -8898,12 +8898,12 @@
 		"Culture de minerai au sommet. Facultatif et lent.",
 		"Comment : bâtons de culture en bois à partir de bâtons ; le journal est un livre et plume plus des graines ; l'analyseur est verre et bois. Plante sur de la terre labourée."
 	]
-	quest.42000000002A0643.title: "Lamelle de netherite"
+	quest.42000000002A0643.title: "Netherite Sliver"
 	quest.42000000002A0644.quest_desc: [
 		"La fleur propre d'AgriCraft. Facultatif.",
 		"Comment : bâtons de culture en bois à partir de bâtons ; le journal est un livre et plume plus des graines ; l'analyseur est verre et bois. Plante sur de la terre labourée."
 	]
-	quest.42000000002A0644.title: "Pétale d'Amathyllis"
+	quest.42000000002A0644.title: "Amathyllis Petal"
 	reward.5000000000060135.title: "Fil de retour : +1 vie de Clowder"
 	reward.5000000000080193.title: "Fil de retour : +1 vie de Clowder"
 	reward.50000000000901CC.title: "Fil de retour : +1 vie de Clowder"

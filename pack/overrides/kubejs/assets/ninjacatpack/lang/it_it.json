@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "NORD",
   "sign.ninjacatpack.hub.north.2": "Il Telaio del Taglio",
   "sign.ninjacatpack.hub.north.3": "Focolare che fa le fusa",
-  "sign.ninjacatpack.hub.north.4": "Cappella dei Cucitori del telaio"
+  "sign.ninjacatpack.hub.north.4": "Cappella dei Cucitori del telaio",
+  "book.ninjacatpack.howto.campaign": "LA CAMPAGNA\n\nCodice dei Baffi: inizia da “Start here”.\nAccento grave (`): missioni.\n\nOgni Filo finisce in un NODO che dà un gettone. Mettilo in un Palo di tensione.\n\nTerra, Pietra, Germoglio, Artiglio, DUE tra Orologio / Sciame / Scintilla, Sigillo, Fuso.",
+  "book.ninjacatpack.howto.post": "PALO DI TENSIONE\n\nTronchi attorno a un Nodo legante, Filo in cima.\nClic destro con un gettone per inserirlo.\n\nCordone di treccia: 16 Filamenti di Filo.\nFrammento del telaio: pietra della Marcia, con tutti e nove. Inseriscilo per ritessere.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] Impossibile darti “Come iniziare”. Leggi la copia nel forziere del molo o sul leggio.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Leggi “Come iniziare” prima di reclamare una piattaforma.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] Clic destro sulla Carta dell'isola (o premi K) → Crea squadra → scegli una piattaforma."
 }

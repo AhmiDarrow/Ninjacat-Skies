@@ -134,14 +134,15 @@ def book_problems(keys):
 
 def kubejs_problems(keys):
     bad = []
-    for path in (ROOT / 'pack/overrides/kubejs/client_scripts').glob('*.js'):
+    for path in (ROOT / 'pack/overrides/kubejs').glob('*_scripts/*.js'):
         text = path.read_text(encoding='utf-8')
         for n, line in enumerate(text.splitlines(), 1):
             if 'lang-exempt:' in line:
                 continue
             if re.search(r"Text\.(?!translate)\w+\(\s*'[^']*[A-Za-z]{2,}", line) or re.search(r'Text\.(?!translate)\w+\(\s*"[^"]*[A-Za-z]{2,}', line):
                 bad.append(f'{path.relative_to(ROOT).as_posix()}:{n}: {line.strip()[:110]}')
-        for key in re.findall(r"Text\.translate\(\s*['\"]([a-z0-9_.\-]+)['\"]", text):
+        checked = '\n'.join(line for line in text.splitlines() if 'lang-exempt:' not in line)
+        for key in re.findall(r"Text\.translate\(\s*['\"]([a-z0-9_.\-]+)['\"]", checked):
             if key not in keys:
                 bad.append(f'{path.relative_to(ROOT).as_posix()}: key missing from lang: {key}')
     return bad

@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "PÓŁNOC",
   "sign.ninjacatpack.hub.north.2": "Krosno Cięcia",
   "sign.ninjacatpack.hub.north.3": "Mruczący kominek",
-  "sign.ninjacatpack.hub.north.4": "Kaplica Szwaczy krosna"
+  "sign.ninjacatpack.hub.north.4": "Kaplica Szwaczy krosna",
+  "book.ninjacatpack.howto.campaign": "KAMPANIA\n\nKodeks Wąsów: najpierw „Start here”.\nKlawisz ` : zadania.\n\nKażda Nić kończy się WĘZŁEM, który daje żeton. Osadź go w Słupie napięcia.\n\nGleba, Kamień, Kiełek, Pazur, DWIE z: Zegar / Rój / Iskra, Pieczęć, Wrzeciono.",
+  "book.ninjacatpack.howto.post": "SŁUP NAPIĘCIA\n\nKłody wokół Węzła wiążącego, Nić na górze.\nKliknij żetonem PPM, by go osadzić.\n\nSznur warkocza: 16 Włókien Nici.\nFragment krosna: kamień Marszu, gdy siedzi wszystkie dziewięć. Osadź go, by utkać na nowo.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] Nie udało się dać „Jak zacząć”. Przeczytaj kopię w skrzyni na przystani lub na pulpicie.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Przeczytaj „Jak zacząć”, zanim zajmiesz platformę.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] Kliknij PPM Kartę wyspy (lub naciśnij K) → Utwórz drużynę → wybierz platformę."
 }

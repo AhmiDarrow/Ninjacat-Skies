@@ -1024,10 +1024,10 @@
     "name": "Ninjacat Skies Core",
     "slug": "ninjacat-skies-core",
     "projectId": 1689718,
-    "fileId": 9642286,
-    "filename": "ninjacatskies-core-0.6.0.jar",
+    "fileId": 9850769,
+    "filename": "ninjacatskies-core-0.6.1.jar",
     "releaseType": 1,
-    "sha1": "3e80d2f2ff370b97a8cd21e9ada46908e0910166"
+    "sha1": "878f9f64ed47e1871debddf0ef37872445c38f8f"
   },
   {
     "key": "Shamanic Mounts",
@@ -1044,10 +1044,10 @@
     "name": "TribalPower",
     "slug": "tribalpower",
     "projectId": 1684851,
-    "fileId": 9115266,
-    "filename": "tribalpower-6.1.0.jar",
+    "fileId": 9643408,
+    "filename": "tribalpower-6.2.0.jar",
     "releaseType": 1,
-    "sha1": "94ef53b9cbb39c84a65eac74d1abc5262043ad59"
+    "sha1": "24e918f87477693b92cda025ce58c57eb063a230"
   },
   {
     "key": "Lithium",

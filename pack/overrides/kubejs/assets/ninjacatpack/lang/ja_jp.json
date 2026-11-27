@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "北",
   "sign.ninjacatpack.hub.north.2": "断ちの織機",
   "sign.ninjacatpack.hub.north.3": "ごろごろの炉",
-  "sign.ninjacatpack.hub.north.4": "織機の縫い手の礼拝堂"
+  "sign.ninjacatpack.hub.north.4": "織機の縫い手の礼拝堂",
+  "book.ninjacatpack.howto.campaign": "冒険の流れ\n\nウィスカー写本：まず「Start here」。\n` キー：クエスト。\n\n各ストランドは最後の結び目で証がもらえる。張力の柱にはめる。\n\n土壌、石、芽、爪、時計・群れ・火花から2つ、印、紡錘。",
+  "book.ninjacatpack.howto.post": "張力の柱\n\n結束の結びを原木で囲み、上に糸。\n証を持って右クリックではめる。\n\n編み紐：ストランド繊維16個。\n織機の欠片：9つはめた後、マーチ石で。欠片をはめて織り直す。",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] 「はじめかた」を渡せなかった。船着き場のチェストか書見台の写しを読もう。",
+  "message.ninjacatpack.howto.read_first": "[Skybound] 足場を取る前に「はじめかた」を読もう。",
+  "message.ninjacatpack.howto.create_team": "[Skybound] 島の憲章を右クリック（またはKキー）→ チーム作成 → 足場を選ぶ。"
 }

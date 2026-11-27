@@ -505,7 +505,7 @@
 		"Zapasowy zestaw uderzeń.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.420000000002004C.title: "Drewniany młot"
+	quest.420000000002004C.title: "Wooden Hammer"
 	quest.420000000002004D.quest_desc: [
 		"Materia z grysu. Sześćdziesiąt cztery kamienie, które godzinę temu były pyłem.",
 		"Jak: lawa obok wody (albo topniejący lód). Uderz kamień młotem. Stragan Śpiewaków żwiru w /clowder hub sprzedaje wiązkę."
@@ -542,17 +542,17 @@
 		"Żelazo jest niskie i cierpliwe. Osiem bryłek z siatki.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.4200000000020053.title: "Bryłka rudy żelaza"
+	quest.4200000000020053.title: "Iron Ore Chunk"
 	quest.4200000000020054.quest_desc: [
 		"Przesiany ze żwiru, po trochu. Siatka znajduje miedź wcześniej niż twoje oczy.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.4200000000020054.title: "Bryłka rudy miedzi"
+	quest.4200000000020054.title: "Copper Ore Chunk"
 	quest.4200000000020055.quest_desc: [
 		"Złoto ledwo się fatyguje, żeby odpowiedzieć. Cztery wystarczą.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.4200000000020055.title: "Bryłka rudy złota"
+	quest.4200000000020055.title: "Gold Ore Chunk"
 	quest.4200000000020056.quest_desc: [
 		"Zasil linię.",
 		"Jak: przesiej żwir albo przetop rudę węgla."
@@ -602,12 +602,12 @@
 		"Twardsze ciosy, dłuższe życie.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.420000000002005F.title: "Kamienny młot"
+	quest.420000000002005F.title: "Stone Hammer"
 	quest.4200000000020060.quest_desc: [
 		"Kruszy rudę w żwir i grys, głośna sztuczka za sitem.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.4200000000020060.title: "Żelazny młot"
+	quest.4200000000020060.title: "Iron Hammer"
 	quest.4200000000020061.quest_desc: [
 		"Szersza siatka, dziewięć naraz.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -802,7 +802,7 @@
 		"Cztery wokół ołtarza.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000030086.title: "Postument infuzji"
+	quest.4200000000030086.title: "Piedestał infuzji"
 	quest.4200000000030087.quest_desc: [
 		"Wyhoduj więcej platformy.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
@@ -877,12 +877,12 @@
 		"Lepsza rola. Wiązacze korzeni pochwaliliby to.",
 		"Jak: postaw Kompost organiczny i czekaj; powoli dojrzewa w Bogatą glebę."
 	]
-	quest.4200000000030095.title: "Bogata gleba"
+	quest.4200000000030095.title: "Żyzna gleba"
 	quest.4200000000030096.quest_desc: [
 		"Karm glebę, która karmi ciebie.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
 	]
-	quest.4200000000030096.title: "Kompost organiczny"
+	quest.4200000000030096.title: "Kompost"
 	quest.4200000000030097.quest_desc: [
 		"Zasadź rząd, nakarm konia albo zjedz po prostu na surowo.",
 		"Jak: wytwórz, przetop, przesiej albo weź z potwora. JEI wymienia każde źródło na platformie."
@@ -983,13 +983,13 @@
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: cztery papiery i jeden niebieski barwnik, bez kształtu. Daje cztery arkusze."
 	]
-	quest.42000000000400A9.title: "Papier planów"
+	quest.42000000000400A9.title: "Blueprint Paper"
 	quest.42000000000400AA.quest_desc: [
 		"Plany w pudełku.",
 		"Cztery Papier planów, bez kształtu — przejęcie platformy kasuje dar powitalny Silent Gear. Prawy przycisk, by rozpakować plany startowe.",
 		"Jak: cztery Papier planów, bez kształtu. Prawy przycisk, by rozpakować plany startowe. Przejęcie platformy kasuje dar powitalny Silent Gear."
 	]
-	quest.42000000000400AA.title: "Paczka planów"
+	quest.42000000000400AA.title: "Blueprint Package"
 	quest.42000000000400AB.quest_desc: [
 		"Szablon, od którego startuje modułowe narzędzie, zanim dodasz części.",
 		"Jak: rozpakuj Paczkę planów albo JEI. Pazur nazywa linię narzędzi."
@@ -1019,7 +1019,7 @@
 		"Miejsce, by rosnąć.",
 		"Jak: JEI po Papier planów. Pazur nazywa linię ulepszeń."
 	]
-	quest.42000000000400B0.title: "Podstawa ulepszenia"
+	quest.42000000000400B0.title: "Upgrade Base"
 	quest.42000000000400B1.quest_desc: [
 		"Trzydzieści dwa sztabki materiału na części.",
 		"Jak: przetop surowe żelazo / grys żelaza (piec albo Piec żaru). Przesiej żwir po kawałki."
@@ -1257,7 +1257,7 @@
 		"Ładuje przedmioty w pierścieniu prętów.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
 	]
-	quest.42000000000500DE.title: "Kula zasilająca"
+	quest.42000000000500DE.title: "Energizing Orb"
 	quest.42000000000500DF.quest_desc: [
 		"Nakarm kulę.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
@@ -1272,7 +1272,7 @@
 		"Obraca maszyny w miejscu, zamiast je niszczyć i stawiać od nowa.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
 	]
-	quest.42000000000500E1.title: "Klucz"
+	quest.42000000000500E1.title: "Wrench"
 	quest.42000000000500E2.quest_desc: [
 		"Przetapia rudę dwa razy szybciej niż zwykły piec, tylko rudę.",
 		"Jak: wytwórz, przetop, przesiej albo weź z potwora. JEI wymienia każde źródło na platformie."
@@ -1427,7 +1427,7 @@
 		"Znaczy linie kraty — potrzebny Duchowy odłamek.",
 		"Jak: dwie mączki kostne, lazuryt i Duchowy odłamek, bez kształtu. Daje cztery."
 	]
-	quest.4200000000050100.title: "Kreda rytualna"
+	quest.4200000000050100.title: "Rytualna kreda"
 	quest.4200000000050101.quest_desc: [
 		"Bęben uderzony, Puls utrzymany, rezonator osadzony.",
 		"Napnij Nić: Bębnoserca odpowiadają.",
@@ -1457,7 +1457,7 @@
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: andezyt + bryłka żelaza w stole rzemieślniczym (albo w mieszalniku)."
 	]
-	quest.4200000000060105.title: "Stop andezytowy"
+	quest.4200000000060105.title: "Stop andezytu"
 	quest.4200000000060106.quest_desc: [
 		"Kręgosłup obrotu.",
 		"Jak: stop andezytowy w przepisie cięcia / wytwarzania, podanym w JEI."
@@ -1467,7 +1467,7 @@
 		"Jedna zębatka. Potem ta sama zębatka znowu.",
 		"Jak: wał + deski."
 	]
-	quest.4200000000060107.title: "Zębatka"
+	quest.4200000000060107.title: "Koło zębate"
 	quest.4200000000060108.quest_desc: [
 		"Więcej zębów, wolniejszy obrót.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1487,32 +1487,32 @@
 		"Daje obrót ręcznie, gdy nic innego jeszcze się nie kręci.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006010B.title: "Korba"
+	quest.420000000006010B.title: "Ręczna korba"
 	quest.420000000006010C.quest_desc: [
 		"Miel żwir na pył, bez młota.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006010C.title: "Żarno"
+	quest.420000000006010C.title: "Młynek"
 	quest.420000000006010D.quest_desc: [
 		"Misa trzyma mieszanie Create.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006010D.title: "Misa"
+	quest.420000000006010D.title: "Tygiel"
 	quest.420000000006010E.quest_desc: [
 		"Płyty i ścieżki.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006010E.title: "Prasa mechaniczna"
+	quest.420000000006010E.title: "Mechaniczna prasa"
 	quest.420000000006010F.quest_desc: [
 		"Przepisy hurtowo, szybko.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006010F.title: "Mieszalnik mechaniczny"
+	quest.420000000006010F.title: "Mechaniczny mikser"
 	quest.4200000000060110.quest_desc: [
 		"Płaska powierzchnia, która trzyma przedmiot w miejscu dla taśmy albo prasy.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060110.title: "Podstawka"
+	quest.4200000000060110.title: "Składnica"
 	quest.4200000000060111.quest_desc: [
 		"Taśmy wożą przedmioty wzdłuż wałów.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1527,27 +1527,27 @@
 		"Mycie, suszenie i żwir w piasek.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060113.title: "Obudowany wentylator"
+	quest.4200000000060113.title: "Obudowany wiatrak"
 	quest.4200000000060114.quest_desc: [
 		"Ręka na wale.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060114.title: "Rozmieszczacz"
+	quest.4200000000060114.title: "Aplikator"
 	quest.4200000000060115.quest_desc: [
 		"Tnie kłody na deski albo drzewa na tarcicę, gdy starczy obrotu.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060115.title: "Piła mechaniczna"
+	quest.4200000000060115.title: "Mechaniczna piła"
 	quest.4200000000060116.quest_desc: [
 		"Wierć przez bloki żwiru.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060116.title: "Wiertło mechaniczne"
+	quest.4200000000060116.title: "Mechaniczne wiertło"
 	quest.4200000000060117.quest_desc: [
 		"Tnij uprawy wirującym łukiem.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060117.title: "Żniwiarka mechaniczna"
+	quest.4200000000060117.title: "Mechaniczna żniwiarka"
 	quest.4200000000060118.quest_desc: [
 		"Ładuje albo opróżnia ładunek zatrzymanego pociągu, a ty nie podnosisz ani jednej skrzyni.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1557,22 +1557,22 @@
 		"Składa pojemność dziewięciu skrzyń w jeden duży blok.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060119.title: "Skarbiec przedmiotów"
+	quest.4200000000060119.title: "Kontener na przedmioty"
 	quest.420000000006011A.quest_desc: [
 		"Trzyma ciecz hurtowo i łączy się z sąsiadami, żeby trzymać więcej.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006011A.title: "Zbiornik płynów"
+	quest.420000000006011A.title: "Zbiornik"
 	quest.420000000006011B.quest_desc: [
 		"Wlewaj płyny do mis.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006011B.title: "Wylewka"
+	quest.420000000006011B.title: "Dozownik"
 	quest.420000000006011C.quest_desc: [
 		"Pompuj płyny ze źródła.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006011C.title: "Wciągarka węża"
+	quest.420000000006011C.title: "Krążek z wężem"
 	quest.420000000006011D.quest_desc: [
 		"Oznacza stronę budowy od płynów, strojniejsza kuzynka andezytu.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1588,12 +1588,12 @@
 		"Krosno, proszące, by je włączono.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006011F.title: "Mechanizm precyzyjny"
+	quest.420000000006011F.title: "Precyzyjny mechanizm"
 	quest.4200000000060120.quest_desc: [
 		"Steruj prędkością obrotu.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060120.title: "Regulator prędkości obrotu"
+	quest.4200000000060120.title: "Kontroler prędkości obrotowej"
 	quest.4200000000060121.quest_desc: [
 		"Skręć za róg.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1608,12 +1608,12 @@
 		"Skrzynia biegów odwraca obrót.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060123.title: "Skrzynia biegów"
+	quest.4200000000060123.title: "Przekładnik"
 	quest.4200000000060124.quest_desc: [
 		"Zaprogramowany obrót. Pieśń Tkaczy wzorów, spisana.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060124.title: "Sekwencyjna skrzynia biegów"
+	quest.4200000000060124.title: "Przekładnik sekwencjonalny"
 	quest.4200000000060125.quest_desc: [
 		"Miesza składniki w misie, gdy kręci się dość szybko.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1638,12 +1638,12 @@
 		"Kręci całą strukturę wokół stałego punktu, ze ścianami i resztą.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060129.title: "Łożysko mechaniczne"
+	quest.4200000000060129.title: "Mechaniczne łożysko"
 	quest.420000000006012A.quest_desc: [
 		"Suwnica sunie wzdłuż szyny.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006012A.title: "Wózek suwnicy"
+	quest.420000000006012A.title: "Przenośnik suwnicowy"
 	quest.420000000006012B.quest_desc: [
 		"Zamienia nieruchomą budowę w taką, co jedzie po szynach.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1653,7 +1653,7 @@
 		"Spina dwa wagoniki, żeby jechały jako jeden pociąg.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006012C.title: "Sprzęg wagonika"
+	quest.420000000006012C.title: "Łącznik wagoników"
 	quest.420000000006012D.quest_desc: [
 		"Kładzie drogę, którą jedzie wagonik albo konstrukcja.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1663,7 +1663,7 @@
 		"Drzwi pociągu do wagonów.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.420000000006012E.title: "Drzwi pociągu"
+	quest.420000000006012E.title: "Drzwi od pociągu"
 	quest.420000000006012F.quest_desc: [
 		"Układaj trasy pociągu.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -1673,22 +1673,22 @@
 		"Pokazuje liczbę skądinąd na bloku, który naprawdę widzisz.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060130.title: "Łącze wyświetlacza"
+	quest.4200000000060130.title: "Nadajnik wyświetlacza"
 	quest.4200000000060131.quest_desc: [
 		"Tablica pokazuje dane.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060131.title: "Tablica wyświetlacza"
+	quest.4200000000060131.title: "Tablica wyświetlająca"
 	quest.4200000000060132.quest_desc: [
 		"Wystrzeliwuje ziemniaka dość mocno, by coś odrzucić. Głównie dla śmiechu.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060132.title: "Armata ziemniaczana"
+	quest.4200000000060132.title: "Armata na ziemniaki"
 	quest.4200000000060133.quest_desc: [
 		"Sięga i kruszy bloki dalej, niż sięga twoja ręka.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.4200000000060133.title: "Wydłużany chwyt"
+	quest.4200000000060133.title: "Wydłużony chwytak"
 	quest.4200000000060134.quest_desc: [
 		"Koło, prasa, mieszalnik, wentylator, zegarowe serce.",
 		"Napnij Nić: odpowiedź Tkaczy wzorów.",
@@ -1751,7 +1751,7 @@
 		"Przekąska, która uspokaja wzburzoną pszczołę, zanim sięgniesz do ula.",
 		"Jak: plaster miodu plus butelka miodu, bez kształtu."
 	]
-	quest.420000000007013E.title: "Miodowy przysmak"
+	quest.420000000007013E.title: "Przetwór Miodowy"
 	quest.420000000007013F.quest_desc: [
 		"Żwir wokół kwiatu. Pszczoły górnicze i kopaczki lubią pył.",
 		"Jak: pierścień z materiału gniazda wokół małego kwiatu. Postaw go, potem prawy przycisk małym kwiatem, żeby go obudzić; pszczoły wylatują po chwili."
@@ -1781,22 +1781,22 @@
 		"Butelkuje plon bez twojej ręki.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.4200000000070144.title: "Butelkarka"
+	quest.4200000000070144.title: "Butelkownica"
 	quest.4200000000070145.quest_desc: [
 		"Wiruj plastry we wszystko, co ukrywają.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.4200000000070145.title: "Wirówka"
+	quest.4200000000070145.title: "Wirowarka"
 	quest.4200000000070146.quest_desc: [
 		"To samo, szybciej, na energię.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.4200000000070146.title: "Wirówka energetyczna"
+	quest.4200000000070146.title: "Napędzana Wirowarka"
 	quest.4200000000070147.quest_desc: [
 		"Wyławia pszczołę z powietrza siatką, bez ani jednego użądlenia.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.4200000000070147.title: "Łapacz"
+	quest.4200000000070147.title: "Chwytak"
 	quest.4200000000070148.quest_desc: [
 		"Noś pszczołę jak latarnię.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
@@ -1811,7 +1811,7 @@
 		"Sparuj dwie kolonie celowo.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.420000000007014A.title: "Komora hodowli"
+	quest.420000000007014A.title: "Komora Hodowlana"
 	quest.420000000007014B.quest_desc: [
 		"Sortuj cechy jak ziarno.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
@@ -2046,7 +2046,7 @@
 		"Przechowuje Źródło, paliwo, które zaklęcia przepalają.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.4200000000080177.title: "Klejnot źródła"
+	quest.4200000000080177.title: "Klejnot źródłowy"
 	quest.4200000000080178.quest_desc: [
 		"Wyhodowane, nie znalezione. Drewno na narzędzia rzucania i piedestały zaklęć.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
@@ -2061,17 +2061,17 @@
 		"Arkanyczny plon, hodowany tyleż dla tkaniny, co dla magii.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.420000000008017A.title: "Kwiat maga"
+	quest.420000000008017A.title: "Magiczny kwiat"
 	quest.420000000008017B.quest_desc: [
 		"Palenisko do pracy rytualnej.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.420000000008017B.title: "Rytualne palenisko"
+	quest.420000000008017B.title: "Kocioł rytualny"
 	quest.420000000008017C.quest_desc: [
 		"Pokazuje reagent i podaje go rytuałowi, który go potrzebuje.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.420000000008017C.title: "Arkaniczny piedestał"
+	quest.420000000008017C.title: "Tajemny piedestał"
 	quest.420000000008017D.quest_desc: [
 		"Zapisuj zaklęcia i strony.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
@@ -2081,12 +2081,12 @@
 		"Nasącz reagenty źródłem.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.420000000008017E.title: "Komora nasycania"
+	quest.420000000008017E.title: "Komora nasycenia"
 	quest.420000000008017F.quest_desc: [
 		"Trzyma zapas Źródła, by zaklęcie nie wyschło w pół rzutu.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.420000000008017F.title: "Słój źródła"
+	quest.420000000008017F.title: "Słoik źródłowy"
 	quest.4200000000080180.quest_desc: [
 		"Wołaj duchy po imieniu.",
 		"Jak: książka i Nasiona demonicznego snu, bezkształtnie. Przeczytaj; potem Duchowy ogień."
@@ -2106,17 +2106,17 @@
 		"Serce wytwarzania opartego na aurze, zestrojone z ziemią wokół.",
 		"Jak: Rytuał lasu (JEI): trzy kamienie, Złoty liść, sztabka złota i Żeton radości. Linia Serca aury."
 	]
-	quest.4200000000080183.title: "Naturalny ołtarz"
+	quest.4200000000080183.title: "Natural Altar"
 	quest.4200000000080184.quest_desc: [
 		"Roślina nasączona wysoką aurą, uprzędzona w coś rzadszego.",
 		"Jak: cztery liście i cztery samorodki złota wokół krótkiej trawy dają cztery Lśniące włókna. Połóż je w koronie drzewa; liście z czasem złocieją."
 	]
-	quest.4200000000080184.title: "Lśniące włókno"
+	quest.4200000000080184.title: "Brilliant Fiber"
 	quest.4200000000080185.quest_desc: [
 		"Materiał tknięty aurą, cenniejszy, niż wygląda leżąc na ziemi.",
 		"Jak: zniszcz złote liście wyrosłe z Lśniącego włókna."
 	]
-	quest.4200000000080185.title: "Złoty liść"
+	quest.4200000000080185.title: "Gold Leaf"
 	quest.4200000000080186.quest_desc: [
 		"Żelazo, które wchłonęło aurę otoczenia, aż jest warte więcej niż ruda.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
@@ -2131,17 +2131,17 @@
 		"Żeton radości. Naturalny ołtarz i Roślinożerny pochłaniacz buduje się na jednym.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000080188.title: "Żeton radości"
+	quest.4200000000080188.title: "Token of Joy"
 	quest.4200000000080189.quest_desc: [
 		"Zapas pergaminu na zaklęcia.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.4200000000080189.title: "Pergamin zaklęcia"
+	quest.4200000000080189.title: "Zaklęcie pergaminowe"
 	quest.420000000008018A.quest_desc: [
 		"Znaczy miejsce, do którego wracasz słowem, nie piechotą.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.420000000008018A.title: "Zwój przeniesienia"
+	quest.420000000008018A.title: "Zwój osnowy"
 	quest.420000000008018B.quest_desc: [
 		"Zasadź, pielęgnuj i zbierz tkaninę nasiąkniętą niską magią.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
@@ -2161,7 +2161,7 @@
 		"Paliwo, które czarownicy przepalają, zaklęcie po zaklęciu.",
 		"Jak: zabijaj czarowników albo wytwórz to, co podaje JEI. Paliwo do atramentu i ksiąg."
 	]
-	quest.420000000008018E.title: "Arkaniczna esencja"
+	quest.420000000008018E.title: "Esencja Czarów"
 	quest.420000000008018F.quest_desc: [
 		"Wpisuje zaklęcie do księgi, jeden poziom naraz.",
 		"Jak: butelka + esencja + barwnik. Pierwszy atrament do zapisu."
@@ -2225,7 +2225,7 @@
 		"Blok skorupy każdej maszyny sieci, wydobywany ze złóż Certus.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.4200000000090199.title: "Kamień nieba"
+	quest.4200000000090199.title: "Sky Stone"
 	quest.420000000009019A.quest_desc: [
 		"Fluix — certus, kwarc i redstone, naładowane w wodzie.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2235,12 +2235,12 @@
 		"Mieszanka kwarcu, redstone i szkła, drobno zmielona do wytwarzania w sieci.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.420000000009019B.title: "Pył Fluix"
+	quest.420000000009019B.title: "Fluix Dust"
 	quest.420000000009019C.quest_desc: [
 		"Krzem do procesorów AE2.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.420000000009019C.title: "Krzem"
+	quest.420000000009019C.title: "Silicon"
 	quest.420000000009019D.quest_desc: [
 		"Inskrypter tłoczy obwody tak, jak krosno tłoczy tkaninę.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2250,7 +2250,7 @@
 		"Tłoczy płytkę krzemu tak, jak krosno tłoczy tkaninę.",
 		"Jak: blok żelaza, Węzeł wiążący, żelazo i kwarc. AE2 powiela tylko prasę, którą już masz."
 	]
-	quest.420000000009019E.title: "Krzemowa prasa inskryptera"
+	quest.420000000009019E.title: "Inscriber Silicon Press"
 	quest.420000000009019F.quest_desc: [
 		"Tłoczy matrycę procesora logicznego, jedno tłoczenie na raz.",
 		"Jak: blok żelaza, Węzeł wiążący, żelazo i złoto. Pierwsza kopia to rzemiosło Węzła."
@@ -2270,22 +2270,22 @@
 		"Procesor logiczny do AE2.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901A2.title: "Procesor logiczny"
+	quest.42000000000901A2.title: "Logic Processor"
 	quest.42000000000901A3.quest_desc: [
 		"Część wzorców autowytwarzania, z krzemu i kwarcu certus.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901A3.title: "Procesor obliczeniowy"
+	quest.42000000000901A3.title: "Calculation Processor"
 	quest.42000000000901A4.quest_desc: [
 		"Gęstszy procesor, potrzebny do bardziej wymagających części sieci.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901A4.title: "Procesor inżynieryjny"
+	quest.42000000000901A4.title: "Engineering Processor"
 	quest.42000000000901A5.quest_desc: [
 		"Mieści komórki, które trzymają wszystko, co pamięta sieć.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901A5.title: "Napęd ME"
+	quest.42000000000901A5.title: "ME Drive"
 	quest.42000000000901A6.quest_desc: [
 		"Skorupa, w której buduje się komórkę pamięci.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2300,7 +2300,7 @@
 		"Zobacz sieć.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901A8.title: "Terminal ME"
+	quest.42000000000901A8.title: "ME Terminal"
 	quest.42000000000901A9.quest_desc: [
 		"Pozwala wytwarzać wprost z tego, co sieć już trzyma.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2316,12 +2316,12 @@
 		"Użyj go z pustymi rękami i zagraj Rytuał bramy: trafiaj spadające uderzenia na A, S, D, F. Osiągnij 60%, a się otworzy; Puls niepotrzebny.",
 		"Jak: użyj Bębna bramy z pustymi rękami i zagraj Rytuał bramy: trafiaj spadające uderzenia na A, S, D, F. Osiągnij 60%, a się otworzy; Puls niepotrzebny. Najpierw zwiąż kompas powrotu."
 	]
-	quest.42000000000901AB.title: "Bęben bramy"
+	quest.42000000000901AB.title: "Bęben wrót"
 	quest.42000000000901AC.quest_desc: [
 		"Oparcie spoza bramy. Przynieś jedno do domu.",
 		"Jak: wytop Bruk Marchii. Wydobywaj go w Marchii, przez Bęben bramy."
 	]
-	quest.42000000000901AC.title: "Kamień Marchii"
+	quest.42000000000901AC.title: "Kamień Marszu"
 	quest.42000000000901AD.quest_desc: [
 		"Niesie kanały sieci od jednej maszyny do następnej.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2346,17 +2346,17 @@
 		"Dodaje autowytwarzaniu sieci zapas na duże zlecenia.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901B1.title: "Jednostka wytwarzania"
+	quest.42000000000901B1.title: "Crafting Unit"
 	quest.42000000000901B2.quest_desc: [
 		"Pozwala więcej zadań wytwarzania iść naraz.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901B2.title: "Jednostka współprocesora wytwarzania"
+	quest.42000000000901B2.title: "Crafting Co-Processing Unit"
 	quest.42000000000901B3.quest_desc: [
 		"Trzyma wzorce, z których sieć czerpie, gdy wytwarza.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901B3.title: "Magazyn wytwarzania 1k"
+	quest.42000000000901B3.title: "1k Crafting Storage"
 	quest.42000000000901B4.quest_desc: [
 		"Podaje wzorce maszynom tak, jak krosno podaje nić do czółenka.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2366,22 +2366,22 @@
 		"Buduje ze wzorców. Chce Sznura warkocza w sercu.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901B5.title: "Asembler molekularny"
+	quest.42000000000901B5.title: "Molecular Assembler"
 	quest.42000000000901B6.quest_desc: [
 		"Pusty wzorzec, czeka, aż zapiszesz w nim recepturę.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901B6.title: "Pusty wzorzec"
+	quest.42000000000901B6.title: "Blank Pattern"
 	quest.42000000000901B7.quest_desc: [
 		"Podaj energię do cyfrowego krosna.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901B7.title: "Akceptor energii"
+	quest.42000000000901B7.title: "Energy Acceptor"
 	quest.42000000000901B8.quest_desc: [
 		"Pal dla AE — opcjonalna gałąź energii.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901B8.title: "Komora wibracyjna"
+	quest.42000000000901B8.title: "Vibration Chamber"
 	quest.42000000000901B9.quest_desc: [
 		"Komórka magazynowa z większym miejscem niż poprzedni rozmiar.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2436,22 +2436,22 @@
 		"Sięga sieci skądkolwiek w zasięgu, bez kabla pod stopami.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901C3.title: "Terminal bezprzewodowy"
+	quest.42000000000901C3.title: "Wireless Terminal"
 	quest.42000000000901C4.quest_desc: [
 		"Kopiuje ustawienia jednej maszyny na drugą, bez wpisywania ich od nowa.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901C4.title: "Karta pamięci"
+	quest.42000000000901C4.title: "Memory Card"
 	quest.42000000000901C5.quest_desc: [
 		"Narzędzie sieciowe do AE2.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901C5.title: "Narzędzie sieciowe"
+	quest.42000000000901C5.title: "Network Tool"
 	quest.42000000000901C6.quest_desc: [
 		"Ładuje kwarc certus, aż nada się do drobniejszej roboty.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000000901C6.title: "Ładowarka"
+	quest.42000000000901C6.title: "Charger"
 	quest.42000000000901C7.quest_desc: [
 		"Przyspiesza rosnący pąk kryształu ku pełnowymiarowej kiści.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -2506,12 +2506,12 @@
 		"Przesiewa szybciej niż drewniany pastorał i starcza o wiele dłużej.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01CF.title: "Kościany pastorał"
+	quest.42000000000A01CF.title: "Bone Crook"
 	quest.42000000000A01D0.quest_desc: [
 		"Najprostsza siatka. Wszystko, co przesiewasz, najpierw przechodzi tędy.",
 		"Jak: dziewięć sznurków w 3x3. Stragan Śpiewaków żwiru sprzedaje siatkę Nici (sznurek) Krosna Pustki, która przesiewa tak samo."
 	]
-	quest.42000000000A01D0.title: "Siatka ze sznurka"
+	quest.42000000000A01D0.title: "String Mesh"
 	quest.42000000000A01D1.quest_desc: [
 		"Łapie drobniejsze odłamki niż sznurek. Mniej ścinków prześlizguje się przez tkaninę.",
 		"Jak: cztery krzemienie i pięć sznurków w szachownicę. Krzemień jest z żwiru, albo Nić + żwir."
@@ -2526,17 +2526,17 @@
 		"Siatka złotego poziomu. Szanse przechylają się ku rudom, które się liczą.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01D3.title: "Złota siatka"
+	quest.42000000000A01D3.title: "Golden Mesh"
 	quest.42000000000A01D4.quest_desc: [
 		"Przesiej tym żwir, a diamenty będą trafiać się znacznie częściej.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01D4.title: "Diamentowa siatka"
+	quest.42000000000A01D4.title: "Diamond Mesh"
 	quest.42000000000A01D5.quest_desc: [
 		"Najcieńsza siatka, jaką zrobiono. Nic nie przesiewa lepiej niż nić z netherytu.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01D5.title: "Netherytowa siatka"
+	quest.42000000000A01D5.title: "Netherite Mesh"
 	quest.42000000000A01D6.quest_desc: [
 		"Glina wygładzona do czysta, gotowa do wypału w tygiel, który trzyma prawdziwy żar.",
 		"Jak: kulka gliny + mączka kostna, bez kształtu. Glina pochodzi z Beczki napięcia."
@@ -2551,7 +2551,7 @@
 		"Trzyma żar wytopu i nie pęka. Przetop to, co wyłowiło sito.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01D8.title: "Porcelanowy tygiel"
+	quest.42000000000A01D8.title: "Porcelain Crucible"
 	quest.42000000000A01D9.quest_desc: [
 		"Chlapie wodą po uprawach, nie depcząc rzędów.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -2566,27 +2566,27 @@
 		"Puszczony na liście, przędzie jedwab, gdy je.",
 		"Jak: łam liście pastorałem; jedwabniki wypadają od czasu do czasu."
 	]
-	quest.42000000000A01DB.title: "Jedwabnik"
+	quest.42000000000A01DB.title: "Silkworm"
 	quest.42000000000A01DC.quest_desc: [
 		"Dziwna woda, która popycha sadzonki i nasiona ku dziwniejszym uprawom.",
 		"Jak: beczka wody na grzybni zamienia się w wiedźmią wodę; napełnij z niej wiadro. Zarodniki grzybni przesiewa się z ziemi."
 	]
-	quest.42000000000A01DC.title: "Wiadro wiedźmiej wody"
+	quest.42000000000A01DC.title: "Witch Water Bucket"
 	quest.42000000000A01DD.quest_desc: [
 		"Rozrzuć je, a grzybnia pełznie na zewnątrz, blok po cierpliwym bloku.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01DD.title: "Zarodniki grzybni"
+	quest.42000000000A01DD.title: "Mycelium Spores"
 	quest.42000000000A01DE.quest_desc: [
 		"Rzuć na ziemię, a trawa rozlezie się, nie czekając na deszcz.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01DE.title: "Nasiona trawy"
+	quest.42000000000A01DE.title: "Grass Seeds"
 	quest.42000000000A01DF.quest_desc: [
 		"Grys w miejsce bruku. Oddaj go z powrotem młotowi, żeby mieć więcej.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01DF.title: "Kamienny kamyk"
+	quest.42000000000A01DF.title: "Stone Pebble"
 	quest.42000000000A01E0.quest_desc: [
 		"Dziewięć bruku ściśnięte w kamień magazynowy na rosnącą platformę.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -2596,17 +2596,17 @@
 		"Rozbija bruk w żwir szybciej niż każdy wcześniejszy młot.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01E1.title: "Netherytowy młot"
+	quest.42000000000A01E1.title: "Netherite Hammer"
 	quest.42000000000A01E2.quest_desc: [
 		"Kamień Netheru, drobno skruszony. I bazalt, i czernit zaczynają się tutaj.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01E2.title: "Kamyk czernitu"
+	quest.42000000000A01E2.title: "Blackstone Pebble"
 	quest.42000000000A01E3.quest_desc: [
 		"Łupek skruszony do grysu, znów gotowy na sito.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000000A01E3.title: "Kamyk łupku"
+	quest.42000000000A01E3.title: "Deepslate Pebble"
 	quest.42000000000A01E4.quest_desc: [
 		"Blady kamień z głębokiego przesiewania, głównie dobry do budowania.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -2682,7 +2682,7 @@
 		"Sama zgniata to, co trzyma, w bloki, w miarę napełniania.",
 		"Jak: dębowe szuflady 1x1 / 1x2 / 2x2, potem szuflada zgniatająca i kontroler. JEI nazywa recepturę."
 	]
-	quest.42000000000B01F2.title: "Szuflada zgniatająca"
+	quest.42000000000B01F2.title: "Compacting Drawer"
 	quest.42000000000B01F3.quest_desc: [
 		"Łączy magazyn wokół w jedną sieć do przeszukania.",
 		"Jak: dębowe szuflady 1x1 / 1x2 / 2x2, potem szuflada zgniatająca i kontroler. JEI nazywa recepturę."
@@ -2692,17 +2692,17 @@
 		"Wciąga pobliskie przedmioty prosto do szuflady.",
 		"Jak: dębowe szuflady 1x1 / 1x2 / 2x2, potem szuflada zgniatająca i kontroler. JEI nazywa recepturę."
 	]
-	quest.42000000000B01F4.title: "Ulepszenie zbieracza"
+	quest.42000000000B01F4.title: "Collector Upgrade"
 	quest.42000000000B01F5.quest_desc: [
 		"Wyciąga przedmioty ze skrzyni lub maszyny ustawionej obok.",
 		"Jak: dębowe szuflady 1x1 / 1x2 / 2x2, potem szuflada zgniatająca i kontroler. JEI nazywa recepturę."
 	]
-	quest.42000000000B01F5.title: "Ulepszenie wyciągacza"
+	quest.42000000000B01F5.title: "Puller Upgrade"
 	quest.42000000000B01F6.quest_desc: [
 		"Wpycha przechowane przedmioty do ekwipunku obok.",
 		"Jak: dębowe szuflady 1x1 / 1x2 / 2x2, potem szuflada zgniatająca i kontroler. JEI nazywa recepturę."
 	]
-	quest.42000000000B01F6.title: "Ulepszenie wpychacza"
+	quest.42000000000B01F6.title: "Pusher Upgrade"
 	quest.42000000000B01F7.quest_desc: [
 		"Usuwa wszystko ponad pojemność, żeby szuflada nigdy się nie zacięła.",
 		"Jak: dębowe szuflady 1x1 / 1x2 / 2x2, potem szuflada zgniatająca i kontroler. JEI nazywa recepturę."
@@ -2737,7 +2737,7 @@
 		"Filtruje to, co wchodzi do plecaków.",
 		"Jak: skórzany plecak, potem ulepszenia z żelaza/złota/diamentu w JEI."
 	]
-	quest.42000000000B01FD.title: "Ulepszenie filtra"
+	quest.42000000000B01FD.title: "Ulepszenia filtra"
 	quest.42000000000B01FE.quest_desc: [
 		"Pozwala plecakowi wytwarzać z tego, co już ma schowane.",
 		"Jak: skórzany plecak, potem ulepszenia z żelaza/złota/diamentu w JEI."
@@ -2747,12 +2747,12 @@
 		"Karmi cię automatycznie ze swoich zapasów, gdy głód spada.",
 		"Jak: skórzany plecak, potem ulepszenia z żelaza/złota/diamentu w JEI."
 	]
-	quest.42000000000B01FF.title: "Ulepszenie jedzenia"
+	quest.42000000000B01FF.title: "Ulepszenie karmienia"
 	quest.42000000000B0200.quest_desc: [
 		"Zamienia zepsute narzędzie na nowe z plecaka.",
 		"Jak: skórzany plecak, potem ulepszenia z żelaza/złota/diamentu w JEI."
 	]
-	quest.42000000000B0200.title: "Ulepszenie uzupełniania"
+	quest.42000000000B0200.title: "Ulepszenie uzupełnienia"
 	quest.42000000000B0201.quest_desc: [
 		"Opróżnia plecak do pobliskich skrzyń, gdy podejdziesz.",
 		"Jak: skórzany plecak, potem ulepszenia z żelaza/złota/diamentu w JEI."
@@ -2783,22 +2783,22 @@
 		"Najprostsza płytka logiczna. Większość wczesnych maszyn potrzebuje kilku.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0206.title: "Podstawowy obwód sterujący"
+	quest.42000000000C0206.title: "Podstawowy układ sterowania"
 	quest.42000000000C0207.quest_desc: [
 		"Ostrzejsza płytka logiczna dla maszyn o stopień wyżej w linii.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0207.title: "Zaawansowany obwód sterujący"
+	quest.42000000000C0207.title: "Zaawansowany układ sterowania"
 	quest.42000000000C0208.quest_desc: [
 		"Najostrzejsza płytka logiczna, tylko dla szczytowych maszyn linii.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0208.title: "Elitarny obwód sterujący"
+	quest.42000000000C0208.title: "Elitarny układ sterowania"
 	quest.42000000000C0209.quest_desc: [
 		"Nasącza metale węglem, redstonem albo pyłem diamentowym przed wytopem.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0209.title: "Infuzor metalurgiczny"
+	quest.42000000000C0209.title: "Metalurgiczny infuzer"
 	quest.42000000000C020A.quest_desc: [
 		"Podwaja większość surowych rud: dwa pyły zamiast jednego.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -2813,12 +2813,12 @@
 		"Przetapia rudy energią zamiast paliwa i trochę szybciej.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C020C.title: "Energetyczna wytapiarka"
+	quest.42000000000C020C.title: "Huta energetyczna"
 	quest.42000000000C020D.quest_desc: [
 		"Oczyszcza wzbogaconą rudę tlenem, dając trzeci produkt, czasem więcej.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C020D.title: "Komora oczyszczania"
+	quest.42000000000C020D.title: "Komora oczyszczająca"
 	quest.42000000000C020E.quest_desc: [
 		"Wtryskuje gaz w rudę dla najbogatszego plonu, jaki daje linia.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -2828,7 +2828,7 @@
 		"Sprasowuje pył osmu w sztabki szybciej niż sam piec.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C020F.title: "Kompresor osmu"
+	quest.42000000000C020F.title: "Kompresor osmowy"
 	quest.42000000000C0210.quest_desc: [
 		"Jedno miejsce na stos, które mieści o wiele więcej niż skrzynia.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -2848,12 +2848,12 @@
 		"Niesie moc do maszyn. Najczęstszy kabel na platformie.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0213.title: "Podstawowy kabel uniwersalny"
+	quest.42000000000C0213.title: "Podstawowy kabel energetyczny"
 	quest.42000000000C0214.quest_desc: [
 		"Przenosi płyny między zbiornikami a maszynami wzdłuż platformy.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0214.title: "Podstawowa rura mechaniczna"
+	quest.42000000000C0214.title: "Podstawowy rurociąg"
 	quest.42000000000C0215.quest_desc: [
 		"Automatycznie przenosi przedmioty między połączonymi ekwipunkami.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -2873,12 +2873,12 @@
 		"Łagodzi obrażenia od upadku i kupuje ci sekundę, nim pustka cię zabierze.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0218.title: "Wolne buty"
+	quest.42000000000C0218.title: "Buty swobody"
 	quest.42000000000C0219.quest_desc: [
 		"Jedno narzędzie, które kopie, tnie i walczy, ostrzejsze z każdym ulepszeniem.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C0219.title: "Atomowy rozbieracz"
+	quest.42000000000C0219.title: "Rozszczepiacz atomowy"
 	quest.42000000000C021A.quest_desc: [
 		"Rama konstrukcyjna, wokół której buduje się większość maszyn wieloblokowych.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -2893,13 +2893,13 @@
 		"Sam kopie szeroki promień i sortuje urobek dla ciebie.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000000C021C.title: "Cyfrowy górnik"
+	quest.42000000000C021C.title: "Kombajn wydobywczy"
 	quest.42000000000D021D.quest_desc: [
 		"Lepki składnik bazowy, na którym stoi większość maszyn sieci.",
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
 	]
-	quest.42000000000D021D.title: "Pasta dielektryczna"
+	quest.42000000000D021D.title: "Dielectric Paste"
 	quest.42000000000D021E.quest_desc: [
 		"Schowaj miarę mocy.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
@@ -2964,17 +2964,17 @@
 		"Pierwszy stopień kryształu do komory ogniw pręta zasilającego.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
 	]
-	quest.42000000000D022A.title: "Kryształ niotyczny"
+	quest.42000000000D022A.title: "Niotic Crystal"
 	quest.42000000000D022B.quest_desc: [
 		"Mocniejszy stopień kryształu, dalej w budowie komory zasilania.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
 	]
-	quest.42000000000D022B.title: "Kryształ ducha"
+	quest.42000000000D022B.title: "Spirited Crystal"
 	quest.42000000000D022C.quest_desc: [
 		"Najmocniejszy stopień kryształu, jaki pomieści komora zasilania.",
 		"Jak: rozdział Sieć Powah — kula zasilająca i kable, gdy jest już Puls Iskry."
 	]
-	quest.42000000000D022C.title: "Kryształ nitro"
+	quest.42000000000D022C.title: "Nitro Crystal"
 	quest.42000000000E022D.quest_desc: [
 		"Uprzędzone z kwiatu maga i wplecione w szaty oraz sprzęt do zaklęć.",
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
@@ -2985,12 +2985,12 @@
 		"Kwiat, któremu po zbiorze na łodydze odrasta włókno.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E022E.title: "Kwiat maga"
+	quest.42000000000E022E.title: "Magiczny kwiat"
 	quest.42000000000E022F.quest_desc: [
 		"Przechowuje gęstą sadzawkę źródła, paliwo za każdym zaklęciem.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E022F.title: "Blok klejnotu źródła"
+	quest.42000000000E022F.title: "Źródłowy blok klejnotów"
 	quest.42000000000E0230.quest_desc: [
 		"Mieści więcej glifów, niż pozwala książka startowa.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
@@ -3010,17 +3010,17 @@
 		"Rzuca powiązane zaklęcie w równym timerze, nie na widok.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E0233.title: "Wieżyczka zaklęć z timerem"
+	quest.42000000000E0233.title: "Wieżyczka zaklęć zegara"
 	quest.42000000000E0234.quest_desc: [
 		"Główny element do wytwarzania ksiąg zaklęć, różdżek i innego arkanicznego sprzętu.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E0234.title: "Aparat zaklinania"
+	quest.42000000000E0234.title: "Czarujące urządzenie"
 	quest.42000000000E0235.quest_desc: [
 		"Siedzi w aparacie zaklinania i napędza jego przepisy.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E0235.title: "Rdzeń arkany"
+	quest.42000000000E0235.title: "Tajemny rdzeń"
 	quest.42000000000E0236.quest_desc: [
 		"Niesie źródło między arkanycznym miejscem a powiązanym słojem albo zaklęciem.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
@@ -3035,42 +3035,42 @@
 		"Zamienia wzrost pobliskich upraw w powolną strużkę źródła.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E0238.title: "Agronomiczne łącze źródła"
+	quest.42000000000E0238.title: "Link do źródła agronomicznego"
 	quest.42000000000E0239.quest_desc: [
 		"Zamienia żar pobliskiej lawy w stałą strużkę źródła.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E0239.title: "Wulkaniczne łącze źródła"
+	quest.42000000000E0239.title: "Link do źródła wulkanicznego"
 	quest.42000000000E023A.quest_desc: [
 		"Przywołuje wixie, która robi przepisy za ciebie, gdy pracujesz gdzie indziej.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E023A.title: "Amulet Wixie"
+	quest.42000000000E023A.title: "Urok Wixie"
 	quest.42000000000E023B.quest_desc: [
 		"Przywołuje starbuncle, który na rozkaz przynosi przedmioty z magazynu.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E023B.title: "Amulet Starbuncle"
+	quest.42000000000E023B.title: "Urok Starbuncle"
 	quest.42000000000E023C.quest_desc: [
 		"Przywołuje drygmy, który w pobliżu powoli tworzy wybrany zasób.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E023C.title: "Amulet Drygmy"
+	quest.42000000000E023C.title: "Urok Drygmy"
 	quest.42000000000E023D.quest_desc: [
 		"Przywołuje whirlisprig, który sam dogląda upraw i je hoduje.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E023D.title: "Amulet Whirlisprig"
+	quest.42000000000E023D.title: "Zaklęcie Whirlisprig"
 	quest.42000000000E023E.quest_desc: [
 		"Przywołuje golema, który zbiera pąki ametystu, nie podnosząc kilofa.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E023E.title: "Amulet golema ametystowego"
+	quest.42000000000E023E.title: "Amulet ametystowego golema"
 	quest.42000000000E023F.quest_desc: [
 		"Podnosi i stawia bloki z daleka, spinając maszyny na dystans.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
 	]
-	quest.42000000000E023F.title: "Różdżka dominacji"
+	quest.42000000000E023F.title: "Różdżka Dominium"
 	quest.42000000000E0240.quest_desc: [
 		"Oznacza przedmiot jako dozwolony, gdy trafi do filtra.",
 		"Jak: Strona arkany — arkaniczne drewno i jagoda źródła z mchu, potem kaskada."
@@ -3090,7 +3090,7 @@
 	quest.42000000000F0242.title: "Postaw Słup"
 	quest.42000000000F0243.quest_desc: [
 		"Klucz węzła w dłoni albo /clowder hub. Tu spotyka się każdy Clowder na serwerze.",
-		"/clowder return brings you home.",
+		"/clowder return zabierze cię do domu.",
 		"Jak: Klucz węzła albo `/clowder hub`. `/clowder return` wraca do domu."
 	]
 	quest.42000000000F0243.title: "Wejdź do Sali"
@@ -3227,12 +3227,12 @@
 		"Liście, które cały rok trzymają miękką złotą poświatę.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011027B.title: "Złote liście"
+	quest.420000000011027B.title: "Golden Leaves"
 	quest.420000000011027C.quest_desc: [
 		"Trzyma składnik Rytuału lasu, ustawiony wokół sadzonki.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011027C.title: "Drewniany stojak"
+	quest.420000000011027C.title: "Wooden Stand"
 	quest.420000000011027D.quest_desc: [
 		"Ołtarz, na którym aura napędza mocniejsze przepisy wytwarzania.",
 		"Jak: Rytuał lasu (JEI): trzy kamienie, Złoty liść, sztabka złota i Żeton radości. Linia Serca aury."
@@ -3247,7 +3247,7 @@
 		"Kora zdarta z pradawnych drzew, przydatna w przepisach aury.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011027F.title: "Prastara kora"
+	quest.420000000011027F.title: "Ancient Bark"
 	quest.4200000000110280.quest_desc: [
 		"Żeton radości. Naturalny ołtarz i Roślinożerny pochłaniacz buduje się na jednym.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
@@ -3257,87 +3257,87 @@
 		"Żeton strachu. Pomniejszacz korony i Zalegający pochłaniacz powstają na jednym.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110281.title: "Żeton strachu"
+	quest.4200000000110281.title: "Token of Fear"
 	quest.4200000000110282.quest_desc: [
 		"Żeton gniewu. Kruszący katalizator i Znak strzału potrzebują jednego.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110282.title: "Żeton gniewu"
+	quest.4200000000110282.title: "Token of Anger"
 	quest.4200000000110283.quest_desc: [
 		"Żeton smutku. Stół ofiarny i Rozplątywacz śmiertelników potrzebują jednego.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110283.title: "Żeton smutku"
+	quest.4200000000110283.title: "Token of Sorrow"
 	quest.4200000000110284.quest_desc: [
 		"Duch aury do rytuałów.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110284.title: "Duch wezwania"
+	quest.4200000000110284.title: "Spirit of Calling"
 	quest.4200000000110285.quest_desc: [
 		"Duch narodzin do obrzędów aury.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110285.title: "Duch porodu"
+	quest.4200000000110285.title: "Spirit of Birthing"
 	quest.4200000000110286.quest_desc: [
 		"Przechowuje zapas aury na czas, gdy ziemia zrzednie.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110286.title: "Skarbiec aury"
+	quest.4200000000110286.title: "Aura Trove"
 	quest.4200000000110287.quest_desc: [
 		"Późno. Tylko jeśli Aura tego chce.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110287.title: "Katalizator tworzenia"
+	quest.4200000000110287.title: "Creational Catalyst"
 	quest.4200000000110288.quest_desc: [
 		"Ujawnia aurę i warunki pojawiania się na szerszym kawałku ziemi.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110288.title: "Okular środowiska"
+	quest.4200000000110288.title: "Environmental Ocular"
 	quest.4200000000110289.quest_desc: [
 		"Ustawiony obok Naturalnego ołtarza, otwiera przepisy kruszenia ołtarza.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110289.title: "Kruszący katalizator"
+	quest.4200000000110289.title: "Crumbling Catalyst"
 	quest.420000000011028A.quest_desc: [
 		"Ustawiony obok Naturalnego ołtarza, otwiera przepisy transmutacji ołtarza.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011028A.title: "Katalizator transmutacji"
+	quest.420000000011028A.title: "Transmutation Catalyst"
 	quest.420000000011028B.quest_desc: [
 		"Niebiańskie sztabki, skażone złoto i odłamek netherytu, sprasowane w Sztabkę głębin.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011028B.title: "Sztabka głębin"
+	quest.420000000011028B.title: "Ingot of the Depths"
 	quest.420000000011028C.quest_desc: [
 		"Znaczy układ farmy, który ściąga aurę w szybszy wzrost upraw.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011028C.title: "Szablon uprawy"
+	quest.420000000011028C.title: "Farming Stencil"
 	quest.420000000011028D.quest_desc: [
 		"Wytwarza aurę, ilekroć pocisk ląduje w pobliżu.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011028D.title: "Znak strzału"
+	quest.420000000011028D.title: "Shooting Mark"
 	quest.420000000011028E.quest_desc: [
 		"Powoli wytwarza aurę z kwiatów kwitnących w pobliżu.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011028E.title: "Roślinożerny pochłaniacz"
+	quest.420000000011028E.title: "Herbivorous Absorber"
 	quest.420000000011028F.quest_desc: [
 		"Powoli wytwarza aurę z dębów rosnących w pobliżu.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.420000000011028F.title: "Pomniejszacz korony"
+	quest.420000000011028F.title: "Canopy Diminisher"
 	quest.4200000000110290.quest_desc: [
 		"Kwiat z Endu, dziwnie swojski na platformie.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110290.title: "Róża zapomnienia"
+	quest.4200000000110290.title: "Rose of Oblivion"
 	quest.4200000000110291.quest_desc: [
 		"Oświetla obszar, by wrogie stworzenia się tam nie pojawiały.",
 		"Jak: Lśniące włókno na drzewach → Złoty liść → Naturalny ołtarz. Rozdział aury nazywa żetony i generatory."
 	]
-	quest.4200000000110291.title: "Lampa sanktuarium"
+	quest.4200000000110291.title: "Lamp of Sanctuary"
 	quest.4200000000120292.quest_desc: [
 		"Gotuje dania w rodzaju gulaszu, które karmią więcej niż jeden talerz naraz.",
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
@@ -3363,7 +3363,7 @@
 		"Kosz na zbiory z farmy.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
 	]
-	quest.4200000000120296.title: "Kosz"
+	quest.4200000000120296.title: "Koszyk"
 	quest.4200000000120297.quest_desc: [
 		"Wspinasz się po niej jak po pnączu, a kilka przepisów kuchennych jej potrzebuje.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
@@ -3403,7 +3403,7 @@
 		"Rozgrzewająca miska, która przywraca głód i nasycenie naraz.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
 	]
-	quest.420000000012029E.title: "Zupa z kurczaka"
+	quest.420000000012029E.title: "Zupa z kurczakiem"
 	quest.420000000012029F.quest_desc: [
 		"Gulasz wołowy syci porządnie.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
@@ -3423,7 +3423,7 @@
 		"Kwaśno-słodki, jeden z bogatszych deserów na platformie.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
 	]
-	quest.42000000001202A2.title: "Sernik ze słodkich jagód"
+	quest.42000000001202A2.title: "Sernik ze słodkimi jagodami"
 	quest.42000000001202A3.quest_desc: [
 		"Ryż do linii kuchennej.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
@@ -3443,12 +3443,12 @@
 		"Ciepły napój z ziaren kakao i mleka.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
 	]
-	quest.42000000001202A6.title: "Gorące kakao"
+	quest.42000000001202A6.title: "Gorąca czekolada"
 	quest.42000000001202A7.quest_desc: [
 		"Chłodny napój wyciśnięty z arbuza, szybko przywraca trochę głodu.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
 	]
-	quest.42000000001202A7.title: "Sok z arbuza"
+	quest.42000000001202A7.title: "Sok arbuzowy"
 	quest.42000000001202A8.quest_desc: [
 		"Tkana tkanina do kilku przepisów kuchennych i dekoracji.",
 		"Jak: receptura Farmer's Delight w JEI (stół rzemieślniczy, deska do krojenia albo garnek). Nasiona upraw biorą się z przesiewania ziemi."
@@ -3509,7 +3509,7 @@
 		"Rzuca zaklęcie raz, bez uczenia go w księdze.",
 		"Jak: Arkaniczna esencja i atrament, potem księga zaklęć. Rozdział Zaklęcia nazywa drabinę."
 	]
-	quest.42000000001302B3.title: "Zwój"
+	quest.42000000001302B3.title: "(Zwój)"
 	quest.42000000001302B4.quest_desc: [
 		"Magiczna tkanina na szaty.",
 		"Jak: Arkaniczna esencja i atrament, potem księga zaklęć. Rozdział Zaklęcia nazywa drabinę."
@@ -3529,7 +3529,7 @@
 		"Kostur, który prowadzi zaklęcia ognia z dodatkową siłą.",
 		"Jak: Arkaniczna esencja i atrament, potem księga zaklęć. Rozdział Zaklęcia nazywa drabinę."
 	]
-	quest.42000000001302B7.title: "Kostur Pyrium"
+	quest.42000000001302B7.title: "Berło z Pyrium"
 	quest.42000000001302B8.quest_desc: [
 		"Skromny kostur dla kogoś, kto dopiero zaczyna czarować.",
 		"Jak: Arkaniczna esencja i atrament, potem księga zaklęć. Rozdział Zaklęcia nazywa drabinę."
@@ -3539,7 +3539,7 @@
 		"Ostrze, które karze czarowników i przecina ich obronę.",
 		"Jak: przepis modpaka, dwie Arkaniczne sztabki po skosie, łańcuch z każdej strony i diament przy rękojeści. Jedyny dziki nosiciel żyje w fortach przywoływaczy, a platforma nigdy ich nie ma."
 	]
-	quest.42000000001302B9.title: "Łowca magów"
+	quest.42000000001302B9.title: "Zguba Magów"
 	quest.42000000001302BA.quest_desc: [
 		"Najwcześniejsza księga zaklęć: mało miejsc, ale łatwo do niej dojść.",
 		"Jak: Arkaniczna esencja i atrament, potem księga zaklęć. Rozdział Zaklęcia nazywa drabinę."
@@ -3554,7 +3554,7 @@
 		"Rafinowany metal do wyższego ekwipunku czarowania.",
 		"Jak: Arkaniczna esencja i atrament, potem księga zaklęć. Rozdział Zaklęcia nazywa drabinę."
 	]
-	quest.42000000001302BC.title: "Arkaniczna sztabka"
+	quest.42000000001302BC.title: "Sztabka Czarometalu"
 	quest.42000000001302BD.quest_desc: [
 		"Uszkodzona księga, którą da się złożyć z powrotem w wiedzę.",
 		"Jak: przepis modpaka, zaklęta książka otoczona czterema Arkanicznymi esencjami i czterema piaskami dusz. JEI nazywa to Zrujnowaną księgą."
@@ -4321,12 +4321,12 @@
 		"Centralny element, by przebudzić esencję do ostatecznej formy.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180352.title: "Ołtarz przebudzenia"
+	quest.4200000000180352.title: "Awakening Altar"
 	quest.4200000000180353.quest_desc: [
 		"Otocz nimi ołtarz, by dokończyć przebudzenie.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180353.title: "Postument przebudzenia"
+	quest.4200000000180353.title: "Awakening Pedestal"
 	quest.4200000000180354.quest_desc: [
 		"Kryształ infuzji, któremu nigdy nie kończą się ładunki.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
@@ -4336,22 +4336,22 @@
 		"Trzyma esencję hurtowo, żeby maszyny nigdy nie wyschły.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180355.title: "Naczynie esencji"
+	quest.4200000000180355.title: "Essence Vessel"
 	quest.4200000000180356.quest_desc: [
 		"Podstawowa część każdej maszyny na esencji.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180356.title: "Rama maszyny"
+	quest.4200000000180356.title: "Rama maszyn"
 	quest.4200000000180357.quest_desc: [
 		"Pilnuje upraw w pobliżu i łamie je w chwili, gdy dojrzeją.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180357.title: "Żniwiarka"
+	quest.4200000000180357.title: "Harvester"
 	quest.4200000000180358.quest_desc: [
 		"Zamienia zbędne nasiona z powrotem w esencję, zamiast w bałagan.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180358.title: "Przetwórca nasion"
+	quest.4200000000180358.title: "Seed Reprocessor"
 	quest.4200000000180359.quest_desc: [
 		"Przyspiesza pobliskie uprawy esencją Inferium.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
@@ -4411,12 +4411,12 @@
 		"Przyspiesza wzrost, gdy rzucisz ją na już posadzone uprawy.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180364.title: "Nawożona esencja"
+	quest.4200000000180364.title: "Esencja nawożenia"
 	quest.4200000000180365.quest_desc: [
 		"Pył, z którego powstają sztabki Soulium. Składnik wrogich nasion.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180365.title: "Pył Soulium"
+	quest.4200000000180365.title: "Esencja Soulium"
 	quest.4200000000180366.quest_desc: [
 		"Pył Soulium związany ze sztabką Prosperity, ciemny i odrobinę zimny.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
@@ -4426,7 +4426,7 @@
 		"Zrobiony z Soulium. Zadaje dodatkowe obrażenia wrogim mobom.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
 	]
-	quest.4200000000180367.title: "Sztylet Soulium"
+	quest.4200000000180367.title: "Sztylet dusz"
 	quest.4200000000180368.quest_desc: [
 		"Niedokończone nasiono do hodowli wrogich mobów.",
 		"Jak: receptura Mystical Agriculture w JEI. Inferium i Prosperity biorą się z sita; nasiona nasącza się na Ołtarzu infuzji."
@@ -4652,7 +4652,7 @@
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.4200000000190394.title: "Lokalizator gniazd"
+	quest.4200000000190394.title: "Lokalizator Gniazda"
 	quest.4200000000190395.quest_desc: [
 		"Brzozowe kłody wokół kwiatu: pszczoły cieśle innego koloru.",
 		"Jak: pierścień z materiału gniazda wokół małego kwiatu. Postaw go, potem prawy przycisk małym kwiatem, żeby go obudzić; pszczoły wylatują po chwili."
@@ -4752,7 +4752,7 @@
 		"Kręci się szybciej, gdy zasila ją źródło ciepła.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.42000000001903A8.title: "Podgrzewana wirówka"
+	quest.42000000001903A8.title: "Podgrzewana Wirowarka"
 	quest.42000000001903A9.quest_desc: [
 		"Wykluwa larwy pszczół w nowe pszczoły o przydatnych cechach.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
@@ -4797,7 +4797,7 @@
 		"Cechy pszczoły, wyciągnięte i gotowe do butelkowania.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
 	]
-	quest.42000000001903B1.title: "Próbka genu"
+	quest.42000000001903B1.title: "Próbka Genetyczna"
 	quest.42000000001903B2.quest_desc: [
 		"Genetyka jednej pszczoły, schowana do późniejszej hodowli.",
 		"Jak: receptury Productive Bees są w JEI. Rój nazywa ul, wirówkę i kroki hodowli."
@@ -4923,12 +4923,12 @@
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: sztabki żelaza i żelazne kraty wokół pustego modułu; daje cztery. Moduły wchodzą do routera."
 	]
-	quest.42000000001A03CA.title: "Modułowy router"
+	quest.42000000001A03CA.title: "Modular Router"
 	quest.42000000001A03CB.quest_desc: [
 		"Karta, na której zapisuje się każde zachowanie routera.",
 		"Jak: modułowy router plus puste moduły w JEI. Wyciągacz/nadawca/łamacz siedzą w routerze."
 	]
-	quest.42000000001A03CB.title: "Pusty moduł"
+	quest.42000000001A03CB.title: "Blank Module"
 	quest.42000000001A03CC.quest_desc: [
 		"Wyciąga przedmioty z sąsiada do routera.",
 		"Jak: modułowy router plus puste moduły w JEI. Wyciągacz/nadawca/łamacz siedzą w routerze."
@@ -4943,47 +4943,47 @@
 		"Rozbij blok przed routerem i zostaw sobie to, co spadnie.",
 		"Jak: modułowy router plus puste moduły w JEI. Wyciągacz/nadawca/łamacz siedzą w routerze."
 	]
-	quest.42000000001A03CE.title: "Moduł kruszący"
+	quest.42000000001A03CE.title: "Breaker Module"
 	quest.42000000001A03CF.quest_desc: [
 		"Postaw blok tam, gdzie wskazuje router.",
 		"Jak: modułowy router plus puste moduły w JEI. Wyciągacz/nadawca/łamacz siedzą w routerze."
 	]
-	quest.42000000001A03CF.title: "Moduł stawiający"
+	quest.42000000001A03CF.title: "Placer Module"
 	quest.42000000001A03D0.quest_desc: [
 		"Wyślij redstone, gdy zawartość routera przekroczy próg.",
 		"Jak: modułowy router plus puste moduły w JEI. Wyciągacz/nadawca/łamacz siedzą w routerze."
 	]
-	quest.42000000001A03D0.title: "Moduł detektora"
+	quest.42000000001A03D0.title: "Detector Module"
 	quest.42000000001A03D1.quest_desc: [
 		"Niesie przedmioty między skrzyniami, maszynami i platformami.",
 		"Jak: żelazo + redstone. Ustaw ścianki kluczem Pipez."
 	]
-	quest.42000000001A03D1.title: "Rura na przedmioty"
+	quest.42000000001A03D1.title: "Item Pipe"
 	quest.42000000001A03D2.quest_desc: [
 		"Niesie płyny między zbiornikami a maszynami, bez biegania z wiadrem.",
 		"Jak: żelazo + wiadra + redstone. Użycie w skradaniu kluczem na boku, by wyciągać; prawy przycisk na tym boku dla filtrów."
 	]
-	quest.42000000001A03D2.title: "Rura na płyny"
+	quest.42000000001A03D2.title: "Fluid Pipe"
 	quest.42000000001A03D3.quest_desc: [
 		"Niesie energię między maszynami, które ją robią, a tymi, które jej potrzebują.",
 		"Jak: żelazo + redstone. Niesie FE między maszynami."
 	]
-	quest.42000000001A03D3.title: "Rura energii"
+	quest.42000000001A03D3.title: "Energy Pipe"
 	quest.42000000001A03D4.quest_desc: [
 		"Niesie chemikalia między maszynami, które je obsługują.",
 		"Jak: rury z żelaza + redstone w JEI. Użycie w skradaniu kluczem ustawia wyciągające boki; prawy przycisk na jednym dla filtrów. Rozdział rur to cała drabina."
 	]
-	quest.42000000001A03D4.title: "Rura gazowa"
+	quest.42000000001A03D4.title: "Gas Pipe"
 	quest.42000000001A03D5.quest_desc: [
 		"Jedna rura, wiele zadań.",
 		"Jak: rury z żelaza + redstone w JEI. Użycie w skradaniu kluczem ustawia wyciągające boki; prawy przycisk na jednym dla filtrów. Rozdział rur to cała drabina."
 	]
-	quest.42000000001A03D5.title: "Rura uniwersalna"
+	quest.42000000001A03D5.title: "Universal Pipe"
 	quest.42000000001A03D6.quest_desc: [
 		"Użyj w skradaniu boku rury, żeby wyciągała z maszyny, albo żeby go odciąć.",
 		"Jak: dwa krzemienie i dwa patyki. Użycie w skradaniu boku rury przy maszynie, by wyciągała, jeszcze raz, by odciąć; prawy przycisk na wyciągającym boku dla filtrów."
 	]
-	quest.42000000001A03D6.title: "Klucz do rur"
+	quest.42000000001A03D6.title: "Pipe Wrench"
 	quest.42000000001A03D7.quest_desc: [
 		"Ulepszenie prędkości do rury.",
 		"Jak: rury z żelaza + redstone w JEI. Użycie w skradaniu kluczem ustawia wyciągające boki; prawy przycisk na jednym dla filtrów. Rozdział rur to cała drabina."
@@ -5144,7 +5144,7 @@
 		"Wskazuje zakopaną rudę albo ukryte budowle w pobliżu.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B03F6.title: "Różdżka wróżebna"
+	quest.42000000001B03F6.title: "Divination Rod"
 	quest.42000000001B03F7.quest_desc: [
 		"Ściera rytualną kredę z ziemi, gdy skończysz.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
@@ -5154,17 +5154,17 @@
 		"Rośnie w drzewo, które nie należy do tego świata.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B03F8.title: "Sadzonka Zaświatów"
+	quest.42000000001B03F8.title: "Otherworld Sapling"
 	quest.42000000001B03F9.quest_desc: [
 		"Drewno z obcego drzewa, do rytuałów wiązania.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B03F9.title: "Pień Zaświatów"
+	quest.42000000001B03F9.title: "Otherworld Log"
 	quest.42000000001B03FA.quest_desc: [
 		"Trzyma ofiarę, póki trwa rytuał wiązania.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B03FA.title: "Misa ofiarna"
+	quest.42000000001B03FA.title: "Sacrificial Bowl"
 	quest.42000000001B03FB.quest_desc: [
 		"Złocona misa, która przyspiesza rytuał, w którym stoi.",
 		"Jak: złoto wokół ofiarnej misy. Słownik nazywa rytuał."
@@ -5199,22 +5199,22 @@
 		"Fokus, który pomaga rytuałowi trzymać kształt.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B0401.title: "Klejnot nastrojony na duchy"
+	quest.42000000001B0401.title: "Spirit Attuned Gem"
 	quest.42000000001B0402.quest_desc: [
 		"Ruda spoza tego świata, wytapiana w Iesnium.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B0402.title: "Surowy Iesnium"
+	quest.42000000001B0402.title: "Raw Iesnium"
 	quest.42000000001B0403.quest_desc: [
 		"Metal, który jest tylko po drugiej stronie.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B0403.title: "Sztabka Iesnium"
+	quest.42000000001B0403.title: "Iesnium Ingot"
 	quest.42000000001B0404.quest_desc: [
 		"Wysyła związanych duchowych górników do Zaświatów, by kopali.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B0404.title: "Szyb wymiarowy"
+	quest.42000000001B0404.title: "Dimensional Mineshaft"
 	quest.42000000001B0405.quest_desc: [
 		"Najsłabszy duch, posłany kopać pod ziemią.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
@@ -5304,7 +5304,7 @@
 		"Próbka żyły; warto ją przetopić, gdy znajdziesz więcej.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
 	]
-	quest.42000000001B0416.title: "Ruda Iesnium"
+	quest.42000000001B0416.title: "Iesnium Ore"
 	quest.42000000001B0417.quest_desc: [
 		"Afrit wysłany głęboko, by kopał tam, dokąd słabsze duchy nie pójdą.",
 		"Jak: Słownik duchów, potem Ogień duchów i misy. Rozdział Zaświaty nazywa obrzędy."
@@ -5395,7 +5395,7 @@
 		"Grzeje kadzie dość mocno do pieca hutniczego i warzenia.",
 		"Jak: zrób pusty palnik płomyka, potem użyj go na płomyku z fortecy Netheru, po obsydianie Pazura."
 	]
-	quest.42000000001C0428.title: "Palnik płomyka"
+	quest.42000000001C0428.title: "Płomienny palnik"
 	quest.42000000001C0429.quest_desc: [
 		"Łapie to, co wpadnie do środka, do mieszania albo prasowania.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5450,7 +5450,7 @@
 		"Ładuje taśmę albo ją rozładowuje, w jedną stronę naraz.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0433.title: "Lejek z andezytu"
+	quest.42000000001C0433.title: "Andezytowy lejek"
 	quest.42000000001C0434.quest_desc: [
 		"Filtruje to, co przenosi, według przedmiotu i według liczby.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5475,12 +5475,12 @@
 		"Filtruje, który płyn przechodzi.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0438.title: "Inteligentna rura na płyny"
+	quest.42000000001C0438.title: "Inteligentna rura"
 	quest.42000000001C0439.quest_desc: [
 		"Pcha płyn rurami w jedną stronę.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0439.title: "Pompa mechaniczna"
+	quest.42000000001C0439.title: "Mechaniczna pompa"
 	quest.42000000001C043A.quest_desc: [
 		"Pompuj płyny ze źródła.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5495,7 +5495,7 @@
 		"Opróżnia płyn z pełnych pojemników.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C043C.title: "Spust przedmiotów"
+	quest.42000000001C043C.title: "Odpływ"
 	quest.42000000001C043D.quest_desc: [
 		"Przechowuje dużą objętość płynu w jednym bloku.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5530,7 +5530,7 @@
 		"Osadzony na wale, staje się ręką rozmieszczacza.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0443.title: "Mosiężna ręka"
+	quest.42000000001C0443.title: "Mosiężna dłoń"
 	quest.42000000001C0444.quest_desc: [
 		"Bierze przedmioty z jednego miejsca i stawia je w innym.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5550,7 +5550,7 @@
 		"Wysyła sygnał redstone bez przewodu między platformami.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0447.title: "Łącze redstone"
+	quest.42000000001C0447.title: "Nadajnik sygnału"
 	quest.42000000001C0448.quest_desc: [
 		"Daje sygnał redstone, gdy magazyn przekroczy próg.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5565,7 +5565,7 @@
 		"Pokazuje liczbę każdemu, kto czyta panel.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C044A.title: "Lampa Nixie"
+	quest.42000000001C044A.title: "Lampa elektronowa"
 	quest.42000000001C044B.quest_desc: [
 		"Pokazuje tekst z tabliczki albo z taśmy zapasów.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5575,22 +5575,22 @@
 		"Od razu pokazuje liczbę śledzonego zasobu.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C044C.title: "Wskaźnik fabryczny"
+	quest.42000000001C044C.title: "Miernik fabryczny"
 	quest.42000000001C044D.quest_desc: [
 		"Pakuj przedmioty do wysyłki.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C044D.title: "Pakowarka"
+	quest.42000000001C044D.title: "Pakowacz"
 	quest.42000000001C044E.quest_desc: [
 		"Zbiera rozdzielone paczki z powrotem w całe zamówienia.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C044E.title: "Przepakowarka"
+	quest.42000000001C044E.title: "Przepakowywacz"
 	quest.42000000001C044F.quest_desc: [
 		"Zamawia przedmioty z połączonej sieci zapasów.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C044F.title: "Taśma zapasów"
+	quest.42000000001C044F.title: "Licznik magazynowy"
 	quest.42000000001C0450.quest_desc: [
 		"Połóż go, a wagonik ma dokąd jechać.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5615,22 +5615,22 @@
 		"Zasilana szyna z dokładniejszą kontrolą prędkości.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0454.title: "Szyna sterująca"
+	quest.42000000001C0454.title: "Tory sterujące"
 	quest.42000000001C0455.quest_desc: [
 		"Krążek linowy do ruchu w pionie.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0455.title: "Krążek linowy"
+	quest.42000000001C0455.title: "Krążek z liną"
 	quest.42000000001C0456.quest_desc: [
 		"Podnosi całą platformę między oznaczonymi piętrami.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0456.title: "Krążek windy"
+	quest.42000000001C0456.title: "Krążek windowy"
 	quest.42000000001C0457.quest_desc: [
 		"Wozi wózek suwnicy wzdłuż całej swojej długości.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
 	]
-	quest.42000000001C0457.title: "Wał suwnicy"
+	quest.42000000001C0457.title: "Suwnica"
 	quest.42000000001C0458.quest_desc: [
 		"Jedzie po wale suwnicy i ciągnie strukturę za sobą.",
 		"Jak: wytwarzanie Create w JEI (stół rzemieślniczy, prasa, mieszalnik albo rozmieszczacz). Stop andezytowy i koło wodne zaczynają linię."
@@ -5651,7 +5651,7 @@
 		"Szybko rośnie w wodzie, główny kryształ cyfrowego krosna.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000001D045B.title: "Kryształ Fluix"
+	quest.42000000001D045B.title: "Fluix Crystal"
 	quest.42000000001D045C.quest_desc: [
 		"Zmielony Fluix, do przepisów na szkło i kabel.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -5736,7 +5736,7 @@
 		"Trzyma zapas energii dla sieci.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000001D046C.title: "Komórka energii"
+	quest.42000000001D046C.title: "Energy Cell"
 	quest.42000000001D046D.quest_desc: [
 		"Trzyma głęboki zapas energii dla sieci.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -5931,12 +5931,12 @@
 		"Strzela kulami materii; naładuj je, zanim będzie potrzebne.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000001D0493.title: "Działo materii"
+	quest.42000000001D0493.title: "Matter Cannon"
 	quest.42000000001D0494.quest_desc: [
 		"Przezroczysty blok na skorupy kontrolera i ciągi kabli.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000001D0494.title: "Szkło kwarcowe"
+	quest.42000000001D0494.title: "Quartz Glass"
 	quest.42000000001D0495.quest_desc: [
 		"Szkło, które świeci samo, pochodnia niepotrzebna.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -5946,12 +5946,12 @@
 		"Lity blok magazynu, cztery kryształy skondensowane w jeden.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000001D0496.title: "Blok Fluix"
+	quest.42000000001D0496.title: "Fluix Block"
 	quest.42000000001D0497.quest_desc: [
 		"Dzieli komórkę magazynową na kilka mniejszych pul.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000001D0497.title: "Warsztat komórek"
+	quest.42000000001D0497.title: "Cell Workbench"
 	quest.42000000001E0498.quest_desc: [
 		"Glina i mączka kostna, krok ku porcelanowym narzędziom.",
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
@@ -5962,7 +5962,7 @@
 		"Lżejsze wiadro, łagodniejsze dla wczesnego budżetu żwiru.",
 		"Jak: uformuj z gliny porcelanowej niewypalane wiadro, potem je przetop."
 	]
-	quest.42000000001E0499.title: "Porcelanowe wiadro"
+	quest.42000000001E0499.title: "Porcelain Bucket"
 	quest.42000000001E049A.quest_desc: [
 		"Topi bloki w ciecz nad ogniem.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -6047,7 +6047,7 @@
 		"Dziewięć bloków ziemi złożonych w jeden, na drogę w górę.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04AA.title: "Sprasowana ziemia"
+	quest.42000000001E04AA.title: "Compressed Dirt"
 	quest.42000000001E04AB.quest_desc: [
 		"Dziewięć bruku ściśnięte ciasno, tanio i bez końca.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -6057,32 +6057,32 @@
 		"Dziewięć żwiru ubite; sprasowane sito bierze to w całości.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04AC.title: "Sprasowany żwir"
+	quest.42000000001E04AC.title: "Compressed Gravel"
 	quest.42000000001E04AD.quest_desc: [
 		"Dziewięć bloków piasku sprasowanych w jeden, do dźwigania.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04AD.title: "Sprasowany piasek"
+	quest.42000000001E04AD.title: "Compressed Sand"
 	quest.42000000001E04AE.quest_desc: [
 		"Dziewięć bloków pyłu sprasowanych, z tego samego powodu.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04AE.title: "Sprasowany pył"
+	quest.42000000001E04AE.title: "Compressed Dust"
 	quest.42000000001E04AF.quest_desc: [
 		"Kamień Netheru ubity, dla lżejszego ekwipunku.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04AF.title: "Sprasowany Netherrack"
+	quest.42000000001E04AF.title: "Compressed Netherrack"
 	quest.42000000001E04B0.quest_desc: [
 		"Kamień Endu ubity, przydatny, gdy pustkę trzeba nakarmić.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04B0.title: "Sprasowany kamień Endu"
+	quest.42000000001E04B0.title: "Compressed End Stone"
 	quest.42000000001E04B1.quest_desc: [
 		"Łupek ubity, dziewięć do jednego, a to wciąż tylko kamień.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04B1.title: "Sprasowany łupek"
+	quest.42000000001E04B1.title: "Compressed Deepslate"
 	quest.42000000001E04B2.quest_desc: [
 		"Rozbija naraz cały stos sprasowanych bloków.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -6092,7 +6092,7 @@
 		"Słabszy młot do rozbijania sprasowanych bloków.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04B3.title: "Sprasowany żelazny młot"
+	quest.42000000001E04B3.title: "Compressed Iron Hammer"
 	quest.42000000001E04B4.quest_desc: [
 		"Szerokie sito, kilka hałd żwiru naraz.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
@@ -6102,17 +6102,17 @@
 		"Przesiewa jak dębowe, tylko inne usłojenie.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04B5.title: "Brzozowe sito"
+	quest.42000000001E04B5.title: "Birch Sieve"
 	quest.42000000001E04B6.quest_desc: [
 		"Fermentuje tak samo jak każda inna beczka.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04B6.title: "Brzozowa beczka"
+	quest.42000000001E04B6.title: "Birch Barrel"
 	quest.42000000001E04B7.quest_desc: [
 		"Topi bloki tak samo jak każdy inny tygiel.",
 		"Jak: sito, młot, tygiel albo beczka Ex Deorum. Dopasuj siatkę do grysu."
 	]
-	quest.42000000001E04B7.title: "Brzozowy tygiel"
+	quest.42000000001E04B7.title: "Birch Crucible"
 	quest.42000000001E04B8.quest_desc: [
 		"Waluta Nici: zarabiaj, wydawaj, nigdy nie marnuj.",
 		"Jak: nagrody z zadań, ziemia z krzemienną siatką na Ramie krosna, skrytki zarządcy."
@@ -6153,7 +6153,7 @@
 		"Otwiera paczkę z powrotem na luźne przedmioty.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
 	]
-	quest.42000000001F04BF.title: "Rozpakowywarka"
+	quest.42000000001F04BF.title: "Unpackager"
 	quest.42000000001F04C0.quest_desc: [
 		"Zapisuje przepis wytwarzania na wzorzec paczki.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
@@ -6173,7 +6173,7 @@
 		"Oznacza cel, do którego dystrybutor może wysyłać paczki.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
 	]
-	quest.42000000001F04C3.title: "Znacznik dystrybutora"
+	quest.42000000001F04C3.title: "Distributor Marker"
 	quest.42000000001F04C4.quest_desc: [
 		"Podaje gotowe paczki na linię do odbioru.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
@@ -6198,7 +6198,7 @@
 		"Napełnia paczkę płynem zamiast przedmiotów.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
 	]
-	quest.42000000001F04C8.title: "Napełniacz paczek płynu"
+	quest.42000000001F04C8.title: "Fluid Package Filler"
 	quest.42000000001F04C9.quest_desc: [
 		"Zapieczętowana wiązka przedmiotów, gotowa do przeniesienia albo schowania.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
@@ -6208,12 +6208,12 @@
 		"Pakuje w jedną paczkę o wiele więcej niż zwykły rodzaj.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
 	]
-	quest.42000000001F04CA.title: "Paczka objętości"
+	quest.42000000001F04CA.title: "Volume Package"
 	quest.42000000001F04CB.quest_desc: [
 		"Oznacza, dokąd ma sięgać pośrednik wytwarzania.",
 		"Jak: komponent paczki, potem Pakowarka / Koder. Do części ME potrzeba sieci AE2."
 	]
-	quest.42000000001F04CB.title: "Znacznik pośrednika"
+	quest.42000000001F04CB.title: "Proxy Marker"
 	quest.42000000001F04CC.quest_desc: [
 		"Łączy linię pakowania z cyfrowym krosnem.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -6233,7 +6233,7 @@
 		"Najpierw sieć cyfrowego krosna, bo inaczej to pakowanie nie ruszy.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
 	]
-	quest.42000000001F04CF.title: "Kontroler ME"
+	quest.42000000001F04CF.title: "ME Controller"
 	quest.42000000001F04D0.quest_desc: [
 		"Prowadź energię albo sygnały.",
 		"Jak: Sieć Wrzeciona — Certus z piasku, kontroler chce Węzła wiążącego."
@@ -6284,12 +6284,12 @@
 		"Trzyma kilka dysków kwantowych w jednej obudowie.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004D9.title: "Macierz napędów QIO"
+	quest.42000000002004D9.title: "Macierz dyskowa KOP"
 	quest.42000000002004DA.quest_desc: [
 		"Przejrzyj wszystko, co trzyma sieć QIO.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004DA.title: "Panel QIO"
+	quest.42000000002004DA.title: "Panel KOP"
 	quest.42000000002004DB.quest_desc: [
 		"Nosi panel QIO w twojej kieszeni.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -6310,7 +6310,7 @@
 		"Trzyma ogromny stos jednego jedynego przedmiotu.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004DE.title: "Absolutny pojemnik"
+	quest.42000000002004DE.title: "Ostateczny Kosz"
 	quest.42000000002004DF.quest_desc: [
 		"Przetapia kilka stosów naraz, tak szybko, jak tylko potrafi Mekanism.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -6355,17 +6355,17 @@
 		"Obudowa reaktora, który wytwarza antymaterię.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004E7.title: "Obudowa SPS"
+	quest.42000000002004E7.title: "Obudowa ZFN"
 	quest.42000000002004E8.quest_desc: [
 		"Podaje chemikalia i wyciąga antymaterię z reaktora.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004E8.title: "Port SPS"
+	quest.42000000002004E8.title: "Port ZFN"
 	quest.42000000002004E9.quest_desc: [
 		"Przyspiesza uzysk reaktora antymaterii.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004E9.title: "Cewka superładowana"
+	quest.42000000002004E9.title: "Przeciążona cewka"
 	quest.42000000002004EA.quest_desc: [
 		"Rozkręca izotopy osobno, do późnej chemii.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -6395,12 +6395,12 @@
 		"Zamienia moc wprost w ciepło dla kotła.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004EF.title: "Grzałka oporowa"
+	quest.42000000002004EF.title: "Grzejnik rezystancyjny"
 	quest.42000000002004F0.quest_desc: [
 		"Spala drewno na ciepło, a nie na moc.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004F0.title: "Grzałka na drewno"
+	quest.42000000002004F0.title: "Grzejnik na drewno opałowe"
 	quest.42000000002004F1.quest_desc: [
 		"Późna synteza materiałów, które inaczej byłyby niemożliwe.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -6410,7 +6410,7 @@
 		"Jedno modułowe narzędzie do wydobycia, kopania i nie tylko.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004F2.title: "Narzędzie Meka"
+	quest.42000000002004F2.title: "Meka-Narzędzie"
 	quest.42000000002004F3.quest_desc: [
 		"Pancerz kombinezonu na głowę, ulepszany moduł po module.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -6475,7 +6475,7 @@
 		"Tnie drewno własnym precyzyjnym ostrzem Mekanism.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.42000000002004FF.title: "Precyzyjny tartak"
+	quest.42000000002004FF.title: "Pilarka ramowa"
 	quest.4200000000200500.quest_desc: [
 		"Rozdziela wodę na dwa składowe gazy.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -6485,7 +6485,7 @@
 		"Łączy dwie chemikalia w jedną nową.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.4200000000200501.title: "Infuzor chemiczny"
+	quest.4200000000200501.title: "Infuzer chemiczny"
 	quest.4200000000200502.quest_desc: [
 		"Oczyść płyny albo rudy.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
@@ -6505,7 +6505,7 @@
 		"Składa kilka części w jeden gotowy element.",
 		"Jak: rozdział Zakłady Mekanism — bryłki rudy z sita, potem linia fabryki."
 	]
-	quest.4200000000200505.title: "Łącznik"
+	quest.4200000000200505.title: "Formiarka"
 	quest.4200000000210506.quest_desc: [
 		"Zombie to upuszczają, czy chcesz, czy nie.",
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
@@ -6727,7 +6727,7 @@
 		"Odłamek starej pieśni plemienia — trzeba Kościanego dzwonka.",
 		"Jak: Kościany dzwonek, ametyst i redstone, bez kształtu. Daje dwa."
 	]
-	quest.4200000000220530.title: "Duchowy odłamek"
+	quest.4200000000220530.title: "Odłamek Ducha"
 	quest.4200000000220531.quest_desc: [
 		"Nastrój metal na ducha — miedź wokół Kościanego dzwonka.",
 		"Jak: miedź wokół Kościanego dzwonka. Daje dwa."
@@ -6747,7 +6747,7 @@
 		"Dziewięć plemion raz zanuciło — potrzeba zapasowego Dzwonka i Odłamka.",
 		"Jak: wytwórz albo weź jako nagrodę Iskry/Plemiennego splotu. Prawy klik: jak działa krata."
 	]
-	quest.4200000000220534.title: "Kodeks Duchów"
+	quest.4200000000220534.title: "Duchowy kodeks"
 	quest.4200000000220535.quest_desc: [
 		"Wciągnij ley w uderzenia.",
 		"Jak: postaw pod niebem, blisko wody/zieleni. Wolny Puls. Drabina Iskry."
@@ -6792,7 +6792,7 @@
 		"Zacznij pieśń kraty. Czeka na kamień albo przedmiot etapu Echa; surowy metal to grys w Echołamaczu.",
 		"Jak: Kodeks Duchów + Plemienny splot. Osadź kamień albo przedmiot etapu Echa. Surowy metal należy do Echołamacza."
 	]
-	quest.420000000022053D.title: "Ława pieśni"
+	quest.420000000022053D.title: "Stół pieśni"
 	quest.420000000022053E.quest_desc: [
 		"Prowadź harmoniczne między totemami.",
 		"Jak: cztery Miedziane rezonatory wokół redstone. Robi cztery."
@@ -6802,7 +6802,7 @@
 		"Zanuć etap pierwszy — krusz rudę. Kamień staje się odłamkami; bruk żwirem; surowy metal grysem. Kruszenie grysu trwa 4 sekundy przy 40 Puls/s.",
 		"Jak: kamień + Kościany dzwonek + Miedziany rezonator. Totem Ziemi w zasięgu 8. Kamień → odłamki; bruk → żwir; surowy metal → grys. Cztery sekundy przy 40 Puls/s."
 	]
-	quest.420000000022053F.title: "Echołamacz"
+	quest.420000000022053F.title: "Kruszarka echa"
 	quest.4200000000220540.quest_desc: [
 		"Odłamek, który usłyszał kruszenie.",
 		"Jak: kamień w Echołamaczu (nie bruk). Kamień stopnia Źródła, albo kamień z jedwabnym dotykiem."
@@ -6812,7 +6812,7 @@
 		"Zanuć etap drugi — dostrój.",
 		"Jak: siedem kamieni, Duchowy odłamek i Miedziany rezonator."
 	]
-	quest.4200000000220541.title: "Dostrojenie echa"
+	quest.4200000000220541.title: "Dostrajacz echa"
 	quest.4200000000220542.quest_desc: [
 		"Echo, które znalazło klucz.",
 		"Jak: Kodeks Duchów + Plemienny splot. Stacja, totem i koszt Pulsu są na stronie Kodeksu."
@@ -6822,7 +6822,7 @@
 		"Etap wiązania — zawiąż ducha na metal.",
 		"Jak: siedem kamieni, odłamek ametystu i Miedziany rezonator."
 	]
-	quest.4200000000220543.title: "Więź echa"
+	quest.4200000000220543.title: "Wiązacz echa"
 	quest.4200000000220544.quest_desc: [
 		"Echo, które się nie ześlizgnie.",
 		"Jak: Kodeks Duchów + Plemienny splot. Stacja, totem i koszt Pulsu są na stronie Kodeksu."
@@ -6832,12 +6832,12 @@
 		"Etap przetkania — zawołaj sztabkę.",
 		"Jak: pięć kamieni, sztabka złota, dwa Miedziane rezonatory i Duchowy odłamek."
 	]
-	quest.4200000000220545.title: "Echomanifest"
+	quest.4200000000220545.title: "Manifestator echa"
 	quest.4200000000220546.quest_desc: [
 		"Metal powołany do bytu przez Duchowy puls, nie przez piec.",
 		"Jak: Kodeks Duchów + Plemienny splot. Stacja, totem i koszt Pulsu są na stronie Kodeksu."
 	]
-	quest.4200000000220546.title: "Przejawiona sztabka"
+	quest.4200000000220546.title: "Manifestowana sztabka"
 	quest.4200000000220547.quest_desc: [
 		"Zachowaj to, co zostawiły plemiona.",
 		"Jak: siedem desek, skrzynia i Kościany dzwonek."
@@ -6852,7 +6852,7 @@
 		"Nienapisana pieczęć, czeka, aż obrzęd ją wypełni.",
 		"Jak: siedem papieru, Duchowy odłamek i Kościany dzwonek. Robi dwa."
 	]
-	quest.4200000000220549.title: "Pusta pieczęć"
+	quest.4200000000220549.title: "Czysta pieczęć"
 	quest.420000000022054A.quest_desc: [
 		"Pieczęć plemienia kamienia.",
 		"Jak: Pusta pieczęć i ziemia, bez kształtu."
@@ -6882,7 +6882,7 @@
 		"Ofiaruj pieczęcie. Zapytaj Krosno.",
 		"Jak: pięć kamieni, odłamek ametystu i Kościany dzwonek."
 	]
-	quest.420000000022054F.title: "Postument obrzędu"
+	quest.420000000022054F.title: "Cokół obrzędu"
 	quest.4200000000220550.quest_desc: [
 		"Użyj go z pustymi rękami i zagraj Rytuał bramy: trafiaj spadające uderzenia na A, S, D, F. Osiągnij 60%, a się otworzy; Puls niepotrzebny.",
 		"Jak: użyj Bębna bramy z pustymi rękami i zagraj Rytuał bramy: trafiaj spadające uderzenia na A, S, D, F. Osiągnij 60%, a się otworzy; Puls niepotrzebny. Najpierw zwiąż kompas powrotu."
@@ -6902,7 +6902,7 @@
 		"Ostrze, które zużywa Puls.",
 		"Jak: dwie Przejawione sztabki, Kościany dzwonek i patyk."
 	]
-	quest.4200000000220553.title: "Ostrze duchowego wyposażenia"
+	quest.4200000000220553.title: "Ostrze duchowego sprzętu"
 	quest.4200000000220554.quest_desc: [
 		"Kamień z Marchii, pod stopami, w miejscu, którego nie powinno być.",
 		"Jak: wytop Bruk Marchii. Wydobywaj go w Marchii, przez Bęben bramy."
@@ -6912,22 +6912,22 @@
 		"Gruz z Marchii, zwykły, ale obfity.",
 		"Jak: wydobywaj kamień Marchii w Marchii, przez Bęben bramy."
 	]
-	quest.4200000000220555.title: "Bruk Marchii"
+	quest.4200000000220555.title: "Bruk Marszu"
 	quest.4200000000220556.quest_desc: [
 		"Drewno, które wyrosło tam, gdzie słońce nie sięga.",
 		"Jak: ścinaj drzewa Marchii, przez Bęben bramy."
 	]
-	quest.4200000000220556.title: "Kłoda Marchii"
+	quest.4200000000220556.title: "Kłoda (Marsz)"
 	quest.4200000000220557.quest_desc: [
 		"Tarcica z Marchii, mocna mimo tego, skąd pochodzi.",
 		"Jak: jedna Kłoda Marchii daje cztery deski."
 	]
-	quest.4200000000220557.title: "Deski Marchii"
+	quest.4200000000220557.title: "Deski (Marsz)"
 	quest.4200000000220558.quest_desc: [
 		"Liście, które szepczą nawet bez żadnego wiatru.",
 		"Jak: drzewa Marchii, przez Bęben bramy. Nożyce albo jedwabny dotyk zachowują liście."
 	]
-	quest.4200000000220558.title: "Liść Marchii"
+	quest.4200000000220558.title: "Liść Marszu"
 	quest.4200000000220559.quest_desc: [
 		"Trzcina, która buczy resztką Duchowego pulsu.",
 		"Jak: rośnie dziko w Marchii, leży w skrzyniach trzcinowej tamy, a Starszy Wiązaczy korzeni nim handluje."
@@ -7286,27 +7286,27 @@
 		"Dwa kamienie i odczynnik wokół pieczęci; pieczęć wraca do ciebie. Trzcinowy kieł obok Pieczęci Wody; 400 Puls. Dwadzieścia minut deszczu, dla cystern i upraw. Użyj tabliczki obrzędu w skradaniu na Rytualnym palenisku z tą pieczęcią osadzoną, wewnątrz jego Kręgu obrzędu (cztery piedestały na przekątnych, kreda je łączy); Puls jest czerpany z kraty w promieniu ośmiu bloków.",
 		"Jak: dwa kamienie, Trzcinowy kieł i Pieczęć Wody, bez kształtu; pieczęć wraca."
 	]
-	quest.4200000000228012.title: "Tabliczka obrzędu: Wezwanie deszczu"
+	quest.4200000000228012.title: "Tabliczka rytuału: Wezwanie deszczu"
 	quest.4200000000228013.quest_desc: [
 		"Dwa kamienie i odczynnik wokół pieczęci; pieczęć wraca do ciebie. Skrzydło burzy obok Pieczęci powietrza; 400 Pulsu. Czterdzieści minut czystego nieba. Użyj w skradaniu tablicy na Rytualnym palenisku z tą pieczęcią osadzoną, wewnątrz jego Kręgu obrzędu (cztery postumenty na przekątnych, kreda je łączy); Puls jest ciągnięty z kraty w promieniu ośmiu bloków.",
 		"Jak: dwa kamienie, Skrzydło burzy i Pieczęć powietrza, bezkształtnie; pieczęć wraca."
 	]
-	quest.4200000000228013.title: "Tablica obrzędu: czyste niebo"
+	quest.4200000000228013.title: "Tabliczka rytuału: Przejaśnienie nieba"
 	quest.4200000000228014.quest_desc: [
 		"Dwa kamienie i odczynnik wokół pieczęci; pieczęć wraca do ciebie. Serce żaru obok Pieczęci ognia; 800 Pulsu. Przyspiesza noc do następnego świtu dla całego świata. Użyj w skradaniu tablicy na Rytualnym palenisku z tą pieczęcią osadzoną, wewnątrz jego Kręgu obrzędu (cztery postumenty na przekątnych, kreda je łączy); Puls jest ciągnięty z kraty w promieniu ośmiu bloków.",
 		"Jak: dwa kamienie, Serce żaru i Pieczęć ognia, bezkształtnie; pieczęć wraca."
 	]
-	quest.4200000000228014.title: "Tablica obrzędu: wołanie świtu"
+	quest.4200000000228014.title: "Tabliczka obrzędu: Wezwanie świtu"
 	quest.4200000000228015.quest_desc: [
 		"Dwa kamienie i odczynnik wokół pieczęci; pieczęć wraca do ciebie. Pieczęć strażnika obok Pieczęci ducha; 600 Pulsu. Piętnaście minut bez wrogich pojawów w zasięgu sześćdziesięciu czterech bloków. Użyj w skradaniu tablicy na Rytualnym palenisku z tą pieczęcią osadzoną, wewnątrz jego Kręgu obrzędu (cztery postumenty na przekątnych, kreda je łączy); Puls jest ciągnięty z kraty w promieniu ośmiu bloków.",
 		"Jak: dwa kamienie, Pieczęć strażnika i Pieczęć ducha, bezkształtnie; pieczęć wraca."
 	]
-	quest.4200000000228015.title: "Tablica obrzędu: cicha noc"
+	quest.4200000000228015.title: "Tabliczka obrzędu: Cicha noc"
 	quest.4200000000228016.quest_desc: [
 		"Dwa kamienie i odczynnik wokół pieczęci; pieczęć wraca do ciebie. Nić krosna obok Pieczęci krosna; 1 200 Pulsu. Łączy najbliższy totem z innym w zasięgu sześćdziesięciu czterech bloków trzydziestominutową linią ley, która prowadzi Puls między nimi. Użyj w skradaniu tablicy na Rytualnym palenisku z tą pieczęcią osadzoną, wewnątrz jego Kręgu obrzędu (cztery postumenty na przekątnych, kreda je łączy); Puls jest ciągnięty z kraty w promieniu ośmiu bloków.",
 		"Jak: dwa kamienie, Nić krosna i Pieczęć krosna, bezkształtnie; pieczęć wraca."
 	]
-	quest.4200000000228016.title: "Tablica obrzędu: wiązanie ley"
+	quest.4200000000228016.title: "Tabliczka obrzędu: Więź ley"
 	quest.4200000000228017.quest_desc: [
 		"Odpraw dowolny obrzęd. Jeśli krata wokół paleniska trzyma za mało Pulsu, nic się nie zużywa, a palenisko o tym mówi.",
 		"Jak: użyj w skradaniu dowolnej Tablicy obrzędu na Rytualnym palenisku w jego Kręgu obrzędu, z pasującą pieczęcią i Pulsem."
@@ -7526,7 +7526,7 @@
 		"Misa obozowego ognia na Pulsie. Opcjonalnie.",
 		"Jak: wytwórz Żarową misę. Opcjonalnie."
 	]
-	quest.4200000000228042.title: "Żarowa misa"
+	quest.4200000000228042.title: "Misa żaru"
 	quest.4200000000228043.quest_desc: [
 		"Zawieś amulet wiatru u sufitu. Meble obozu Marchii: stołek, stół, urna, mata, półka i ten. Opcjonalnie.",
 		"Jak: wytwórz Amulet wiatru i powieś go. Opcjonalna pamiątka."
@@ -7551,22 +7551,22 @@
 		"Gorąca czerwona bulwa z Żarowych pustkowi. To, co zbierzesz, jest nasionem; posadź je na roli jak ziemniaka. Motyka duchowego wyposażenia ścina i sadzi od nowa jednym cięciem.",
 		"Jak: rośnie dziko na Żarowych pustkowiach, przez Bęben bramy. To, co zbierzesz, jest nasionem; posadź je na roli."
 	]
-	quest.4200000000228047.title: "Żarowy korzeń"
+	quest.4200000000228047.title: "Korzeń żaru"
 	quest.4200000000228048.quest_desc: [
 		"Rośnie dziko na Trzcinowym bagnie. Zbierz kępę i posadź zebrane; cztery fazy na zoranej ziemi, a pszczoły je zapylają.",
 		"Jak: rośnie dziko na Trzcinowym bagnie, przez Bęben bramy. Posadź zebrane na roli."
 	]
-	quest.4200000000228048.title: "Ryż moczarowy"
+	quest.4200000000228048.title: "Ryż mokradła"
 	quest.4200000000228049.quest_desc: [
 		"Ze Śnieżnych pól. Liczy się też jako zioło do Duchowego czajnika.",
 		"Jak: rośnie dziko na Śnieżnych polach, przez Bęben bramy. Posadź zebrane na roli."
 	]
-	quest.4200000000228049.title: "Jagoda szronu"
+	quest.4200000000228049.title: "Mroźna jagoda"
 	quest.420000000022804A.quest_desc: [
 		"Z Grani połysku. Zioło do czajnika, a zarazem uprawa.",
 		"Jak: rośnie dziko na Grani połysku, przez Bęben bramy. Posadź zebrane na roli."
 	]
-	quest.420000000022804A.title: "Fasola połysku"
+	quest.420000000022804A.title: "Fasola błysku"
 	quest.420000000022804B.quest_desc: [
 		"Ze Stepu, i to ziarno, na którym opiera się większość dań plemion. Najpierw wyhoduj jego grządkę, potem resztę.",
 		"Jak: rośnie dziko na Stepie, przez Bęben bramy. Posadź zebrane na roli."
@@ -7621,7 +7621,7 @@
 		"Dwa kamienie, Łuska Mchogrzbietu i Trzcina ducha wokół Pieczęci ducha; pieczęć jest oddawana. Rzuć to na palenisko z osadzoną Pieczęcią ducha, w jego Kręgu obrzędu, za 500 Pulsu: wszyscy w dwunastu blokach odzyskują dziesięć serc, zostają oczyszczeni i pobłogosławieni, a krąg zostaje otwarty przez dziesięć minut. Najpierw połóż Duchową pozostałość poległego chowańca na postumencie, a wróci cały.",
 		"Jak: dwa kamienie, Łuska Mchogrzbietu, Trzcina ducha i Pieczęć ducha, bezkształtnie; pieczęć wraca. Rzuć na zapieczętowane palenisko w jego Kręgu obrzędu."
 	]
-	quest.4200000000228055.title: "Tablica obrzędu: Krąg leczenia"
+	quest.4200000000228055.title: "Tabliczka obrzędu: Krąg leczenia"
 	quest.4200000000228056.quest_desc: [
 		"Przejawiona sztabka, Kościany dzwonek i patyk po skosie. Siedem obrażeń, zasięg plus półtora, a pchnięcie w biegu trafia o 35 procent mocniej. Pod spodem jest Ostrze: dostaje rangę na stacjach Echa, wydaje Puls na uderzenia echa i bierze głos totemu. Trzyma Ogara szczeliny na wyciągnięcie ręki.",
 		"Jak: Przejawiona sztabka, Kościany dzwonek i patyk po skosie. Dostaje rangę na stacjach Echa jak Ostrze."
@@ -7676,7 +7676,7 @@
 		"Relikwia Strażników platformy. Ich opowieść kończy się na Duchu szarży, przy Zdeptanym pierścieniu na Stepie; wygraj próbę, a Starszy ją wręczy. Niesiona gdziekolwiek w ekwipunku utrzymuje przy tobie ich dar niezależnie od reputacji: nigdy nie depczesz pola.",
 		"Jak: dokończ opowieść Strażników platformy z ich Starszym; próba to Duch szarży na Stepie."
 	]
-	quest.4200000000228060.title: "Strzeżony żar"
+	quest.4200000000228060.title: "Zachowany żar"
 	quest.4200000000228061.quest_desc: [
 		"Relikwia Śpiewaków żwiru. Ich opowieść kończy się przy Pryzmatycznym wężu, przy Śpiewającej szczelinie na Kryształowych polach; wygraj próbę, a Starszy wręczy ci relikwię. Niesiona gdziekolwiek w ekwipunku, utrzymuje przy tobie ich dar, jakiekolwiek masz poważanie: z rudy wypada ci więcej.",
 		"Jak: dokończ opowieść Śpiewaków żwiru z ich Starszym; próba to Pryzmatyczny wąż na Kryształowych polach."
@@ -7701,7 +7701,7 @@
 		"Relikwia Tkaczy wzorów. Ich opowieść kończy się u Bębniarza przypływu, przy Kamieniu przypływu na Płyciznach; wygraj próbę, a Starszy ci ją wręczy. Niesiona gdziekolwiek w ekwipunku, utrzymuje przy tobie ich dar, jakiekolwiek masz poważanie: stacje Echa blisko ciebie pracują podwójnie.",
 		"Jak: dokończ opowieść Tkaczy wzorów u ich Starszego; próba to Bębniarz przypływu na Płyciznach."
 	]
-	quest.4200000000228065.title: "Silent Gear"
+	quest.4200000000228065.title: "Ciche koło zębate"
 	quest.4200000000228066.quest_desc: [
 		"Relikwia Strażników kolonii. Ich opowieść kończy się u Upiora kurhanu, przy Pierścieniu kurhanu na Śnieżnych polach; wygraj próbę, a Starszy ci ją wręczy. Niesiona gdziekolwiek w ekwipunku, utrzymuje przy tobie ich dar, jakiekolwiek masz poważanie: nigdy cię nie żądlą.",
 		"Jak: dokończ opowieść Strażników kolonii u ich Starszego; próba to Upiór kurhanu na Śnieżnych polach."
@@ -7797,7 +7797,7 @@
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: kamień + części stołu w JEI. Włóż blok i wybierz wariant."
 	]
-	quest.420000000023058C.title: "Stół kamieniarza"
+	quest.420000000023058C.title: "Mason Table"
 	quest.420000000023058D.quest_desc: [
 		"Ta sama sztuczka dla drewna — sto desek z jednej.",
 		"Jak: stół stolarza Chipped w JEI. Ten sam pomysł co stół kamieniarza, dla drewna."
@@ -7807,27 +7807,27 @@
 		"Piasek w szkło, potem szkło w każdy kształt, jaki przyjmie światło.",
 		"Jak: stół Chipped w JEI (kamieniarz, stolarz, dmuchacz szkła…). Włóż blok do stołu i wybierz cięcie."
 	]
-	quest.420000000023058E.title: "Dmuchacz szkła"
+	quest.420000000023058E.title: "Glassblower"
 	quest.420000000023058F.quest_desc: [
 		"Wełna i sukno, przetkane — w sam raz, dla platformy, która łata Krosno.",
 		"Jak: stół Chipped w JEI (kamieniarz, stolarz, dmuchacz szkła…). Włóż blok do stołu i wybierz cięcie."
 	]
-	quest.420000000023058F.title: "Stół Krosna"
+	quest.420000000023058F.title: "Loom Table"
 	quest.4200000000230590.quest_desc: [
 		"Liście, sadzonki i rzeczy rosnące, posortowane na warianty.",
 		"Jak: stół Chipped w JEI (kamieniarz, stolarz, dmuchacz szkła…). Włóż blok do stołu i wybierz cięcie."
 	]
-	quest.4200000000230590.title: "Stół botanika"
+	quest.4200000000230590.title: "Botanist Workbench"
 	quest.4200000000230591.quest_desc: [
 		"Kolorowe bloki i dziwniejszy kamień. Wybierz wariant; warsztat trzyma resztę.",
 		"Jak: stół Chipped w JEI (kamieniarz, stolarz, dmuchacz szkła…). Włóż blok do stołu i wybierz cięcie."
 	]
-	quest.4200000000230591.title: "Stół alchemiczny"
+	quest.4200000000230591.title: "Alchemy Bench"
 	quest.4200000000230592.quest_desc: [
 		"Metal i bloki o maszynowej twarzy, cięte pod gust.",
 		"Jak: stół Chipped w JEI (kamieniarz, stolarz, dmuchacz szkła…). Włóż blok do stołu i wybierz cięcie."
 	]
-	quest.4200000000230592.title: "Stół majsterkowicza"
+	quest.4200000000230592.title: "Tinkering Table"
 	quest.4200000000230593.quest_desc: [
 		"Podaj blok do Stołu kamieniarza i wybierz ze ściany wariantów.",
 		"Jak: cztery kamienie w kwadrat, albo przecinarka."
@@ -7898,27 +7898,27 @@
 		"Wytnij ramę, potem ubierz ją w dowolny blok. Jeden kształt, każda skóra.",
 		"Jak: sztabka żelaza nad trzema oprawionymi sześcianami. Tnie oprawione bloki."
 	]
-	quest.42000000002405A0.title: "Piła do ram"
+	quest.42000000002405A0.title: "Framing Saw"
 	quest.42000000002405A1.quest_desc: [
 		"Goły sześcian, który czeka na blok kamuflażu.",
 		"Jak: piła ramowa, potem sześcian/płyta/schody w ramie. Kamuflaż to kliknięcie prawym z blokiem."
 	]
-	quest.42000000002405A1.title: "Sześcian w ramie"
+	quest.42000000002405A1.title: "Framed Cube"
 	quest.42000000002405A2.quest_desc: [
 		"Pół ramy; dwa razy więcej opcji.",
 		"Jak: piła ramowa, potem sześcian/płyta/schody w ramie. Kamuflaż to kliknięcie prawym z blokiem."
 	]
-	quest.42000000002405A2.title: "Płyta w ramie"
+	quest.42000000002405A2.title: "Framed Slab"
 	quest.42000000002405A3.quest_desc: [
 		"Stopnie, które noszą ścianę, przy której stoją.",
 		"Jak: piła ramowa, potem sześcian/płyta/schody w ramie. Kamuflaż to kliknięcie prawym z blokiem."
 	]
-	quest.42000000002405A3.title: "Schody w ramie"
+	quest.42000000002405A3.title: "Framed Stairs"
 	quest.42000000002405A4.quest_desc: [
 		"Na dachy i linie dachów, których pustka nigdy ci nie dała.",
 		"Jak: piła ramowa, potem sześcian/płyta/schody w ramie. Kamuflaż to kliknięcie prawym z blokiem."
 	]
-	quest.42000000002405A4.title: "Skos w ramie"
+	quest.42000000002405A4.title: "Framed Slope"
 	quest.42000000002405A5.quest_desc: [
 		"Chodzący po krawędzi spięli pustkę mniejszym. Dojdź do następnej platformy ze stylem.",
 		"Jak: mosty Macaw z pasującego kamienia/drewna w JEI."
@@ -7953,17 +7953,17 @@
 		"Próg, który chowa się w ścianie.",
 		"Jak: piła ramowa, potem sześcian/płyta/schody w ramie. Kamuflaż to kliknięcie prawym z blokiem."
 	]
-	quest.42000000002405AB.title: "Drzwi w ramie"
+	quest.42000000002405AB.title: "Framed Door"
 	quest.42000000002405AC.quest_desc: [
 		"Cienka osłona; pełne przebranie.",
 		"Jak: piła ramowa, potem sześcian/płyta/schody w ramie. Kamuflaż to kliknięcie prawym z blokiem."
 	]
-	quest.42000000002405AC.title: "Panel w ramie"
+	quest.42000000002405AC.title: "Framed Panel"
 	quest.42000000002405AD.quest_desc: [
 		"Poręcz na krawędź, którą ubierzesz po swojemu.",
 		"Jak: piła ramowa, potem sześcian/płyta/schody w ramie. Kamuflaż to kliknięcie prawym z blokiem."
 	]
-	quest.42000000002405AD.title: "Płot w ramie"
+	quest.42000000002405AD.title: "Framed Fence"
 	quest.42000000002405AE.quest_desc: [
 		"Szary i szczery, jak żwir, z którego powstał.",
 		"Jak: mosty Macaw z pasującego kamienia/drewna w JEI."
@@ -7974,7 +7974,7 @@
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: pochodnia + bryłki żelaza. Pierwsze wytwarzanie zarządów."
 	]
-	quest.42000000002505AF.title: "Kinkiet"
+	quest.42000000002505AF.title: "Lichtarzyk"
 	quest.42000000002505B0.quest_desc: [
 		"Piasek, który spada. Jedyny uczciwy zegar przed Nicią Zegara.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
@@ -7994,7 +7994,7 @@
 		"Pochwal się czymś. Żeton, strona, trofeum.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
 	]
-	quest.42000000002505B3.title: "Półka na przedmioty"
+	quest.42000000002505B3.title: "Półka na przedmiot"
 	quest.42000000002505B4.quest_desc: [
 		"Worek, który trzyma worki. Bałagan Odzysku, ogarnięty.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
@@ -8009,17 +8009,17 @@
 		"Przypnij stronę tam, gdzie czyta ją cały Clowder.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
 	]
-	quest.42000000002505B6.title: "Tablica ogłoszeń"
+	quest.42000000002505B6.title: "Tablica informacyjna"
 	quest.42000000002505B7.quest_desc: [
 		"Doniczka z ambicjami. Upraw trochę tam, gdzie platforma jest cienka.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
 	]
-	quest.42000000002505B7.title: "Donica"
+	quest.42000000002505B7.title: "Siewnik"
 	quest.42000000002505B8.quest_desc: [
 		"Unieś Fragment krosna Wrzeciona tam, gdzie można go podziwiać.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
 	]
-	quest.42000000002505B8.title: "Postument"
+	quest.42000000002505B8.title: "Piedestał"
 	quest.42000000002505B9.quest_desc: [
 		"Schowaj ciasteczka, pszczoły albo małą godność porządku.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
@@ -8054,7 +8054,7 @@
 		"Podnoś i opuszczaj linę według kaprysu redstone.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
 	]
-	quest.42000000002505BF.title: "Blok krążka"
+	quest.42000000002505BF.title: "Krążek"
 	quest.42000000002505C0.quest_desc: [
 		"Spadnij na to, a pustka zapomni cię ukarać.",
 		"Jak: wytwarzanie Supplementaries w JEI (kinkiet, worek, sejf, lina…). Zarządy nazywają stanowisko."
@@ -8100,12 +8100,12 @@
 		"Pręty i drut ze sztabek — odpowiedź Create na prasę.",
 		"Jak: Create Crafts & Additions — miedziany drut z walcarki, potem złącza i silnik."
 	]
-	quest.42000000002605C8.title: "Walcarka"
+	quest.42000000002605C8.title: "Ciągarka"
 	quest.42000000002605C9.quest_desc: [
 		"Zaklinaj bez przesądu stołu. Nakarm go doświadczeniem, odbierz zamiar.",
 		"Jak: Create Enchantment Industry po płomiennym palniku. JEI nazywa drukarkę i wiadro doświadczenia."
 	]
-	quest.42000000002605C9.title: "Płomienny zaklinacz"
+	quest.42000000002605C9.title: "Blaze Enchanter"
 	quest.42000000002605CA.quest_desc: [
 		"Płynna praktyka, niesiona. Zarządcy uznaliby to za wulgarne i pożyteczne.",
 		"Jak: Create Enchantment Industry po płomiennym palniku. JEI nazywa drukarkę i wiadro doświadczenia."
@@ -8115,12 +8115,12 @@
 		"Kopiuj książkę, plan, stronę. Kodeks Wąsów pochwala, cicho.",
 		"Jak: Create Enchantment Industry po płomiennym palniku. JEI nazywa drukarkę i wiadro doświadczenia."
 	]
-	quest.42000000002605CB.title: "Drukarka"
+	quest.42000000002605CB.title: "Printer"
 	quest.42000000002605CC.quest_desc: [
 		"Lawa i żar w energię. Most, a nie sam Pomruk.",
 		"Jak: osm + piec + miedź. Pierwszy generator Mekanism."
 	]
-	quest.42000000002605CC.title: "Generator ciepła"
+	quest.42000000002605CC.title: "Generator cieplny"
 	quest.42000000002605CD.quest_desc: [
 		"Na platformie, która jest samym niebem, słońce to jedyny zasób, którego nikt nie racjonuje.",
 		"Jak: generatory Mekanism po linii Zakłady Mekanism. Generator ciepła to pierwsze wytworzenie."
@@ -8130,7 +8130,7 @@
 		"Im wyżej platforma, tym mocniej się kręci. Buduj wysoko.",
 		"Jak: generatory Mekanism po linii Zakłady Mekanism. Generator ciepła to pierwsze wytworzenie."
 	]
-	quest.42000000002605CE.title: "Generator wiatru"
+	quest.42000000002605CE.title: "Turbina wiatrowa"
 	quest.42000000002605CF.quest_desc: [
 		"Pal nadmiar Nici Kiełka. Na platformie nic nie jest odpadem.",
 		"Jak: generatory Mekanism po linii Zakłady Mekanism. Generator ciepła to pierwsze wytworzenie."
@@ -8140,7 +8140,7 @@
 		"Późna moc dla Clowder, które zeszło głęboko w Mekanism.",
 		"Jak: generatory Mekanism po linii Zakłady Mekanism. Generator ciepła to pierwsze wytworzenie."
 	]
-	quest.42000000002605D0.title: "Generator gazowy"
+	quest.42000000002605D0.title: "Generator spalania gazowego"
 	quest.42000000002605D1.quest_desc: [
 		"Cyfrowe krosno, w kieszeni. Przetkaj z dowolnego miejsca na platformie.",
 		"Jak: Terminal bezprzewodowy po sieci AE2 i naładowanym zestawie bezprzewodowym. JEI nazywa wytworzenie."
@@ -8419,37 +8419,37 @@
 		"Dziki Gysahl rośnie na Trzcinowym bagnie, na Stepie i na Wyżynach, najgęściej na bagnie. Zbiór daje też nasiona, a Liść Marchii albo trawa rozbite motyką sypią więcej. Posadź nasiona w domu na polu uprawnym.",
 		"Jak: zbieraj dziki Gysahl w Marchii (Trzcinowe bagno jest najgęstsze). Zbiór daje też nasiona; posadź je w domu na polu uprawnym."
 	]
-	quest.42000000002805E4.title: "Zieleń Gysahl"
+	quest.42000000002805E4.title: "Gysahl Green"
 	quest.42000000002805E5.quest_desc: [
 		"Książka i liść Gysahl. Użyj go gdziekolwiek: strony wymieniają kolor, stopień, klasę, wygrane w wyścigach i ostatni orzech każdego z twoich ptaków.",
 		"Jak: książka i Gysahl. Użyj go gdziekolwiek; strony wymieniają twoje ptaki."
 	]
-	quest.42000000002805E5.title: "Almanach Chocobo"
+	quest.42000000002805E5.title: "Chocobo Almanac"
 	quest.42000000002805E6.quest_desc: [
 		"Nakarm Gysahl, by oswoić dzikiego żółtego. Zrób siodło ze skóry, nici i żelaza, potem dosiądź. Sprint daje szarżę; puść, by odzyskać wytrzymałość.",
 		"Jak: skóra, nić i żelazo. Oswój dzikiego żółtego za pomocą Gysahl, potem go osiodłaj."
 	]
-	quest.42000000002805E6.title: "Siodło Chocobo"
+	quest.42000000002805E6.title: "Chocobo Saddle"
 	quest.42000000002805E7.quest_desc: [
 		"Złote samorodki wokół zegara, z Gysahl. Nakręcony niesie cię do Wiatru Wąsów i z powrotem. Po przejściu Marchii Esther stoi też w Sali Clowder: dojedź do niej na osiodłanym ptaku albo spytaj przewodnika Wiatru Wąsów.",
 		"Jak: złote samorodki wokół zegara, z Gysahl. Użyj go, by nakręcić się do Wiatru Wąsów i z powrotem; osiodłany ptak jedzie z tobą."
 	]
-	quest.42000000002805E7.title: "Zegarek kieszonkowy Chocobo"
+	quest.42000000002805E7.title: "Chocobo Pocketwatch"
 	quest.42000000002805E8.quest_desc: [
 		"Przynęta w ręku wabi dzikie ptaki i rysuje ich obrys na całym polu.",
 		"Jak: zrób przynętę. Trzymaj ją, by znaleźć żółte z Marchii."
 	]
-	quest.42000000002805E8.title: "Przynęta Chocobo"
+	quest.42000000002805E8.title: "Chocobo Lure"
 	quest.42000000002805E9.quest_desc: [
 		"Posadź nasiona Gysahl na polu uprawnym. Grządka w domu to początek linii farmy.",
 		"Jak: zbiór dzikiego Gysahl daje nasiona, a trawa i Liść Marchii rozbite motyką też. Sadź na polu uprawnym."
 	]
-	quest.42000000002805E9.title: "Nasiona Gysahl"
+	quest.42000000002805E9.title: "Gysahl Seeds"
 	quest.42000000002805EA.quest_desc: [
 		"Nakarm orzechem Carob dwoje dorosłych przeciwnej płci. Dwa Żółte stopnia Dobry albo lepszego plus Carob mogą się wykluć jako Zielony albo Niebieski. Każdy rodzic potrzebuje 5 pierwszych miejsc wygranych w klasie C; 16 łącznie czyni kolor pewnym. Zielony stopnia Świetny i Niebieski stopnia Świetny, każdy z 8 pierwszymi miejscami klasy B, wykluwają się jako Czarny (pudło to Biały; 24 łącznie na pewny rzut).",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Carob. Wyścigi klasy A też go wypłacają."
 	]
-	quest.42000000002805EA.title: "Orzech Carob"
+	quest.42000000002805EA.title: "Carob Nut"
 	quest.42000000002805EB.quest_desc: [
 		"Zielenina w połowie drabiny. Trenuj szybkość, wytrzymałość, inteligencję albo współpracę; ptak nasyca się każdym rodzajem.",
 		"Jak: mędrzec Wynn na Wietrze Wąsów."
@@ -8464,7 +8464,7 @@
 		"Złoty nigdy nie wykluwa się bez Zeio. Czarny stopnia Cudowny plus Żółty stopnia Cudowny, każdy z 10 pierwszymi miejscami wygranymi w klasie A (32 łącznie na pewny rzut).",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Zeio. Wyścigi klasy S rzadko go wypłacają."
 	]
-	quest.42000000002805ED.title: "Orzech Zeio"
+	quest.42000000002805ED.title: "Zeio Nut"
 	quest.42000000002805EE.quest_desc: [
 		"GP wygrane na torze. Stragany na Placu wyceniają wszystko w GP.",
 		"Jak: wejdź do pierwszej trójki biegu na Wietrze Wąsów. Dojedź do Esther na osiodłanym ptaku, żeby się zapisać."
@@ -8474,7 +8474,7 @@
 		"Pierwszy orzech do rozmnażania. Talent idzie z orzecha; kolor idzie od rodziców, chyba że wchodzą Carob albo Zeio.",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Pepio. Wygrana w klasie C też może go wypłacić."
 	]
-	quest.42000000002805EF.title: "Orzech Pepio"
+	quest.42000000002805EF.title: "Pepio Nut"
 	quest.42000000002805F0.quest_desc: [
 		"Dwa Gysahl i mączka kostna. Pierwszy stopień ponad zwykłą zieleniną.",
 		"Jak: bez kształtu — dwa Gysahl i mączka kostna."
@@ -8504,22 +8504,22 @@
 		"Średni orzech. Opcjonalny.",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Luchile."
 	]
-	quest.42000000002805F5.title: "Orzech Luchile"
+	quest.42000000002805F5.title: "Luchile Nut"
 	quest.42000000002805F6.quest_desc: [
 		"Średni orzech. Opcjonalny.",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Saraha."
 	]
-	quest.42000000002805F6.title: "Orzech Saraha"
+	quest.42000000002805F6.title: "Saraha Nut"
 	quest.42000000002805F7.quest_desc: [
 		"Średni orzech. Opcjonalny.",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Lasan."
 	]
-	quest.42000000002805F7.title: "Orzech Lasan"
+	quest.42000000002805F7.title: "Lasan Nut"
 	quest.42000000002805F8.quest_desc: [
 		"Orzech do rozmnażania ze środka ku końcowi. Opcjonalny. Sprzedaje go Bilo, strażnik orzechów.",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Pram."
 	]
-	quest.42000000002805F8.title: "Orzech Pram"
+	quest.42000000002805F8.title: "Pram Nut"
 	quest.42000000002805F9.quest_desc: [
 		"Stoisko Jarmarku na Wietrze Wąsów sprzedaje fajerwerki, smycze, zegarki kieszonkowe i Almanach Chocobo za GP.",
 		"Jak: papier plus proch. Opcjonalny wybuch."
@@ -8529,38 +8529,38 @@
 		"Późny orzech do rozmnażania. Opcjonalny.",
 		"Jak: Bilo, strażnik orzechów, na Wietrze Wąsów sprzedaje Porov."
 	]
-	quest.42000000002805FA.title: "Orzech Porov"
+	quest.42000000002805FA.title: "Porov Nut"
 	quest.42000000002905FB.quest_desc: [
 		"Pustka nigdy nie wyhodowała krzewów Pam's. Przesiej ziemię siatką ze sznurka. Rozbij ogród po suche nasiona — chili, kukurydza, owoc kaktusa.",
 		"Dziewięć plemion zostawiło zapasy dla następnego Clowder. Użyj skrytki zarządcy, by rozpakować losowe zapasy, albo zrób z czterech małych jedną średnią, a z trzech średnich jedną dużą. Większe pieczęcie mają więcej rzutów i szerszą pulę zapasów; otwieranie osobno daje więcej podstawowych zapasów. W środku nie kryją się maszyny ani żetony postępu, ale każda pieczęć ma małą szansę na Odłamek Nici i bardzo małą na całą Nić powrotu; większe pieczęcie mają lepsze szanse.",
 		"Jak: przesiej ziemię siatką ze sznurka albo lepszą (Ex Deorum albo Krosno Pustki)."
 	]
-	quest.42000000002905FB.title: "Suchy ogród"
+	quest.42000000002905FB.title: "Arid Garden"
 	quest.42000000002905FC.quest_desc: [
 		"Zimne uprawy z tej samej ziemi. Rozbij krzew; posadź, czego potrzebujesz.",
 		"Jak: przesiej ziemię siatką ze sznurka albo lepszą."
 	]
-	quest.42000000002905FC.title: "Mroźny ogród"
+	quest.42000000002905FC.title: "Frost Garden"
 	quest.42000000002905FD.quest_desc: [
 		"Uprawy spod liści. To samo sito, inny krzew.",
 		"Jak: przesiej ziemię siatką ze sznurka albo lepszą."
 	]
-	quest.42000000002905FD.title: "Zacieniony ogród"
+	quest.42000000002905FD.title: "Shaded Garden"
 	quest.42000000002905FE.quest_desc: [
 		"Mokre uprawy. Ryż i reszta nasion o bagnistym usposobieniu mieszkają tutaj.",
 		"Jak: przesiej ziemię siatką ze sznurka albo lepszą."
 	]
-	quest.42000000002905FE.title: "Grząski ogród"
+	quest.42000000002905FE.title: "Soggy Garden"
 	quest.42000000002905FF.quest_desc: [
 		"Ciepłe uprawy. Trzymaj krzew w skrzyni; i tak się rozrosną, jeśli je posadzisz.",
 		"Jak: przesiej ziemię siatką ze sznurka albo lepszą."
 	]
-	quest.42000000002905FF.title: "Tropikalny ogród"
+	quest.42000000002905FF.title: "Tropical Garden"
 	quest.4200000000290600.quest_desc: [
 		"Ostatni z sześciu. Każde nasiono HarvestCraft na platformie zaczyna jako jeden z tych krzewów.",
 		"Jak: przesiej ziemię siatką ze sznurka albo lepszą."
 	]
-	quest.4200000000290600.title: "Wietrzny ogród"
+	quest.4200000000290600.title: "Windy Garden"
 	quest.4200000000290601.quest_desc: [
 		"To nie deska do krojenia z Farmer's Delight. Miedź, patyk i deska. Przygotuj owoce i warzywa, zanim trafią do garnka.",
 		"Jak: miedź, patyk i deska. To nie deska do krojenia z Farmer's Delight."
@@ -8580,22 +8580,22 @@
 		"Sosy i redukcje. Miedź i patyk. Trzymaj go obok garnka.",
 		"Jak: miedź i patyk."
 	]
-	quest.4200000000290604.title: "Rondelek"
+	quest.4200000000290604.title: "Saucepan"
 	quest.4200000000290605.quest_desc: [
 		"Pierścień z terakoty. Ciasta, chleby i wszystko, co chce formy do pieca.",
 		"Jak: osiem terakoty wokół pustego środka."
 	]
-	quest.4200000000290605.title: "Forma"
+	quest.4200000000290605.title: "Bakeware"
 	quest.4200000000290606.quest_desc: [
 		"Deski i patyk. Ciasta lejne, ciasta i sałatki. Cicha stacja.",
 		"Jak: deski i patyk."
 	]
-	quest.4200000000290606.title: "Miska"
+	quest.4200000000290606.title: "Mixing Bowl"
 	quest.4200000000290607.quest_desc: [
 		"Terakota. Owoc do środka, sok na zewnątrz. Postaw przy drzewie, nie przy grządce.",
 		"Jak: terakota. Cztery w T."
 	]
-	quest.4200000000290607.title: "Wyciskarka"
+	quest.4200000000290607.title: "Juicer"
 	quest.4200000000290608.quest_desc: [
 		"Patyki i kłoda. Rozpłaszcz ciasto. Forma czeka.",
 		"Jak: patyki po obu stronach kłody."
@@ -8605,37 +8605,37 @@
 		"Kamyki andezytu z krzemiennego sita, potem patyk. Mąka, przyprawy, pasty.",
 		"Jak: andezyt (kamyki z ziemi lub żwiru z krzemiennego sita) i patyk."
 	]
-	quest.4200000000290609.title: "Młynek"
+	quest.4200000000290609.title: "Grinder"
 	quest.420000000029060A.quest_desc: [
 		"Wiadro wody podzielone na osiem. Większość przepisów chce tego, nie waniliowego wiadra.",
 		"Jak: jedno wiadro wody → osiem słodkiej wody."
 	]
-	quest.420000000029060A.title: "Słodka woda"
+	quest.420000000029060A.title: "Fresh Water"
 	quest.420000000029060B.quest_desc: [
 		"Na platformie nie ma krów. Kokos (ziemia na żelaznej siatce) plus słodka woda, albo później podziel wiadro mleka.",
 		"Jak: kokos (ziemia na żelaznej siatce) plus słodka woda, albo podziel wiadro mleka."
 	]
-	quest.420000000029060B.title: "Świeże mleko"
+	quest.420000000029060B.title: "Fresh Milk"
 	quest.420000000029060C.quest_desc: [
 		"Woda w garnku albo mielenie. Prawie każdy wytrawny przepis o to prosi.",
 		"Jak: garnek plus woda albo słodka woda. Garnek wraca."
 	]
-	quest.420000000029060C.title: "Sól"
+	quest.420000000029060C.title: "Salt"
 	quest.420000000029060D.quest_desc: [
 		"Pszenica przez młynek. Ciasto zaczyna się tutaj.",
 		"Jak: młynek plus pszenica (albo inna roślina na mąkę). Młynek wraca."
 	]
-	quest.420000000029060D.title: "Mąka"
+	quest.420000000029060D.title: "Flour"
 	quest.420000000029060E.quest_desc: [
 		"Mąka, sól i słodka woda. Ciasta i chleby dzielą tę bryłkę.",
 		"Jak: miska, mąka, woda, sól."
 	]
-	quest.420000000029060E.title: "Ciasto"
+	quest.420000000029060E.title: "Dough"
 	quest.420000000029060F.quest_desc: [
 		"Kości albo warzywa w garnku. Zupy chcą butelki tego, nie mglistego wywaru.",
 		"Jak: garnek plus kość (Strażnicy platformy sprzedają kości) albo resztki warzyw."
 	]
-	quest.420000000029060F.title: "Bulion"
+	quest.420000000029060F.title: "Stock"
 	quest.4200000000290610.quest_desc: [
 		"Ziemia na żelaznej siatce. Uprawiaj na platformie; waniliowy dąb nie da jabłek Pam's.",
 		"Jak: przesiej ziemię żelazną siatką po sadzonki kuchenne, potem upraw owoc."
@@ -8675,12 +8675,12 @@
 		"Wyciskarka plus mieszane owoce. Napój z platformy, a nie sok z arbuza.",
 		"Jak: sokowirówka i mieszane owoce."
 	]
-	quest.4200000000290617.title: "Poncz owocowy"
+	quest.4200000000290617.title: "Fruit Punch"
 	quest.4200000000290618.quest_desc: [
 		"Patelnia, chleb, ser. Szybki obiad, póki rosną drzewa.",
 		"Jak: patelnia, chleb, masło i ser — wszystko ze słodkiej wody, mleka kokosowego i mąki."
 	]
-	quest.4200000000290618.title: "Tost z serem"
+	quest.4200000000290618.title: "Grilled Cheese"
 	quest.4200000000290619.quest_desc: [
 		"Suche papryczki, pomidor, cebula, fasola, liść przyprawy oraz mięso albo jedwabiste tofu. Food Extended zaczyna się opłacać.",
 		"Jak: garnek, suche chili, pomidor, cebula, fasola, liść przyprawy i mięso albo jedwabiste tofu."
@@ -8695,7 +8695,7 @@
 		"Ciasto, sos, mięso. Forma do pieczenia. Pełny posiłek HarvestCraft.",
 		"Jak: forma do pieczenia, ciasto, pomidor, ser, pepperoni (bekon wieprzowy albo bekon z tofu z klonu + soi)."
 	]
-	quest.420000000029061B.title: "Pizza pepperoni"
+	quest.420000000029061B.title: "Pepperoni Pizza"
 	quest.420000000029061C.quest_desc: [
 		"Ryż z grząskiego ogrodu, marchew, cebula, groszek i jajko — jedwabiste tofu zastępuje je, póki nie ma kur.",
 		"Jak: patelnia, ryż z grząskiego ogrodu, marchew, cebula, groszek i jajko — jedwabiste tofu liczy się jako jajko."
@@ -8705,7 +8705,7 @@
 		"Liść herbaty i liść przyprawy w garnku. Cienisty ogród i grząski dają oba.",
 		"Jak: garnek, liść herbaty i liść przyprawy. Cienisty ogród upuszcza i herbatę, i przyprawę."
 	]
-	quest.420000000029061D.title: "Zielona herbata"
+	quest.420000000029061D.title: "Green Tea"
 	quest.420000000029061E.quest_desc: [
 		"Olej i wytrawny owoc. Opcjonalny połów żelaznej siatki.",
 		"Jak: przesiej ziemię żelazną siatką po sadzonki kuchenne, potem upraw owoc."
@@ -8730,22 +8730,22 @@
 		"Tłuszcz do smażenia. Opcjonalny zapas.",
 		"Jak: wytłocz nasiona albo oliwki w JEI. Opcjonalny zapas."
 	]
-	quest.4200000000290622.title: "Olej kuchenny"
+	quest.4200000000290622.title: "Cooking Oil"
 	quest.4200000000290623.quest_desc: [
 		"Mleko i sól. Opcjonalny zapas.",
 		"Jak: garnek i mleko (mleko kokosowe na słodkiej wodzie działa)."
 	]
-	quest.4200000000290623.title: "Masło"
+	quest.4200000000290623.title: "Butter"
 	quest.4200000000290624.quest_desc: [
 		"Jajko przez sokowirówkę. Opcjonalne.",
 		"Jak: sokowirówka i jajko (jedwabiste tofu się liczy). Opcjonalne."
 	]
-	quest.4200000000290624.title: "Majonez"
+	quest.4200000000290624.title: "Mayonnaise"
 	quest.4200000000290625.quest_desc: [
 		"Deska do krojenia, mieszane owoce. Opcjonalne.",
 		"Jak: deska do krojenia i mieszane owoce. Opcjonalne."
 	]
-	quest.4200000000290625.title: "Sałatka owocowa"
+	quest.4200000000290625.title: "Fruit Salad"
 	quest.4200000000290626.quest_desc: [
 		"Wieczór z makaronem. Opcjonalne.",
 		"Jak: ogrody i drzewa owocowe dają składniki. Tofu sojowe zastępuje mięso i jajko. JEI podaje stanowisko."
@@ -8755,12 +8755,12 @@
 		"Śniadanie na pokaz. Opcjonalne.",
 		"Jak: ogrody i drzewa owocowe dają składniki. Tofu sojowe zastępuje mięso i jajko. JEI podaje stanowisko."
 	]
-	quest.4200000000290627.title: "Naleśniki z bekonem"
+	quest.4200000000290627.title: "Bacon Pancakes"
 	quest.4200000000290628.quest_desc: [
 		"Ziemia na żelaznej siatce pod sadzonkę awokado, potem patelnia, tost, sól, czosnek, liść przyprawy.",
 		"Jak: sadzonka awokado z żelaznej siatki, potem patelnia z tostem, solą, czosnkiem, liściem przyprawy."
 	]
-	quest.4200000000290628.title: "Tost z awokado"
+	quest.4200000000290628.title: "Avocado Toast"
 	quest.4200000000290629.quest_desc: [
 		"To nie hamburger Delight. Opcjonalne.",
 		"Jak: ogrody i drzewa owocowe dają składniki. Tofu sojowe zastępuje mięso i jajko. JEI podaje stanowisko."
@@ -8770,7 +8770,7 @@
 		"Sokowirówka, jabłka. Opcjonalne.",
 		"Jak: sokowirówka i jabłka Pam's. Opcjonalne."
 	]
-	quest.420000000029062A.title: "Sok jabłkowy"
+	quest.420000000029062A.title: "Apple Juice"
 	quest.420000000029062B.quest_desc: [
 		"Patelnia, chleb i masło. Opcjonalne.",
 		"Jak: patelnia, chleb i masło. Opcjonalne."
@@ -8792,13 +8792,13 @@
 		"Szyba i patyki. Spójrz na uprawę, by odczytać wzrost, plon i siłę bez zbierania.",
 		"Jak: szyba między patykami, potem trzonek z patyka. Spójrz na zasadzoną uprawę."
 	]
-	quest.42000000002A062E.title: "Lupa"
+	quest.42000000002A062E.title: "Magnifying Glass"
 	quest.42000000002A062F.quest_desc: [
 		"Szkło, kamienna płyta, deski, patyki. Włóż nasiono z dziennikiem. Hodowla staje się widoczna.",
 		"Płodność to statystyka, która napędza krzyżowanie: świeże nasiono ma 1 z 10, a każdy punkt zwiększa szansę, że roślina zostanie rodzicem. Analizuj, sadź najlepsze od nowa, a krzyżówki przychodzą szybciej.",
 		"Jak: szyby, kamienna płyta, deski i patyki. Osadź dziennik, potem nasiono."
 	]
-	quest.42000000002A062F.title: "Analizator nasion"
+	quest.42000000002A062F.title: "Seed Analyzer"
 	quest.42000000002A0630.quest_desc: [
 		"Chwasty są wyłączone w tej paczce, ale grabie i tak zdejmują patyk. Noś je i tak.",
 		"Jak: drewniany płot nad patykiem. Chwasty są wyłączone; i tak zdejmuje patyk."
@@ -8823,7 +8823,7 @@
 		"Solidniejsze patyki. Te same zasady sadzenia, mniej kłopotu, gdy je trącisz.",
 		"Jak: dwie bryłki żelaza w kolumnie dają osiem."
 	]
-	quest.42000000002A0634.title: "Żelazne patyki uprawne"
+	quest.42000000002A0634.title: "Iron Crop Sticks"
 	quest.42000000002A0635.quest_desc: [
 		"Lepsze grabie. Wciąż nawyk, nawet gdy chwastów już nie ma.",
 		"Jak: żelazne kraty nad patykiem."
@@ -8833,22 +8833,22 @@
 		"Trzyma wodę do kanałów. Farma na platformie, która nie nosi wiader co rano.",
 		"Jak: deski. Trzyma wodę do kanałów."
 	]
-	quest.42000000002A0636.title: "Zbiornik nawadniania"
+	quest.42000000002A0636.title: "Irrigation Tank"
 	quest.42000000002A0637.quest_desc: [
 		"Prowadź wodę ze zbiornika wzdłuż rzędu. Uprawy piją z kanału, nie od ciebie.",
 		"Jak: bez kształtu ze zbiornika — jeden zbiornik daje osiem kanałów."
 	]
-	quest.42000000002A0637.title: "Kanał nawadniania"
+	quest.42000000002A0637.title: "Irrigation Channel"
 	quest.42000000002A0638.quest_desc: [
 		"Zatrzymuj i uruchamiaj linię, nie rozbijając zbiornika.",
 		"Jak: żelazne kraty, czerwony barwnik i sztabka żelaza. Zatrzymuj i uruchamiaj linię, nie rozbijając zbiornika."
 	]
-	quest.42000000002A0638.title: "Zawór kanału"
+	quest.42000000002A0638.title: "Channel Valve"
 	quest.42000000002A0639.quest_desc: [
 		"Deszcz w kwadracie. Osadź go na kanale nad patykami.",
 		"Jak: osadź go na kanale nad patykami. JEI podaje recepturę."
 	]
-	quest.42000000002A0639.title: "Zraszacz"
+	quest.42000000002A0639.title: "Sprinkler"
 	quest.42000000002A063A.quest_desc: [
 		"Przykryj kanał, żeby przejść wzdłuż rzędu.",
 		"Jak: przykryj kanał, żeby przejść wzdłuż rzędu."
@@ -8858,12 +8858,12 @@
 		"Odczytaj pomieszczenie. Światło, wilgotność, powód, dla którego uprawa stanęła.",
 		"Jak: wytwórz, potem postaw w pomieszczeniu, by czytać światło i wilgotność."
 	]
-	quest.42000000002A063B.title: "Monitor szklarni"
+	quest.42000000002A063B.title: "Greenhouse Monitor"
 	quest.42000000002A063C.quest_desc: [
 		"Późne patyki. Ognioodporne, uparte, dla roślin, które za dużo wymagają od drewna. Dwie sąsiednie dojrzałe uprawy mogą się krzyżować.",
 		"Jak: dwa obsydiany w kolumnie dają osiem. Dwie sąsiednie dojrzałe uprawy mogą się krzyżować."
 	]
-	quest.42000000002A063C.title: "Obsydianowe patyki uprawne"
+	quest.42000000002A063C.title: "Obsidian Crop Sticks"
 	quest.42000000002A063D.quest_desc: [
 		"Kanał, po którym da się chodzić. Opcjonalne.",
 		"Jak: kanał, po którym da się chodzić. Opcjonalne."
@@ -8883,7 +8883,7 @@
 		"Paliwo z uprawy. Opcjonalne.",
 		"Jak: drewniane patyki uprawne z patyków; dziennik to książka i pióro plus nasiona; analizator to szkło i drewno. Sadź na roli."
 	]
-	quest.42000000002A0640.title: "Węglowy kamyk"
+	quest.42000000002A0640.title: "Coal Pebble"
 	quest.42000000002A0641.quest_desc: [
 		"Późna uprawa rudy. Opcjonalna.",
 		"Jak: drewniane patyki uprawne z patyków; dziennik to książka i pióro plus nasiona; analizator to szkło i drewno. Sadź na roli."
@@ -8898,12 +8898,12 @@
 		"Szczytowa uprawa rudy. Opcjonalna i wolna.",
 		"Jak: drewniane patyki uprawne z patyków; dziennik to książka i pióro plus nasiona; analizator to szkło i drewno. Sadź na roli."
 	]
-	quest.42000000002A0643.title: "Drzazga netherytu"
+	quest.42000000002A0643.title: "Netherite Sliver"
 	quest.42000000002A0644.quest_desc: [
 		"Własny kwiat AgriCraft. Opcjonalny.",
 		"Jak: drewniane patyki uprawne z patyków; dziennik to książka i pióro plus nasiona; analizator to szkło i drewno. Sadź na roli."
 	]
-	quest.42000000002A0644.title: "Płatek Amathyllis"
+	quest.42000000002A0644.title: "Amathyllis Petal"
 	reward.5000000000060135.title: "Nić powrotu: +1 życie Clowder"
 	reward.5000000000080193.title: "Nić powrotu: +1 życie Clowder"
 	reward.50000000000901CC.title: "Nić powrotu: +1 życie Clowder"

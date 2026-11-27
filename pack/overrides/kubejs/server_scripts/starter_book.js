@@ -5,22 +5,23 @@
 const STARTER_BOOK_FLAG = 'ncs_starter_howto_v7'
 const STARTER_TITLE = 'How to Start'
 
-function starterPages() {
-  return [
-    'HOW TO START (read me)\n\nYou are on Clowder Dock — the shared hub, not your forever island.\n\nGoal: open Create Team, pick a pad template, then open the Whisker Codex.',
-    'CLAIM A PAD (guided)\n\n1) Right-click your Island Charter ON THE DOCK\n   (or press K — Clowder panel)\n2) Click Create Team\n3) Type a Clowder name\n4) Pick a pad template:\n   Ninjacat Pad = Normal (start here)\n   Dojo Cottage = Easy\n   Frayed Thread = Hard\n5) Click Create — you teleport\n\nDo NOT use chat create if you want to pick a pad —\n/skyblock create <name> skips the picker.\n\nCharter: opens Clowders; choose Create Team.\nPad: sneak-use Charter seals spawn here.\nHall: Hub Key toggles leave. Charter still opens Clowders.\n\nInvite a friend: hold the Charter and right-click them,\nor /clowder invite <name>. They run /clowder accept.',
-    'THE CAMPAIGN\n\nRight-click the Whisker Codex. Open Start here first — practical steps and checks. Story chapters wait behind it.\nGrave / backtick (`): the live assignment list and rewards. Same campaign, not a second mode.\n\nStart Strand: Soil (Wake). Each Strand chapter ends in a KNOT that gives a Strand token. Seat the token at a Tension Post. That is the storyline.\n\nOrder: Soil, Stone, Sprout, Claw, then any TWO of Clock / Swarm / Spark, then Sigil, then Spindle. Seat the Fragment to finish.\n\nEasy ships water already.\nNormal/Hard: ice + lava + empty bucket.\nPlace lava, melt ice into water, fill bucket.',
-    'TENSION POST\n\nCraft: logs around a Binding Knot, Thread on top.\nPlace it on your pad.\nRight-click it with a Strand token to SEAT it.\n\nSeated Strands = Loom Tension. The pad heals you near the Post, feeds you after Sprout, catches falls after Claw.\n\nBraid Cord: Post + 16 Strand Filaments.\nLoom Fragment: Post + March stone (all nine seated). Seat the Fragment to Reweave.',
-    'STONE / RECOVER\n\n1) Unravel Frayed Thread -> 3 string\n2) 4 string -> 2 Void Yarn\n3) Spindle Hammer = cobble + sticks\n4) Tension Barrel: pour water (bucket returns), add up to 8 dirt -> clay\n5) Porcelain clay -> smelt porcelain bucket\n6) Loomframe: mesh + dirt/gravel, it sifts on its own; hoppers work\n7) Then Ex Deorum sieves. Slime = dirt+seeds+meal',
-    'HELPFUL COMMANDS\n\n  /clowder help\n  /clowder hub     → Clowder Hall dimension\n  /clowder return  → leave Hall to your pad\n  /skybound lives → shared team life pool\n  Rare late quests → +1 shared life (six total)\n  /skyblock home   → your pad\n  /skyblock create <name>  → advanced (skips pad pick)\n\nOps: /skybound revive [player]\nHub Key toggles Hall enter/leave.\nLost? Sneak-use Charter seals spawn on pad; hub is always safe.',
-    'WHAT IS THIS PACK?\n\nVoid skyblock + Loom Braid quests.\nTribal Power (drums / Pulse / March) is a core pillar — not a side mod.\n\nThis book is OOC on purpose. Signs & Codex stay in-voice.',
-  ]
-}
+// Translation keys, so the book reads in the player's language. All but the campaign and Tension Post pages are the
+// ones the Dock chest copy uses (ModDimensions.createHowToStartBook).
+const STARTER_PAGES = [
+  'message.clowderhall.book_start.page_1',
+  'message.clowderhall.book_start.page_2',
+  'book.ninjacatpack.howto.campaign',
+  'book.ninjacatpack.howto.post',
+  'message.clowderhall.book_start.page_3',
+  'message.clowderhall.book_start.page_4',
+  'message.clowderhall.book_start.page_5',
+]
 
 function makeStarterBook() {
   // 1.21 written_book_content: title/pages use Filterable {raw:...} form.
-  let pages = starterPages().map((text) => ({ raw: JSON.stringify({ text: text }) }))
+  let pages = STARTER_PAGES.map((key) => ({ raw: JSON.stringify({ translate: key }) }))
   return Item.of('minecraft:written_book', {
+    'minecraft:custom_name': JSON.stringify({ translate: 'message.clowderhall.book_start.title', italic: false }),
     'minecraft:written_book_content': {
       pages: pages,
       title: { raw: STARTER_TITLE },
@@ -40,8 +41,8 @@ PlayerEvents.loggedIn((event) => {
     player.give(makeStarterBook())
   } catch (e) {
     // Fallback: tell the player where the lectern/chest copy lives if component give fails.
-    player.tell(Text.red('[Skybound] Could not place How to Start in inventory — read the Dock lectern / chest book.'))
+    player.tell(Text.translate('message.ninjacatpack.howto.give_failed').red())
   }
-  player.tell(Text.gold('[Skybound] How to Start — read it before claiming a pad.'))
-  player.tell(Text.aqua('[Skybound] Right-click Island Charter (or press K) → Create Team → pick a pad.'))
+  player.tell(Text.translate('message.ninjacatpack.howto.read_first').gold())
+  player.tell(Text.translate('message.ninjacatpack.howto.create_team').aqua())
 })

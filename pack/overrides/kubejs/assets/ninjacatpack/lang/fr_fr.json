@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "NORD",
   "sign.ninjacatpack.hub.north.2": "Le Métier de la Coupe",
   "sign.ninjacatpack.hub.north.3": "Foyer ronronnant",
-  "sign.ninjacatpack.hub.north.4": "Chapelle des Couseurs du métier"
+  "sign.ninjacatpack.hub.north.4": "Chapelle des Couseurs du métier",
+  "book.ninjacatpack.howto.campaign": "LA CAMPAGNE\n\nCodex des Moustaches : commence par « Start here ».\nAccent grave (`) : quêtes.\n\nChaque Brin finit par un NŒUD qui donne un jeton. Pose-le sur un Poteau de tension.\n\nTerre, Pierre, Pousse, Griffe, DEUX parmi Horloge / Essaim / Étincelle, Sceau, Fuseau.",
+  "book.ninjacatpack.howto.post": "POTEAU DE TENSION\n\nBûches autour d'un Nœud liant, Fil au-dessus.\nClic droit avec un jeton pour le poser.\n\nCordon de tresse : 16 Filaments de Brin.\nFragment du métier : pierre de la Marche, les neuf posés. Pose-le pour retisser.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] Impossible de te donner « Comment débuter ». Lis la copie du coffre du quai ou du lutrin.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Lis « Comment débuter » avant de réclamer une plateforme.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] Clic droit sur la Charte de l'île (ou touche K) → Créer une équipe → choisis une plateforme."
 }

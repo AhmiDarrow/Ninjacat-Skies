@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "NORTH",
   "sign.ninjacatpack.hub.north.2": "The Cut Loom",
   "sign.ninjacatpack.hub.north.3": "Purring Hearth",
-  "sign.ninjacatpack.hub.north.4": "Stitchers' Chapel"
+  "sign.ninjacatpack.hub.north.4": "Stitchers' Chapel",
+  "book.ninjacatpack.howto.campaign": "THE CAMPAIGN\n\nWhisker Codex: Start here first.\nGrave (`): quests.\n\nEach Strand ends in a KNOT that gives a token. Seat it at a Tension Post.\n\nSoil, Stone, Sprout, Claw, any TWO of Clock / Swarm / Spark, Sigil, Spindle.",
+  "book.ninjacatpack.howto.post": "TENSION POST\n\nLogs around a Binding Knot, Thread on top.\nRight-click with a token to seat it.\n\nBraid Cord: 16 Strand Filaments.\nLoom Fragment: March stone, once all nine are seated. Seat it to Reweave.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] Could not give you How to Start. Read the copy in the Dock chest or on the lectern.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Read How to Start before you claim a pad.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] Right-click the Island Charter (or press K) → Create Team → pick a pad."
 }

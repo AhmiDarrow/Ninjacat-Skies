@@ -174,5 +174,10 @@
   "sign.ninjacatpack.hub.north.1": "NORTE",
   "sign.ninjacatpack.hub.north.2": "El Telar del Corte",
   "sign.ninjacatpack.hub.north.3": "Hogar ronroneante",
-  "sign.ninjacatpack.hub.north.4": "Capilla de los Pespunteadores del telar"
+  "sign.ninjacatpack.hub.north.4": "Capilla de los Pespunteadores del telar",
+  "book.ninjacatpack.howto.campaign": "LA CAMPAÑA\n\nCódice de los Bigotes: empieza por «Start here».\nGravis (`): misiones.\n\nCada Hebra acaba en un NUDO que da una ficha. Colócala en un Poste de tensión.\n\nTierra, Piedra, Brote, Garra, DOS entre Reloj / Enjambre / Chispa, Sello, Huso.",
+  "book.ninjacatpack.howto.post": "POSTE DE TENSIÓN\n\nTroncos rodeando un Nudo vinculante, Hilo arriba.\nClic derecho con una ficha para colocarla.\n\nCordón de trenza: 16 Filamentos de Hebra.\nFragmento del telar: piedra de la Marcha, con las nueve puestas. Colócalo para retejer.",
+  "message.ninjacatpack.howto.give_failed": "[Skybound] No se te pudo dar «Cómo empezar». Lee la copia del cofre del muelle o del atril.",
+  "message.ninjacatpack.howto.read_first": "[Skybound] Lee «Cómo empezar» antes de reclamar una plataforma.",
+  "message.ninjacatpack.howto.create_team": "[Skybound] Clic derecho en la Carta de la isla (o pulsa K) → Crear equipo → elige una plataforma."
 }

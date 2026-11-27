@@ -278,7 +278,7 @@ function openHearth(player, keeper) {
     raw.sendSystemMessage(Text.translate('message.ninjacatpack.hub.hearth_line1'))
     raw.sendSystemMessage(Text.translate('message.ninjacatpack.hub.hearth_line2'))
     if (keeper.stallOffers().isEmpty()) {
-      raw.displayClientMessage(Text.translate('message.tribalpower.kin.stall.empty'), true)
+      raw.displayClientMessage(Text.translate('message.tribalpower.kin.stall.empty'), true)   // lang-exempt: Tribal Power's own key
       return
     }
     keeper.setTradingPlayer(raw)

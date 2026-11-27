@@ -505,7 +505,7 @@
 		"Um conjunto de pancadas sobrando.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.420000000002004C.title: "Martelo de madeira"
+	quest.420000000002004C.title: "Wooden Hammer"
 	quest.420000000002004D.quest_desc: [
 		"Matéria dos grânulos. Sessenta e quatro pedras que eram pó há uma hora.",
 		"Como: lava ao lado da água (ou gelo derretido). Martele a pedra. A banca dos Cantores de cascalho em /clowder hub vende um fardo."
@@ -542,17 +542,17 @@
 		"O ferro é grave e paciente. Oito fragmentos da malha.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.4200000000020053.title: "Fragmento de minério de ferro"
+	quest.4200000000020053.title: "Iron Ore Chunk"
 	quest.4200000000020054.quest_desc: [
 		"Peneirado do cascalho, aos poucos. A malha acha o cobre antes dos seus olhos.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.4200000000020054.title: "Fragmento de minério de cobre"
+	quest.4200000000020054.title: "Copper Ore Chunk"
 	quest.4200000000020055.quest_desc: [
 		"O ouro mal se dá ao trabalho de responder. Quatro bastam.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.4200000000020055.title: "Fragmento de minério de ouro"
+	quest.4200000000020055.title: "Gold Ore Chunk"
 	quest.4200000000020056.quest_desc: [
 		"Abasteça a linha.",
 		"Como: peneire cascalho, ou funda minério de carvão."
@@ -602,12 +602,12 @@
 		"Golpes mais duros, vida mais longa.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.420000000002005F.title: "Martelo de pedra"
+	quest.420000000002005F.title: "Stone Hammer"
 	quest.4200000000020060.quest_desc: [
 		"Esmaga minério em cascalho e grânulos, o truque barulhento por trás da peneira.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.4200000000020060.title: "Martelo de ferro"
+	quest.4200000000020060.title: "Iron Hammer"
 	quest.4200000000020061.quest_desc: [
 		"Malha mais larga, nove de cada vez.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -847,7 +847,7 @@
 		"Crescimento compacto para uma plataforma pequena.",
 		"Como: Botany Pot de terracota no JEI. Terra + uma semente no vaso; a farinha de osso ainda ajuda."
 	]
-	quest.420000000003008F.title: "Botany Pot"
+	quest.420000000003008F.title: "Vaso de Botânica"
 	quest.4200000000030090.quest_desc: [
 		"O vaso que colhe sozinho.",
 		"Como: Botany Pot com funil no JEI. Fica sobre um baú/funil e colhe sozinho."
@@ -983,13 +983,13 @@
 		"As Nove Tribos deixaram provisões para o próximo Clowder. Use uma reserva do zelador para desembrulhar suprimentos aleatórios, ou fabrique quatro reservas pequenas em uma média e três médias em uma grande. Selos maiores têm mais rolagens e um conjunto de suprimentos mais amplo; abrir separado dá mais suprimentos básicos. Nenhuma máquina nem ficha de progresso se esconde dentro, mas cada selo tem uma chance pequena de um Fragmento de Fio e uma bem pequena de um Fio de retorno inteiro; selos maiores têm chances melhores.",
 		"Como: quatro papéis e um corante azul, sem forma. Rende quatro folhas."
 	]
-	quest.42000000000400A9.title: "Papel de planta"
+	quest.42000000000400A9.title: "Papel de Projeto"
 	quest.42000000000400AA.quest_desc: [
 		"Plantas numa caixa.",
 		"Quatro Papel de planta, sem forma — reivindicar uma plataforma apaga o presente de entrada do Silent Gear. Clique direito para desembrulhar as plantas iniciais.",
 		"Como: quatro Papel de planta, sem forma. Clique direito para desembrulhar as plantas iniciais. Reivindicar uma plataforma apaga o presente de entrada do Silent Gear."
 	]
-	quest.42000000000400AA.title: "Pacote de plantas"
+	quest.42000000000400AA.title: "Pacote de Projetos"
 	quest.42000000000400AB.quest_desc: [
 		"O modelo de onde começa uma ferramenta modular, antes de você pôr as peças.",
 		"Como: desembrulhe o Pacote de plantas, ou JEI. Garra nomeia a linha de ferramentas."
@@ -1477,7 +1477,7 @@
 		"O invólucro de andesito é a moldura do Create.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060109.title: "Invólucro de andesito"
+	quest.4200000000060109.title: "Revestimento de Andesito"
 	quest.420000000006010A.quest_desc: [
 		"Um rio no céu, girando.",
 		"Como: oito tábuas ao redor de um eixo. Precisa de um fluxo de água ao lado."
@@ -1492,7 +1492,7 @@
 		"Moa cascalho até virar pó, sem martelo.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006010C.title: "Mó"
+	quest.420000000006010C.title: "Moedor"
 	quest.420000000006010D.quest_desc: [
 		"A bacia segura a mistura do Create.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -1507,7 +1507,7 @@
 		"Receitas em massa, rápido.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006010F.title: "Misturador mecânico"
+	quest.420000000006010F.title: "Batedeira Mecânica"
 	quest.4200000000060110.quest_desc: [
 		"Uma superfície plana que segura um item parado para a correia ou a prensa.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -1567,22 +1567,22 @@
 		"Despeje fluidos nas bacias.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006011B.title: "Bico"
+	quest.420000000006011B.title: "Bica"
 	quest.420000000006011C.quest_desc: [
 		"Bombeie fluidos de uma fonte.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006011C.title: "Polia de mangueira"
+	quest.420000000006011C.title: "Roldana de Mangueira"
 	quest.420000000006011D.quest_desc: [
 		"Marca o lado dos fluidos de uma construção, o primo chique do andesito.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006011D.title: "Invólucro de cobre"
+	quest.420000000006011D.title: "Revestimento de Cobre"
 	quest.420000000006011E.quest_desc: [
 		"Cobre as máquinas precisas, as que a rotação sozinha não consegue satisfazer.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006011E.title: "Invólucro de latão"
+	quest.420000000006011E.title: "Revestimento de Latão"
 	quest.420000000006011F.quest_desc: [
 		"Coração de relojoaria. Quer um Nó vinculante no seu centro.",
 		"O Tear, pedindo para ser incluído.",
@@ -1593,17 +1593,17 @@
 		"Controle a velocidade de rotação.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060120.title: "Controlador de velocidade de rotação"
+	quest.4200000000060120.title: "Controlador de Velocidade Rotacional"
 	quest.4200000000060121.quest_desc: [
 		"Dobre a esquina.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060121.title: "Caixa de engrenagens"
+	quest.4200000000060121.title: "Caixa de Transmissão"
 	quest.4200000000060122.quest_desc: [
 		"A embreagem para uma linha de eixos.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060122.title: "Embreagem"
+	quest.4200000000060122.title: "Embreagem Mecânica"
 	quest.4200000000060123.quest_desc: [
 		"O câmbio inverte a rotação.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -1613,12 +1613,12 @@
 		"Giro programado. A canção dos Tecelões de padrões, escrita.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060124.title: "Câmbio sequencial"
+	quest.4200000000060124.title: "Câmbio Programável"
 	quest.4200000000060125.quest_desc: [
 		"Mistura os ingredientes numa bacia quando gira rápido o bastante.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060125.title: "Batedor"
+	quest.4200000000060125.title: "Batedeira"
 	quest.4200000000060126.quest_desc: [
 		"Gira num eixo e empurra o ar, ou um barco, conforme onde você o monta.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -1633,27 +1633,27 @@
 		"Transforma um anel de velas em rotação puxada direto do céu.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060128.title: "Mancal de moinho"
+	quest.4200000000060128.title: "Rolamento de Moinho"
 	quest.4200000000060129.quest_desc: [
 		"Gira uma estrutura inteira em torno de um ponto fixo, paredes e tudo.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060129.title: "Mancal mecânico"
+	quest.4200000000060129.title: "Rolamento Mecânico"
 	quest.420000000006012A.quest_desc: [
 		"O pórtico desliza ao longo de um trilho.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006012A.title: "Carro de pórtico"
+	quest.420000000006012A.title: "Carruagem de Pórtico"
 	quest.420000000006012B.quest_desc: [
 		"Transforma uma construção parada numa que anda nos trilhos.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006012B.title: "Montador de vagonetes"
+	quest.420000000006012B.title: "Montador de Carrinho de Mina"
 	quest.420000000006012C.quest_desc: [
 		"Liga dois vagonetes para viajarem como um só trem.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.420000000006012C.title: "Acoplamento de vagonete"
+	quest.420000000006012C.title: "Acoplamento de Carrinhos de Mina"
 	quest.420000000006012D.quest_desc: [
 		"Estende o caminho que um vagonete ou uma engenhoca percorre.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -1673,22 +1673,22 @@
 		"Mostra um número vindo de outro lugar num bloco que você realmente vê.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060130.title: "Elo de exibição"
+	quest.4200000000060130.title: "Transmissor de Exibição"
 	quest.4200000000060131.quest_desc: [
 		"O painel mostra dados.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060131.title: "Painel de exibição"
+	quest.4200000000060131.title: "Placa de Exibição"
 	quest.4200000000060132.quest_desc: [
 		"Atira uma batata com força bastante para empurrar algo para trás. Quase só para rir.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060132.title: "Canhão de batata"
+	quest.4200000000060132.title: "Canhão de Batatas"
 	quest.4200000000060133.quest_desc: [
 		"Alcança e quebra blocos mais longe do que o seu braço permite.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.4200000000060133.title: "Garra extensível"
+	quest.4200000000060133.title: "Mão Extensora"
 	quest.4200000000060134.quest_desc: [
 		"Uma roda, uma prensa, um misturador, um ventilador, um coração de relojoaria.",
 		"Dê tensão à Trama: a resposta dos Tecelões de padrões.",
@@ -1791,12 +1791,12 @@
 		"O mesmo, mais rápido, com energia.",
 		"Como: as receitas de Productive Bees ficam no JEI. Enxame nomeia a colmeia, a centrífuga e os passos de criação."
 	]
-	quest.4200000000070146.title: "Centrífuga energética"
+	quest.4200000000070146.title: "Centrífuga Energizada"
 	quest.4200000000070147.quest_desc: [
 		"Pega uma abelha no ar com a rede, sem uma única ferroada.",
 		"Como: as receitas de Productive Bees ficam no JEI. Enxame nomeia a colmeia, a centrífuga e os passos de criação."
 	]
-	quest.4200000000070147.title: "Capturador"
+	quest.4200000000070147.title: "Apanhador"
 	quest.4200000000070148.quest_desc: [
 		"Carregue uma abelha como uma lanterna.",
 		"Como: as receitas de Productive Bees ficam no JEI. Enxame nomeia a colmeia, a centrífuga e os passos de criação."
@@ -1811,7 +1811,7 @@
 		"Pareie duas colônias de propósito.",
 		"Como: as receitas de Productive Bees ficam no JEI. Enxame nomeia a colmeia, a centrífuga e os passos de criação."
 	]
-	quest.420000000007014A.title: "Câmara de criação"
+	quest.420000000007014A.title: "Câmara de Cruzamento"
 	quest.420000000007014B.quest_desc: [
 		"Classifique os traços como semente.",
 		"Como: as receitas de Productive Bees ficam no JEI. Enxame nomeia a colmeia, a centrífuga e os passos de criação."
@@ -2066,7 +2066,7 @@
 		"Braseiro para o trabalho ritual.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
 	]
-	quest.420000000008017B.title: "Braseiro ritual"
+	quest.420000000008017B.title: "Braseiro Ritualístico"
 	quest.420000000008017C.quest_desc: [
 		"Mostra um reagente e o entrega a qualquer ritual que precise dele.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
@@ -2081,12 +2081,12 @@
 		"Imbua os reagentes com fonte.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
 	]
-	quest.420000000008017E.title: "Câmara de imbuimento"
+	quest.420000000008017E.title: "Câmara de Impregnação"
 	quest.420000000008017F.quest_desc: [
 		"Guarda Fonte extra, para um feitiço não secar no meio da conjuração.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
 	]
-	quest.420000000008017F.title: "Jarro de fonte"
+	quest.420000000008017F.title: "Jarra de Fonte"
 	quest.4200000000080180.quest_desc: [
 		"Chame os espíritos pelos nomes.",
 		"Como: um livro e Sementes de sonho de demônio, sem forma. Leia; o Fogo espiritual vem depois."
@@ -2131,7 +2131,7 @@
 		"Uma ficha de alegria. O Altar natural e o Absorvedor herbívoro são feitos sobre uma.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.4200000000080188.title: "Ficha da alegria"
+	quest.4200000000080188.title: "Símbolo de Alegria"
 	quest.4200000000080189.quest_desc: [
 		"Estoque de pergaminho de feitiço.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
@@ -2141,7 +2141,7 @@
 		"Marca um lugar para voltar com uma palavra, não a pé.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
 	]
-	quest.420000000008018A.title: "Pergaminho de transposição"
+	quest.420000000008018A.title: "Pergaminho de Teletransporte"
 	quest.420000000008018B.quest_desc: [
 		"Plante-a, cuide dela e colha pano encharcado de magia baixa.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
@@ -2250,7 +2250,7 @@
 		"Estampa uma placa de silício como o Tear prensa o pano.",
 		"Como: bloco de ferro, Nó vinculante, ferro e quartzo. A AE2 só duplica uma prensa que você já tenha."
 	]
-	quest.420000000009019E.title: "Prensa de silício do inscriptor"
+	quest.420000000009019E.title: "Prensa Inscitora de Silício"
 	quest.420000000009019F.quest_desc: [
 		"Estampa a matriz de um processador lógico, uma prensada de cada vez.",
 		"Como: bloco de ferro, Nó vinculante, ferro e ouro. A primeira cópia é o ofício do Nó."
@@ -2285,7 +2285,7 @@
 		"Abriga as células que guardam tudo o que a rede lembra.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
 	]
-	quest.42000000000901A5.title: "Unidade ME"
+	quest.42000000000901A5.title: "Gabinete ME"
 	quest.42000000000901A6.quest_desc: [
 		"O invólucro dentro do qual se monta uma célula de armazenamento.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
@@ -2300,7 +2300,7 @@
 		"Veja a rede.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
 	]
-	quest.42000000000901A8.title: "Terminal ME"
+	quest.42000000000901A8.title: "Terminal"
 	quest.42000000000901A9.quest_desc: [
 		"Deixa você fabricar direto com o que a rede já guarda.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
@@ -2316,12 +2316,12 @@
 		"Use-o de mãos vazias e toque o Rito do portão: acerte as batidas que caem em A, S, D, F. Acerte 60% e ele abre; não precisa de Pulso.",
 		"Como: use o Tambor de portão de mãos vazias e toque o Rito do portão: acerte as batidas que caem em A, S, D, F. Acerte 60% e ele abre; não precisa de Pulso. Vincule primeiro uma bússola de retorno."
 	]
-	quest.42000000000901AB.title: "Tambor de portão"
+	quest.42000000000901AB.title: "Tambor do portal"
 	quest.42000000000901AC.quest_desc: [
 		"Um apoio de além do portão. Traga um para casa.",
 		"Como: funda o Pedregulho da Marca. Mine-o na Marca, através de um Tambor de portão."
 	]
-	quest.42000000000901AC.title: "Pedra da Marca"
+	quest.42000000000901AC.title: "Pedra da Marcha"
 	quest.42000000000901AD.quest_desc: [
 		"Leva os canais da rede de uma máquina à seguinte.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
@@ -2356,7 +2356,7 @@
 		"Guarda padrões dos quais a rede tira enquanto fabrica.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
 	]
-	quest.42000000000901B3.title: "Armazenamento de fabricação de 1k"
+	quest.42000000000901B3.title: "Unidade de fabricação 1k"
 	quest.42000000000901B4.quest_desc: [
 		"Alimenta as máquinas com padrões, como um tear alimenta a lançadeira com fio.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
@@ -2461,7 +2461,7 @@
 		"Prova do dossel da Marca — lembrança opcional de retecer.",
 		"Como: cresce selvagem na Marca, fica em baús do açude de junco, e um Ancião dos Liga-raízes o troca."
 	]
-	quest.42000000000901C8.title: "Junco espiritual"
+	quest.42000000000901C8.title: "Cana de Espírito"
 	quest.42000000000901C9.quest_desc: [
 		"Uma trança, um tear digital, um portão, uma pedra da Marca.",
 		"Tensione a nona Trama. Depois o Fragmento, depois o Poste.",
@@ -2506,12 +2506,12 @@
 		"Peneira mais rápido que o cajado de madeira, e dura bem mais.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01CF.title: "Cajado de osso"
+	quest.42000000000A01CF.title: "Bone Crook"
 	quest.42000000000A01D0.quest_desc: [
 		"A malha mais simples. Tudo o que você peneira começa passando por aqui.",
 		"Como: nove linhas num 3x3. A banca dos Cantores de cascalho vende a malha de Fio (linha) do Tear do vazio, que peneira igual."
 	]
-	quest.42000000000A01D0.title: "Malha de linha"
+	quest.42000000000A01D0.title: "String Mesh"
 	quest.42000000000A01D1.quest_desc: [
 		"Pega lascas mais finas que a linha. Menos restos escapam pelo tecido.",
 		"Como: quatro sílex e cinco linhas em xadrez. O sílex vem do cascalho, ou de Fio + cascalho."
@@ -2526,17 +2526,17 @@
 		"Malha de nível de ouro. As chances puxam para os minérios que importam.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01D3.title: "Malha de ouro"
+	quest.42000000000A01D3.title: "Golden Mesh"
 	quest.42000000000A01D4.quest_desc: [
 		"Peneire cascalho com isto e os diamantes aparecem bem mais vezes.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01D4.title: "Malha de diamante"
+	quest.42000000000A01D4.title: "Diamond Mesh"
 	quest.42000000000A01D5.quest_desc: [
 		"A malha mais fina que existe. Nada peneira melhor que o fio de netherita.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01D5.title: "Malha de netherita"
+	quest.42000000000A01D5.title: "Netherite Mesh"
 	quest.42000000000A01D6.quest_desc: [
 		"Argila refinada e lisa, pronta para queimar num cadinho que segura calor de verdade.",
 		"Como: bola de argila + farinha de osso, sem forma. A argila vem do Barril de tensão."
@@ -2551,7 +2551,7 @@
 		"Aguenta o calor da fundição sem rachar. Funda o que a peneira trouxe.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01D8.title: "Cadinho de porcelana"
+	quest.42000000000A01D8.title: "Porcelain Crucible"
 	quest.42000000000A01D9.quest_desc: [
 		"Borrifa água nas plantações sem pisotear as fileiras.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -2566,27 +2566,27 @@
 		"Solto nas folhas, ele fia seda enquanto come.",
 		"Como: quebre folhas com um cajado; bichos-da-seda caem de vez em quando."
 	]
-	quest.42000000000A01DB.title: "Bicho-da-seda"
+	quest.42000000000A01DB.title: "Silkworm"
 	quest.42000000000A01DC.quest_desc: [
 		"Água estranha que empurra mudas e sementes para culturas mais estranhas.",
 		"Como: um barril de água sobre micélio vira água de bruxa; encha um balde a partir dele. Esporos de micélio saem ao peneirar terra."
 	]
-	quest.42000000000A01DC.title: "Balde de água de bruxa"
+	quest.42000000000A01DC.title: "Witch Water Bucket"
 	quest.42000000000A01DD.quest_desc: [
 		"Espalhe-os e o micélio rasteja para fora, bloco por paciente bloco.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01DD.title: "Esporos de micélio"
+	quest.42000000000A01DD.title: "Mycelium Spores"
 	quest.42000000000A01DE.quest_desc: [
 		"Jogue na terra e a grama se espalha sem esperar a chuva.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01DE.title: "Sementes de grama"
+	quest.42000000000A01DE.title: "Grass Seeds"
 	quest.42000000000A01DF.quest_desc: [
 		"O grânulo que substitui o pedregulho. Devolva-o ao martelo para ter mais.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01DF.title: "Seixo de pedra"
+	quest.42000000000A01DF.title: "Stone Pebble"
 	quest.42000000000A01E0.quest_desc: [
 		"Nove pedregulhos bem apertados em pedra de estoque, para uma plataforma que cresce.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -2596,17 +2596,17 @@
 		"Quebra pedregulho em cascalho mais rápido que qualquer martelo anterior.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01E1.title: "Martelo de netherita"
+	quest.42000000000A01E1.title: "Netherite Hammer"
 	quest.42000000000A01E2.quest_desc: [
 		"Pedra do Nether, moída fina. Basalto e pedra-negra começam os dois aqui.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01E2.title: "Seixo de pedra-negra"
+	quest.42000000000A01E2.title: "Blackstone Pebble"
 	quest.42000000000A01E3.quest_desc: [
 		"Ardósia profunda moída até grânulos, pronta de novo para a peneira.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000000A01E3.title: "Seixo de ardósia profunda"
+	quest.42000000000A01E3.title: "Deepslate Pebble"
 	quest.42000000000A01E4.quest_desc: [
 		"Pedra pálida tirada de uma peneiração funda, boa sobretudo para construir.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -2647,12 +2647,12 @@
 		"Puxa os itens largados direto para o barril, do outro lado da plataforma.",
 		"Como: barris e melhorias no JEI. O controlador une uma parede de barris."
 	]
-	quest.42000000000B01EB.title: "Melhoria de ímã avançada"
+	quest.42000000000B01EB.title: "Módulo de Ímã Avançada"
 	quest.42000000000B01EC.quest_desc: [
 		"Entra de um lado, sai do outro, sem bloco de funil.",
 		"Como: barris e melhorias no JEI. O controlador une uma parede de barris."
 	]
-	quest.42000000000B01EC.title: "Melhoria de funil"
+	quest.42000000000B01EC.title: "Módulo de Funil"
 	quest.42000000000B01ED.quest_desc: [
 		"Apaga tudo que passar da capacidade, para a gaveta nunca emperrar.",
 		"Como: barris e melhorias no JEI. O controlador une uma parede de barris."
@@ -2692,17 +2692,17 @@
 		"Puxa os itens próximos direto para a gaveta.",
 		"Como: gavetas de carvalho 1x1 / 1x2 / 2x2, depois a gaveta compactadora e o controlador. O JEI nomeia a receita."
 	]
-	quest.42000000000B01F4.title: "Melhoria coletora"
+	quest.42000000000B01F4.title: "Atualização do Coletor"
 	quest.42000000000B01F5.quest_desc: [
 		"Puxa itens do baú ou da máquina colocada ao lado.",
 		"Como: gavetas de carvalho 1x1 / 1x2 / 2x2, depois a gaveta compactadora e o controlador. O JEI nomeia a receita."
 	]
-	quest.42000000000B01F5.title: "Melhoria puxadora"
+	quest.42000000000B01F5.title: "Melhoria do Extrator"
 	quest.42000000000B01F6.quest_desc: [
 		"Empurra os itens guardados para o inventário ao lado.",
 		"Como: gavetas de carvalho 1x1 / 1x2 / 2x2, depois a gaveta compactadora e o controlador. O JEI nomeia a receita."
 	]
-	quest.42000000000B01F6.title: "Melhoria empurradora"
+	quest.42000000000B01F6.title: "Melhoria do Empurrador"
 	quest.42000000000B01F7.quest_desc: [
 		"Apaga tudo que passar da capacidade, para a gaveta nunca emperrar.",
 		"Como: gavetas de carvalho 1x1 / 1x2 / 2x2, depois a gaveta compactadora e o controlador. O JEI nomeia a receita."
@@ -2737,32 +2737,32 @@
 		"Filtra o que entra nas mochilas.",
 		"Como: mochila de couro, depois melhorias de ferro/ouro/diamante no JEI."
 	]
-	quest.42000000000B01FD.title: "Melhoria de filtro"
+	quest.42000000000B01FD.title: "Módulo de Filtro"
 	quest.42000000000B01FE.quest_desc: [
 		"Deixa a mochila fabricar com o que ela já tem guardado.",
 		"Como: mochila de couro, depois melhorias de ferro/ouro/diamante no JEI."
 	]
-	quest.42000000000B01FE.title: "Melhoria de fabricação"
+	quest.42000000000B01FE.title: "Módulo de Bancada de Trabalho"
 	quest.42000000000B01FF.quest_desc: [
 		"Alimenta você automaticamente com o que guarda quando a fome baixa.",
 		"Como: mochila de couro, depois melhorias de ferro/ouro/diamante no JEI."
 	]
-	quest.42000000000B01FF.title: "Melhoria de alimentação"
+	quest.42000000000B01FF.title: "Módulo de Alimentação"
 	quest.42000000000B0200.quest_desc: [
 		"Troca uma ferramenta quebrada por uma nova da mochila.",
 		"Como: mochila de couro, depois melhorias de ferro/ouro/diamante no JEI."
 	]
-	quest.42000000000B0200.title: "Melhoria de reposição"
+	quest.42000000000B0200.title: "Módulo de Reabastecimento"
 	quest.42000000000B0201.quest_desc: [
 		"Esvazia a mochila nos baús próximos quando você se aproxima.",
 		"Como: mochila de couro, depois melhorias de ferro/ouro/diamante no JEI."
 	]
-	quest.42000000000B0201.title: "Melhoria de depósito"
+	quest.42000000000B0201.title: "Módulo de Depósito"
 	quest.42000000000B0202.quest_desc: [
 		"Adiciona um tanque de fluidos dentro da mochila para carregar líquidos.",
 		"Como: mochila de couro, depois melhorias de ferro/ouro/diamante no JEI."
 	]
-	quest.42000000000B0202.title: "Melhoria de tanque"
+	quest.42000000000B0202.title: "Módulo de Tanque"
 	quest.42000000000C0203.quest_desc: [
 		"O metal de base da maioria das máquinas e carcaças desta linha.",
 		"As Nove Tribos deixaram provisões para o próximo Clowder. Use uma reserva do zelador para desembrulhar suprimentos aleatórios, ou fabrique quatro reservas pequenas em uma média e três médias em uma grande. Selos maiores têm mais rolagens e um conjunto de suprimentos mais amplo; abrir separado dá mais suprimentos básicos. Nenhuma máquina nem ficha de progresso se esconde dentro, mas cada selo tem uma chance pequena de um Fragmento de Fio e uma bem pequena de um Fio de retorno inteiro; selos maiores têm chances melhores.",
@@ -2793,7 +2793,7 @@
 		"A placa lógica mais afiada, reservada às máquinas do topo da linha.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C0208.title: "Circuito de controle de elite"
+	quest.42000000000C0208.title: "Circuito de Controle Elite"
 	quest.42000000000C0209.quest_desc: [
 		"Infunde os metais com carbono, redstone ou pó de diamante antes de fundir.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -2813,7 +2813,7 @@
 		"Funde minérios com energia em vez de combustível, e um pouco mais rápido também.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C020C.title: "Fundidora energizada"
+	quest.42000000000C020C.title: "Fundição Energizada"
 	quest.42000000000C020D.quest_desc: [
 		"Purifica o minério enriquecido com oxigênio para um terceiro produto, às vezes mais.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -2833,12 +2833,12 @@
 		"Um único espaço de pilha, que guarda bem mais do que um baú consegue.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C0210.title: "Cesto básico"
+	quest.42000000000C0210.title: "Caixa Básica"
 	quest.42000000000C0211.quest_desc: [
 		"Guarda um poço fundo de um só fluido em um único bloco.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C0211.title: "Tanque de fluido básico"
+	quest.42000000000C0211.title: "Tanque de Fluidos Básico"
 	quest.42000000000C0212.quest_desc: [
 		"Amortece a energia entre as máquinas para que os picos não parem a linha.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -2853,7 +2853,7 @@
 		"Move fluidos entre tanques e máquinas ao longo da plataforma.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C0214.title: "Tubo mecânico básico"
+	quest.42000000000C0214.title: "Cano Mecânico Básico"
 	quest.42000000000C0215.quest_desc: [
 		"Move itens automaticamente entre inventários conectados.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -2868,22 +2868,22 @@
 		"Mochila a jato Mek — impulso opcional.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C0217.title: "Mochila a jato"
+	quest.42000000000C0217.title: "Jetpack"
 	quest.42000000000C0218.quest_desc: [
 		"Ameniza o dano de queda e compra um segundo antes que o vazio leve você.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C0218.title: "Tênis livres"
+	quest.42000000000C0218.title: "Corredores"
 	quest.42000000000C0219.quest_desc: [
 		"Uma ferramenta que minera, corta e luta, mais afiada a cada melhoria.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C0219.title: "Desmontador atômico"
+	quest.42000000000C0219.title: "Desintegrador Atômico"
 	quest.42000000000C021A.quest_desc: [
 		"A armação estrutural em torno da qual se monta a maioria das máquinas multibloco.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C021A.title: "Carcaça de aço"
+	quest.42000000000C021A.title: "Revestimento de aço"
 	quest.42000000000C021B.quest_desc: [
 		"Liga dois pontos, e ao atravessar você pula a caminhada do meio.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -2893,7 +2893,7 @@
 		"Minera um raio amplo sozinho e separa o que sai para você.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000000C021C.title: "Minerador digital"
+	quest.42000000000C021C.title: "Mineradora Digital"
 	quest.42000000000D021D.quest_desc: [
 		"Um ingrediente base grudento por trás da maioria das máquinas da rede.",
 		"As Nove Tribos deixaram provisões para o próximo Clowder. Use uma reserva do zelador para desembrulhar suprimentos aleatórios, ou fabrique quatro reservas pequenas em uma média e três médias em uma grande. Selos maiores têm mais rolagens e um conjunto de suprimentos mais amplo; abrir separado dá mais suprimentos básicos. Nenhuma máquina nem ficha de progresso se esconde dentro, mas cada selo tem uma chance pequena de um Fragmento de Fio e uma bem pequena de um Fio de retorno inteiro; selos maiores têm chances melhores.",
@@ -2969,12 +2969,12 @@
 		"Um nível de cristal mais forte, mais adiante na montagem da câmara energizante.",
 		"Como: capítulo Rede Powah — orbe energizante e cabos, depois que o Pulso de Centelha existir."
 	]
-	quest.42000000000D022B.title: "Cristal de espírito"
+	quest.42000000000D022B.title: "Cristal Vibrante"
 	quest.42000000000D022C.quest_desc: [
 		"O nível de cristal mais forte que a câmara energizante pode conter.",
 		"Como: capítulo Rede Powah — orbe energizante e cabos, depois que o Pulso de Centelha existir."
 	]
-	quest.42000000000D022C.title: "Cristal nitro"
+	quest.42000000000D022C.title: "Cristal de Nitro"
 	quest.42000000000E022D.quest_desc: [
 		"Fiada da flor-de-mago e tecida em robes e equipamento de feitiços.",
 		"As Nove Tribos deixaram provisões para o próximo Clowder. Use uma reserva do zelador para desembrulhar suprimentos aleatórios, ou fabrique quatro reservas pequenas em uma média e três médias em uma grande. Selos maiores têm mais rolagens e um conjunto de suprimentos mais amplo; abrir separado dá mais suprimentos básicos. Nenhuma máquina nem ficha de progresso se esconde dentro, mas cada selo tem uma chance pequena de um Fragmento de Fio e uma bem pequena de um Fio de retorno inteiro; selos maiores têm chances melhores.",
@@ -3035,12 +3035,12 @@
 		"Converte o crescimento das plantações próximas num fio lento de fonte.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
 	]
-	quest.42000000000E0238.title: "Elo de fonte agronômico"
+	quest.42000000000E0238.title: "Vínculo de Fonte Agronômico"
 	quest.42000000000E0239.quest_desc: [
 		"Converte o calor da lava próxima num fio constante de fonte.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
 	]
-	quest.42000000000E0239.title: "Elo de fonte vulcânico"
+	quest.42000000000E0239.title: "Vínculo de Fonte Vulcânico"
 	quest.42000000000E023A.quest_desc: [
 		"Invoca uma wixie que fabrica receitas para você enquanto você trabalha em outro lugar.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
@@ -3070,7 +3070,7 @@
 		"Pega e coloca blocos à distância, ligando as máquinas entre si de longe.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
 	]
-	quest.42000000000E023F.title: "Varinha de domínio"
+	quest.42000000000E023F.title: "Varinha do Domínio"
 	quest.42000000000E0240.quest_desc: [
 		"Marca um item como permitido ao colocá-lo num filtro.",
 		"Como: Lado arcano — madeira arcana e baga de fonte a partir do musgo, depois a cascata."
@@ -3090,7 +3090,7 @@
 	quest.42000000000F0242.title: "Erga o Poste"
 	quest.42000000000F0243.quest_desc: [
 		"Chave do nexo na mão, ou /clowder hub. Todo Clowder do servidor se encontra aqui.",
-		"/clowder return brings you home.",
+		"/clowder return leva você para casa.",
 		"Como: Chave do nexo ou `/clowder hub`. `/clowder return` volta para casa."
 	]
 	quest.42000000000F0243.title: "Entre no Salão"
@@ -3247,7 +3247,7 @@
 		"Casca retirada de árvores antigas, útil em receitas de aura.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.420000000011027F.title: "Casca antiga"
+	quest.420000000011027F.title: "Casca Ancestral"
 	quest.4200000000110280.quest_desc: [
 		"Uma ficha de alegria. O Altar natural e o Absorvedor herbívoro são feitos sobre uma.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
@@ -3257,17 +3257,17 @@
 		"Uma ficha de medo. O Diminuidor de copa e o Absorvedor remanescente são feitos sobre uma.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.4200000000110281.title: "Ficha de medo"
+	quest.4200000000110281.title: "Símbolo de Medo"
 	quest.4200000000110282.quest_desc: [
 		"Uma ficha de raiva. O Catalisador esfarelante e a Marca de disparo precisam de uma.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.4200000000110282.title: "Ficha de raiva"
+	quest.4200000000110282.title: "Símbolo de Ira"
 	quest.4200000000110283.quest_desc: [
 		"Uma ficha de pesar. A Mesa de oferendas e o Desembaraçador de mortais precisam de uma.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.4200000000110283.title: "Ficha de pesar"
+	quest.4200000000110283.title: "Símbolo de Tristeza"
 	quest.4200000000110284.quest_desc: [
 		"Espírito de aura para rituais.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
@@ -3277,12 +3277,12 @@
 		"Espírito de nascimento para ritos de aura.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.4200000000110285.title: "Espírito do parto"
+	quest.4200000000110285.title: "Espírito do Nascimento"
 	quest.4200000000110286.quest_desc: [
 		"Guarda uma reserva de aura para quando a terra rarear.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.4200000000110286.title: "Tesouro de aura"
+	quest.4200000000110286.title: "Repositório de Aura"
 	quest.4200000000110287.quest_desc: [
 		"Tarde. Só se a Aura quiser isso.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
@@ -3297,7 +3297,7 @@
 		"Colocado ao lado do Altar natural, abre as receitas de trituração do altar.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.4200000000110289.title: "Catalisador esfarelante"
+	quest.4200000000110289.title: "Catalisador de Desmoronamento"
 	quest.420000000011028A.quest_desc: [
 		"Colocado ao lado do Altar natural, abre as receitas de transmutação do altar.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
@@ -3317,7 +3317,7 @@
 		"Gera aura sempre que um projétil cai por perto.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.420000000011028D.title: "Marca de disparo"
+	quest.420000000011028D.title: "Marca de Tiro"
 	quest.420000000011028E.quest_desc: [
 		"Gera aura devagar a partir de flores que florescem por perto.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
@@ -3327,7 +3327,7 @@
 		"Gera aura devagar a partir de carvalhos que crescem por perto.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
 	]
-	quest.420000000011028F.title: "Diminuidor de copa"
+	quest.420000000011028F.title: "Diminuidor de Dossel"
 	quest.4200000000110290.quest_desc: [
 		"Uma flor do End, estranhamente à vontade numa plataforma.",
 		"Como: Fibra brilhante nas árvores → Folha de ouro → Altar natural. O capítulo da aura nomeia fichas e geradores."
@@ -3363,7 +3363,7 @@
 		"Cesta para carregar a colheita.",
 		"Como: fabricação de Farmer's Delight no JEI (bancada de trabalho, tábua de corte ou panela). Sementes de cultivo vêm de peneirar terra."
 	]
-	quest.4200000000120296.title: "Cesta"
+	quest.4200000000120296.title: "Cesto"
 	quest.4200000000120297.quest_desc: [
 		"Você sobe nela como numa trepadeira, e várias receitas de cozinha precisam dela.",
 		"Como: fabricação de Farmer's Delight no JEI (bancada de trabalho, tábua de corte ou panela). Sementes de cultivo vêm de peneirar terra."
@@ -3423,7 +3423,7 @@
 		"Azedo e doce, uma das sobremesas mais ricas na plataforma.",
 		"Como: fabricação de Farmer's Delight no JEI (bancada de trabalho, tábua de corte ou panela). Sementes de cultivo vêm de peneirar terra."
 	]
-	quest.42000000001202A2.title: "Torta de queijo de bagas doces"
+	quest.42000000001202A2.title: "Cheesecake de bagas doces"
 	quest.42000000001202A3.quest_desc: [
 		"Arroz para a linha da cozinha.",
 		"Como: fabricação de Farmer's Delight no JEI (bancada de trabalho, tábua de corte ou panela). Sementes de cultivo vêm de peneirar terra."
@@ -3438,12 +3438,12 @@
 		"Pequenos embrulhos recheados, rápidos de cozinhar em lotes.",
 		"Como: fabricação de Farmer's Delight no JEI (bancada de trabalho, tábua de corte ou panela). Sementes de cultivo vêm de peneirar terra."
 	]
-	quest.42000000001202A5.title: "Bolinhos"
+	quest.42000000001202A5.title: "Bolinhos no vapor"
 	quest.42000000001202A6.quest_desc: [
 		"Uma bebida quente feita com sementes de cacau e leite.",
 		"Como: fabricação de Farmer's Delight no JEI (bancada de trabalho, tábua de corte ou panela). Sementes de cultivo vêm de peneirar terra."
 	]
-	quest.42000000001202A6.title: "Cacau quente"
+	quest.42000000001202A6.title: "Chocolate quente"
 	quest.42000000001202A7.quest_desc: [
 		"Uma bebida fresca prensada de melancia, restaura um pouco de fome bem rápido.",
 		"Como: fabricação de Farmer's Delight no JEI (bancada de trabalho, tábua de corte ou panela). Sementes de cultivo vêm de peneirar terra."
@@ -3509,7 +3509,7 @@
 		"Lança um feitiço uma vez, sem precisar tê-lo aprendido num livro.",
 		"Como: Essência arcana e tinta, depois um livro de feitiços. O capítulo Feitiços nomeia a escada."
 	]
-	quest.42000000001302B3.title: "Pergaminho"
+	quest.42000000001302B3.title: "em Pergaminho"
 	quest.42000000001302B4.quest_desc: [
 		"Tecido mágico para vestes.",
 		"Como: Essência arcana e tinta, depois um livro de feitiços. O capítulo Feitiços nomeia a escada."
@@ -3529,17 +3529,17 @@
 		"Um cajado que canaliza feitiços de fogo com força extra.",
 		"Como: Essência arcana e tinta, depois um livro de feitiços. O capítulo Feitiços nomeia a escada."
 	]
-	quest.42000000001302B7.title: "Cajado de Pyrium"
+	quest.42000000001302B7.title: "Cajado de Pyrio"
 	quest.42000000001302B8.quest_desc: [
 		"Um cajado modesto para quem está começando a conjurar.",
 		"Como: Essência arcana e tinta, depois um livro de feitiços. O capítulo Feitiços nomeia a escada."
 	]
-	quest.42000000001302B8.title: "Cajado barba-grisalha"
+	quest.42000000001302B8.title: "Cajado do Barba-Cinzenta"
 	quest.42000000001302B9.quest_desc: [
 		"Uma lâmina que pune quem lança feitiços e corta as defesas deles.",
 		"Como: receita do pack, duas Barras arcanas na diagonal, uma corrente de cada lado e um diamante no cabo. O único portador selvagem vive nos fortes de evocadores, que a plataforma nunca tem."
 	]
-	quest.42000000001302B9.title: "Caça-magos"
+	quest.42000000001302B9.title: "Caça-Mago"
 	quest.42000000001302BA.quest_desc: [
 		"O livro de feitiços mais cedo: poucos espaços, mas fácil de alcançar.",
 		"Como: Essência arcana e tinta, depois um livro de feitiços. O capítulo Feitiços nomeia a escada."
@@ -3554,7 +3554,7 @@
 		"Metal refinado, usado no alto do equipamento de feitiços.",
 		"Como: Essência arcana e tinta, depois um livro de feitiços. O capítulo Feitiços nomeia a escada."
 	]
-	quest.42000000001302BC.title: "Barra arcana"
+	quest.42000000001302BC.title: "Lingote de Metal Arcano"
 	quest.42000000001302BD.quest_desc: [
 		"Um livro danificado que dá para recompor em conhecimento.",
 		"Como: receita do pack, um livro encantado cercado por quatro Essências arcanas e quatro areias das almas. O JEI chama isso de Livro em ruínas."
@@ -4336,7 +4336,7 @@
 		"Guarda essência em quantidade, para as máquinas nunca secarem.",
 		"Como: fabricação de Mystical Agriculture no JEI. Inferium e Prosperity vêm da peneira; as sementes são infundidas no Altar de infusão."
 	]
-	quest.4200000000180355.title: "Recipiente de essência"
+	quest.4200000000180355.title: "Receptáculo de Essência"
 	quest.4200000000180356.quest_desc: [
 		"O componente base de toda máquina movida a essência.",
 		"Como: fabricação de Mystical Agriculture no JEI. Inferium e Prosperity vêm da peneira; as sementes são infundidas no Altar de infusão."
@@ -4411,7 +4411,7 @@
 		"Acelera o crescimento quando você a joga sobre plantações já feitas.",
 		"Como: fabricação de Mystical Agriculture no JEI. Inferium e Prosperity vêm da peneira; as sementes são infundidas no Altar de infusão."
 	]
-	quest.4200000000180364.title: "Essência fertilizada"
+	quest.4200000000180364.title: "Essência Fertilizante"
 	quest.4200000000180365.quest_desc: [
 		"O pó de que saem as barras de Soulium. Um componente para sementes hostis.",
 		"Como: fabricação de Mystical Agriculture no JEI. Inferium e Prosperity vêm da peneira; as sementes são infundidas no Altar de infusão."
@@ -4421,7 +4421,7 @@
 		"Pó de Soulium preso a uma barra de Prosperity, escuro e um pouco frio.",
 		"Como: fabricação de Mystical Agriculture no JEI. Inferium e Prosperity vêm da peneira; as sementes são infundidas no Altar de infusão."
 	]
-	quest.4200000000180366.title: "Barra de Soulium"
+	quest.4200000000180366.title: "Lingote de Soulium"
 	quest.4200000000180367.quest_desc: [
 		"Feita de Soulium. Causa dano extra a criaturas hostis.",
 		"Como: fabricação de Mystical Agriculture no JEI. Inferium e Prosperity vêm da peneira; as sementes são infundidas no Altar de infusão."
@@ -4923,12 +4923,12 @@
 		"As Nove Tribos deixaram provisões para o próximo Clowder. Use uma reserva do zelador para desembrulhar suprimentos aleatórios, ou fabrique quatro reservas pequenas em uma média e três médias em uma grande. Selos maiores têm mais rolagens e um conjunto de suprimentos mais amplo; abrir separado dá mais suprimentos básicos. Nenhuma máquina nem ficha de progresso se esconde dentro, mas cada selo tem uma chance pequena de um Fragmento de Fio e uma bem pequena de um Fio de retorno inteiro; selos maiores têm chances melhores.",
 		"Como: lingotes de ferro e barras de ferro ao redor de um módulo em branco; rende quatro. Os módulos vão no roteador."
 	]
-	quest.42000000001A03CA.title: "Roteador modular"
+	quest.42000000001A03CA.title: "Modular Router"
 	quest.42000000001A03CB.quest_desc: [
 		"O cartão em que se escreve cada comportamento do roteador.",
 		"Como: Roteador modular mais módulos em branco no JEI. Puxador/enviador/quebrador ficam no roteador."
 	]
-	quest.42000000001A03CB.title: "Módulo em branco"
+	quest.42000000001A03CB.title: "Blank Module"
 	quest.42000000001A03CC.quest_desc: [
 		"Puxa itens de um vizinho para dentro do roteador.",
 		"Como: Roteador modular mais módulos em branco no JEI. Puxador/enviador/quebrador ficam no roteador."
@@ -4943,17 +4943,17 @@
 		"Quebre um bloco na frente do roteador e fique com o que cair.",
 		"Como: Roteador modular mais módulos em branco no JEI. Puxador/enviador/quebrador ficam no roteador."
 	]
-	quest.42000000001A03CE.title: "Módulo quebrador"
+	quest.42000000001A03CE.title: "Breaker Module"
 	quest.42000000001A03CF.quest_desc: [
 		"Coloque um bloco para onde o roteador aponta.",
 		"Como: Roteador modular mais módulos em branco no JEI. Puxador/enviador/quebrador ficam no roteador."
 	]
-	quest.42000000001A03CF.title: "Módulo colocador"
+	quest.42000000001A03CF.title: "Placer Module"
 	quest.42000000001A03D0.quest_desc: [
 		"Emita redstone quando o conteúdo do roteador passar de um limite.",
 		"Como: Roteador modular mais módulos em branco no JEI. Puxador/enviador/quebrador ficam no roteador."
 	]
-	quest.42000000001A03D0.title: "Módulo detector"
+	quest.42000000001A03D0.title: "Detector Module"
 	quest.42000000001A03D1.quest_desc: [
 		"Leva itens entre baús, máquinas e plataformas.",
 		"Como: ferro + redstone. Ajuste as faces com a chave inglesa Pipez."
@@ -4963,7 +4963,7 @@
 		"Leva líquidos entre tanques e máquinas, sem corrida de balde.",
 		"Como: ferro + baldes + redstone. Uso agachado da chave inglesa num lado para extrair; clique direito nesse lado para os filtros."
 	]
-	quest.42000000001A03D2.title: "Tubo de fluidos"
+	quest.42000000001A03D2.title: "Tubo de Fluido"
 	quest.42000000001A03D3.quest_desc: [
 		"Leva energia entre as máquinas que a fazem e as que precisam dela.",
 		"Como: ferro + redstone. Leva FE entre máquinas."
@@ -4983,7 +4983,7 @@
 		"Use agachado um lado do tubo para que ele puxe de uma máquina, ou para cortá-lo.",
 		"Como: dois sílex e dois gravetos. Uso agachado num lado do tubo numa máquina para extrair, de novo para cortar; clique direito num lado que extrai para os filtros."
 	]
-	quest.42000000001A03D6.title: "Chave inglesa de tubos"
+	quest.42000000001A03D6.title: "Chave de Tubos"
 	quest.42000000001A03D7.quest_desc: [
 		"Melhoria de velocidade para um tubo.",
 		"Como: tubos de ferro + redstone no JEI. Uso agachado da chave inglesa para marcar os lados que extraem; clique direito em um para os filtros. O capítulo dos tubos é a escada toda."
@@ -5078,7 +5078,7 @@
 		"Um funil que pode filtrar o que move.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001A03E9.title: "Funil de latão"
+	quest.42000000001A03E9.title: "Funil Bidirecional de Latão"
 	quest.42000000001A03EA.quest_desc: [
 		"Solta itens em linha reta para baixo, entre andares.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5199,17 +5199,17 @@
 		"Um foco que ajuda um ritual a manter a forma.",
 		"Como: Dicionário de espíritos, depois Fogo dos espíritos e tigelas. O capítulo Outromundo nomeia os ritos."
 	]
-	quest.42000000001B0401.title: "Gema sintonizada com espíritos"
+	quest.42000000001B0401.title: "Gema Sintonizada com Espírito"
 	quest.42000000001B0402.quest_desc: [
 		"Minério de além deste mundo, fundido em Iesnium.",
 		"Como: Dicionário de espíritos, depois Fogo dos espíritos e tigelas. O capítulo Outromundo nomeia os ritos."
 	]
-	quest.42000000001B0402.title: "Iesnium bruto"
+	quest.42000000001B0402.title: "Iésnio Bruto"
 	quest.42000000001B0403.quest_desc: [
 		"Um metal que só existe do outro lado.",
 		"Como: Dicionário de espíritos, depois Fogo dos espíritos e tigelas. O capítulo Outromundo nomeia os ritos."
 	]
-	quest.42000000001B0403.title: "Barra de Iesnium"
+	quest.42000000001B0403.title: "Lingote de Iésnio"
 	quest.42000000001B0404.quest_desc: [
 		"Envia mineradores espirituais vinculados ao Outromundo para cavar.",
 		"Como: Dicionário de espíritos, depois Fogo dos espíritos e tigelas. O capítulo Outromundo nomeia os ritos."
@@ -5304,7 +5304,7 @@
 		"Uma amostra de veio, que vale fundir quando você achar mais.",
 		"Como: Dicionário de espíritos, depois Fogo dos espíritos e tigelas. O capítulo Outromundo nomeia os ritos."
 	]
-	quest.42000000001B0416.title: "Minério de Iesnium"
+	quest.42000000001B0416.title: "Minério de Iésnio"
 	quest.42000000001B0417.quest_desc: [
 		"Um afrit enviado fundo para minerar onde os espíritos menores não vão.",
 		"Como: Dicionário de espíritos, depois Fogo dos espíritos e tigelas. O capítulo Outromundo nomeia os ritos."
@@ -5380,7 +5380,7 @@
 		"Gira uma estrutura num horário, como o ponteiro de um relógio.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C0425.title: "Suporte de relojoaria"
+	quest.42000000001C0425.title: "Rolamento de Relógio"
 	quest.42000000001C0426.quest_desc: [
 		"Converte o vapor da caldeira em rotação constante.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5420,7 +5420,7 @@
 		"Duas rodas girando uma contra a outra, com o minério no meio.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C042D.title: "Roda trituradora"
+	quest.42000000001C042D.title: "Roda Moedora"
 	quest.42000000001C042E.quest_desc: [
 		"Ventilador para lavar e secar.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5450,7 +5450,7 @@
 		"Carrega ou descarrega uma esteira, num sentido de cada vez.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C0433.title: "Funil de andesito"
+	quest.42000000001C0433.title: "Funil Bidirecional de Andesito"
 	quest.42000000001C0434.quest_desc: [
 		"Filtra o que move, por item e por quantidade.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5525,7 +5525,7 @@
 		"Quartzo rosa polido sobre uma chapa de ferro, a peça de sinal das máquinas de latão.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C0442.title: "Tubo de elétrons"
+	quest.42000000001C0442.title: "Tubo de Elétron"
 	quest.42000000001C0443.quest_desc: [
 		"Colocado num eixo, vira a mão de um implantador.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5550,7 +5550,7 @@
 		"Envia um sinal de redstone sem fio entre plataformas.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C0447.title: "Elo de redstone"
+	quest.42000000001C0447.title: "Conexão de Redstone"
 	quest.42000000001C0448.quest_desc: [
 		"Emite redstone quando um inventário passa de um limite.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5565,7 +5565,7 @@
 		"Mostra um número para quem ler o painel.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C044A.title: "Tubo nixie"
+	quest.42000000001C044A.title: "Tubo de Nixie"
 	quest.42000000001C044B.quest_desc: [
 		"Mostra texto tirado de uma placa ou de um teletipo de estoque.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5575,22 +5575,22 @@
 		"Mostra de relance a contagem de um recurso rastreado.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C044C.title: "Medidor da fábrica"
+	quest.42000000001C044C.title: "Controlador de Estoque"
 	quest.42000000001C044D.quest_desc: [
 		"Embale itens para o envio.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C044D.title: "Empacotador"
+	quest.42000000001C044D.title: "Empacotadora"
 	quest.42000000001C044E.quest_desc: [
 		"Reúne os pacotes divididos de volta em pedidos inteiros.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C044E.title: "Reempacotador"
+	quest.42000000001C044E.title: "Reempacotadora"
 	quest.42000000001C044F.quest_desc: [
 		"Pede itens a uma rede de estoque vinculada.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C044F.title: "Teletipo de estoque"
+	quest.42000000001C044F.title: "Telégrafo de Estoque"
 	quest.42000000001C0450.quest_desc: [
 		"Coloque-o, e o vagonete tem para onde ir.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5615,7 +5615,7 @@
 		"Um trilho propulsor com controle de velocidade mais fino.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
 	]
-	quest.42000000001C0454.title: "Trilho controlador"
+	quest.42000000001C0454.title: "Trilho Controlado"
 	quest.42000000001C0455.quest_desc: [
 		"Polia de corda para movimento na vertical.",
 		"Como: fabricação do Create no JEI (bancada de trabalho, prensa, misturador ou implantador). A liga de andesito e uma roda d'água começam a linha."
@@ -5962,7 +5962,7 @@
 		"Um balde mais leve, mais gentil com o orçamento de cascalho do começo.",
 		"Como: modele a argila de porcelana num balde não queimado e depois funda."
 	]
-	quest.42000000001E0499.title: "Balde de porcelana"
+	quest.42000000001E0499.title: "Porcelain Bucket"
 	quest.42000000001E049A.quest_desc: [
 		"Derrete blocos até líquido sobre um fogo.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -6047,7 +6047,7 @@
 		"Nove blocos de terra dobrados em um, para a subida.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04AA.title: "Terra comprimida"
+	quest.42000000001E04AA.title: "Compressed Dirt"
 	quest.42000000001E04AB.quest_desc: [
 		"Nove pedregulhos bem apertados, baratos e sem fim.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -6057,32 +6057,32 @@
 		"Nove cascalhos compactados; uma peneira comprimida pega o bloco inteiro.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04AC.title: "Cascalho comprimido"
+	quest.42000000001E04AC.title: "Compressed Gravel"
 	quest.42000000001E04AD.quest_desc: [
 		"Nove blocos de areia prensados em um, para carregar.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04AD.title: "Areia comprimida"
+	quest.42000000001E04AD.title: "Compressed Sand"
 	quest.42000000001E04AE.quest_desc: [
 		"Nove blocos de pó prensados, pelo mesmo motivo.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04AE.title: "Pó comprimido"
+	quest.42000000001E04AE.title: "Compressed Dust"
 	quest.42000000001E04AF.quest_desc: [
 		"Pedra do Nether compactada, para um inventário mais leve.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04AF.title: "Rocha do Nether comprimida"
+	quest.42000000001E04AF.title: "Compressed Netherrack"
 	quest.42000000001E04B0.quest_desc: [
 		"Pedra do End compactada, útil quando o vazio precisar ser alimentado.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04B0.title: "Pedra do End comprimida"
+	quest.42000000001E04B0.title: "Compressed End Stone"
 	quest.42000000001E04B1.quest_desc: [
 		"Ardósia profunda compactada, nove para um, e ainda é só pedra.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04B1.title: "Ardósia profunda comprimida"
+	quest.42000000001E04B1.title: "Compressed Deepslate"
 	quest.42000000001E04B2.quest_desc: [
 		"Esmaga de uma vez uma pilha inteira de blocos comprimidos.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -6092,7 +6092,7 @@
 		"Um martelo mais fraco para quebrar blocos comprimidos.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04B3.title: "Martelo de ferro comprimido"
+	quest.42000000001E04B3.title: "Compressed Iron Hammer"
 	quest.42000000001E04B4.quest_desc: [
 		"Uma peneira larga, várias pilhas de cascalho por vez.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
@@ -6102,17 +6102,17 @@
 		"Peneira igual à de carvalho, só muda o veio.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04B5.title: "Peneira de bétula"
+	quest.42000000001E04B5.title: "Birch Sieve"
 	quest.42000000001E04B6.quest_desc: [
 		"Fermenta igual a qualquer outro barril.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04B6.title: "Barril de bétula"
+	quest.42000000001E04B6.title: "Birch Barrel"
 	quest.42000000001E04B7.quest_desc: [
 		"Derrete blocos igual a qualquer outro cadinho.",
 		"Como: peneira, martelo, cadinho ou barril do Ex Deorum. Ajuste a malha aos grânulos."
 	]
-	quest.42000000001E04B7.title: "Cadinho de bétula"
+	quest.42000000001E04B7.title: "Birch Crucible"
 	quest.42000000001E04B8.quest_desc: [
 		"A moeda da Trama; ganhe, gaste, nunca desperdice.",
 		"Como: recompensas de missão, terra com malha de pederneira numa Armação do tear, reservas do zelador."
@@ -6153,7 +6153,7 @@
 		"Abre um pacote de volta em itens soltos.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
 	]
-	quest.42000000001F04BF.title: "Desempacotador"
+	quest.42000000001F04BF.title: "Unpackager"
 	quest.42000000001F04C0.quest_desc: [
 		"Escreve uma receita de fabricação num padrão de pacote.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
@@ -6173,7 +6173,7 @@
 		"Marca um destino para onde um distribuidor pode mandar pacotes.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
 	]
-	quest.42000000001F04C3.title: "Marcador de distribuidor"
+	quest.42000000001F04C3.title: "Distributor Marker"
 	quest.42000000001F04C4.quest_desc: [
 		"Põe os pacotes prontos na linha, para retirada.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
@@ -6198,7 +6198,7 @@
 		"Enche um pacote de fluido em vez de itens.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
 	]
-	quest.42000000001F04C8.title: "Enchedor de pacotes de fluido"
+	quest.42000000001F04C8.title: "Fluid Package Filler"
 	quest.42000000001F04C9.quest_desc: [
 		"Um fardo selado de itens, pronto para mover ou guardar.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
@@ -6208,12 +6208,12 @@
 		"Cabe bem mais num só pacote do que no tipo básico.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
 	]
-	quest.42000000001F04CA.title: "Pacote de volume"
+	quest.42000000001F04CA.title: "Volume Package"
 	quest.42000000001F04CB.quest_desc: [
 		"Marca onde um intermediário de fabricação deve chegar.",
 		"Como: componente de pacote, depois Empacotador / Codificador. Precisa de uma rede da AE2 para a peça ME."
 	]
-	quest.42000000001F04CB.title: "Marcador de intermediário"
+	quest.42000000001F04CB.title: "Proxy Marker"
 	quest.42000000001F04CC.quest_desc: [
 		"Liga a linha de empacotamento ao tear digital.",
 		"Como: Rede do Fuso — Certus da areia, o controlador quer um Nó vinculante."
@@ -6284,12 +6284,12 @@
 		"Guarda vários discos quânticos em uma só carcaça.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004D9.title: "Matriz de unidades QIO"
+	quest.42000000002004D9.title: "Matriz de Disco do OIQ"
 	quest.42000000002004DA.quest_desc: [
 		"Navegue por tudo o que a rede QIO guarda.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004DA.title: "Painel QIO"
+	quest.42000000002004DA.title: "Painel do OIQ"
 	quest.42000000002004DB.quest_desc: [
 		"Leva o painel QIO no seu bolso.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -6310,7 +6310,7 @@
 		"Guarda uma pilha enorme de um único item.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004DE.title: "Cesto supremo"
+	quest.42000000002004DE.title: "Compartimento Ultimate"
 	quest.42000000002004DF.quest_desc: [
 		"Funde várias pilhas de uma vez, tão rápido quanto o Mekanism consegue.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -6350,17 +6350,17 @@
 		"Emoldura o portal que um teletransportador abre.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004E6.title: "Moldura de teletransportador"
+	quest.42000000002004E6.title: "Estrutura do Teletransportador"
 	quest.42000000002004E7.quest_desc: [
 		"Carcaça do reator que produz antimatéria.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004E7.title: "Carcaça SPS"
+	quest.42000000002004E7.title: "Revestimento do AFS"
 	quest.42000000002004E8.quest_desc: [
 		"Mete os químicos e tira a antimatéria do reator.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004E8.title: "Porta SPS"
+	quest.42000000002004E8.title: "Porta do AFS"
 	quest.42000000002004E9.quest_desc: [
 		"Acelera a produção de um reator de antimatéria.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -6400,7 +6400,7 @@
 		"Queima madeira para calor, não para energia.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004F0.title: "Aquecedor de lenha"
+	quest.42000000002004F0.title: "Aquecedor a Lenha"
 	quest.42000000002004F1.quest_desc: [
 		"Síntese tardia de materiais que, de outro modo, seriam impossíveis.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -6410,7 +6410,7 @@
 		"Uma só ferramenta modular para minerar, cavar e mais.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004F2.title: "Ferramenta Meka"
+	quest.42000000002004F2.title: "Mekatool"
 	quest.42000000002004F3.quest_desc: [
 		"Armadura de traje para a cabeça, melhorada módulo a módulo.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -6435,12 +6435,12 @@
 		"Casco para uma caldeira a vapor.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004F7.title: "Carcaça de caldeira"
+	quest.42000000002004F7.title: "Revestimento da Caldeira"
 	quest.42000000002004F8.quest_desc: [
 		"Armazena uma grande quantidade de energia.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
 	]
-	quest.42000000002004F8.title: "Cubo de energia de elite"
+	quest.42000000002004F8.title: "Cubo de Energia Elite"
 	quest.42000000002004F9.quest_desc: [
 		"Armazena uma quantidade moderada de energia.",
 		"Como: capítulo Oficinas Mekanism — fragmentos de minério da peneira, depois a linha da fábrica."
@@ -6727,7 +6727,7 @@
 		"Lasca de um canto tribal antigo — precisa de um Carrilhão.",
 		"Como: Carrilhão de osso, ametista e redstone, sem forma. Rende dois."
 	]
-	quest.4200000000220530.title: "Lasca espiritual"
+	quest.4200000000220530.title: "Fragmento de Espírito"
 	quest.4200000000220531.quest_desc: [
 		"Afine o metal ao espírito — cobre em volta de um Carrilhão.",
 		"Como: cobre ao redor de um Carrilhão de osso. Rende dois."
@@ -6747,7 +6747,7 @@
 		"Nove tribos cantarolaram uma vez — precisa de um Carrilhão e uma Lasca sobrando.",
 		"Como: fabrique, ou pegue como recompensa de Centelha/Tecido tribal. Clique direito: como a treliça funciona."
 	]
-	quest.4200000000220534.title: "Códice dos Espíritos"
+	quest.4200000000220534.title: "Códice espiritual"
 	quest.4200000000220535.quest_desc: [
 		"Puxe a ley para as batidas.",
 		"Como: coloque sob o céu, perto de água/verde. Pulso lento. Escada de Centelha."
@@ -6797,12 +6797,12 @@
 		"Encaminhe as harmônicas entre totens.",
 		"Como: quatro Ressonadores de cobre ao redor de redstone. Faz quatro."
 	]
-	quest.420000000022053E.title: "Condutor da treliça"
+	quest.420000000022053E.title: "Condutor de treliça"
 	quest.420000000022053F.quest_desc: [
 		"Cantarole o estágio um — quebre o minério. Pedra vira lascas; pedregulho vira cascalho; metal bruto vira grânulos. A quebra de grânulos leva 4 segundos a 40 de Pulso/s.",
 		"Como: pedra + Carrilhão de osso + Ressonador de cobre. Totem de Terra em 8. Pedra → lascas; pedregulho → cascalho; metal bruto → grânulos. Quatro segundos a 40 de Pulso/s."
 	]
-	quest.420000000022053F.title: "Quebra-eco"
+	quest.420000000022053F.title: "Triturador de eco"
 	quest.4200000000220540.quest_desc: [
 		"Lasca que ouviu a quebra.",
 		"Como: pedra na Quebra-eco (não pedregulho). Pedra do grau da Fonte, ou pedra com toque suave."
@@ -6812,7 +6812,7 @@
 		"Cantarole o estágio dois — sintonize.",
 		"Como: sete pedras, uma Lasca espiritual e um Ressonador de cobre."
 	]
-	quest.4200000000220541.title: "Sintonia de eco"
+	quest.4200000000220541.title: "Sintonizador de eco"
 	quest.4200000000220542.quest_desc: [
 		"Eco que achou uma chave.",
 		"Como: Códice dos Espíritos + Tecido tribal. A estação, o totem e o custo de Pulso estão na página do Códice."
@@ -6822,32 +6822,32 @@
 		"Estágio de vínculo — amarre o espírito ao metal.",
 		"Como: sete pedras, uma lasca de ametista e um Ressonador de cobre."
 	]
-	quest.4200000000220543.title: "Vínculo de eco"
+	quest.4200000000220543.title: "Vinculador de eco"
 	quest.4200000000220544.quest_desc: [
 		"Eco que não vai escorregar.",
 		"Como: Códice dos Espíritos + Tecido tribal. A estação, o totem e o custo de Pulso estão na página do Códice."
 	]
-	quest.4200000000220544.title: "Eco ligado"
+	quest.4200000000220544.title: "Eco vinculado"
 	quest.4200000000220545.quest_desc: [
 		"Estágio de retecer — chame o lingote.",
 		"Como: cinco pedras, um lingote de ouro, dois Ressonadores de cobre e uma Lasca espiritual."
 	]
-	quest.4200000000220545.title: "Manifesto de eco"
+	quest.4200000000220545.title: "Manifestador de eco"
 	quest.4200000000220546.quest_desc: [
 		"Metal trazido ao ser pelo Pulso espiritual, em vez de uma fornalha.",
 		"Como: Códice dos Espíritos + Tecido tribal. A estação, o totem e o custo de Pulso estão na página do Códice."
 	]
-	quest.4200000000220546.title: "Lingote manifestado"
+	quest.4200000000220546.title: "Barra manifestada"
 	quest.4200000000220547.quest_desc: [
 		"Guarde o que as tribos deixaram.",
 		"Como: sete tábuas, um baú e um Carrilhão de osso."
 	]
-	quest.4200000000220547.title: "Esconderijo ancestral"
+	quest.4200000000220547.title: "Depósito ancestral"
 	quest.4200000000220548.quest_desc: [
 		"Cofre-forte ligado em direção à Marca.",
 		"Como: um Esconderijo ancestral, quatro lingotes de ferro, uma Lasca espiritual, dois Ressonadores de cobre e uma Célula de Pulso."
 	]
-	quest.4200000000220548.title: "Esconderijo fundo"
+	quest.4200000000220548.title: "Depósito profundo"
 	quest.4200000000220549.quest_desc: [
 		"Um selo sem escrita, à espera de um rito que o preencha.",
 		"Como: sete papéis, uma Lasca espiritual e um Carrilhão de osso. Faz dois."
@@ -6882,7 +6882,7 @@
 		"Ofereça selos. Peça ao Tear.",
 		"Como: cinco pedras, uma lasca de ametista e um Carrilhão de osso."
 	]
-	quest.420000000022054F.title: "Pedestal de rito"
+	quest.420000000022054F.title: "Pedestal do rito"
 	quest.4200000000220550.quest_desc: [
 		"Use-o de mãos vazias e toque o Rito do portão: acerte as batidas que caem em A, S, D, F. Acerte 60% e ele abre; não precisa de Pulso.",
 		"Como: use o Tambor de portão de mãos vazias e toque o Rito do portão: acerte as batidas que caem em A, S, D, F. Acerte 60% e ele abre; não precisa de Pulso. Vincule primeiro uma bússola de retorno."
@@ -6902,7 +6902,7 @@
 		"Gume que gasta Pulso.",
 		"Como: dois Lingotes manifestados, um Carrilhão de osso e um graveto."
 	]
-	quest.4200000000220553.title: "Lâmina do equipamento espiritual"
+	quest.4200000000220553.title: "Lâmina de Equipamento espiritual"
 	quest.4200000000220554.quest_desc: [
 		"Pedra da Marca, sob os pés, num lugar que não devia existir.",
 		"Como: funda o Pedregulho da Marca. Mine-o na Marca, através de um Tambor de portão."
@@ -6912,22 +6912,22 @@
 		"Entulho da Marca, simples, mas farto.",
 		"Como: mine pedra da Marca na Marca, por um Tambor de portão."
 	]
-	quest.4200000000220555.title: "Pedregulho da Marca"
+	quest.4200000000220555.title: "Pedregulho da Marcha"
 	quest.4200000000220556.quest_desc: [
 		"Madeira crescida onde o sol não chega.",
 		"Como: corte árvores da Marca, por um Tambor de portão."
 	]
-	quest.4200000000220556.title: "Tronco da Marca"
+	quest.4200000000220556.title: "Tronco da Marcha"
 	quest.4200000000220557.quest_desc: [
 		"Madeira serrada da Marca, firme apesar de onde veio.",
 		"Como: um Tronco da Marca faz quatro tábuas."
 	]
-	quest.4200000000220557.title: "Tábuas da Marca"
+	quest.4200000000220557.title: "Tábuas da Marcha"
 	quest.4200000000220558.quest_desc: [
 		"Folhas que murmuram mesmo sem vento nenhum.",
 		"Como: árvores da Marca, por um Tambor de portão. Tesoura ou toque suave guardam as folhas."
 	]
-	quest.4200000000220558.title: "Folha da Marca"
+	quest.4200000000220558.title: "Folha da Marcha"
 	quest.4200000000220559.quest_desc: [
 		"Um junco que zumbe com Pulso espiritual que sobrou.",
 		"Como: cresce selvagem na Marca, fica em baús do açude de junco, e um Ancião dos Liga-raízes o troca."
@@ -7286,12 +7286,12 @@
 		"Duas pedras e o reagente ao redor do selo; o selo é devolvido. Presa de junco ao lado de um Selo de Água; 400 de Pulso. Vinte minutos de chuva, para as cisternas e as plantações. Use a tábua agachado num Braseiro ritual com esse selo assentado, dentro do Círculo de rito dele (quatro pedestais nas diagonais, o giz os liga); o Pulso é puxado da treliça num raio de oito blocos.",
 		"Como: duas pedras, uma Presa de junco e um Selo de Água, sem forma; o selo volta."
 	]
-	quest.4200000000228012.title: "Tábua de rito: Chamado da chuva"
+	quest.4200000000228012.title: "Tabuleta de rito: Chamado da chuva"
 	quest.4200000000228013.quest_desc: [
 		"Duas pedras e o reagente ao redor do selo; o selo é devolvido a você. Asa de tempestade ao lado de um Selo de ar; 400 de Pulso. Quarenta minutos de céu limpo. Use agachado a tábua num Braseiro ritual com esse selo assentado, dentro do Círculo de rito dele (quatro pedestais nas diagonais, o giz os une); o Pulso é puxado da treliça num raio de oito blocos.",
 		"Como: duas pedras, uma Asa de tempestade e um Selo de ar, sem forma; o selo volta."
 	]
-	quest.4200000000228013.title: "Tábua de rito: céu limpo"
+	quest.4200000000228013.title: "Tabuleta de rito: Clareamento do céu"
 	quest.4200000000228014.quest_desc: [
 		"Duas pedras e o reagente ao redor do selo; o selo é devolvido a você. Coração de brasa ao lado de um Selo de fogo; 800 de Pulso. Apressa a noite até o próximo nascer do sol, para o mundo inteiro. Use agachado a tábua num Braseiro ritual com esse selo assentado, dentro do Círculo de rito dele (quatro pedestais nas diagonais, o giz os une); o Pulso é puxado da treliça num raio de oito blocos.",
 		"Como: duas pedras, um Coração de brasa e um Selo de fogo, sem forma; o selo volta."
@@ -7556,7 +7556,7 @@
 		"Cresce selvagem no Brejo de juncos. Colha um tufo e plante o que colheu; quatro estágios em solo arado, e as abelhas o polinizam.",
 		"Como: cresce selvagem no Brejo de juncos, através de um Tambor de portão. Plante o que você colheu na terra arada."
 	]
-	quest.4200000000228048.title: "Arroz do paul"
+	quest.4200000000228048.title: "Arroz de brejo"
 	quest.4200000000228049.quest_desc: [
 		"Dos Campos de neve. Também conta como erva para a Chaleira espiritual.",
 		"Como: cresce selvagem nos Campos de neve, através de um Tambor de portão. Plante o que você colheu na terra arada."
@@ -7566,12 +7566,12 @@
 		"Da Crista do fulgor. Uma erva para a chaleira e também um cultivo.",
 		"Como: cresce selvagem na Crista do fulgor, através de um Tambor de portão. Plante o que você colheu na terra arada."
 	]
-	quest.420000000022804A.title: "Feijão de brilho"
+	quest.420000000022804A.title: "Feijão de fulgor"
 	quest.420000000022804B.quest_desc: [
 		"Da Estepe, e o grão em que se baseia a maioria dos pratos das tribos. Cultive um canteiro dele antes do resto.",
 		"Como: cresce selvagem na Estepe, através de um Tambor de portão. Plante o que você colheu na terra arada."
 	]
-	quest.420000000022804B.title: "Grão de estepe"
+	quest.420000000022804B.title: "Grão da estepe"
 	quest.420000000022804C.quest_desc: [
 		"Dois Grãos de estepe e um Grânulo de ferro na Panela da lareira. Comer o prato de uma tribo carrega o dom dela por cinco minutos; o dos Cantores de cascalho tira mais do minério. Quando uma tribo chama você de Amigo, os Parentes dela vendem o prato por quatro do cultivo dela, e oferecer a uma tribo o próprio prato na lareira dela rende seis de estima.",
 		"Como: dois Grãos de estepe e um Grânulo de ferro numa Panela da lareira sobre o calor. Os Parentes dos Cantores de cascalho o vendem em Amigo."
@@ -7681,7 +7681,7 @@
 		"A relíquia dos Cantores de cascalho. A história deles termina na Serpente de prisma, na Fenda cantante dos Campos de cristal; vença a prova e o Ancião entrega a relíquia a você. Carregada em qualquer lugar do seu inventário, ela mantém o dom deles em você, seja qual for a sua estima: você tira mais do minério.",
 		"Como: termine a história dos Cantores de cascalho com o Ancião deles; a prova é a Serpente de prisma nos Campos de cristal."
 	]
-	quest.4200000000228061.title: "Pedra sonora"
+	quest.4200000000228061.title: "Pedra ressonante"
 	quest.4200000000228062.quest_desc: [
 		"A relíquia dos Liga-raízes. A história deles termina na Matriarca do brejo, na Raiz afogada do Brejo de juncos; vença a prova e o Ancião entrega a relíquia a você. Carregada em qualquer lugar do seu inventário, ela mantém o dom deles em você, seja qual for a sua estima: as plantações se apressam ao seu redor.",
 		"Como: termine a história dos Liga-raízes com o Ancião deles; a prova é a Matriarca do brejo no Brejo de juncos."
@@ -7701,7 +7701,7 @@
 		"A relíquia dos Tecelões de padrões. A história deles termina no Tamborileiro da maré, na Pedra da maré, nos Baixios; vença a prova e o Ancião a entrega a você. Carregada em qualquer lugar do seu inventário, ela mantém o dom deles em você, seja qual for a sua estima: as estações de Eco perto de você trabalham em dobro.",
 		"Como: termine a história dos Tecelões de padrões com o Ancião deles; a prova é o Tamborileiro da maré nos Baixios."
 	]
-	quest.4200000000228065.title: "Silent Gear"
+	quest.4200000000228065.title: "Engrenagem silenciosa"
 	quest.4200000000228066.quest_desc: [
 		"A relíquia dos Guardiões da colônia. A história deles termina no Espectro do túmulo, no Anel do túmulo, nos Campos de neve; vença a prova e o Ancião a entrega a você. Carregada em qualquer lugar do seu inventário, ela mantém o dom deles em você, seja qual for a sua estima: você nunca é picado.",
 		"Como: termine a história dos Guardiões da colônia com o Ancião deles; a prova é o Espectro do túmulo nos Campos de neve."
@@ -7797,7 +7797,7 @@
 		"As Nove Tribos deixaram provisões para o próximo Clowder. Use uma reserva do zelador para desembrulhar suprimentos aleatórios, ou fabrique quatro reservas pequenas em uma média e três médias em uma grande. Selos maiores têm mais rolagens e um conjunto de suprimentos mais amplo; abrir separado dá mais suprimentos básicos. Nenhuma máquina nem ficha de progresso se esconde dentro, mas cada selo tem uma chance pequena de um Fragmento de Fio e uma bem pequena de um Fio de retorno inteiro; selos maiores têm chances melhores.",
 		"Como: pedra + peças da mesa no JEI. Insira um bloco e escolha uma variante."
 	]
-	quest.420000000023058C.title: "Mesa de pedreiro"
+	quest.420000000023058C.title: "Mason Table"
 	quest.420000000023058D.quest_desc: [
 		"O mesmo truque para a madeira — cem tábuas a partir de uma.",
 		"Como: mesa de carpinteiro do Chipped no JEI. A mesma ideia da mesa de pedreiro, para madeira."
@@ -7807,27 +7807,27 @@
 		"Areia em vidro, depois o vidro em cada forma que a luz aceitar.",
 		"Como: bancada do Chipped no JEI (pedreiro, carpinteiro, soprador de vidro…). Ponha o bloco na mesa e escolha um corte."
 	]
-	quest.420000000023058E.title: "Soprador de vidro"
+	quest.420000000023058E.title: "Glassblower"
 	quest.420000000023058F.quest_desc: [
 		"Lã e pano, retecidos — cai bem, numa plataforma que está remendando um Tear.",
 		"Como: bancada do Chipped no JEI (pedreiro, carpinteiro, soprador de vidro…). Ponha o bloco na mesa e escolha um corte."
 	]
-	quest.420000000023058F.title: "Mesa do Tear"
+	quest.420000000023058F.title: "Loom Table"
 	quest.4200000000230590.quest_desc: [
 		"Folhas, mudas e coisas que crescem, separadas nas suas variações.",
 		"Como: bancada do Chipped no JEI (pedreiro, carpinteiro, soprador de vidro…). Ponha o bloco na mesa e escolha um corte."
 	]
-	quest.4200000000230590.title: "Bancada de botânico"
+	quest.4200000000230590.title: "Botanist Workbench"
 	quest.4200000000230591.quest_desc: [
 		"Blocos coloridos e pedra mais estranha. Escolha uma variante; a bancada guarda o resto.",
 		"Como: bancada do Chipped no JEI (pedreiro, carpinteiro, soprador de vidro…). Ponha o bloco na mesa e escolha um corte."
 	]
-	quest.4200000000230591.title: "Bancada de alquimia"
+	quest.4200000000230591.title: "Alchemy Bench"
 	quest.4200000000230592.quest_desc: [
 		"Metal e blocos com cara de máquina, cortados a gosto.",
 		"Como: bancada do Chipped no JEI (pedreiro, carpinteiro, soprador de vidro…). Ponha o bloco na mesa e escolha um corte."
 	]
-	quest.4200000000230592.title: "Mesa de ajustes"
+	quest.4200000000230592.title: "Tinkering Table"
 	quest.4200000000230593.quest_desc: [
 		"Alimente um bloco na Mesa de pedreiro e escolha no muro de variantes.",
 		"Como: quatro pedras num quadrado, ou o cortador de pedras."
@@ -7898,7 +7898,7 @@
 		"Corte uma moldura e depois vista-a com qualquer bloco. Uma forma, todas as peles.",
 		"Como: uma barra de ferro sobre três cubos emoldurados. Corta blocos emoldurados."
 	]
-	quest.42000000002405A0.title: "Serra de molduras"
+	quest.42000000002405A0.title: "Serra Emoldurada"
 	quest.42000000002405A1.quest_desc: [
 		"Um cubo em branco, à espera de um bloco de camuflagem.",
 		"Como: Serra de molduras e depois cubo/laje/escadas emoldurados. A camuflagem é um clique direito com um bloco."
@@ -7918,7 +7918,7 @@
 		"Para telhados e linhas de telhado que o vazio nunca te deu.",
 		"Como: Serra de molduras e depois cubo/laje/escadas emoldurados. A camuflagem é um clique direito com um bloco."
 	]
-	quest.42000000002405A4.title: "Inclinação emoldurada"
+	quest.42000000002405A4.title: "Rampa Emoldurada"
 	quest.42000000002405A5.quest_desc: [
 		"Os Anda-bordas transpuseram o vazio com menos. Chegue à próxima plataforma com estilo.",
 		"Como: pontes Macaw a partir da pedra/madeira correspondente no JEI."
@@ -7994,7 +7994,7 @@
 		"Mostre uma coisa. Uma ficha, uma página, um troféu.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
 	]
-	quest.42000000002505B3.title: "Prateleira de itens"
+	quest.42000000002505B3.title: "Prateleira"
 	quest.42000000002505B4.quest_desc: [
 		"Um saco que guarda sacos. A bagunça da Recuperação, arrumada.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
@@ -8009,12 +8009,12 @@
 		"Prenda uma página onde o Clowder inteiro a leia.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
 	]
-	quest.42000000002505B6.title: "Mural de avisos"
+	quest.42000000002505B6.title: "Quadro de Avisos"
 	quest.42000000002505B7.quest_desc: [
 		"Um vaso com ambições. Cultive um pouco onde a plataforma é fina.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
 	]
-	quest.42000000002505B7.title: "Floreira"
+	quest.42000000002505B7.title: "Jardineira"
 	quest.42000000002505B8.quest_desc: [
 		"Erga o Fragmento do tear de Fuso onde ele possa ser admirado.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
@@ -8044,7 +8044,7 @@
 		"Uma chama mais firme para as noites longas da plataforma.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
 	]
-	quest.42000000002505BD.title: "Castiçal"
+	quest.42000000002505BD.title: "Suporte de Vela"
 	quest.42000000002505BE.quest_desc: [
 		"Escale, pendure-se ou faça uma ponte. Os Anda-bordas juravam por ela.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
@@ -8059,12 +8059,12 @@
 		"Caia em cima, e o vazio esquece de punir você.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
 	]
-	quest.42000000002505C0.title: "Bloco de pena"
+	quest.42000000002505C0.title: "Bloco de Penas"
 	quest.42000000002505C1.quest_desc: [
 		"Risque com giz um plano com que o Clowder inteiro possa discutir.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
 	]
-	quest.42000000002505C1.title: "Lousa"
+	quest.42000000002505C1.title: "Quadro Negro"
 	quest.42000000002505C2.quest_desc: [
 		"Carregue uma coisinha que preferia que você não fizesse isso.",
 		"Como: fabricação de Supplementaries no JEI (arandela, saco, cofre, corda…). As zeladorias nomeiam a estação."
@@ -8100,12 +8100,12 @@
 		"Varetas e fio a partir de lingotes — a resposta do Create à prensa.",
 		"Como: Create Crafts & Additions — fio de cobre do laminador, depois conectores e motor."
 	]
-	quest.42000000002605C8.title: "Laminador"
+	quest.42000000002605C8.title: "Laminadora"
 	quest.42000000002605C9.quest_desc: [
 		"Encante sem a superstição da mesa. Alimente com experiência e receba intenção.",
 		"Como: Create Enchantment Industry depois de um queimador de blaze. O JEI nomeia a impressora e o balde de experiência."
 	]
-	quest.42000000002605C9.title: "Encantador de blaze"
+	quest.42000000002605C9.title: "Encantador Blaze"
 	quest.42000000002605CA.quest_desc: [
 		"Prática líquida, carregada. Os zeladores teriam achado isto vulgar e útil.",
 		"Como: Create Enchantment Industry depois de um queimador de blaze. O JEI nomeia a impressora e o balde de experiência."
@@ -8120,27 +8120,27 @@
 		"Lava e calor em energia. Uma ponte, não o Zumbido em si.",
 		"Como: ósmio + fornalha + cobre. O primeiro gerador Mekanism."
 	]
-	quest.42000000002605CC.title: "Gerador de calor"
+	quest.42000000002605CC.title: "Gerador a Calor"
 	quest.42000000002605CD.quest_desc: [
 		"Numa plataforma que é só céu, o sol é o único recurso que ninguém raciona.",
 		"Como: geradores Mekanism, depois da linha Oficinas Mekanism. O gerador de calor é a primeira receita."
 	]
-	quest.42000000002605CD.title: "Gerador solar"
+	quest.42000000002605CD.title: "Gerador a Energia Solar"
 	quest.42000000002605CE.quest_desc: [
 		"Quanto mais alta a plataforma, mais forte ele gira. Construa alto.",
 		"Como: geradores Mekanism, depois da linha Oficinas Mekanism. O gerador de calor é a primeira receita."
 	]
-	quest.42000000002605CE.title: "Gerador de vento"
+	quest.42000000002605CE.title: "Gerador Eólico"
 	quest.42000000002605CF.quest_desc: [
 		"Queime o excedente da Trama de Broto. Numa plataforma, nada é desperdício.",
 		"Como: geradores Mekanism, depois da linha Oficinas Mekanism. O gerador de calor é a primeira receita."
 	]
-	quest.42000000002605CF.title: "Gerador biológico"
+	quest.42000000002605CF.title: "Biogerador"
 	quest.42000000002605D0.quest_desc: [
 		"Energia tardia para um Clowder que foi fundo no Mekanism.",
 		"Como: geradores Mekanism, depois da linha Oficinas Mekanism. O gerador de calor é a primeira receita."
 	]
-	quest.42000000002605D0.title: "Gerador a gás"
+	quest.42000000002605D0.title: "Gerador a Queima de Gás"
 	quest.42000000002605D1.quest_desc: [
 		"O tear digital, no bolso. Reteça de qualquer lugar da plataforma.",
 		"Como: Terminal sem fio depois de uma rede AE2 e um kit sem fio carregado. O JEI nomeia a receita."
@@ -8419,37 +8419,37 @@
 		"Gysahl selvagem cresce no Brejo de juncos, na Estepe e nas Terras Altas, mais denso no Brejo. Colher também solta sementes, e Folha da Marca ou grama quebradas com uma enxada soltam mais. Plante as sementes em terra arada em casa.",
 		"Como: colha Gysahl selvagem na Marca (o Brejo de juncos é o mais denso). Colher também solta sementes; plante-as em terra arada em casa."
 	]
-	quest.42000000002805E4.title: "Verde de Gysahl"
+	quest.42000000002805E4.title: "Gysahl Green"
 	quest.42000000002805E5.quest_desc: [
 		"Um livro e uma folha de Gysahl. Use-o em qualquer lugar: as páginas listam a cor, o grau, a classe, as vitórias em corrida e a última noz de cada uma das suas aves.",
 		"Como: um livro e um Gysahl. Use-o em qualquer lugar; as páginas listam as suas aves."
 	]
-	quest.42000000002805E5.title: "Almanaque Chocobo"
+	quest.42000000002805E5.title: "Chocobo Almanac"
 	quest.42000000002805E6.quest_desc: [
 		"Dê Gysahl para domar um amarelo selvagem. Faça uma sela de couro, linha e ferro, depois monte. O sprint dá uma investida; solte para recuperar o fôlego.",
 		"Como: couro, linha e ferro. Dome um amarelo selvagem com Gysahl e depois sele-o."
 	]
-	quest.42000000002805E6.title: "Sela Chocobo"
+	quest.42000000002805E6.title: "Chocobo Saddle"
 	quest.42000000002805E7.quest_desc: [
 		"Pepitas de ouro em volta de um relógio, com um Gysahl. Ao dar corda, ele te leva ao Vento dos Bigodes e de volta. Depois que você tiver andado pela Marca, Esther também fica no Salão Clowder: monte uma ave selada até ela, ou pergunte ao Guia do Vento dos Bigodes.",
 		"Como: pepitas de ouro em volta de um relógio, com um Gysahl. Use-o para dar corda até o Vento dos Bigodes e de volta; uma ave selada vai com você."
 	]
-	quest.42000000002805E7.title: "Relógio de bolso Chocobo"
+	quest.42000000002805E7.title: "Chocobo Pocketwatch"
 	quest.42000000002805E8.quest_desc: [
 		"Uma isca na mão atrai aves selvagens e desenha o contorno delas por um campo.",
 		"Como: faça a isca. Segure-a para achar os amarelos da Marca."
 	]
-	quest.42000000002805E8.title: "Isca Chocobo"
+	quest.42000000002805E8.title: "Chocobo Lure"
 	quest.42000000002805E9.quest_desc: [
 		"Plante sementes de Gysahl em terra arada. Um canteiro em casa é como a linha da fazenda começa.",
 		"Como: colher Gysahl selvagem solta sementes, e o mesmo fazem grama e Folha da Marca quebradas com uma enxada. Plante em terra arada."
 	]
-	quest.42000000002805E9.title: "Sementes de Gysahl"
+	quest.42000000002805E9.title: "Gysahl Seeds"
 	quest.42000000002805EA.quest_desc: [
 		"Alimente dois adultos de sexos opostos com uma noz Carob. Dois Amarelos de grau Bom ou melhor mais Carob podem eclodir Verde ou Azul. Cada pai precisa de 5 primeiros lugares na Classe C; 16 somados tornam a cor certa. Um Verde de grau Ótimo e um Azul de grau Ótimo, cada um com 8 primeiros da Classe B, eclodem Preto (se falhar, sai Branco; 24 somados para uma rolagem certa).",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Carob. Corridas de Classe A também pagam isso."
 	]
-	quest.42000000002805EA.title: "Noz Carob"
+	quest.42000000002805EA.title: "Carob Nut"
 	quest.42000000002805EB.quest_desc: [
 		"Um verde no meio da escada. Treine velocidade, vigor, inteligência ou cooperação; a ave fica saciada de cada tipo.",
 		"Como: o sábio Wynn, no Vento dos Bigodes."
@@ -8464,7 +8464,7 @@
 		"O Dourado nunca eclode sem Zeio. Um Preto de grau Maravilhoso mais um Amarelo de grau Maravilhoso, cada um com 10 primeiros lugares na Classe A (32 somados para uma rolagem certa).",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Zeio. Corridas de Classe S raramente pagam isso."
 	]
-	quest.42000000002805ED.title: "Noz Zeio"
+	quest.42000000002805ED.title: "Zeio Nut"
 	quest.42000000002805EE.quest_desc: [
 		"GP ganhos na pista. As bancas da Praça precificam tudo em GP.",
 		"Como: fique entre os três primeiros de uma bateria no Vento dos Bigodes. Monte uma ave selada até Esther para entrar."
@@ -8474,7 +8474,7 @@
 		"A primeira noz de acasalamento. O talento segue a noz; a cor segue os pais, a menos que Carob ou Zeio entrem.",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Pepio. Uma vitória na Classe C também pode pagar isso."
 	]
-	quest.42000000002805EF.title: "Noz Pepio"
+	quest.42000000002805EF.title: "Pepio Nut"
 	quest.42000000002805F0.quest_desc: [
 		"Dois Gysahl e farinha de osso. O primeiro degrau acima dos verdes simples.",
 		"Como: sem forma — dois Gysahl e farinha de osso."
@@ -8504,22 +8504,22 @@
 		"Uma noz intermediária. Opcional.",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Luchile."
 	]
-	quest.42000000002805F5.title: "Noz Luchile"
+	quest.42000000002805F5.title: "Luchile Nut"
 	quest.42000000002805F6.quest_desc: [
 		"Uma noz intermediária. Opcional.",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Saraha."
 	]
-	quest.42000000002805F6.title: "Noz Saraha"
+	quest.42000000002805F6.title: "Saraha Nut"
 	quest.42000000002805F7.quest_desc: [
 		"Uma noz intermediária. Opcional.",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Lasan."
 	]
-	quest.42000000002805F7.title: "Noz Lasan"
+	quest.42000000002805F7.title: "Lasan Nut"
 	quest.42000000002805F8.quest_desc: [
 		"Uma noz de acasalamento de meio para o fim. Opcional. Bilo, o Guardião das Nozes, a vende.",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Pram."
 	]
-	quest.42000000002805F8.title: "Noz Pram"
+	quest.42000000002805F8.title: "Pram Nut"
 	quest.42000000002805F9.quest_desc: [
 		"A banca da Feira no Vento dos Bigodes vende fogos de artifício, laços, relógios de bolso e o Almanaque Chocobo por GP.",
 		"Como: papel mais pólvora. Estouro opcional."
@@ -8529,38 +8529,38 @@
 		"Uma noz de acasalamento tardia. Opcional.",
 		"Como: Bilo, o Guardião das Nozes, no Vento dos Bigodes, vende Porov."
 	]
-	quest.42000000002805FA.title: "Noz Porov"
+	quest.42000000002805FA.title: "Porov Nut"
 	quest.42000000002905FB.quest_desc: [
 		"O vazio nunca fez crescer os arbustos da Pam's. Peneire terra com uma malha de linha. Quebre o jardim para sementes áridas — pimenta, milho, fruto de cacto.",
 		"As Nove Tribos deixaram provisões para o próximo Clowder. Use uma reserva do zelador para desembrulhar suprimentos aleatórios, ou fabrique quatro reservas pequenas em uma média e três médias em uma grande. Selos maiores têm mais rolagens e um conjunto de suprimentos mais amplo; abrir separado dá mais suprimentos básicos. Nenhuma máquina nem ficha de progresso se esconde dentro, mas cada selo tem uma chance pequena de um Fragmento de Fio e uma bem pequena de um Fio de retorno inteiro; selos maiores têm chances melhores.",
 		"Como: peneire terra com uma malha de linha ou melhor (Ex Deorum ou o Tear do vazio)."
 	]
-	quest.42000000002905FB.title: "Jardim árido"
+	quest.42000000002905FB.title: "Arid Garden"
 	quest.42000000002905FC.quest_desc: [
 		"Cultivos de frio, da mesma terra. Quebre o arbusto; plante o que precisar.",
 		"Como: peneire terra com uma malha de linha ou melhor."
 	]
-	quest.42000000002905FC.title: "Jardim de geada"
+	quest.42000000002905FC.title: "Frost Garden"
 	quest.42000000002905FD.quest_desc: [
 		"Cultivos sob a folha. A mesma peneira, outro arbusto.",
 		"Como: peneire terra com uma malha de linha ou melhor."
 	]
-	quest.42000000002905FD.title: "Jardim sombreado"
+	quest.42000000002905FD.title: "Shaded Garden"
 	quest.42000000002905FE.quest_desc: [
 		"Cultivos úmidos. O arroz e o resto das sementes de alma de brejo vivem aqui.",
 		"Como: peneire terra com uma malha de linha ou melhor."
 	]
-	quest.42000000002905FE.title: "Jardim encharcado"
+	quest.42000000002905FE.title: "Soggy Garden"
 	quest.42000000002905FF.quest_desc: [
 		"Cultivos quentes. Guarde um arbusto num baú; eles ainda se espalham se você os plantar.",
 		"Como: peneire terra com uma malha de linha ou melhor."
 	]
-	quest.42000000002905FF.title: "Jardim tropical"
+	quest.42000000002905FF.title: "Tropical Garden"
 	quest.4200000000290600.quest_desc: [
 		"O último dos seis. Toda semente de HarvestCraft na plataforma começa como um desses arbustos.",
 		"Como: peneire terra com uma malha de linha ou melhor."
 	]
-	quest.4200000000290600.title: "Jardim ventoso"
+	quest.4200000000290600.title: "Windy Garden"
 	quest.4200000000290601.quest_desc: [
 		"Não é a tábua de corte do Farmer's Delight. Cobre, um graveto e uma tábua. Prepare fruta e verdura antes de irem para a panela.",
 		"Como: cobre, um graveto e uma tábua. Não é a tábua de corte do Farmer's Delight."
@@ -8580,22 +8580,22 @@
 		"Molhos e reduções. Cobre e um graveto. Deixe-o ao lado da panela.",
 		"Como: cobre e um graveto."
 	]
-	quest.4200000000290604.title: "Caçarola"
+	quest.4200000000290604.title: "Saucepan"
 	quest.4200000000290605.quest_desc: [
 		"Anel de terracota. Tortas, pães e tudo que pede forma de forno.",
 		"Como: oito terracotas ao redor de um centro vazio."
 	]
-	quest.4200000000290605.title: "Forma"
+	quest.4200000000290605.title: "Bakeware"
 	quest.4200000000290606.quest_desc: [
 		"Tábuas e um graveto. Massas líquidas, massas e saladas. A estação quieta.",
 		"Como: tábuas e um graveto."
 	]
-	quest.4200000000290606.title: "Tigela de mistura"
+	quest.4200000000290606.title: "Mixing Bowl"
 	quest.4200000000290607.quest_desc: [
 		"Terracota. Fruta entra, suco sai. Combine com uma árvore, não com uma horta.",
 		"Como: terracota. Quatro em T."
 	]
-	quest.4200000000290607.title: "Espremedor"
+	quest.4200000000290607.title: "Juicer"
 	quest.4200000000290608.quest_desc: [
 		"Gravetos e um tronco. Achate a massa. A forma espera.",
 		"Como: gravetos dos dois lados de um tronco."
@@ -8605,37 +8605,37 @@
 		"Seixos de andesito de uma peneira de sílex, depois um graveto. Farinha, temperos, pastas.",
 		"Como: andesito (seixos de terra ou cascalho da peneira de sílex) e um graveto."
 	]
-	quest.4200000000290609.title: "Moedor"
+	quest.4200000000290609.title: "Grinder"
 	quest.420000000029060A.quest_desc: [
 		"Um balde de água dividido em oito. A maioria das receitas quer isto, não um balde vanilla.",
 		"Como: um balde de água → oito de água doce."
 	]
-	quest.420000000029060A.title: "Água doce"
+	quest.420000000029060A.title: "Fresh Water"
 	quest.420000000029060B.quest_desc: [
 		"Sem vacas na plataforma. Coco (terra com malha de ferro) mais água doce, ou divida um balde de leite depois.",
 		"Como: coco (terra com malha de ferro) mais água doce, ou divida um balde de leite."
 	]
-	quest.420000000029060B.title: "Leite fresco"
+	quest.420000000029060B.title: "Fresh Milk"
 	quest.420000000029060C.quest_desc: [
 		"Água numa panela, ou uma moagem. Quase toda receita salgada pede.",
 		"Como: panela mais água ou água doce. A panela volta."
 	]
-	quest.420000000029060C.title: "Sal"
+	quest.420000000029060C.title: "Salt"
 	quest.420000000029060D.quest_desc: [
 		"Trigo no moedor. A massa começa aqui.",
 		"Como: moedor mais trigo (ou outra planta de farinha). O moedor volta."
 	]
-	quest.420000000029060D.title: "Farinha"
+	quest.420000000029060D.title: "Flour"
 	quest.420000000029060E.quest_desc: [
 		"Farinha, sal e água doce. Tortas e pães compartilham este naco.",
 		"Como: tigela de mistura, farinha, água, sal."
 	]
-	quest.420000000029060E.title: "Massa"
+	quest.420000000029060E.title: "Dough"
 	quest.420000000029060F.quest_desc: [
 		"Ossos ou verdura na panela. As sopas querem uma garrafa disto, não um caldo qualquer.",
 		"Como: panela mais um osso (os Guardiões da plataforma vendem ossos) ou verdura que sobrou."
 	]
-	quest.420000000029060F.title: "Caldo"
+	quest.420000000029060F.title: "Stock"
 	quest.4200000000290610.quest_desc: [
 		"Terra com malha de ferro. Cultive na plataforma; o carvalho vanilla não solta as maçãs da Pam's.",
 		"Como: peneire terra com uma malha de ferro para mudas de cozinha, depois cultive a fruta."
@@ -8675,12 +8675,12 @@
 		"Espremedor mais fruta misturada. Uma bebida da plataforma que não é suco de melancia.",
 		"Como: espremedor e frutas mistas."
 	]
-	quest.4200000000290617.title: "Ponche de frutas"
+	quest.4200000000290617.title: "Fruit Punch"
 	quest.4200000000290618.quest_desc: [
 		"Frigideira, pão, queijo. Um almoço rápido enquanto as árvores crescem.",
 		"Como: frigideira, pão, manteiga e queijo — tudo sai de água doce, leite de coco e farinha."
 	]
-	quest.4200000000290618.title: "Queijo grelhado"
+	quest.4200000000290618.title: "Grilled Cheese"
 	quest.4200000000290619.quest_desc: [
 		"Pimentas áridas, tomate, cebola, feijão, folha de especiaria e carne ou tofu sedoso. Food Extended começa a valer a pena.",
 		"Como: panela, chili árido, tomate, cebola, feijão, folha de especiaria e carne ou tofu sedoso."
@@ -8695,7 +8695,7 @@
 		"Massa, molho, carne. Forma de assar. Uma refeição completa do HarvestCraft.",
 		"Como: forma de assar, massa, tomate, queijo, pepperoni (bacon de porco, ou bacon de tofu de bordo + soja)."
 	]
-	quest.420000000029061B.title: "Pizza de pepperoni"
+	quest.420000000029061B.title: "Pepperoni Pizza"
 	quest.420000000029061C.quest_desc: [
 		"Arroz do jardim encharcado, cenoura, cebola, ervilhas e um ovo — o tofu sedoso entra no lugar até existirem galinhas.",
 		"Como: frigideira, arroz do jardim encharcado, cenoura, cebola, ervilhas e um ovo — o tofu sedoso conta como ovo."
@@ -8705,7 +8705,7 @@
 		"Folha de chá e folha de especiaria na panela. O jardim sombreado e o encharcado cobrem os dois.",
 		"Como: panela, folha de chá e folha de especiaria. O jardim sombreado larga chá e especiaria."
 	]
-	quest.420000000029061D.title: "Chá verde"
+	quest.420000000029061D.title: "Green Tea"
 	quest.420000000029061E.quest_desc: [
 		"Óleo e fruto salgado. Apanha opcional da malha de ferro.",
 		"Como: peneire terra com uma malha de ferro para mudas de cozinha, depois cultive a fruta."
@@ -8730,22 +8730,22 @@
 		"Gordura para fritar. Básico opcional.",
 		"Como: prense sementes ou azeitonas no JEI. Básico opcional."
 	]
-	quest.4200000000290622.title: "Óleo de cozinha"
+	quest.4200000000290622.title: "Cooking Oil"
 	quest.4200000000290623.quest_desc: [
 		"Leite e sal. Básico opcional.",
 		"Como: panela e leite (o leite de coco com água doce serve)."
 	]
-	quest.4200000000290623.title: "Manteiga"
+	quest.4200000000290623.title: "Butter"
 	quest.4200000000290624.quest_desc: [
 		"Um ovo pelo espremedor. Opcional.",
 		"Como: espremedor e um ovo (o tofu sedoso conta). Opcional."
 	]
-	quest.4200000000290624.title: "Maionese"
+	quest.4200000000290624.title: "Mayonnaise"
 	quest.4200000000290625.quest_desc: [
 		"Tábua de corte, frutas mistas. Opcional.",
 		"Como: tábua de corte e frutas mistas. Opcional."
 	]
-	quest.4200000000290625.title: "Salada de frutas"
+	quest.4200000000290625.title: "Fruit Salad"
 	quest.4200000000290626.quest_desc: [
 		"Noite de macarrão. Opcional.",
 		"Como: os jardins e as árvores frutíferas dão os ingredientes. O tofu de soja substitui a carne e o ovo. O JEI diz a estação."
@@ -8755,12 +8755,12 @@
 		"Café da manhã para ostentar. Opcional.",
 		"Como: os jardins e as árvores frutíferas dão os ingredientes. O tofu de soja substitui a carne e o ovo. O JEI diz a estação."
 	]
-	quest.4200000000290627.title: "Panquecas com bacon"
+	quest.4200000000290627.title: "Bacon Pancakes"
 	quest.4200000000290628.quest_desc: [
 		"Terra com malha de ferro para uma muda de abacate, depois frigideira, torrada, sal, alho, folha de especiaria.",
 		"Como: muda de abacate da malha de ferro, depois frigideira com torrada, sal, alho, folha de especiaria."
 	]
-	quest.4200000000290628.title: "Torrada de abacate"
+	quest.4200000000290628.title: "Avocado Toast"
 	quest.4200000000290629.quest_desc: [
 		"Não é o hambúrguer do Delight. Opcional.",
 		"Como: os jardins e as árvores frutíferas dão os ingredientes. O tofu de soja substitui a carne e o ovo. O JEI diz a estação."
@@ -8770,7 +8770,7 @@
 		"Espremedor, maçãs. Opcional.",
 		"Como: espremedor e maçãs da Pam's. Opcional."
 	]
-	quest.420000000029062A.title: "Suco de maçã"
+	quest.420000000029062A.title: "Apple Juice"
 	quest.420000000029062B.quest_desc: [
 		"Frigideira, pão e manteiga. Opcional.",
 		"Como: frigideira, pão e manteiga. Opcional."
@@ -8792,13 +8792,13 @@
 		"Painel de vidro e gravetos. Olhe um cultivo para ler crescimento, rendimento e força sem colhê-lo.",
 		"Como: painel de vidro entre gravetos e depois um cabo de graveto. Olhe um cultivo plantado."
 	]
-	quest.42000000002A062E.title: "Lupa"
+	quest.42000000002A062E.title: "Magnifying Glass"
 	quest.42000000002A062F.quest_desc: [
 		"Vidro, laje de pedra, tábuas, gravetos. Coloque uma semente com o diário. A criação fica visível.",
 		"A fertilidade é o atributo que impulsiona o cruzamento: uma semente nova fica em 1 de 10, e cada ponto aumenta a chance de uma planta ser escolhida como pai. Analise, replante as melhores, e os cruzamentos vêm mais rápido.",
 		"Como: painéis de vidro, laje de pedra, tábuas e gravetos. Encaixe o diário e depois uma semente."
 	]
-	quest.42000000002A062F.title: "Analisador de sementes"
+	quest.42000000002A062F.title: "Seed Analyzer"
 	quest.42000000002A0630.quest_desc: [
 		"As ervas daninhas estão desligadas neste pacote, mas o ancinho ainda tira um graveto. Leve um mesmo assim.",
 		"Como: cerca de madeira sobre um graveto. As ervas daninhas estão desligadas; ainda assim tira um graveto."
@@ -8823,7 +8823,7 @@
 		"Gravetos mais firmes. As mesmas regras de plantio, menos incômodo se você esbarrar neles.",
 		"Como: duas pepitas de ferro em coluna fazem oito."
 	]
-	quest.42000000002A0634.title: "Gravetos de cultivo de ferro"
+	quest.42000000002A0634.title: "Iron Crop Sticks"
 	quest.42000000002A0635.quest_desc: [
 		"O ancinho melhor. Ainda um hábito, mesmo sem ervas daninhas.",
 		"Como: barras de ferro sobre um graveto."
@@ -8833,22 +8833,22 @@
 		"Guarda água para os canais. Uma fazenda na plataforma que não carrega baldes toda manhã.",
 		"Como: tábuas. Guarda água para os canais."
 	]
-	quest.42000000002A0636.title: "Tanque de irrigação"
+	quest.42000000002A0636.title: "Irrigation Tank"
 	quest.42000000002A0637.quest_desc: [
 		"Leve a água do tanque ao longo da fileira. As culturas bebem do canal, não de você.",
 		"Como: sem forma, a partir de um tanque — um tanque vira oito canais."
 	]
-	quest.42000000002A0637.title: "Canal de irrigação"
+	quest.42000000002A0637.title: "Irrigation Channel"
 	quest.42000000002A0638.quest_desc: [
 		"Pare e ligue uma linha sem quebrar o tanque.",
 		"Como: barras de ferro, corante vermelho e um lingote de ferro. Pare e ligue uma linha sem quebrar o tanque."
 	]
-	quest.42000000002A0638.title: "Válvula de canal"
+	quest.42000000002A0638.title: "Channel Valve"
 	quest.42000000002A0639.quest_desc: [
 		"Chuva num quadrado. Encaixe-o num canal, sobre os gravetos.",
 		"Como: encaixe-o num canal, sobre os gravetos. O JEI nomeia a receita."
 	]
-	quest.42000000002A0639.title: "Aspersor"
+	quest.42000000002A0639.title: "Sprinkler"
 	quest.42000000002A063A.quest_desc: [
 		"Cubra um canal para poder andar pela fileira.",
 		"Como: cubra um canal para poder andar pela fileira."
@@ -8858,12 +8858,12 @@
 		"Leia o ambiente. Luz, umidade, o motivo de um cultivo ter parado.",
 		"Como: faça e coloque na sala para ler luz e umidade."
 	]
-	quest.42000000002A063B.title: "Monitor de estufa"
+	quest.42000000002A063B.title: "Greenhouse Monitor"
 	quest.42000000002A063C.quest_desc: [
 		"Gravetos tardios. À prova de fogo, teimosos, para as plantas que exigem demais da madeira. Duas culturas maduras vizinhas podem cruzar.",
 		"Como: duas obsidianas em coluna fazem oito. Duas culturas maduras vizinhas podem cruzar."
 	]
-	quest.42000000002A063C.title: "Gravetos de cultivo de obsidiana"
+	quest.42000000002A063C.title: "Obsidian Crop Sticks"
 	quest.42000000002A063D.quest_desc: [
 		"Um canal em que você pode andar. Opcional.",
 		"Como: um canal em que você pode andar. Opcional."
@@ -8883,7 +8883,7 @@
 		"Combustível de uma plantação. Opcional.",
 		"Como: gravetos de cultivo de madeira a partir de gravetos; o diário é um livro e pena mais sementes; o analisador é vidro e madeira. Plante na terra arada."
 	]
-	quest.42000000002A0640.title: "Seixo de carvão"
+	quest.42000000002A0640.title: "Coal Pebble"
 	quest.42000000002A0641.quest_desc: [
 		"Plantação de minério tardia. Opcional.",
 		"Como: gravetos de cultivo de madeira a partir de gravetos; o diário é um livro e pena mais sementes; o analisador é vidro e madeira. Plante na terra arada."
@@ -8898,12 +8898,12 @@
 		"Plantação de minério do auge. Opcional e lenta.",
 		"Como: gravetos de cultivo de madeira a partir de gravetos; o diário é um livro e pena mais sementes; o analisador é vidro e madeira. Plante na terra arada."
 	]
-	quest.42000000002A0643.title: "Lasca de netherita"
+	quest.42000000002A0643.title: "Netherite Sliver"
 	quest.42000000002A0644.quest_desc: [
 		"A flor própria do AgriCraft. Opcional.",
 		"Como: gravetos de cultivo de madeira a partir de gravetos; o diário é um livro e pena mais sementes; o analisador é vidro e madeira. Plante na terra arada."
 	]
-	quest.42000000002A0644.title: "Pétala de Amathyllis"
+	quest.42000000002A0644.title: "Amathyllis Petal"
 	reward.5000000000060135.title: "Fio de retorno: +1 vida do Clowder"
 	reward.5000000000080193.title: "Fio de retorno: +1 vida do Clowder"
 	reward.50000000000901CC.title: "Fio de retorno: +1 vida do Clowder"
